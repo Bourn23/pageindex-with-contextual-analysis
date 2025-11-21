@@ -35,29 +35,93 @@ This repository extends the original [PageIndex](https://vectify.ai/pageindex) f
 
 ## 🚀 Quick Start
 
-### 1. Install dependencies
-```bash
-pip3 install --upgrade -r requirements.txt
-````
-
-### 2\. Set API Key
-
-Create a `.env` file:
+## Installation
 
 ```bash
-GEMINI_API_KEY=your_gemini_key_here
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up API key
+echo "GEMINI_API_KEY=your_key_here" > .env
 ```
 
-### 3\. Run with Research Parameters
+---
 
-We have added new flags to control the tree depth and visualizer:
+## Usage (Choose One)
+
+### Option 1: Command Line (Recommended)
 
 ```bash
-# Example: Run with fine-grained depth and generate visualization
-python3 run_pageindex.py \
-  --pdf_path docs/whitepaper.pdf \
-  --tree_depth fine \
-  --visualize_tree yes
+# Process with keywords (most detailed)
+python run_pageindex.py paper.pdf --granularity keywords
+
+# Process with fine granularity
+python run_pageindex.py paper.pdf --granularity fine
+
+# Fast processing (coarse)
+python run_pageindex.py paper.pdf --granularity coarse
+
+# With visualization
+python run_pageindex.py paper.pdf --granularity keywords --visualize
+```
+
+### Option 2: Python API
+
+```python
+from pageindex import page_index_main
+from pageindex.utils import ConfigLoader
+
+config_loader = ConfigLoader()
+opt = config_loader.load({
+    'granularity': 'keywords',
+    'if_add_node_text': 'yes',
+})
+
+result = page_index_main('paper.pdf', opt)
+structure = result['structure']
+```
+
+### Option 3: Example Script
+
+```bash
+python example_keywords_usage.py paper.pdf
+```
+
+---
+
+## Granularity Levels
+
+| Level | Speed | Detail | Use Case |
+|-------|-------|--------|----------|
+| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |
+| `medium` | ⚡⚡ | ⭐⭐ | Balanced |
+| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |
+| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |
+
+---
+
+## Output
+
+Results are saved to `results/` directory:
+- `paper_keywords_structure.json` - Full structure
+- `paper_keywords_structure.html` - Visualization (if `--visualize` used)
+
+---
+
+## Common Commands
+
+```bash
+# Keywords with all features
+python run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize
+
+# Fast processing (no figures/tables)
+python run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables
+
+# Custom output location
+python run_pageindex.py paper.pdf -g keywords -o my_output.json
+
+# Help
+python run_pageindex.py --help
 ```
 
 For debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)

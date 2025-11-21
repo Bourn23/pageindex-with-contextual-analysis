@@ -1,162 +1,204 @@
-import argparse
-import os
-import json
-from pageindex import *
-from pageindex.page_index_md import md_to_tree
+#!/usr/bin/env python3
+"""
+Command-line interface for PageIndex with all granularity levels.
 
-if __name__ == "__main__":
-    # Set up argument parser
-    parser = argparse.ArgumentParser(description='Process PDF or Markdown document and generate structure')
-    parser.add_argument('--pdf_path', type=str, help='Path to the PDF file')
-    parser.add_argument('--md_path', type=str, help='Path to the Markdown file')
+Usage:
+    python run_pageindex.py <pdf_path> [options]
 
-    parser.add_argument('--model', type=str, default='gemini-2.5-flash-lite', help='Model to use')
-
-    parser.add_argument('--toc-check-pages', type=int, default=20, 
-                      help='Number of pages to check for table of contents (PDF only)')
-    parser.add_argument('--max-pages-per-node', type=int, default=10,
-                      help='Maximum number of pages per node (PDF only)')
-    parser.add_argument('--max-tokens-per-node', type=int, default=20000,
-                      help='Maximum number of tokens per node (PDF only)')
-
-    parser.add_argument('--if-add-node-id', type=str, default='yes',
-                      help='Whether to add node id to the node')
-    parser.add_argument('--if-add-node-summary', type=str, default='yes',
-                      help='Whether to add summary to the node')
-    parser.add_argument('--summary-mode', type=str, default='smart',
-                      choices=['smart', 'full'],
-                      help='Summary generation mode: smart (skip redundant summaries, RAG-optimized), '
-                           'full (generate summaries for all nodes)')
-    parser.add_argument('--if-add-doc-description', type=str, default='no',
-                      help='Whether to add doc description to the doc')
-    parser.add_argument('--if-add-node-text', type=str, default='yes',
-                      help='Whether to add text to the node')
+Examples:
+    # Basic usage with keywords
+    python run_pageindex.py paper.pdf --granularity keywords
     
-    # Granular features arguments
-    parser.add_argument('--granularity', type=str, default='coarse',
-                      choices=['coarse', 'medium', 'fine'],
-                      help='Granularity level for node generation: coarse (default, existing behavior), '
-                           'medium (add figures/tables and semantic subdivision), '
-                           'fine (medium + deeper semantic analysis)')
-    parser.add_argument('--enable-figure-detection', type=str, default='yes',
-                      choices=['yes', 'no'],
-                      help='Enable figure detection and node creation (only applies when granularity is medium or fine)')
-    parser.add_argument('--enable-table-detection', type=str, default='yes',
-                      choices=['yes', 'no'],
-                      help='Enable table detection and node creation (only applies when granularity is medium or fine)')
-    parser.add_argument('--enable-semantic-subdivision', type=str, default='yes',
-                      choices=['yes', 'no'],
-                      help='Enable semantic subdivision of sections (only applies when granularity is medium or fine)')
-    parser.add_argument('--semantic-min-pages', type=float, default=0.5,
-                      help='Minimum section length in pages for semantic subdivision')
-                      
-    # Markdown specific arguments
-    parser.add_argument('--if-thinning', type=str, default='no',
-                      help='Whether to apply tree thinning for markdown (markdown only)')
-    parser.add_argument('--thinning-threshold', type=int, default=5000,
-                      help='Minimum token threshold for thinning (markdown only)')
-    parser.add_argument('--summary-token-threshold', type=int, default=200,
-                      help='Token threshold for generating summaries (markdown only)')
+    # With all features
+    python run_pageindex.py paper.pdf --granularity keywords --figures --tables --summaries
+    
+    # Fine granularity without keywords
+    python run_pageindex.py paper.pdf --granularity fine
+    
+    # Coarse (fastest)
+    python run_pageindex.py paper.pdf --granularity coarse
+"""
+
+import argparse
+import json
+from pathlib import Path
+from pageindex import page_index_main
+from pageindex.utils import ConfigLoader
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='Process PDF documents with PageIndex',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Granularity Levels:
+  coarse    - Sections only (fastest)
+  medium    - Sections + semantic units
+  fine      - Sections + semantic units + fine semantic units
+  keywords  - All of the above + keyword extraction (slowest, most detailed)
+
+Examples:
+  python run_pageindex.py paper.pdf --granularity keywords
+  python run_pageindex.py paper.pdf --granularity fine --no-figures --no-tables
+  python run_pageindex.py paper.pdf --granularity medium --summaries
+        """
+    )
+    
+    # Required arguments
+    parser.add_argument('pdf_path', help='Path to PDF file')
+    
+    # Granularity options
+    parser.add_argument(
+        '--granularity', '-g',
+        choices=['coarse', 'medium', 'fine', 'keywords'],
+        default='keywords',
+        help='Granularity level (default: keywords)'
+    )
+    
+    # Feature flags
+    parser.add_argument('--figures', action='store_true', default=True, help='Enable figure detection (default: on)')
+    parser.add_argument('--no-figures', action='store_false', dest='figures', help='Disable figure detection')
+    
+    parser.add_argument('--tables', action='store_true', default=True, help='Enable table detection (default: on)')
+    parser.add_argument('--no-tables', action='store_false', dest='tables', help='Disable table detection')
+    
+    parser.add_argument('--summaries', action='store_true', help='Generate summaries for nodes')
+    parser.add_argument('--doc-description', action='store_true', help='Generate document description')
+    
+    # Model options
+    parser.add_argument('--model', default='gemini-2.5-flash-lite', help='LLM model to use')
+    
+    # Output options
+    parser.add_argument('--output', '-o', help='Output JSON file path')
+    parser.add_argument('--visualize', action='store_true', help='Generate HTML visualization')
+    
+    # Advanced options
+    parser.add_argument('--semantic-min-pages', type=float, default=0.5, 
+                       help='Minimum pages for semantic subdivision (default: 0.5)')
+    
     args = parser.parse_args()
     
-    # Validate that exactly one file type is specified
-    if not args.pdf_path and not args.md_path:
-        raise ValueError("Either --pdf_path or --md_path must be specified")
-    if args.pdf_path and args.md_path:
-        raise ValueError("Only one of --pdf_path or --md_path can be specified")
+    # Validate input
+    pdf_path = Path(args.pdf_path)
+    if not pdf_path.exists():
+        print(f"Error: File not found: {pdf_path}")
+        return 1
     
-    if args.pdf_path:
-        # Validate PDF file
-        if not args.pdf_path.lower().endswith('.pdf'):
-            raise ValueError("PDF file must have .pdf extension")
-        if not os.path.isfile(args.pdf_path):
-            print(os.getcwd())
-            raise ValueError(f"PDF file not found: {args.pdf_path}")
-            
-        # Process PDF file
-        # Configure options
-        opt = config(
-            model=args.model,
-            toc_check_page_num=args.toc_check_pages,
-            max_page_num_each_node=args.max_pages_per_node,
-            max_token_num_each_node=args.max_tokens_per_node,
-            if_add_node_id=args.if_add_node_id,
-            if_add_node_summary=args.if_add_node_summary,
-            summary_mode=args.summary_mode,
-            if_add_doc_description=args.if_add_doc_description,
-            if_add_node_text=args.if_add_node_text,
-            granularity=args.granularity,
-            enable_figure_detection=(args.enable_figure_detection == 'yes'),
-            enable_table_detection=(args.enable_table_detection == 'yes'),
-            enable_semantic_subdivision=(args.enable_semantic_subdivision == 'yes'),
-            semantic_min_pages=args.semantic_min_pages
-        )
-
-        # Process the PDF
-        toc_with_page_number = page_index_main(args.pdf_path, opt)
-        print('Parsing done, saving to file...')
+    # Determine output path
+    if args.output:
+        output_path = Path(args.output)
+    else:
+        output_path = Path('results') / f"{pdf_path.stem}_{args.granularity}_structure.json"
+    
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Configure PageIndex
+    config_loader = ConfigLoader()
+    opt = config_loader.load({
+        'model': args.model,
+        'granularity': args.granularity,
+        'enable_figure_detection': args.figures,
+        'enable_table_detection': args.tables,
+        'enable_semantic_subdivision': args.granularity in ['medium', 'fine', 'keywords'],
+        'semantic_min_pages': args.semantic_min_pages,
+        'if_add_node_id': 'yes',
+        'if_add_node_summary': 'yes' if args.summaries else 'no',
+        'if_add_doc_description': 'yes' if args.doc_description else 'no',
+        'if_add_node_text': 'yes',
+    })
+    
+    # Print configuration
+    print("=" * 70)
+    print(f"PageIndex Processing")
+    print("=" * 70)
+    print(f"Input:       {pdf_path}")
+    print(f"Output:      {output_path}")
+    print(f"Granularity: {args.granularity}")
+    print(f"Model:       {args.model}")
+    print(f"Features:    figures={args.figures}, tables={args.tables}, summaries={args.summaries}")
+    print("=" * 70)
+    print()
+    
+    # Process PDF
+    try:
+        result = page_index_main(str(pdf_path), opt)
         
-        # Save results
-        pdf_name = os.path.splitext(os.path.basename(args.pdf_path))[0]    
-        output_dir = './results'
-        output_file = f'{output_dir}/{pdf_name}_structure.json'
-        os.makedirs(output_dir, exist_ok=True)
+        # Extract structure
+        if isinstance(result, dict):
+            structure = result.get('structure', [])
+            doc_name = result.get('doc_name', pdf_path.stem)
+            doc_description = result.get('doc_description')
+        else:
+            structure = result
+            doc_name = pdf_path.stem
+            doc_description = None
         
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(toc_with_page_number, f, indent=2)
-        
-        print(f'Tree structure saved to: {output_file}')
-            
-    elif args.md_path:
-        # Validate Markdown file
-        if not args.md_path.lower().endswith(('.md', '.markdown')):
-            raise ValueError("Markdown file must have .md or .markdown extension")
-        if not os.path.isfile(args.md_path):
-            raise ValueError(f"Markdown file not found: {args.md_path}")
-            
-        # Process markdown file
-        print('Processing markdown file...')
-        
-        # Process the markdown
-        import asyncio
-        
-        # Use ConfigLoader to get consistent defaults (matching PDF behavior)
-        from pageindex.utils import ConfigLoader
-        config_loader = ConfigLoader()
-        
-        # Create options dict with user args
-        user_opt = {
-            'model': args.model,
-            'if_add_node_summary': args.if_add_node_summary,
-            'if_add_doc_description': args.if_add_doc_description,
-            'if_add_node_text': args.if_add_node_text,
-            'if_add_node_id': args.if_add_node_id
+        # Save to JSON
+        output_data = {
+            'doc_name': doc_name,
+            'structure': structure
         }
+        if doc_description:
+            output_data['doc_description'] = doc_description
         
-        # Load config with defaults from config.yaml
-        opt = config_loader.load(user_opt)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
         
-        toc_with_page_number = asyncio.run(md_to_tree(
-            md_path=args.md_path,
-            if_thinning=args.if_thinning.lower() == 'yes',
-            min_token_threshold=args.thinning_threshold,
-            if_add_node_summary=opt.if_add_node_summary,
-            summary_token_threshold=args.summary_token_threshold,
-            model=opt.model,
-            if_add_doc_description=opt.if_add_doc_description,
-            if_add_node_text=opt.if_add_node_text,
-            if_add_node_id=opt.if_add_node_id
-        ))
+        print(f"✓ Structure saved to: {output_path}")
         
-        print('Parsing done, saving to file...')
+        # Print statistics
+        print_statistics(structure)
         
-        # Save results
-        md_name = os.path.splitext(os.path.basename(args.md_path))[0]    
-        output_dir = './results'
-        output_file = f'{output_dir}/{md_name}_structure.json'
-        os.makedirs(output_dir, exist_ok=True)
+        # Generate visualization if requested
+        if args.visualize:
+            html_path = output_path.with_suffix('.html')
+            import subprocess
+            subprocess.run(['python', 'visualize_structure.py', str(output_path)])
+            print(f"✓ Visualization saved to: {html_path}")
+            print(f"  Open in browser: file://{html_path.absolute()}")
         
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(toc_with_page_number, f, indent=2, ensure_ascii=False)
+        return 0
         
-        print(f'Tree structure saved to: {output_file}')
+    except Exception as e:
+        print(f"Error processing PDF: {e}")
+        import traceback
+        traceback.print_exc()
+        return 1
+
+
+def print_statistics(structure):
+    """Print statistics about the structure."""
+    def count_nodes_by_type(nodes, counts=None):
+        if counts is None:
+            counts = {}
+        for node in nodes:
+            node_type = node.get('node_type', 'section')
+            counts[node_type] = counts.get(node_type, 0) + 1
+            if 'nodes' in node and node['nodes']:
+                count_nodes_by_type(node['nodes'], counts)
+        return counts
+    
+    def get_max_depth(nodes, current_depth=0):
+        if not nodes:
+            return current_depth
+        max_d = current_depth
+        for node in nodes:
+            if 'nodes' in node and node['nodes']:
+                d = get_max_depth(node['nodes'], current_depth + 1)
+                max_d = max(max_d, d)
+        return max_d
+    
+    counts = count_nodes_by_type(structure)
+    max_depth = get_max_depth(structure)
+    
+    print("\nStatistics:")
+    print(f"  Total nodes: {sum(counts.values())}")
+    print(f"  Max depth: {max_depth}")
+    print(f"  Node types:")
+    for node_type, count in sorted(counts.items()):
+        print(f"    {node_type}: {count}")
+    print()
+
+
+if __name__ == '__main__':
+    exit(main())

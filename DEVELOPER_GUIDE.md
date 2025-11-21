@@ -448,4 +448,4 @@ if node_type in ['semantic_unit', 'figure', 'table', 'keyword', 'sentence']:
 ---
 
 **Last Updated**: November 2025
-**Maintainer**: PageIndex Development Team
+**Maintainer**: Bourn23
