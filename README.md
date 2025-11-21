@@ -163,7 +163,7 @@ structure = markdown_page_index(
 
 This project is licensed under the **MIT License**.
 
-  * Copyright (c) 2025 **[Your Name / GitHub Username]** (Modifications)
+  * Copyright (c) 2025 **Bourn23** (Modifications)
   * Copyright (c) 2025 **Vectify AI** (Original Work)
 
 See the [LICENSE](LICENSE) file for details.
