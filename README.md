@@ -26,7 +26,7 @@
 This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:
 
 1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\to$ Medium $\to$ Fine $\to$ Keywords).
-    * *Sections $\to$ Semantic Units $\to$ Fine Semantic Units $\to$ Keywords*
+    * Sections $\to$ Semantic Units $\to$ Fine Semantic Units $\to$ Keywords
     * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity
 2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.
 3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.
@@ -140,31 +140,6 @@ Traditional vector-based RAG relies on semantic *similarity*, but professional d
 
   - **No Vector DB:** Retrieval via tree search reasoning.
   - **Traceability:** Every retrieval step is explainable.
-
------
-
-## 📦 Package Usage & Configuration
-
-\<details\>
-\<summary\>\<strong\>Standard Parameters\</strong\>\</summary\>
-
-```
---model                 OpenAI model (default: gpt-4o)
---toc-check-pages       Pages to check for ToC (default: 20)
-```
-
-\</details\>
-
-\<details\>
-\<summary\>\<strong\>✨ New Parameters (This Fork)\</strong\>\</summary\>
-
-```
---refinement_level      Control the depth (coarse, medium, fine, keywords)
---extract_figures       Boolean to toggle figure extraction nodes
---generate_html_view    Generate the debug visualization
-```
-
-\</details\>
 
 -----
 
