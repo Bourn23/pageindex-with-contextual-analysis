@@ -1,5 +1,5 @@
 # LLM model to use for document processing and summarization
-model: "gpt-4o-2024-11-20"
+model: "gemini-2.5-flash-lite"
 
 # Number of pages to check for table of contents detection
 toc_check_page_num: 20
@@ -20,10 +20,10 @@ if_add_node_summary: "yes"
 if_add_doc_description: "no"
 
 # Whether to include the full text content in each node
-if_add_node_text: "no"
+if_add_node_text: "yes"
 
 # Granular node generation settings
-# Controls the level of detail in node generation: "coarse" (page-level), "medium" (section-level), "fine" (element-level)
+# Controls the level of detail in node generation: "coarse" (page-level), "medium" (section-level), "fine" (element-level), "keywords" (keyword extraction)
 granularity: "coarse"
 
 # Whether to detect and create separate nodes for figures/images

@@ -148,7 +148,7 @@ def test_coarse_granularity(pdf_path: str):
     config_loader = ConfigLoader()
     opt = config_loader.load({
         'model': 'gemini-2.5-flash-lite',
-        'granularity': 'coarse',
+        'granularity': 'coarse',  # Options: coarse, medium, fine, keywords
         'if_add_node_id': 'yes',
         'if_add_node_summary': 'no',  # Skip summaries for faster testing
         'if_add_doc_description': 'no'

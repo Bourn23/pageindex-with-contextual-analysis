@@ -51,7 +51,10 @@ async def apply_semantic_subdivision(
     
     # Determine max depth based on granularity
     granularity = getattr(opt, 'granularity', 'coarse')
-    if granularity == 'fine':
+    if granularity == 'keywords':
+        max_depth = 3  # Deepest level: sections -> semantic units -> keywords
+        logger.info(f"Configuration: granularity=keywords, max_depth={max_depth}, min_pages={min_pages}")
+    elif granularity == 'fine':
         max_depth = 2  # Recursive subdivision for fine
         logger.info(f"Configuration: granularity=fine, max_depth={max_depth}, min_pages={min_pages}")
     else:
@@ -143,10 +146,31 @@ async def _apply_semantic_subdivision_recursive(
     async def process_node(node: dict):
         """Process a single node for semantic subdivision."""
         try:
-            # Extract text for this node if not already present
-            if 'text' not in node or not node['text']:
-                logger.debug(f"Extracting text for node '{node.get('title', 'Unknown')}'")
+            node_title = node.get('title', 'Unknown')
+            node_type = node.get('node_type', 'unknown')
+            has_text = bool(node.get('text'))
+            text_len = len(node.get('text', ''))
+            
+            # Skip nodes with locked text (keywords)
+            if node.get('_text_locked'):
+                logger.debug(f"Skipping text-locked node '{node_title}'")
+                return
+            
+            # Skip text extraction for keyword nodes - they have their own text
+            if node_type == 'keyword':
+                logger.debug(f"Skipping keyword node '{node_title}'")
+                return
+            
+            # Skip text extraction for semantic_unit nodes that already have text
+            # (they were created with paragraph-specific text)
+            if node_type == 'semantic_unit' and has_text:
+                logger.debug(f"Semantic unit '{node_title}' already has text ({text_len} chars), skipping extraction")
+                # Don't return - we still need to process children
+            elif not has_text:
+                # Extract text for this node if not already present
+                logger.debug(f"Extracting text for '{node_title}'")
                 node['text'] = _extract_text_for_node(node, page_texts)
+
             
             # Check if node has text content after extraction
             if not node['text']:
@@ -205,7 +229,8 @@ async def _apply_semantic_subdivision_recursive(
                     
                     logger.debug(f"Added {len(semantic_nodes)} semantic child nodes to '{node.get('title', 'Unknown')}'")
                     
-                    # For fine granularity, recursively subdivide the semantic nodes
+                    # For fine/keywords granularity, recursively subdivide the semantic nodes
+                    # This continues until we reach max_depth - 1 (the level before keywords)
                     if current_depth < max_depth - 1:
                         logger.debug(f"Recursively subdividing semantic nodes of '{node.get('title', 'Unknown')}' (depth {current_depth + 1}/{max_depth})")
                         await _apply_semantic_subdivision_recursive(
@@ -217,6 +242,12 @@ async def _apply_semantic_subdivision_recursive(
                             max_depth,
                             current_depth + 1
                         )
+                        
+                        # After recursive subdivision, if we're at the keywords level,
+                        # extract keywords from the deepest semantic nodes
+                        if max_depth == 3 and current_depth + 1 == max_depth - 1:
+                            logger.info(f"Extracting keywords from fine-grained semantic units")
+                            await _extract_keywords_from_deepest_nodes(semantic_nodes, analyzer, logger)
                     
                     # IMPORTANT: Return here to avoid processing children again
                     # The semantic nodes were already processed above
@@ -243,6 +274,129 @@ async def _apply_semantic_subdivision_recursive(
             logger.error(f"Error processing node '{node.get('title', 'Unknown')}': {e}")
     
     # Process all nodes at this level in parallel
+    if nodes:
+        await asyncio.gather(*[process_node(node) for node in nodes])
+
+
+async def _extract_keywords_for_nodes(
+    nodes: List[dict],
+    analyzer: SemanticAnalyzer,
+    logger: logging.Logger
+) -> None:
+    """
+    Extract keywords for a list of nodes (typically semantic units).
+    
+    Args:
+        nodes: List of nodes to extract keywords from
+        analyzer: SemanticAnalyzer instance
+        logger: Logger instance
+    """
+    import asyncio
+    
+    async def extract_for_node(node: dict):
+        """Extract keywords for a single node."""
+        try:
+            node_title = node.get('title', 'Unknown')
+            logger.info(f"🔑 Extracting keywords from: '{node_title}'")
+            
+            # Run keyword extraction in executor
+            loop = asyncio.get_event_loop()
+            keywords = await loop.run_in_executor(
+                None,
+                analyzer.extract_keywords,
+                node
+            )
+            
+            if keywords:
+                logger.info(f"✓ Extracted {len(keywords)} keywords from '{node_title}'")
+                
+                # Create keyword nodes
+                keyword_nodes = analyzer.create_keyword_nodes(keywords, node)
+                
+                if keyword_nodes:
+                    # Add keyword nodes as children
+                    if 'nodes' not in node:
+                        node['nodes'] = []
+                    
+                    node['nodes'].extend(keyword_nodes)
+                    logger.debug(f"Added {len(keyword_nodes)} keyword nodes to '{node_title}'")
+            else:
+                logger.debug(f"No keywords extracted from '{node_title}'")
+                
+        except Exception as e:
+            logger.error(f"Error extracting keywords from '{node.get('title', 'Unknown')}': {e}")
+    
+    # Process all nodes in parallel
+    if nodes:
+        await asyncio.gather(*[extract_for_node(node) for node in nodes])
+
+
+async def _extract_keywords_from_deepest_nodes(
+    nodes: List[dict],
+    analyzer: SemanticAnalyzer,
+    logger: logging.Logger
+) -> None:
+    """
+    Recursively find the deepest (leaf) semantic nodes and extract keywords from them.
+    
+    This ensures keywords are extracted from fine-grained semantic units, not their parents.
+    
+    Args:
+        nodes: List of nodes to search
+        analyzer: SemanticAnalyzer instance
+        logger: Logger instance
+    """
+    import asyncio
+    
+    async def process_node(node: dict):
+        """Process a single node - either extract keywords or recurse to children."""
+        try:
+            # Check if this node has semantic unit children
+            has_semantic_children = False
+            if 'nodes' in node and node['nodes']:
+                for child in node['nodes']:
+                    if child.get('node_type') == 'semantic_unit':
+                        has_semantic_children = True
+                        break
+            
+            if has_semantic_children:
+                # This node has semantic children, so recurse deeper
+                logger.debug(f"Node '{node.get('title', 'Unknown')}' has semantic children, recursing...")
+                await _extract_keywords_from_deepest_nodes(node['nodes'], analyzer, logger)
+            else:
+                # This is a leaf semantic node (no semantic children), extract keywords here
+                if node.get('node_type') == 'semantic_unit':
+                    node_title = node.get('title', 'Unknown')
+                    logger.info(f"🔑 Extracting keywords from leaf node: '{node_title}'")
+                    
+                    # Run keyword extraction in executor
+                    loop = asyncio.get_event_loop()
+                    keywords = await loop.run_in_executor(
+                        None,
+                        analyzer.extract_keywords,
+                        node
+                    )
+                    
+                    if keywords:
+                        logger.info(f"✓ Extracted {len(keywords)} keywords from '{node_title}'")
+                        
+                        # Create keyword nodes
+                        keyword_nodes = analyzer.create_keyword_nodes(keywords, node)
+                        
+                        if keyword_nodes:
+                            # Add keyword nodes as children
+                            if 'nodes' not in node:
+                                node['nodes'] = []
+                            
+                            node['nodes'].extend(keyword_nodes)
+                            logger.debug(f"Added {len(keyword_nodes)} keyword nodes to '{node_title}'")
+                    else:
+                        logger.debug(f"No keywords extracted from '{node_title}'")
+                        
+        except Exception as e:
+            logger.error(f"Error processing node '{node.get('title', 'Unknown')}': {e}")
+    
+    # Process all nodes in parallel
     if nodes:
         await asyncio.gather(*[process_node(node) for node in nodes])
 

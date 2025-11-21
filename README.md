@@ -14,9 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="#-key-research-extensions">✨ New Features</a>&nbsp; • &nbsp;
   <a href="#-quick-start">🚀 Quick Start</a>&nbsp; • &nbsp;
-  <a href="https://arxiv.org/your-paper-link">📄 Related Paper</a>
 </p>
   
 </div>
@@ -27,8 +25,9 @@
 
 This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:
 
-1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\to$ Medium $\to$ Fine).
-    * *Sections $\to$ Paragraphs $\to$ Conceptual Sentences $\to$ Keywords*
+1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\to$ Medium $\to$ Fine $\to$ Keywords).
+    * *Sections $\to$ Semantic Units $\to$ Fine Semantic Units $\to$ Keywords*
+    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity
 2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.
 3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.
 
@@ -60,6 +59,8 @@ python3 run_pageindex.py \
   --tree_depth fine \
   --visualize_tree yes
 ```
+
+For debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)
 
 -----
 
@@ -94,7 +95,7 @@ Traditional vector-based RAG relies on semantic *similarity*, but professional d
 \<summary\>\<strong\>✨ New Parameters (This Fork)\</strong\>\</summary\>
 
 ```
---refinement_level      Control the depth (coarse, medium, fine)
+--refinement_level      Control the depth (coarse, medium, fine, keywords)
 --extract_figures       Boolean to toggle figure extraction nodes
 --generate_html_view    Generate the debug visualization
 ```

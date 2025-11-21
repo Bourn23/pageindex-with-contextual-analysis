@@ -13,8 +13,13 @@ from html import escape
 def generate_html(structure_data, output_path):
     """Generate an interactive HTML visualization of the structure."""
     
-    doc_name = structure_data.get('doc_name', 'Document')
-    structure = structure_data.get('structure', [])
+    # Handle both dict and list formats
+    if isinstance(structure_data, dict):
+        doc_name = structure_data.get('doc_name', 'Document')
+        structure = structure_data.get('structure', [])
+    else:
+        doc_name = 'Document'
+        structure = structure_data
     
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -123,6 +128,21 @@ def generate_html(structure_data, output_path):
         
         .node-title.active .node-badge {{
             background: rgba(255,255,255,0.2);
+        }}
+        
+        .node-title.keyword {{
+            font-size: 0.85rem;
+            background: #f1f8e9;
+            border-left: 3px solid #8bc34a;
+        }}
+        
+        .node-title.keyword:hover {{
+            background: #dcedc8;
+        }}
+        
+        .node-title.keyword.active {{
+            background: #689f38;
+            color: white;
         }}
         
         .detail-section {{
@@ -321,6 +341,36 @@ def generate_html(structure_data, output_path):
                     </div>
             `;
             
+            // Special handling for keyword nodes
+            if (node.node_type === 'keyword' && node.metadata) {{
+                html += `
+                    <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #4caf50; margin-bottom: 1rem;">
+                        <h3 style="color: #2e7d32; margin-bottom: 0.5rem;">🔑 Keyword Details</h3>
+                        ${{node.metadata.term ? `
+                        <div style="margin-bottom: 0.5rem;">
+                            <strong>Term:</strong> ${{escapeHtml(node.metadata.term)}}
+                        </div>
+                        ` : ''}}
+                        ${{node.metadata.context ? `
+                        <div style="margin-bottom: 0.5rem;">
+                            <strong>Context:</strong> ${{escapeHtml(node.metadata.context)}}
+                        </div>
+                        ` : ''}}
+                        ${{node.metadata.relevance ? `
+                        <div style="margin-bottom: 0.5rem;">
+                            <strong>Relevance:</strong> ${{escapeHtml(node.metadata.relevance)}}
+                        </div>
+                        ` : ''}}
+                        ${{node.metadata.parent_title ? `
+                        <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #c8e6c9;">
+                            <strong>Parent Section:</strong> ${{escapeHtml(node.metadata.parent_title)}}
+                            ${{node.metadata.parent_node_type ? ` <span style="font-size: 0.85em; color: #666;">(${{node.metadata.parent_node_type}})</span>` : ''}}
+                        </div>
+                        ` : ''}}
+                    </div>
+                `;
+            }}
+            
             // Check for duplicate text issue
             if (hasChildren && hasText) {{
                 const childTexts = node.nodes.filter(n => n.text).map(n => n.text);
@@ -401,12 +451,14 @@ def generate_tree_html(nodes, level=0):
             'figure': '🖼️',
             'table': '📊',
             'semantic_unit': '📝',
+            'keyword': '�',
         }.get(node_type, '📄')
         
         tree_class = 'root' if level == 0 else ''
+        node_class = f'keyword' if node_type == 'keyword' else ''
         
         html += f'<div class="tree-node {tree_class}">'
-        html += f'<div class="node-title" data-node-id="{escape(node_id)}" onclick="showNodeDetails(\'{escape(node_id)}\')">'
+        html += f'<div class="node-title {node_class}" data-node-id="{escape(node_id)}" onclick="showNodeDetails(\'{escape(node_id)}\')">'
         html += f'<span class="node-icon">{icon}</span>'
         html += f'<span>{escape(title)}</span>'
         html += f'<span class="node-badge">p{start}-{end}</span>'

@@ -41,6 +41,18 @@ class SemanticAnalysisResponse(BaseModel):
     semantic_units: List[SemanticUnitData] = Field(default_factory=list, description="List of semantic units identified")
 
 
+class KeywordData(BaseModel):
+    """Individual keyword/concept extracted from text."""
+    term: str = Field(..., description="The keyword or key concept")
+    context: str = Field(..., description="Brief context or definition (1 sentence)")
+    relevance: str = Field(..., description="Why this keyword is important to the section")
+
+
+class KeywordExtractionResponse(BaseModel):
+    """Response containing keywords extracted from a section."""
+    keywords: List[KeywordData] = Field(default_factory=list, description="List of keywords/concepts identified")
+
+
 class SemanticAnalyzer:
     """
     Analyzes section content and identifies semantic boundaries for subdivision.
@@ -70,6 +82,56 @@ class SemanticAnalyzer:
         
         # Section-type-aware prompt templates
         self.section_prompts = self._initialize_section_prompts()
+        
+        # Keyword extraction prompt
+        self.keyword_prompt = self._initialize_keyword_prompt()
+    
+    def _initialize_keyword_prompt(self) -> str:
+        """
+        Initialize the keyword extraction prompt template.
+        
+        Returns:
+            Keyword extraction prompt string
+        """
+        return """Extract key terms and concepts from this text section.
+
+Your task is to identify the most important keywords, technical terms, and concepts that:
+1. Are central to understanding this section
+2. Would be useful for information retrieval (RAG queries)
+3. Represent domain-specific terminology or important ideas
+
+For each keyword/concept, provide:
+1. term: The keyword or key phrase (2-5 words max)
+2. context: A brief 1-sentence explanation or definition
+3. relevance: Why this term is important to this section (1 sentence)
+
+Section Title: {section_title}
+
+Section Text:
+{section_text}
+
+Respond with JSON in this format:
+{{
+  "keywords": [
+    {{
+      "term": "composite polymer electrolyte",
+      "context": "A material combining polymer matrix with ceramic fillers for battery applications",
+      "relevance": "Core material being studied in this research"
+    }},
+    {{
+      "term": "ionic conductivity",
+      "context": "Measure of how well ions move through a material",
+      "relevance": "Primary performance metric being measured"
+    }}
+  ]
+}}
+
+IMPORTANT:
+- Extract 5-15 keywords depending on section length
+- Focus on technical terms, methodologies, materials, and key concepts
+- Avoid generic words like "study", "research", "paper"
+- Keep terms concise and specific
+- Respond ONLY with valid JSON, no additional text."""
     
     def _initialize_section_prompts(self) -> Dict[str, str]:
         """
@@ -798,6 +860,145 @@ Classification:"""
         except Exception as e:
             self.logger.error(f"Error identifying boundaries: {e}")
             return []
+    
+    def extract_keywords(self, section_node: dict, max_retries: int = 3) -> List[dict]:
+        """
+        Extract keywords and key concepts from a section.
+        
+        This method uses Gemini with structured output to extract important
+        keywords, technical terms, and concepts from a section for the
+        "keywords" granularity level.
+        
+        Args:
+            section_node: Section node with 'title' and 'text' fields
+            max_retries: Maximum retry attempts
+            
+        Returns:
+            List of keyword dictionaries with 'term', 'context', 'relevance'
+        """
+        if not self.gemini_client:
+            self.logger.error("Gemini client not available - GEMINI_API_KEY not set")
+            return []
+        
+        try:
+            section_title = section_node.get('title', 'Unknown Section')
+            section_text = section_node.get('text', '')
+            
+            if not section_text.strip():
+                self.logger.debug(f"Empty text for section '{section_title}' - skipping keyword extraction")
+                return []
+            
+            # Truncate very long sections to avoid token limits
+            max_chars = 15000
+            if len(section_text) > max_chars:
+                section_text = section_text[:max_chars] + "\n\n[Text truncated for keyword extraction]"
+            
+            # Format prompt
+            prompt = self.keyword_prompt.format(
+                section_title=section_title,
+                section_text=section_text
+            )
+            
+            self.logger.info(f"Extracting keywords from section '{section_title}'")
+            
+            # Call Gemini with structured output
+            model = 'gemini-2.5-flash-lite'
+            
+            for attempt in range(max_retries):
+                try:
+                    response = self.gemini_client.models.generate_content(
+                        model=model,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(
+                            temperature=0,
+                            response_mime_type="application/json",
+                            response_json_schema=KeywordExtractionResponse.model_json_schema()
+                        )
+                    )
+                    
+                    # Parse structured response
+                    keyword_response = KeywordExtractionResponse.model_validate_json(response.text)
+                    keywords = [kw.model_dump() for kw in keyword_response.keywords]
+                    
+                    self.logger.info(f"Extracted {len(keywords)} keywords from '{section_title}'")
+                    return keywords
+                    
+                except Exception as e:
+                    wait_time = 2 ** attempt
+                    self.logger.warning(f"Error extracting keywords (attempt {attempt + 1}/{max_retries}): {e}")
+                    
+                    if attempt < max_retries - 1:
+                        time.sleep(wait_time)
+                    else:
+                        self.logger.error(f"Keyword extraction failed after {max_retries} attempts")
+                        return []
+            
+            return []
+            
+        except Exception as e:
+            self.logger.error(f"Error in keyword extraction: {e}")
+            return []
+    
+    def create_keyword_nodes(self, keywords: List[dict], section_node: dict) -> List[dict]:
+        """
+        Create node structures from extracted keywords.
+        
+        Args:
+            keywords: List of keyword dictionaries
+            section_node: Parent section node (the immediate parent semantic unit)
+            
+        Returns:
+            List of keyword node dictionaries
+        """
+        nodes = []
+        
+        for kw in keywords:
+            try:
+                # Create a rich text field that includes both context and parent info
+                text_parts = [
+                    f"**Keyword:** {kw['term']}",
+                    f"**Context:** {kw['context']}",
+                    f"**Relevance:** {kw['relevance']}",
+                ]
+                
+                # Add parent section info for context
+                if section_node.get('title'):
+                    text_parts.append(f"\n**From Section:** {section_node['title']}")
+                
+                # Use parent's text directly - this should be the immediate parent's text
+                # NOT the grandparent's text
+                parent_text = section_node.get('text', '')
+                if parent_text:
+                    text_parts.append(f"\n**Parent Section Text:**\n{parent_text}")
+                
+                # Use parent's text directly - this preserves the immediate parent's context
+                parent_text = section_node.get('text', '')
+                
+                node = {
+                    'title': kw['term'],
+                    'start_index': section_node.get('start_index', 1),
+                    'end_index': section_node.get('end_index', 1),
+                    'text': parent_text,  # Use parent's text directly
+                    'summary': kw['context'],
+                    'node_type': 'keyword',
+                    '_text_locked': True,  # Flag to prevent text extraction
+                    'metadata': {
+                        'term': kw['term'],
+                        'context': kw['context'],
+                        'relevance': kw['relevance'],
+                        'parent_title': section_node.get('title', 'Unknown'),
+                        'parent_node_type': section_node.get('node_type', 'section')
+                    },
+                    'nodes': []
+                }
+                
+                nodes.append(node)
+                
+            except Exception as e:
+                self.logger.warning(f"Error creating keyword node: {e}")
+                continue
+        
+        return nodes
     
     def create_nodes_from_semantic_units(self, semantic_units: List[SemanticUnit], 
                                         section_node: dict, 

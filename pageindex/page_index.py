@@ -1130,7 +1130,7 @@ async def tree_parser(page_list, opt, doc=None, logger=None):
     await asyncio.gather(*tasks)
     
     # Apply granular features if enabled
-    if opt.granularity in ['medium', 'fine']:
+    if opt.granularity in ['medium', 'fine', 'keywords']:
         logger.info(f"Applying granular features for granularity level: {opt.granularity}")
         from .granular.integration import apply_semantic_subdivision, detect_and_integrate_figures_tables
         from .llm_client import get_llm_client

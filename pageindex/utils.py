@@ -548,9 +548,9 @@ def convert_page_to_int(data):
 def add_node_text(node, pdf_pages):
     if isinstance(node, dict):
         # Skip granular nodes - they already have specialized text extraction
-        # (semantic units have paragraph-level text, figures/tables have captions+context)
+        # (semantic units have paragraph-level text, figures/tables have captions+context, keywords have parent text)
         node_type = node.get('node_type')
-        if node_type in ['semantic_unit', 'figure', 'table']:
+        if node_type in ['semantic_unit', 'figure', 'table', 'keyword']:
             # Still process children if any
             if 'nodes' in node:
                 add_node_text(node['nodes'], pdf_pages)
