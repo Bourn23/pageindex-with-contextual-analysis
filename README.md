@@ -27,22 +27,17 @@
 
 ---
 
-#### 🚨 New Releases:
-- 📖 [**PageIndex Chat**](https://chat.pageindex.ai): The first human-like document analyst agent, designed for professional long documents.
-- 🔌 [**PageIndex MCP**](https://pageindex.ai/mcp): Bring PageIndex into Claude, Cursor, or any MCP-enabled agent. Chat with long PDFs in a reasoning-based, human-like way.
-
-#### 📢 Recent Updates
-
-**Articles:**
-* ⭐ [**The PageIndex Overview**](https://pageindex.ai/blog/pageindex-intro): Introduces the PageIndex framework — an *agentic, in-context* **tree index** that enables LLMs to perform **reasoning-based, human-like retrieval** over long documents, without vector DB or chunking.
-* [Do We Still Need OCR?](https://pageindex.ai/blog/do-we-need-ocr): Explores how vision-based, reasoning-native RAG challenges the traditional OCR pipeline, and why the future of document AI might be *vectorless* and *vision-based*.
-
-**🧪 Cookbooks:**
-* [**Vectorless RAG notebook**](https://github.com/VectifyAI/PageIndex/blob/main/cookbook/pageindex_RAG_simple.ipynb): A minimal, hands-on example of reasoning-based RAG using **PageIndex** — no vectors, no chunking, and human-like retrieval.
-* [Vision-based Vectorless RAG notebook](https://github.com/VectifyAI/PageIndex/blob/main/cookbook/vision_RAG_pageindex.ipynb): Experience OCR-free document understanding through PageIndex’s visual retrieval workflow that retrieves and reasons directly over PDF page images.
 
 
 # 📑 Introduction to PageIndex
+
+### Vectorless and Traceable RAG with Table & Figure Detection
+This repository is a research fork of [PageIndex](https://vectify.ai/pageindex). It extends the original functionality by:
+- adding depth to the tree structure (coarse, medium, fine) to control the node refinement. (section -> paragraphs -> conceptual sentences -> keywords)
+- added separate node for table and figure
+- added a nice HTML visualizer of the tree (helps with debugging too)
+
+
 
 Are you frustrated with vector database retrieval accuracy for long professional documents? Traditional vector-based RAG relies on semantic *similarity* rather than true *relevance*. But **similarity ≠ relevance** — what we truly need in retrieval is **relevance**, and that requires **reasoning**. When working with professional documents that demand domain expertise and multi-step reasoning, similarity search often falls short.
 
@@ -281,4 +276,10 @@ python PageIndex/example_markdown_usage.py
 ```
 
 See [MARKDOWN_PROCESSING.md](PageIndex/MARKDOWN_PROCESSING.md) for complete documentation.
+
+### License
+
+This project is licensed under the MIT license - see the [LINECES](LICENSE) file for details.
+
+This software is a derivative work of [PageIndex](https://github.com/VectifyAI/PageIndex) by Vectify AI.
 
