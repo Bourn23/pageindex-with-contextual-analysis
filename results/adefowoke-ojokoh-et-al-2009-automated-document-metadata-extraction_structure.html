@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adefowoke-ojokoh-et-al-2009-automated-document-metadata-extraction.pdf - Structure Visualization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 120px);
+        }
+        
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            background: white;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .tree-node {
+            margin-left: 1rem;
+            border-left: 2px solid #e0e0e0;
+            padding-left: 0.5rem;
+        }
+        
+        .tree-node.root {
+            margin-left: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .node-title {
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .node-title:hover {
+            background: #f0f0f0;
+        }
+        
+        .node-title.active {
+            background: #667eea;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .node-icon {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+        
+        .node-badge {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            background: #e0e0e0;
+            margin-left: auto;
+        }
+        
+        .node-title.active .node-badge {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+        
+        .detail-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .detail-section h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        
+        .metadata {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .metadata-item {
+            background: #f5f5f5;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .metadata-label {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .text-content {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: 'Georgia', serif;
+            margin-bottom: 1rem;
+        }
+        
+        .summary-content {
+            background: #fff9e6;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .empty-state {
+            color: #999;
+            font-style: italic;
+            padding: 1rem;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+        
+        .stat {
+            background: #e8eaf6;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+        }
+        
+        .children-info {
+            background: #e3f2fd;
+            padding: 0.8rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .warning-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #856404;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📄 adefowoke-ojokoh-et-al-2009-automated-document-metadata-extraction.pdf</h1>
+        <div class="subtitle">Structure Visualization</div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h3 style="margin-bottom: 1rem; color: #667eea;">Document Structure</h3>
+            <div class="tree-node root"><div class="node-title" data-node-id="0000" onclick="showNodeDetails('0000')"><span class="node-icon">📄</span><span>Automated document metadata extraction</span><span class="node-badge">p1-1</span></div><div class="tree-node "><div class="node-title" data-node-id="0001" onclick="showNodeDetails('0001')"><span class="node-icon">📄</span><span>Introduction</span><span class="node-badge">p1-2</span></div></div></div><div class="tree-node root"><div class="node-title" data-node-id="0002" onclick="showNodeDetails('0002')"><span class="node-icon">📄</span><span>Review of related studies</span><span class="node-badge">p2-3</span></div></div><div class="tree-node root"><div class="node-title" data-node-id="0003" onclick="showNodeDetails('0003')"><span class="node-icon">📄</span><span>Document metadata extraction architecture</span><span class="node-badge">p3-3</span></div><div class="tree-node "><div class="node-title" data-node-id="0004" onclick="showNodeDetails('0004')"><span class="node-icon">📄</span><span>Segmentation</span><span class="node-badge">p3-5</span></div></div></div><div class="tree-node root"><div class="node-title" data-node-id="0005" onclick="showNodeDetails('0005')"><span class="node-icon">📄</span><span>System implementation and evaluation</span><span class="node-badge">p5-7</span></div></div><div class="tree-node root"><div class="node-title" data-node-id="0006" onclick="showNodeDetails('0006')"><span class="node-icon">📄</span><span>Conclusions and further research directions</span><span class="node-badge">p7-8</span></div></div><div class="tree-node root"><div class="node-title" data-node-id="0007" onclick="showNodeDetails('0007')"><span class="node-icon">📄</span><span>References</span><span class="node-badge">p8-8</span></div></div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="empty-state">
+                👈 Select a node from the tree to view its details
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const nodeData = [{"title": "Automated document metadata extraction", "start_index": 1, "end_index": 1, "nodes": [{"title": "Introduction", "start_index": 1, "end_index": 2, "node_id": "0001", "text": "Journal of Information Science, 35 (5) 2009, pp. 563–570 © The Authors, 2009. Reprints and Permissions:  \nhttp://www.sagepub.co.uk/journalspermissions.nav, DOI: 10.1177/0165551509105195 563Automated document \nmetadata extraction\nBolanle Adefowoke Ojokoh, Olumide Sunday Adewale and \nSamuel Oluwole Falaki\nDepartment of Computer Science, Federal University of Technology, Nigeria\nAbstract.\nWeb documents are available in various forms, most of which do not carry additional semantics. This paper \npresents a model for general document metadata extraction. The model, which combines segmentation by keywords and pattern matching techniques, was implemented using PHP , MySQL, JavaScript and HTML. \nThe system was tested with 40 randomly selected PDF documents (mainly theses). An evaluation of the sys-\ntem was done using standard criteria measures namely precision, recall, accuracy and F-measure. The \nresults show that the model is relatively effective for the task of metadata extraction, especially for theses and dissertations. A combination of machine learning with these rule-based methods will be explored in the \nfuture for better results.\nKeywords: keywords; metadata; rules; segmentation; theses\n1. Introduction\nThe availability of large, web accessible, heterogeneous repositories of electronic documents is \nincreasing rapidly [1]. Most of this information is in the form of unstructured text, making the infor -\nmation hard to query [2]. Defining metadata for such documents will be useful for searching, brows-ing, and filtering. Ideally, metadata is defined by the authors of documents and is then used by various systems. However, people seldom define document metadata by themselves, even when they have convenient metadata definition tools [3]. Hence, automatically extracting metadata from the bodies of documents is an important research issue.\nAutomated document structure extraction has a number of benefits. Firstly, it makes automated \nmark-up possible. This helps to preserve information which might be required from the docu -\nment in the future. In addition, documents with logical structure can be presented differently for different devices. This flexibility in presentation is very useful to handle different devices. For example, a document can be presented differently in a PDA and in a web browser. Keeping docu -\nment logical structure also allows different users to have different access to a document. Some users may have unlimited access to a document while other users may have some limitations, for example, a textbook in which a professor has access to the answers as well as questions and a \nCorrespondence to: Bolanle Adefowoke Ojokoh, Department of Computer Science, P.M.B. 704, Akure, \nNigeria. Email: bolanleojokoh@yahoo.comBolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 564student can access questions only. Finally, document logical structure helps resource discovery. \nWith logical structure, a document can be searched in other ways instead of full text and metadata searches. For example, a document can be searched in a specific section, such as the introduction. It also allows search by some complex objects such as equations. Building tools for automatic metadata extraction and representation significantly improves the amount of metadata available, the quality of metadata extracted, and the efficiency and speed of the metadata extraction process [4, 5]. This paper focuses on presenting an approach for general metadata extraction from docu -\nments, with emphasis on theses. Metadata such as Title, Table of Contents, Abstract, Acknowledgement, Preface, Introduction, Conclusion and References are extracted from docu -\nments which could be in PDF, Word or Text formats.\nThe remainder of this paper is organized as follows: Section 2 presents a number of recent meta-\ndata extraction-related researches. An overview of the proposed approach for document metadata extraction is presented in Section 3. Section 4 gives the implementation and evaluation results while Section 5 presents the conclusion and further research directions.\n2. Review of related studies\nMetadata is, most generally, data that describes other data to enhance their usefulness in content exploration [6]. Several methods have been used for automatic metadata extraction from documents; regular expressions, rule-based parsers and machine learning are the most popular [4]. Liddy et al. [7] and Yilmazel et al. [8] developed rule-based systems founded on natural language processing technologies to extract metadata from educational materials. Mao et al. [9] performed metadata extraction using rule-based methods, particularly using rules based on formatting information which would not be possible with text files. Using a machine learning approach, Hu and colleagues [10] extracted titles from general documents. Han et al. [4] carried out metadata extraction. They viewed the problem as that of classifying the lines in a document into the categories of metadata and proposed using Support Vector Machines (SVM) as the classifier. They mainly used linguistic information as features. They reported high extraction accuracy from research papers in terms of precision and recall. Peng and McCallum [11] also conducted information extraction from research papers. They employed a Conditional Random Fields (CRF) model. Ojokoh et al. [12] used Hidden Markov Models (HMM) to implement the task of metadata extraction from some sets of tagged bib-liographic references and particularly contributed to improving the smoothing technique suggested by earlier researchers. Most of these researches, however, focused on extraction from research papers that have most of the metadata to be extracted located on the first page of the paper [10]. Moreover, most of them carried out the task of metadata extraction for just a single metadata, such as author names or titles, only [13, 14]. This research combines the idea of extracting the structure of documents using keywords with regular expressions to extract metadata from documents.\n3. Document metadata extraction architecture\nThe developed system is made up of six components, four modules (Converter, Segmentation Engine, Parser and Browser), each carrying out its own function towards the task of metadata extrac-tion, and the Input and Output of the system. Equations (1)–(13) describe these components, their functions and relationship mathematically.\nThe Document Metadata Extractor, D is a 6-tuple (I, C, S, P, B, O)\nD = (I, C, S, P, B, O)  (1)\nwhere I is the Input, C is the Converter, S is the Segmentation Engine, P is the Parser, B is the \nBrowser and O is the Output.\n(i) I:p (2)", "summary": "This partial document discusses the challenge of extracting metadata from web documents, which often lack explicit semantic information. It presents a model for automated document metadata extraction that combines keyword-based segmentation and pattern matching techniques. The system was implemented using PHP, MySQL, JavaScript, and HTML, and tested on 40 PDF documents, primarily theses. The evaluation used standard metrics like precision, recall, accuracy, and F-measure, indicating the model's relative effectiveness, particularly for theses and dissertations. The authors suggest exploring a combination of machine learning with rule-based methods in the future for improved results. The introduction highlights the benefits of automated document structure extraction, including automated mark-up, flexible presentation across devices, differentiated user access, and enhanced resource discovery."}], "node_id": "0000", "text": "Journal of Information Science, 35 (5) 2009, pp. 563–570 © The Authors, 2009. Reprints and Permissions:  \nhttp://www.sagepub.co.uk/journalspermissions.nav, DOI: 10.1177/0165551509105195 563Automated document \nmetadata extraction\nBolanle Adefowoke Ojokoh, Olumide Sunday Adewale and \nSamuel Oluwole Falaki\nDepartment of Computer Science, Federal University of Technology, Nigeria\nAbstract.\nWeb documents are available in various forms, most of which do not carry additional semantics. This paper \npresents a model for general document metadata extraction. The model, which combines segmentation by keywords and pattern matching techniques, was implemented using PHP , MySQL, JavaScript and HTML. \nThe system was tested with 40 randomly selected PDF documents (mainly theses). An evaluation of the sys-\ntem was done using standard criteria measures namely precision, recall, accuracy and F-measure. The \nresults show that the model is relatively effective for the task of metadata extraction, especially for theses and dissertations. A combination of machine learning with these rule-based methods will be explored in the \nfuture for better results.\nKeywords: keywords; metadata; rules; segmentation; theses\n1. Introduction\nThe availability of large, web accessible, heterogeneous repositories of electronic documents is \nincreasing rapidly [1]. Most of this information is in the form of unstructured text, making the infor -\nmation hard to query [2]. Defining metadata for such documents will be useful for searching, brows-ing, and filtering. Ideally, metadata is defined by the authors of documents and is then used by various systems. However, people seldom define document metadata by themselves, even when they have convenient metadata definition tools [3]. Hence, automatically extracting metadata from the bodies of documents is an important research issue.\nAutomated document structure extraction has a number of benefits. Firstly, it makes automated \nmark-up possible. This helps to preserve information which might be required from the docu -\nment in the future. In addition, documents with logical structure can be presented differently for different devices. This flexibility in presentation is very useful to handle different devices. For example, a document can be presented differently in a PDA and in a web browser. Keeping docu -\nment logical structure also allows different users to have different access to a document. Some users may have unlimited access to a document while other users may have some limitations, for example, a textbook in which a professor has access to the answers as well as questions and a \nCorrespondence to: Bolanle Adefowoke Ojokoh, Department of Computer Science, P.M.B. 704, Akure, \nNigeria. Email: bolanleojokoh@yahoo.com", "summary": "This partial document discusses a model for automated document metadata extraction, particularly for web documents that lack inherent semantic information. The proposed model combines keyword-based segmentation and pattern matching techniques, implemented using PHP, MySQL, JavaScript, and HTML. The system was tested on PDF documents, primarily theses, and evaluated using precision, recall, accuracy, and F-measure. The results indicate the model's effectiveness, especially for theses and dissertations, with future work planned to explore combining machine learning with rule-based methods for improved performance. The introduction highlights the growing volume of unstructured electronic documents and the challenges in querying them, emphasizing the importance of metadata for searching, browsing, and filtering. It also points out the common lack of author-defined metadata and the benefits of automated structure extraction, such as enabling automated mark-up, preserving information, and allowing flexible presentation across different devices."}, {"title": "Review of related studies", "start_index": 2, "end_index": 3, "node_id": "0002", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 564student can access questions only. Finally, document logical structure helps resource discovery. \nWith logical structure, a document can be searched in other ways instead of full text and metadata searches. For example, a document can be searched in a specific section, such as the introduction. It also allows search by some complex objects such as equations. Building tools for automatic metadata extraction and representation significantly improves the amount of metadata available, the quality of metadata extracted, and the efficiency and speed of the metadata extraction process [4, 5]. This paper focuses on presenting an approach for general metadata extraction from docu -\nments, with emphasis on theses. Metadata such as Title, Table of Contents, Abstract, Acknowledgement, Preface, Introduction, Conclusion and References are extracted from docu -\nments which could be in PDF, Word or Text formats.\nThe remainder of this paper is organized as follows: Section 2 presents a number of recent meta-\ndata extraction-related researches. An overview of the proposed approach for document metadata extraction is presented in Section 3. Section 4 gives the implementation and evaluation results while Section 5 presents the conclusion and further research directions.\n2. Review of related studies\nMetadata is, most generally, data that describes other data to enhance their usefulness in content exploration [6]. Several methods have been used for automatic metadata extraction from documents; regular expressions, rule-based parsers and machine learning are the most popular [4]. Liddy et al. [7] and Yilmazel et al. [8] developed rule-based systems founded on natural language processing technologies to extract metadata from educational materials. Mao et al. [9] performed metadata extraction using rule-based methods, particularly using rules based on formatting information which would not be possible with text files. Using a machine learning approach, Hu and colleagues [10] extracted titles from general documents. Han et al. [4] carried out metadata extraction. They viewed the problem as that of classifying the lines in a document into the categories of metadata and proposed using Support Vector Machines (SVM) as the classifier. They mainly used linguistic information as features. They reported high extraction accuracy from research papers in terms of precision and recall. Peng and McCallum [11] also conducted information extraction from research papers. They employed a Conditional Random Fields (CRF) model. Ojokoh et al. [12] used Hidden Markov Models (HMM) to implement the task of metadata extraction from some sets of tagged bib-liographic references and particularly contributed to improving the smoothing technique suggested by earlier researchers. Most of these researches, however, focused on extraction from research papers that have most of the metadata to be extracted located on the first page of the paper [10]. Moreover, most of them carried out the task of metadata extraction for just a single metadata, such as author names or titles, only [13, 14]. This research combines the idea of extracting the structure of documents using keywords with regular expressions to extract metadata from documents.\n3. Document metadata extraction architecture\nThe developed system is made up of six components, four modules (Converter, Segmentation Engine, Parser and Browser), each carrying out its own function towards the task of metadata extrac-tion, and the Input and Output of the system. Equations (1)–(13) describe these components, their functions and relationship mathematically.\nThe Document Metadata Extractor, D is a 6-tuple (I, C, S, P, B, O)\nD = (I, C, S, P, B, O)  (1)\nwhere I is the Input, C is the Converter, S is the Segmentation Engine, P is the Parser, B is the \nBrowser and O is the Output.\n(i) I:p (2)Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 565where p is the uploaded document needing conversion.\n(ii) Cp → t  (3)\nand\nt = {b1, b2, ..., bn} (4)\nwhere t is the text document and bn refers to block n in the document.\n(iii) S is a 2-tuple (M, G) (5)\nwhere M refers to the map function and G refers to the group function.\n(a) M: bi → sk (6)\nwhere sk refers to the set of identified pattern strings\n(b) G: {bi | sk = si, ..., n} where i ≠ k (7)\nStep (b) is repeated until all grouping is done.\n∃bn\ni: t · n is the number of groups in which bi occurs\n(iv) P: merge bi1,..,n → bi (8)\nthen,\nE: (bi * mdi * si) → {mdi,bi} (9)\nmd ∈ {abstract, tableofcontents, introduction, references} (10)\nwhere E is the extract function and md refers to the set of extracted metadata.\nTitle extraction is done with a different method as follows:\ntitle ∈ {[A–Z] * |first 1–100 characters|1st three lines (11)\n(vi) ∀mdi extracted, B displays O ∈ {title, mdi, bi} (12)\nT:(D:u, mdi, ...4, bi, ...n)  (13)\nwhere T is the store function and D is the database.\nThis research work used an approach implementing the model combining segmentation by keyword \ntogether with the use of regular expressions, as presented earlier, to extract some set of metadata \nfrom documents. Title extraction is another challenging task that may not be easily done using only segmentation by keyword as titles of documents are not usually labelled. In this research some sets of rules were proposed for title extraction. Figure 1 describes the architecture of the document meta-data extractor.\nSegmentation is the generation of hierarchy of logical divisions from a document. This layout segmen -\ntation captures the divisions of the document’s logical structure. It can be done in three ways [15]:\n• Segmentation by spacing: by using spacing information, scanned images are separated into sev-\neral areas which can be text, figure/table, or formulae areas.\n• Segmentation by style difference: for each text area, the average size of the characters contained in \nthe area is calculated. The size of a character can be determined by its height. Also boldness can be \ncalculated by the horizontal width of a character. In an area where the styles (bold, italic and size) of lines are obviously different from those of other lines, they are separately segmented.\n• Segmentation by keywords: in an area, where a special keyword (e.g. abstract, references) comes at \nthe beginning of a line, basically the area is segmented before the line as used in this research. This method is most relevant for this research because there are generally certain keywords specifically used in documents.", "summary": "This partial document discusses the importance of document logical structure for resource discovery, enabling searches beyond full text and metadata. It highlights the benefits of automatic metadata extraction for improving the quantity, quality, efficiency, and speed of metadata availability. The paper proposes an approach for general metadata extraction from documents, specifically focusing on theses, and aims to extract metadata like Title, Table of Contents, Abstract, Acknowledgement, Preface, Introduction, Conclusion, and References from PDF, Word, and Text formats. The document is structured into sections covering related research, the proposed approach, implementation and evaluation, and conclusions with future research directions. It then reviews existing research on automatic metadata extraction, mentioning methods like regular expressions, rule-based parsers, and machine learning, and citing specific studies that employed these techniques for extracting metadata from various document types, including educational materials and research papers."}, {"title": "Document metadata extraction architecture", "start_index": 3, "end_index": 3, "nodes": [{"title": "Segmentation", "start_index": 3, "end_index": 5, "node_id": "0004", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 565where p is the uploaded document needing conversion.\n(ii) Cp → t  (3)\nand\nt = {b1, b2, ..., bn} (4)\nwhere t is the text document and bn refers to block n in the document.\n(iii) S is a 2-tuple (M, G) (5)\nwhere M refers to the map function and G refers to the group function.\n(a) M: bi → sk (6)\nwhere sk refers to the set of identified pattern strings\n(b) G: {bi | sk = si, ..., n} where i ≠ k (7)\nStep (b) is repeated until all grouping is done.\n∃bn\ni: t · n is the number of groups in which bi occurs\n(iv) P: merge bi1,..,n → bi (8)\nthen,\nE: (bi * mdi * si) → {mdi,bi} (9)\nmd ∈ {abstract, tableofcontents, introduction, references} (10)\nwhere E is the extract function and md refers to the set of extracted metadata.\nTitle extraction is done with a different method as follows:\ntitle ∈ {[A–Z] * |first 1–100 characters|1st three lines (11)\n(vi) ∀mdi extracted, B displays O ∈ {title, mdi, bi} (12)\nT:(D:u, mdi, ...4, bi, ...n)  (13)\nwhere T is the store function and D is the database.\nThis research work used an approach implementing the model combining segmentation by keyword \ntogether with the use of regular expressions, as presented earlier, to extract some set of metadata \nfrom documents. Title extraction is another challenging task that may not be easily done using only segmentation by keyword as titles of documents are not usually labelled. In this research some sets of rules were proposed for title extraction. Figure 1 describes the architecture of the document meta-data extractor.\nSegmentation is the generation of hierarchy of logical divisions from a document. This layout segmen -\ntation captures the divisions of the document’s logical structure. It can be done in three ways [15]:\n• Segmentation by spacing: by using spacing information, scanned images are separated into sev-\neral areas which can be text, figure/table, or formulae areas.\n• Segmentation by style difference: for each text area, the average size of the characters contained in \nthe area is calculated. The size of a character can be determined by its height. Also boldness can be \ncalculated by the horizontal width of a character. In an area where the styles (bold, italic and size) of lines are obviously different from those of other lines, they are separately segmented.\n• Segmentation by keywords: in an area, where a special keyword (e.g. abstract, references) comes at \nthe beginning of a line, basically the area is segmented before the line as used in this research. This method is most relevant for this research because there are generally certain keywords specifically used in documents.Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 566The segmentation algorithm proposed by Summers [1] was used for the purpose of logical struc-\nture extraction. This research names the algorithm used here as segmentation by keyword. It adopts \nsome relevant techniques from Summers’s algorithm which is embedded in the entire algorithm used for document metadata extraction as follows:\n• Algorithm 1: Creating document input and converting uploaded file by typing document URL or locating from folder and converting document to text format\n• Algorithm 2: Segmenting the document by keywords.\nDivide the text document into blocks.\nRepresent each block by an appropriate string of indentation alphabet characters.Find sets of blocks that form repeating patterns.Find runs of isolated blocks that conform to patterns found elsewhere.Group together the blocks in each element of each pattern and group the isolated block forming \nthe next level of the tree surrounding blocks.\nRepeat (*) in order until no changes are generated.Group together the elements of each pattern forming another tree level.Repeat until no new changes are generated.Electronic\ndocuments\nParserFile\nConverter\nMetadataSegmentation\nEngineBrowser\nFig. 1. Document metadata extractor architecture.Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 567• Algorithm 3: Extracting document metadata.\nLocate the keywords associated with metadata.\nLocate the block of document corresponding to the keyword(s) identified.Extract keyword found in the document alongside the block of document.• Algorithm 4: Displaying and storing result of extraction.\nDisplay metadata and extracted block of document in the browser window.Store the extracted metadata and block in the database.\nThe keywords used in the grouping include: Table of Contents, Abstract, Preface, Chapter 1(One), \nIntroduction, Conclusion, References, Bibliography, Citation and Appendix (A/1). They were used with their respective regular expressions used to match them.\n4. System implementation and evaluation\nThe document metadata extractor receives an uploaded document and converts it to text. On click-ing on any of the metadata listed on the left side of the browser window as hyperlinks, the extractor scans through the document and displays the corresponding content of the document. \nThe document metadata extractor was tested over a set of randomly selected theses, dissertations \nand a few technical reports downloaded from the web. Theses were, however, the main focus of the experiments (about 80% of the sample).\nThe evaluation of the system was done using the following criteria: recall, precision, accuracy, \nand F-measure [as defined in equations (14)–(17)].\nAn exact performance comparison may not be possible, because of differences in the documents \nused for testing the different systems [16]. However, attempts are made to refer to related work and how the results compare with theirs. The results of the experimental evaluation of the reference metadata extractor are presented as follows.\n \nPrecision =A\nA+C (14)\n Recall =A\nA+B (15)\n Accuracy =A+D\nA+B+C+D (16)\n F/C0measur e=2/C3Precision /C3Recall\nPrecis ion+Recall (17)\nwhere A is the number of correctly extracted fields, B is the number of fields with existing, but not \nextracted data, C is the number of fields with wrongly extracted data, while D is the number of fields \nwith not existing and not extracted data.\nThe test for automatic extraction correctness was based on a manual verification of the correct-\nness of the extracted metadata against the original document. Due to such manual verification, which was lengthy and tedious, the sample size was limited to 40 documents.\nTables 1–4 summarize the overall precision, recall, accuracy and F-measure results respectively.", "summary": "This partial document describes a model for extracting metadata from documents. The core of the model involves segmenting documents into logical divisions, which can be achieved through methods like segmentation by spacing, style difference, and keywords. The research specifically utilizes segmentation by keywords, identifying patterns and grouping document blocks based on these patterns. The model also defines functions for mapping blocks to pattern strings, grouping blocks with similar patterns, merging blocks, and extracting metadata such as abstracts, table of contents, introductions, and references. A separate method is proposed for title extraction, as titles are not always explicitly labeled. The document outlines the architecture of the metadata extractor and mentions the use of the Summers segmentation algorithm for logical structure extraction."}], "node_id": "0003", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 565where p is the uploaded document needing conversion.\n(ii) Cp → t  (3)\nand\nt = {b1, b2, ..., bn} (4)\nwhere t is the text document and bn refers to block n in the document.\n(iii) S is a 2-tuple (M, G) (5)\nwhere M refers to the map function and G refers to the group function.\n(a) M: bi → sk (6)\nwhere sk refers to the set of identified pattern strings\n(b) G: {bi | sk = si, ..., n} where i ≠ k (7)\nStep (b) is repeated until all grouping is done.\n∃bn\ni: t · n is the number of groups in which bi occurs\n(iv) P: merge bi1,..,n → bi (8)\nthen,\nE: (bi * mdi * si) → {mdi,bi} (9)\nmd ∈ {abstract, tableofcontents, introduction, references} (10)\nwhere E is the extract function and md refers to the set of extracted metadata.\nTitle extraction is done with a different method as follows:\ntitle ∈ {[A–Z] * |first 1–100 characters|1st three lines (11)\n(vi) ∀mdi extracted, B displays O ∈ {title, mdi, bi} (12)\nT:(D:u, mdi, ...4, bi, ...n)  (13)\nwhere T is the store function and D is the database.\nThis research work used an approach implementing the model combining segmentation by keyword \ntogether with the use of regular expressions, as presented earlier, to extract some set of metadata \nfrom documents. Title extraction is another challenging task that may not be easily done using only segmentation by keyword as titles of documents are not usually labelled. In this research some sets of rules were proposed for title extraction. Figure 1 describes the architecture of the document meta-data extractor.\nSegmentation is the generation of hierarchy of logical divisions from a document. This layout segmen -\ntation captures the divisions of the document’s logical structure. It can be done in three ways [15]:\n• Segmentation by spacing: by using spacing information, scanned images are separated into sev-\neral areas which can be text, figure/table, or formulae areas.\n• Segmentation by style difference: for each text area, the average size of the characters contained in \nthe area is calculated. The size of a character can be determined by its height. Also boldness can be \ncalculated by the horizontal width of a character. In an area where the styles (bold, italic and size) of lines are obviously different from those of other lines, they are separately segmented.\n• Segmentation by keywords: in an area, where a special keyword (e.g. abstract, references) comes at \nthe beginning of a line, basically the area is segmented before the line as used in this research. This method is most relevant for this research because there are generally certain keywords specifically used in documents.", "summary": "The provided document excerpt details a methodology for extracting metadata from documents. It outlines a process involving:\n\n*   **Document Conversion and Text Representation:** Converting an uploaded document (`p`) into a text document (`t`) composed of blocks (`b1` to `bn`).\n*   **Pattern Identification and Grouping:** Identifying pattern strings (`sk`) within document blocks (`bi`) and grouping blocks based on these patterns.\n*   **Metadata Extraction:** Extracting specific metadata types (`md`) such as abstract, table of contents, introduction, and references from document blocks.\n*   **Title Extraction:** Employing a distinct method for title extraction, involving rules and considering the first few characters and lines.\n*   **Data Storage:** Storing the extracted metadata, title, and document blocks in a database.\n\nThe research emphasizes an approach combining keyword-based segmentation with regular expressions for metadata extraction. It also discusses three methods of document segmentation: by spacing, by style difference, and by keywords, highlighting the relevance of keyword segmentation for their research."}, {"title": "System implementation and evaluation", "start_index": 5, "end_index": 7, "node_id": "0005", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 567• Algorithm 3: Extracting document metadata.\nLocate the keywords associated with metadata.\nLocate the block of document corresponding to the keyword(s) identified.Extract keyword found in the document alongside the block of document.• Algorithm 4: Displaying and storing result of extraction.\nDisplay metadata and extracted block of document in the browser window.Store the extracted metadata and block in the database.\nThe keywords used in the grouping include: Table of Contents, Abstract, Preface, Chapter 1(One), \nIntroduction, Conclusion, References, Bibliography, Citation and Appendix (A/1). They were used with their respective regular expressions used to match them.\n4. System implementation and evaluation\nThe document metadata extractor receives an uploaded document and converts it to text. On click-ing on any of the metadata listed on the left side of the browser window as hyperlinks, the extractor scans through the document and displays the corresponding content of the document. \nThe document metadata extractor was tested over a set of randomly selected theses, dissertations \nand a few technical reports downloaded from the web. Theses were, however, the main focus of the experiments (about 80% of the sample).\nThe evaluation of the system was done using the following criteria: recall, precision, accuracy, \nand F-measure [as defined in equations (14)–(17)].\nAn exact performance comparison may not be possible, because of differences in the documents \nused for testing the different systems [16]. However, attempts are made to refer to related work and how the results compare with theirs. The results of the experimental evaluation of the reference metadata extractor are presented as follows.\n \nPrecision =A\nA+C (14)\n Recall =A\nA+B (15)\n Accuracy =A+D\nA+B+C+D (16)\n F/C0measur e=2/C3Precision /C3Recall\nPrecis ion+Recall (17)\nwhere A is the number of correctly extracted fields, B is the number of fields with existing, but not \nextracted data, C is the number of fields with wrongly extracted data, while D is the number of fields \nwith not existing and not extracted data.\nThe test for automatic extraction correctness was based on a manual verification of the correct-\nness of the extracted metadata against the original document. Due to such manual verification, which was lengthy and tedious, the sample size was limited to 40 documents.\nTables 1–4 summarize the overall precision, recall, accuracy and F-measure results respectively.Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 568Table 1 \nMetadata extraction precision over 40 theses and related documents\n Precision\nTitle 0.75\nTable of Contents 0.73\nPreface 0.86\nAbstract 0.77\nAcknowledgment 0.64\nIntroduction 0.68\nConclusion 0.90\nReferences 1.0\n \nTable 2 \nMetadata extraction recall over 40 theses and related documents\n Recall\nTitle 0.75\nTable of Contents 0.81\nPreface 1.0\nAbstract 0.92\nAcknowledgment 0.90\nIntroduction 0.68\nConclusion 0.68\nReferences 0.91\n \nTable 3 \nMetadata extraction accuracy over 40 theses and related documents\n Accuracy\nTitle 0.75\nTable of Contents 0.68\nPreface 0.98\nAbstract 0.78\nAcknowledgment 0.70\nIntroduction 0.60\nConclusion 0.70\nReferences 0.93\n \nTable 4 \nMetadata extraction F-measure over 40 theses and related documents\n F-measure\nTitle 0.75\nTable of Contents 0.77\nPreface 0.92\nAbstract 0.84\nAcknowledgment 0.75\nIntroduction 0.68\nConclusion 0.77\nReferences 0.95\n Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 569From the results, ‘References’ was extracted with the highest precision. Its extraction is also rela-\ntively high compared to others in terms of recall, accuracy and F-measure. This could be largely due \nto the fact that they appear, in most cases, at the end of the document.\nMost of the ‘Preface’ extraction cases fall under the not existing and not extracted cases because \nvery few of the documents (only six) contained a preface. As a result, recall and accuracy were high-\nest for ‘Preface’.\n‘Introduction’ was extracted generally with the least values in terms of the evaluation criteria \n(0.68 for precision, recall and F-measure and 0.60 for accuracy). ‘Conclusion’ extraction was low too \nin terms of accuracy, although relatively high in precision (0.90). Reasons for these could be attrib-uted to the fact that in many cases introductions and conclusions exist in some theses (sometimes in every chapter), and sometimes too, other keywords that might not be recognized by the system are attached to them. In addition, some patterns not embedded in the rule-based system might be encountered leading to incorrect extraction.\n‘Abstract’ extraction was performed with relatively high recall and F-measure. The precision and \naccuracy of its extraction was mostly affected negatively because in a few theses, the abstract part was not specifically labelled ‘Abstract’ or was not labelled at all.\n‘Table of Contents’ was extracted with relatively high recall, but with fair precision and F-measure. \nThe accuracy with which it was extracted was a bit low, because in some cases, the system extracted some other parts, which were not actually part of the table of contents, with it.\n‘Title’ extraction was particularly challenging as a result of the fact that titles of documents are \nnot usually labelled as such. Nevertheless, the task was done with consistent precision, recall, accu-racy and F-measure showing the effectiveness of the rule-based system. During the evaluation, it \nwas also discovered that, for most of the wrongly extracted cases for titles, the information extracted was still relevant, for instance when the authors’ names or institution of study were extracted.\nSome of the studies with presented results include the work of Hu et al. [10] who extracted title \nfrom Word documents with precision and recall of 0.810 and 0.837, respectively, and precision and recall of 0.875 and 0.895 from PowerPoint documents, respectively in an experiment on intranet data using machine learning technique.\nSome systems whose work could be fairly compared to this system include that of Berkowitz and \nElkhadiri [17] who extracted authors and titles from documents; they reported recall of 25.96% for exact extraction of author names; for 24.99% of the papers they managed to extract either part of the author name(s), or the name(s) plus extra text. All these focused on extraction of a single metadata. Giuffrida and colleagues [14] extracted title, author, affiliation, author-to-affiliation mapping and table of contents from Postscript files using a knowledge-based approach obtaining 92%, 87%, 75%, 71% and 76% accuracy respectively. Hence, the methods proposed by this research for general documents metadata extraction with particular emphasis on theses can handle the task with rela-tively high efficiency. Compared to existing systems, it extracts more metadata, and with relatively comparable effectiveness.\n5. Conclusions and further research directions\nThis paper describes a method for general metadata extraction from general documents using a combination of the segmentation by keyword algorithm and regular expressions. Extraction of title is done using a different set of rules, implemented before segmentation by keyword is carried out because title extraction is often not affected by keywords. The rules used for title extraction proved consistently effective for theses and dissertations. The proposed model for extracting other metadata was tested on some randomly downloaded theses and related documents and used to extract Abstract, Preface, Table of Contents, Introduction, Conclusion, References and Acknowledgments. The experimental results show that the extraction was done with a relatively high degree of precision, recall and accuracy except for ‘Introduction’ and ‘Conclusion’ with low recall because of the usual existence of multiples of them in theses documents. Compared to existing systems, this system ", "summary": "This partial document describes a system for extracting metadata from documents, focusing on its implementation and evaluation. It details two algorithms: Algorithm 3 for extracting document metadata by locating keywords and corresponding document blocks, and Algorithm 4 for displaying and storing the extracted information. The keywords used for grouping include common document sections like \"Table of Contents,\" \"Abstract,\" and \"References,\" each associated with specific regular expressions. The system implementation involves converting uploaded documents to text and allowing users to click on listed metadata hyperlinks to display the corresponding content. The evaluation was conducted on theses, dissertations, and technical reports, with theses being the primary focus. The system's performance was assessed using recall, precision, accuracy, and F-measure, with formulas provided for each. The evaluation involved manual verification of extracted metadata against original documents, limiting the sample size to 40 documents due to the tedious nature of this process. Tables 1 and 2 are presented, summarizing the precision and recall results for various metadata fields extracted from the tested documents."}, {"title": "Conclusions and further research directions", "start_index": 7, "end_index": 8, "node_id": "0006", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 569From the results, ‘References’ was extracted with the highest precision. Its extraction is also rela-\ntively high compared to others in terms of recall, accuracy and F-measure. This could be largely due \nto the fact that they appear, in most cases, at the end of the document.\nMost of the ‘Preface’ extraction cases fall under the not existing and not extracted cases because \nvery few of the documents (only six) contained a preface. As a result, recall and accuracy were high-\nest for ‘Preface’.\n‘Introduction’ was extracted generally with the least values in terms of the evaluation criteria \n(0.68 for precision, recall and F-measure and 0.60 for accuracy). ‘Conclusion’ extraction was low too \nin terms of accuracy, although relatively high in precision (0.90). Reasons for these could be attrib-uted to the fact that in many cases introductions and conclusions exist in some theses (sometimes in every chapter), and sometimes too, other keywords that might not be recognized by the system are attached to them. In addition, some patterns not embedded in the rule-based system might be encountered leading to incorrect extraction.\n‘Abstract’ extraction was performed with relatively high recall and F-measure. The precision and \naccuracy of its extraction was mostly affected negatively because in a few theses, the abstract part was not specifically labelled ‘Abstract’ or was not labelled at all.\n‘Table of Contents’ was extracted with relatively high recall, but with fair precision and F-measure. \nThe accuracy with which it was extracted was a bit low, because in some cases, the system extracted some other parts, which were not actually part of the table of contents, with it.\n‘Title’ extraction was particularly challenging as a result of the fact that titles of documents are \nnot usually labelled as such. Nevertheless, the task was done with consistent precision, recall, accu-racy and F-measure showing the effectiveness of the rule-based system. During the evaluation, it \nwas also discovered that, for most of the wrongly extracted cases for titles, the information extracted was still relevant, for instance when the authors’ names or institution of study were extracted.\nSome of the studies with presented results include the work of Hu et al. [10] who extracted title \nfrom Word documents with precision and recall of 0.810 and 0.837, respectively, and precision and recall of 0.875 and 0.895 from PowerPoint documents, respectively in an experiment on intranet data using machine learning technique.\nSome systems whose work could be fairly compared to this system include that of Berkowitz and \nElkhadiri [17] who extracted authors and titles from documents; they reported recall of 25.96% for exact extraction of author names; for 24.99% of the papers they managed to extract either part of the author name(s), or the name(s) plus extra text. All these focused on extraction of a single metadata. Giuffrida and colleagues [14] extracted title, author, affiliation, author-to-affiliation mapping and table of contents from Postscript files using a knowledge-based approach obtaining 92%, 87%, 75%, 71% and 76% accuracy respectively. Hence, the methods proposed by this research for general documents metadata extraction with particular emphasis on theses can handle the task with rela-tively high efficiency. Compared to existing systems, it extracts more metadata, and with relatively comparable effectiveness.\n5. Conclusions and further research directions\nThis paper describes a method for general metadata extraction from general documents using a combination of the segmentation by keyword algorithm and regular expressions. Extraction of title is done using a different set of rules, implemented before segmentation by keyword is carried out because title extraction is often not affected by keywords. The rules used for title extraction proved consistently effective for theses and dissertations. The proposed model for extracting other metadata was tested on some randomly downloaded theses and related documents and used to extract Abstract, Preface, Table of Contents, Introduction, Conclusion, References and Acknowledgments. The experimental results show that the extraction was done with a relatively high degree of precision, recall and accuracy except for ‘Introduction’ and ‘Conclusion’ with low recall because of the usual existence of multiples of them in theses documents. Compared to existing systems, this system Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 570extracts more metadata, and with relatively comparable effectiveness. However, since it is rule \nbased, it needs refinement over time as more keywords are discovered and metadata extraction is to be done for some different types of documents. \nReferences\n [1] K.M. Summers, Automatic discovery of logical document structure (PhD dissertation, Cornell University, \nIthaca, NY, 1998).\n [2] A. Arasu and H. Garcia-Molina, Extracting structured data from web pages, Proceedings of the 2003 ACM \nSIGMOD International Conference on Management of Data (SIGMOD) (June 2003) 337–348.\n [3] A. Crystal and P. Land, Metadata and search, Global Corporate Circle DCMI 2003 Workshop (2003). \nAvailable from http://dublincore.org/groups/corporate/Seattle/\n [4] H. Han, C.L. Giles, E. Manavoglu, H. Zha, Z. Zhang and E.A. Fox, Automatic document metadata extraction \nusing support vector machine, Joint Conference on Digital Libraries (JCDL’03)  (Houston, Texas USA, 2003).\n [5] B.A. Ojokoh, S.O. Falaki and O.S. Adewale, Automated information extraction system for heterogeneous \ndigital library documents, Proceedings of the ACM/IEEE Joint Conference on Digital Libraries (JCDL 2007) \nDoctoral Consortium (Vancouver, British Columbia, Canada, June 18–23, 2007).\n [6] A. Kawtrakul and C. Yingsaeree, A Unified Framework for Automatic Metadata Extraction from Electronic \nDocument (2004). Available at: http://iadlc.nul.nagoya-u.ac.jp/archives/IADLC2005/kawrtrakul.pdf\n [7] E.D. Liddy, S. Sutton, E. Allen, S. Harwell, S. Corieri and O. Yilmazel, Automatic metadata generation and evaluation, Proceedings of the 25th Annual International ACM SIGIR Conference on Research and \nDevelopment in Information Retrieval (Tampere, Finland, 2002) 401–402.\n [8] O. Yilmazel, C.M. Finneran and E.D. Liddy, MetaExtract: an NLP system to automatically assign metadata, Proceedings of the 2004 Joint ACM/IEEE Conference on Digital Libraries  (Tuscan, AZ, USA, 2004) 241–242.\n [9] S. Mao, J.W. Kim and G.R. Thoma, A dynamic feature generation system for automated metadata extrac-tion in preservation of digital materials, Proceedings of the First International Workshop on Document \nImage Analysis for Libraries (Palo Alto, CA, USA, 2004) 225–232.\n[10] Y. Hu, H. Li, Y. Cao, T. Teng, D. Meyerzon and Q. Zheng, Automatic extraction of titles from general documents, Information Processing and Management 42 (2006) 1276–1293.\n[11]  F. Peng and A. McCallum, Accurate information extraction from research papers using conditional ran-dom fields, Proceedings of the Human Language Technology Conference/North American Chapter of the \nAssociation for Computational Linguistics Annual Meeting (New York, NY, USA, 2004) 329–336.\n[12] B.A. Ojokoh, O.S. Adewale and S.O. Falaki, Improving on the smoothing technique for obtaining emis-sion probabilities in hidden Markov models, Oriental Journal of Computer Science and Technology 1(1) \n(2008) 15–24.\n[13] K. Seymore, A. McCallum and R. Rosenfeld, Learning hidden Markov model structure for information \nextraction. In: AAAI Workshop on Machine Learning for Information Extraction (1999).\n[14] G. Giuffrida, E.C Shek and J. Yang, Knowledge-based metadata extraction from postscript files, ACM \nDigital Libraries (2000) 77–84. \n[15] K. Nakagawa, A. Nomura and M. Suzuki, Extraction of Logical Structure from Articles in Mathematics \n(Springer, Berlin, 2004).\n[16] M. Krämer, H. Kaprykowsky, D. Keysers and T. Breuel, Bibliographic metadata extraction using probabi-\nlistic finite state transducers, Ninth International Conference on Document Analysis and Recognition \n(2007) 609–613.\n[17] E.G. Berkowitz and M.R. Elkhadiri, Creation of a Style Independent Intelligent Autonomous Citation \nIndexer to Support Academic Research (MAICS 2004) 68–73.", "summary": "This partial document discusses the extraction performance of different document sections, including 'References', 'Preface', 'Introduction', 'Conclusion', 'Abstract', 'Table of Contents', and 'Title'. It analyzes the precision, recall, accuracy, and F-measure for each section, attributing variations in performance to factors like section placement, presence in documents, labeling conventions, and the complexity of the rule-based system. The document also briefly mentions comparative studies by Hu et al. and Berkowitz and Elkhadiri."}, {"title": "References", "start_index": 8, "end_index": 8, "node_id": "0007", "text": "Bolanle Adefowoke Ojokoh et al.\nJournal of Information Science, 35 (5) 2009, pp. 563–570 © CILIP, DOI: 10.1177/0165551509105195 570extracts more metadata, and with relatively comparable effectiveness. However, since it is rule \nbased, it needs refinement over time as more keywords are discovered and metadata extraction is to be done for some different types of documents. \nReferences\n [1] K.M. Summers, Automatic discovery of logical document structure (PhD dissertation, Cornell University, \nIthaca, NY, 1998).\n [2] A. Arasu and H. Garcia-Molina, Extracting structured data from web pages, Proceedings of the 2003 ACM \nSIGMOD International Conference on Management of Data (SIGMOD) (June 2003) 337–348.\n [3] A. Crystal and P. Land, Metadata and search, Global Corporate Circle DCMI 2003 Workshop (2003). \nAvailable from http://dublincore.org/groups/corporate/Seattle/\n [4] H. Han, C.L. Giles, E. Manavoglu, H. Zha, Z. Zhang and E.A. Fox, Automatic document metadata extraction \nusing support vector machine, Joint Conference on Digital Libraries (JCDL’03)  (Houston, Texas USA, 2003).\n [5] B.A. Ojokoh, S.O. Falaki and O.S. Adewale, Automated information extraction system for heterogeneous \ndigital library documents, Proceedings of the ACM/IEEE Joint Conference on Digital Libraries (JCDL 2007) \nDoctoral Consortium (Vancouver, British Columbia, Canada, June 18–23, 2007).\n [6] A. Kawtrakul and C. Yingsaeree, A Unified Framework for Automatic Metadata Extraction from Electronic \nDocument (2004). Available at: http://iadlc.nul.nagoya-u.ac.jp/archives/IADLC2005/kawrtrakul.pdf\n [7] E.D. Liddy, S. Sutton, E. Allen, S. Harwell, S. Corieri and O. Yilmazel, Automatic metadata generation and evaluation, Proceedings of the 25th Annual International ACM SIGIR Conference on Research and \nDevelopment in Information Retrieval (Tampere, Finland, 2002) 401–402.\n [8] O. Yilmazel, C.M. Finneran and E.D. Liddy, MetaExtract: an NLP system to automatically assign metadata, Proceedings of the 2004 Joint ACM/IEEE Conference on Digital Libraries  (Tuscan, AZ, USA, 2004) 241–242.\n [9] S. Mao, J.W. Kim and G.R. Thoma, A dynamic feature generation system for automated metadata extrac-tion in preservation of digital materials, Proceedings of the First International Workshop on Document \nImage Analysis for Libraries (Palo Alto, CA, USA, 2004) 225–232.\n[10] Y. Hu, H. Li, Y. Cao, T. Teng, D. Meyerzon and Q. Zheng, Automatic extraction of titles from general documents, Information Processing and Management 42 (2006) 1276–1293.\n[11]  F. Peng and A. McCallum, Accurate information extraction from research papers using conditional ran-dom fields, Proceedings of the Human Language Technology Conference/North American Chapter of the \nAssociation for Computational Linguistics Annual Meeting (New York, NY, USA, 2004) 329–336.\n[12] B.A. Ojokoh, O.S. Adewale and S.O. Falaki, Improving on the smoothing technique for obtaining emis-sion probabilities in hidden Markov models, Oriental Journal of Computer Science and Technology 1(1) \n(2008) 15–24.\n[13] K. Seymore, A. McCallum and R. Rosenfeld, Learning hidden Markov model structure for information \nextraction. In: AAAI Workshop on Machine Learning for Information Extraction (1999).\n[14] G. Giuffrida, E.C Shek and J. Yang, Knowledge-based metadata extraction from postscript files, ACM \nDigital Libraries (2000) 77–84. \n[15] K. Nakagawa, A. Nomura and M. Suzuki, Extraction of Logical Structure from Articles in Mathematics \n(Springer, Berlin, 2004).\n[16] M. Krämer, H. Kaprykowsky, D. Keysers and T. Breuel, Bibliographic metadata extraction using probabi-\nlistic finite state transducers, Ninth International Conference on Document Analysis and Recognition \n(2007) 609–613.\n[17] E.G. Berkowitz and M.R. Elkhadiri, Creation of a Style Independent Intelligent Autonomous Citation \nIndexer to Support Academic Research (MAICS 2004) 68–73.", "summary": "This partial document discusses the challenges and methods of automatic metadata extraction from documents. It highlights that rule-based systems, while effective, require ongoing refinement as new keywords and document types emerge. The document also includes a comprehensive list of references related to automatic document structure discovery, structured data extraction from web pages, metadata and search, support vector machines for metadata extraction, automated information extraction systems for digital libraries, unified frameworks for metadata extraction, automatic metadata generation and evaluation, NLP systems for metadata assignment, dynamic feature generation for metadata extraction, title extraction from documents, and information extraction using conditional random fields."}];
+        
+        function showNodeDetails(nodeId) {
+            const node = findNode(nodeData, nodeId);
+            if (!node) return;
+            
+            // Update active state
+            document.querySelectorAll('.node-title').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(`[data-node-id="${nodeId}"]`).classList.add('active');
+            
+            // Generate content
+            const content = document.getElementById('content');
+            content.innerHTML = generateNodeDetails(node);
+        }
+        
+        function findNode(nodes, nodeId) {
+            for (const node of nodes) {
+                if (node.node_id === nodeId) return node;
+                if (node.nodes && node.nodes.length > 0) {
+                    const found = findNode(node.nodes, nodeId);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+        
+        function generateNodeDetails(node) {
+            const hasText = node.text && node.text.trim().length > 0;
+            const hasSummary = node.summary && node.summary.trim().length > 0;
+            const hasChildren = node.nodes && node.nodes.length > 0;
+            
+            let html = `
+                <div class="detail-section">
+                    <h2>${escapeHtml(node.title)}</h2>
+                    
+                    <div class="metadata">
+                        <div class="metadata-item">
+                            <span class="metadata-label">Node ID:</span> ${node.node_id || 'N/A'}
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Pages:</span> ${node.start_index} - ${node.end_index}
+                        </div>
+                        ${node.node_type ? `
+                        <div class="metadata-item">
+                            <span class="metadata-label">Type:</span> ${node.node_type}
+                        </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat">📝 Text: ${hasText ? node.text.length + ' chars' : 'None'}</div>
+                        <div class="stat">📋 Summary: ${hasSummary ? node.summary.length + ' chars' : 'None'}</div>
+                        <div class="stat">👶 Children: ${hasChildren ? node.nodes.length : '0'}</div>
+                    </div>
+            `;
+            
+            // Check for duplicate text issue
+            if (hasChildren && hasText) {
+                const childTexts = node.nodes.filter(n => n.text).map(n => n.text);
+                const allSame = childTexts.length > 1 && childTexts.every(t => t === childTexts[0]);
+                
+                if (allSame && childTexts[0] === node.text) {
+                    html += `
+                        <div class="warning">
+                            <div class="warning-title">⚠️ Duplicate Text Detected</div>
+                            All child nodes have identical text content (same as parent). This typically happens in coarse granularity mode.
+                            Consider using medium or fine granularity for proper text segmentation.
+                        </div>
+                    `;
+                }
+            }
+            
+            if (hasSummary) {
+                html += `
+                    <h3>Summary</h3>
+                    <div class="summary-content">${escapeHtml(node.summary)}</div>
+                `;
+            }
+            
+            if (hasText) {
+                const preview = node.text.length > 5000 ? 
+                    node.text.substring(0, 5000) + '\n\n... (truncated, ' + (node.text.length - 5000) + ' more characters)' : 
+                    node.text;
+                    
+                html += `
+                    <h3>Text Content</h3>
+                    <div class="text-content">${escapeHtml(preview)}</div>
+                `;
+            }
+            
+            if (hasChildren) {
+                html += `
+                    <div class="children-info">
+                        <strong>Child Nodes (${node.nodes.length}):</strong><br>
+                        ${node.nodes.map(n => `• ${escapeHtml(n.title)} (Pages ${n.start_index}-${n.end_index})`).join('<br>')}
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

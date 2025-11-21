@@ -234,3 +234,51 @@ Leave a star if you like our project. Thank you!
 ---
 
 © 2025 [Vectify AI](https://vectify.ai)
+
+
+---
+
+## 📝 Enhanced Markdown Processing
+
+PageIndex now includes enhanced markdown processing capabilities for better text extraction quality. This is particularly useful when working with markdown output from tools like **marker**, **docling**, or similar PDF-to-markdown converters.
+
+### Quick Start
+
+```python
+from pageindex import markdown_page_index
+
+# Process markdown file
+structure = markdown_page_index(
+    markdown_path="document.md",
+    metadata_path="document_meta.json",  # Optional
+    opt={'if_add_node_text': 'yes'}
+)
+
+print(f"Pages: {structure['page_count']}")
+print(f"Sections: {len(structure['tree'])}")
+print(f"Figures: {len(structure.get('figures', []))}")
+```
+
+### Why Use Markdown?
+
+- **Better text extraction**: Preserves formatting, subscripts, superscripts
+- **Extracted figures**: Figures saved as separate image files with references
+- **Cleaner tables**: Markdown tables are easier to parse than PDF tables
+- **Better layouts**: Improved handling of multi-column layouts
+- **Metadata**: Often includes document structure metadata
+
+### Examples
+
+```bash
+# Run markdown processing demo
+python PageIndex/demo_markdown_processor.py
+
+# Run tests
+python PageIndex/test_markdown_processor.py
+
+# See simple example
+python PageIndex/example_markdown_usage.py
+```
+
+See [MARKDOWN_PROCESSING.md](PageIndex/MARKDOWN_PROCESSING.md) for complete documentation.
+

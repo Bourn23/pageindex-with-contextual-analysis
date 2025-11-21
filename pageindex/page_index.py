@@ -7,6 +7,99 @@ import re
 from .utils import *
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pydantic import BaseModel, Field
+from typing import Optional
+from google import genai
+from google.genai import types
+
+
+# Pydantic models for structured JSON responses
+class TocCompletionCheck(BaseModel):
+    """Response for checking if TOC transformation is complete."""
+    thinking: str = Field(..., description="Reasoning about completeness")
+    completed: str = Field(..., description="yes or no")
+
+
+class PageIndexDetection(BaseModel):
+    """Response for detecting if page indices are in TOC."""
+    thinking: str = Field(..., description="Reasoning about page index presence")
+    page_index_given_in_toc: str = Field(..., description="yes or no")
+
+
+class TocEntry(BaseModel):
+    """Single entry in table of contents."""
+    structure: Optional[str] = Field(None, description="Structure index like '1.1.2' or None")
+    title: str = Field(..., description="Title of the section")
+    page: Optional[int] = Field(None, description="Page number or None")
+
+
+class TocTransformation(BaseModel):
+    """Response for TOC transformation to JSON."""
+    table_of_contents: list[TocEntry] = Field(..., description="List of TOC entries")
+
+
+# Helper function to get Gemini client for structured output
+def get_gemini_client_for_schema():
+    """Get Gemini client for JSON schema enforcement."""
+    api_key = os.getenv("GEMINI_API_KEY")
+    if api_key:
+        return genai.Client(api_key=api_key)
+    return None
+
+
+def call_llm_with_schema(prompt: str, schema_model: type[BaseModel], model: str = None, max_retries: int = 3):
+    """
+    Call LLM with JSON schema enforcement using Gemini.
+    
+    With Gemini's structured output, the response is guaranteed to be valid JSON
+    matching the schema, so no cleanup or fallback parsing is needed.
+    
+    Args:
+        prompt: The prompt to send
+        schema_model: Pydantic model class for the expected response
+        model: Model name (defaults to gemini-2.5-flash-lite)
+        max_retries: Maximum retry attempts
+        
+    Returns:
+        Validated Pydantic model instance or None on failure
+    """
+    gemini_client = get_gemini_client_for_schema()
+    
+    if not gemini_client:
+        logging.error("Gemini client not available - GEMINI_API_KEY not set")
+        return None
+    
+    # Use Gemini with JSON schema enforcement
+    if model is None:
+        model = 'gemini-2.5-flash-lite'
+    
+    for attempt in range(max_retries):
+        try:
+            response = gemini_client.models.generate_content(
+                model=model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0,
+                    response_mime_type="application/json",
+                    response_json_schema=schema_model.model_json_schema()
+                )
+            )
+            
+            # With structured output, response.text is guaranteed to be valid JSON
+            # that matches the schema - no cleanup needed!
+            return schema_model.model_validate_json(response.text)
+            
+        except Exception as e:
+            wait_time = 2 ** attempt
+            logging.warning(f"Error calling LLM with schema (attempt {attempt + 1}/{max_retries}): {e}")
+            
+            if attempt < max_retries - 1:
+                time.sleep(wait_time)
+            else:
+                logging.error(f"LLM call failed after {max_retries} attempts")
+                return None
+    
+    return None
 
 
 ################### check title in page #########################################################
@@ -153,9 +246,14 @@ def check_if_toc_transformation_is_complete(content, toc, model=None):
     Directly return the final JSON structure. Do not output anything else."""
 
     prompt = prompt + '\n Raw Table of contents:\n' + content + '\n Cleaned Table of contents:\n' + toc
-    response = ChatGPT_API(model=model, prompt=prompt)
-    json_content = extract_json(response)
-    return json_content['completed']
+    
+    # Use structured output with JSON schema - guaranteed valid JSON
+    result = call_llm_with_schema(prompt, TocCompletionCheck, model=model)
+    if result:
+        return result.completed
+    
+    # If Gemini client not available, return default
+    return 'no'
 
 def extract_toc_content(content, model=None):
     prompt = f"""
@@ -212,9 +310,13 @@ def detect_page_index(toc_content, model=None):
     }}
     Directly return the final JSON structure. Do not output anything else."""
 
-    response = ChatGPT_API(model=model, prompt=prompt)
-    json_content = extract_json(response)
-    return json_content['page_index_given_in_toc']
+    # Use structured output with JSON schema - guaranteed valid JSON
+    result = call_llm_with_schema(prompt, PageIndexDetection, model=model)
+    if result:
+        return result.page_index_given_in_toc
+    
+    # If Gemini client not available, return default
+    return 'no'
 
 def toc_extractor(page_list, toc_page_list, model):
     def transform_dots_to_colon(text):
@@ -289,43 +391,18 @@ def toc_transformer(toc_content, model=None):
     Directly return the final JSON structure, do not output anything else. """
 
     prompt = init_prompt + '\n Given table of contents\n:' + toc_content
-    last_complete, finish_reason = ChatGPT_API_with_finish_reason(model=model, prompt=prompt)
-    if_complete = check_if_toc_transformation_is_complete(toc_content, last_complete, model)
-    if if_complete == "yes" and finish_reason == "finished":
-        last_complete = extract_json(last_complete)
-        cleaned_response=convert_page_to_int(last_complete['table_of_contents'])
+    
+    # Use structured output with JSON schema - guaranteed valid JSON!
+    result = call_llm_with_schema(prompt, TocTransformation, model=model)
+    if result:
+        # Convert Pydantic model to dict and process
+        toc_data = [entry.model_dump() for entry in result.table_of_contents]
+        cleaned_response = convert_page_to_int(toc_data)
         return cleaned_response
     
-    last_complete = get_json_content(last_complete)
-    while not (if_complete == "yes" and finish_reason == "finished"):
-        position = last_complete.rfind('}')
-        if position != -1:
-            last_complete = last_complete[:position+2]
-        prompt = f"""
-        Your task is to continue the table of contents json structure, directly output the remaining part of the json structure.
-        The response should be in the following JSON format: 
-
-        The raw table of contents json structure is:
-        {toc_content}
-
-        The incomplete transformed table of contents json structure is:
-        {last_complete}
-
-        Please continue the json structure, directly output the remaining part of the json structure."""
-
-        new_complete, finish_reason = ChatGPT_API_with_finish_reason(model=model, prompt=prompt)
-
-        if new_complete.startswith('```json'):
-            new_complete =  get_json_content(new_complete)
-            last_complete = last_complete+new_complete
-
-        if_complete = check_if_toc_transformation_is_complete(toc_content, last_complete, model)
-        
-
-    last_complete = json.loads(last_complete)
-
-    cleaned_response=convert_page_to_int(last_complete['table_of_contents'])
-    return cleaned_response
+    # If Gemini client not available, return empty list
+    logging.error("Failed to transform TOC - Gemini client not available")
+    return []
     
 
 
@@ -496,7 +573,7 @@ def remove_first_physical_index_section(text):
     return text
 
 ### add verify completeness
-def generate_toc_continue(toc_content, part, model="gpt-4o-2024-11-20"):
+def generate_toc_continue(toc_content, part, model="gemini-2.5-flash-lite"):
     print('start generate_toc_continue')
     prompt = """
     You are an expert in extracting hierarchical tree structure.
@@ -729,7 +806,7 @@ def check_toc(page_list, opt=None):
 
 
 ################### fix incorrect toc #########################################################
-def single_toc_item_index_fixer(section_title, content, model="gpt-4o-2024-11-20"):
+def single_toc_item_index_fixer(section_title, content, model="gemini-2.5-flash-lite"):
     tob_extractor_prompt = """
     You are given a section title and several pages of a document, your job is to find the physical index of the start page of the section in the partial document.
 
@@ -1052,6 +1129,35 @@ async def tree_parser(page_list, opt, doc=None, logger=None):
     ]
     await asyncio.gather(*tasks)
     
+    # Apply granular features if enabled
+    if opt.granularity in ['medium', 'fine']:
+        logger.info(f"Applying granular features for granularity level: {opt.granularity}")
+        from .granular.integration import apply_semantic_subdivision, detect_and_integrate_figures_tables
+        from .llm_client import get_llm_client
+        
+        # Get LLM client for granular features
+        llm_client = get_llm_client()
+        opt.llm_client = llm_client
+        logger.info(f"LLM client initialized: {llm_client.provider if hasattr(llm_client, 'provider') else 'unknown'}")
+        
+        # Apply semantic subdivision to create finer-grained nodes
+        if opt.enable_semantic_subdivision:
+            logger.info("Starting semantic subdivision...")
+            await apply_semantic_subdivision(toc_tree, page_list, opt, logger)
+            logger.info("Semantic subdivision complete")
+        else:
+            logger.info("Semantic subdivision disabled")
+        
+        # Detect and integrate figures and tables
+        if opt.enable_figure_detection or opt.enable_table_detection:
+            logger.info(f"Starting figure/table detection (figures={opt.enable_figure_detection}, tables={opt.enable_table_detection})...")
+            await detect_and_integrate_figures_tables(toc_tree, page_list, doc, opt, logger)
+            logger.info("Figure/table detection complete")
+        else:
+            logger.info("Figure/table detection disabled")
+    else:
+        logger.info(f"Granular features skipped for granularity level: {opt.granularity}")
+    
     return toc_tree
 
 
@@ -1073,14 +1179,19 @@ def page_index_main(doc, opt=None):
 
     async def page_index_builder():
         structure = await tree_parser(page_list, opt, doc=doc, logger=logger)
+        
+        # Reassign node IDs after all tree modifications (including granular features)
         if opt.if_add_node_id == 'yes':
             write_node_id(structure)    
+        
         if opt.if_add_node_text == 'yes':
             add_node_text(structure, page_list)
         if opt.if_add_node_summary == 'yes':
             if opt.if_add_node_text == 'no':
                 add_node_text(structure, page_list)
-            await generate_summaries_for_structure(structure, model=opt.model)
+            # Use smart mode by default, unless explicitly set to 'full'
+            smart_mode = getattr(opt, 'summary_mode', 'smart') == 'smart'
+            await generate_summaries_for_structure(structure, model=opt.model, smart_mode=smart_mode)
             if opt.if_add_node_text == 'no':
                 remove_structure_text(structure)
             if opt.if_add_doc_description == 'yes':

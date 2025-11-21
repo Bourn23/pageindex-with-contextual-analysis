@@ -1,8 +1,39 @@
+# LLM model to use for document processing and summarization
 model: "gpt-4o-2024-11-20"
+
+# Number of pages to check for table of contents detection
 toc_check_page_num: 20
+
+# Maximum number of pages to include in each node
 max_page_num_each_node: 10
+
+# Maximum token count allowed per node (for LLM context limits)
 max_token_num_each_node: 20000
+
+# Whether to add unique node IDs to each node
 if_add_node_id: "yes"
+
+# Whether to generate and add summaries for each node
 if_add_node_summary: "yes"
+
+# Whether to add a description of the entire document
 if_add_doc_description: "no"
+
+# Whether to include the full text content in each node
 if_add_node_text: "no"
+
+# Granular node generation settings
+# Controls the level of detail in node generation: "coarse" (page-level), "medium" (section-level), "fine" (element-level)
+granularity: "coarse"
+
+# Whether to detect and create separate nodes for figures/images
+enable_figure_detection: true
+
+# Whether to detect and create separate nodes for tables
+enable_table_detection: true
+
+# Whether to subdivide large sections into smaller semantic chunks
+enable_semantic_subdivision: true
+
+# Minimum page count threshold for applying semantic subdivision (e.g., 0.5 = half a page)
+semantic_min_pages: 0.5

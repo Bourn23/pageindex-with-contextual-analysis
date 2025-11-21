@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument('--pdf_path', type=str, help='Path to the PDF file')
     parser.add_argument('--md_path', type=str, help='Path to the Markdown file')
 
-    parser.add_argument('--model', type=str, default='gpt-4o-2024-11-20', help='Model to use')
+    parser.add_argument('--model', type=str, default='gemini-2.5-flash-lite', help='Model to use')
 
     parser.add_argument('--toc-check-pages', type=int, default=20, 
                       help='Number of pages to check for table of contents (PDF only)')
@@ -23,10 +23,32 @@ if __name__ == "__main__":
                       help='Whether to add node id to the node')
     parser.add_argument('--if-add-node-summary', type=str, default='yes',
                       help='Whether to add summary to the node')
+    parser.add_argument('--summary-mode', type=str, default='smart',
+                      choices=['smart', 'full'],
+                      help='Summary generation mode: smart (skip redundant summaries, RAG-optimized), '
+                           'full (generate summaries for all nodes)')
     parser.add_argument('--if-add-doc-description', type=str, default='no',
                       help='Whether to add doc description to the doc')
-    parser.add_argument('--if-add-node-text', type=str, default='no',
+    parser.add_argument('--if-add-node-text', type=str, default='yes',
                       help='Whether to add text to the node')
+    
+    # Granular features arguments
+    parser.add_argument('--granularity', type=str, default='coarse',
+                      choices=['coarse', 'medium', 'fine'],
+                      help='Granularity level for node generation: coarse (default, existing behavior), '
+                           'medium (add figures/tables and semantic subdivision), '
+                           'fine (medium + deeper semantic analysis)')
+    parser.add_argument('--enable-figure-detection', type=str, default='yes',
+                      choices=['yes', 'no'],
+                      help='Enable figure detection and node creation (only applies when granularity is medium or fine)')
+    parser.add_argument('--enable-table-detection', type=str, default='yes',
+                      choices=['yes', 'no'],
+                      help='Enable table detection and node creation (only applies when granularity is medium or fine)')
+    parser.add_argument('--enable-semantic-subdivision', type=str, default='yes',
+                      choices=['yes', 'no'],
+                      help='Enable semantic subdivision of sections (only applies when granularity is medium or fine)')
+    parser.add_argument('--semantic-min-pages', type=float, default=0.5,
+                      help='Minimum section length in pages for semantic subdivision')
                       
     # Markdown specific arguments
     parser.add_argument('--if-thinning', type=str, default='no',
@@ -48,6 +70,7 @@ if __name__ == "__main__":
         if not args.pdf_path.lower().endswith('.pdf'):
             raise ValueError("PDF file must have .pdf extension")
         if not os.path.isfile(args.pdf_path):
+            print(os.getcwd())
             raise ValueError(f"PDF file not found: {args.pdf_path}")
             
         # Process PDF file
@@ -59,8 +82,14 @@ if __name__ == "__main__":
             max_token_num_each_node=args.max_tokens_per_node,
             if_add_node_id=args.if_add_node_id,
             if_add_node_summary=args.if_add_node_summary,
+            summary_mode=args.summary_mode,
             if_add_doc_description=args.if_add_doc_description,
-            if_add_node_text=args.if_add_node_text
+            if_add_node_text=args.if_add_node_text,
+            granularity=args.granularity,
+            enable_figure_detection=(args.enable_figure_detection == 'yes'),
+            enable_table_detection=(args.enable_table_detection == 'yes'),
+            enable_semantic_subdivision=(args.enable_semantic_subdivision == 'yes'),
+            semantic_min_pages=args.semantic_min_pages
         )
 
         # Process the PDF

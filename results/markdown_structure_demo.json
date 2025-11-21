@@ -1,0 +1,169 @@
+{
+  "tree": [
+    {
+      "title": "Materials Today Energy",
+      "start_page": 1,
+      "end_page": 0,
+      "type": "section",
+      "node_id": "1"
+    },
+    {
+      "title": "Influence of the LLZO\u2014PEO interface on the micro- and macro-scale properties of composite polymer electrolytes for solid-state batteries",
+      "start_page": 1,
+      "end_page": 0,
+      "type": "section",
+      "node_id": "2"
+    },
+    {
+      "title": "ARTICLE INFO",
+      "start_page": 1,
+      "end_page": 0,
+      "type": "section",
+      "node_id": "3"
+    },
+    {
+      "title": "Article history:\nReceived 25 August 2023\nReceived in revised form\n9 October 2023\nAccepted 24 October 2023\nAvailable online 31 October 2023",
+      "start_page": 1,
+      "end_page": 0,
+      "type": "section",
+      "node_id": "4"
+    },
+    {
+      "title": "ABSTRACT",
+      "start_page": 1,
+      "end_page": 0,
+      "type": "section",
+      "node_id": "5"
+    },
+    {
+      "title": "1. Introduction",
+      "start_page": 1,
+      "end_page": 1,
+      "type": "section",
+      "node_id": "6"
+    },
+    {
+      "title": "2. Experimental section",
+      "start_page": 2,
+      "end_page": 2,
+      "type": "section",
+      "node_id": "7"
+    },
+    {
+      "title": "3. Results and discussions",
+      "start_page": 3,
+      "end_page": 6,
+      "type": "section",
+      "node_id": "8"
+    },
+    {
+      "title": "4. Concluding remarks",
+      "start_page": 7,
+      "end_page": 6,
+      "type": "section",
+      "node_id": "9"
+    },
+    {
+      "title": "Author contributions",
+      "start_page": 7,
+      "end_page": 7,
+      "type": "section",
+      "node_id": "10"
+    },
+    {
+      "title": "Declaration of competing interest",
+      "start_page": 8,
+      "end_page": 7,
+      "type": "section",
+      "node_id": "11"
+    },
+    {
+      "title": "Data availability",
+      "start_page": 8,
+      "end_page": 7,
+      "type": "section",
+      "node_id": "12"
+    },
+    {
+      "title": "Acknowledgment",
+      "start_page": 8,
+      "end_page": 7,
+      "type": "section",
+      "node_id": "13"
+    },
+    {
+      "title": "Appendix A. Supplementary data",
+      "start_page": 8,
+      "end_page": 7,
+      "type": "section",
+      "node_id": "14"
+    },
+    {
+      "title": "References",
+      "start_page": 8,
+      "end_page": 8,
+      "type": "section",
+      "node_id": "15"
+    }
+  ],
+  "page_count": 9,
+  "source": "markdown",
+  "markdown_path": "PageIndex/tests/markdowns/Influence of the LLZO-PEO interface on the micro- and macro-scale properties of composite polymer electrolytes for solid-state batteries/Influence of the LLZO-PEO interface on the micro- and macro-scale properties of composite polymer electrolytes for solid-state batteries.md",
+  "figures": [
+    {
+      "page": 3,
+      "figure_number": "8",
+      "line": 101,
+      "type": "figure"
+    },
+    {
+      "page": 4,
+      "figure_number": "2",
+      "line": 105,
+      "type": "figure"
+    },
+    {
+      "page": 4,
+      "figure_number": "10",
+      "line": 125,
+      "type": "figure"
+    },
+    {
+      "page": 4,
+      "figure_number": "11",
+      "line": 127,
+      "type": "figure"
+    },
+    {
+      "page": 5,
+      "figure_number": "8",
+      "line": 145,
+      "type": "figure"
+    },
+    {
+      "page": 6,
+      "figure_number": "2",
+      "line": 149,
+      "type": "figure"
+    },
+    {
+      "page": 6,
+      "figure_number": "9",
+      "line": 163,
+      "type": "figure"
+    },
+    {
+      "page": 7,
+      "figure_number": "2",
+      "line": 167,
+      "type": "figure"
+    }
+  ],
+  "tables": [
+    {
+      "line_start": 111,
+      "line_end": 115,
+      "type": "table"
+    }
+  ]
+}

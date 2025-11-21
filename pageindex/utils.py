@@ -1,5 +1,4 @@
 import tiktoken
-import openai
 import logging
 import os
 from datetime import datetime
@@ -16,96 +15,63 @@ import logging
 import yaml
 from pathlib import Path
 from types import SimpleNamespace as config
+from .llm_client import get_llm_client
 
 CHATGPT_API_KEY = os.getenv("CHATGPT_API_KEY")
 
 def count_tokens(text, model=None):
     if not text:
         return 0
-    enc = tiktoken.encoding_for_model(model)
+    
+    # Handle Gemini models - use GPT-4 encoding as approximation
+    if model and model.startswith('gemini'):
+        try:
+            enc = tiktoken.get_encoding("cl100k_base")  # GPT-4 encoding
+        except Exception:
+            # Fallback: rough estimate (1 token ≈ 4 characters)
+            return len(text) // 4
+    else:
+        try:
+            enc = tiktoken.encoding_for_model(model)
+        except KeyError:
+            # If model not recognized, use GPT-4 encoding as default
+            enc = tiktoken.get_encoding("cl100k_base")
+    
     tokens = enc.encode(text)
     return len(tokens)
 
 def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
-    max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
-    for i in range(max_retries):
-        try:
-            if chat_history:
-                messages = chat_history
-                messages.append({"role": "user", "content": prompt})
-            else:
-                messages = [{"role": "user", "content": prompt}]
-            
-            response = client.chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=0,
-            )
-            if response.choices[0].finish_reason == "length":
-                return response.choices[0].message.content, "max_output_reached"
-            else:
-                return response.choices[0].message.content, "finished"
-
-        except Exception as e:
-            print('************* Retrying *************')
-            logging.error(f"Error: {e}")
-            if i < max_retries - 1:
-                time.sleep(1)  # Wait for 1秒 before retrying
-            else:
-                logging.error('Max retries reached for prompt: ' + prompt)
-                return "Error"
+    """
+    Chat completion with finish reason using the unified LLM client
+    
+    Note: api_key parameter is kept for backward compatibility but is optional.
+    The client will auto-detect provider from environment variables.
+    """
+    client = get_llm_client(api_key=api_key)
+    return client.chat_completion_with_finish_reason(model, prompt, chat_history=chat_history)
 
 
 
 def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
-    max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
-    for i in range(max_retries):
-        try:
-            if chat_history:
-                messages = chat_history
-                messages.append({"role": "user", "content": prompt})
-            else:
-                messages = [{"role": "user", "content": prompt}]
-            
-            response = client.chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=0,
-            )
-   
-            return response.choices[0].message.content
-        except Exception as e:
-            print('************* Retrying *************')
-            logging.error(f"Error: {e}")
-            if i < max_retries - 1:
-                time.sleep(1)  # Wait for 1秒 before retrying
-            else:
-                logging.error('Max retries reached for prompt: ' + prompt)
-                return "Error"
+    """
+    Chat completion using the unified LLM client
+    
+    Note: api_key parameter is kept for backward compatibility but is optional.
+    The client will auto-detect provider from environment variables.
+    """
+    client = get_llm_client(api_key=api_key)
+    return client.chat_completion(model, prompt, chat_history=chat_history)
             
 
 async def ChatGPT_API_async(model, prompt, api_key=CHATGPT_API_KEY):
-    max_retries = 10
-    messages = [{"role": "user", "content": prompt}]
-    for i in range(max_retries):
-        try:
-            async with openai.AsyncOpenAI(api_key=api_key) as client:
-                response = await client.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    temperature=0,
-                )
-                return response.choices[0].message.content
-        except Exception as e:
-            print('************* Retrying *************')
-            logging.error(f"Error: {e}")
-            if i < max_retries - 1:
-                await asyncio.sleep(1)  # Wait for 1s before retrying
-            else:
-                logging.error('Max retries reached for prompt: ' + prompt)
-                return "Error"  
+    """
+    Async chat completion using the unified LLM client
+    
+    Note: api_key parameter is kept for backward compatibility but is optional.
+    The client will auto-detect provider from environment variables.
+    """
+    client = get_llm_client(api_key=api_key)
+    return await client.chat_completion_async(model, prompt)  
             
             
 def get_json_content(response):
@@ -330,6 +296,9 @@ class JsonLogger:
 
     def info(self, message, **kwargs):
         self.log("INFO", message, **kwargs)
+
+    def warning(self, message, **kwargs):
+        self.log("WARNING", message, **kwargs)
 
     def error(self, message, **kwargs):
         self.log("ERROR", message, **kwargs)
@@ -578,6 +547,15 @@ def convert_page_to_int(data):
 
 def add_node_text(node, pdf_pages):
     if isinstance(node, dict):
+        # Skip granular nodes - they already have specialized text extraction
+        # (semantic units have paragraph-level text, figures/tables have captions+context)
+        node_type = node.get('node_type')
+        if node_type in ['semantic_unit', 'figure', 'table']:
+            # Still process children if any
+            if 'nodes' in node:
+                add_node_text(node['nodes'], pdf_pages)
+            return
+        
         start_page = node.get('start_index')
         end_page = node.get('end_index')
         node['text'] = get_text_of_pdf_pages(pdf_pages, start_page, end_page)
@@ -591,6 +569,15 @@ def add_node_text(node, pdf_pages):
 
 def add_node_text_with_labels(node, pdf_pages):
     if isinstance(node, dict):
+        # Skip granular nodes - they already have specialized text extraction
+        # (semantic units have paragraph-level text, figures/tables have captions+context)
+        node_type = node.get('node_type')
+        if node_type in ['semantic_unit', 'figure', 'table']:
+            # Still process children if any
+            if 'nodes' in node:
+                add_node_text_with_labels(node['nodes'], pdf_pages)
+            return
+        
         start_page = node.get('start_index')
         end_page = node.get('end_index')
         node['text'] = get_text_of_pdf_pages_with_labels(pdf_pages, start_page, end_page)
@@ -602,10 +589,116 @@ def add_node_text_with_labels(node, pdf_pages):
     return
 
 
+def should_generate_summary(node):
+    """
+    Determine if a node needs a summary generated.
+    
+    Strategy:
+    - Skip semantic units, figures, tables (they already have contextual summaries)
+    - Skip nodes with existing good summaries
+    - Generate for parent sections without summaries
+    - Generate for complex nodes (>1000 chars) without summaries
+    
+    Args:
+        node: Node dictionary
+        
+    Returns:
+        bool: True if summary should be generated
+    """
+    # Check if already has a good summary
+    existing_summary = node.get('summary', '')
+    if existing_summary and len(existing_summary) > 50:
+        # Trust summaries from semantic analyzer, figure detector, table detector
+        node_type = node.get('node_type')
+        if node_type in ['semantic_unit', 'figure', 'table']:
+            return False
+    
+    # For nodes without text, can't generate summary
+    if not node.get('text'):
+        return False
+    
+    # For semantic units without summary (shouldn't happen, but handle it)
+    if node.get('node_type') == 'semantic_unit':
+        if not existing_summary:
+            # Generate only if text is substantial
+            return len(node.get('text', '')) > 200
+        return False
+    
+    # For figures/tables, caption is the summary
+    if node.get('node_type') in ['figure', 'table']:
+        return False
+    
+    # For parent sections, check if we need a summary
+    children = node.get('nodes', [])
+    if children:
+        # If children have good metadata/summaries, we might not need parent summary
+        children_have_summaries = sum(1 for c in children if c.get('summary')) / len(children) > 0.7
+        
+        # Generate parent summary if:
+        # 1. Many children (>5) - helps with navigation
+        # 2. No existing summary
+        # 3. Children have summaries (can generate from them)
+        if len(children) > 5 and not existing_summary and children_have_summaries:
+            return True
+        
+        # For smaller sections, only generate if no summary exists
+        if not existing_summary:
+            return True
+    else:
+        # Leaf node without summary - generate if substantial
+        if not existing_summary and len(node.get('text', '')) > 200:
+            return True
+    
+    return False
+
+
 async def generate_node_summary(node, model=None):
+    """
+    Generate summary for a node.
+    
+    For parent nodes with children, generates from child summaries.
+    For leaf nodes, generates from text.
+    """
+    children = node.get('nodes', [])
+    
+    # For parent nodes with children that have summaries, generate from children
+    if children:
+        child_summaries = [
+            c.get('summary', '') for c in children 
+            if c.get('summary') and len(c.get('summary', '')) > 20
+        ]
+        
+        if len(child_summaries) >= len(children) * 0.5:  # At least half have summaries
+            # Generate parent summary from child summaries
+            child_summary_text = '\n'.join([
+                f"- {children[i].get('title', 'Untitled')}: {summary}"
+                for i, summary in enumerate(child_summaries[:10])  # Limit to first 10
+            ])
+            
+            prompt = f"""You are given a section titled "{node.get('title', 'Untitled')}" with the following subsections:
+
+{child_summary_text}
+
+Generate a concise 2-3 sentence overview of what this section covers. Focus on the main topics and themes, not detailed results.
+
+Directly return the description, do not include any other text.
+"""
+            response = await ChatGPT_API_async(model, prompt)
+            return response
+    
+    # For leaf nodes or parents without child summaries, generate from text
+    text = node.get('text', '')
+    if not text:
+        return ""
+    
+    # Truncate very long text for summary generation
+    max_text_length = 3000
+    if len(text) > max_text_length:
+        text = text[:max_text_length] + "\n\n[... text truncated ...]"
+    
     prompt = f"""You are given a part of a document, your task is to generate a description of the partial document about what are main points covered in the partial document.
 
-    Partial Document Text: {node['text']}
+    Partial Document Text: {text}
     
     Directly return the description, do not include any other text.
     """
@@ -613,13 +706,42 @@ async def generate_node_summary(node, model=None):
     return response
 
 
-async def generate_summaries_for_structure(structure, model=None):
-    nodes = structure_to_list(structure)
-    tasks = [generate_node_summary(node, model=model) for node in nodes]
-    summaries = await asyncio.gather(*tasks)
+async def generate_summaries_for_structure(structure, model=None, smart_mode=True):
+    """
+    Generate summaries for structure with smart skipping.
     
-    for node, summary in zip(nodes, summaries):
-        node['summary'] = summary
+    Args:
+        structure: Document structure (list or dict)
+        model: LLM model to use
+        smart_mode: If True, skip nodes that don't need summaries
+        
+    Returns:
+        Updated structure with summaries
+    """
+    nodes = structure_to_list(structure)
+    
+    if smart_mode:
+        # Filter nodes that need summaries
+        nodes_to_summarize = [node for node in nodes if should_generate_summary(node)]
+        
+        if nodes_to_summarize:
+            print(f"Generating summaries for {len(nodes_to_summarize)}/{len(nodes)} nodes (smart mode)")
+            tasks = [generate_node_summary(node, model=model) for node in nodes_to_summarize]
+            summaries = await asyncio.gather(*tasks)
+            
+            for node, summary in zip(nodes_to_summarize, summaries):
+                node['summary'] = summary
+        else:
+            print(f"All {len(nodes)} nodes already have summaries (smart mode)")
+    else:
+        # Original behavior - generate for all nodes
+        print(f"Generating summaries for all {len(nodes)} nodes (full mode)")
+        tasks = [generate_node_summary(node, model=model) for node in nodes]
+        summaries = await asyncio.gather(*tasks)
+        
+        for node, summary in zip(nodes, summaries):
+            node['summary'] = summary
+    
     return structure
 
 
@@ -709,4 +831,18 @@ class ConfigLoader:
 
         self._validate_keys(user_dict)
         merged = {**self._default_dict, **user_dict}
+        
+        # Ensure backward compatibility: set default values for new granular parameters
+        # if they're not present in the merged config
+        granular_defaults = {
+            'granularity': 'coarse',
+            'enable_figure_detection': True,
+            'enable_table_detection': True,
+            'enable_semantic_subdivision': True,
+            'semantic_min_pages': 0.5
+        }
+        for key, default_value in granular_defaults.items():
+            if key not in merged:
+                merged[key] = default_value
+        
         return config(**merged)
