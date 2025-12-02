@@ -1,0 +1,20 @@
+======================================================================
+Markdown Processing V2 (markdown-it-py)
+======================================================================
+Input:       New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md
+Granularity: keywords
+Model:       gemini-2.5-flash-lite
+======================================================================
+
+✓ LLM Client initialized (gemini)
+Processing New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md...
+
+✓ Saved to: results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md_markdown_keywords_1764671496.4380832.json
+
+Statistics:
+  Total nodes: 51
+  Node types:
+    figure: 5
+    section: 12
+    semantic_unit: 32
+    table: 2

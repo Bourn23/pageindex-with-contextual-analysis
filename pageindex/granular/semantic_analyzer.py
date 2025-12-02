@@ -75,7 +75,10 @@ class SemanticAnalyzer:
         # Initialize Gemini client for structured output
         api_key = os.getenv("GEMINI_API_KEY")
         if api_key:
+            # Initialize without custom timeout - use SDK defaults
+            # The 'timeout' in http_options is misinterpreted as API deadline, not HTTP timeout
             self.gemini_client = genai.Client(api_key=api_key)
+            self.logger.debug("Gemini client initialized with default timeout")
         else:
             self.gemini_client = None
             self.logger.warning("GEMINI_API_KEY not found - will use fallback LLM client")
@@ -482,7 +485,7 @@ Classification:"""
         return paragraph_pages
     
     def analyze_section(self, section_node: dict, page_texts: List[Tuple[str, int]], 
-                       min_pages: float = 0.5) -> List[SemanticUnit]:
+                       min_pages: float = 0.5, min_paragraphs: int = 3) -> List[SemanticUnit]:
         """
         Analyze a section and identify semantic sub-units.
         
@@ -491,6 +494,7 @@ Classification:"""
                          'start_index', 'end_index' fields
             page_texts: List of (page_text, token_count) tuples for page mapping
             min_pages: Minimum section length (in pages) to attempt subdivision
+            min_paragraphs: Minimum number of paragraphs to attempt subdivision
             
         Returns:
             List of SemanticUnit objects representing sub-sections
@@ -502,6 +506,12 @@ Classification:"""
             start_page = section_node.get('start_index', 1)
             end_page = section_node.get('end_index', 1)
             
+            # Truncate very long sections to avoid API timeouts
+            max_chars = 40000
+            if len(full_text) > max_chars:
+                self.logger.warning(f"Section '{section_title}' is very long ({len(full_text)} chars), truncating to {max_chars} chars")
+                full_text = full_text[:max_chars] + "\n\n[Section truncated for analysis]"
+            
             # Check if section is too short
             section_length = end_page - start_page + 1
             if section_length < min_pages:
@@ -511,7 +521,7 @@ Classification:"""
             # Split into paragraphs
             paragraphs = self._split_into_paragraphs(full_text)
             
-            if len(paragraphs) < 3:
+            if len(paragraphs) < min_paragraphs:
                 self.logger.debug(f"Section '{section_title}' has too few paragraphs ({len(paragraphs)}) - skipping subdivision")
                 return []
             
@@ -623,7 +633,10 @@ Classification:"""
         # Retry with exponential backoff
         for attempt in range(max_retries):
             try:
+                self.logger.info(f"  Calling Gemini API for '{section_title}' (attempt {attempt + 1}/{max_retries})...")
+                
                 # Call Gemini with JSON schema enforcement
+                # Note: Gemini SDK doesn't support timeout directly, but httpx client does
                 response = self.gemini_client.models.generate_content(
                     model=model,
                     contents=prompt,
@@ -633,6 +646,8 @@ Classification:"""
                         response_json_schema=SemanticAnalysisResponse.model_json_schema()
                     )
                 )
+                
+                self.logger.info(f"  ✓ Received response from Gemini")
                 
                 # With structured output, response.text is guaranteed to be valid JSON!
                 analysis_response = SemanticAnalysisResponse.model_validate_json(response.text)
@@ -648,13 +663,19 @@ Classification:"""
                 
             except Exception as e:
                 wait_time = 2 ** attempt
-                self.logger.warning(f"Error calling Gemini for analysis (attempt {attempt + 1}/{max_retries}): {e}")
+                error_type = type(e).__name__
+                
+                # Check if it's a timeout error
+                if 'timeout' in str(e).lower() or 'timed out' in str(e).lower():
+                    self.logger.warning(f"Gemini API timeout for '{section_title}' (attempt {attempt + 1}/{max_retries})")
+                else:
+                    self.logger.warning(f"Error calling Gemini for analysis (attempt {attempt + 1}/{max_retries}): {error_type}: {e}")
                 
                 if attempt < max_retries - 1:
-                    self.logger.debug(f"Retrying in {wait_time} seconds...")
+                    self.logger.info(f"  Retrying in {wait_time} seconds...")
                     time.sleep(wait_time)
                 else:
-                    self.logger.error(f"Gemini analysis failed after {max_retries} attempts")
+                    self.logger.error(f"Gemini analysis failed after {max_retries} attempts for '{section_title}'")
                     return []
         
         return []
@@ -906,6 +927,8 @@ Classification:"""
             
             for attempt in range(max_retries):
                 try:
+                    self.logger.info(f"  Calling Gemini API for keyword extraction (attempt {attempt + 1}/{max_retries})...")
+                    
                     response = self.gemini_client.models.generate_content(
                         model=model,
                         contents=prompt,
@@ -916,6 +939,8 @@ Classification:"""
                         )
                     )
                     
+                    self.logger.info(f"  ✓ Received keyword extraction response")
+                    
                     # Parse structured response
                     keyword_response = KeywordExtractionResponse.model_validate_json(response.text)
                     keywords = [kw.model_dump() for kw in keyword_response.keywords]
@@ -925,9 +950,16 @@ Classification:"""
                     
                 except Exception as e:
                     wait_time = 2 ** attempt
-                    self.logger.warning(f"Error extracting keywords (attempt {attempt + 1}/{max_retries}): {e}")
+                    error_type = type(e).__name__
+                    
+                    # Check if it's a timeout error
+                    if 'timeout' in str(e).lower() or 'timed out' in str(e).lower():
+                        self.logger.warning(f"Gemini API timeout for keyword extraction (attempt {attempt + 1}/{max_retries})")
+                    else:
+                        self.logger.warning(f"Error extracting keywords (attempt {attempt + 1}/{max_retries}): {error_type}: {e}")
                     
                     if attempt < max_retries - 1:
+                        self.logger.info(f"  Retrying in {wait_time} seconds...")
                         time.sleep(wait_time)
                     else:
                         self.logger.error(f"Keyword extraction failed after {max_retries} attempts")

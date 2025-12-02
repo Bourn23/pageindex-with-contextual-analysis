@@ -1,0 +1,55 @@
+======================================================================
+Markdown Processing V2 (markdown-it-py)
+======================================================================
+Input:       New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md
+Granularity: keywords
+Model:       gemini-2.5-flash-lite
+======================================================================
+
+✓ LLM Client initialized (gemini)
+Processing New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md...
+05:47:43 - Processing 1 nodes at depth 0
+DEBUG: Processing 1 nodes at depth 0
+DEBUG: Node 'New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes' (type: None)
+05:47:43 - Subdividing 'New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes' (depth 0)...
+05:47:43 - Analyzing section 'New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes' (7 paragraphs, 1 pages)
+05:47:43 -   Calling Gemini API for 'New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes' (attempt 1/3)...
+05:47:44 -   ✓ Received response from Gemini
+05:47:44 - Identified 1 semantic units in section 'New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes'
+05:47:44 -   -> Found 1 units in 1.95s
+05:47:44 - Processing 1 nodes at depth 1
+DEBUG: Processing 1 nodes at depth 1
+DEBUG: Node 'Introduction and Abstract Summary' (type: semantic_unit)
+05:47:44 - Subdividing 'Introduction and Abstract Summary' (depth 1)...
+05:47:44 - Analyzing section 'Introduction and Abstract Summary' (3 paragraphs, 1 pages)
+05:47:45 -   Calling Gemini API for 'Introduction and Abstract Summary' (attempt 1/3)...
+05:47:46 -   ✓ Received response from Gemini
+05:47:46 - Identified 2 semantic units in section 'Introduction and Abstract Summary'
+05:47:46 -   -> Found 2 units in 1.76s
+05:47:46 - Processing 2 nodes at depth 2
+DEBUG: Processing 2 nodes at depth 2
+DEBUG: Node 'Motivation: Importance of Composite Electrolytes' (type: semantic_unit)
+DEBUG: Node 'Background: Ion Transport Factors in Composites' (type: semantic_unit)
+05:47:46 - Starting parallel keyword extraction for 2 units...
+05:47:46 - Extracting keywords for semantic unit: 'Motivation: Importance of Composite Electrolytes'
+05:47:46 - Extracting keywords from section 'Motivation: Importance of Composite Electrolytes'
+05:47:46 - Extracting keywords for semantic unit: 'Background: Ion Transport Factors in Composites'
+05:47:46 -   Calling Gemini API for keyword extraction (attempt 1/3)...
+05:47:46 - Extracting keywords from section 'Background: Ion Transport Factors in Composites'
+05:47:46 -   Calling Gemini API for keyword extraction (attempt 1/3)...
+05:47:48 -   ✓ Received keyword extraction response
+05:47:48 - Extracted 8 keywords from 'Background: Ion Transport Factors in Composites'
+05:47:48 -   -> Found 8 keywords in 2.22s
+05:47:50 -   ✓ Received keyword extraction response
+05:47:50 - Extracted 10 keywords from 'Motivation: Importance of Composite Electrolytes'
+05:47:50 -   -> Found 10 keywords in 3.54s
+
+✓ Saved to: results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md_markdown_keywords_1764672470.270785.json
+
+Statistics:
+  Total nodes: 34
+  Node types:
+    figure: 1
+    keyword: 18
+    section: 12
+    semantic_unit: 3

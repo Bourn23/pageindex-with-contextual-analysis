@@ -1,0 +1,90 @@
+======================================================================
+Markdown Processing V2 (markdown-it-py)
+======================================================================
+Input:       New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md
+Granularity: keywords
+Model:       gemini-2.5-flash-lite
+======================================================================
+
+✓ LLM Client initialized (gemini)
+Processing New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md...
+DEBUG: Marking 'Motivation: Safety Issues with Current Li-ion Batteries' for keyword extraction (depth 2)
+DEBUG: Marking 'Background: Inorganic and Polymer Solid Electrolytes' for keyword extraction (depth 2)
+DEBUG: Marking 'Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding' for keyword extraction (depth 2)
+DEBUG: Marking 'Contribution: Identifying Li-ion Transport Pathways Using Solid-State NMR' for keyword extraction (depth 2)
+DEBUG: Processing 4 units for keywords...
+DEBUG: Error extracting keywords for 'Motivation: Safety Issues with Current Li-ion Batteries': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Background: Inorganic and Polymer Solid Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Contribution: Identifying Li-ion Transport Pathways Using Solid-State NMR': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Synthesis of Cubic-Li7La3Zr2O12 (LLZO)' for keyword extraction (depth 2)
+DEBUG: Marking 'Preparation of Composite Films' for keyword extraction (depth 2)
+DEBUG: Marking 'Electrochemical Measurements' for keyword extraction (depth 2)
+DEBUG: Marking 'Solid-State NMR' for keyword extraction (depth 2)
+DEBUG: Processing 4 units for keywords...
+DEBUG: Error extracting keywords for 'Synthesis of Cubic-Li7La3Zr2O12 (LLZO)': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Preparation of Composite Films': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Electrochemical Measurements': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Solid-State NMR': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Introduction to Ionic Conductivity and Experimental Approach' for keyword extraction (depth 2)
+DEBUG: Marking 'NMR Relaxation Time Measurements (T1) of LLZO-PEO Composites' for keyword extraction (depth 2)
+DEBUG: Marking 'Figure 2: 6Li NMR Spectra of Composite Electrolytes' for keyword extraction (depth 2)
+DEBUG: Marking 'Discussion of Ionic Conductivity Factors' for keyword extraction (depth 2)
+DEBUG: Marking 'Characterization of Composite Electrolytes using 6Li MAS NMR' for keyword extraction (depth 2)
+DEBUG: Marking 'Effect of LLZO on LiTFSI Resonance Broadening' for keyword extraction (depth 2)
+DEBUG: Marking 'Analysis of Li-ion Mobility via 7Li T1 Relaxation Times' for keyword extraction (depth 2)
+DEBUG: Marking 'Experimental Setup for Li-ion Transport Pathway Investigation' for keyword extraction (depth 2)
+DEBUG: Marking '6Li NMR Analysis of Li-ion Transport in LLZO (5 wt%)-PEO (LiTFSI)' for keyword extraction (depth 2)
+DEBUG: Marking '6Li NMR Analysis of Li-ion Transport in LLZO (20 wt%)-PEO (LiTFSI)' for keyword extraction (depth 2)
+DEBUG: Marking '6Li NMR Analysis of Li-ion Transport in LLZO (50 wt%)-PEO (LiTFSI) and Figure 2: 6Li NMR Spectra of Composite Electrolytes (Continued)' for keyword extraction (depth 2)
+DEBUG: Marking 'Effect of TEGDME on Li-ion Transport Pathways in LLZO-PEO Composites' for keyword extraction (depth 2)
+DEBUG: Marking 'Summary of Li-ion Pathway Transitions with LLZO Content' for keyword extraction (depth 2)
+DEBUG: Marking 'Quantification of Active Li Ions for Conduction' for keyword extraction (depth 2)
+DEBUG: Marking 'Summary of Factors Affecting Ionic Conductivity' for keyword extraction (depth 2)
+DEBUG: Marking 'Ionic Conductivities of LLZO-PEO Composite Electrolytes' for keyword extraction (depth 2)
+DEBUG: Processing 16 units for keywords...
+DEBUG: Error extracting keywords for 'Introduction to Ionic Conductivity and Experimental Approach': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'NMR Relaxation Time Measurements (T1) of LLZO-PEO Composites': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Figure 2: 6Li NMR Spectra of Composite Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Discussion of Ionic Conductivity Factors': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Characterization of Composite Electrolytes using 6Li MAS NMR': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Effect of LLZO on LiTFSI Resonance Broadening': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Analysis of Li-ion Mobility via 7Li T1 Relaxation Times': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Experimental Setup for Li-ion Transport Pathway Investigation': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for '6Li NMR Analysis of Li-ion Transport in LLZO (5 wt%)-PEO (LiTFSI)': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for '6Li NMR Analysis of Li-ion Transport in LLZO (20 wt%)-PEO (LiTFSI)': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for '6Li NMR Analysis of Li-ion Transport in LLZO (50 wt%)-PEO (LiTFSI) and Figure 2: 6Li NMR Spectra of Composite Electrolytes (Continued)': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Effect of TEGDME on Li-ion Transport Pathways in LLZO-PEO Composites': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Summary of Li-ion Pathway Transitions with LLZO Content': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Quantification of Active Li Ions for Conduction': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Summary of Factors Affecting Ionic Conductivity': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Ionic Conductivities of LLZO-PEO Composite Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Interpretation of Ion Conduction in Composite Electrolytes' for keyword extraction (depth 2)
+DEBUG: Marking 'Methodology and Significance of Solid-State NMR' for keyword extraction (depth 2)
+DEBUG: Processing 2 units for keywords...
+DEBUG: Error extracting keywords for 'Interpretation of Ion Conduction in Composite Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Methodology and Significance of Solid-State NMR': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Author Information' for keyword extraction (depth 2)
+DEBUG: Processing 1 units for keywords...
+DEBUG: Error extracting keywords for 'Author Information': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Funding Sources and Facilities' for keyword extraction (depth 2)
+DEBUG: Processing 1 units for keywords...
+DEBUG: Error extracting keywords for 'Funding Sources and Facilities': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'References on Battery Electrolytes' for keyword extraction (depth 2)
+DEBUG: Processing 1 units for keywords...
+DEBUG: Error extracting keywords for 'References on Battery Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Marking 'Motivation: Importance of Composite Electrolytes' for keyword extraction (depth 2)
+DEBUG: Marking 'Background: Ion Transport Factors in Composites' for keyword extraction (depth 2)
+DEBUG: Processing 2 units for keywords...
+DEBUG: Error extracting keywords for 'Motivation: Importance of Composite Electrolytes': free variable 'time' referenced before assignment in enclosing scope
+DEBUG: Error extracting keywords for 'Background: Ion Transport Factors in Composites': free variable 'time' referenced before assignment in enclosing scope
+
+✓ Saved to: results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md_markdown_keywords_1764671566.0942998.json
+
+Statistics:
+  Total nodes: 51
+  Node types:
+    figure: 5
+    section: 12
+    semantic_unit: 32
+    table: 2

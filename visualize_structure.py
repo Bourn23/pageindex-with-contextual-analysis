@@ -9,6 +9,20 @@ import argparse
 from pathlib import Path
 from html import escape
 
+import uuid
+
+def assign_node_ids(nodes):
+    """Recursively assign unique IDs to nodes if missing."""
+    if not nodes:
+        return
+        
+    for node in nodes:
+        if 'node_id' not in node:
+            node['node_id'] = str(uuid.uuid4())
+        
+        if 'nodes' in node:
+            assign_node_ids(node['nodes'])
+
 
 def generate_html(structure_data, output_path):
     """Generate an interactive HTML visualization of the structure."""
@@ -20,6 +34,9 @@ def generate_html(structure_data, output_path):
     else:
         doc_name = 'Document'
         structure = structure_data
+    
+    # Assign IDs if missing
+    assign_node_ids(structure)
     
     html = f"""<!DOCTYPE html>
 <html lang="en">

@@ -32,8 +32,11 @@ def count_tokens(text, model=None):
             return len(text) // 4
     else:
         try:
-            enc = tiktoken.encoding_for_model(model)
-        except KeyError:
+            if model is None:
+                enc = tiktoken.get_encoding("cl100k_base")
+            else:
+                enc = tiktoken.encoding_for_model(model)
+        except (KeyError, AttributeError):
             # If model not recognized, use GPT-4 encoding as default
             enc = tiktoken.get_encoding("cl100k_base")
     

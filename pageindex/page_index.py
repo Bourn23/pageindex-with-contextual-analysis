@@ -1063,7 +1063,23 @@ async def meta_processor(page_list, mode=None, toc_content=None, toc_page_list=N
         elif mode == 'process_toc_no_page_numbers':
             return await meta_processor(page_list, mode='process_no_toc', start_index=start_index, opt=opt, logger=logger)
         else:
-            raise Exception('Processing failed')
+            # Fallback: create simple page-by-page structure
+            logger.warning(f'Low accuracy ({accuracy*100:.1f}%) in process_no_toc mode. Using fallback structure.')
+            if toc_with_page_number:
+                # Use the best effort result we have
+                logger.info(f'Returning {len(toc_with_page_number)} sections with low confidence')
+                return toc_with_page_number
+            else:
+                # Last resort: create a simple page-by-page structure
+                logger.warning('Creating fallback page-by-page structure')
+                fallback_toc = []
+                for i, (page_text, token_count) in enumerate(page_list, start=start_index):
+                    fallback_toc.append({
+                        'title': f'Page {i}',
+                        'physical_index': i,
+                        'level': 1
+                    })
+                return fallback_toc
         
  
 async def process_large_node_recursively(node, page_list, opt=None, logger=None):
