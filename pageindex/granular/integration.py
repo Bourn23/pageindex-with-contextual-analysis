@@ -16,7 +16,8 @@ async def apply_semantic_subdivision(
     tree: List[dict],
     page_texts: List[Tuple[str, int]],
     opt,
-    logger: Optional[logging.Logger] = None
+    logger: Optional[logging.Logger] = None,
+    fill_gaps: bool = True
 ) -> None:
     """
     Apply semantic subdivision to all major sections in the tree.
@@ -30,6 +31,7 @@ async def apply_semantic_subdivision(
         page_texts: List of (page_text, token_count) tuples
         opt: Configuration options with llm_client and semantic settings
         logger: Optional logger instance
+        fill_gaps: If True, create nodes for uncovered paragraphs (default: True)
     """
     if logger is None:
         logger = logging.getLogger(__name__)
@@ -78,7 +80,7 @@ async def apply_semantic_subdivision(
     logger.info("-" * 60)
     
     try:
-        await _apply_semantic_subdivision_recursive(tree, analyzer, page_texts, min_pages, logger, max_depth)
+        await _apply_semantic_subdivision_recursive(tree, analyzer, page_texts, min_pages, logger, max_depth, fill_gaps=fill_gaps)
         
         # Count nodes after subdivision
         nodes_after = count_nodes(tree)
@@ -127,7 +129,8 @@ async def _apply_semantic_subdivision_recursive(
     min_pages: float,
     logger: logging.Logger,
     max_depth: int = 1,
-    current_depth: int = 0
+    current_depth: int = 0,
+    fill_gaps: bool = True
 ) -> None:
     """
     Recursively apply semantic subdivision to nodes with parallel processing.
@@ -140,6 +143,7 @@ async def _apply_semantic_subdivision_recursive(
         logger: Logger instance
         max_depth: Maximum depth of recursive subdivision (1 = medium, 2+ = fine)
         current_depth: Current depth in recursion (internal use)
+        fill_gaps: If True, create nodes for uncovered paragraphs (default: True)
     """
     import asyncio
     
@@ -213,7 +217,8 @@ async def _apply_semantic_subdivision_recursive(
                     semantic_nodes = analyzer.create_nodes_from_semantic_units(
                         semantic_units,
                         node,
-                        page_texts
+                        page_texts,
+                        fill_gaps=fill_gaps
                     )
                 except Exception as e:
                     logger.error(f"Error creating nodes from semantic units for '{node.get('title', 'Unknown')}': {e}")
@@ -240,7 +245,8 @@ async def _apply_semantic_subdivision_recursive(
                             min_pages,
                             logger,
                             max_depth,
-                            current_depth + 1
+                            current_depth + 1,
+                            fill_gaps=fill_gaps
                         )
                         
                         # After recursive subdivision, if we're at the keywords level,
@@ -267,7 +273,8 @@ async def _apply_semantic_subdivision_recursive(
                     min_pages,
                     logger,
                     max_depth,
-                    current_depth
+                    current_depth,
+                    fill_gaps=fill_gaps
                 )
                 
         except Exception as e:

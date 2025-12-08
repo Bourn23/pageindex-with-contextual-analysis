@@ -882,6 +882,50 @@ Classification:"""
             self.logger.error(f"Error identifying boundaries: {e}")
             return []
     
+    def _clean_text_for_llm(self, text: str) -> str:
+        """
+        Clean text to avoid Gemini API issues with special characters.
+        
+        Some character combinations cause the Gemini API to hang or timeout.
+        This method normalizes problematic characters while preserving meaning.
+        
+        Args:
+            text: Raw text that may contain problematic characters
+            
+        Returns:
+            Cleaned text safe for LLM processing
+        """
+        import re
+        
+        # Replace LaTeX math expressions with Unicode equivalents
+        text = re.sub(r'\$\\mu\$', 'μ', text)  # micro symbol
+        text = re.sub(r'\$\\sigma\$', 'σ', text)  # sigma
+        text = re.sub(r'\$\\alpha\$', 'α', text)
+        text = re.sub(r'\$\\beta\$', 'β', text)
+        text = re.sub(r'\$\\gamma\$', 'γ', text)
+        text = re.sub(r'\$\\delta\$', 'δ', text)
+        text = re.sub(r'\$\\rightarrow\$', '→', text)
+        text = re.sub(r'\\rightarrow', '→', text)
+        
+        # Remove remaining $ signs (LaTeX delimiters)
+        text = text.replace('$', '')
+        
+        # Replace em-dashes with regular dashes
+        text = text.replace('—', '-')
+        text = text.replace('–', '-')  # en-dash too
+        
+        # Normalize HTML subscripts/superscripts to plain text
+        text = re.sub(r'<sub>([^<]+)</sub>', r'_\1', text)
+        text = re.sub(r'<sup>([^<]+)</sup>', r'^\1', text)
+        
+        # Remove other HTML tags
+        text = re.sub(r'<[^>]+>', '', text)
+        
+        # Normalize whitespace (multiple spaces to single)
+        text = re.sub(r'  +', ' ', text)
+        
+        return text
+    
     def extract_keywords(self, section_node: dict, max_retries: int = 3) -> List[dict]:
         """
         Extract keywords and key concepts from a section.
@@ -909,23 +953,27 @@ Classification:"""
                 self.logger.debug(f"Empty text for section '{section_title}' - skipping keyword extraction")
                 return []
             
+            # Clean text BEFORE sending to LLM (prevents timeouts from special chars)
+            section_text = self._clean_text_for_llm(section_text)
+            
             # Truncate very long sections to avoid token limits
             max_chars = 15000
             if len(section_text) > max_chars:
                 section_text = section_text[:max_chars] + "\n\n[Text truncated for keyword extraction]"
-            
-            # Format prompt
-            prompt = self.keyword_prompt.format(
-                section_title=section_title,
-                section_text=section_text
-            )
             
             self.logger.info(f"Extracting keywords from section '{section_title}'")
             
             # Call Gemini with structured output
             model = 'gemini-2.5-flash-lite'
             
+            # Format prompt (text is already cleaned by _clean_text_for_llm)
+            prompt = self.keyword_prompt.format(
+                section_title=section_title,
+                section_text=section_text
+            )
+            
             for attempt in range(max_retries):
+                
                 try:
                     self.logger.info(f"  Calling Gemini API for keyword extraction (attempt {attempt + 1}/{max_retries})...")
                     
@@ -1034,16 +1082,20 @@ Classification:"""
     
     def create_nodes_from_semantic_units(self, semantic_units: List[SemanticUnit], 
                                         section_node: dict, 
-                                        page_texts: List[Tuple[str, int]]) -> List[dict]:
+                                        page_texts: List[Tuple[str, int]],
+                                        fill_gaps: bool = True) -> List[dict]:
         """
         Create node structures from SemanticUnit objects.
         
         Ensures unique titles by appending numbers to duplicates (e.g., "Background", "Background (2)").
+        When fill_gaps=True, creates additional nodes for any paragraphs not covered by semantic units
+        to ensure no text is lost.
         
         Args:
             semantic_units: List of SemanticUnit objects
             section_node: Parent section node
             page_texts: List of (page_text, token_count) tuples
+            fill_gaps: If True, create nodes for uncovered paragraphs (default: True)
             
         Returns:
             List of node dictionaries ready to be inserted into tree
@@ -1053,12 +1105,84 @@ Classification:"""
         
         full_text = section_node.get('text', '')
         paragraphs = self._split_into_paragraphs(full_text)
+        total_paragraphs = len(paragraphs)
         
-        for unit in semantic_units:
+        if not paragraphs:
+            return nodes
+        
+        # Sort semantic units by start paragraph
+        sorted_units = sorted(semantic_units, key=lambda u: u.start_paragraph)
+        
+        # Track which paragraphs are covered
+        covered_paragraphs = set()
+        
+        # Map paragraphs to pages for gap nodes
+        paragraph_pages = self._map_paragraphs_to_pages(
+            paragraphs, full_text,
+            section_node.get('start_index', 1),
+            section_node.get('end_index', 1),
+            page_texts
+        )
+        
+        # Helper to create a gap node
+        def create_gap_node(start_para: int, end_para: int, gap_index: int) -> dict:
+            """Create a node for uncovered paragraphs."""
+            gap_paragraphs = paragraphs[start_para:end_para + 1]
+            gap_text = '\n\n'.join(gap_paragraphs)
+            
+            # Determine page range for gap
+            gap_start_page = paragraph_pages[start_para] if start_para < len(paragraph_pages) else section_node.get('start_index', 1)
+            gap_end_page = paragraph_pages[end_para] if end_para < len(paragraph_pages) else section_node.get('end_index', 1)
+            
+            # Generate a title based on context
+            preview = gap_text[:100].replace('\n', ' ').strip()
+            if len(gap_text) > 100:
+                preview += '...'
+            
+            return {
+                'title': f"Additional Content ({gap_index})",
+                'start_index': gap_start_page,
+                'end_index': gap_end_page,
+                'text': gap_text,
+                'summary': f"Content not classified into semantic units: {preview}",
+                'node_type': 'semantic_unit',
+                'metadata': {
+                    'semantic_type': 'gap_content',
+                    'start_paragraph': start_para,
+                    'end_paragraph': end_para,
+                    'is_gap_fill': True
+                },
+                'nodes': []
+            }
+        
+        # Process semantic units and track coverage
+        current_position = 0
+        gap_index = 1
+        
+        for unit in sorted_units:
             try:
+                # Fill gap before this unit if needed
+                if fill_gaps and unit.start_paragraph > current_position:
+                    gap_start = current_position
+                    gap_end = unit.start_paragraph - 1
+                    if gap_end >= gap_start and gap_end < total_paragraphs:
+                        self.logger.info(f"Filling gap: paragraphs {gap_start}-{gap_end}")
+                        gap_node = create_gap_node(gap_start, gap_end, gap_index)
+                        nodes.append(gap_node)
+                        gap_index += 1
+                        for p in range(gap_start, gap_end + 1):
+                            covered_paragraphs.add(p)
+                
                 # Extract text for this semantic unit
                 unit_paragraphs = paragraphs[unit.start_paragraph:unit.end_paragraph + 1]
                 unit_text = '\n\n'.join(unit_paragraphs)
+                
+                # Mark paragraphs as covered
+                for p in range(unit.start_paragraph, unit.end_paragraph + 1):
+                    covered_paragraphs.add(p)
+                
+                # Update current position
+                current_position = max(current_position, unit.end_paragraph + 1)
                 
                 # Make title unique if duplicate
                 original_title = unit.title
@@ -1093,5 +1217,25 @@ Classification:"""
             except Exception as e:
                 self.logger.warning(f"Error creating node for semantic unit '{unit.title}': {e}")
                 continue
+        
+        # Fill trailing gap (paragraphs after the last semantic unit)
+        if fill_gaps and current_position < total_paragraphs:
+            gap_start = current_position
+            gap_end = total_paragraphs - 1
+            self.logger.info(f"Filling trailing gap: paragraphs {gap_start}-{gap_end}")
+            gap_node = create_gap_node(gap_start, gap_end, gap_index)
+            nodes.append(gap_node)
+            for p in range(gap_start, gap_end + 1):
+                covered_paragraphs.add(p)
+        
+        # Log coverage statistics
+        uncovered = set(range(total_paragraphs)) - covered_paragraphs
+        if uncovered:
+            self.logger.warning(f"Uncovered paragraphs after gap filling: {sorted(uncovered)}")
+        else:
+            self.logger.info(f"Full coverage achieved: all {total_paragraphs} paragraphs covered")
+        
+        # Sort nodes by start paragraph to maintain document order
+        nodes.sort(key=lambda n: n.get('metadata', {}).get('start_paragraph', 0))
         
         return nodes

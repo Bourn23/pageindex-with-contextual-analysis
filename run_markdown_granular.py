@@ -56,7 +56,7 @@ Examples:
         type=str,
         default="fine",
         choices=["section", "medium", "fine"],
-        help="Level at which to extract keywords (only used if granularity is 'keywords'). Default: fine."
+        help="Level at which to extract keywords: 'section' (from sections), 'medium' (from semantic units), 'fine' (from sentence-level units). Default: fine."
     )
     
     # Feature flags
@@ -79,6 +79,10 @@ Examples:
     # Advanced options
     parser.add_argument('--semantic-min-pages', type=float, default=0.5, 
                        help='Minimum pages for semantic subdivision (default: 0.5)')
+    parser.add_argument('--validate-coverage', action='store_true',
+                       help='Validate that all source text is covered in the output tree')
+    parser.add_argument('--no-gap-fill', action='store_true',
+                       help='Disable automatic gap filling for uncovered paragraphs')
     
     args = parser.parse_args()
     
@@ -174,6 +178,28 @@ Examples:
     # Print statistics
     print_statistics(structure)
     
+    # Validate coverage if requested
+    if args.validate_coverage:
+        print("\nValidating coverage...")
+        from pageindex.coverage_validator import validate_tree_coverage, validate_full_tree_coverage
+        
+        # Read original source text
+        with open(md_path, 'r', encoding='utf-8') as f:
+            source_text = f.read()
+        
+        # Validate overall coverage
+        report = validate_tree_coverage(structure, source_text)
+        print(str(report))
+        
+        # Validate per-node coverage
+        node_reports = validate_full_tree_coverage(structure)
+        if node_reports:
+            print(f"\n⚠ {len(node_reports)} nodes have incomplete coverage")
+            for path, node_report in list(node_reports.items())[:5]:
+                print(f"  - {path}: {node_report.coverage_percentage:.1f}%")
+        else:
+            print("✓ All nodes have complete coverage")
+    
     # Generate visualization if requested
     if args.visualize:
         html_path = output_path.with_suffix('.html')
@@ -228,10 +254,19 @@ if __name__ == '__main__':
         # Run the async main function
         exit_code = asyncio.run(main())
         
+        # Flush output before exit
+        sys.stdout.flush()
+        sys.stderr.flush()
+        
         # Force immediate exit without waiting for thread cleanup
         # This is necessary because asyncio.to_thread() doesn't clean up properly
         os._exit(exit_code)
         
     except KeyboardInterrupt:
         print("\n\nInterrupted by user")
+        sys.stdout.flush()
+        os._exit(1)
+    except Exception as e:
+        print(f"\n\nError: {e}")
+        sys.stdout.flush()
         os._exit(1)

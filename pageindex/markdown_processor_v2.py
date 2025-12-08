@@ -313,18 +313,23 @@ class MarkdownGranularIntegrator:
             
         self.logger.info(f"Processing {len(nodes)} nodes at depth {depth}")
         
-        # Determine target depth for keywords
-        keyword_depth_map = {'section': 0, 'medium': 1, 'fine': 2}
-        target_keyword_depth = keyword_depth_map.get(keyword_level, 2)
+        # Determine target depth for keywords extraction
+        # Higher depth = finer granularity (closer to sentence level)
+        keyword_depth_map = {'section': 0, 'medium': 1, 'fine': 3}  # fine now goes to depth 3
+        target_keyword_depth = keyword_depth_map.get(keyword_level, 3)
         
-        # Determine subdivision depth limit
-        # medium: subdivide sections (depth 0) -> depth 1 units. Limit = 1.
-        # fine: subdivide sections (0) -> depth 1 -> depth 2 units. Limit = 2.
-        # keywords: depends on keyword_level
+        # Determine subdivision depth limit (subdivide when depth < limit)
+        # medium: subdivide at depth 0 only → creates depth 1 units. Limit = 1.
+        # fine: subdivide at depth 0, 1, 2 → creates depth 3 units. Limit = 3.
+        # keywords: subdivide to create nodes at target_keyword_depth, then extract keywords
+        #   - keyword_level='section' (0): no subdivision, extract from depth 0 sections
+        #   - keyword_level='medium' (1): subdivide at depth 0, extract from depth 1 units
+        #   - keyword_level='fine' (3): subdivide at depth 0, 1, 2, extract from depth 3 units
         subdivision_depth_limit = 1
         if granularity == 'fine':
-            subdivision_depth_limit = 2
+            subdivision_depth_limit = 3  # Go deeper for fine granularity
         elif granularity == 'keywords':
+            # For keywords, subdivide to target_keyword_depth
             subdivision_depth_limit = target_keyword_depth
 
             
@@ -379,16 +384,13 @@ class MarkdownGranularIntegrator:
                 
                 if semantic_units:
                     did_subdivide = True
-                    # Convert semantic units to nodes
-                    new_children = []
-                    for unit in semantic_units:
-                        new_children.append({
-                            'node_type': 'semantic_unit',
-                            'title': unit.title,
-                            'text': self._extract_text_for_unit(node['text'], unit),
-                            'summary': unit.summary,
-                            'nodes': []
-                        })
+                    # Use create_nodes_from_semantic_units for gap filling
+                    new_children = self.semantic_analyzer.create_nodes_from_semantic_units(
+                        semantic_units,
+                        analysis_node,
+                        mock_page_texts,
+                        fill_gaps=True  # Enable gap filling to ensure no text is lost
+                    )
                     
                     # Append new semantic children
                     node.setdefault('nodes', []).extend(new_children)
@@ -438,15 +440,28 @@ class MarkdownGranularIntegrator:
                     node_title = node.get('title', 'Unknown')
                     self.logger.info(f"Extracting keywords for semantic unit: '{node_title}'")
                     
-                    # Run in thread with timeout to avoid blocking
-                    try:
-                        keywords = await asyncio.wait_for(
-                            asyncio.to_thread(self.semantic_analyzer.extract_keywords, node),
-                            timeout=60.0  # 60 second timeout per keyword extraction
-                        )
-                    except asyncio.TimeoutError:
-                        self.logger.error(f"Timeout extracting keywords for '{node_title}' (60s limit)")
-                        return
+                    # Retry logic for timeout handling
+                    max_retries = 3
+                    keywords = None
+                    
+                    for attempt in range(max_retries):
+                        try:
+                            # Run in thread with timeout to avoid blocking
+                            keywords = await asyncio.wait_for(
+                                asyncio.to_thread(self.semantic_analyzer.extract_keywords, node),
+                                timeout=60.0  # 60 second timeout per keyword extraction
+                            )
+                            break  # Success, exit retry loop
+                            
+                        except asyncio.TimeoutError:
+                            if attempt < max_retries - 1:
+                                wait_time = 2 ** attempt
+                                self.logger.warning(f"Timeout extracting keywords for '{node_title}' (attempt {attempt + 1}/{max_retries})")
+                                self.logger.info(f"  Retrying in {wait_time} seconds...")
+                                await asyncio.sleep(wait_time)
+                            else:
+                                self.logger.error(f"Timeout extracting keywords for '{node_title}' after {max_retries} attempts (60s limit each)")
+                                return
                     
                     duration = time_module.time() - start_time
                     if keywords:
