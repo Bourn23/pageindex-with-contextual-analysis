@@ -9,7 +9,7 @@ local image references.
 import os
 import logging
 import asyncio
-import time
+import time as time_module
 import re
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
@@ -26,12 +26,12 @@ from pageindex.llm_client import LLMClient
 
 # Import utils
 try:
-    from pageindex.utils import count_tokens, JsonLogger
+    from pageindex.utils import count_tokens, JsonLogger, write_node_id
 except ImportError:
     # Fallback for direct execution
     import sys
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from pageindex.utils import count_tokens, JsonLogger
+    from pageindex.utils import count_tokens, JsonLogger, write_node_id
 
 try:
     from PIL import Image
@@ -355,7 +355,7 @@ class MarkdownGranularIntegrator:
             
             did_subdivide = False
             if should_subdivide and node.get('text'):
-                start_time = time.time()
+                start_time = time_module.time()
                 
                 # Mock page texts for SemanticAnalyzer
                 mock_page_texts = [(node['text'], count_tokens(node['text']))]
@@ -374,7 +374,7 @@ class MarkdownGranularIntegrator:
                     analysis_node, mock_page_texts, min_pages=0.0, min_paragraphs=1
                 )
                 
-                duration = time.time() - start_time
+                duration = time_module.time() - start_time
                 self.logger.info(f"  -> Found {len(semantic_units)} units in {duration:.2f}s")
                 
                 if semantic_units:
@@ -434,13 +434,21 @@ class MarkdownGranularIntegrator:
             
             async def extract_keywords_async(node):
                 try:
-                    start_time = time.time()
-                    self.logger.info(f"Extracting keywords for semantic unit: '{node.get('title')}'")
+                    start_time = time_module.time()
+                    node_title = node.get('title', 'Unknown')
+                    self.logger.info(f"Extracting keywords for semantic unit: '{node_title}'")
                     
-                    # Run in thread to avoid blocking
-                    keywords = await asyncio.to_thread(self.semantic_analyzer.extract_keywords, node)
+                    # Run in thread with timeout to avoid blocking
+                    try:
+                        keywords = await asyncio.wait_for(
+                            asyncio.to_thread(self.semantic_analyzer.extract_keywords, node),
+                            timeout=60.0  # 60 second timeout per keyword extraction
+                        )
+                    except asyncio.TimeoutError:
+                        self.logger.error(f"Timeout extracting keywords for '{node_title}' (60s limit)")
+                        return
                     
-                    duration = time.time() - start_time
+                    duration = time_module.time() - start_time
                     if keywords:
                         self.logger.info(f"  -> Found {len(keywords)} keywords in {duration:.2f}s")
                         keyword_nodes = self.semantic_analyzer.create_keyword_nodes(keywords, node)
@@ -448,11 +456,20 @@ class MarkdownGranularIntegrator:
                     else:
                         self.logger.info(f"  -> No keywords found (took {duration:.2f}s)")
                 except Exception as e:
-                    self.logger.warning(f"Error extracting keywords for '{node.get('title')}': {e}")
+                    self.logger.warning(f"Error extracting keywords for '{node.get('title', 'Unknown')}': {e}")
 
             # Run all extractions in parallel
             self.logger.info(f"Starting parallel keyword extraction for {len(semantic_units_to_process)} units...")
-            await asyncio.gather(*(extract_keywords_async(node) for node in semantic_units_to_process))
+            results = await asyncio.gather(
+                *(extract_keywords_async(node) for node in semantic_units_to_process),
+                return_exceptions=True
+            )
+            
+            # Log any exceptions that occurred
+            for i, result in enumerate(results):
+                if isinstance(result, Exception):
+                    node_title = semantic_units_to_process[i].get('title', 'Unknown')
+                    self.logger.error(f"Failed to extract keywords for '{node_title}': {result}")
 
     def _extract_text_for_unit(self, full_text: str, unit) -> str:
         """Extract text for a semantic unit based on paragraph indices."""
@@ -486,20 +503,51 @@ async def process_markdown_v2(file_path: str, granularity: str = 'medium', llm_c
     if llm_client is None:
         raise ValueError("LLMClient is required")
         
-    start_time = time.time()
+    start_time = time_module.time()
+    logger = logging.getLogger(__name__)
     
     # 1. Parse Markdown
-    with open(file_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-        
-    parser = MarkdownParser()
-    tree = parser.parse(content)
+    logger.info(f"Step 1: Parsing markdown file: {file_path}")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        logger.info(f"  Read {len(content)} characters")
+    except Exception as e:
+        logger.error(f"  Failed to read file: {e}")
+        raise
+    
+    # Get base path for resolving relative image paths
+    base_path = os.path.dirname(os.path.abspath(file_path))
+    logger.info(f"  Base path: {base_path}")
+    
+    try:
+        parser = MarkdownParser(logger)
+        logger.info("  Created parser, starting parse...")
+        tree = parser.parse(content)
+        logger.info(f"  Parsed {len(tree)} top-level sections")
+    except Exception as e:
+        logger.error(f"  Failed to parse markdown: {e}")
+        raise
     
     # 2. Apply Granularity
-    integrator = MarkdownGranularIntegrator(llm_client)
-    await integrator.apply_granularity(tree, granularity, keyword_level=keyword_level)
+    if granularity != 'coarse':
+        logger.info(f"Step 2: Applying granularity: {granularity}")
+        try:
+            integrator = MarkdownGranularIntegrator(llm_client, logger)
+            logger.info("  Created integrator, starting granular processing...")
+            await integrator.apply_granularity(tree, granularity, base_path=base_path, keyword_level=keyword_level)
+            logger.info("  Granularity processing complete")
+        except Exception as e:
+            logger.error(f"  Failed during granular processing: {e}")
+            raise
+    else:
+        logger.info(f"Step 2: Skipping granularity (coarse mode)")
     
     # 3. Add Metadata
+    # Assign unique IDs to all nodes
+    logger.info("Step 3: Adding node IDs...")
+    write_node_id(tree)
+    
     result = {
         "doc_name": os.path.basename(file_path),
         "structure": tree,
@@ -508,7 +556,10 @@ async def process_markdown_v2(file_path: str, granularity: str = 'medium', llm_c
         "processor": "v2"
     }
     
-    duration = time.time() - start_time
-    # print(f"Processing complete in {duration:.2f}s")
+    duration = time_module.time() - start_time
+    logger.info(f"Processing complete in {duration:.2f}s")
+    
+    # Give threads a moment to finish cleanup
+    await asyncio.sleep(0.1)
     
     return result

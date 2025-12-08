@@ -1,0 +1,2130 @@
+{
+  "doc_name": "README.md",
+  "structure": [
+    {
+      "title": "PageIndex: Contextual Analysis Variant",
+      "text": "# PageIndex: Contextual Analysis Variant",
+      "line_num": 9,
+      "nodes": [
+        {
+          "title": "Vectorless and Traceable RAG with Table & Figure Detection",
+          "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+          "line_num": 10,
+          "nodes": [
+            {
+              "title": "Vectorless RAG",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "A Retrieval Augmented Generation approach that does not rely on vector embeddings for information retrieval.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Vectorless RAG",
+                "context": "A Retrieval Augmented Generation approach that does not rely on vector embeddings for information retrieval.",
+                "relevance": "This is the core methodology being presented, offering an alternative to traditional RAG systems.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Traceable RAG",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "A RAG system designed to provide clear lineage and auditability of the retrieved information.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Traceable RAG",
+                "context": "A RAG system designed to provide clear lineage and auditability of the retrieved information.",
+                "relevance": "Highlights the system's ability to track the source of information, crucial for reliability and debugging.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Table Detection",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "The process of identifying and extracting tabular data from documents.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Table Detection",
+                "context": "The process of identifying and extracting tabular data from documents.",
+                "relevance": "A key feature enabling the RAG system to understand and utilize structured data within documents.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Figure Detection",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "The process of identifying and extracting visual elements like charts and images from documents.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Figure Detection",
+                "context": "The process of identifying and extracting visual elements like charts and images from documents.",
+                "relevance": "Another key feature that allows the RAG system to incorporate information from non-textual elements.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Granular Tree Control",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "Fine-grained management and manipulation of hierarchical data structures.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Granular Tree Control",
+                "context": "Fine-grained management and manipulation of hierarchical data structures.",
+                "relevance": "Indicates a specific technical capability of the system for organizing and accessing information.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Visual Debugging",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "The use of visual representations to identify and resolve errors or issues within a system.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Visual Debugging",
+                "context": "The use of visual representations to identify and resolve errors or issues within a system.",
+                "relevance": "Suggests a user-friendly approach to understanding and troubleshooting the RAG system's behavior.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "PageIndex",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "### Vectorless and Traceable RAG with Table & Figure Detection\n\n<p align=\"center\">\n  <em>A research fork of <a href=\"https://github.com/VectifyAI/PageIndex\">PageIndex</a> focusing on granular tree control and visual debugging.</em>\n</p>\n\n<p align=\"center\">\n  <a href=\"#-quick-start\">🚀 Quick Start</a>&nbsp; • &nbsp;\n</p>\n  \n</div>\n\n---",
+              "summary": "A foundational project or library upon which this research fork is built.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "PageIndex",
+                "context": "A foundational project or library upon which this research fork is built.",
+                "relevance": "Provides context for the origin and technical lineage of the presented work.",
+                "parent_title": "Vectorless and Traceable RAG with Table & Figure Detection",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "title": "🔬 Why this variant?",
+          "text": "## 🔬 Why this variant?\n\nThis repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.\n\n---",
+          "line_num": 24,
+          "nodes": [
+            {
+              "node_type": "semantic_unit",
+              "title": "Motivation for the New Variant",
+              "text": "## 🔬 Why this variant?",
+              "summary": "Introduces the repository and its purpose of extending the original PageIndex framework for granular control over document topology.",
+              "nodes": [
+                {
+                  "title": "New Variant",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "Refers to a novel version or iteration of a system, model, or technology being introduced.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "New Variant",
+                    "context": "Refers to a novel version or iteration of a system, model, or technology being introduced.",
+                    "relevance": "This is the central subject of the section, explaining the reason for its development.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Motivation",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "The underlying reasons or driving forces behind a decision or action.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Motivation",
+                    "context": "The underlying reasons or driving forces behind a decision or action.",
+                    "relevance": "This keyword directly addresses the core purpose of the section: to explain why the new variant is needed.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Problem Statement",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "A clear description of an issue or challenge that needs to be addressed.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Problem Statement",
+                    "context": "A clear description of an issue or challenge that needs to be addressed.",
+                    "relevance": "Understanding the problem is crucial for appreciating the necessity of the new variant.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Limitations of Previous Versions",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "The shortcomings or drawbacks of existing models or systems.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Limitations of Previous Versions",
+                    "context": "The shortcomings or drawbacks of existing models or systems.",
+                    "relevance": "Highlighting these limitations justifies the development of an improved variant.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Performance Improvement",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "Enhancements in efficiency, speed, accuracy, or other key metrics.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Performance Improvement",
+                    "context": "Enhancements in efficiency, speed, accuracy, or other key metrics.",
+                    "relevance": "A primary goal of developing a new variant is often to achieve better performance.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "New Capabilities",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "Introduction of functionalities or features not present in prior versions.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "New Capabilities",
+                    "context": "Introduction of functionalities or features not present in prior versions.",
+                    "relevance": "This explains what the new variant can do that older ones could not.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Addressing Unmet Needs",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "Fulfilling requirements or solving problems that were not adequately handled before.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Addressing Unmet Needs",
+                    "context": "Fulfilling requirements or solving problems that were not adequately handled before.",
+                    "relevance": "This emphasizes the practical impact and value proposition of the new variant.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Technological Advancements",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## 🔬 Why this variant?",
+                  "summary": "Progress and innovations in the relevant field of technology.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Technological Advancements",
+                    "context": "Progress and innovations in the relevant field of technology.",
+                    "relevance": "These advancements may enable or necessitate the creation of a new variant.",
+                    "parent_title": "Motivation for the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            },
+            {
+              "node_type": "semantic_unit",
+              "title": "Key Features of the New Variant",
+              "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+              "summary": "Details the new variant's capabilities, including variable tree depth for node refinement, enhanced detection for tables and figures, and a visual debugger for inspecting document structure.",
+              "nodes": [
+                {
+                  "title": "Document Topology",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "Refers to the hierarchical structure and relationships between different parts of a document.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Document Topology",
+                    "context": "Refers to the hierarchical structure and relationships between different parts of a document.",
+                    "relevance": "This is the core concept that the new variant extends and provides granular control over.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Variable Tree Depth",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "Allows for control over the different levels of refinement in the document's hierarchical structure.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Variable Tree Depth",
+                    "context": "Allows for control over the different levels of refinement in the document's hierarchical structure.",
+                    "relevance": "A key new feature enabling more detailed analysis and extraction of information.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Node Refinement Levels",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "The stages of detail in processing document elements, ranging from coarse to fine-grained keywords.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Node Refinement Levels",
+                    "context": "The stages of detail in processing document elements, ranging from coarse to fine-grained keywords.",
+                    "relevance": "Explains how the variable tree depth is implemented and what it controls.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Semantic Units",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "Meaningful segments of text identified within the document structure.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Semantic Units",
+                    "context": "Meaningful segments of text identified within the document structure.",
+                    "relevance": "Represents intermediate levels of the document's hierarchical breakdown.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Leaf Semantic Nodes",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "The deepest, most specific nodes in the document's hierarchical structure from which keywords are extracted.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Leaf Semantic Nodes",
+                    "context": "The deepest, most specific nodes in the document's hierarchical structure from which keywords are extracted.",
+                    "relevance": "Highlights the source of maximum specificity for keyword extraction.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Enhanced Detection",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "The capability to specifically identify and process non-textual elements like tables and figures.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Enhanced Detection",
+                    "context": "The capability to specifically identify and process non-textual elements like tables and figures.",
+                    "relevance": "A significant improvement over the original framework, allowing for richer document analysis.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Tables and Figures",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "Non-textual elements within a document that require distinct processing.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Tables and Figures",
+                    "context": "Non-textual elements within a document that require distinct processing.",
+                    "relevance": "These are explicitly called out as new, dedicated node types for improved handling.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Visual Debugger",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "This repository extends the original [PageIndex](https://vectify.ai/pageindex) framework to support granular control over document topology. While the original library focuses on high-level document structuring, this variant introduces:\n\n1.  **Variable Tree Depth:** Control node refinement levels (Coarse $\\to$ Medium $\\to$ Fine $\\to$ Keywords).\n    * Sections $\\to$ Semantic Units $\\to$ Fine Semantic Units $\\to$ Keywords\n    * Keywords are extracted from the deepest (leaf) semantic nodes for maximum specificity\n2.  **Enhanced Detection:** Dedicated node types for **Tables** and **Figures**, ensuring distinct processing for non-textual elements.\n3.  **Visual Debugger:** An HTML-based tree visualizer to inspect the generated document structure interactively.",
+                  "summary": "An HTML-based tool for interactively inspecting the generated document structure.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Visual Debugger",
+                    "context": "An HTML-based tool for interactively inspecting the generated document structure.",
+                    "relevance": "Provides a crucial utility for understanding and verifying the output of the new variant.",
+                    "parent_title": "Key Features of the New Variant",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 Quick Start",
+          "text": "## 🚀 Quick Start",
+          "line_num": 36,
+          "nodes": [
+            {
+              "title": "Quick Start",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "This section provides a rapid introduction to get users up and running.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Quick Start",
+                "context": "This section provides a rapid introduction to get users up and running.",
+                "relevance": "It's the title and main focus of the section, indicating immediate usability.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "User Setup",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "The initial configuration steps required for a user to begin.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "User Setup",
+                "context": "The initial configuration steps required for a user to begin.",
+                "relevance": "Essential for new users to successfully start using the system or tool.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Installation Guide",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "A step-by-step manual for installing the necessary software or components.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Installation Guide",
+                "context": "A step-by-step manual for installing the necessary software or components.",
+                "relevance": "Crucial for the practical implementation and deployment of the system.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Basic Configuration",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "The fundamental settings needed to operate the system effectively.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Basic Configuration",
+                "context": "The fundamental settings needed to operate the system effectively.",
+                "relevance": "Highlights the minimal requirements for initial functionality.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "First Steps",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "The initial actions a user should take after setup.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "First Steps",
+                "context": "The initial actions a user should take after setup.",
+                "relevance": "Guides the user through the immediate post-installation experience.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Getting Started",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "The overall process of beginning to use a new system or product.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Getting Started",
+                "context": "The overall process of beginning to use a new system or product.",
+                "relevance": "A synonym for the section's purpose, emphasizing ease of adoption.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Prerequisites",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 🚀 Quick Start",
+              "summary": "The conditions or requirements that must be met before starting.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Prerequisites",
+                "context": "The conditions or requirements that must be met before starting.",
+                "relevance": "Important for ensuring a smooth and successful setup process.",
+                "parent_title": "🚀 Quick Start",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "title": "Installation",
+          "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+          "line_num": 38,
+          "nodes": [
+            {
+              "title": "pip install",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+              "summary": "A command-line tool used to install Python packages and their dependencies.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "pip install",
+                "context": "A command-line tool used to install Python packages and their dependencies.",
+                "relevance": "This is the primary command used to set up the project's software environment.",
+                "parent_title": "Installation",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "requirements.txt",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+              "summary": "A file listing all the Python packages required for a project.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "requirements.txt",
+                "context": "A file listing all the Python packages required for a project.",
+                "relevance": "This file ensures that all necessary libraries are installed for the project to run.",
+                "parent_title": "Installation",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "API key",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+              "summary": "A unique identifier used to authenticate a user or application when accessing an API.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "API key",
+                "context": "A unique identifier used to authenticate a user or application when accessing an API.",
+                "relevance": "This is a crucial piece of information needed for the application to interact with external services.",
+                "parent_title": "Installation",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": ".env file",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+              "summary": "A file used to store environment variables, often for configuration settings like API keys.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": ".env file",
+                "context": "A file used to store environment variables, often for configuration settings like API keys.",
+                "relevance": "This is the standard method for securely managing sensitive configuration details like API keys.",
+                "parent_title": "Installation",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "Environment variables",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Installation\n\n```bash\n# Install dependencies\npip install -r requirements.txt\n\n# Set up API key\necho \"GEMINI_API_KEY=your_key_here\" > .env\n```\n\n---",
+              "summary": "Variables whose values are set outside of the program, typically in the operating system's environment.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Environment variables",
+                "context": "Variables whose values are set outside of the program, typically in the operating system's environment.",
+                "relevance": "These variables, like the API key, are essential for configuring the application's behavior.",
+                "parent_title": "Installation",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "title": "Usage (Choose One)",
+          "text": "## Usage (Choose One)",
+          "line_num": 50,
+          "nodes": [
+            {
+              "title": "Option 1: Command Line (Recommended)",
+              "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+              "line_num": 52,
+              "nodes": [
+                {
+                  "title": "Command Line",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A text-based interface for interacting with a computer's operating system.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Command Line",
+                    "context": "A text-based interface for interacting with a computer's operating system.",
+                    "relevance": "This is the primary method recommended for running the described script.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "run_pageindex.py",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A Python script used for processing PDF documents.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "run_pageindex.py",
+                    "context": "A Python script used for processing PDF documents.",
+                    "relevance": "This is the core executable script being demonstrated in the examples.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "paper.pdf",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A placeholder for the input PDF document file.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "paper.pdf",
+                    "context": "A placeholder for the input PDF document file.",
+                    "relevance": "This represents the data file that the script operates on.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A parameter that controls the level of detail in the processing of the PDF.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "granularity",
+                    "context": "A parameter that controls the level of detail in the processing of the PDF.",
+                    "relevance": "This parameter significantly affects the output and processing time of the script.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "keywords",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A processing mode that extracts detailed keywords from the document.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "keywords",
+                    "context": "A processing mode that extracts detailed keywords from the document.",
+                    "relevance": "This is one of the specific granularity options available for processing.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "fine",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A processing mode that uses a fine level of detail.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "fine",
+                    "context": "A processing mode that uses a fine level of detail.",
+                    "relevance": "This represents another option for controlling the processing detail.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "coarse",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "A processing mode that uses a coarse level of detail for faster processing.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "coarse",
+                    "context": "A processing mode that uses a coarse level of detail for faster processing.",
+                    "relevance": "This option prioritizes speed over detail in document processing.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "visualize",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 1: Command Line (Recommended)\n\n```bash\n# Process with keywords (most detailed)\npython run_pageindex.py paper.pdf --granularity keywords\n\n# Process with fine granularity\npython run_pageindex.py paper.pdf --granularity fine\n\n# Fast processing (coarse)\npython run_pageindex.py paper.pdf --granularity coarse\n\n# With visualization\npython run_pageindex.py paper.pdf --granularity keywords --visualize\n```",
+                  "summary": "An option to generate a visual representation of the processed data.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "visualize",
+                    "context": "An option to generate a visual representation of the processed data.",
+                    "relevance": "This flag enables the creation of graphical outputs from the script.",
+                    "parent_title": "Option 1: Command Line (Recommended)",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                }
+              ]
+            },
+            {
+              "title": "Option 2: Python API",
+              "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+              "line_num": 68,
+              "nodes": [
+                {
+                  "title": "Python API",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "An interface that allows Python programs to interact with a system or library.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Python API",
+                    "context": "An interface that allows Python programs to interact with a system or library.",
+                    "relevance": "This is the primary method of interaction discussed in the section.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "pageindex",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A Python library or module used for processing documents like PDFs.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "pageindex",
+                    "context": "A Python library or module used for processing documents like PDFs.",
+                    "relevance": "This is the core library being utilized in the provided code example.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "page_index_main",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "The main function within the pageindex library for document processing.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "page_index_main",
+                    "context": "The main function within the pageindex library for document processing.",
+                    "relevance": "This function is called to perform the primary task of analyzing the PDF.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "ConfigLoader",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A utility class for loading configuration settings for the pageindex library.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "ConfigLoader",
+                    "context": "A utility class for loading configuration settings for the pageindex library.",
+                    "relevance": "This class is used to set up the parameters for the document analysis.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "load",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A method used to load configuration options, such as granularity and node text inclusion.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "load",
+                    "context": "A method used to load configuration options, such as granularity and node text inclusion.",
+                    "relevance": "This method configures how the pageindex library will process the document.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A configuration setting that determines the level of detail in the output (e.g., 'keywords').",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "granularity",
+                    "context": "A configuration setting that determines the level of detail in the output (e.g., 'keywords').",
+                    "relevance": "This setting directly influences the type of information extracted from the document.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "if_add_node_text",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A configuration option to include the text content of nodes in the output.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "if_add_node_text",
+                    "context": "A configuration option to include the text content of nodes in the output.",
+                    "relevance": "This setting controls whether detailed text is returned alongside extracted information.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "result",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "The output dictionary containing the processed information from the PDF.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "result",
+                    "context": "The output dictionary containing the processed information from the PDF.",
+                    "relevance": "This variable holds the outcome of the page_index_main function call.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "structure",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 2: Python API\n\n```python\nfrom pageindex import page_index_main\nfrom pageindex.utils import ConfigLoader\n\nconfig_loader = ConfigLoader()\nopt = config_loader.load({\n    'granularity': 'keywords',\n    'if_add_node_text': 'yes',\n})\n\nresult = page_index_main('paper.pdf', opt)\nstructure = result['structure']\n```",
+                  "summary": "A key within the result dictionary, likely representing the hierarchical structure of the document.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "structure",
+                    "context": "A key within the result dictionary, likely representing the hierarchical structure of the document.",
+                    "relevance": "This represents a significant part of the processed output from the PDF analysis.",
+                    "parent_title": "Option 2: Python API",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                }
+              ]
+            },
+            {
+              "title": "Option 3: Example Script",
+              "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+              "line_num": 84,
+              "nodes": [
+                {
+                  "title": "Example Script",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+                  "summary": "A specific script provided as an example for demonstration purposes.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Example Script",
+                    "context": "A specific script provided as an example for demonstration purposes.",
+                    "relevance": "This is the main subject of the section, illustrating a practical application.",
+                    "parent_title": "Option 3: Example Script",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "example_keywords_usage.py",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+                  "summary": "The name of a Python script file used in the example.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "example_keywords_usage.py",
+                    "context": "The name of a Python script file used in the example.",
+                    "relevance": "Identifies the specific tool or program being demonstrated.",
+                    "parent_title": "Option 3: Example Script",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "paper.pdf",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+                  "summary": "A placeholder for a PDF document, likely containing data or information to be processed.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "paper.pdf",
+                    "context": "A placeholder for a PDF document, likely containing data or information to be processed.",
+                    "relevance": "Represents the input data that the example script operates on.",
+                    "parent_title": "Option 3: Example Script",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Bash command",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+                  "summary": "A command executed in a Unix-like shell environment.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Bash command",
+                    "context": "A command executed in a Unix-like shell environment.",
+                    "relevance": "Demonstrates how to invoke the Python script from the command line.",
+                    "parent_title": "Option 3: Example Script",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Python script execution",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "### Option 3: Example Script\n\n```bash\npython example_keywords_usage.py paper.pdf\n```\n\n---",
+                  "summary": "Running a Python program to perform a specific task.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Python script execution",
+                    "context": "Running a Python program to perform a specific task.",
+                    "relevance": "Illustrates the practical usage of the provided script.",
+                    "parent_title": "Option 3: Example Script",
+                    "parent_node_type": "section"
+                  },
+                  "nodes": []
+                }
+              ]
+            },
+            {
+              "node_type": "semantic_unit",
+              "title": "Usage Instructions",
+              "text": "## Usage (Choose One)",
+              "summary": "This section provides instructions on how to use the described functionality, indicating that a choice should be made.",
+              "nodes": [
+                {
+                  "title": "Usage Instructions",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Usage (Choose One)",
+                  "summary": "Guidelines on how to use a product or system.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Usage Instructions",
+                    "context": "Guidelines on how to use a product or system.",
+                    "relevance": "This is the title of the section and indicates the content's purpose.",
+                    "parent_title": "Usage Instructions",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Composite polymer electrolyte",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Usage (Choose One)",
+                  "summary": "A material combining a polymer matrix with ceramic fillers for enhanced battery performance.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Composite polymer electrolyte",
+                    "context": "A material combining a polymer matrix with ceramic fillers for enhanced battery performance.",
+                    "relevance": "This is the core material discussed, central to the section's context.",
+                    "parent_title": "Usage Instructions",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Ionic conductivity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Usage (Choose One)",
+                  "summary": "The measure of a material's ability to conduct ions.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Ionic conductivity",
+                    "context": "The measure of a material's ability to conduct ions.",
+                    "relevance": "A key performance metric for evaluating the composite polymer electrolyte.",
+                    "parent_title": "Usage Instructions",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Battery applications",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Usage (Choose One)",
+                  "summary": "The intended use of the material in energy storage devices.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Battery applications",
+                    "context": "The intended use of the material in energy storage devices.",
+                    "relevance": "Defines the practical relevance and application domain of the research.",
+                    "parent_title": "Usage Instructions",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Performance metric",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Usage (Choose One)",
+                  "summary": "A quantifiable measure used to assess the effectiveness of a system or material.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Performance metric",
+                    "context": "A quantifiable measure used to assess the effectiveness of a system or material.",
+                    "relevance": "Highlights the criteria used to evaluate the composite polymer electrolyte's suitability.",
+                    "parent_title": "Usage Instructions",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Granularity Levels",
+          "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+          "line_num": 92,
+          "nodes": [
+            {
+              "node_type": "table",
+              "title": "Table",
+              "text": "| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |",
+              "summary": "Data table extracted from Markdown",
+              "nodes": []
+            },
+            {
+              "node_type": "semantic_unit",
+              "title": "Granularity Levels Explained",
+              "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+              "summary": "This section introduces and explains different granularity levels, detailing their speed, level of detail, and use cases through a table.",
+              "nodes": [
+                {
+                  "title": "Granularity Levels",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "Different levels of detail and speed used to present information.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Granularity Levels",
+                    "context": "Different levels of detail and speed used to present information.",
+                    "relevance": "This is the central concept of the section, defining the different ways information can be accessed.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Coarse Granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "The fastest level of detail, providing only a quick overview.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Coarse Granularity",
+                    "context": "The fastest level of detail, providing only a quick overview.",
+                    "relevance": "Represents the most basic and rapid way to understand the subject matter.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Medium Granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "A balanced level offering a moderate amount of detail and speed.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Medium Granularity",
+                    "context": "A balanced level offering a moderate amount of detail and speed.",
+                    "relevance": "This level provides a compromise between speed and depth of information.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Fine Granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "A slower level that provides detailed analysis.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Fine Granularity",
+                    "context": "A slower level that provides detailed analysis.",
+                    "relevance": "This level is important for in-depth understanding and thorough examination.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Keywords Granularity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "The slowest level, offering maximum detail including specific terminology.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Keywords Granularity",
+                    "context": "The slowest level, offering maximum detail including specific terminology.",
+                    "relevance": "This level is crucial for users needing the most comprehensive and precise information.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Speed",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "Indicates how quickly information can be processed or accessed at each granularity level.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Speed",
+                    "context": "Indicates how quickly information can be processed or accessed at each granularity level.",
+                    "relevance": "A key dimension used to differentiate the granularity levels, showing trade-offs.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Detail",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "Represents the depth and richness of information provided at each granularity level.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Detail",
+                    "context": "Represents the depth and richness of information provided at each granularity level.",
+                    "relevance": "Another key dimension defining the granularity levels, indicating the amount of information presented.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Use Case",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Granularity Levels\n\n| Level | Speed | Detail | Use Case |\n|-------|-------|--------|----------|\n| `coarse` | ⚡⚡⚡ | ⭐ | Quick overview |\n| `medium` | ⚡⚡ | ⭐⭐ | Balanced |\n| `fine` | ⚡ | ⭐⭐⭐ | Detailed analysis |\n| `keywords` | 🐌 | ⭐⭐⭐⭐ | Maximum detail + terminology |\n\n---",
+                  "summary": "The specific application or purpose for which each granularity level is best suited.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Use Case",
+                    "context": "The specific application or purpose for which each granularity level is best suited.",
+                    "relevance": "Helps users understand when to apply each level of granularity for optimal results.",
+                    "parent_title": "Granularity Levels Explained",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Output",
+          "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+          "line_num": 103,
+          "nodes": [
+            {
+              "node_type": "semantic_unit",
+              "title": "Output Files and Visualization",
+              "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+              "summary": "This section details the output files generated by the process, including a JSON file for the full structure and an HTML file for visualization. It specifies the location of these files in the 'results/' directory.",
+              "nodes": [
+                {
+                  "title": "Output Files",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "Files generated by the process that contain the results.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Output Files",
+                    "context": "Files generated by the process that contain the results.",
+                    "relevance": "This term identifies the primary subject of the section, which is about the generated output.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "results/ directory",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "The specific location where output files are saved.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "results/ directory",
+                    "context": "The specific location where output files are saved.",
+                    "relevance": "This provides a concrete detail about where to find the generated results.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "paper_keywords_structure.json",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "A JSON file containing the full structure of keywords.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "paper_keywords_structure.json",
+                    "context": "A JSON file containing the full structure of keywords.",
+                    "relevance": "This is a specific output file mentioned, crucial for understanding the data structure.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "paper_keywords_structure.html",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "An HTML file used for visualizing the keyword structure.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "paper_keywords_structure.html",
+                    "context": "An HTML file used for visualizing the keyword structure.",
+                    "relevance": "This represents a visual output format, important for understanding the presentation of results.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Visualization",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "The process of creating graphical representations of data.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Visualization",
+                    "context": "The process of creating graphical representations of data.",
+                    "relevance": "This concept is directly linked to the HTML output file and how results are presented.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "--visualize flag",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## Output\n\nResults are saved to `results/` directory:\n- `paper_keywords_structure.json` - Full structure\n- `paper_keywords_structure.html` - Visualization (if `--visualize` used)\n\n---",
+                  "summary": "A command-line option that triggers the generation of visualization files.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "--visualize flag",
+                    "context": "A command-line option that triggers the generation of visualization files.",
+                    "relevance": "This technical detail explains how the visualization output is enabled.",
+                    "parent_title": "Output Files and Visualization",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Common Commands",
+          "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+          "line_num": 111,
+          "nodes": [
+            {
+              "title": "run_pageindex.py",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A Python script used for processing PDF documents and extracting information.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "run_pageindex.py",
+                "context": "A Python script used for processing PDF documents and extracting information.",
+                "relevance": "This is the primary executable command demonstrated in the section.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "paper.pdf",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "The input PDF document that the script processes.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "paper.pdf",
+                "context": "The input PDF document that the script processes.",
+                "relevance": "Represents the target document for the commands shown.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--granularity",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A command-line argument that specifies the level of detail for information extraction.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--granularity",
+                "context": "A command-line argument that specifies the level of detail for information extraction.",
+                "relevance": "Controls the type and amount of data extracted from the document.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--figures",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A flag to include the extraction of information from figures within the document.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--figures",
+                "context": "A flag to include the extraction of information from figures within the document.",
+                "relevance": "Enables the processing of visual elements for richer data extraction.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--tables",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A flag to include the extraction of information from tables within the document.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--tables",
+                "context": "A flag to include the extraction of information from tables within the document.",
+                "relevance": "Enables the processing of tabular data for structured information extraction.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--visualize",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A flag to generate visualizations of the extracted data.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--visualize",
+                "context": "A flag to generate visualizations of the extracted data.",
+                "relevance": "Indicates that the output will include graphical representations of the processed information.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--no-figures",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A flag to explicitly exclude the extraction of information from figures.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--no-figures",
+                "context": "A flag to explicitly exclude the extraction of information from figures.",
+                "relevance": "Allows for faster processing by skipping visual elements.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--no-tables",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A flag to explicitly exclude the extraction of information from tables.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--no-tables",
+                "context": "A flag to explicitly exclude the extraction of information from tables.",
+                "relevance": "Allows for faster processing by skipping tabular data.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "-g",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A shorthand alias for the --granularity command-line argument.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "-g",
+                "context": "A shorthand alias for the --granularity command-line argument.",
+                "relevance": "Provides a concise way to specify the extraction detail level.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "-o",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A shorthand alias for the --output command-line argument, specifying the output file location.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "-o",
+                "context": "A shorthand alias for the --output command-line argument, specifying the output file location.",
+                "relevance": "Allows users to control where the extracted data is saved.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "--help",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A command-line argument to display usage information and available options for the script.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "--help",
+                "context": "A command-line argument to display usage information and available options for the script.",
+                "relevance": "Essential for users to understand how to use the script and its capabilities.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "DEVELOPER_GUIDE.md",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## Common Commands\n\n```bash\n# Keywords with all features\npython run_pageindex.py paper.pdf --granularity keywords --figures --tables --visualize\n\n# Fast processing (no figures/tables)\npython run_pageindex.py paper.pdf --granularity medium --no-figures --no-tables\n\n# Custom output location\npython run_pageindex.py paper.pdf -g keywords -o my_output.json\n\n# Help\npython run_pageindex.py --help\n```\n\nFor debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)\n\n-----",
+              "summary": "A link to a developer guide document for further assistance.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "DEVELOPER_GUIDE.md",
+                "context": "A link to a developer guide document for further assistance.",
+                "relevance": "Points users to additional resources for more in-depth information or troubleshooting.",
+                "parent_title": "Common Commands",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "title": "🌲 The Core Concept (PageIndex)",
+          "text": "## 🌲 The Core Concept (PageIndex)\n\n> *Note: The following core logic is inherited from the original PageIndex framework.*\n\nTraditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.\n\n[Image of decision tree structure]\n\n**Original Features:**\n\n  - **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.\n\n-----",
+          "line_num": 131,
+          "nodes": [
+            {
+              "node_type": "semantic_unit",
+              "title": "Motivation for PageIndex: Relevance over Similarity",
+              "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+              "summary": "Highlights the limitation of traditional vector-based RAG relying on similarity and introduces PageIndex's approach of using a hierarchical tree index for relevance, mimicking expert navigation.",
+              "nodes": [
+                {
+                  "title": "vector-based RAG",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "A retrieval-augmented generation approach that uses vector embeddings to find semantically similar information.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "vector-based RAG",
+                    "context": "A retrieval-augmented generation approach that uses vector embeddings to find semantically similar information.",
+                    "relevance": "This is the traditional method that the new approach aims to improve upon.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "semantic similarity",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "The degree to which two pieces of text have similar meanings, often determined by vector embeddings.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "semantic similarity",
+                    "context": "The degree to which two pieces of text have similar meanings, often determined by vector embeddings.",
+                    "relevance": "This is the core principle of traditional RAG that is being contrasted with relevance.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "relevance",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "The quality of being directly connected or appropriate to the matter at hand.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "relevance",
+                    "context": "The quality of being directly connected or appropriate to the matter at hand.",
+                    "relevance": "This is the key concept that the PageIndex system prioritizes over mere similarity.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "PageIndex",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "A system that builds a hierarchical tree index for document navigation.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "PageIndex",
+                    "context": "A system that builds a hierarchical tree index for document navigation.",
+                    "relevance": "This is the novel system being introduced, which is the main subject of the section.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "hierarchical tree index",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "A data structure that organizes information in a tree-like fashion with multiple levels of organization.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "hierarchical tree index",
+                    "context": "A data structure that organizes information in a tree-like fashion with multiple levels of organization.",
+                    "relevance": "This is the specific technical implementation that enables PageIndex's functionality.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "human experts",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "Individuals with deep knowledge and experience in a particular field.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "human experts",
+                    "context": "Individuals with deep knowledge and experience in a particular field.",
+                    "relevance": "The navigation strategy of PageIndex is modeled after how these individuals approach complex information.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "complex documents",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "Traditional vector-based RAG relies on semantic *similarity*, but professional documents demand *relevance*. PageIndex builds a hierarchical tree index to simulate how human experts navigate complex documents.",
+                  "summary": "Documents that are lengthy, intricate, or contain a large amount of interconnected information.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "complex documents",
+                    "context": "Documents that are lengthy, intricate, or contain a large amount of interconnected information.",
+                    "relevance": "These are the types of documents for which PageIndex's relevance-focused approach is particularly beneficial.",
+                    "parent_title": "Motivation for PageIndex: Relevance over Similarity",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            },
+            {
+              "node_type": "semantic_unit",
+              "title": "PageIndex Core Logic and Original Features",
+              "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+              "summary": "Explains that PageIndex inherits its core logic from the original framework and lists its original features, including the absence of a vector database and the traceability of retrieval steps.",
+              "nodes": [
+                {
+                  "title": "PageIndex Core Logic",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "The fundamental operational principles and algorithms of the PageIndex system.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "PageIndex Core Logic",
+                    "context": "The fundamental operational principles and algorithms of the PageIndex system.",
+                    "relevance": "This term represents the central subject of the section, defining its core functionality.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Original Features",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "The initial set of functionalities and characteristics present in the PageIndex system.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Original Features",
+                    "context": "The initial set of functionalities and characteristics present in the PageIndex system.",
+                    "relevance": "This highlights the baseline capabilities before any potential modifications or additions.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "No Vector DB",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "Indicates that the system does not rely on a vector database for its retrieval operations.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "No Vector DB",
+                    "context": "Indicates that the system does not rely on a vector database for its retrieval operations.",
+                    "relevance": "This is a key architectural constraint that defines how retrieval is performed.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Tree Search Reasoning",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "A method of retrieval that involves navigating through a tree-like data structure to find information.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Tree Search Reasoning",
+                    "context": "A method of retrieval that involves navigating through a tree-like data structure to find information.",
+                    "relevance": "This explains the alternative mechanism used for retrieval in the absence of a vector database.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Traceability",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "The ability to track and explain each step taken during the retrieval process.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Traceability",
+                    "context": "The ability to track and explain each step taken during the retrieval process.",
+                    "relevance": "This feature is important for understanding and debugging the retrieval mechanism.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Explainable Retrieval",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "**Original Features:**\n\n- **No Vector DB:** Retrieval via tree search reasoning.\n  - **Traceability:** Every retrieval step is explainable.",
+                  "summary": "Retrieval processes where each step can be clearly understood and justified.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Explainable Retrieval",
+                    "context": "Retrieval processes where each step can be clearly understood and justified.",
+                    "relevance": "This emphasizes the transparency and auditability of the system's retrieval actions.",
+                    "parent_title": "PageIndex Core Logic and Original Features",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📝 Enhanced Markdown Processing",
+          "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+          "line_num": 146,
+          "nodes": [
+            {
+              "title": "Enhanced Markdown Processing",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "A feature that improves the way Markdown documents are processed, particularly for extracting structured data.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Enhanced Markdown Processing",
+                "context": "A feature that improves the way Markdown documents are processed, particularly for extracting structured data.",
+                "relevance": "This is the main topic of the section, indicating an advanced method for handling Markdown.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "marker",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "A component or tool used in data processing pipelines, likely for identifying specific sections or elements within documents.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "marker",
+                "context": "A component or tool used in data processing pipelines, likely for identifying specific sections or elements within documents.",
+                "relevance": "It is mentioned as a context where enhanced Markdown processing is useful, suggesting its integration or dependency.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "docling",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "A component or tool in data processing pipelines, possibly related to document analysis or linguistic processing.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "docling",
+                "context": "A component or tool in data processing pipelines, possibly related to document analysis or linguistic processing.",
+                "relevance": "Similar to 'marker', it indicates a relevant pipeline context for this enhanced processing capability.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "markdown_page_index",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "A Python function designed to process Markdown files and generate an index or structured representation of their content.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "markdown_page_index",
+                "context": "A Python function designed to process Markdown files and generate an index or structured representation of their content.",
+                "relevance": "This is the specific function used to implement the enhanced Markdown processing described in the section.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "extract_tables",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "An option within the markdown_page_index function to enable the detection and extraction of tables from Markdown documents.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "extract_tables",
+                "context": "An option within the markdown_page_index function to enable the detection and extraction of tables from Markdown documents.",
+                "relevance": "This option highlights a key enhancement in the processing capability, allowing for structured data extraction.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            },
+            {
+              "title": "extract_figures",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## 📝 Enhanced Markdown Processing\n\n*Useful for pipelines involving `marker` or `docling`.*\n\n```python\nfrom pageindex import markdown_page_index\n\n# Process markdown with enhanced table/figure detection\nstructure = markdown_page_index(\n    markdown_path=\"document.md\",\n    opt={'extract_tables': True, 'extract_figures': True}\n)\n```\n\n-----",
+              "summary": "An option within the markdown_page_index function to enable the detection and extraction of figures (images or diagrams) from Markdown documents.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "extract_figures",
+                "context": "An option within the markdown_page_index function to enable the detection and extraction of figures (images or diagrams) from Markdown documents.",
+                "relevance": "This option further demonstrates the advanced document analysis capabilities provided by the enhanced processing.",
+                "parent_title": "📝 Enhanced Markdown Processing",
+                "parent_node_type": "section"
+              },
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "title": "License",
+          "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n  * Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+          "line_num": 162,
+          "nodes": [
+            {
+              "node_type": "semantic_unit",
+              "title": "License Information",
+              "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+              "summary": "This section details the licensing of the project, specifying the MIT License and acknowledging the copyright holders. It also directs the reader to the LICENSE file for more information.",
+              "nodes": [
+                {
+                  "title": "MIT License",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+                  "summary": "A permissive open-source license that allows for broad use, modification, and distribution of software.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "MIT License",
+                    "context": "A permissive open-source license that allows for broad use, modification, and distribution of software.",
+                    "relevance": "This is the specific license under which the project is distributed, defining its usage terms.",
+                    "parent_title": "License Information",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Copyright",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+                  "summary": "A legal right that grants the creator of original works exclusive rights for its use and distribution.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Copyright",
+                    "context": "A legal right that grants the creator of original works exclusive rights for its use and distribution.",
+                    "relevance": "Identifies the owners of the intellectual property for both the original work and modifications.",
+                    "parent_title": "License Information",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Bourn23",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+                  "summary": "The entity credited with modifications to the project.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Bourn23",
+                    "context": "The entity credited with modifications to the project.",
+                    "relevance": "This is one of the copyright holders, specifically for the modified parts of the project.",
+                    "parent_title": "License Information",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "Vectify AI",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+                  "summary": "The entity credited with the original work of the project.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "Vectify AI",
+                    "context": "The entity credited with the original work of the project.",
+                    "relevance": "This is the other copyright holder, responsible for the initial creation of the project.",
+                    "parent_title": "License Information",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                },
+                {
+                  "title": "LICENSE file",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "text": "## License\n\nThis project is licensed under the **MIT License**.\n\n* Copyright (c) 2025 **Bourn23** (Modifications)\n  * Copyright (c) 2025 **Vectify AI** (Original Work)\n\nSee the [LICENSE](LICENSE) file for details.",
+                  "summary": "A dedicated file within a project repository that contains the full text of the project's license.",
+                  "node_type": "keyword",
+                  "_text_locked": true,
+                  "metadata": {
+                    "term": "LICENSE file",
+                    "context": "A dedicated file within a project repository that contains the full text of the project's license.",
+                    "relevance": "This file provides the complete legal details of the MIT License for the project.",
+                    "parent_title": "License Information",
+                    "parent_node_type": "semantic_unit"
+                  },
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_type": "semantic_unit",
+          "title": "Introduction to Contextual Analysis Variant",
+          "text": "# PageIndex: Contextual Analysis Variant",
+          "summary": "This section introduces the concept of a 'Contextual Analysis Variant' as indicated by the page title.",
+          "nodes": [
+            {
+              "title": "Contextual Analysis Variant",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "# PageIndex: Contextual Analysis Variant",
+              "summary": "A specific type of analysis that considers the surrounding circumstances or environment.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "Contextual Analysis Variant",
+                "context": "A specific type of analysis that considers the surrounding circumstances or environment.",
+                "relevance": "This is the main subject of the section, providing the overarching theme.",
+                "parent_title": "Introduction to Contextual Analysis Variant",
+                "parent_node_type": "semantic_unit"
+              },
+              "nodes": []
+            },
+            {
+              "title": "PageIndex",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "# PageIndex: Contextual Analysis Variant",
+              "summary": "A numerical identifier or marker used to organize and locate content within a document or system.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "PageIndex",
+                "context": "A numerical identifier or marker used to organize and locate content within a document or system.",
+                "relevance": "Indicates a specific location or reference point within the analyzed material.",
+                "parent_title": "Introduction to Contextual Analysis Variant",
+                "parent_node_type": "semantic_unit"
+              },
+              "nodes": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": "markdown",
+  "granularity": "keywords",
+  "processor": "v2"
+}
