@@ -14,20 +14,20 @@ from html import escape
 
 
 def generate_html(materials_data, output_path):
-    """Generate an interactive HTML visualization of extracted materials."""
+    """Generate an interactive HTML visualization of extracted ionic conductivity data."""
     
     doc_name = materials_data.get('doc_name', 'Document')
     materials = materials_data.get('materials', [])
     material_count = len(materials)
     
-    # Group materials by type
+    # Group materials by material_class
     by_type = {}
     for mat in materials:
-        mtype = mat.get('material_type', 'other') or 'other'
+        mtype = mat.get('material_class', 'Other') or 'Other'
         if mtype not in by_type:
             by_type[mtype] = []
         by_type[mtype].append(mat)
-    
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -275,25 +275,25 @@ def generate_html(materials_data, output_path):
 </head>
 <body>
     <div class="header">
-        <h1>🧪 Materials Extraction</h1>
+        <h1>⚡ Ionic Conductivity Data</h1>
         <div class="subtitle">{escape(doc_name)}</div>
     </div>
     
     <div class="stats-bar">
         <div class="stat">
             <span class="stat-value">{material_count}</span>
-            <span class="stat-label">Materials</span>
+            <span class="stat-label">Data Points</span>
         </div>
         <div class="stat">
             <span class="stat-value">{len(by_type)}</span>
-            <span class="stat-label">Types</span>
+            <span class="stat-label">Material Classes</span>
         </div>
         <div class="stat">
-            <span class="stat-value">{sum(len(m.get('processing_methods', [])) for m in materials)}</span>
-            <span class="stat-label">Processing Methods</span>
+            <span class="stat-value">{sum(1 for m in materials if m.get('processing_method') and 'N/A' not in m.get('processing_method', ''))}</span>
+            <span class="stat-label">Primary Study Materials</span>
         </div>
         <div class="stat">
-            <span class="stat-value">{sum(len(m.get('source_nodes', [])) for m in materials)}</span>
+            <span class="stat-value">{sum(1 for m in materials if m.get('source_node'))}</span>
             <span class="stat-label">Source References</span>
         </div>
     </div>
@@ -315,68 +315,88 @@ def generate_html(materials_data, output_path):
     
     <script>
         const materials = {json.dumps(materials, ensure_ascii=False)};
+        let currentIndex = 0;
         
-        function showMaterial(abbrev) {{
-            const mat = materials.find(m => m.abbreviation === abbrev);
+        function showMaterial(index) {{
+            const mat = materials[index];
             if (!mat) return;
+            
+            currentIndex = index;
             
             // Update active state
             document.querySelectorAll('.material-item').forEach(el => {{
                 el.classList.remove('active');
             }});
-            document.querySelector(`[data-abbrev="${{escapeAttr(abbrev)}}"]`)?.classList.add('active');
+            document.querySelector(`[data-index="${{index}}"]`)?.classList.add('active');
             
             // Generate detail view
             const content = document.getElementById('content');
-            content.innerHTML = generateDetails(mat);
+            content.innerHTML = generateDetails(mat, index);
         }}
         
-        function generateDetails(mat) {{
-            const hasFullName = mat.full_name && mat.full_name.trim();
-            const hasCompositions = mat.compositions && mat.compositions.length > 0;
-            const hasProcessing = mat.processing_methods && mat.processing_methods.length > 0;
-            const hasSources = mat.source_nodes && mat.source_nodes.length > 0;
+        function generateDetails(mat, index) {{
+            const electrolyte = mat.electrolyte_name || {{}};
+            const hasFullName = electrolyte.full_name && electrolyte.full_name.trim();
+            const hasAcronym = electrolyte.acronym && electrolyte.acronym.trim();
+            const hasProportion = electrolyte.proportion && electrolyte.proportion.trim();
+            const hasProcessing = mat.processing_method && mat.processing_method.trim() && !mat.processing_method.includes('N/A');
+            const hasDescription = mat.material_description && mat.material_description.trim() && !mat.material_description.includes('N/A');
+            const hasSource = mat.source_node;
             
             let html = `
                 <div class="detail-section">
-                    <h2>${{escapeHtml(mat.abbreviation)}}</h2>
-                    ${{hasFullName ? `<div class="full-name">${{escapeHtml(mat.full_name)}}</div>` : ''}}
+                    <h2>${{hasAcronym ? escapeHtml(electrolyte.acronym) : escapeHtml(electrolyte.full_name || 'Unknown')}}</h2>
+                    ${{hasFullName && hasAcronym ? `<div class="full-name">${{escapeHtml(electrolyte.full_name)}}</div>` : ''}}
                     
                     <div style="margin: 1rem 0;">
-                        ${{mat.material_type ? `<span class="badge badge-type">${{escapeHtml(mat.material_type)}}</span>` : ''}}
+                        <span class="badge badge-type">${{escapeHtml(mat.material_class || 'Other')}}</span>
+                        ${{hasProportion ? `<span class="badge badge-composition">${{escapeHtml(electrolyte.proportion)}}</span>` : ''}}
+                    </div>
+                    
+                    <h3>Ionic Conductivity</h3>
+                    <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #2e7d32; margin-bottom: 1rem;">
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #1b5e20; margin-bottom: 0.5rem;">
+                            ${{escapeHtml(mat.ionic_conductivity_S_per_cm)}} S/cm
+                        </div>
+                        <div style="color: #666;">
+                            Temperature: ${{escapeHtml(mat.measurement_temperature)}}
+                        </div>
+                        ${{mat.specific_source_location ? `
+                        <div style="color: #666; margin-top: 0.3rem;">
+                            Location: ${{escapeHtml(mat.specific_source_location)}}
+                        </div>
+                        ` : ''}}
                     </div>
             `;
             
-            if (hasCompositions) {{
+            if (hasDescription) {{
                 html += `
-                    <h3>Compositions</h3>
-                    <ul class="composition-list">
-                        ${{mat.compositions.map(c => `<li>${{escapeHtml(c)}}</li>`).join('')}}
-                    </ul>
+                    <h3>Material Description</h3>
+                    <div style="background: #f9f9f9; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; line-height: 1.6;">
+                        ${{escapeHtml(mat.material_description)}}
+                    </div>
                 `;
             }}
             
             if (hasProcessing) {{
                 html += `
-                    <h3>Processing Methods</h3>
-                    <ul class="processing-list">
-                        ${{mat.processing_methods.map(p => `<li>${{escapeHtml(p)}}</li>`).join('')}}
-                    </ul>
+                    <h3>Processing Method</h3>
+                    <div class="processing-list">
+                        <li>${{escapeHtml(mat.processing_method)}}</li>
+                    </div>
                 `;
             }}
             
-            if (hasSources) {{
+            if (hasSource) {{
                 html += `
-                    <h3>Source Nodes (${{mat.source_nodes.length}})</h3>
-                    ${{mat.source_nodes.map(src => `
-                        <div class="source-card">
-                            <div class="source-header">
-                                <span class="source-id">${{escapeHtml(src.node_id || 'N/A')}}</span>
-                                <span class="source-section">${{escapeHtml(src.section || '')}}</span>
-                            </div>
-                            <div class="source-title">${{escapeHtml(src.title || 'Unknown')}}</div>
+                    <h3>Source Node</h3>
+                    <div class="source-card">
+                        <div class="source-header">
+                            <span class="source-id">${{escapeHtml(mat.source_node.node_id || 'N/A')}}</span>
+                            <span class="source-section">${{escapeHtml(mat.source_node.section || '')}}</span>
                         </div>
-                    `).join('')}}
+                        <div class="source-title">${{escapeHtml(mat.source_node.title || 'Unknown')}}</div>
+                    </div>
                 `;
             }}
             
@@ -399,9 +419,9 @@ def generate_html(materials_data, output_path):
         document.getElementById('search').addEventListener('input', (e) => {{
             const query = e.target.value.toLowerCase();
             document.querySelectorAll('.material-item').forEach(el => {{
-                const abbrev = (el.dataset.abbrev || '').toLowerCase();
+                const acronym = (el.dataset.acronym || '').toLowerCase();
                 const fullname = (el.dataset.fullname || '').toLowerCase();
-                const visible = abbrev.includes(query) || fullname.includes(query);
+                const visible = acronym.includes(query) || fullname.includes(query);
                 el.style.display = visible ? '' : 'none';
             }});
             
@@ -425,31 +445,44 @@ def generate_html(materials_data, output_path):
 
 
 def generate_material_list(by_type):
-    """Generate HTML for the material list grouped by type."""
+    """Generate HTML for the material list grouped by material class."""
     html = ""
     
     # Sort types for consistent display
-    type_order = ['polymer', 'ceramic', 'composite', 'salt', 'filler', 'additive', 'solvent', 'other']
+    type_order = ['Ceramic', 'Polymer', 'Composite', 'Other']
     sorted_types = sorted(by_type.keys(), key=lambda t: type_order.index(t) if t in type_order else 99)
     
+    global_index = 0
     for mtype in sorted_types:
         materials = by_type[mtype]
         html += f'<div class="type-group">'
         html += f'<div class="type-header"><span>{escape(mtype.upper())}</span><span>{len(materials)}</span></div>'
         
-        for mat in sorted(materials, key=lambda m: m['abbreviation'].lower()):
-            abbrev = mat.get('abbreviation', '')
-            fullname = mat.get('full_name', '')
+        # Sort by acronym or full name
+        sorted_materials = sorted(materials, key=lambda m: (
+            m.get('electrolyte_name', {}).get('acronym', '') or 
+            m.get('electrolyte_name', {}).get('full_name', '')
+        ).lower())
+        
+        for mat in sorted_materials:
+            electrolyte = mat.get('electrolyte_name', {})
+            acronym = electrolyte.get('acronym') or ''
+            fullname = electrolyte.get('full_name') or ''
+            conductivity = mat.get('ionic_conductivity_S_per_cm') or ''
+            
+            display_name = acronym or fullname or 'Unknown'
             
             html += f'''
                 <div class="material-item" 
-                     data-abbrev="{escape(abbrev)}" 
+                     data-index="{global_index}"
+                     data-acronym="{escape(acronym)}" 
                      data-fullname="{escape(fullname)}"
-                     onclick="showMaterial('{escape(abbrev)}')">
-                    <div class="material-abbrev">{escape(abbrev)}</div>
-                    {f'<div class="material-fullname">{escape(fullname)}</div>' if fullname else ''}
+                     onclick="showMaterial({global_index})">
+                    <div class="material-abbrev">{escape(display_name)}</div>
+                    <div class="material-fullname">{escape(conductivity)} S/cm</div>
                 </div>
             '''
+            global_index += 1
         
         html += '</div>'
     
