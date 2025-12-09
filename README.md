@@ -159,6 +159,26 @@ structure = markdown_page_index(
 
 -----
 
+There are several work in progress:
+
+1. showing the keywords and nodes with similar keywords is now handled by the basic visualization script.
+
+1.2. you can classify the keywords into semantic groups using:
+python visualize_keyword_clusters.py "results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes_keywords_structure.json" --provider gemini 2>&1 | tail -30
+
+2. you can now extract materials, their name, processes, and conductivity
+
+python run_extraction.py "results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes_keywords_structure json" 2>&1 
+
+2.1. you can then visualize it using the following code:
+ python visualize_materials.py "results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes_keywords_structure_materials.json"
+
+2.2. you can also export the data in CSV format:
+python materials_to_csv.py "results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes_keywords_structure_materials.json" --format detailed
+
+
+-----
+
 ## License
 
 This project is licensed under the **MIT License**.

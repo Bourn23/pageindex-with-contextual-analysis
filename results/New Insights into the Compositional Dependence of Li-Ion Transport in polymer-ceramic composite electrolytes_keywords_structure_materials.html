@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes - Materials</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 2rem;
+        }
+        
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .header .subtitle { opacity: 0.9; font-size: 0.9rem; }
+        
+        .stats-bar {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+        
+        .stat-label { color: #666; font-size: 0.85rem; }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 180px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            background: white;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .search-box:focus { outline: none; border-color: #2e7d32; }
+        
+        .type-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .type-header {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            padding: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .material-item {
+            padding: 0.7rem;
+            margin: 0.3rem 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border-left: 3px solid #4caf50;
+            background: #f9f9f9;
+            transition: all 0.2s;
+        }
+        
+        .material-item:hover {
+            background: #e8f5e9;
+            transform: translateX(3px);
+        }
+        
+        .material-item.active {
+            background: #2e7d32;
+            color: white;
+            border-left-color: #1b5e20;
+        }
+        
+        .material-abbrev {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .material-fullname {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 0.2rem;
+        }
+        
+        .detail-section { margin-bottom: 2rem; }
+        
+        .detail-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #2e7d32;
+        }
+        
+        .detail-section h3 {
+            font-size: 0.9rem;
+            margin: 1rem 0 0.5rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .full-name {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-type {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-composition {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-processing {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .source-card {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #2e7d32;
+        }
+        
+        .source-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .source-id {
+            font-family: monospace;
+            font-size: 0.8rem;
+            background: #e0e0e0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+        
+        .source-section {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .source-title {
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            color: #999;
+            font-style: italic;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .processing-list {
+            list-style: none;
+        }
+        
+        .processing-list li {
+            padding: 0.5rem 0.7rem;
+            background: #f3e5f5;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #7b1fa2;
+        }
+        
+        .composition-list {
+            list-style: none;
+        }
+        
+        .composition-list li {
+            padding: 0.5rem 0.7rem;
+            background: #fff3e0;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #e65100;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧪 Materials Extraction</h1>
+        <div class="subtitle">New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes</div>
+    </div>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <span class="stat-value">86</span>
+            <span class="stat-label">Materials</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">7</span>
+            <span class="stat-label">Types</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">27</span>
+            <span class="stat-label">Processing Methods</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">373</span>
+            <span class="stat-label">Source References</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" class="search-box" id="search" placeholder="Search materials...">
+            <div id="material-list">
+                <div class="type-group"><div class="type-header"><span>POLYMER</span><span>11</span></div>
+                <div class="material-item" 
+                     data-abbrev="Double-Network" 
+                     data-fullname=""
+                     onclick="showMaterial('Double-Network')">
+                    <div class="material-abbrev">Double-Network</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PAN" 
+                     data-fullname="polyacrylonitrile"
+                     onclick="showMaterial('PAN')">
+                    <div class="material-abbrev">PAN</div>
+                    <div class="material-fullname">polyacrylonitrile</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEG" 
+                     data-fullname="PEG"
+                     onclick="showMaterial('PEG')">
+                    <div class="material-abbrev">PEG</div>
+                    <div class="material-fullname">PEG</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO" 
+                     data-fullname="poly(ethylene oxide)"
+                     onclick="showMaterial('PEO')">
+                    <div class="material-abbrev">PEO</div>
+                    <div class="material-fullname">poly(ethylene oxide)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO-Based Electrolyte" 
+                     data-fullname=""
+                     onclick="showMaterial('PEO-Based Electrolyte')">
+                    <div class="material-abbrev">PEO-Based Electrolyte</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO-Based Electrolytes" 
+                     data-fullname=""
+                     onclick="showMaterial('PEO-Based Electrolytes')">
+                    <div class="material-abbrev">PEO-Based Electrolytes</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PMMA" 
+                     data-fullname="poly-(methyl methacrylate)"
+                     onclick="showMaterial('PMMA')">
+                    <div class="material-abbrev">PMMA</div>
+                    <div class="material-fullname">poly-(methyl methacrylate)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Polyether Electrolytes" 
+                     data-fullname=""
+                     onclick="showMaterial('Polyether Electrolytes')">
+                    <div class="material-abbrev">Polyether Electrolytes</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Polymer Electrolyte" 
+                     data-fullname=""
+                     onclick="showMaterial('Polymer Electrolyte')">
+                    <div class="material-abbrev">Polymer Electrolyte</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Polyurethane" 
+                     data-fullname="Polyurethane"
+                     onclick="showMaterial('Polyurethane')">
+                    <div class="material-abbrev">Polyurethane</div>
+                    <div class="material-fullname">Polyurethane</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PU" 
+                     data-fullname="Polyurethane Polymers"
+                     onclick="showMaterial('PU')">
+                    <div class="material-abbrev">PU</div>
+                    <div class="material-fullname">Polyurethane Polymers</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>CERAMIC</span><span>11</span></div>
+                <div class="material-item" 
+                     data-abbrev="c-LLZO" 
+                     data-fullname="ceramic LLZO"
+                     onclick="showMaterial('c-LLZO')">
+                    <div class="material-abbrev">c-LLZO</div>
+                    <div class="material-fullname">ceramic LLZO</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="decomposed LLZO" 
+                     data-fullname="Li2CO3"
+                     onclick="showMaterial('decomposed LLZO')">
+                    <div class="material-abbrev">decomposed LLZO</div>
+                    <div class="material-fullname">Li2CO3</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Garnets" 
+                     data-fullname=""
+                     onclick="showMaterial('Garnets')">
+                    <div class="material-abbrev">Garnets</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LAGP" 
+                     data-fullname="Li1+xAlxGe2-x(PO4)3"
+                     onclick="showMaterial('LAGP')">
+                    <div class="material-abbrev">LAGP</div>
+                    <div class="material-fullname">Li1+xAlxGe2-x(PO4)3</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LATP" 
+                     data-fullname="Li$_{10}$GeP$_2$S$_{12}$"
+                     onclick="showMaterial('LATP')">
+                    <div class="material-abbrev">LATP</div>
+                    <div class="material-fullname">Li$_{10}$GeP$_2$S$_{12}$</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li$_7$La$_3$Zr$_2$O$_{12}$" 
+                     data-fullname="Li$_7$La$_3$Zr$_2$O$_{12}$"
+                     onclick="showMaterial('Li$_7$La$_3$Zr$_2$O$_{12}$')">
+                    <div class="material-abbrev">Li$_7$La$_3$Zr$_2$O$_{12}$</div>
+                    <div class="material-fullname">Li$_7$La$_3$Zr$_2$O$_{12}$</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li$_{1+x}$Al$_x$Ge$_{2-x}$(PO$_4$)$_3$" 
+                     data-fullname=""
+                     onclick="showMaterial('Li$_{1+x}$Al$_x$Ge$_{2-x}$(PO$_4$)$_3$')">
+                    <div class="material-abbrev">Li$_{1+x}$Al$_x$Ge$_{2-x}$(PO$_4$)$_3$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li$_{10}$Ge$_{1}$P$_{2}$S$_{12}$" 
+                     data-fullname=""
+                     onclick="showMaterial('Li$_{10}$Ge$_{1}$P$_{2}$S$_{12}$')">
+                    <div class="material-abbrev">Li$_{10}$Ge$_{1}$P$_{2}$S$_{12}$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li$_{10}$GeP$_2$S$_{12}$" 
+                     data-fullname=""
+                     onclick="showMaterial('Li$_{10}$GeP$_2$S$_{12}$')">
+                    <div class="material-abbrev">Li$_{10}$GeP$_2$S$_{12}$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLTO" 
+                     data-fullname="Li3xLa2/3-xTiO3"
+                     onclick="showMaterial('LLTO')">
+                    <div class="material-abbrev">LLTO</div>
+                    <div class="material-fullname">Li3xLa2/3-xTiO3</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO" 
+                     data-fullname="Li
+7
+La
+3
+Zr
+2
+O
+12"
+                     onclick="showMaterial('LLZO')">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">Li
+7
+La
+3
+Zr
+2
+O
+12</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>COMPOSITE</span><span>37</span></div>
+                <div class="material-item" 
+                     data-abbrev="Composite" 
+                     data-fullname=""
+                     onclick="showMaterial('Composite')">
+                    <div class="material-abbrev">Composite</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LAGP-PEO" 
+                     data-fullname="Lithium aluminum germanium phosphate-poly(ethylene oxide)"
+                     onclick="showMaterial('LAGP-PEO')">
+                    <div class="material-abbrev">LAGP-PEO</div>
+                    <div class="material-fullname">Lithium aluminum germanium phosphate-poly(ethylene oxide)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLTO-PAN" 
+                     data-fullname="Lithium lanthanum titanate-polyacrylonitrile"
+                     onclick="showMaterial('LLTO-PAN')">
+                    <div class="material-abbrev">LLTO-PAN</div>
+                    <div class="material-fullname">Lithium lanthanum titanate-polyacrylonitrile</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (20 wt %)-PEO" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (20 wt %)-PEO')">
+                    <div class="material-abbrev">LLZO (20 wt %)-PEO</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (20 wt %)-PEO (LiTFSI)" 
+                     data-fullname="LLZO-PEO-LiTFSI composite"
+                     onclick="showMaterial('LLZO (20 wt %)-PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (20 wt %)-PEO (LiTFSI)</div>
+                    <div class="material-fullname">LLZO-PEO-LiTFSI composite</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (20 wt %)–PEO (LiTFSI)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (20 wt %)–PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (20 wt %)–PEO (LiTFSI)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (5 wt %)-PEO" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (5 wt %)-PEO')">
+                    <div class="material-abbrev">LLZO (5 wt %)-PEO</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (5 wt %)-PEO (LiTFSI)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (5 wt %)-PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (5 wt %)-PEO (LiTFSI)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (5 wt %)–PEO (LiTFSI)" 
+                     data-fullname="LLZO-PEO-LiTFSI composite"
+                     onclick="showMaterial('LLZO (5 wt %)–PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (5 wt %)–PEO (LiTFSI)</div>
+                    <div class="material-fullname">LLZO-PEO-LiTFSI composite</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (5 wt %)—PEO (LiTFSI)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (5 wt %)—PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (5 wt %)—PEO (LiTFSI)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)-PEO" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)-PEO')">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)-PEO (50 wt %)-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)-PEO (50 wt %)-TEGDME')">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO (50 wt %)-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)-PEO (LiTFSI)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)-PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO (LiTFSI)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME')">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)–PEO (LiTFSI)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)–PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (50 wt %)–PEO (LiTFSI)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)—PEO (LiTFSI)" 
+                     data-fullname="LLZO-PEO-LiTFSI composite"
+                     onclick="showMaterial('LLZO (50 wt %)—PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO (50 wt %)—PEO (LiTFSI)</div>
+                    <div class="material-fullname">LLZO-PEO-LiTFSI composite</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME')">
+                    <div class="material-abbrev">LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-PEO" 
+                     data-fullname="LLZO-PEO composite"
+                     onclick="showMaterial('LLZO-PEO')">
+                    <div class="material-abbrev">LLZO-PEO</div>
+                    <div class="material-fullname">LLZO-PEO composite</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-PEO (LiClO4)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO-PEO (LiClO4)')">
+                    <div class="material-abbrev">LLZO-PEO (LiClO4)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-PEO (LiTFSI)" 
+                     data-fullname="LLZO-PEO (LiTFSI)"
+                     onclick="showMaterial('LLZO-PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO-PEO (LiTFSI)</div>
+                    <div class="material-fullname">LLZO-PEO (LiTFSI)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-PEO (LiTFSI)-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO-PEO (LiTFSI)-TEGDME')">
+                    <div class="material-abbrev">LLZO-PEO (LiTFSI)-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-PEO-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO-PEO-TEGDME')">
+                    <div class="material-abbrev">LLZO-PEO-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO-poly(ethylene oxide)" 
+                     data-fullname="LLZO-poly(ethylene oxide)"
+                     onclick="showMaterial('LLZO-poly(ethylene oxide)')">
+                    <div class="material-abbrev">LLZO-poly(ethylene oxide)</div>
+                    <div class="material-fullname">LLZO-poly(ethylene oxide)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO–PEO" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO–PEO')">
+                    <div class="material-abbrev">LLZO–PEO</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO–PEO (LiTFSI)" 
+                     data-fullname="lithium lanthanum zirconium oxide–poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)"
+                     onclick="showMaterial('LLZO–PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO–PEO (LiTFSI)</div>
+                    <div class="material-fullname">lithium lanthanum zirconium oxide–poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO–PEO(LiTFSI)-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO–PEO(LiTFSI)-TEGDME')">
+                    <div class="material-abbrev">LLZO–PEO(LiTFSI)-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO–PEO(LiTFSI)–TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO–PEO(LiTFSI)–TEGDME')">
+                    <div class="material-abbrev">LLZO–PEO(LiTFSI)–TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO–PEO–TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO–PEO–TEGDME')">
+                    <div class="material-abbrev">LLZO–PEO–TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO—PEO (LiClO4)" 
+                     data-fullname=""
+                     onclick="showMaterial('LLZO—PEO (LiClO4)')">
+                    <div class="material-abbrev">LLZO—PEO (LiClO4)</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LLZO—PEO (LiTFSI)" 
+                     data-fullname="lithium lanthanum zirconium oxide—poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)"
+                     onclick="showMaterial('LLZO—PEO (LiTFSI)')">
+                    <div class="material-abbrev">LLZO—PEO (LiTFSI)</div>
+                    <div class="material-fullname">lithium lanthanum zirconium oxide—poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEG-LiClO$_4$-Al$_2$O$_3$" 
+                     data-fullname=""
+                     onclick="showMaterial('PEG-LiClO$_4$-Al$_2$O$_3$')">
+                    <div class="material-abbrev">PEG-LiClO$_4$-Al$_2$O$_3$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEG-LiClO$_4$-Al$_2$O$_3$ Composite Polyether Electrolytes" 
+                     data-fullname=""
+                     onclick="showMaterial('PEG-LiClO$_4$-Al$_2$O$_3$ Composite Polyether Electrolytes')">
+                    <div class="material-abbrev">PEG-LiClO$_4$-Al$_2$O$_3$ Composite Polyether Electrolytes</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO-TEGDME" 
+                     data-fullname=""
+                     onclick="showMaterial('PEO-TEGDME')">
+                    <div class="material-abbrev">PEO-TEGDME</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO/Garnets" 
+                     data-fullname="Polyethylene Oxides/Garnets"
+                     onclick="showMaterial('PEO/Garnets')">
+                    <div class="material-abbrev">PEO/Garnets</div>
+                    <div class="material-fullname">Polyethylene Oxides/Garnets</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PEO/Garnets-IL" 
+                     data-fullname=""
+                     onclick="showMaterial('PEO/Garnets-IL')">
+                    <div class="material-abbrev">PEO/Garnets-IL</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PMMA/LiClO$_4$" 
+                     data-fullname=""
+                     onclick="showMaterial('PMMA/LiClO$_4$')">
+                    <div class="material-abbrev">PMMA/LiClO$_4$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="PMMA/LiClO$_4$ Polymer Nanocomposite Electrolyte" 
+                     data-fullname=""
+                     onclick="showMaterial('PMMA/LiClO$_4$ Polymer Nanocomposite Electrolyte')">
+                    <div class="material-abbrev">PMMA/LiClO$_4$ Polymer Nanocomposite Electrolyte</div>
+                    
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>SALT</span><span>5</span></div>
+                <div class="material-item" 
+                     data-abbrev="LiCl" 
+                     data-fullname="Lithium chloride"
+                     onclick="showMaterial('LiCl')">
+                    <div class="material-abbrev">LiCl</div>
+                    <div class="material-fullname">Lithium chloride</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LiClO$_4$" 
+                     data-fullname=""
+                     onclick="showMaterial('LiClO$_4$')">
+                    <div class="material-abbrev">LiClO$_4$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LiClO4" 
+                     data-fullname="lithium perchlorate"
+                     onclick="showMaterial('LiClO4')">
+                    <div class="material-abbrev">LiClO4</div>
+                    <div class="material-fullname">lithium perchlorate</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LiOH" 
+                     data-fullname="Lithium hydroxide"
+                     onclick="showMaterial('LiOH')">
+                    <div class="material-abbrev">LiOH</div>
+                    <div class="material-fullname">Lithium hydroxide</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LiTFSI" 
+                     data-fullname="Lithium bis(trifluoromethanesulfonyl)imide"
+                     onclick="showMaterial('LiTFSI')">
+                    <div class="material-abbrev">LiTFSI</div>
+                    <div class="material-fullname">Lithium bis(trifluoromethanesulfonyl)imide</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>FILLER</span><span>5</span></div>
+                <div class="material-item" 
+                     data-abbrev="Al$_2$O$_3$" 
+                     data-fullname=""
+                     onclick="showMaterial('Al$_2$O$_3$')">
+                    <div class="material-abbrev">Al$_2$O$_3$</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Al2O3" 
+                     data-fullname="Alumina"
+                     onclick="showMaterial('Al2O3')">
+                    <div class="material-abbrev">Al2O3</div>
+                    <div class="material-fullname">Alumina</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Clay" 
+                     data-fullname=""
+                     onclick="showMaterial('Clay')">
+                    <div class="material-abbrev">Clay</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="SiO2" 
+                     data-fullname="Silicon dioxide"
+                     onclick="showMaterial('SiO2')">
+                    <div class="material-abbrev">SiO2</div>
+                    <div class="material-fullname">Silicon dioxide</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="TiO2" 
+                     data-fullname="Titanium dioxide"
+                     onclick="showMaterial('TiO2')">
+                    <div class="material-abbrev">TiO2</div>
+                    <div class="material-fullname">Titanium dioxide</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>SOLVENT</span><span>2</span></div>
+                <div class="material-item" 
+                     data-abbrev="acetonitrile" 
+                     data-fullname=""
+                     onclick="showMaterial('acetonitrile')">
+                    <div class="material-abbrev">acetonitrile</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="TEGDME" 
+                     data-fullname="Tetraethylene glycol dimethyl ether"
+                     onclick="showMaterial('TEGDME')">
+                    <div class="material-abbrev">TEGDME</div>
+                    <div class="material-fullname">Tetraethylene glycol dimethyl ether</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>OTHER</span><span>15</span></div>
+                <div class="material-item" 
+                     data-abbrev="$^6$Li" 
+                     data-fullname="$^6$Li metal"
+                     onclick="showMaterial('$^6$Li')">
+                    <div class="material-abbrev">$^6$Li</div>
+                    <div class="material-fullname">$^6$Li metal</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="$^7$Li" 
+                     data-fullname="$^7$Li metal"
+                     onclick="showMaterial('$^7$Li')">
+                    <div class="material-abbrev">$^7$Li</div>
+                    <div class="material-fullname">$^7$Li metal</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Al" 
+                     data-fullname=""
+                     onclick="showMaterial('Al')">
+                    <div class="material-abbrev">Al</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Al(NO3)3·9H2O" 
+                     data-fullname="Aluminum nitrate nonahydrate"
+                     onclick="showMaterial('Al(NO3)3·9H2O')">
+                    <div class="material-abbrev">Al(NO3)3·9H2O</div>
+                    <div class="material-fullname">Aluminum nitrate nonahydrate</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="citric acid" 
+                     data-fullname="Citric acid"
+                     onclick="showMaterial('citric acid')">
+                    <div class="material-abbrev">citric acid</div>
+                    <div class="material-fullname">Citric acid</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Ge" 
+                     data-fullname=""
+                     onclick="showMaterial('Ge')">
+                    <div class="material-abbrev">Ge</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="IL" 
+                     data-fullname="Ionic Liquid"
+                     onclick="showMaterial('IL')">
+                    <div class="material-abbrev">IL</div>
+                    <div class="material-fullname">Ionic Liquid</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="La(NO3)3·6H2O" 
+                     data-fullname="Lanthanum nitrate hexahydrate"
+                     onclick="showMaterial('La(NO3)3·6H2O')">
+                    <div class="material-abbrev">La(NO3)3·6H2O</div>
+                    <div class="material-fullname">Lanthanum nitrate hexahydrate</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li" 
+                     data-fullname="Lithium metal"
+                     onclick="showMaterial('Li')">
+                    <div class="material-abbrev">Li</div>
+                    <div class="material-fullname">Lithium metal</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li
+2
+CO
+3" 
+                     data-fullname="lithium carbonate"
+                     onclick="showMaterial('Li
+2
+CO
+3')">
+                    <div class="material-abbrev">Li
+2
+CO
+3</div>
+                    <div class="material-fullname">lithium carbonate</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Li2CO3" 
+                     data-fullname="Lithium carbonate"
+                     onclick="showMaterial('Li2CO3')">
+                    <div class="material-abbrev">Li2CO3</div>
+                    <div class="material-fullname">Lithium carbonate</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="LIBs" 
+                     data-fullname="Li-ion batteries"
+                     onclick="showMaterial('LIBs')">
+                    <div class="material-abbrev">LIBs</div>
+                    <div class="material-fullname">Li-ion batteries</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="O" 
+                     data-fullname=""
+                     onclick="showMaterial('O')">
+                    <div class="material-abbrev">O</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="P" 
+                     data-fullname=""
+                     onclick="showMaterial('P')">
+                    <div class="material-abbrev">P</div>
+                    
+                </div>
+            
+                <div class="material-item" 
+                     data-abbrev="Zr(OC4H9)4" 
+                     data-fullname="Zirconium(IV) butoxide"
+                     onclick="showMaterial('Zr(OC4H9)4')">
+                    <div class="material-abbrev">Zr(OC4H9)4</div>
+                    <div class="material-fullname">Zirconium(IV) butoxide</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="empty-state">
+                👈 Select a material to view details
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const materials = [{"abbreviation": "$^6$Li", "full_name": "$^6$Li metal", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0082", "title": "Electrochemical Measurements", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "$^7$Li", "full_name": "$^7$Li metal", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0082", "title": "Electrochemical Measurements", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "acetonitrile", "full_name": "", "material_type": "solvent", "compositions": [], "processing_methods": ["solution casting"], "source_nodes": [{"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "Al", "full_name": "", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Al$_2$O$_3$", "full_name": "", "material_type": "filler", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Al(NO3)3·9H2O", "full_name": "Aluminum nitrate nonahydrate", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "Al2O3", "full_name": "Alumina", "material_type": "filler", "compositions": ["10 wt %"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0023", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0024", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "c-LLZO", "full_name": "ceramic LLZO", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "citric acid", "full_name": "Citric acid", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "Clay", "full_name": "", "material_type": "filler", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Composite", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "decomposed LLZO", "full_name": "Li2CO3", "material_type": "ceramic", "compositions": [], "processing_methods": ["ball-milling"], "source_nodes": [{"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "Double-Network", "full_name": "", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Garnets", "full_name": "", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Ge", "full_name": "", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "IL", "full_name": "Ionic Liquid", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "La(NO3)3·6H2O", "full_name": "Lanthanum nitrate hexahydrate", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "LAGP", "full_name": "Li1+xAlxGe2-x(PO4)3", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LAGP-PEO", "full_name": "Lithium aluminum germanium phosphate-poly(ethylene oxide)", "material_type": "composite", "compositions": ["80 wt % LAGP"], "processing_methods": [], "source_nodes": [{"node_id": "0023", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0024", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LATP", "full_name": "Li$_{10}$GeP$_2$S$_{12}$", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li", "full_name": "Lithium metal", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0082", "title": "Electrochemical Measurements", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li\n2\nCO\n3", "full_name": "lithium carbonate", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "Li$_7$La$_3$Zr$_2$O$_{12}$", "full_name": "Li$_7$La$_3$Zr$_2$O$_{12}$", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li$_{1+x}$Al$_x$Ge$_{2-x}$(PO$_4$)$_3$", "full_name": "", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li$_{10}$Ge$_{1}$P$_{2}$S$_{12}$", "full_name": "", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li$_{10}$GeP$_2$S$_{12}$", "full_name": "", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Li2CO3", "full_name": "Lithium carbonate", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LIBs", "full_name": "Li-ion batteries", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0003", "title": "Motivation: Safety Issues with Current Li-ion Batteries", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LiCl", "full_name": "Lithium chloride", "material_type": "salt", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0093", "title": "Solid-State NMR", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "LiClO$_4$", "full_name": "", "material_type": "salt", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LiClO4", "full_name": "lithium perchlorate", "material_type": "salt", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LiOH", "full_name": "Lithium hydroxide", "material_type": "salt", "compositions": ["excess 20 wt %"], "processing_methods": [], "source_nodes": [{"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "LiTFSI", "full_name": "Lithium bis(trifluoromethanesulfonyl)imide", "material_type": "salt", "compositions": ["50 wt %", "5 wt %", "20 wt %"], "processing_methods": ["solution casting", "ball-milling mixing"], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0133", "title": "Discussion of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0170", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0171", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0195", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0226", "title": "Li-ion Pathways in LLZO-PEO Composites", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0262", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0271", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0284", "title": "Factors Influencing Ionic Conductivity in Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0295", "title": "Electrochemical Stability of Composite Electrolytes with Li Metal Anodes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LLTO", "full_name": "Li3xLa2/3-xTiO3", "material_type": "ceramic", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LLTO-PAN", "full_name": "Lithium lanthanum titanate-polyacrylonitrile", "material_type": "composite", "compositions": ["15 wt % LLTO"], "processing_methods": [], "source_nodes": [{"node_id": "0023", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0024", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LLZO", "full_name": "Li\n7\nLa\n3\nZr\n2\nO\n12", "material_type": "ceramic", "compositions": ["<20 wt %", "20 wt %", "50 wt %", "high content", "<20 wt % LLZO", "Li\n 7\n La\n 3\n Zr\n 2\n O\n 12", "low content", "8.4:3.0:2.0:0.2 molar ratio of LiOH:La(NO3)3·6H2O:Zr(OC4H9)4:Al(NO3)3·9H2O, with 5.0 molar ratio of citric acid", "90:10 wt%", "large LLZO content", "7:3:2:12", "5 wt %"], "processing_methods": ["hot pressing", "ball-milling", "sol-gel method, stirred at 80 °C overnight, dried at 200 °C for 2 h, sintered at 290 °C for 2 h and 900 °C for 8 h", "ball-milling mixing", "ball milling"], "source_nodes": [{"node_id": "0000", "title": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes", "node_type": "section", "section": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes"}, {"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0051", "title": "Contribution: Identifying Li-ion Transport Pathways Using Solid-State NMR", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0082", "title": "Electrochemical Measurements", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0133", "title": "Discussion of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0170", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0171", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0195", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0226", "title": "Li-ion Pathways in LLZO-PEO Composites", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0262", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0263", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0271", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0284", "title": "Factors Influencing Ionic Conductivity in Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0295", "title": "Electrochemical Stability of Composite Electrolytes with Li Metal Anodes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0309", "title": "Interpretation of Ion Conduction in Composite Electrolytes", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0319", "title": "Methodology and Significance of Solid-State NMR", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LLZO (20 wt %)-PEO", "full_name": "", "material_type": "composite", "compositions": ["20 wt % LLZO-PEO", "20 wt % LLZO"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LLZO (20 wt %)-PEO (LiTFSI)", "full_name": "LLZO-PEO-LiTFSI composite", "material_type": "composite", "compositions": ["20 wt % LLZO in PEO with LiTFSI", "LLZO (20 wt %)-PEO (LiTFSI)", "20 wt % LLZO, PEO, LiTFSI", "20 wt % LLZO, LiTFSI in PEO", "20 wt % LLZO-PEO (LiTFSI)", "20 wt % LLZO, LiTFSI", "20 wt % LLZO"], "processing_methods": ["ball-milling mixing"], "source_nodes": [{"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0284", "title": "Factors Influencing Ionic Conductivity in Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (20 wt %)–PEO (LiTFSI)", "full_name": "", "material_type": "composite", "compositions": ["20 wt % LLZO"], "processing_methods": [], "source_nodes": [{"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (5 wt %)-PEO", "full_name": "", "material_type": "composite", "compositions": ["5 wt % LLZO", "5 wt % LLZO-PEO"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LLZO (5 wt %)-PEO (LiTFSI)", "full_name": "", "material_type": "composite", "compositions": ["5 wt % LLZO-PEO (LiTFSI)", "5 wt % LLZO in PEO with LiTFSI", "LLZO (5 wt %)-PEO (LiTFSI)", "5 wt % LLZO", "5 wt % LLZO, PEO, LiTFSI"], "processing_methods": [], "source_nodes": [{"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (5 wt %)–PEO (LiTFSI)", "full_name": "LLZO-PEO-LiTFSI composite", "material_type": "composite", "compositions": ["5 wt % LLZO"], "processing_methods": ["solution casting", "ball-milling mixing"], "source_nodes": [{"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (5 wt %)—PEO (LiTFSI)", "full_name": "", "material_type": "composite", "compositions": ["5 wt % LLZO—PEO (LiTFSI)"], "processing_methods": [], "source_nodes": [{"node_id": "0295", "title": "Electrochemical Stability of Composite Electrolytes with Li Metal Anodes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (50 wt %)-PEO", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO", "50 wt % LLZO-PEO"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LLZO (50 wt %)-PEO (50 wt %)-TEGDME", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO, 50 wt % TEGDME", "50 wt % LLZO-PEO (50 wt %)-TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "LLZO (50 wt %)-PEO (LiTFSI)", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO", "50 wt % LLZO, PEO, LiTFSI", "LLZO (50 wt %)-PEO (LiTFSI)", "50 wt % LLZO-PEO (LiTFSI)", "50 wt % LLZO in PEO with LiTFSI"], "processing_methods": [], "source_nodes": [{"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO in PEO with LiTFSI and 50 wt % TEGDME", "50 wt % LLZO-PEO (LiTFSI) (50 wt %)-TEGDME", "50 wt % LLZO, 50 wt % PEO, LiTFSI, TEGDME", "LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME", "50 wt % LLZO, 50 wt % TEGDME", "50 wt % LLZO, PEO, LiTFSI, 50 wt % TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (50 wt %)–PEO (LiTFSI)", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO"], "processing_methods": [], "source_nodes": [{"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (50 wt %)—PEO (LiTFSI)", "full_name": "LLZO-PEO-LiTFSI composite", "material_type": "composite", "compositions": ["50 wt % LLZO", "50 wt % LLZO—PEO (LiTFSI)"], "processing_methods": ["ball-milling mixing"], "source_nodes": [{"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0295", "title": "Electrochemical Stability of Composite Electrolytes with Li Metal Anodes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME", "full_name": "", "material_type": "composite", "compositions": ["LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME", "50 wt % LLZO, 50 wt % TEGDME", "50 wt % LLZO—50 wt % PEO (LiTFSI)—TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO-PEO", "full_name": "LLZO-PEO composite", "material_type": "composite", "compositions": ["various fractions of LLZO and PEO", "LLZO-PEO", "LLZO-PEO (LiTFSI)", "50 wt % LLZO, 50 wt % PEO", "5 wt % LLZO, 95 wt % PEO", "5 to 20 and 50 wt % LLZO", "90:10 wt%", "20 wt % LLZO, 80 wt % PEO", "LLZO content", "various fractions of LLZO"], "processing_methods": ["solution casting, ball-milling", "ball-milling", "solution casting, ball milling", "solution casting"], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0133", "title": "Discussion of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0262", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0263", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0309", "title": "Interpretation of Ion Conduction in Composite Electrolytes", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0319", "title": "Methodology and Significance of Solid-State NMR", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LLZO-PEO (LiClO4)", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO"], "processing_methods": [], "source_nodes": [{"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO-PEO (LiTFSI)", "full_name": "LLZO-PEO (LiTFSI)", "material_type": "composite", "compositions": ["50 wt % LLZO", "LLZO (50 wt %)-PEO (LiTFSI)", "LLZO-PEO (LiTFSI)", "LLZO (20 wt %)-PEO (LiTFSI)", "<20 wt % LLZO", "critical point LLZO", "high content LLZO", "5 wt % LLZO", "increasing LLZO amount", "LLZO (5 wt %)-PEO (LiTFSI)", "different LLZO contents"], "processing_methods": ["ball-milling", "composite preparation"], "source_nodes": [{"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0226", "title": "Li-ion Pathways in LLZO-PEO Composites", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO-PEO (LiTFSI)-TEGDME", "full_name": "", "material_type": "composite", "compositions": ["LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO-PEO-TEGDME", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO, 50 wt % PEO, 50 wt % TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "LLZO-poly(ethylene oxide)", "full_name": "LLZO-poly(ethylene oxide)", "material_type": "composite", "compositions": ["LLZO-poly(ethylene oxide)"], "processing_methods": [], "source_nodes": [{"node_id": "0000", "title": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes", "node_type": "section", "section": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes"}]}, {"abbreviation": "LLZO–PEO", "full_name": "", "material_type": "composite", "compositions": ["LLZO (20 wt %)—PEO (LiTFSI)", "LLZO (50 wt %)—PEO (LiTFSI)", "LLZO (5 wt %)–PEO (LiTFSI)"], "processing_methods": [], "source_nodes": [{"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO–PEO (LiTFSI)", "full_name": "lithium lanthanum zirconium oxide–poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)", "material_type": "composite", "compositions": ["5 wt % LLZO"], "processing_methods": ["ball-milling mixing"], "source_nodes": [{"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO–PEO(LiTFSI)-TEGDME", "full_name": "", "material_type": "composite", "compositions": ["LLZO (50 wt %), PEO(LiTFSI) (50 wt %), TEGDME (20 wt %)"], "processing_methods": ["ball milling"], "source_nodes": [{"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "LLZO–PEO(LiTFSI)–TEGDME", "full_name": "", "material_type": "composite", "compositions": ["LLZO (50 wt %), PEO(LiTFSI) (50 wt %), TEGDME (20 wt %)"], "processing_methods": ["ball-milling"], "source_nodes": [{"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}, {"abbreviation": "LLZO–PEO–TEGDME", "full_name": "", "material_type": "composite", "compositions": ["LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME"], "processing_methods": [], "source_nodes": [{"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO—PEO (LiClO4)", "full_name": "", "material_type": "composite", "compositions": ["50 wt % LLZO—50 wt % PEO (LiClO4)"], "processing_methods": [], "source_nodes": [{"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "LLZO—PEO (LiTFSI)", "full_name": "lithium lanthanum zirconium oxide—poly(ethylene oxide) (lithium bis(trifluoromethanesulfonyl)imide)", "material_type": "composite", "compositions": ["50 wt % LLZO", "LLZO (20 wt %)—PEO (LiTFSI)", "20 wt % LLZO—80 wt % PEO (LiTFSI)", "50 wt % LLZO—50 wt % PEO (LiTFSI)", "LLZO (5 wt %)—PEO (LiTFSI)", "5 wt % LLZO—95 wt % PEO (LiTFSI)", "LLZO (50 wt %)—PEO (LiTFSI)"], "processing_methods": ["ball-milling mixing"], "source_nodes": [{"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "O", "full_name": "", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "P", "full_name": "", "material_type": "other", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PAN", "full_name": "polyacrylonitrile", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEG", "full_name": "PEG", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEG-LiClO$_4$-Al$_2$O$_3$", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEG-LiClO$_4$-Al$_2$O$_3$ Composite Polyether Electrolytes", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEO", "full_name": "poly(ethylene oxide)", "material_type": "polymer", "compositions": ["Mw: 400 000", "20 wt %", "50 wt %", "90:10 wt%", "5 wt %"], "processing_methods": ["solution casting", "ball-milling mixing"], "source_nodes": [{"node_id": "0000", "title": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes", "node_type": "section", "section": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes"}, {"node_id": "0003", "title": "Motivation: Safety Issues with Current Li-ion Batteries", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0051", "title": "Contribution: Identifying Li-ion Transport Pathways Using Solid-State NMR", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0082", "title": "Electrochemical Measurements", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0133", "title": "Discussion of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0169", "title": "Investigation of Li-ion Transport Pathways via Isotope Replacement", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0170", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0171", "title": "Symmetric Cell Fabrication and Electrochemical Cycling", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0181", "title": "NMR Analysis of Li-ion Transport Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0182", "title": "NMR Analysis of Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0195", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0203", "title": "Comparison of Li-ion Transport Pathways with Different Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0226", "title": "Li-ion Pathways in LLZO-PEO Composites", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0262", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0263", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0271", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0283", "title": "Correlation of NMR Findings with Ionic Conductivity and Stability", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0284", "title": "Factors Influencing Ionic Conductivity in Composite Electrolytes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0295", "title": "Electrochemical Stability of Composite Electrolytes with Li Metal Anodes", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0309", "title": "Interpretation of Ion Conduction in Composite Electrolytes", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0319", "title": "Methodology and Significance of Solid-State NMR", "node_type": "semantic_unit", "section": "CONCLUSIONS"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEO-Based Electrolyte", "full_name": "", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEO-Based Electrolytes", "full_name": "", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEO-TEGDME", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}]}, {"abbreviation": "PEO/Garnets", "full_name": "Polyethylene Oxides/Garnets", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PEO/Garnets-IL", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PMMA", "full_name": "poly-(methyl methacrylate)", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0010", "title": "Background: Inorganic and Polymer Solid Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PMMA/LiClO$_4$", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PMMA/LiClO$_4$ Polymer Nanocomposite Electrolyte", "full_name": "", "material_type": "composite", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0363", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Polyether Electrolytes", "full_name": "", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Polymer Electrolyte", "full_name": "", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0361", "title": "References on Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0362", "title": "Background: Advances in Lithium Battery Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "Polyurethane", "full_name": "Polyurethane", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "PU", "full_name": "Polyurethane Polymers", "material_type": "polymer", "compositions": [], "processing_methods": [], "source_nodes": [{"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "SiO2", "full_name": "Silicon dioxide", "material_type": "filler", "compositions": ["10 wt %"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0023", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0024", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "TEGDME", "full_name": "Tetraethylene glycol dimethyl ether", "material_type": "solvent", "compositions": ["50 wt %"], "processing_methods": ["ball-milling", "solution casting, ball milling"], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0035", "title": "Publication Details", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0043", "title": "Journal and Figure Description", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0070", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0071", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0072", "title": "Preparation of Composite Films", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}, {"node_id": "0113", "title": "NMR Characterization of Li-ion Environments and Mobility", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0114", "title": "Materials and Sample Preparation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0115", "title": "Materials and Sample Compositions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0124", "title": "Experimental Data Presentation", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0137", "title": "Characterization Techniques and Data Analysis", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0138", "title": "Composite Electrolyte Preparation and Characterization Overview", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0149", "title": "Analysis of LiTFSI Resonance Broadening", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0159", "title": "Li-ion Mobility Analysis via T1 Relaxation Times", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0194", "title": "Comparison with Previous Studies and Influence of Li Salts", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0195", "title": "Additional Content (1)", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0214", "title": "Effect of TEGDME Plasticizer on Li-ion Pathways", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0225", "title": "Summary of Li-ion Transport Pathways and Charge Carrier Contributions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0226", "title": "Li-ion Pathways in LLZO-PEO Composites", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0227", "title": "Composite Electrolyte Behavior", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0236", "title": "Sources of Active Li Ions", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0249", "title": "Analysis of Factors Affecting Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0250", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0251", "title": "Analysis of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0262", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements of Ionic Conductivity", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0263", "title": "Electrochemical Impedance Spectroscopy (EIS) Measurements", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0272", "title": "Conductivity Results and Discussion", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0273", "title": "Ionic Conductivity of LLZO-PEO Composites with and without TEGDME", "node_type": "semantic_unit", "section": "RESULTS AND DISCUSSION"}, {"node_id": "0374", "title": "Additional Content (2)", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0375", "title": "References on Doping, Morphology, and Ion Transport in Electrolytes", "node_type": "semantic_unit", "section": "REFERENCES"}, {"node_id": "0376", "title": "Background: Literature Review on Composite Electrolytes and Separators", "node_type": "semantic_unit", "section": "REFERENCES"}]}, {"abbreviation": "TiO2", "full_name": "Titanium dioxide", "material_type": "filler", "compositions": ["10 wt %"], "processing_methods": [], "source_nodes": [{"node_id": "0022", "title": "Research Gap: Limitations of Composite Electrolytes and Need for Mechanistic Understanding", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0023", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}, {"node_id": "0024", "title": "Background on Composite Electrolytes", "node_type": "semantic_unit", "section": "INTRODUCTION"}]}, {"abbreviation": "Zr(OC4H9)4", "full_name": "Zirconium(IV) butoxide", "material_type": "other", "compositions": ["80 wt % in 1-butanal"], "processing_methods": [], "source_nodes": [{"node_id": "0060", "title": "Synthesis of Cubic-Li7La3Zr2O12 (LLZO)", "node_type": "semantic_unit", "section": "EXPERIMENTAL SECTION"}]}];
+        
+        function showMaterial(abbrev) {
+            const mat = materials.find(m => m.abbreviation === abbrev);
+            if (!mat) return;
+            
+            // Update active state
+            document.querySelectorAll('.material-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(`[data-abbrev="${escapeAttr(abbrev)}"]`)?.classList.add('active');
+            
+            // Generate detail view
+            const content = document.getElementById('content');
+            content.innerHTML = generateDetails(mat);
+        }
+        
+        function generateDetails(mat) {
+            const hasFullName = mat.full_name && mat.full_name.trim();
+            const hasCompositions = mat.compositions && mat.compositions.length > 0;
+            const hasProcessing = mat.processing_methods && mat.processing_methods.length > 0;
+            const hasSources = mat.source_nodes && mat.source_nodes.length > 0;
+            
+            let html = `
+                <div class="detail-section">
+                    <h2>${escapeHtml(mat.abbreviation)}</h2>
+                    ${hasFullName ? `<div class="full-name">${escapeHtml(mat.full_name)}</div>` : ''}
+                    
+                    <div style="margin: 1rem 0;">
+                        ${mat.material_type ? `<span class="badge badge-type">${escapeHtml(mat.material_type)}</span>` : ''}
+                    </div>
+            `;
+            
+            if (hasCompositions) {
+                html += `
+                    <h3>Compositions</h3>
+                    <ul class="composition-list">
+                        ${mat.compositions.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+                    </ul>
+                `;
+            }
+            
+            if (hasProcessing) {
+                html += `
+                    <h3>Processing Methods</h3>
+                    <ul class="processing-list">
+                        ${mat.processing_methods.map(p => `<li>${escapeHtml(p)}</li>`).join('')}
+                    </ul>
+                `;
+            }
+            
+            if (hasSources) {
+                html += `
+                    <h3>Source Nodes (${mat.source_nodes.length})</h3>
+                    ${mat.source_nodes.map(src => `
+                        <div class="source-card">
+                            <div class="source-header">
+                                <span class="source-id">${escapeHtml(src.node_id || 'N/A')}</span>
+                                <span class="source-section">${escapeHtml(src.section || '')}</span>
+                            </div>
+                            <div class="source-title">${escapeHtml(src.title || 'Unknown')}</div>
+                        </div>
+                    `).join('')}
+                `;
+            }
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function escapeAttr(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        
+        // Search functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.material-item').forEach(el => {
+                const abbrev = (el.dataset.abbrev || '').toLowerCase();
+                const fullname = (el.dataset.fullname || '').toLowerCase();
+                const visible = abbrev.includes(query) || fullname.includes(query);
+                el.style.display = visible ? '' : 'none';
+            });
+            
+            // Show/hide type groups based on visible children
+            document.querySelectorAll('.type-group').forEach(group => {
+                const items = group.querySelectorAll('.material-item');
+                let hasVisible = false;
+                items.forEach(item => {
+                    if (item.style.display !== 'none') hasVisible = true;
+                });
+                group.style.display = hasVisible ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -70,6 +70,19 @@ def generate_html(structure_data, output_path):
             padding: 1rem;
         }}
         
+        .keyword-panel {{
+            width: 300px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 1rem;
+            display: none;
+        }}
+        
+        .keyword-panel.visible {{
+            display: block;
+        }}
+        
         .content {{
             flex: 1;
             overflow-y: auto;
@@ -143,6 +156,124 @@ def generate_html(structure_data, output_path):
         .node-title.keyword.active {{
             background: #689f38;
             color: white;
+        }}
+        
+        .node-title.keyword.highlighted {{
+            background: #fff59d;
+            border-left: 3px solid #f57f17;
+            animation: pulse 1s ease-in-out;
+        }}
+        
+        @keyframes pulse {{
+            0%, 100% {{ transform: scale(1); }}
+            50% {{ transform: scale(1.02); }}
+        }}
+        
+        .keyword-item {{
+            padding: 0.6rem;
+            margin: 0.3rem 0;
+            cursor: pointer;
+            border-radius: 4px;
+            border-left: 3px solid #8bc34a;
+            background: #f1f8e9;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }}
+        
+        .keyword-item:hover {{
+            background: #dcedc8;
+            transform: translateX(2px);
+        }}
+        
+        .keyword-item.active {{
+            background: #689f38;
+            color: white;
+            border-left-color: #33691e;
+        }}
+        
+        .keyword-term {{
+            flex: 1;
+            font-weight: 500;
+        }}
+        
+        .keyword-count {{
+            background: rgba(0,0,0,0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }}
+        
+        .keyword-item.active .keyword-count {{
+            background: rgba(255,255,255,0.3);
+        }}
+        
+        .keyword-search {{
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }}
+        
+        .keyword-search:focus {{
+            outline: none;
+            border-color: #8bc34a;
+        }}
+        
+        .toggle-keywords {{
+            position: fixed;
+            right: 1rem;
+            top: 1rem;
+            background: #8bc34a;
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.2s;
+        }}
+        
+        .toggle-keywords:hover {{
+            background: #689f38;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }}
+        
+        .keyword-occurrences {{
+            margin-top: 1rem;
+        }}
+        
+        .occurrence-item {{
+            background: #f9f9f9;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+            border-left: 3px solid #8bc34a;
+            cursor: pointer;
+            transition: all 0.2s;
+        }}
+        
+        .occurrence-item:hover {{
+            background: #f1f8e9;
+            transform: translateX(2px);
+        }}
+        
+        .occurrence-location {{
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }}
+        
+        .occurrence-context {{
+            font-size: 0.9rem;
+            line-height: 1.5;
         }}
         
         .detail-section {{
@@ -269,10 +400,20 @@ def generate_html(structure_data, output_path):
         <div class="subtitle">Structure Visualization</div>
     </div>
     
+    <button class="toggle-keywords" onclick="toggleKeywordPanel()">
+        🔑 Keywords (<span id="keyword-count">0</span>)
+    </button>
+    
     <div class="container">
         <div class="sidebar" id="sidebar">
             <h3 style="margin-bottom: 1rem; color: #667eea;">Document Structure</h3>
             {generate_tree_html(structure)}
+        </div>
+        
+        <div class="keyword-panel" id="keyword-panel">
+            <h3 style="margin-bottom: 1rem; color: #8bc34a;">Keywords Index</h3>
+            <input type="text" class="keyword-search" id="keyword-search" placeholder="Search keywords...">
+            <div id="keyword-list"></div>
         </div>
         
         <div class="content" id="content">
@@ -284,10 +425,143 @@ def generate_html(structure_data, output_path):
     
     <script>
         const nodeData = {json.dumps(structure, ensure_ascii=False)};
+        let keywordIndex = {{}};
+        let currentKeyword = null;
+        
+        // Build keyword index on load
+        function buildKeywordIndex() {{
+            keywordIndex = {{}};
+            
+            function traverse(nodes, path = []) {{
+                nodes.forEach((node, idx) => {{
+                    const currentPath = [...path, idx];
+                    
+                    if (node.node_type === 'keyword') {{
+                        const term = node.metadata?.term || node.title;
+                        if (!keywordIndex[term]) {{
+                            keywordIndex[term] = [];
+                        }}
+                        keywordIndex[term].push({{
+                            node: node,
+                            path: currentPath,
+                            parent: node.metadata?.parent_title || 'Unknown'
+                        }});
+                    }}
+                    
+                    if (node.nodes && node.nodes.length > 0) {{
+                        traverse(node.nodes, currentPath);
+                    }}
+                }});
+            }}
+            
+            traverse(nodeData);
+            
+            // Update count
+            const uniqueKeywords = Object.keys(keywordIndex).length;
+            document.getElementById('keyword-count').textContent = uniqueKeywords;
+            
+            // Render keyword list
+            renderKeywordList();
+        }}
+        
+        function renderKeywordList(filter = '') {{
+            const keywordList = document.getElementById('keyword-list');
+            const keywords = Object.keys(keywordIndex).sort();
+            
+            const filtered = filter ? 
+                keywords.filter(k => k.toLowerCase().includes(filter.toLowerCase())) : 
+                keywords;
+            
+            keywordList.innerHTML = filtered.map(term => {{
+                const occurrences = keywordIndex[term];
+                return `
+                    <div class="keyword-item" onclick="showKeywordOccurrences('${{term.replace(/'/g, "\\\\'")}}')" data-keyword="${{escapeHtml(term)}}">
+                        <span class="keyword-term">${{escapeHtml(term)}}</span>
+                        <span class="keyword-count">${{occurrences.length}}</span>
+                    </div>
+                `;
+            }}).join('');
+        }}
+        
+        function toggleKeywordPanel() {{
+            const panel = document.getElementById('keyword-panel');
+            panel.classList.toggle('visible');
+        }}
+        
+        function showKeywordOccurrences(term) {{
+            currentKeyword = term;
+            const occurrences = keywordIndex[term];
+            
+            // Update active state in keyword list
+            document.querySelectorAll('.keyword-item').forEach(el => {{
+                el.classList.remove('active');
+            }});
+            document.querySelector(`[data-keyword="${{escapeHtml(term)}}"]`)?.classList.add('active');
+            
+            // Highlight all occurrences in tree
+            document.querySelectorAll('.node-title.keyword').forEach(el => {{
+                el.classList.remove('highlighted');
+            }});
+            
+            occurrences.forEach(occ => {{
+                const nodeId = occ.node.node_id;
+                const el = document.querySelector(`[data-node-id="${{nodeId}}"]`);
+                if (el) {{
+                    el.classList.add('highlighted');
+                }}
+            }});
+            
+            // Show occurrences in content panel
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="detail-section">
+                    <h2>🔑 Keyword: ${{escapeHtml(term)}}</h2>
+                    
+                    <div class="metadata">
+                        <div class="metadata-item">
+                            <span class="metadata-label">Occurrences:</span> ${{occurrences.length}}
+                        </div>
+                    </div>
+                    
+                    <div class="keyword-occurrences">
+                        <h3>All Occurrences</h3>
+                        ${{occurrences.map((occ, idx) => `
+                            <div class="occurrence-item" onclick="showNodeDetails('${{occ.node.node_id}}')">
+                                <div class="occurrence-location">
+                                    <strong>Occurrence ${{idx + 1}}</strong> • 
+                                    Pages ${{occ.node.start_index}}-${{occ.node.end_index}} • 
+                                    In: ${{escapeHtml(occ.parent)}}
+                                </div>
+                                <div class="occurrence-context">
+                                    ${{escapeHtml(occ.node.summary || occ.node.metadata?.context || 'No context available')}}
+                                </div>
+                            </div>
+                        `).join('')}}
+                    </div>
+                </div>
+            `;
+            
+            // Scroll first occurrence into view
+            if (occurrences.length > 0) {{
+                const firstNodeId = occurrences[0].node.node_id;
+                const firstEl = document.querySelector(`[data-node-id="${{firstNodeId}}"]`);
+                if (firstEl) {{
+                    firstEl.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                }}
+            }}
+        }}
         
         function showNodeDetails(nodeId) {{
             const node = findNode(nodeData, nodeId);
             if (!node) return;
+            
+            // Clear keyword highlights if switching to non-keyword node
+            if (node.node_type !== 'keyword' || !currentKeyword) {{
+                document.querySelectorAll('.node-title.keyword').forEach(el => {{
+                    el.classList.remove('highlighted');
+                }});
+                currentKeyword = null;
+            }}
             
             // Update active state
             document.querySelectorAll('.node-title').forEach(el => {{
@@ -343,6 +617,10 @@ def generate_html(structure_data, output_path):
             
             // Special handling for keyword nodes
             if (node.node_type === 'keyword' && node.metadata) {{
+                const term = node.metadata.term || node.title;
+                const allOccurrences = keywordIndex[term] || [];
+                const otherOccurrences = allOccurrences.filter(occ => occ.node.node_id !== node.node_id);
+                
                 html += `
                     <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #4caf50; margin-bottom: 1rem;">
                         <h3 style="color: #2e7d32; margin-bottom: 0.5rem;">🔑 Keyword Details</h3>
@@ -367,8 +645,45 @@ def generate_html(structure_data, output_path):
                             ${{node.metadata.parent_node_type ? ` <span style="font-size: 0.85em; color: #666;">(${{node.metadata.parent_node_type}})</span>` : ''}}
                         </div>
                         ` : ''}}
+                        ${{allOccurrences.length > 1 ? `
+                        <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #c8e6c9;">
+                            <strong>Total Occurrences:</strong> ${{allOccurrences.length}}
+                            <button onclick="showKeywordOccurrences('${{term.replace(/'/g, "\\\\'")}}')" 
+                                    style="margin-left: 0.5rem; padding: 0.3rem 0.6rem; background: #8bc34a; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                                View All
+                            </button>
+                        </div>
+                        ` : ''}}
                     </div>
                 `;
+                
+                // Show other occurrences
+                if (otherOccurrences.length > 0) {{
+                    html += `
+                        <div style="background: #fff9e6; padding: 1rem; border-radius: 6px; border-left: 4px solid #ffc107; margin-bottom: 1rem;">
+                            <h3 style="margin-bottom: 0.5rem;">🔗 Other Occurrences (${{otherOccurrences.length}})</h3>
+                            ${{otherOccurrences.slice(0, 3).map(occ => `
+                                <div style="margin: 0.5rem 0; padding: 0.5rem; background: white; border-radius: 4px; cursor: pointer;" 
+                                     onclick="showNodeDetails('${{occ.node.node_id}}')">
+                                    <div style="font-size: 0.85rem; color: #666;">
+                                        Pages ${{occ.node.start_index}}-${{occ.node.end_index}} • ${{escapeHtml(occ.parent)}}
+                                    </div>
+                                    <div style="font-size: 0.9rem; margin-top: 0.25rem;">
+                                        ${{escapeHtml((occ.node.summary || occ.node.metadata?.context || '').substring(0, 100))}}...
+                                    </div>
+                                </div>
+                            `).join('')}}
+                            ${{otherOccurrences.length > 3 ? `
+                                <div style="margin-top: 0.5rem; text-align: center;">
+                                    <button onclick="showKeywordOccurrences('${{term.replace(/'/g, "\\\\'")}}')" 
+                                            style="padding: 0.4rem 0.8rem; background: #ffc107; color: #333; border: none; border-radius: 3px; cursor: pointer; font-weight: 500;">
+                                        View All ${{otherOccurrences.length}} Occurrences
+                                    </button>
+                                </div>
+                            ` : ''}}
+                        </div>
+                    `;
+                }}
             }}
             
             // Check for duplicate text issue
@@ -423,6 +738,16 @@ def generate_html(structure_data, output_path):
             div.textContent = text;
             return div.innerHTML;
         }}
+        
+        // Initialize keyword index on load
+        document.addEventListener('DOMContentLoaded', () => {{
+            buildKeywordIndex();
+            
+            // Setup keyword search
+            document.getElementById('keyword-search').addEventListener('input', (e) => {{
+                renderKeywordList(e.target.value);
+            }});
+        }});
     </script>
 </body>
 </html>

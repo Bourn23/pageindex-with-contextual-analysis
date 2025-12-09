@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
 Command-line interface for PageIndex with all granularity levels.
+Supports both PDF and Markdown files.
 
 Usage:
-    python run_pageindex.py <pdf_path> [options]
+    python run_pageindex.py <file_path> [options]
 
 Examples:
-    # Basic usage with keywords
+    # PDF processing
     python run_pageindex.py paper.pdf --granularity keywords
+    
+    # Markdown processing (uses header structure)
+    python run_pageindex.py document.md --granularity keywords
     
     # With all features
     python run_pageindex.py paper.pdf --granularity keywords --figures --tables --summaries
@@ -20,15 +24,15 @@ Examples:
 """
 
 import argparse
+import asyncio
 import json
 from pathlib import Path
-from pageindex import page_index_main
 from pageindex.utils import ConfigLoader
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Process PDF documents with PageIndex',
+        description='Process PDF or Markdown documents with PageIndex',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Granularity Levels:
@@ -39,13 +43,14 @@ Granularity Levels:
 
 Examples:
   python run_pageindex.py paper.pdf --granularity keywords
+  python run_pageindex.py document.md --granularity fine
   python run_pageindex.py paper.pdf --granularity fine --no-figures --no-tables
   python run_pageindex.py paper.pdf --granularity medium --summaries
         """
     )
     
     # Required arguments
-    parser.add_argument('pdf_path', help='Path to PDF file')
+    parser.add_argument('file_path', help='Path to PDF or Markdown file')
     
     # Granularity options
     parser.add_argument(
@@ -79,39 +84,36 @@ Examples:
     args = parser.parse_args()
     
     # Validate input
-    pdf_path = Path(args.pdf_path)
-    if not pdf_path.exists():
-        print(f"Error: File not found: {pdf_path}")
+    file_path = Path(args.file_path)
+    if not file_path.exists():
+        print(f"Error: File not found: {file_path}")
+        return 1
+    
+    # Determine file type
+    suffix = file_path.suffix.lower()
+    if suffix == '.pdf':
+        file_type = 'pdf'
+    elif suffix in ['.md', '.markdown']:
+        file_type = 'markdown'
+    else:
+        print(f"Error: Unsupported file type: {suffix}")
+        print("Supported types: .pdf, .md, .markdown")
         return 1
     
     # Determine output path
     if args.output:
         output_path = Path(args.output)
     else:
-        output_path = Path('results') / f"{pdf_path.stem}_{args.granularity}_structure.json"
+        output_path = Path('results') / f"{file_path.stem}_{args.granularity}_structure.json"
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
-    # Configure PageIndex
-    config_loader = ConfigLoader()
-    opt = config_loader.load({
-        'model': args.model,
-        'granularity': args.granularity,
-        'enable_figure_detection': args.figures,
-        'enable_table_detection': args.tables,
-        'enable_semantic_subdivision': args.granularity in ['medium', 'fine', 'keywords'],
-        'semantic_min_pages': args.semantic_min_pages,
-        'if_add_node_id': 'yes',
-        'if_add_node_summary': 'yes' if args.summaries else 'no',
-        'if_add_doc_description': 'yes' if args.doc_description else 'no',
-        'if_add_node_text': 'yes',
-    })
-    
     # Print configuration
     print("=" * 70)
-    print(f"PageIndex Processing")
+    print("PageIndex Processing")
     print("=" * 70)
-    print(f"Input:       {pdf_path}")
+    print(f"Input:       {file_path}")
+    print(f"File type:   {file_type}")
     print(f"Output:      {output_path}")
     print(f"Granularity: {args.granularity}")
     print(f"Model:       {args.model}")
@@ -119,18 +121,21 @@ Examples:
     print("=" * 70)
     print()
     
-    # Process PDF
+    # Process based on file type
     try:
-        result = page_index_main(str(pdf_path), opt)
+        if file_type == 'pdf':
+            result = process_pdf(file_path, args)
+        else:
+            result = asyncio.run(process_markdown(file_path, args))
         
         # Extract structure
         if isinstance(result, dict):
             structure = result.get('structure', [])
-            doc_name = result.get('doc_name', pdf_path.stem)
+            doc_name = result.get('doc_name', file_path.stem)
             doc_description = result.get('doc_description')
         else:
             structure = result
-            doc_name = pdf_path.stem
+            doc_name = file_path.stem
             doc_description = None
         
         # Save to JSON
@@ -160,10 +165,57 @@ Examples:
         return 0
         
     except Exception as e:
-        print(f"Error processing PDF: {e}")
+        print(f"Error processing file: {e}")
         import traceback
         traceback.print_exc()
         return 1
+
+
+def process_pdf(file_path, args):
+    """Process a PDF file using the existing page_index_main."""
+    from pageindex import page_index_main
+    
+    opt = ConfigLoader().load({
+        'model': args.model,
+        'granularity': args.granularity,
+        'enable_figure_detection': args.figures,
+        'enable_table_detection': args.tables,
+        'enable_semantic_subdivision': args.granularity in ['medium', 'fine', 'keywords'],
+        'semantic_min_pages': args.semantic_min_pages,
+        'if_add_node_id': 'yes',
+        'if_add_node_summary': 'yes' if args.summaries else 'no',
+        'if_add_doc_description': 'yes' if args.doc_description else 'no',
+        'if_add_node_text': 'yes',
+    })
+    
+    return page_index_main(str(file_path), opt)
+
+
+async def process_markdown(file_path, args):
+    """
+    Process a Markdown file using the same pipeline as PDFs.
+    
+    This mirrors the PDF processing flow:
+    1. Parse markdown to extract structure from headers
+    2. Build tree structure (like TOC extraction for PDFs)
+    3. Apply granular features (semantic subdivision, keywords)
+    """
+    from pageindex.page_index_markdown import markdown_index_main
+    
+    opt = ConfigLoader().load({
+        'model': args.model,
+        'granularity': args.granularity,
+        'enable_figure_detection': False,  # Not applicable for markdown
+        'enable_table_detection': False,   # Not applicable for markdown
+        'enable_semantic_subdivision': args.granularity in ['medium', 'fine', 'keywords'],
+        'semantic_min_pages': 0,  # No page minimum for markdown
+        'if_add_node_id': 'yes',
+        'if_add_node_summary': 'yes' if args.summaries else 'no',
+        'if_add_doc_description': 'yes' if args.doc_description else 'no',
+        'if_add_node_text': 'yes',
+    })
+    
+    return await markdown_index_main(str(file_path), opt)
 
 
 def print_statistics(structure):
