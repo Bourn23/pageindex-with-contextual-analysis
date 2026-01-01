@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parsed_doc - Materials</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 2rem;
+        }
+        
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .header .subtitle { opacity: 0.9; font-size: 0.9rem; }
+        
+        .stats-bar {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+        
+        .stat-label { color: #666; font-size: 0.85rem; }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 180px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            background: white;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .search-box:focus { outline: none; border-color: #2e7d32; }
+        
+        .type-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .type-header {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            padding: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .material-item {
+            padding: 0.7rem;
+            margin: 0.3rem 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border-left: 3px solid #4caf50;
+            background: #f9f9f9;
+            transition: all 0.2s;
+        }
+        
+        .material-item:hover {
+            background: #e8f5e9;
+            transform: translateX(3px);
+        }
+        
+        .material-item.active {
+            background: #2e7d32;
+            color: white;
+            border-left-color: #1b5e20;
+        }
+        
+        .material-abbrev {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .material-fullname {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 0.2rem;
+        }
+        
+        .detail-section { margin-bottom: 2rem; }
+        
+        .detail-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #2e7d32;
+        }
+        
+        .detail-section h3 {
+            font-size: 0.9rem;
+            margin: 1rem 0 0.5rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .full-name {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-type {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-composition {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-processing {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .source-card {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #2e7d32;
+        }
+        
+        .source-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .source-id {
+            font-family: monospace;
+            font-size: 0.8rem;
+            background: #e0e0e0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+        
+        .source-section {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .source-title {
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            color: #999;
+            font-style: italic;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .processing-list {
+            list-style: none;
+        }
+        
+        .processing-list li {
+            padding: 0.5rem 0.7rem;
+            background: #f3e5f5;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #7b1fa2;
+        }
+        
+        .composition-list {
+            list-style: none;
+        }
+        
+        .composition-list li {
+            padding: 0.5rem 0.7rem;
+            background: #fff3e0;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #e65100;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⚡ Ionic Conductivity Data</h1>
+        <div class="subtitle">parsed_doc</div>
+    </div>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <span class="stat-value">13</span>
+            <span class="stat-label">Data Points</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">2</span>
+            <span class="stat-label">Material Classes</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Primary Study Materials</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">13</span>
+            <span class="stat-label">Source References</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" class="search-box" id="search" placeholder="Search materials...">
+            <div id="material-list">
+                <div class="type-group"><div class="type-header"><span>POLYMER</span><span>4</span></div>
+                <div class="material-item" 
+                     data-index="0"
+                     data-acronym="PEO" 
+                     data-fullname="Polyethylene oxide"
+                     onclick="showMaterial(0)">
+                    <div class="material-abbrev">PEO</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="1"
+                     data-acronym="PEO (LiTFSI)" 
+                     data-fullname="Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt"
+                     onclick="showMaterial(1)">
+                    <div class="material-abbrev">PEO (LiTFSI)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="2"
+                     data-acronym="PEO-LiClO4" 
+                     data-fullname="Poly(ethylene oxide)-Lithium perchlorate"
+                     onclick="showMaterial(2)">
+                    <div class="material-abbrev">PEO-LiClO4</div>
+                    <div class="material-fullname">10⁻⁷ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="3"
+                     data-acronym="PEO-LiTFSI" 
+                     data-fullname="Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide"
+                     onclick="showMaterial(3)">
+                    <div class="material-abbrev">PEO-LiTFSI</div>
+                    <div class="material-fullname">10⁻⁵ S/cm</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>COMPOSITE</span><span>9</span></div>
+                <div class="material-item" 
+                     data-index="4"
+                     data-acronym="LLZO (20 wt %)—PEO (LiTFSI)" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt"
+                     onclick="showMaterial(4)">
+                    <div class="material-abbrev">LLZO (20 wt %)—PEO (LiTFSI)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="5"
+                     data-acronym="LLZO (5 wt %)—PEO (LiTFSI)" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt"
+                     onclick="showMaterial(5)">
+                    <div class="material-abbrev">LLZO (5 wt %)—PEO (LiTFSI)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="6"
+                     data-acronym="LLZO (50 wt %)-PEO (LiClO4)" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide)-Lithium perchlorate"
+                     onclick="showMaterial(6)">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO (LiClO4)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="7"
+                     data-acronym="LLZO (50 wt %)-PEO (LiTFSI)" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide"
+                     onclick="showMaterial(7)">
+                    <div class="material-abbrev">LLZO (50 wt %)-PEO (LiTFSI)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="8"
+                     data-acronym="LLZO (50 wt %)—PEO (LiTFSI)" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt"
+                     onclick="showMaterial(8)">
+                    <div class="material-abbrev">LLZO (50 wt %)—PEO (LiTFSI)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="9"
+                     data-acronym="LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt and Triethylene glycol dimethyl ether"
+                     onclick="showMaterial(9)">
+                    <div class="material-abbrev">LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="10"
+                     data-acronym="LLZO-PEO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide"
+                     onclick="showMaterial(10)">
+                    <div class="material-abbrev">LLZO-PEO</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="11"
+                     data-acronym="LLZO-PEO (LiTFSI)" 
+                     data-fullname="Lithium Lanthanum Zirconate-Polyethylene Oxide (Lithium bis(trifluoromethane)sulfonimide) composite"
+                     onclick="showMaterial(11)">
+                    <div class="material-abbrev">LLZO-PEO (LiTFSI)</div>
+                    <div class="material-fullname">10⁻⁶ – 10⁻⁷ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="12"
+                     data-acronym="LLZO-PEO-TEGDME" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide - Polyethylene oxide - Triethylene glycol dimethyl ether"
+                     onclick="showMaterial(12)">
+                    <div class="material-abbrev">LLZO-PEO-TEGDME</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="empty-state">
+                👈 Select a material to view details
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const materials = [{"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt", "acronym": "LLZO (20 wt %)—PEO (LiTFSI)", "proportion": "20 wt % LLZO"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "About 1.5-fold conductivity enhancement is observed in LLZO (20 wt %)—PEO (LiTFSI); this is largely attributed to the increase in Li salt concentration from the decomposed LLZO (Figure 2 and Table 2).", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": "Table 2", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence", "Quote mentions figure but refers_to_figure not set"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt", "acronym": "LLZO (5 wt %)—PEO (LiTFSI)", "proportion": "5 wt % LLZO"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "Compared with PEO (LiTFSI), LLZO (5 wt %)—PEO (LiTFSI) showed a slight reduction in ionic conductivity.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide)-Lithium perchlorate", "acronym": "LLZO (50 wt %)-PEO (LiClO4)", "proportion": "N/A"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "It is worth noting that in our previous study on LLZO (50 wt %)-PEO (LiClO\n4\n) composite electrolyte, almost all Li ions transport through LLZO and few of them through LiClO\n4\n in PEO.30 The difference of Li-ion transport pathways in LLZO (50 wt %)-PEO (LiTFSI) and LLZO (50 wt %)-PEO (LiClO\n4\n) is precisely from the type of Li salts.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "b1068010", "title": "Li-ion Transport Pathway Investigation using Isotope Replacement", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide", "acronym": "LLZO (50 wt %)-PEO (LiTFSI)", "proportion": "N/A"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "It is worth noting that in our previous study on LLZO (50 wt %)-PEO (LiClO\n4\n) composite electrolyte, almost all Li ions transport through LLZO and few of them through LiClO\n4\n in PEO.30 The difference of Li-ion transport pathways in LLZO (50 wt %)-PEO (LiTFSI) and LLZO (50 wt %)-PEO (LiClO\n4\n) is precisely from the type of Li salts.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "b1068010", "title": "Li-ion Transport Pathway Investigation using Isotope Replacement", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt", "acronym": "LLZO (50 wt %)—PEO (LiTFSI)", "proportion": "50 wt % LLZO"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "LLZO (50 wt %)—PEO (LiTFSI) shows notably lower ionic conductivity compared to that of other composites.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt and Triethylene glycol dimethyl ether", "acronym": "LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME", "proportion": "50 wt % LLZO, 50 wt % TEGDME"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "A significant enhancement in ionic conductivity is observed for LLZO (50 wt %)—PEO (LiTFSI) (50 wt %)—TEGDME due to increased ion mobility and re-established ion conduction channels within TEGDME-modified PEO.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide", "acronym": "LLZO-PEO", "proportion": "5 wt % LLZO"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "The ionic conductivities of PEO and LLZO-PEO composite electrolytes with various fractions of LLZO and TEGDME are determined by EIS, with the results shown in Figure 4.", "specific_source_location": "main text", "refers_to_figure": "Figure 4", "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate-Polyethylene Oxide (Lithium bis(trifluoromethane)sulfonimide) composite", "acronym": "LLZO-PEO (LiTFSI)", "proportion": "50 wt % LLZO"}, "ionic_conductivity_S_per_cm": "10⁻⁶ – 10⁻⁷", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5).", "specific_source_location": "main text", "refers_to_figure": "Figure S5", "refers_to_table": null, "material_description": "Loosely connected LLZO particles", "processing_method": "N/A", "source_node": {"node_id": "d64e2ccf", "title": "Summary of Li-ion Transport Pathways and Factors Affecting Conductivity", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature"]}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide - Polyethylene oxide - Triethylene glycol dimethyl ether", "acronym": "LLZO-PEO-TEGDME", "proportion": "50 wt % LLZO, 50 wt % TEGDME"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "The ionic conductivities of PEO and LLZO-PEO composite electrolytes with various fractions of LLZO and TEGDME are determined by EIS, with the results shown in Figure 4.", "specific_source_location": "main text", "refers_to_figure": "Figure 4", "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polyethylene oxide", "acronym": "PEO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "The ionic conductivities of PEO and LLZO-PEO composite electrolytes with various fractions of LLZO and TEGDME are determined by EIS, with the results shown in Figure 4.", "specific_source_location": "main text", "refers_to_figure": "Figure 4", "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polyethylene oxide with Lithium bis(trifluoromethanesulfonyl)imide salt", "acronym": "PEO (LiTFSI)", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "primary", "exact_quote": "Compared with PEO (LiTFSI), LLZO (5 wt %)—PEO (LiTFSI) showed a slight reduction in ionic conductivity.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "023d92a0", "title": "Electrochemical Impedance Spectroscopy (EIS) Results", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value", "Could not parse temperature", "Primary data should not have low confidence"]}}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Poly(ethylene oxide)-Lithium perchlorate", "acronym": "PEO-LiClO4", "proportion": "N/A"}, "ionic_conductivity_S_per_cm": "10⁻⁷", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "For instance, the conductivity of PEO-LiClO\n4\n electrolytes is on the order of 10\n-7\n S/cm at room temperature, whereas that of PEO-LiTFSI electrolytes is 10\n-5\n S/cm.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "b1068010", "title": "Li-ion Transport Pathway Investigation using Isotope Replacement", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value"]}}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide", "acronym": "PEO-LiTFSI", "proportion": "N/A"}, "ionic_conductivity_S_per_cm": "10⁻⁵", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "For instance, the conductivity of PEO-LiClO\n4\n electrolytes is on the order of 10\n-7\n S/cm at room temperature, whereas that of PEO-LiTFSI electrolytes is 10\n-5\n S/cm.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "b1068010", "title": "Li-ion Transport Pathway Investigation using Isotope Replacement", "section": "RESULTS AND DISCUSSION"}, "_validation": {"is_valid": false, "issues": ["Could not parse conductivity value"]}}];
+        let currentIndex = 0;
+        
+        function showMaterial(index) {
+            const mat = materials[index];
+            if (!mat) return;
+            
+            currentIndex = index;
+            
+            // Update active state
+            document.querySelectorAll('.material-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(`[data-index="${index}"]`)?.classList.add('active');
+            
+            // Generate detail view
+            const content = document.getElementById('content');
+            content.innerHTML = generateDetails(mat, index);
+        }
+        
+        function generateDetails(mat, index) {
+            const electrolyte = mat.electrolyte_name || {};
+            const hasFullName = electrolyte.full_name && electrolyte.full_name.trim();
+            const hasAcronym = electrolyte.acronym && electrolyte.acronym.trim();
+            const hasProportion = electrolyte.proportion && electrolyte.proportion.trim();
+            const hasProcessing = mat.processing_method && mat.processing_method.trim() && !mat.processing_method.includes('N/A');
+            const hasDescription = mat.material_description && mat.material_description.trim() && !mat.material_description.includes('N/A');
+            const hasSource = mat.source_node;
+            
+            let html = `
+                <div class="detail-section">
+                    <h2>${hasAcronym ? escapeHtml(electrolyte.acronym) : escapeHtml(electrolyte.full_name || 'Unknown')}</h2>
+                    ${hasFullName && hasAcronym ? `<div class="full-name">${escapeHtml(electrolyte.full_name)}</div>` : ''}
+                    
+                    <div style="margin: 1rem 0;">
+                        <span class="badge badge-type">${escapeHtml(mat.material_class || 'Other')}</span>
+                        ${hasProportion ? `<span class="badge badge-composition">${escapeHtml(electrolyte.proportion)}</span>` : ''}
+                    </div>
+                    
+                    <h3>Ionic Conductivity</h3>
+                    <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #2e7d32; margin-bottom: 1rem;">
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #1b5e20; margin-bottom: 0.5rem;">
+                            ${escapeHtml(mat.ionic_conductivity_S_per_cm)} S/cm
+                        </div>
+                        <div style="color: #666;">
+                            Temperature: ${escapeHtml(mat.measurement_temperature)}
+                        </div>
+                        ${mat.specific_source_location ? `
+                        <div style="color: #666; margin-top: 0.3rem;">
+                            Location: ${escapeHtml(mat.specific_source_location)}
+                        </div>
+                        ` : ''}
+                    </div>
+            `;
+            
+            if (hasDescription) {
+                html += `
+                    <h3>Material Description</h3>
+                    <div style="background: #f9f9f9; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; line-height: 1.6;">
+                        ${escapeHtml(mat.material_description)}
+                    </div>
+                `;
+            }
+            
+            if (hasProcessing) {
+                html += `
+                    <h3>Processing Method</h3>
+                    <div class="processing-list">
+                        <li>${escapeHtml(mat.processing_method)}</li>
+                    </div>
+                `;
+            }
+            
+            if (hasSource) {
+                html += `
+                    <h3>Source Node</h3>
+                    <div class="source-card">
+                        <div class="source-header">
+                            <span class="source-id">${escapeHtml(mat.source_node.node_id || 'N/A')}</span>
+                            <span class="source-section">${escapeHtml(mat.source_node.section || '')}</span>
+                        </div>
+                        <div class="source-title">${escapeHtml(mat.source_node.title || 'Unknown')}</div>
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function escapeAttr(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        
+        // Search functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.material-item').forEach(el => {
+                const acronym = (el.dataset.acronym || '').toLowerCase();
+                const fullname = (el.dataset.fullname || '').toLowerCase();
+                const visible = acronym.includes(query) || fullname.includes(query);
+                el.style.display = visible ? '' : 'none';
+            });
+            
+            // Show/hide type groups based on visible children
+            document.querySelectorAll('.type-group').forEach(group => {
+                const items = group.querySelectorAll('.material-item');
+                let hasVisible = false;
+                items.forEach(item => {
+                    if (item.style.display !== 'none') hasVisible = true;
+                });
+                group.style.display = hasVisible ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

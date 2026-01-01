@@ -18,9 +18,12 @@ import asyncio
 import json
 import os
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 from pydantic import BaseModel, Field
+import re
+from PIL import Image
 from dotenv import load_dotenv
+import base64
 
 load_dotenv()
 
@@ -143,16 +146,88 @@ class MaterialExtractor:
     4. Validation
     """
     
-    def __init__(self, model: str = "gemini-2.5-flash-lite"):
-        self.model = model
+    def __init__(self, model_text: str = "gemini-2.5-flash-lite", model_vision: str = 'gemini-3-flash-preview'):
+        self.model_text = model_text
+        self.model_vision = model_vision
         
         # Initialize Gemini client
         from google import genai
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise ValueError("GEMINI_API_KEY not found in environment")
-        self.client = genai.Client(api_key=api_key)
+        self.client = client = genai.Client(api_key=api_key, http_options={'api_version': 'v1alpha'})
+
+        self.figure_index = {} # stores mapping: "2" -> Path/to/Figure2.jpg
+
+    # ========================================================================
+    # Pre-Processing: Build Figure Index
+    # ========================================================================
     
+    def _index_figures(self, base_path: Path, structure: List[dict]):
+        """
+        Scans document for images and maps Figure Number -> LIST of Image Paths.
+        Handles cases where Figure 2 is split into Figure 2a/2b or detected multiple times.
+        """
+        print("  Indexing figures...")
+        # Reset index to store lists: {'2': [PathA, PathB]}
+        self.figure_index: Dict[str, List[Path]] = {} 
+        
+        def find_images(nodes):
+            for node in nodes:
+                text = node.get('text', '')
+                matches = re.findall(r'!\[.*?\]\((.*?)\)', text)
+                
+                for image_rel_path in matches:
+                    # Regex looks for "Fig" or "Figure" followed by a number
+                    fig_match = re.search(r'(?:fig|figure)[-_]?(\d+)', image_rel_path, re.IGNORECASE)
+                    
+                    if fig_match:
+                        fig_num = fig_match.group(1) # e.g., "2"
+                        full_path = base_path / image_rel_path
+                        
+                        if full_path.exists():
+                            if fig_num not in self.figure_index:
+                                self.figure_index[fig_num] = []
+                            
+                            # Avoid adding the exact same file path twice
+                            if full_path not in self.figure_index[fig_num]:
+                                self.figure_index[fig_num].append(full_path)
+                                print(f"    Indexed Figure {fig_num} -> {image_rel_path}")
+                
+                if 'nodes' in node:
+                    find_images(node['nodes'])
+
+        find_images(structure)
+        
+        # Stats
+        total_images = sum(len(paths) for paths in self.figure_index.values())
+        print(f"  Total figures indexed: {total_images} across {len(self.figure_index)} distinct figure numbers.")
+    
+    def _resolve_relevant_images(self, text: str) -> List[Path]:
+        """
+        Scans text for references like "Figure 2" or "Fig. 2" and returns matching image paths.
+        This solves the 'Disconnected Context' problem.
+        """
+        # Find references like "Figure 2", "Fig. 2", "Fig 2"
+        # We use \b to ensure we match whole words
+        # Added support for Figure (letter)(digit) format
+        refs = re.findall(r'\b(?:[Ff]ig\.?|[Ff]igure)\s*([A-Za-z]?\d+)', text, re.IGNORECASE)
+        
+        relevant_paths = []
+        seen_paths = set()
+        
+        for fig_num in refs:
+            if fig_num in self.figure_index:
+                # Retrieve the LIST of paths for this figure number
+                paths = self.figure_index[fig_num]
+                
+                for path in paths:
+                    if path not in seen_paths:
+                        relevant_paths.append(path)
+                        seen_paths.add(path)
+        
+        return relevant_paths
+  
     # ========================================================================
     # Stage 1: LLM Node Identification
     # ========================================================================
@@ -213,8 +288,7 @@ class MaterialExtractor:
         prompt = f"""Determine if this section from a scientific paper contains ionic conductivity measurements with numerical values.
 
 Section Title: {node.get('title', 'Unknown')}
-Section Summary: {node.get('summary', 'No summary')}
-Keywords in this section: {keywords_str}
+Section text: {node.get('text', 'No text')}
 
 Answer these questions:
 1. is_relevant: Does this section likely contain ionic conductivity measurements (numerical values in S/cm or similar units)?
@@ -223,15 +297,14 @@ Answer these questions:
 
 Consider:
 - Sections about "results", "conductivity", "impedance", "EIS" are likely relevant
-- Sections about "introduction", "motivation", "references" are usually NOT relevant (unless they cite specific values)
 - Look for keywords like: conductivity, S/cm, impedance, measurement, temperature
 
 Respond with JSON only."""
 
         async with semaphore:
             try:
-                print(prompt)
-                raise BaseException()
+                # print(prompt)
+                # raise BaseException()
                 loop = asyncio.get_event_loop()
                 response = await asyncio.wait_for(
                     loop.run_in_executor(
@@ -301,6 +374,12 @@ Keywords: {keywords_str}
 Text:
 {node.get('text', '')}
 
+INSTRUCTIONS:
+1. Analyze the provided text text for ionic conductivity data.
+2. If an image is provided along with this text, analyze it as well. 
+   - If the image is a data plot (e.g., Arrhenius plot), extract the specific conductivity values from the data points in the plot.
+   - If the image is a table, extract the values from the table rows.
+
 For EACH ionic conductivity measurement, extract:
 1. material_class: Ceramic, Polymer, Composite, or Other
 2. electrolyte_name: full_name, acronym, proportion
@@ -330,6 +409,59 @@ Respond with JSON only."""
         
         prompt = self._build_extraction_prompt(node)
         node_title = node.get('title', 'Unknown')[:50]
+        text_content = node.get('text', '')
+
+
+        # 1. Resolve images (handle multiple figures + disconnected context)
+        image_paths = self._resolve_relevant_images(text_content)
+        # 2. Build content payload
+        prompt_text = self._build_extraction_prompt(node)
+        
+        # raw_contents = [
+        #     types.Content(
+        #         parts=[
+        #             types.Part(text=prompt_text)
+        #         ]
+        #     )
+        # ]
+
+        raw_parts = [types.Part(text=prompt_text)]
+        
+
+        # Add images using Gemini 3.0 spec (media_resolution)
+        for img_path in image_paths:
+            try:
+                # Read image bytes
+                image_bytes = img_path.read_bytes()
+                image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+
+                mime_type = "image/png" if img_path.suffix.lower() == '.png' else "image/jpeg"
+
+                # Add Part with High Resolution setting
+                # Construct raw dict matching the API spec
+                image_part = types.Part(
+                    inline_data=types.Blob(
+                        mime_type=mime_type,
+                        data=image_b64
+                    ),
+                    # Ensure your self.client was initialized with api_version='v1alpha'
+                    media_resolution={"level": "media_resolution_high"}
+                )
+
+                raw_parts.append(image_part)
+
+                print(f"        (Multimodal) Attached {img_path.name} to {node_title}")
+            except Exception as e:
+                print(f"    Error loading image {img_path}: {e}")
+        
+        # 3. Choose model & config
+        # if we have images, use Gemini 3 Flash, if text only, use lighter model
+        if image_paths:
+            active_model = self.model_vision
+            temperature = 1.0 # as recommended by Gemini docs
+        else:
+            active_model = self.model_text
+            temperature = 0.0    
         
         async with semaphore:
             try:
@@ -338,10 +470,14 @@ Respond with JSON only."""
                     loop.run_in_executor(
                         None,
                         lambda: self.client.models.generate_content(
-                            model=self.model,
-                            contents=prompt,
+                            model=active_model,
+                            contents=[
+                                types.Content(
+                                    parts = raw_parts
+                                )
+                            ],
                             config=types.GenerateContentConfig(
-                                temperature=0,
+                                temperature=temperature,
                                 max_output_tokens=8192,
                                 response_mime_type="application/json",
                                 response_json_schema=MaterialExtractionResponse.model_json_schema()
@@ -662,13 +798,16 @@ Respond with JSON only."""
     # Main Pipeline
     # ========================================================================
     
-    def extract(self, structure: List[dict], batch_size: int = 7) -> dict:
+    def extract(self, structure: List[dict], base_path: Path, batch_size: int = 7) -> dict:
         """
         Run the full four-stage extraction pipeline.
         
         Returns:
             dict with 'materials' list and 'stats' summary
         """
+        # 0. Index Figures First
+        self._index_figures(base_path, structure)
+
         # Collect all nodes
         all_nodes = self._collect_all_nodes(structure)
         print(f"Found {len(all_nodes)} semantic_unit nodes in structure")
@@ -683,46 +822,68 @@ Respond with JSON only."""
             print("No relevant nodes found!")
             return {'materials': [], 'stats': {'total_nodes': len(all_nodes), 'relevant_nodes': 0}}
         
-        # # Stage 2: Extract from relevant nodes
-        # materials = asyncio.run(self._extract_from_nodes(relevant_nodes, batch_size))
+        # Stage 2: Extract from relevant nodes
+        materials = asyncio.run(self._extract_from_nodes(relevant_nodes, batch_size))
         
-        # if not materials:
-        #     print("No data points extracted!")
-        #     return {'materials': [], 'stats': {
-        #         'total_nodes': len(all_nodes),
-        #         'relevant_nodes': len(relevant_nodes),
-        #         'extracted': 0
-        #     }}
+        if not materials:
+            print("No data points extracted!")
+            return {'materials': [], 'stats': {
+                'total_nodes': len(all_nodes),
+                'relevant_nodes': len(relevant_nodes),
+                'extracted': 0
+            }}
         
-        # # Stage 3: Deduplicate
-        # unique_materials = self._deduplicate(materials)
+        # Stage 3: Deduplicate
+        unique_materials = self._deduplicate(materials)
         
-        # # Stage 4: Validate
-        # validated_materials = self._validate_data_points(unique_materials)
-        # validated_materials = self._cross_reference_check(validated_materials)
+        # Stage 4: Validate
+        validated_materials = self._validate_data_points(unique_materials)
+        validated_materials = self._cross_reference_check(validated_materials)
         
-        # # Compile stats
-        # stats = {
-        #     'total_nodes': len(all_nodes),
-        #     'relevant_nodes': len(relevant_nodes),
-        #     'raw_extracted': len(materials),
-        #     'after_dedup': len(unique_materials),
-        #     'valid_count': sum(1 for m in validated_materials if m.get('_validation', {}).get('is_valid', True)),
-        #     'invalid_count': sum(1 for m in validated_materials if not m.get('_validation', {}).get('is_valid', True)),
-        #     'by_confidence': {
-        #         'high': sum(1 for m in validated_materials if m.get('confidence') == 'high'),
-        #         'medium': sum(1 for m in validated_materials if m.get('confidence') == 'medium'),
-        #         'low': sum(1 for m in validated_materials if m.get('confidence') == 'low'),
-        #     },
-        #     'by_source': {
-        #         'primary': sum(1 for m in validated_materials if m.get('data_source') == 'primary'),
-        #         'cited': sum(1 for m in validated_materials if m.get('data_source') == 'cited'),
-        #         'inferred': sum(1 for m in validated_materials if m.get('data_source') == 'inferred'),
-        #     }
-        # }
+        # Compile stats
+        stats = {
+            'total_nodes': len(all_nodes),
+            'relevant_nodes': len(relevant_nodes),
+            'raw_extracted': len(materials),
+            'after_dedup': len(unique_materials),
+            'valid_count': sum(1 for m in validated_materials if m.get('_validation', {}).get('is_valid', True)),
+            'invalid_count': sum(1 for m in validated_materials if not m.get('_validation', {}).get('is_valid', True)),
+            'by_confidence': {
+                'high': sum(1 for m in validated_materials if m.get('confidence') == 'high'),
+                'medium': sum(1 for m in validated_materials if m.get('confidence') == 'medium'),
+                'low': sum(1 for m in validated_materials if m.get('confidence') == 'low'),
+            },
+            'by_source': {
+                'primary': sum(1 for m in validated_materials if m.get('data_source') == 'primary'),
+                'cited': sum(1 for m in validated_materials if m.get('data_source') == 'cited'),
+                'inferred': sum(1 for m in validated_materials if m.get('data_source') == 'inferred'),
+            }
+        }
         
         return {'materials': validated_materials, 'stats': stats}
 
+    ## Helpers
+
+    def _load_image_content(self, text: str, base_path: Path):
+        """Find markdown image tags, load the file, and return the image object."""
+        
+        # Regex to find standard markdown image links: ![](_path_to_image.jpg)
+        # Adjust regex if your format is different (e.g. HTML img tags)
+        match = re.search(r'!\[.*?\]\((.*?)\)', text)
+        
+        if match:
+            image_rel_path = match.group(1)
+            # You might need to adjust logic to resolve the absolute path
+            # identifying where the images are stored relative to your script
+            image_path = base_path / image_rel_path
+            
+            if image_path.exists():
+                try:
+                    return Image.open(image_path)
+                except Exception as e:
+                    print(f"Warning: Could not load image {image_path}: {e}")
+                    return None
+        return None
 
 # ============================================================================
 # Main Entry Point
@@ -740,12 +901,13 @@ Pipeline Stages:
   4. Validation - Check data consistency and flag issues
 
 Examples:
-  python run_extraction.py results/paper_keywords_structure.json
+  python run_extraction.py results/paper_keywords_structure.json --asset_dir tests/markdowns/paper_md
   python run_extraction.py results/paper_keywords_structure.json --batch-size 10
         """
     )
     
     parser.add_argument('input_file', help='Path to PageIndex JSON file')
+    parser.add_argument('--asset_dir', help='Path to original MD folder where assets like images are')
     parser.add_argument('--output', '-o', help='Output JSON file path')
     parser.add_argument('--model', default='gemini-2.5-flash-lite', help='LLM model to use')
     parser.add_argument('--batch-size', '-b', type=int, default=7, 
@@ -770,8 +932,10 @@ Examples:
     print("=" * 70)
     
     # Run extraction pipeline
-    extractor = MaterialExtractor(model=args.model)
-    result = extractor.extract(structure, batch_size=args.batch_size)
+    base_path = Path(args.asset_dir)
+    print(base_path)
+    extractor = MaterialExtractor(model_text=args.model, model_vision="gemini-3-flash-preview")
+    result = extractor.extract(structure, base_path=base_path, batch_size=args.batch_size)
     
     materials = result['materials']
     stats = result['stats']

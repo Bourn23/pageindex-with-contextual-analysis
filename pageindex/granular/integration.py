@@ -201,7 +201,8 @@ async def _apply_semantic_subdivision_recursive(
                     analyzer.analyze_section,
                     node,
                     page_texts,
-                    min_pages
+                    min_pages,
+                    1
                 )
                 
                 logger.info(f"✓ Analysis complete: Found {len(semantic_units)} semantic units")
@@ -225,6 +226,16 @@ async def _apply_semantic_subdivision_recursive(
                     semantic_nodes = []
                 
                 if semantic_nodes:
+                    # Check if any semantic node has substantial content
+                    # If all nodes are small (gap nodes), extract keywords from parent instead
+                    substantial_nodes = [n for n in semantic_nodes if len(n.get('text', '')) >= 100]
+                    
+                    if not substantial_nodes and max_depth == 3 and len(node.get('text', '')) >= 100:
+                        # All child nodes are small gaps - extract keywords from parent
+                        logger.info(f"All semantic children are small gaps - extracting keywords from parent '{node_title}'")
+                        await _extract_keywords_for_nodes([node], analyzer, logger)
+                        return
+                    
                     # Add semantic nodes as children
                     if 'nodes' not in node:
                         node['nodes'] = []
@@ -260,9 +271,22 @@ async def _apply_semantic_subdivision_recursive(
                     return
                     
                 else:
-                    logger.debug(f"No semantic nodes created for '{node.get('title', 'Unknown')}'")
+                    logger.debug(f"No semantic nodes created for '{node.get('title', 'Unknown')}' (leaf node - no meaningful subdivision)")
+                    # This is a leaf node - extract keywords if in keywords mode
+                    # This happens when all semantic units were skipped (95%+ of parent text)
+                    if max_depth == 3 and len(node.get('text', '')) >= 100:
+                        logger.info(f"Leaf node (no further subdivision): Extracting keywords from '{node_title}'")
+                        await _extract_keywords_for_nodes([node], analyzer, logger)
+                        return  # Don't process children - we extracted keywords from this node
             else:
                 logger.debug(f"No semantic units found for '{node.get('title', 'Unknown')}', keeping original node")
+
+                # Only extract keywords if this is truly a leaf (no children) and has substantial text
+                has_children = 'nodes' in node and node['nodes']
+                if max_depth == 3 and len(node.get('text', '')) >= 100 and not has_children:
+                    logger.info(f"Leaf node reached for {node_title}: Extracting keywords directly")
+                    await _extract_keywords_for_nodes([node], analyzer, logger)
+                    return  # Don't process children (there are none)
             
             # Only process existing children if we didn't do semantic subdivision
             if 'nodes' in node and node['nodes']:
@@ -293,6 +317,9 @@ async def _extract_keywords_for_nodes(
     """
     Extract keywords for a list of nodes (typically semantic units).
     
+    Skips nodes that are too short (e.g., header-only nodes) to avoid extracting
+    meaningless keywords from minimal text.
+    
     Args:
         nodes: List of nodes to extract keywords from
         analyzer: SemanticAnalyzer instance
@@ -300,10 +327,20 @@ async def _extract_keywords_for_nodes(
     """
     import asyncio
     
+    # Minimum text length to extract keywords (skip header-only nodes)
+    MIN_TEXT_LENGTH_FOR_KEYWORDS = 100
+    
     async def extract_for_node(node: dict):
         """Extract keywords for a single node."""
         try:
             node_title = node.get('title', 'Unknown')
+            node_text = node.get('text', '')
+            
+            # Skip nodes with very short text (likely just headers)
+            if len(node_text.strip()) < MIN_TEXT_LENGTH_FOR_KEYWORDS:
+                logger.debug(f"Skipping keyword extraction for '{node_title}' - text too short ({len(node_text)} chars)")
+                return
+            
             logger.info(f"🔑 Extracting keywords from: '{node_title}'")
             
             # Run keyword extraction in executor
@@ -337,6 +374,294 @@ async def _extract_keywords_for_nodes(
     if nodes:
         await asyncio.gather(*[extract_for_node(node) for node in nodes])
 
+# async def _apply_semantic_subdivision_recursive(
+#     nodes: List[dict],
+#     analyzer: SemanticAnalyzer,
+#     page_texts: List[Tuple[str, int]],
+#     min_pages: float,
+#     logger: logging.Logger,
+#     max_depth: int = 1,
+#     current_depth: int = 0,
+#     fill_gaps: bool = True
+# ) -> None:
+#     """
+#     Recursively apply semantic subdivision to nodes with parallel processing.
+    
+#     Args:
+#         nodes: List of nodes at current level
+#         analyzer: SemanticAnalyzer instance
+#         page_texts: List of (page_text, token_count) tuples
+#         min_pages: Minimum section length for subdivision
+#         logger: Logger instance
+#         max_depth: Maximum depth of recursive subdivision (1 = medium, 2+ = fine)
+#         current_depth: Current depth in recursion (internal use)
+#         fill_gaps: If True, create nodes for uncovered paragraphs (default: True)
+#     """
+#     import asyncio
+    
+#     async def process_node(node: dict):
+#         """Process a single node for semantic subdivision."""
+#         try:
+#             node_title = node.get('title', 'Unknown')
+#             node_type = node.get('node_type', 'unknown')
+#             has_text = bool(node.get('text'))
+#             text_len = len(node.get('text', ''))
+            
+#             # Skip nodes with locked text (keywords)
+#             if node.get('_text_locked'):
+#                 logger.debug(f"Skipping text-locked node '{node_title}'")
+#                 return
+            
+#             # Skip text extraction for keyword nodes - they have their own text
+#             if node_type == 'keyword':
+#                 logger.debug(f"Skipping keyword node '{node_title}'")
+#                 return
+            
+#             # 1. Extract text if missing
+#             if not node.get('text'):
+#                 node['text'] = _extract_text_for_node(node, page_texts)
+            
+#             if not node['text']:
+#                 return
+
+#             # 2. Dynamic Threshold:
+#             # If we are deeper in the tree, we must allow smaller chunks to be processed.
+#             # If current_depth > 0, we effectively ignore min_pages to allow paragraph splitting.
+#             current_min_pages = min_pages if current_depth == 0 else 0
+            
+#             # 3. Attempt Subdivision
+#             # We try to break it down. If the LLM returns nothing, we assume it is Atomic.
+#             semantic_units = []
+#             try:
+#                 # Run in executor
+#                 loop = asyncio.get_event_loop()
+#                 semantic_units = await loop.run_in_executor(
+#                     None,
+#                     analyzer.analyze_section,
+#                     node,
+#                     page_texts,
+#                     current_min_pages # Use dynamic threshold
+#                 )
+#             except Exception as e:
+#                 logger.error(f"Analysis failed for '{node_title}': {e}")
+
+#             # ---------------------------------------------------------
+#             # PATH A: The Node is divisible (It is a Parent)
+#             # ---------------------------------------------------------
+#             if semantic_units:
+#                 logger.info(f"Subdividing '{node_title}' into {len(semantic_units)} units")
+                
+#                 # Create the child nodes
+#                 semantic_nodes = analyzer.create_nodes_from_semantic_units(
+#                     semantic_units, node, page_texts, fill_gaps=fill_gaps
+#                 )
+                
+#                 if semantic_nodes:
+#                     if 'nodes' not in node: node['nodes'] = []
+#                     # Prepend new semantic nodes
+#                     node['nodes'] = semantic_nodes + node['nodes']
+                    
+#                     # RECURSE: Keep breaking down the children
+#                     # We only stop if we hit max_depth (safety valve)
+#                     if current_depth < max_depth:
+#                         await _apply_semantic_subdivision_recursive(
+#                             semantic_nodes, analyzer, page_texts, min_pages,
+#                             logger, max_depth, current_depth + 1, fill_gaps
+#                         )
+#                     return # Done with this node, children are handling the work now
+
+#             # ---------------------------------------------------------
+#             # PATH B: The Node is Atomic (It is a Leaf)
+#             # ---------------------------------------------------------
+#             # If we are here, either:
+#             # 1. semantic_units was empty (LLM couldn't split it further)
+#             # 2. OR we hit max_depth limit
+#             # 3. OR semantic_nodes creation failed
+            
+#             # If granularity is 'keywords', we extract from this atomic part.
+#             # We only do this if it's a semantic_unit (clean text) or a leaf section.
+#             if max_depth >= 2: # 'fine' or 'keywords' mode implies deep traversal
+#                  # Only extract if it's a semantic unit we created OR it's a leaf section that refused to split
+#                 should_extract = (node.get('node_type') == 'semantic_unit') or (not semantic_units)
+                
+#                 if should_extract:
+#                     # Check if we should extract keywords (based on global opt)
+#                     # You might need to pass 'opt.granularity' into this function or infer from max_depth
+#                     # Assuming max_depth=3 implies keywords mode as per your previous code:
+#                     if max_depth == 3: 
+#                         logger.info(f"🍃 Atomic Node Reached: '{node_title}'. Extracting keywords.")
+#                         await _extract_keywords_for_nodes([node], analyzer, logger)
+
+#         except Exception as e:
+#             logger.error(f"Error processing node '{node.get('title', 'Unknown')}': {e}")
+
+#     if nodes:
+#         await asyncio.gather(*[process_node(node) for node in nodes])
+
+
+# async def _apply_semantic_subdivision_recursive(
+#     nodes: List[dict],
+#     analyzer: SemanticAnalyzer,
+#     page_texts: List[Tuple[str, int]],
+#     min_pages: float,
+#     logger: logging.Logger,
+#     max_depth: int = 1,
+#     current_depth: int = 0,
+#     fill_gaps: bool = True
+# ) -> None:
+#     """
+#     Recursively apply semantic subdivision to nodes with parallel processing.
+#     """
+#     import asyncio
+    
+#     async def process_node(node: dict):
+#         """Process a single node for semantic subdivision."""
+#         try:
+#             node_title = node.get('title', 'Unknown')
+#             node_type = node.get('node_type', 'unknown')
+#             has_text = bool(node.get('text'))
+#             text_len = len(node.get('text', ''))
+            
+#             # Skip nodes with locked text (keywords)
+#             if node.get('_text_locked'):
+#                 logger.debug(f"Skipping text-locked node '{node_title}'")
+#                 return
+            
+#             # Skip text extraction for keyword nodes - they have their own text
+#             if node_type == 'keyword':
+#                 logger.debug(f"Skipping keyword node '{node_title}'")
+#                 return
+            
+#             # Skip text extraction for semantic_unit nodes that already have text
+#             if node_type == 'semantic_unit' and has_text:
+#                 logger.debug(f"Semantic unit '{node_title}' already has text ({text_len} chars), skipping extraction")
+#             elif not has_text:
+#                 # Extract text for this node if not already present
+#                 logger.debug(f"Extracting text for '{node_title}'")
+#                 node['text'] = _extract_text_for_node(node, page_texts)
+
+#             # Check if node has text content after extraction
+#             if not node.get('text'):
+#                 logger.debug(f"Skipping node '{node_title}' - no text content after extraction")
+#                 return
+            
+#             # Check if node meets minimum size requirement
+#             start_page = node.get('start_index', 1)
+#             end_page = node.get('end_index', 1)
+#             section_length = end_page - start_page + 1
+            
+#             if section_length < min_pages:
+#                 logger.debug(f"Skipping node '{node_title}' - too short ({section_length} pages)")
+#                 # If it's too short to analyze, it might still be a valid atomic unit for keywords
+#                 # But typically we skip very small artifacts. 
+#                 # If you want to force keywords on short text, you would add a check here.
+#                 return
+            
+#             # Analyze section for semantic units
+#             try:
+#                 logger.info(f"🔍 Analyzing section: '{node_title}' at depth {current_depth}")
+                
+#                 loop = asyncio.get_event_loop()
+#                 semantic_units = await loop.run_in_executor(
+#                     None,
+#                     analyzer.analyze_section,
+#                     node,
+#                     page_texts,
+#                     min_pages
+#                 )
+                
+#                 logger.info(f"✓ Analysis complete: Found {len(semantic_units)} semantic units")
+#             except Exception as e:
+#                 logger.error(f"✗ Error analyzing section '{node_title}': {e}")
+#                 semantic_units = []
+            
+#             # --- BRANCH A: Successfully Subdivided ---
+#             if semantic_units:
+#                 logger.info(f"Subdividing '{node_title}' into {len(semantic_units)} semantic units")
+                
+#                 try:
+#                     semantic_nodes = analyzer.create_nodes_from_semantic_units(
+#                         semantic_units,
+#                         node,
+#                         page_texts,
+#                         fill_gaps=fill_gaps
+#                     )
+#                 except Exception as e:
+#                     logger.error(f"Error creating nodes from semantic units for '{node_title}': {e}")
+#                     semantic_nodes = []
+                
+#                 if semantic_nodes:
+#                     # Add semantic nodes as children
+#                     if 'nodes' not in node:
+#                         node['nodes'] = []
+                    
+#                     # Insert semantic nodes at the beginning
+#                     node['nodes'] = semantic_nodes + node['nodes']
+                    
+#                     logger.debug(f"Added {len(semantic_nodes)} semantic child nodes to '{node_title}'")
+                    
+#                     # RECURSION LOGIC UPDATE:
+#                     # If we are in 'keywords' mode (max_depth >= 3), we keep recursing until "atomic" (no semantic units found).
+#                     # We use a safety limit (5) to prevent infinite loops.
+#                     # If in 'medium/fine' mode, we respect the strict max_depth.
+                    
+#                     should_recurse = False
+#                     if max_depth >= 3:
+#                         should_recurse = (current_depth < 5) # Safety cap
+#                     else:
+#                         should_recurse = (current_depth < max_depth)
+                        
+#                     if should_recurse:
+#                         logger.debug(f"Recursively subdividing semantic nodes of '{node_title}' (depth {current_depth + 1})")
+#                         await _apply_semantic_subdivision_recursive(
+#                             semantic_nodes,
+#                             analyzer,
+#                             page_texts,
+#                             min_pages,
+#                             logger,
+#                             max_depth,
+#                             current_depth + 1,
+#                             fill_gaps=fill_gaps
+#                         )
+                    
+#                     # Return here to avoid processing children in the generic block below
+#                     return
+                    
+#                 else:
+#                     logger.debug(f"No semantic nodes created for '{node_title}'")
+
+#             # --- BRANCH B: Subdivision Failed / "Atomic" ---
+#             else:
+#                 logger.debug(f"No semantic units found for '{node_title}' (Atomic)")
+                
+#                 # KEYWORD EXTRACTION UPDATE:
+#                 # We are at a leaf (Atomic part). If we are in 'keywords' mode, 
+#                 # this is the exact moment to extract keywords.
+#                 if max_depth >= 3:
+#                      logger.info(f"🍃 Atomic leaf reached: Extracting keywords from '{node_title}'")
+#                      await _extract_keywords_for_nodes([node], analyzer, logger)
+            
+#             # Only process existing children if we didn't do semantic subdivision
+#             # (This handles pre-existing structure nodes, like subsection headers in the original PDF/MD)
+#             if 'nodes' in node and node['nodes']:
+#                 await _apply_semantic_subdivision_recursive(
+#                     node['nodes'],
+#                     analyzer,
+#                     page_texts,
+#                     min_pages,
+#                     logger,
+#                     max_depth,
+#                     current_depth,
+#                     fill_gaps=fill_gaps
+#                 )
+                
+#         except Exception as e:
+#             logger.error(f"Error processing node '{node.get('title', 'Unknown')}': {e}")
+    
+#     # Process all nodes at this level in parallel
+#     if nodes:
+#         await asyncio.gather(*[process_node(node) for node in nodes])
+
 
 async def _extract_keywords_from_deepest_nodes(
     nodes: List[dict],
@@ -347,6 +672,8 @@ async def _extract_keywords_from_deepest_nodes(
     Recursively find the deepest (leaf) semantic nodes and extract keywords from them.
     
     This ensures keywords are extracted from fine-grained semantic units, not their parents.
+    Skips nodes that are too short (e.g., header-only nodes) to avoid extracting
+    meaningless keywords from minimal text.
     
     Args:
         nodes: List of nodes to search
@@ -354,6 +681,9 @@ async def _extract_keywords_from_deepest_nodes(
         logger: Logger instance
     """
     import asyncio
+    
+    # Minimum text length to extract keywords (skip header-only nodes)
+    MIN_TEXT_LENGTH_FOR_KEYWORDS = 100
     
     async def process_node(node: dict):
         """Process a single node - either extract keywords or recurse to children."""
@@ -374,6 +704,13 @@ async def _extract_keywords_from_deepest_nodes(
                 # This is a leaf semantic node (no semantic children), extract keywords here
                 if node.get('node_type') == 'semantic_unit':
                     node_title = node.get('title', 'Unknown')
+                    node_text = node.get('text', '')
+                    
+                    # Skip nodes with very short text (likely just headers)
+                    if len(node_text.strip()) < MIN_TEXT_LENGTH_FOR_KEYWORDS:
+                        logger.debug(f"Skipping keyword extraction for '{node_title}' - text too short ({len(node_text)} chars)")
+                        return
+                    
                     logger.info(f"🔑 Extracting keywords from leaf node: '{node_title}'")
                     
                     # Run keyword extraction in executor

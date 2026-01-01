@@ -659,6 +659,7 @@ Classification:"""
                     return semantic_units
                 else:
                     self.logger.debug(f"No semantic units found in response for '{section_title}'")
+                    self.logger.debug(f">>> SEMANTIC_ANALYZER, prompt is {prompt}")
                     return []
                 
             except Exception as e:
@@ -1177,12 +1178,18 @@ Classification:"""
                 unit_paragraphs = paragraphs[unit.start_paragraph:unit.end_paragraph + 1]
                 unit_text = '\n\n'.join(unit_paragraphs)
                 
-                # Mark paragraphs as covered
+                # Mark paragraphs as covered (even if we skip the unit)
                 for p in range(unit.start_paragraph, unit.end_paragraph + 1):
                     covered_paragraphs.add(p)
                 
-                # Update current position
+                # Update current position (even if we skip the unit)
                 current_position = max(current_position, unit.end_paragraph + 1)
+                
+                # Skip if this unit's text is essentially the same as parent's text
+                # (no meaningful subdivision - would create redundant node)
+                if len(unit_text.strip()) >= len(full_text.strip()) * 0.95:
+                    self.logger.debug(f"Skipping unit '{unit.title}' - text same as parent ({len(unit_text)} >= {len(full_text)} * 0.95)")
+                    continue
                 
                 # Make title unique if duplicate
                 original_title = unit.title

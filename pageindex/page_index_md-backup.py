@@ -1,3 +1,4 @@
+
 """
 Markdown processing for PageIndex - mirrors the PDF pipeline.
 
@@ -13,7 +14,6 @@ import json
 import re
 import os
 import logging
-import sys
 from typing import List, Tuple, Dict, Optional
 from .utils import (
     ConfigLoader, JsonLogger, write_node_id, count_tokens,
@@ -346,12 +346,6 @@ async def markdown_index_main(md_path: str, opt=None) -> dict:
     Returns:
         Dict with doc_name and structure
     """
-
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[logging.StreamHandler(sys.stdout)]
-    )
     logger = JsonLogger(md_path)
     
     if not os.path.isfile(md_path):
@@ -374,20 +368,13 @@ async def markdown_index_main(md_path: str, opt=None) -> dict:
     
     # Step 3: Apply granular features if enabled
     if opt.granularity in ['medium', 'fine', 'keywords']:
-        from .granular.integration import apply_semantic_subdivision, detect_and_integrate_figures_tables
-        from .llm_client import get_llm_client
-
         logger.info(f"Applying granular features for granularity level: {opt.granularity}")
-        llm_client = get_llm_client()
-        opt.llm_client = llm_client
-        # await apply_granular_features(tree, page_list, opt, logger)
-        await apply_semantic_subdivision(
-            tree=tree,
-            page_texts=page_list,
-            opt=opt,
-            logger=logger,
-            fill_gaps=True
-        )
+        await apply_granular_features(tree, page_list, opt, logger)
+    
+    # Step 4: Extract keywords from leaf nodes (for keywords granularity)
+    if opt.granularity == 'keywords':
+        logger.info("Extracting keywords from leaf nodes...")
+        await extract_keywords_from_leaves(tree, opt, logger)
     
     # Step 5: Reassign node IDs
     if opt.if_add_node_id == 'yes':

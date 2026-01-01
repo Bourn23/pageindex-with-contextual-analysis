@@ -1,0 +1,223 @@
+{
+  "doc_name": "short",
+  "structure": [
+    {
+      "title": "New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes",
+      "start_index": 1,
+      "end_index": 1,
+      "nodes": [
+        {
+          "title": "RESULTS AND DISCUSSION",
+          "start_index": 1,
+          "end_index": 1,
+          "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+          "line_num": 4,
+          "nodes": [
+            {
+              "title": "LLZO-PEO (LiTFSI) composites",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "Composite materials made from lithium lanthanum zirconium oxide (LLZO) and polyethylene oxide (PEO) with lithium bis(trifluoromethanesulfonyl)imide (LiTFSI) salt.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "LLZO-PEO (LiTFSI) composites",
+                "context": "Composite materials made from lithium lanthanum zirconium oxide (LLZO) and polyethylene oxide (PEO) with lithium bis(trifluoromethanesulfonyl)imide (LiTFSI) salt.",
+                "relevance": "These are the core materials whose ionic conductivity is being investigated.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0002"
+            },
+            {
+              "title": "ionic conductivity",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "The ability of a material to conduct ions, crucial for battery performance.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "ionic conductivity",
+                "context": "The ability of a material to conduct ions, crucial for battery performance.",
+                "relevance": "This is the primary property being analyzed and discussed in relation to LLZO content.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0003"
+            },
+            {
+              "title": "ion mobility",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "The ease with which ions can move through a material.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "ion mobility",
+                "context": "The ease with which ions can move through a material.",
+                "relevance": "One of the key factors influencing ionic conductivity, directly affected by LLZO content.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0004"
+            },
+            {
+              "title": "ion transport pathways",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "The routes or channels through which ions travel within the electrolyte.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "ion transport pathways",
+                "context": "The routes or channels through which ions travel within the electrolyte.",
+                "relevance": "The structure and availability of these pathways are significantly altered by LLZO particles.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0005"
+            },
+            {
+              "title": "concentration of active Li ions",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "The number of lithium ions available and participating in the electrical conduction process.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "concentration of active Li ions",
+                "context": "The number of lithium ions available and participating in the electrical conduction process.",
+                "relevance": "This parameter is shown to increase with LLZO content initially but can be reduced by particle blockage.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0006"
+            },
+            {
+              "title": "LLZO content",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "The proportion or weight percentage of LLZO within the composite material.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "LLZO content",
+                "context": "The proportion or weight percentage of LLZO within the composite material.",
+                "relevance": "This is the independent variable being manipulated, and its effects on conductivity are the focus.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0007"
+            },
+            {
+              "title": "polymer electrolyte",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "An electrolyte where the ion-conducting medium is a solid polymer.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "polymer electrolyte",
+                "context": "An electrolyte where the ion-conducting medium is a solid polymer.",
+                "relevance": "PEO represents the polymer matrix, and its properties are modified by LLZO.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0008"
+            },
+            {
+              "title": "ceramic electrolyte",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "An electrolyte where the ion-conducting medium is a solid ceramic material.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "ceramic electrolyte",
+                "context": "An electrolyte where the ion-conducting medium is a solid ceramic material.",
+                "relevance": "LLZO is a ceramic material, and at high concentrations, the composite transitions towards ceramic-like conduction.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0009"
+            },
+            {
+              "title": "percolated network",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "A continuous path formed by interconnected filler particles within a matrix.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "percolated network",
+                "context": "A continuous path formed by interconnected filler particles within a matrix.",
+                "relevance": "The formation of an LLZO percolated network is critical for achieving high ionic conductivity at high LLZO content.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0010"
+            },
+            {
+              "title": "TEGDME",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "Tetraethylene glycol dimethyl ether, a liquid additive used to modify the composite.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "TEGDME",
+                "context": "Tetraethylene glycol dimethyl ether, a liquid additive used to modify the composite.",
+                "relevance": "This additive is introduced to alter the LLZO network and PEO properties, impacting conductivity.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0011"
+            },
+            {
+              "title": "plasticizer",
+              "start_index": 1,
+              "end_index": 1,
+              "text": "## RESULTS AND DISCUSSION\n\nThe effects of increasing LLZO content in the LLZO-PEO (LiTFSI) composites on ionic conductivity channel through the following three avenues: (i) ion mobility: the  $T_1$  relaxation time measurements suggest that increasing LLZO contents decrease ion mobility; (ii) ion transport pathways: <sup>6</sup>Li  $\\rightarrow$  <sup>7</sup>Li replacement experiments reveal that at a critical LLZO content, the composite will transition from a polymer electrolyte to a ceramic electrolyte; and (iii) concentration of participating Li ions in conduction: composites with <20 wt % LLZO show that the concentration of active Li ions rises with increasing LLZO content. With large LLZO content, on the one hand, the number of Li ions originated from LLZO increases. On the other hand, likely due to the blockage of Li conduction channels by LLZO particles, the amount of active Li ions in PEO is reduced. As is seen, LLZO content can have totally opposite effects on different parameters that determine ionic\n\nconductivity. On the basis of the above analysis, the qualitative evaluation of the impact of LLZO on ionic conductivity is as follows: at low content of LLZO (e.g., 5 wt %), LLZO serves as a filler to reduce the crystallinity of PEO. Large LLZO particles may also block the Li-ion pathways in PEO and reduce Li-ion mobility. Whether or not the fillers at a certain concentration enhance or reduce ionic conduction depends on the weighing of the two competing effects. In addition, if the filler contains Li, it may become an additional source of Li ions participating in conduction. For instance, in LLZO (20 wt %)-PEO (LiTFSI), Li from decomposed LLZO becomes one major charge carrier source, which is expected to enhance ionic conductivity. At high content of LLZO (e.g., 50 wt %), LLZO-PEO (LiTFSI) becomes an LLZO ceramic conductor. This is partially due to the formation of a percolated network of LLZO particles to make ion conduction within the LLZO matrix possible and partially due to the significant blockage of ion channels in PEO. Therefore, the ionic conductivity is largely determined by loosely connected LLZO particles, of which the ionic conductivity is on the order of  $10^{-6}$ – $10^{-7}$  S/cm (Figure S5). With the addition of a liquid additive such as TEGDME, the mobility of particles increases, which partially disintegrates the LLZO network. This has two effects: (i) Li-ion pathway through the LLZO network is largely broken, and the role of LLZO in ion conduction is reduced; (ii) it reduces the blockage of Li-ion channels in PEO. In addition, TEGDME further reduces PEO crystallinity and enhances ion mobility within the PEO-TEGDME complex. As a result, LLZO (50 wt %)-PEO (LiTFSI) (50 wt %)-TEGDME becomes predominantly a polymer electrolyte modified by a plasticizer.",
+              "summary": "A substance added to a polymer to increase its flexibility and reduce its glass transition temperature.",
+              "node_type": "keyword",
+              "_text_locked": true,
+              "metadata": {
+                "term": "plasticizer",
+                "context": "A substance added to a polymer to increase its flexibility and reduce its glass transition temperature.",
+                "relevance": "TEGDME acts as a plasticizer, enhancing ion mobility within the polymer phase.",
+                "parent_title": "RESULTS AND DISCUSSION",
+                "parent_node_type": "section"
+              },
+              "nodes": [],
+              "node_id": "0012"
+            }
+          ],
+          "node_id": "0001"
+        }
+      ],
+      "text": "![](_page_0_Picture_4.jpeg)\n\n# New Insights into the Compositional Dependence of Li-Ion Transport in Polymer-Ceramic Composite Electrolytes",
+      "line_num": 2,
+      "node_id": "0000"
+    }
+  ]
+}
