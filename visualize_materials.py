@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Visualize extracted materials as an interactive HTML page.
-Shows materials, their properties, processing methods, and source traceability.
+Updated to support validation flags, exact quotes, and normalized data.
 
 Usage:
     python visualize_materials.py results/paper_materials.json
@@ -12,20 +12,32 @@ import argparse
 from pathlib import Path
 from html import escape
 
-
 def generate_html(materials_data, output_path):
     """Generate an interactive HTML visualization of extracted ionic conductivity data."""
     
     doc_name = materials_data.get('doc_name', 'Document')
-    materials = materials_data.get('materials', [])
+    raw_materials = materials_data.get('materials', [])
+    
+    # --- CRITICAL FIX: SORT DATA BEFORE PROCESSING ---
+    # We sort the list once here so that the Python-generated sidebar 
+    # and the JS-generated detail view share the exact same index order.
+    # Sorting by: Material Class -> Acronym -> Full Name
+    materials = sorted(raw_materials, key=lambda m: (
+        m.get('material_class', 'Other') or 'Other',
+        (m.get('electrolyte_name', {}).get('acronym') or '').lower(),
+        (m.get('electrolyte_name', {}).get('full_name') or '').lower()
+    ))
+    
     material_count = len(materials)
     
-    # Group materials by material_class
+    # Group for the sidebar display
     by_type = {}
-    for mat in materials:
+    for i, mat in enumerate(materials):
         mtype = mat.get('material_class', 'Other') or 'Other'
         if mtype not in by_type:
             by_type[mtype] = []
+        # Store the global index so we can link sidebar to JS array
+        mat['_ui_index'] = i 
         by_type[mtype].append(mat)
 
     html = f"""<!DOCTYPE html>
@@ -33,486 +45,416 @@ def generate_html(materials_data, output_path):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape(doc_name)} - Materials</title>
+    <title>{escape(doc_name)} - Extraction Audit</title>
     <style>
+        :root {{
+            --primary: #2e7d32;
+            --primary-light: #e8f5e9;
+            --border: #e0e0e0;
+            --text: #333;
+            --danger: #d32f2f;
+            --danger-bg: #ffebee;
+            --warning: #ed6c02;
+            --bg: #f5f5f5;
+        }}
+        
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }}
         
+        /* Header & Stats */
         .header {{
-            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-            color: white;
-            padding: 2rem;
-        }}
-        
-        .header h1 {{ font-size: 1.8rem; margin-bottom: 0.5rem; }}
-        .header .subtitle {{ opacity: 0.9; font-size: 0.9rem; }}
-        
-        .stats-bar {{
             background: white;
             padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
             display: flex;
-            gap: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-            flex-wrap: wrap;
-        }}
-        
-        .stat {{
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
+            flex-shrink: 0;
         }}
         
-        .stat-value {{
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2e7d32;
-        }}
+        .header h1 {{ font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }}
+        .header .doc-name {{ color: #666; font-weight: normal; font-size: 0.9rem; margin-top: 0.2rem; }}
         
-        .stat-label {{ color: #666; font-size: 0.85rem; }}
-        
+        .stats {{ display: flex; gap: 1.5rem; }}
+        .stat-item {{ text-align: right; }}
+        .stat-val {{ font-weight: 700; font-size: 1.2rem; color: var(--primary); }}
+        .stat-lbl {{ font-size: 0.7rem; color: #777; text-transform: uppercase; }}
+
+        /* Main Layout */
         .container {{
             display: flex;
-            height: calc(100vh - 180px);
+            flex: 1;
+            overflow: hidden;
         }}
         
+        /* Sidebar */
         .sidebar {{
-            width: 320px;
+            width: 350px;
             background: white;
-            border-right: 1px solid #e0e0e0;
+            border-right: 1px solid var(--border);
             overflow-y: auto;
-            padding: 1rem;
+            display: flex;
+            flex-direction: column;
         }}
         
+        .search-container {{ padding: 1rem; border-bottom: 1px solid var(--border); }}
+        .search-box {{
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }}
+        
+        .material-list {{ flex: 1; overflow-y: auto; padding: 0.5rem; }}
+        
+        .type-header {{
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            padding: 0.8rem 0.5rem 0.4rem;
+            letter-spacing: 0.5px;
+        }}
+        
+        .mat-item {{
+            padding: 0.8rem;
+            margin-bottom: 0.3rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }}
+        
+        .mat-item:hover {{ background: var(--bg); }}
+        .mat-item.active {{ background: var(--primary-light); border-left-color: var(--primary); }}
+        
+        /* Invalid items get a red indicator in the list */
+        .mat-item.invalid {{ border-left-color: var(--danger); opacity: 0.8; }}
+        .mat-item.invalid.active {{ background: var(--danger-bg); }}
+        
+        .mat-name {{ font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }}
+        .mat-cond {{ font-size: 0.8rem; color: #666; font-family: monospace; }}
+        
+        /* Content Area */
         .content {{
             flex: 1;
             overflow-y: auto;
             padding: 2rem;
+            max-width: 1000px;
+        }}
+        
+        .detail-card {{
             background: white;
-            margin: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
         }}
         
-        .search-box {{
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #e0e0e0;
+        /* Detail Elements */
+        .detail-header {{ margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }}
+        .detail-title {{ font-size: 1.6rem; color: var(--text); margin-bottom: 0.5rem; }}
+        .detail-subtitle {{ font-size: 1rem; color: #666; font-weight: 400; }}
+        
+        .badges {{ display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }}
+        .badge {{ padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }}
+        
+        .bg-class {{ background: #e3f2fd; color: #1565c0; }}
+        .bg-conf-high {{ background: #e8f5e9; color: #2e7d32; }}
+        .bg-conf-medium {{ background: #fff3e0; color: #ef6c00; }}
+        .bg-conf-low {{ background: #ffebee; color: #c62828; }}
+        .bg-source {{ background: #f3e5f5; color: #7b1fa2; }}
+        
+        /* Validation Box */
+        .validation-box {{
+            background: var(--danger-bg);
+            border: 1px solid var(--danger);
+            color: var(--danger);
+            padding: 1rem;
             border-radius: 6px;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
         }}
+        .validation-title {{ font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }}
+        .validation-list {{ padding-left: 1.5rem; font-size: 0.9rem; }}
         
-        .search-box:focus {{ outline: none; border-color: #2e7d32; }}
-        
-        .type-group {{
+        /* Grid Layout for Properties */
+        .prop-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 1.5rem;
         }}
         
-        .type-header {{
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #666;
-            padding: 0.5rem;
-            background: #f5f5f5;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-        }}
-        
-        .material-item {{
-            padding: 0.7rem;
-            margin: 0.3rem 0;
-            cursor: pointer;
-            border-radius: 6px;
-            border-left: 3px solid #4caf50;
-            background: #f9f9f9;
-            transition: all 0.2s;
-        }}
-        
-        .material-item:hover {{
-            background: #e8f5e9;
-            transform: translateX(3px);
-        }}
-        
-        .material-item.active {{
-            background: #2e7d32;
-            color: white;
-            border-left-color: #1b5e20;
-        }}
-        
-        .material-abbrev {{
-            font-weight: 600;
-            font-size: 1rem;
-        }}
-        
-        .material-fullname {{
-            font-size: 0.8rem;
-            opacity: 0.8;
-            margin-top: 0.2rem;
-        }}
-        
-        .detail-section {{ margin-bottom: 2rem; }}
-        
-        .detail-section h2 {{
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-            color: #2e7d32;
-        }}
-        
-        .detail-section h3 {{
-            font-size: 0.9rem;
-            margin: 1rem 0 0.5rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }}
-        
-        .full-name {{
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }}
-        
-        .badge {{
-            display: inline-block;
-            padding: 0.3rem 0.7rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }}
-        
-        .badge-type {{
-            background: #e3f2fd;
-            color: #1565c0;
-        }}
-        
-        .badge-composition {{
-            background: #fff3e0;
-            color: #e65100;
-        }}
-        
-        .badge-processing {{
-            background: #f3e5f5;
-            color: #7b1fa2;
-        }}
-        
-        .source-card {{
-            background: #f9f9f9;
+        .prop-box {{
+            background: var(--bg);
             padding: 1rem;
             border-radius: 6px;
-            margin: 0.5rem 0;
-            border-left: 3px solid #2e7d32;
         }}
         
-        .source-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }}
+        .prop-label {{ font-size: 0.75rem; color: #666; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px; }}
+        .prop-value {{ font-size: 1.1rem; font-weight: 500; font-family: monospace; }}
+        .prop-meta {{ font-size: 0.8rem; color: #888; margin-top: 0.3rem; }}
         
-        .source-id {{
-            font-family: monospace;
-            font-size: 0.8rem;
-            background: #e0e0e0;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-        }}
-        
-        .source-section {{
-            font-size: 0.85rem;
-            color: #666;
-        }}
-        
-        .source-title {{
-            font-weight: 500;
-        }}
-        
-        .empty-state {{
-            color: #999;
+        /* Quote Block */
+        .quote-block {{
+            border-left: 4px solid var(--primary);
+            background: #f9f9f9;
+            padding: 1rem 1.5rem;
             font-style: italic;
-            padding: 2rem;
-            text-align: center;
+            color: #555;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+            line-height: 1.6;
         }}
         
-        .processing-list {{
-            list-style: none;
-        }}
+        /* Tables */
+        .meta-table {{ width: 100%; font-size: 0.9rem; border-collapse: collapse; }}
+        .meta-table td {{ padding: 0.5rem; border-bottom: 1px solid var(--border); }}
+        .meta-table td:first-child {{ width: 150px; color: #666; font-weight: 500; }}
         
-        .processing-list li {{
-            padding: 0.5rem 0.7rem;
-            background: #f3e5f5;
-            border-radius: 4px;
-            margin: 0.3rem 0;
-            border-left: 3px solid #7b1fa2;
-        }}
-        
-        .composition-list {{
-            list-style: none;
-        }}
-        
-        .composition-list li {{
-            padding: 0.5rem 0.7rem;
-            background: #fff3e0;
-            border-radius: 4px;
-            margin: 0.3rem 0;
-            border-left: 3px solid #e65100;
-        }}
-        
-        ::-webkit-scrollbar {{ width: 8px; }}
-        ::-webkit-scrollbar-track {{ background: #f1f1f1; }}
-        ::-webkit-scrollbar-thumb {{ background: #888; border-radius: 4px; }}
+        .empty-state {{ padding: 4rem; text-align: center; color: #999; }}
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>⚡ Ionic Conductivity Data</h1>
-        <div class="subtitle">{escape(doc_name)}</div>
-    </div>
-    
-    <div class="stats-bar">
-        <div class="stat">
-            <span class="stat-value">{material_count}</span>
-            <span class="stat-label">Data Points</span>
+        <div>
+            <h1>⚡ Material Extraction Audit</h1>
+            <div class="doc-name">{escape(doc_name)}</div>
         </div>
-        <div class="stat">
-            <span class="stat-value">{len(by_type)}</span>
-            <span class="stat-label">Material Classes</span>
-        </div>
-        <div class="stat">
-            <span class="stat-value">{sum(1 for m in materials if m.get('processing_method') and 'N/A' not in m.get('processing_method', ''))}</span>
-            <span class="stat-label">Primary Study Materials</span>
-        </div>
-        <div class="stat">
-            <span class="stat-value">{sum(1 for m in materials if m.get('source_node'))}</span>
-            <span class="stat-label">Source References</span>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-val">{material_count}</div>
+                <div class="stat-lbl">Total Materials</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val" style="color: var(--danger)">
+                    {sum(1 for m in materials if not m.get('_validation', {}).get('is_valid', True))}
+                </div>
+                <div class="stat-lbl">Issues Found</div>
+            </div>
         </div>
     </div>
     
     <div class="container">
         <div class="sidebar">
-            <input type="text" class="search-box" id="search" placeholder="Search materials...">
-            <div id="material-list">
-                {generate_material_list(by_type)}
+            <div class="search-container">
+                <input type="text" id="search" class="search-box" placeholder="Filter materials...">
+            </div>
+            <div class="material-list" id="sidebar-list">
+                {generate_sidebar_html(by_type, type_order=['Composite', 'Ceramic', 'Polymer', 'Other'])}
             </div>
         </div>
         
-        <div class="content" id="content">
-            <div class="empty-state">
-                👈 Select a material to view details
-            </div>
+        <div class="content" id="detail-view">
+            <div class="empty-state">Select a material from the sidebar to view extraction details.</div>
         </div>
     </div>
-    
+
     <script>
+        // We dump the ALREADY SORTED list here so indices match perfectly
         const materials = {json.dumps(materials, ensure_ascii=False)};
-        let currentIndex = 0;
         
-        function showMaterial(index) {{
-            const mat = materials[index];
-            if (!mat) return;
+        function selectMaterial(index) {{
+            // Remove active class from all items
+            document.querySelectorAll('.mat-item').forEach(el => el.classList.remove('active'));
             
-            currentIndex = index;
+            // Add active class to selected
+            const sidebarItem = document.getElementById(`mat-${{index}}`);
+            if(sidebarItem) sidebarItem.classList.add('active');
             
-            // Update active state
-            document.querySelectorAll('.material-item').forEach(el => {{
-                el.classList.remove('active');
-            }});
-            document.querySelector(`[data-index="${{index}}"]`)?.classList.add('active');
-            
-            // Generate detail view
-            const content = document.getElementById('content');
-            content.innerHTML = generateDetails(mat, index);
+            renderDetail(index);
         }}
         
-        function generateDetails(mat, index) {{
-            const electrolyte = mat.electrolyte_name || {{}};
-            const hasFullName = electrolyte.full_name && electrolyte.full_name.trim();
-            const hasAcronym = electrolyte.acronym && electrolyte.acronym.trim();
-            const hasProportion = electrolyte.proportion && electrolyte.proportion.trim();
-            const hasProcessing = mat.processing_method && mat.processing_method.trim() && !mat.processing_method.includes('N/A');
-            const hasDescription = mat.material_description && mat.material_description.trim() && !mat.material_description.includes('N/A');
-            const hasSource = mat.source_node;
+        function renderDetail(index) {{
+            const mat = materials[index];
+            if(!mat) return;
+            
+            const elName = mat.electrolyte_name || {{}};
+            const valid = mat._validation || {{ is_valid: true, issues: [] }};
             
             let html = `
-                <div class="detail-section">
-                    <h2>${{hasAcronym ? escapeHtml(electrolyte.acronym) : escapeHtml(electrolyte.full_name || 'Unknown')}}</h2>
-                    ${{hasFullName && hasAcronym ? `<div class="full-name">${{escapeHtml(electrolyte.full_name)}}</div>` : ''}}
-                    
-                    <div style="margin: 1rem 0;">
-                        <span class="badge badge-type">${{escapeHtml(mat.material_class || 'Other')}}</span>
-                        ${{hasProportion ? `<span class="badge badge-composition">${{escapeHtml(electrolyte.proportion)}}</span>` : ''}}
-                    </div>
-                    
-                    <h3>Ionic Conductivity</h3>
-                    <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #2e7d32; margin-bottom: 1rem;">
-                        <div style="font-size: 1.3rem; font-weight: 600; color: #1b5e20; margin-bottom: 0.5rem;">
-                            ${{escapeHtml(mat.ionic_conductivity_S_per_cm)}} S/cm
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <div class="detail-title">
+                            ${{escape(elName.acronym || elName.full_name || 'Unknown Material')}}
                         </div>
-                        <div style="color: #666;">
-                            Temperature: ${{escapeHtml(mat.measurement_temperature)}}
+                        ${{elName.full_name && elName.acronym ? 
+                            `<div class="detail-subtitle">${{escape(elName.full_name)}}</div>` : ''}}
+                        
+                        <div class="badges">
+                            <span class="badge bg-class">${{escape(mat.material_class)}}</span>
+                            <span class="badge bg-conf-${{mat.confidence || 'low'}}">
+                                Confidence: ${{mat.confidence}}
+                            </span>
+                            <span class="badge bg-source">
+                                Source: ${{mat.data_source}}
+                            </span>
+                             ${{valid.audited_by_llm ? 
+                                `<span class="badge" style="border:1px solid #ccc; background:white; color:#666">🤖 LLM Audited</span>` : ''}}
                         </div>
-                        ${{mat.specific_source_location ? `
-                        <div style="color: #666; margin-top: 0.3rem;">
-                            Location: ${{escapeHtml(mat.specific_source_location)}}
-                        </div>
-                        ` : ''}}
                     </div>
             `;
             
-            if (hasDescription) {{
+            // 1. Validation Warning
+            if (!valid.is_valid && valid.issues.length > 0) {{
                 html += `
-                    <h3>Material Description</h3>
-                    <div style="background: #f9f9f9; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; line-height: 1.6;">
-                        ${{escapeHtml(mat.material_description)}}
+                    <div class="validation-box">
+                        <div class="validation-title">⚠️ Validation Issues</div>
+                        <ul class="validation-list">
+                            ${{valid.issues.map(i => `<li>${{escape(i)}}</li>`).join('')}}
+                        </ul>
                     </div>
                 `;
             }}
             
-            if (hasProcessing) {{
-                html += `
-                    <h3>Processing Method</h3>
-                    <div class="processing-list">
-                        <li>${{escapeHtml(mat.processing_method)}}</li>
+            // 2. Primary Data Grid
+            html += `
+                <div class="prop-grid">
+                    <div class="prop-box">
+                        <div class="prop-label">Ionic Conductivity</div>
+                        <div class="prop-value">${{escape(mat.ionic_conductivity_S_per_cm)}} <span style="font-size:0.8em">S/cm</span></div>
+                        
+                        ${{typeof mat._norm_cond === 'number' ? 
+                            `<div class="prop-meta">Normalized: ${{mat._norm_cond.toExponential(2)}}</div>` : ''}}
                     </div>
-                `;
-            }}
+                    
+                    <div class="prop-box">
+                        <div class="prop-label">Temperature</div>
+                        <div class="prop-value">${{escape(mat.measurement_temperature)}}</div>
+                        
+                        ${{typeof mat._norm_temp === 'number' ? 
+                            `<div class="prop-meta">Normalized: ${{mat._norm_temp}} °C</div>` : ''}}
+                    </div>
+                </div>
+            `;
             
-            if (hasSource) {{
+            // 3. Evidence / Quote
+            if (mat.exact_quote) {{
                 html += `
-                    <h3>Source Node</h3>
-                    <div class="source-card">
-                        <div class="source-header">
-                            <span class="source-id">${{escapeHtml(mat.source_node.node_id || 'N/A')}}</span>
-                            <span class="source-section">${{escapeHtml(mat.source_node.section || '')}}</span>
+                    <div style="margin-bottom: 2rem">
+                        <div class="prop-label">Extracted Evidence</div>
+                        <div class="quote-block">"${{escape(mat.exact_quote)}}"</div>
+                        <div style="text-align: right; font-size: 0.8rem; color: #888;">
+                            Location: ${{escape(mat.specific_source_location || 'Unknown')}}
                         </div>
-                        <div class="source-title">${{escapeHtml(mat.source_node.title || 'Unknown')}}</div>
                     </div>
                 `;
             }}
             
-            html += '</div>';
-            return html;
-        }}
-        
-        function escapeHtml(text) {{
-            if (!text) return '';
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }}
-        
-        function escapeAttr(text) {{
-            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-        }}
-        
-        // Search functionality
-        document.getElementById('search').addEventListener('input', (e) => {{
-            const query = e.target.value.toLowerCase();
-            document.querySelectorAll('.material-item').forEach(el => {{
-                const acronym = (el.dataset.acronym || '').toLowerCase();
-                const fullname = (el.dataset.fullname || '').toLowerCase();
-                const visible = acronym.includes(query) || fullname.includes(query);
-                el.style.display = visible ? '' : 'none';
-            }});
+            // 4. Meta Table
+            html += `
+                <div class="prop-label">Additional Details</div>
+                <table class="meta-table">
+                    ${{mat.electrolyte_name.proportion ? 
+                        `<tr><td>Proportion</td><td>${{escape(mat.electrolyte_name.proportion)}}</td></tr>` : ''}}
+                    <tr>
+                        <td>Description</td>
+                        <td>${{escape(mat.material_description || 'N/A')}}</td>
+                    </tr>
+                    <tr>
+                        <td>Processing</td>
+                        <td>${{escape(mat.processing_method || 'N/A')}}</td>
+                    </tr>
+                    ${{mat.source_node ? `
+                    <tr>
+                        <td>Source Node</td>
+                        <td>
+                            <strong>${{escape(mat.source_node.title)}}</strong><br>
+                            <span style="color:#888; font-size:0.8em">Section: ${{escape(mat.source_node.section)}} (ID: ${{mat.source_node.node_id}})</span>
+                        </td>
+                    </tr>
+                    ` : ''}}
+                </table>
+            `;
             
-            // Show/hide type groups based on visible children
-            document.querySelectorAll('.type-group').forEach(group => {{
-                const items = group.querySelectorAll('.material-item');
-                let hasVisible = false;
-                items.forEach(item => {{
-                    if (item.style.display !== 'none') hasVisible = true;
-                }});
-                group.style.display = hasVisible ? '' : 'none';
+            html += `</div>`; // End detail card
+            document.getElementById('detail-view').innerHTML = html;
+        }}
+        
+        // Utils
+        function escape(str) {{
+            if (str === null || str === undefined) return '';
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }}
+
+        // Search
+        document.getElementById('search').addEventListener('keyup', (e) => {{
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.mat-item').forEach(item => {{
+                const text = item.innerText.toLowerCase();
+                item.style.display = text.includes(term) ? 'block' : 'none';
             }});
         }});
+        
+        // Select first item on load
+        if(materials.length > 0) selectMaterial(0);
     </script>
 </body>
 </html>
 """
-    
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
 
 
-def generate_material_list(by_type):
-    """Generate HTML for the material list grouped by material class."""
+def generate_sidebar_html(by_type, type_order):
+    """Generate the sidebar list HTML."""
     html = ""
     
-    # Sort types for consistent display
-    type_order = ['Ceramic', 'Polymer', 'Composite', 'Other']
-    sorted_types = sorted(by_type.keys(), key=lambda t: type_order.index(t) if t in type_order else 99)
+    # Ensure all types in data are covered even if not in explicit type_order
+    all_types = list(by_type.keys())
+    sorted_types = sorted(all_types, key=lambda x: type_order.index(x) if x in type_order else 99)
     
-    global_index = 0
     for mtype in sorted_types:
         materials = by_type[mtype]
-        html += f'<div class="type-group">'
-        html += f'<div class="type-header"><span>{escape(mtype.upper())}</span><span>{len(materials)}</span></div>'
+        html += f'<div class="type-header">{escape(mtype)} ({len(materials)})</div>'
         
-        # Sort by acronym or full name
-        sorted_materials = sorted(materials, key=lambda m: (
-            m.get('electrolyte_name', {}).get('acronym', '') or 
-            m.get('electrolyte_name', {}).get('full_name', '')
-        ).lower())
-        
-        for mat in sorted_materials:
-            electrolyte = mat.get('electrolyte_name', {})
-            acronym = electrolyte.get('acronym') or ''
-            fullname = electrolyte.get('full_name') or ''
-            conductivity = mat.get('ionic_conductivity_S_per_cm') or ''
+        for mat in materials:
+            # Determine display name
+            el = mat.get('electrolyte_name', {})
+            display = el.get('acronym') or el.get('full_name') or 'Unknown'
             
-            display_name = acronym or fullname or 'Unknown'
+            # Check validity for styling
+            is_valid = mat.get('_validation', {}).get('is_valid', True)
+            css_class = "mat-item invalid" if not is_valid else "mat-item"
+            
+            # Use the preserved index from the sorted list
+            idx = mat['_ui_index']
             
             html += f'''
-                <div class="material-item" 
-                     data-index="{global_index}"
-                     data-acronym="{escape(acronym)}" 
-                     data-fullname="{escape(fullname)}"
-                     onclick="showMaterial({global_index})">
-                    <div class="material-abbrev">{escape(display_name)}</div>
-                    <div class="material-fullname">{escape(conductivity)} S/cm</div>
+                <div class="{css_class}" id="mat-{idx}" onclick="selectMaterial({idx})">
+                    <div class="mat-name">{escape(display)}</div>
+                    <div class="mat-cond">{escape(mat.get('ionic_conductivity_S_per_cm', 'N/A'))} S/cm</div>
                 </div>
             '''
-            global_index += 1
-        
-        html += '</div>'
-    
+            
     return html
 
-
-def main():
-    parser = argparse.ArgumentParser(description='Visualize extracted materials as HTML')
-    parser.add_argument('materials_json', help='Path to materials JSON file')
-    parser.add_argument('--output', '-o', help='Output HTML file path')
-    
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('materials_json')
+    parser.add_argument('-o', '--output', help='Output HTML path')
     args = parser.parse_args()
     
-    # Load materials
+    # Load JSON
     with open(args.materials_json, 'r', encoding='utf-8') as f:
-        materials_data = json.load(f)
-    
-    # Determine output path
-    if args.output:
-        output_path = args.output
-    else:
-        input_path = Path(args.materials_json)
-        output_path = input_path.with_suffix('.html')
-    
-    # Generate HTML
-    generate_html(materials_data, output_path)
-    
-    print(f"✓ Visualization saved to: {output_path}")
-    print(f"  Open in browser: file://{Path(output_path).absolute()}")
+        data = json.load(f)
+        
+    out_path = args.output if args.output else Path(args.materials_json).with_suffix('.html')
+    generate_html(data, str(out_path))
+    print(f"✓ Visualization saved to: {out_path}")
+    print(f"  Open in browser: file://{Path(out_path).absolute()}")
 
-
-if __name__ == '__main__':
-    main()

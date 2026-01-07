@@ -1,0 +1,407 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "parsed_downselectedpapers/Characterization of the interfacial Li-ion exchange process in a ceramic–polymer composite by solid state NMR_structure.json",
+  "extraction_stats": {
+    "total_nodes": 108,
+    "relevant_nodes": 108,
+    "raw_extracted": 12,
+    "after_dedup": 12,
+    "valid_count": 5,
+    "invalid_count": 7,
+    "by_confidence": {
+      "high": 6,
+      "medium": 3,
+      "low": 3
+    },
+    "by_source": {
+      "primary": 6,
+      "cited": 3,
+      "inferred": 3
+    }
+  },
+  "material_count": 12,
+  "materials": [
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~4.5 × 10⁻⁴",
+      "measurement_temperature": "80°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text discusses Li-containing compounds like PEO, LLZO, and LiOH and their exchange processes using NMR experiments. However, it does not mention conductivity values or specific temperatures like 80°C."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 4.5,
+      "_norm_temp": 80
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~3.5 × 10⁻⁴",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text focuses on NMR studies of Li-ion exchange between PEO, LLZO, and LiOH phases. It does not provide any information regarding conductivity values or temperatures such as 70°C."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~2.5 × 10⁻⁴",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The provided text details NMR experiments related to Li-ion exchange in a composite material. It does not contain any data about conductivity or temperatures like 60°C."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 2.5e-06,
+      "_norm_temp": 60
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~1.7 × 10⁻⁴",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text describes NMR experiments and Li-ion exchange mechanisms within PEO, LLZO, and LiOH phases. Conductivity values and temperatures like 50°C are not mentioned."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 1.6999999999999998e-06,
+      "_norm_temp": 50
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~4.5 × 10⁻⁵",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The text explains NMR experiments to study Li-ion exchange but does not report conductivity values or temperatures such as 40°C."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 4.5000000000000003e-07,
+      "_norm_temp": 40
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconium Oxide",
+        "acronym": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "~5.5 × 10⁻⁶",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure panel (d)",
+      "refers_to_figure": "Figure (d)",
+      "refers_to_table": null,
+      "material_description": "PEO-based composite solid electrolyte containing LiTFSI salt and 10 vol% LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "378dd679",
+        "title": "Pseudo 3D NMR Experiment (1H-6Li CP followed by EXSY)",
+        "section": "Results and discussion"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text is focused on NMR spectroscopy to investigate Li-ion exchange processes in a composite material. It does not include any conductivity measurements or temperature data like 25°C."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 5.5e-08,
+      "_norm_temp": 25
+    },
+    {
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "ceramic electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high",
+      "measurement_temperature": "room temperature",
+      "confidence": "low",
+      "data_source": "inferred",
+      "exact_quote": "Ceramics can have a wide electrochemical stability and a high Li-ion conductivity at room temperature, but suffer from poor mechanical properties due to their hardness and fragility.",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "poor mechanical properties due to their hardness and fragility",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "69b35f95",
+        "title": "Advantages and Disadvantages of Ceramic and Polymer Electrolytes",
+        "section": "Introduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      },
+      "_norm_cond": null,
+      "_norm_temp": null
+    },
+    {
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "polymers",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "low",
+      "measurement_temperature": "room temperature",
+      "confidence": "low",
+      "data_source": "inferred",
+      "exact_quote": "However, their low ionic conductivity at room temperature and inability to suppress dendrite growth (as they can be easily penetrated by sharp Li dendrites due to their soft nature)21 limit their battery performances.",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "malleability allows a better interfacial contact with the electrodes. inability to suppress dendrite growth (as they can be easily penetrated by sharp Li dendrites due to their soft nature)",
+      "processing_method": "easier to process",
+      "source_node": {
+        "node_id": "69b35f95",
+        "title": "Advantages and Disadvantages of Ceramic and Polymer Electrolytes",
+        "section": "Introduction"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 0.0,
+      "_norm_temp": 25
+    },
+    {
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "24-36 LLZO with suitable dopants crystallizes in a cubic phase and has a high ionic conductivity at room temperature",
+      "specific_source_location": "main text paragraph 1",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "cubic phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "aa45f8d5",
+        "title": "Properties and Challenges of PEO-LLZO Composites",
+        "section": "Introduction"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25
+    },
+    {
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyethylene Oxide with Lithium Bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ to 10⁻⁸",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "On the other hand, PEO mixed with Li salt (i.e. LiTFSI) is less expensive, but presents a low ionic conductivity at room temperature ( $\\sigma \\approx 10^{-6}$  to 10<sup>-8</sup> S cm<sup>-1</sup>) due to their high crystallinity at room temperature.",
+      "specific_source_location": "main text paragraph 1",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "high crystallinity",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "aa45f8d5",
+        "title": "Properties and Challenges of PEO-LLZO Composites",
+        "section": "Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polyethylene Oxide with Lithium Bis(trifluoromethanesulfonyl)imide and plasticizers",
+        "acronym": "PEO:LiTFSI + plasticizers",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ to 10⁻⁵",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "However, the influence of the ceramic particles on the ionic conductivity is not significant without the addition of plasticizers ( $\\sigma \\approx 10^{-6}$  to  $10^{-5}$  S cm<sup>-1</sup> at room temperature).",
+      "specific_source_location": "main text paragraph 2",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "N/A",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "aa45f8d5",
+        "title": "Properties and Challenges of PEO-LLZO Composites",
+        "section": "Introduction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      },
+      "_norm_cond": null,
+      "_norm_temp": null
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "PEO:LiTFSI-LLZO composite",
+        "acronym": "PEO:LiTFSI-LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "slight increase compared to pure PEO:LiTFSI",
+      "measurement_temperature": "room temperature",
+      "confidence": "low",
+      "data_source": "inferred",
+      "exact_quote": "The slight increase of the conductivity of the PEO:-LiTFSI-LLZO composite, compared to the pure PEO:LiTFSI electrolyte, has been explained by the amorphization of PEO by the ceramic filler where the Li-ion diffusion pathway occurs mainly through the polymer phase for ceramic-in-polymer electrolytes.",
+      "specific_source_location": "main text paragraph 2",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "ceramic-in-polymer electrolytes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "aa45f8d5",
+        "title": "Properties and Challenges of PEO-LLZO Composites",
+        "section": "Introduction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The text mentions a 'slight increase of the conductivity of the PEO:-LiTFSI-LLZO composite, compared to the pure PEO:LiTFSI electrolyte', but it does not provide specific conductivity values or a comparison in terms of conductivity ranges."
+        ],
+        "audited_by_llm": true
+      },
+      "_norm_cond": 0.0,
+      "_norm_temp": 25
+    }
+  ]
+}

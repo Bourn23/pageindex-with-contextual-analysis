@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parsed_doc - Materials</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 2rem;
+        }
+        
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .header .subtitle { opacity: 0.9; font-size: 0.9rem; }
+        
+        .stats-bar {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+        
+        .stat-label { color: #666; font-size: 0.85rem; }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 180px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            background: white;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .search-box:focus { outline: none; border-color: #2e7d32; }
+        
+        .type-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .type-header {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            padding: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .material-item {
+            padding: 0.7rem;
+            margin: 0.3rem 0;
+            cursor: pointer;
+            border-radius: 6px;
+            border-left: 3px solid #4caf50;
+            background: #f9f9f9;
+            transition: all 0.2s;
+        }
+        
+        .material-item:hover {
+            background: #e8f5e9;
+            transform: translateX(3px);
+        }
+        
+        .material-item.active {
+            background: #2e7d32;
+            color: white;
+            border-left-color: #1b5e20;
+        }
+        
+        .material-abbrev {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .material-fullname {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 0.2rem;
+        }
+        
+        .detail-section { margin-bottom: 2rem; }
+        
+        .detail-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #2e7d32;
+        }
+        
+        .detail-section h3 {
+            font-size: 0.9rem;
+            margin: 1rem 0 0.5rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .full-name {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-type {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-composition {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-processing {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .source-card {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid #2e7d32;
+        }
+        
+        .source-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .source-id {
+            font-family: monospace;
+            font-size: 0.8rem;
+            background: #e0e0e0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+        
+        .source-section {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .source-title {
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            color: #999;
+            font-style: italic;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .processing-list {
+            list-style: none;
+        }
+        
+        .processing-list li {
+            padding: 0.5rem 0.7rem;
+            background: #f3e5f5;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #7b1fa2;
+        }
+        
+        .composition-list {
+            list-style: none;
+        }
+        
+        .composition-list li {
+            padding: 0.5rem 0.7rem;
+            background: #fff3e0;
+            border-radius: 4px;
+            margin: 0.3rem 0;
+            border-left: 3px solid #e65100;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⚡ Ionic Conductivity Data</h1>
+        <div class="subtitle">parsed_doc</div>
+    </div>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <span class="stat-value">55</span>
+            <span class="stat-label">Data Points</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Material Classes</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">10</span>
+            <span class="stat-label">Primary Study Materials</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">55</span>
+            <span class="stat-label">Source References</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" class="search-box" id="search" placeholder="Search materials...">
+            <div id="material-list">
+                <div class="type-group"><div class="type-header"><span>CERAMIC</span><span>16</span></div>
+                <div class="material-item" 
+                     data-index="0"
+                     data-acronym="c-LLZO" 
+                     data-fullname="cubic Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(0)">
+                    <div class="material-abbrev">c-LLZO</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="1"
+                     data-acronym="LLTO" 
+                     data-fullname="Lithium Lanthanum Titanate"
+                     onclick="showMaterial(1)">
+                    <div class="material-abbrev">LLTO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="2"
+                     data-acronym="LLZ" 
+                     data-fullname="Al and Ga Cosubstituted Li7La3Zr2O12 Solid Electrolytes"
+                     onclick="showMaterial(2)">
+                    <div class="material-abbrev">LLZ</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="3"
+                     data-acronym="LLZ" 
+                     data-fullname="Li7-xLa3(Zr2-xMx)O12"
+                     onclick="showMaterial(3)">
+                    <div class="material-abbrev">LLZ</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="4"
+                     data-acronym="LLZMO" 
+                     data-fullname="Li7-2xLaxZr2-xMoxO12"
+                     onclick="showMaterial(4)">
+                    <div class="material-abbrev">LLZMO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="5"
+                     data-acronym="LLZO" 
+                     data-fullname="Garnet-Type Solid Electrolytes"
+                     onclick="showMaterial(5)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻³ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="6"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(6)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="7"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(7)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="8"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(8)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="9"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(9)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="10"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(10)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="11"
+                     data-acronym="LLZO" 
+                     data-fullname="Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(11)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="12"
+                     data-acronym="LLZO" 
+                     data-fullname="Cubic Li7La3Zr2O12"
+                     onclick="showMaterial(12)">
+                    <div class="material-abbrev">LLZO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="13"
+                     data-acronym="LLZTO" 
+                     data-fullname="Lithium-Conducting Garnets"
+                     onclick="showMaterial(13)">
+                    <div class="material-abbrev">LLZTO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="14"
+                     data-acronym="LLZTO" 
+                     data-fullname="Lithium Garnet Oxides"
+                     onclick="showMaterial(14)">
+                    <div class="material-abbrev">LLZTO</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="15"
+                     data-acronym="t-LLZO" 
+                     data-fullname="tetragonal Lithium Lanthanum Zirconate Oxide"
+                     onclick="showMaterial(15)">
+                    <div class="material-abbrev">t-LLZO</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>POLYMER</span><span>10</span></div>
+                <div class="material-item" 
+                     data-index="16"
+                     data-acronym="" 
+                     data-fullname="(PEO)10LiClO4-Al2O3 Composite Polymer Electrolyte"
+                     onclick="showMaterial(16)">
+                    <div class="material-abbrev">(PEO)10LiClO4-Al2O3 Composite Polymer Electrolyte</div>
+                    <div class="material-fullname">1.2 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="17"
+                     data-acronym="" 
+                     data-fullname="(PEO)9LiTFSI Polymer Electrolyte System"
+                     onclick="showMaterial(17)">
+                    <div class="material-abbrev">(PEO)9LiTFSI Polymer Electrolyte System</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="18"
+                     data-acronym="" 
+                     data-fullname="Composite Polyether Based Solid Electrolytes"
+                     onclick="showMaterial(18)">
+                    <div class="material-abbrev">Composite Polyether Based Solid Electrolytes</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="19"
+                     data-acronym="" 
+                     data-fullname="Lithium Ions in Polyacrylonitrile"
+                     onclick="showMaterial(19)">
+                    <div class="material-abbrev">Lithium Ions in Polyacrylonitrile</div>
+                    <div class="material-fullname">1.5 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="20"
+                     data-acronym="PAN" 
+                     data-fullname="polyacrylonitrile"
+                     onclick="showMaterial(20)">
+                    <div class="material-abbrev">PAN</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="21"
+                     data-acronym="PAN-LiClO4" 
+                     data-fullname="Polymer electrolyte with LiClO4"
+                     onclick="showMaterial(21)">
+                    <div class="material-abbrev">PAN-LiClO4</div>
+                    <div class="material-fullname">~10⁻⁷ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="22"
+                     data-acronym="PAN-LiClO4" 
+                     data-fullname="Polymer electrolyte with LiClO4"
+                     onclick="showMaterial(22)">
+                    <div class="material-abbrev">PAN-LiClO4</div>
+                    <div class="material-fullname">$4.06 	imes 10^{-7}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="23"
+                     data-acronym="" 
+                     data-fullname="Polyacrylonitrile-Based Polymer Electrolytes"
+                     onclick="showMaterial(23)">
+                    <div class="material-abbrev">Polyacrylonitrile-Based Polymer Electrolytes</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="24"
+                     data-acronym="" 
+                     data-fullname="Polymer Electrolytes Based on PAN"
+                     onclick="showMaterial(24)">
+                    <div class="material-abbrev">Polymer Electrolytes Based on PAN</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="25"
+                     data-acronym="" 
+                     data-fullname="Polymer-based electrolytes"
+                     onclick="showMaterial(25)">
+                    <div class="material-abbrev">Polymer-based electrolytes</div>
+                    <div class="material-fullname">&lt;10⁻⁵ S/cm</div>
+                </div>
+            </div><div class="type-group"><div class="type-header"><span>COMPOSITE</span><span>29</span></div>
+                <div class="material-item" 
+                     data-index="26"
+                     data-acronym="Al-doped LLZO NWs" 
+                     data-fullname="Al-doped LLZO NWs in Polymer"
+                     onclick="showMaterial(26)">
+                    <div class="material-abbrev">Al-doped LLZO NWs</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="27"
+                     data-acronym="" 
+                     data-fullname="Al-doped LLZO NWs infiltrated with poly(ethylene oxide)"
+                     onclick="showMaterial(27)">
+                    <div class="material-abbrev">Al-doped LLZO NWs infiltrated with poly(ethylene oxide)</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="28"
+                     data-acronym="Al2O3 NWs" 
+                     data-fullname="Aluminum Oxide Nanowires in Polymer"
+                     onclick="showMaterial(28)">
+                    <div class="material-abbrev">Al2O3 NWs</div>
+                    <div class="material-fullname">1.52 	imes 10^{-5} S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="29"
+                     data-acronym="Al2O3 NWs" 
+                     data-fullname="Al2O3 NWs in Polymer"
+                     onclick="showMaterial(29)">
+                    <div class="material-abbrev">Al2O3 NWs</div>
+                    <div class="material-fullname">$1.52 	imes 10^{-5}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="30"
+                     data-acronym="BM-LLZO NPs" 
+                     data-fullname="Ball-milled Lithium Lanthanum Zirconate Nanoparticles in Polymer"
+                     onclick="showMaterial(30)">
+                    <div class="material-abbrev">BM-LLZO NPs</div>
+                    <div class="material-fullname">1.13 	imes 10^{-5} S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="31"
+                     data-acronym="BM-LLZO NPs" 
+                     data-fullname="BM-LLZO NPs in Polymer"
+                     onclick="showMaterial(31)">
+                    <div class="material-abbrev">BM-LLZO NPs</div>
+                    <div class="material-fullname">$1.13 	imes 10^{-5}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="32"
+                     data-acronym="c-LLZO NW / CPE" 
+                     data-fullname="Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte"
+                     onclick="showMaterial(32)">
+                    <div class="material-abbrev">c-LLZO NW / CPE</div>
+                    <div class="material-fullname">1.1 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="33"
+                     data-acronym="c-LLZO NW / CPE" 
+                     data-fullname="Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte"
+                     onclick="showMaterial(33)">
+                    <div class="material-abbrev">c-LLZO NW / CPE</div>
+                    <div class="material-fullname">1.25 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="34"
+                     data-acronym="c-LLZO NW / CPE" 
+                     data-fullname="Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte"
+                     onclick="showMaterial(34)">
+                    <div class="material-abbrev">c-LLZO NW / CPE</div>
+                    <div class="material-fullname">1.0 × 10⁻³ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="35"
+                     data-acronym="" 
+                     data-fullname="Composite Polyether Based Solid Electrolytes"
+                     onclick="showMaterial(35)">
+                    <div class="material-abbrev">Composite Polyether Based Solid Electrolytes</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="36"
+                     data-acronym="" 
+                     data-fullname="Composite Polymeric Electrolytes"
+                     onclick="showMaterial(36)">
+                    <div class="material-abbrev">Composite Polymeric Electrolytes</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="37"
+                     data-acronym="CPE" 
+                     data-fullname="Polymer Composite Electrolyte (no filler)"
+                     onclick="showMaterial(37)">
+                    <div class="material-abbrev">CPE</div>
+                    <div class="material-fullname">4.4 × 10⁻⁷ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="38"
+                     data-acronym="CPEs" 
+                     data-fullname="Polymer electrolyte with LLZO NWs as ceramic fillers"
+                     onclick="showMaterial(38)">
+                    <div class="material-abbrev">CPEs</div>
+                    <div class="material-fullname">10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="39"
+                     data-acronym="CPEs" 
+                     data-fullname="Polymer electrolyte with Al- and Ta-doped LLZO NWs"
+                     onclick="showMaterial(39)">
+                    <div class="material-abbrev">CPEs</div>
+                    <div class="material-fullname">similar to undoped LLZO NWs S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="40"
+                     data-acronym="" 
+                     data-fullname="Li1.3Al0.3Ti1.7(PO4)3-Filled PEO-Based Solid Composite Polymer Electrolytes"
+                     onclick="showMaterial(40)">
+                    <div class="material-abbrev">Li1.3Al0.3Ti1.7(PO4)3-Filled PEO-Based Solid Composite Polymer Electrolytes</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="41"
+                     data-acronym="" 
+                     data-fullname="Li7La3Zr2O12-Polyethylene Oxide Composite Electrolytes"
+                     onclick="showMaterial(41)">
+                    <div class="material-abbrev">Li7La3Zr2O12-Polyethylene Oxide Composite Electrolytes</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="42"
+                     data-acronym="LLZO NWs" 
+                     data-fullname="Lithium Lanthanum Zirconate Nanowires in Polymer"
+                     onclick="showMaterial(42)">
+                    <div class="material-abbrev">LLZO NWs</div>
+                    <div class="material-fullname">1.31 	imes 10^{-4} S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="43"
+                     data-acronym="LLZO NWs" 
+                     data-fullname="Lithium Lanthanum Zirconate Nanowires in Polymer"
+                     onclick="showMaterial(43)">
+                    <div class="material-abbrev">LLZO NWs</div>
+                    <div class="material-fullname">~10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="44"
+                     data-acronym="" 
+                     data-fullname="Nanocomposite Polymer Electrolytes for Lithium Batteries"
+                     onclick="showMaterial(44)">
+                    <div class="material-abbrev">Nanocomposite Polymer Electrolytes for Lithium Batteries</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="45"
+                     data-acronym="" 
+                     data-fullname="Polyacrylonitrile Electrolytes: 1. A Novel High-Conductivity Composite Polymer Electrolyte Based on PAN, LiClO4 and α-Al2O3"
+                     onclick="showMaterial(45)">
+                    <div class="material-abbrev">Polyacrylonitrile Electrolytes: 1. A Novel High-Conductivity Composite Polymer Electrolyte Based on PAN, LiClO4 and α-Al2O3</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="46"
+                     data-acronym="" 
+                     data-fullname="Polymer Electrolytes with Ceramic Nanowire Fillers"
+                     onclick="showMaterial(46)">
+                    <div class="material-abbrev">Polymer Electrolytes with Ceramic Nanowire Fillers</div>
+                    <div class="material-fullname">1.0 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="47"
+                     data-acronym="" 
+                     data-fullname="Polymer-Ceramic Composite Electrolytes"
+                     onclick="showMaterial(47)">
+                    <div class="material-abbrev">Polymer-Ceramic Composite Electrolytes</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="48"
+                     data-acronym="" 
+                     data-fullname="Polymer-Ceramic Ion-Conducting Composites"
+                     onclick="showMaterial(48)">
+                    <div class="material-abbrev">Polymer-Ceramic Ion-Conducting Composites</div>
+                    <div class="material-fullname">N/A S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="49"
+                     data-acronym="Ta-doped LLZO NWs" 
+                     data-fullname="Ta-doped LLZO NWs in Polymer"
+                     onclick="showMaterial(49)">
+                    <div class="material-abbrev">Ta-doped LLZO NWs</div>
+                    <div class="material-fullname">$1.50 	imes 10^{-4}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="50"
+                     data-acronym="undoped LLZO NWs" 
+                     data-fullname="Undoped LLZO NWs in Polymer"
+                     onclick="showMaterial(50)">
+                    <div class="material-abbrev">undoped LLZO NWs</div>
+                    <div class="material-fullname">$6.17 	imes 10^{-6}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="51"
+                     data-acronym="undoped LLZO NWs" 
+                     data-fullname="Undoped LLZO NWs in Polymer"
+                     onclick="showMaterial(51)">
+                    <div class="material-abbrev">undoped LLZO NWs</div>
+                    <div class="material-fullname">$1.00 	imes 10^{-5}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="52"
+                     data-acronym="undoped LLZO NWs" 
+                     data-fullname="Undoped LLZO NWs in Polymer"
+                     onclick="showMaterial(52)">
+                    <div class="material-abbrev">undoped LLZO NWs</div>
+                    <div class="material-fullname">$1.31 	imes 10^{-4}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="53"
+                     data-acronym="undoped LLZO NWs" 
+                     data-fullname="Undoped LLZO NWs in Polymer"
+                     onclick="showMaterial(53)">
+                    <div class="material-abbrev">undoped LLZO NWs</div>
+                    <div class="material-fullname">$2.52 	imes 10^{-6}$ S/cm</div>
+                </div>
+            
+                <div class="material-item" 
+                     data-index="54"
+                     data-acronym="undoped LLZO NWs" 
+                     data-fullname="Undoped LLZO NWs in Polymer"
+                     onclick="showMaterial(54)">
+                    <div class="material-abbrev">undoped LLZO NWs</div>
+                    <div class="material-fullname">$3.10 	imes 10^{-6}$ S/cm</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="empty-state">
+                👈 Select a material to view details
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const materials = [{"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer electrolyte with LLZO NWs as ceramic fillers", "acronym": "CPEs", "proportion": "5 wt % LLZO NWs"}, "ionic_conductivity_S_per_cm": "10⁻⁴", "measurement_temperature": "room temperature", "confidence": "high", "data_source": "primary", "exact_quote": "In summary, CPEs with LLZO NWs as ceramic fillers were fabricated and showed great improvement in the roomtemperature ionic conductivity of a PAN-based polymer electrolyte to around 10<sup>-4</sup> S/cm.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "PAN-based polymer electrolyte with LLZO NWs as ceramic fillers", "processing_method": "Fabricated", "source_node": {"node_id": "37f5dece", "title": "Summary of Fabrication and Conductivity", "section": "CONCLUSIONS"}, "_index": 0, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0001, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer electrolyte with Al- and Ta-doped LLZO NWs", "acronym": "CPEs", "proportion": null}, "ionic_conductivity_S_per_cm": "similar to undoped LLZO NWs", "measurement_temperature": "room temperature", "confidence": "high", "data_source": "primary", "exact_quote": "Doping of the LLZO did not have a pronounced influence on the ionic conductivity of the CPE, as films containing Al- and Ta-doped LLZO NWs displayed similar conductivity as those with the undoped LLZO NWs.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "PAN-based polymer electrolyte with Al- and Ta-doped LLZO NWs", "processing_method": "Fabricated", "source_node": {"node_id": "37f5dece", "title": "Summary of Fabrication and Conductivity", "section": "CONCLUSIONS"}, "_index": 1, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polymer electrolyte with LiClO4", "acronym": "PAN-LiClO4", "proportion": null}, "ionic_conductivity_S_per_cm": "~10⁻⁷", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "As expected, all of the CPEs displayed higher conductivities than the blank sample containing only PAN and LiClO<sub>4</sub>, which had an ionic conductivity  ~10⁻⁷  S/cm and a Nyquist plot (Figure S4a) similar to previous reports.", "specific_source_location": "main text", "refers_to_figure": "Figure S4a", "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 2, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1e-09, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Nanowires in Polymer", "acronym": "LLZO NWs", "proportion": "5 wt %"}, "ionic_conductivity_S_per_cm": "1.31 \times 10^{-4}", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "The peak conductivity of  $1.31 \times 10^{-4}$  S/cm was observed when using 5 wt % loading, but this decreased when the wt % of filler was increased further.", "specific_source_location": "main text", "refers_to_figure": "Figure 3f", "refers_to_table": null, "material_description": "N/A", "processing_method": "stirring", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 3, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0013100000000000002, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Nanowires in Polymer", "acronym": "LLZO NWs", "proportion": "5 wt %"}, "ionic_conductivity_S_per_cm": "~10⁻⁴", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "The EIS results showed that the CPEs with doped LLZO NW fillers had similar ionic conductivities,  ~10⁻⁴  S/cm, as the CPEs with undoped LLZO (Table 1), suggesting that the Li\n+ conduction mechanism through the CPEs is dominated by a polymer/filler interface phenomenon that is independent of the LLZO filler composition.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 4, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Ball-milled Lithium Lanthanum Zirconate Nanoparticles in Polymer", "acronym": "BM-LLZO NPs", "proportion": "5 wt %"}, "ionic_conductivity_S_per_cm": "1.13 \times 10^{-5}", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "The CPE with 5 wt % BM-LLZO NPs as fillers displayed a total ionic conductivity of  $1.13 \times 10^{-5}$ S/cm (Figure 3d), roughly an order of magnitude lower than the CPEs with LLZO NW fillers.", "specific_source_location": "main text", "refers_to_figure": "Figure 3d", "refers_to_table": null, "material_description": "N/A", "processing_method": "ball-milling", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 5, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Aluminum Oxide Nanowires in Polymer", "acronym": "Al2O3 NWs", "proportion": "5 wt %"}, "ionic_conductivity_S_per_cm": "1.52 \times 10^{-5}", "measurement_temperature": "room temperature", "confidence": "high", "data_source": "primary", "exact_quote": "The total ionic conductivity at room temperature was similar to the CPE with BM-LLZO NPs but still higher than the conductivity of the blank sample containing only PAN and LiClO\n4.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "passive fillers", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 6, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.52e-05, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polymer electrolyte with LiClO4", "acronym": "PAN-LiClO4", "proportion": null}, "ionic_conductivity_S_per_cm": "$4.06 \times 10^{-7}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "none (LiClO4 in PAN only) | 0 | $4.06 \times 10^{-7}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 7, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 4.0600000000000005e-09, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Undoped LLZO NWs in Polymer", "acronym": "undoped LLZO NWs", "proportion": "1"}, "ionic_conductivity_S_per_cm": "$6.17 \times 10^{-6}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "undoped LLZO NWs          | 1                 | $6.17 \times 10^{-6}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 8, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 6.17e-06, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Undoped LLZO NWs in Polymer", "acronym": "undoped LLZO NWs", "proportion": "2.5"}, "ionic_conductivity_S_per_cm": "$1.00 \times 10^{-5}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "                          | 2.5               | $1.00 \times 10^{-5}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 9, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Undoped LLZO NWs in Polymer", "acronym": "undoped LLZO NWs", "proportion": "5"}, "ionic_conductivity_S_per_cm": "$1.31 \times 10^{-4}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "                          | 5                 | $1.31 \times 10^{-4}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 10, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.3100000000000002e-06, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Undoped LLZO NWs in Polymer", "acronym": "undoped LLZO NWs", "proportion": "10"}, "ionic_conductivity_S_per_cm": "$2.52 \times 10^{-6}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "                          | 10                | $2.52 \times 10^{-6}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 11, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Undoped LLZO NWs in Polymer", "acronym": "undoped LLZO NWs", "proportion": "15"}, "ionic_conductivity_S_per_cm": "$3.10 \times 10^{-6}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "                          | 15                | $3.10 \times 10^{-6}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 12, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 3.1e-08, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Al-doped LLZO NWs in Polymer", "acronym": "Al-doped LLZO NWs", "proportion": "5"}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "Al-doped LLZO NWs | 5                 |", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 13, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Ta-doped LLZO NWs in Polymer", "acronym": "Ta-doped LLZO NWs", "proportion": "5"}, "ionic_conductivity_S_per_cm": "$1.50 \times 10^{-4}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "Ta-doped LLZO NWs         | 5                 | $1.50 \times 10^{-4}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 14, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0015, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "BM-LLZO NPs in Polymer", "acronym": "BM-LLZO NPs", "proportion": "5"}, "ionic_conductivity_S_per_cm": "$1.13 \times 10^{-5}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "BM-LLZO NPs              | 5                 | $1.13 \times 10^{-5}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 15, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.13e-08, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Al2O3 NWs in Polymer", "acronym": "Al2O3 NWs", "proportion": "5"}, "ionic_conductivity_S_per_cm": "$1.52 \times 10^{-5}$", "measurement_temperature": "20 °C", "confidence": "high", "data_source": "primary", "exact_quote": "Al2O3 NWs                | 5                 | $1.52 \times 10^{-5}$", "specific_source_location": "Table 1", "refers_to_figure": null, "refers_to_table": "Table 1", "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "24d4507a", "title": "Characterization of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 16, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.52e-07, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte", "acronym": "c-LLZO NW / CPE", "proportion": "5 wt%"}, "ionic_conductivity_S_per_cm": "1.1 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "high", "data_source": "primary", "exact_quote": "Hence, the c-LLZO NWs prepared using the DMF-based precursors have more advantageous morphologies to serve as interconnected CPE fillers that can create continuous Li+ diffusion pathways.", "specific_source_location": "Figure f", "refers_to_figure": "Figure f", "refers_to_table": null, "material_description": "Undoped cubic LLZO nanowires with average diameter of 276 nm, acting as fillers in a composite electrolyte.", "processing_method": "Electrospinning of DMF-based precursor solution followed by calcination at 700 °C for 1 h.", "source_node": {"node_id": "596a2107", "title": "Preparation of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 17, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not contain information about conductivity or temperature for claim ID 17."], "audited_by_llm": true}, "_norm_cond": 1.1e-06, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte", "acronym": "c-LLZO NW / CPE", "proportion": "5 wt%"}, "ionic_conductivity_S_per_cm": "1.25 × 10⁻⁴", "measurement_temperature": "20°C", "confidence": "high", "data_source": "primary", "exact_quote": "Hence, the c-LLZO NWs prepared using the DMF-based precursors have more advantageous morphologies to serve as interconnected CPE fillers that can create continuous Li+ diffusion pathways.", "specific_source_location": "Figure g", "refers_to_figure": "Figure g", "refers_to_table": null, "material_description": "Undoped cubic LLZO nanowires (DMF-based) acting as fillers in a composite electrolyte.", "processing_method": "Electrospinning followed by calcination at 700 °C for 1 h.", "source_node": {"node_id": "596a2107", "title": "Preparation of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 18, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not contain information about conductivity or temperature for claim ID 18."], "audited_by_llm": true}, "_norm_cond": 1.25e-06, "_norm_temp": 20}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Cubic-phase Lithium Lanthanum Zirconate Oxide Nanowire / Polymer Composite Electrolyte", "acronym": "c-LLZO NW / CPE", "proportion": "5 wt%"}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻³", "measurement_temperature": "80°C", "confidence": "high", "data_source": "primary", "exact_quote": "Hence, the c-LLZO NWs prepared using the DMF-based precursors have more advantageous morphologies to serve as interconnected CPE fillers that can create continuous Li+ diffusion pathways.", "specific_source_location": "Figure g", "refers_to_figure": "Figure g", "refers_to_table": null, "material_description": "Undoped cubic LLZO nanowires (DMF-based) acting as fillers in a composite electrolyte.", "processing_method": "Electrospinning followed by calcination at 700 °C for 1 h.", "source_node": {"node_id": "596a2107", "title": "Preparation of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 19, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not contain information about conductivity or temperature for claim ID 19."], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer Composite Electrolyte (no filler)", "acronym": "CPE", "proportion": "0 wt% LLZO"}, "ionic_conductivity_S_per_cm": "4.4 × 10⁻⁷", "measurement_temperature": "RT", "confidence": "high", "data_source": "primary", "exact_quote": "Hence, the c-LLZO NWs prepared using the DMF-based precursors have more advantageous morphologies to serve as interconnected CPE fillers that can create continuous Li+ diffusion pathways.", "specific_source_location": "Figure f", "refers_to_figure": "Figure f", "refers_to_table": null, "material_description": "Baseline polymer electrolyte without LLZO nanowire fillers.", "processing_method": "Standard polymer electrolyte preparation.", "source_node": {"node_id": "596a2107", "title": "Preparation of LLZO Nanowires", "section": "RESULTS AND DISCUSSION"}, "_index": 20, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not contain information about conductivity or temperature for claim ID 20."], "audited_by_llm": true}, "_norm_cond": 4.4000000000000005e-09, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "polyacrylonitrile", "acronym": "PAN", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "room temperature", "confidence": "low", "data_source": "inferred", "exact_quote": "LLTO NWs embedded into polyacrylonitrile (PAN) achieved 3 orders of magnitude improvement in room temperature Li+ ionic conductivity compared to the polymer and Li+ salt alone, but the mechanism was not thoroughly investigated.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "7cc071f6", "title": "Examples of CPEs with Nanowire Fillers", "section": "**■ INTRODUCTION**"}, "_index": 21, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Al-doped LLZO NWs infiltrated with poly(ethylene oxide)", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "A CPE prepared from a mat of Al-doped LLZO NWs infiltrated with poly(ethylene oxide) (PEO) was effective for preventing Li dendrite formation under repeated lithium stripping/plating and also showed good flammability resistance.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "7cc071f6", "title": "Examples of CPEs with Nanowire Fillers", "section": "**■ INTRODUCTION**"}, "_index": 22, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0, "_norm_temp": 0}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "cubic Lithium Lanthanum Zirconate Oxide", "acronym": "c-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "As t-LLZO typically displays 2 orders of magnitude lower ionic conductivity than c-LLZO,<sup>20</sup> our findings point to a new way to access c-LLZO, namely through the use of nanostructures, which can subsequently be exploited as ceramic fillers for CPEs.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "dab22bd7", "title": "Accessing c-LLZO for CPEs", "section": "**■ INTRODUCTION**"}, "_index": 23, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'c-LLZO' which refers to cubic Lithium Lanthanum Zirconate Oxide, but it does not provide any specific values for ionic conductivity or temperature."], "audited_by_llm": true}, "_norm_cond": 0.075, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "tetragonal Lithium Lanthanum Zirconate Oxide", "acronym": "t-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "low", "data_source": "inferred", "exact_quote": "As t-LLZO typically displays 2 orders of magnitude lower ionic conductivity than c-LLZO,<sup>20</sup> our findings point to a new way to access c-LLZO, namely through the use of nanostructures, which can subsequently be exploited as ceramic fillers for CPEs.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "dab22bd7", "title": "Accessing c-LLZO for CPEs", "section": "**■ INTRODUCTION**"}, "_index": 24, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 't-LLZO' which refers to tetragonal Lithium Lanthanum Zirconate Oxide, but it does not provide any specific values for ionic conductivity or temperature."], "audited_by_llm": true}, "_norm_cond": 0.0, "_norm_temp": 0}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "(PEO)10LiClO4-Al2O3 Composite Polymer Electrolyte", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Impedance Study of (PEO)10LiClO4-Al2O3 Composite Polymer Electrolyte with Blocking Electrodes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 25, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material '(PEO)10LiClO4-Al2O3 Composite Polymer Electrolyte' in reference [36], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.2000000000000002e-06, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Lithium Ions in Polyacrylonitrile", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Conductive Behaviour of Lithium Ions in Polyacrylonitrile.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 26, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Lithium Ions in Polyacrylonitrile' in reference [37], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.4999999999999998e-06, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "(PEO)9LiTFSI Polymer Electrolyte System", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Effect of Nano-Porous Al2O3 on Thermal, Dielectric and Transport Properties of the (PEO)9LiTFSI Polymer Electrolyte System.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 27, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material '(PEO)9LiTFSI Polymer Electrolyte System' in reference [38], but does not provide conductivity or temperature values."], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Li1.3Al0.3Ti1.7(PO4)3-Filled PEO-Based Solid Composite Polymer Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Conductivity Studies on Ceramic Li1.3Al0.3Ti1.7(PO4)3-Filled PEO-Based Solid Composite Polymer Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 28, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Li1.3Al0.3Ti1.7(PO4)3-Filled PEO-Based Solid Composite Polymer Electrolytes' in reference [39], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Li7La3Zr2O12-Polyethylene Oxide Composite Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Lithium Ion Pathway within Li7La3Zr2O12 -Polyethylene Oxide Composite Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 29, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Li7La3Zr2O12-Polyethylene Oxide Composite Electrolytes' in reference [40], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polymer Electrolytes Based on PAN", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Lithium Ion Conduction in Polymer Electrolytes Based on PAN.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 30, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Polymer Electrolytes Based on PAN' in reference [41], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polyacrylonitrile-Based Polymer Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "The Mechanism of Lithium Ion Transport in Polyacrylonitrile-Based Polymer Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 31, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Polyacrylonitrile-Based Polymer Electrolytes' in reference [42], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Composite Polyether Based Solid Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Composite Polyether Based Solid Electrolytes. The Lewis Acid-Base Approach.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 32, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Composite Polyether Based Solid Electrolytes' in reference [43], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 0.01, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Li7-2xLaxZr2-xMoxO12", "acronym": "LLZMO", "proportion": "x=0.1-0.4"}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Synthesis, Crystal Chemistry, and Electrochemical Properties of Li7-2xLaxZr2-xMoxO12 (X=0.1-0.4): Stabilization of the Cubic Garnet Polymorph via Substitution of Zr4+ by Mo6+.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 33, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Li7-2xLaxZr2-xMoxO12' in reference [45], but does not provide conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Al and Ga Cosubstituted Li7La3Zr2O12 Solid Electrolytes", "acronym": "LLZ", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Structural and Electrochemical Consequences of Al and Ga Cosubstitution in Li7La3Zr2O12 Solid Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "0b0fff59", "title": "Garnet-type solid electrolytes with doping", "section": "REFERENCES"}, "_index": 34, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions the material 'Al and Ga Cosubstituted Li7La3Zr2O12 Solid Electrolytes' in reference [46], but does not provide conductivity or temperature values."], "audited_by_llm": true}}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polymer-based electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "<10⁻⁵", "measurement_temperature": "room temperature", "confidence": "low", "data_source": "inferred", "exact_quote": "Polymer-based electrolytes are attractive because they are not brittle and can more easily form interfaces to electrodes compared to inorganic electrolytes, but they also display poor mechanical properties and low ionic conductivities at room temperature.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "poor mechanical properties and low ionic conductivities at room temperature", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "350a2343", "title": "Introduction to Solid Electrolytes and CPEs", "section": "**■ INTRODUCTION**"}, "_index": 35, "_validation": {"is_valid": false, "issues": ["Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."], "audited_by_llm": false}, "_norm_cond": 10.0, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polyacrylonitrile Electrolytes: 1. A Novel High-Conductivity Composite Polymer Electrolyte Based on PAN, LiClO4 and α-Al2O3", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Polyacrylonitrile Electrolytes: 1. A Novel High-Conductivity Composite Polymer Electrolyte Based on PAN, LiClO\n4\n and \nα\n-Al\n2\nO\n3\n.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 36, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.045, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer-Ceramic Ion-Conducting Composites", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Polymer-Ceramic Ion-Conducting Composites.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 37, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Composite Polymeric Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Effective Medium Theory in Studies of Conductivity of Composite Polymeric Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 38, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Nanocomposite Polymer Electrolytes for Lithium Batteries", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Nanocomposite Polymer Electrolytes for Lithium Batteries.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 39, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer-Ceramic Composite Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Polymer-Ceramic Composite Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 40, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.0, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Composite Polyether Based Solid Electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Composite Polyether Based Solid Electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "58d4295c", "title": "Composite polymer electrolytes", "section": "REFERENCES"}, "_index": 41, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.005, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Titanate", "acronym": "LLTO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Enhanced Lithium Ion Conductivity in Lithium Lanthanum Titanate Solid Electrolyte Nanowires Prepared by Electrospinning.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 42, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Lithium Lanthanum Titanate' in reference (15), but does not provide conductivity or temperature information for this material."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polymer Electrolytes with Ceramic Nanowire Fillers", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Ionic Conductivity Enhancement of Polymer Electrolytes with Ceramic Nanowire Fillers.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 43, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Polymer Electrolytes with Ceramic Nanowire Fillers' in reference (16), but does not provide conductivity or temperature information."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Garnet-Type Solid Electrolytes", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻³", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Nanostructured Garnet-Type Solid Electrolytes for Lithium Batteries: Electrospinning Synthesis of Li7La3Zr2O12 Nanowires and Particle Size-Dependent Phase Transformation.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 44, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Garnet-Type Solid Electrolytes' in references (15, 17, 19, 20, 25, 31, 32, 33, 34), but does not provide conductivity or temperature information for the general category."], "audited_by_llm": true}, "_norm_cond": 0.001, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Synthesis and Structure Analysis of Tetragonal Li7La3Zr2O12 with the Garnet-Related Type Structure.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 45, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Crystal Chemistry and Stability of \"Li7La3Zr2O12\" garnet: A Fast Lithium-Ion Conductor.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 46, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Effect of Substitution (Ta, Al, Ga) on the Conductivity of Li7La3Zr2O12.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 47, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Low Temperature Stabilization of Cubic (Li7-x Alx/3)La3Zr2O12: Role of Aluminum during Formation.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 48, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium-Conducting Garnets", "acronym": "LLZTO", "proportion": "x = 0-2"}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "From Order to Disorder: The Structure of Lithium-Conducting Garnets Li7-xLaxTa_xZr2-xO12 (x = 0-2).", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 49, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Lithium-Conducting Garnets' in reference (26), but does not provide specific conductivity or temperature values."], "audited_by_llm": true}}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Li7-xLa3(Zr2-xMx)O12", "acronym": "LLZ", "proportion": "M = Ta5+, Nb5+, x = 0, 0.25"}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Ion Transport and Phase Transition in Li7-xLa3(Zr2-xM_x)O12 (M = Ta5+, Nb5+, X = 0, 0.25).", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 50, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7-xLa3(Zr2-xMx)O12' in references (27, 29), but does not explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Garnet Oxides", "acronym": "LLZTO", "proportion": "Li7-xLa3Zr2-xTaxO12"}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "High Ionic Conductivity Lithium Garnet Oxides of Li7-xLa3Zr2-xTaxO12 Compositions.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 51, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Lithium Garnet Oxides' in reference (28), but does not provide specific conductivity or temperature values."], "audited_by_llm": true}, "_norm_cond": 1.0000000000000002e-06, "_norm_temp": 25}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Structure and Dynamics of the Fast Lithium Ion conductor \"Li7La3Zr2O12.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 52, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Sol–gel Synthesis and Lithium Ion Conductivity of Li7La3Zr2O12 with Garnet-Related Type Structure.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "Sol-gel Synthesis", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 53, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Li7La3Zr2O12' (which can be considered Lithium Lanthanum Zirconate Oxide) in multiple references (17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35), but none of these explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Cubic Li7La3Zr2O12", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴", "measurement_temperature": "RT", "confidence": "medium", "data_source": "cited", "exact_quote": "Synthesis of Cubic Li7La3Zr2O12 by Modified Sol-Gel Process.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "Modified Sol-Gel Process", "source_node": {"node_id": "308c7bbb", "title": "Garnet-type solid electrolytes", "section": "REFERENCES"}, "_index": 54, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text mentions 'Cubic Li7La3Zr2O12' in references (21, 23, 24, 31, 34), but does not explicitly state a conductivity of '1.0 × 10⁻⁴ S/cm' at 'RT'."], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null}];
+        let currentIndex = 0;
+        
+        function showMaterial(index) {
+            const mat = materials[index];
+            if (!mat) return;
+            
+            currentIndex = index;
+            
+            // Update active state
+            document.querySelectorAll('.material-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(`[data-index="${index}"]`)?.classList.add('active');
+            
+            // Generate detail view
+            const content = document.getElementById('content');
+            content.innerHTML = generateDetails(mat, index);
+        }
+        
+        function generateDetails(mat, index) {
+            const electrolyte = mat.electrolyte_name || {};
+            const hasFullName = electrolyte.full_name && electrolyte.full_name.trim();
+            const hasAcronym = electrolyte.acronym && electrolyte.acronym.trim();
+            const hasProportion = electrolyte.proportion && electrolyte.proportion.trim();
+            const hasProcessing = mat.processing_method && mat.processing_method.trim() && !mat.processing_method.includes('N/A');
+            const hasDescription = mat.material_description && mat.material_description.trim() && !mat.material_description.includes('N/A');
+            const hasSource = mat.source_node;
+            
+            let html = `
+                <div class="detail-section">
+                    <h2>${hasAcronym ? escapeHtml(electrolyte.acronym) : escapeHtml(electrolyte.full_name || 'Unknown')}</h2>
+                    ${hasFullName && hasAcronym ? `<div class="full-name">${escapeHtml(electrolyte.full_name)}</div>` : ''}
+                    
+                    <div style="margin: 1rem 0;">
+                        <span class="badge badge-type">${escapeHtml(mat.material_class || 'Other')}</span>
+                        ${hasProportion ? `<span class="badge badge-composition">${escapeHtml(electrolyte.proportion)}</span>` : ''}
+                    </div>
+                    
+                    <h3>Ionic Conductivity</h3>
+                    <div style="background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 4px solid #2e7d32; margin-bottom: 1rem;">
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #1b5e20; margin-bottom: 0.5rem;">
+                            ${escapeHtml(mat.ionic_conductivity_S_per_cm)} S/cm
+                        </div>
+                        <div style="color: #666;">
+                            Temperature: ${escapeHtml(mat.measurement_temperature)}
+                        </div>
+                        ${mat.specific_source_location ? `
+                        <div style="color: #666; margin-top: 0.3rem;">
+                            Location: ${escapeHtml(mat.specific_source_location)}
+                        </div>
+                        ` : ''}
+                    </div>
+            `;
+            
+            if (hasDescription) {
+                html += `
+                    <h3>Material Description</h3>
+                    <div style="background: #f9f9f9; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; line-height: 1.6;">
+                        ${escapeHtml(mat.material_description)}
+                    </div>
+                `;
+            }
+            
+            if (hasProcessing) {
+                html += `
+                    <h3>Processing Method</h3>
+                    <div class="processing-list">
+                        <li>${escapeHtml(mat.processing_method)}</li>
+                    </div>
+                `;
+            }
+            
+            if (hasSource) {
+                html += `
+                    <h3>Source Node</h3>
+                    <div class="source-card">
+                        <div class="source-header">
+                            <span class="source-id">${escapeHtml(mat.source_node.node_id || 'N/A')}</span>
+                            <span class="source-section">${escapeHtml(mat.source_node.section || '')}</span>
+                        </div>
+                        <div class="source-title">${escapeHtml(mat.source_node.title || 'Unknown')}</div>
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            return html;
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function escapeAttr(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        
+        // Search functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.material-item').forEach(el => {
+                const acronym = (el.dataset.acronym || '').toLowerCase();
+                const fullname = (el.dataset.fullname || '').toLowerCase();
+                const visible = acronym.includes(query) || fullname.includes(query);
+                el.style.display = visible ? '' : 'none';
+            });
+            
+            // Show/hide type groups based on visible children
+            document.querySelectorAll('.type-group').forEach(group => {
+                const items = group.querySelectorAll('.material-item');
+                let hasVisible = false;
+                items.forEach(item => {
+                    if (item.style.display !== 'none') hasVisible = true;
+                });
+                group.style.display = hasVisible ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,11 +1,12 @@
 """
 This version introduces batch processing
 """
+import os
 import asyncio
 import json
 import re
 import uuid
-from typing import List, Optional, Dict, Any, Tuple
+from typing import List, Optional, Dict, Any, Tuple, Union
 from itertools import groupby
 from operator import itemgetter
 from concurrent.futures import ThreadPoolExecutor
@@ -28,6 +29,20 @@ try:
 except ImportError:
     SPACY_AVAILABLE = False
     print("⚠️ Spacy not found. Using Regex fallback for sentence splitting.")
+if SPACY_AVAILABLE:
+    from spacy.symbols import ORTH
+    nlp.tokenizer.add_special_case("Fig.", [{ORTH: "Fig."}])
+    nlp.tokenizer.add_special_case("Figs.", [{ORTH: "Figs."}])
+    nlp.tokenizer.add_special_case("Eq.", [{ORTH: "Eq."}])
+    nlp.tokenizer.add_special_case("Eqs.", [{ORTH: "Eqs."}])
+    nlp.tokenizer.add_special_case("Tab.", [{ORTH: "Tab."}])
+    nlp.tokenizer.add_special_case("Tabs.", [{ORTH: "Tabs."}])
+    nlp.tokenizer.add_special_case("al.", [{ORTH: "al."}])
+    nlp.tokenizer.add_special_case("Refs.", [{ORTH: "Refs."}])
+    nlp.tokenizer.add_special_case("Ref.", [{ORTH: "Ref."}])
+    nlp.tokenizer.add_special_case("vs.", [{ORTH: "vs."}])
+    nlp.tokenizer.add_special_case("i.e.", [{ORTH: "i.e."}])
+    nlp.tokenizer.add_special_case("e.g.", [{ORTH: "e.g."}])
 
 # ==========================================
 # 1. PYDANTIC SCHEMAS FOR STRUCTURED OUTPUT
@@ -65,13 +80,28 @@ class SentenceNode(BaseModel):
     nodes: List[KeywordNode]
     node_id: str
 
+class ImageNode(BaseModel):
+    """Leaf Node: An image/figure"""
+    title: str = "Image"
+    src: str = Field(description="File Path or URL of the image")
+    text: str = Field(default="", description="Alt text provided in markdown")
+    node_type: str = "image"
+    node_id: str
+
+class TableNode(BaseModel):
+    """Leaf Node: A data table."""
+    title: str = Field(description="The table caption")
+    text: str = Field(description="The raw markdown representation of the table")
+    node_type: str = "table"
+    node_id: str
+
 class SemanticGroupNode(BaseModel):
     """Level 2.5 Node: A paragraph or semantic cluster of sentences."""
     title: str
     text: str
     line_num: int
     node_type: str = "semantic_group"
-    nodes: List[SentenceNode]
+    nodes: List[Union[SentenceNode, ImageNode, TableNode]]
     node_id: str
 
 class SectionNode(BaseModel):
@@ -122,22 +152,144 @@ class SectionSplitOutput(BaseModel):
 # ==========================================
 # 3. UTILITIES & CLIENT
 # ==========================================
+class BlockRegistry:
+    def __init__(self):
+        self.blocks = {} # { "UUID_KEY": NodeObject }
+
+    def register(self, key: str, node: Union[ImageNode, TableNode]):
+        self.blocks[key] = node
+        
+    def get(self, key: str):
+        return self.blocks.get(key)
+
+def extract_special_blocks(text: str) -> Tuple[str, BlockRegistry]:
+    """
+    detects Images and Tables, creates their Nodes, adds them to a registry,
+    and replaces their occurrences in the text with a placeholder __BLOCK_{ID}__.
+    """
+    registry = BlockRegistry()
+    lines = text.split('\n')
+    processed_lines = []
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        
+        # --- 1. DETECT IMAGES ---
+        # Regex: ![_page_0_Picture_5.jpeg] or ![](_page_0_Picture_5.jpeg)
+        img_match = re.search(r'!\[(.*?)\]\((.*?)\)', stripped)
+        if img_match:
+            alt_text = img_match.group(1)
+            src = img_match.group(2)
+            
+            block_id = f"__IMG_{get_uuid()}__"
+            node = ImageNode(
+                title=f"Figure: {src}",
+                src=src,
+                alt_text=alt_text,
+                node_id=get_uuid()
+            )
+            registry.register(block_id, node)
+            processed_lines.append(f"\n{block_id}\n")
+            i += 1
+            continue
+
+        # --- 2. DETECT TABLES ---
+        # Heuristic: A line starting with '|' is likely a table row
+        if stripped.startswith('|'):
+            # Look backwards for a caption (up to 2 lines back, handling HTML spans)
+            caption = "Untitled Table"
+            caption_found = False
+            
+            # Check previous line for text
+            if processed_lines:
+                prev_line = processed_lines[-1].strip()
+                # Remove HTML spans if present: <span id="..."></span>Table 1...
+                clean_prev = re.sub(r'<[^>]+>', '', prev_line).strip()
+                
+                if clean_prev.lower().startswith('table'):
+                    caption = clean_prev
+                    processed_lines.pop() # Remove caption from text flow so it attaches to table
+                    caption_found = True
+            
+            # Consume all table lines
+            table_lines = []
+            while i < len(lines) and lines[i].strip().startswith('|'):
+                table_lines.append(lines[i])
+                i += 1
+            
+            block_id = f"__TBL_{get_uuid()}__"
+            node = TableNode(
+                title=caption,
+                markdown_content="\n".join(table_lines),
+                node_id=get_uuid()
+            )
+            registry.register(block_id, node)
+            processed_lines.append(f"\n{block_id}\n")
+            # Don't increment i here, the inner while loop did it
+            continue
+
+        # Normal line
+        processed_lines.append(line)
+        i += 1
+
+    return "\n".join(processed_lines), registry
+
 
 def get_uuid(): return str(uuid.uuid4())[:8]
 
 def split_text_to_sentences(text: str) -> List[str]:
-    """Deterministic splitting. Source of Truth."""
-    if SPACY_AVAILABLE:
-        doc = nlp(text)
-        return [sent.text.strip() for sent in doc.sents if sent.text.strip()]
-    else:
-        # Robust Regex Fallback
-        return [s.strip() for s in re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s', text) if s.strip()]
+    """
+    Hybrid Splitter:
+    1. Uses Regex to isolate __IMG__ and __TBL__ blocks.
+    2. Uses Spacy (if available) to intelligently split the text between blocks.
+    """
+    
+    # --- PASS 1: STRUCTURAL SPLIT (Isolate Blocks) ---
+    # Split by the specific placeholder format. 
+    # Capturing group () keeps the delimiter in the list.
+    block_pattern = r'(__[A-Z]{3}_[a-f0-9-]{8}__)'
+    structural_chunks = re.split(block_pattern, text)
+    
+    final_sentences = []
 
-async def llm_call_async(prompt: str, json_schema: Optional[Dict[str, Any]] = None) -> str:
+    # --- PASS 2: LINGUISTIC SPLIT (Process Text) ---
+    for chunk in structural_chunks:
+        clean_chunk = chunk.strip()
+        if not clean_chunk: 
+            continue
+
+        # Check if this chunk is a Special Block ID
+        if re.match(r'^__[A-Z]{3}_[a-f0-9-]{8}__$', clean_chunk):
+            # It's a block! Keep it whole.
+            final_sentences.append(clean_chunk)
+        else:
+            # It's actual text! Use Spacy.
+            if SPACY_AVAILABLE:
+                doc = nlp(clean_chunk)
+                # Spacy handles abbreviations like "Fig." much better than regex
+                spacy_sents = [sent.text.strip() for sent in doc.sents if sent.text.strip()]
+                final_sentences.extend(spacy_sents)
+            else:
+                # Fallback Regex if Spacy isn't installed
+                # (This is the robust science regex from before)
+                science_pattern = (
+                    r'(?<!\bFig\.)(?<!\bFigs\.)(?<!\bEq\.)(?<!\bEqs\.)'
+                    r'(?<!\bTab\.)(?<!\bRef\.)(?<!\bal\.)'
+                    r'(?<!\b[A-Z]\.)'
+                    r'(?<=\.|\?|\!)'
+                    r'\s'
+                )
+                regex_sents = re.split(science_pattern, clean_chunk)
+                final_sentences.extend([s.strip() for s in regex_sents if s.strip()])
+            
+    return final_sentences
+
+async def llm_call_async(prompt: str, json_schema: Optional[Dict[str, Any]] = None, timeout: int = 60) -> str:
     """
     Wraps the blocking Gemini call in a thread executor so it doesn't freeze the loop.
-    Matches the pattern in your 'apply_semantic_subdivision' snippet.
+    Includes a timeout to prevent infinite hangs.
     """
     loop = asyncio.get_running_loop()
     
@@ -153,8 +305,12 @@ async def llm_call_async(prompt: str, json_schema: Optional[Dict[str, Any]] = No
             },
         ).text
 
-    # Run in a thread pool (non-blocking await)
-    return await loop.run_in_executor(None, blocking_io)
+    # Run in a thread pool with a timeout
+    try:
+        return await asyncio.wait_for(loop.run_in_executor(None, blocking_io), timeout=timeout)
+    except asyncio.TimeoutError:
+        print(f"⚠️ LLM Call Timed Out after {timeout}s.")
+        raise
 
 def chain(input_data: str, prompts: list[tuple[str, BaseModel]]) -> str:
     """Chain multiple LLM calls sequentially, using Pydantic schema for output."""
@@ -306,7 +462,9 @@ def parse_markdown_structure(md_text: str) -> Tuple[str, List[SectionInfo]]:
 async def process_group_async(
     grp: SemanticGroupIndices, 
     raw_sentences: List[str], 
-    start_line_num: int
+    start_line_num: int,
+    registry: BlockRegistry,
+    is_references: bool = False
 ) -> Optional[SemanticGroupNode]:
     
     # 1. Slice Logic (CPU - Fast)
@@ -316,68 +474,101 @@ async def process_group_async(
     
     if not group_sents: return None
     
+    # Filter: Identify which items are real sentences vs. special blocks
+    # we only want to send REAL sentences to the LLM for keyword extraction
+    real_sentence_indices = []
+    for idx, txt in enumerate(group_sents):
+        if not registry.get(txt.strip()):
+            real_sentence_indices.append(idx)
+    
     full_group_text = " ".join(group_sents)
 
-    # 2. Prepare Prompt
-    indexed_group_text = "\n".join([f"[{i}] {s}" for i, s in enumerate(group_sents)])
-    batch_prompt = f"""
-    Context:
-    {indexed_group_text}
+    # Dictionary to hold LLM results
+    batch_data = {}
+
+    if real_sentence_indices and not is_references:
+        # 3. Prepare Prompt
+        indexed_text_lines = []
+        for local_idx in real_sentence_indices:
+            indexed_text_lines.append(f"[{local_idx}] {group_sents[local_idx]}")
+
+        indexed_group_text = "\n".join(indexed_text_lines)
+        batch_prompt = f"""
+        Context:
+        {indexed_group_text}
+        
+        Task: Extract scientific keywords for EACH sentence index provided above.
+        Each sentence index is denoted by [int].
+        Return a Dict[int, List[KeywordMetadata]].
+        """
+
+        # 4. AWAIT THE NETWORK CALL (With Timeout)
+        try:
+            response_text = await llm_call_async(batch_prompt, BatchKeywordExtraction.model_json_schema())
+            batch_data = BatchKeywordExtraction.model_validate_json(response_text).results
+        except Exception as e:
+            print(f"Error in group '{grp.group_title}': {e}")
+            batch_data = {}
+
+    # 5. Assemble Result (CPU - Fast)
+    final_nodes = []
     
-    Task: Extract scientific keywords for EACH sentence index.
-    Return a Dict[int, List[KeywordMetadata]].
-    """
-
-    # 3. AWAIT THE NETWORK CALL (The magic happens here)
-    # While this waits, Python goes off to start processing the next group!
-    try:
-        response_text = await llm_call_async(batch_prompt, BatchKeywordExtraction.model_json_schema())
-        batch_data = BatchKeywordExtraction.model_validate_json(response_text).results
-    except Exception as e:
-        print(f"Error in group '{grp.group_title}': {e}")
-        batch_data = {}
-
-    # 4. Assemble Result (CPU - Fast)
-    sentence_nodes = []
     for i, sent_text in enumerate(group_sents):
-        kw_data = batch_data.get(i, [])
+        clean_text = sent_text.strip()
         
-        # Hallucination Check & Node Creation
-        verified_keywords = [
-            KeywordNode(
-                title=kw.term, text=sent_text, summary=kw.summary, 
-                metadata=kw, node_id=get_uuid()
-            )
-            for kw in kw_data if kw.term.lower() in sent_text.lower()
-        ]
+        if "__IMG_" in clean_text or "__TBL_" in clean_text:
+            print(f"  🔍 Checking placeholder: '{clean_text}'")
         
-        sentence_nodes.append(SentenceNode(
-            title=sent_text[:40] + "...",
-            text=sent_text,
-            line_num=start_line_num + start + i,
-            nodes=verified_keywords,
-            node_id=get_uuid()
-        ))
+        # CHECK 1: is this a masked image or table?
+        special_node = registry.get(clean_text)
+        if special_node:
+            print(f"  ✅ Found Special Node: {clean_text}")
+            final_nodes.append(special_node)
+        else:
+            # CHECK 2: is this a real sentence?
+            
+            kw_data = batch_data.get(i, [])
+        
+            # Hallucination Check & Node Creation
+            verified_keywords = [
+                KeywordNode(
+                    title=kw.term, text=sent_text, summary=kw.summary, 
+                    metadata=kw, node_id=get_uuid()
+                )
+                for kw in kw_data if kw.term.lower() in sent_text.lower()
+            ]
+        
+            final_nodes.append(SentenceNode(
+                title=sent_text[:40] + "...",
+                text=sent_text,
+                line_num=start_line_num + start + i,
+                nodes=verified_keywords,
+                node_id=get_uuid()
+            ))
 
     return SemanticGroupNode(
         title=grp.group_title,
         text=full_group_text,
         line_num=start_line_num + start,
-        nodes=sentence_nodes,
+        nodes=final_nodes,
         node_id=get_uuid()
     )
 
 async def process_section_async(section_data: SectionInfo) -> SectionNode:
     print(f"  -> Started Section: {section_data.title}")
+
+    # 1. Extract Special Blocks (Image/Tables)
+    clean_contents, block_registry = extract_special_blocks(section_data.content)
     
-    # A. Deterministic Split
-    raw_sentences = split_text_to_sentences(section_data.content)
+    # 2. Deterministic Split
+    raw_sentences = split_text_to_sentences(clean_contents)
     total_sentences = len(raw_sentences) # Needed for audit
     
     if not raw_sentences:
         return SectionNode(title=section_data.title, text=section_data.content, line_num=section_data.line_num, nodes=[], node_id=get_uuid())
 
-    # B. Grouping (This must happen first, so we await it)
+    # 3. Grouping (Pass the cleaned text with placeholders to the LLM for grouping)
+    # The LLM is usually smart enough to group "__TBL_123__" with surrounding context
     indexed_text = "\n".join([f"[{i}] {s}" for i, s in enumerate(raw_sentences)])
     group_prompt = f"Context: {section_data.title}\nSentences:\n{indexed_text}\nTask: Group sentences."
     
@@ -433,10 +624,12 @@ async def process_section_async(section_data: SectionInfo) -> SectionNode:
     valid_groups.sort(key=lambda x: x.start_sentence_id)
     # =========================================================
 
-    # C. SCATTER-GATHER (The Optimization)
+    # 4. SCATTER-GATHER (The Optimization)
     # We create a list of tasks (coroutines) but don't await them yet
+    is_refs = "REFERENCES" in section_data.title.upper()
+    
     tasks = [
-        process_group_async(grp, raw_sentences, section_data.line_num) 
+        process_group_async(grp, raw_sentences, section_data.line_num, block_registry, is_references=is_refs) 
         for grp in valid_groups
     ]
     
@@ -456,6 +649,69 @@ async def process_section_async(section_data: SectionInfo) -> SectionNode:
         nodes=valid_nodes,
         node_id=get_uuid()
     )
+
+
+# ==========================================
+# Node reordering
+# ==========================================
+def reindex_document_tree(doc: DocumentRoot, start_from: int = 1) -> Tuple[DocumentRoot, Dict[str, str]]:
+    """
+    Traverses the tree and assigns:
+    1. Sequential IDs (0001, 0002) to Structural Nodes (Section, Group, Sentence, Image, Table).
+    2. Deduplicated IDs (kw_0001, kw_0002) to Keyword Nodes based on the term.
+    """
+    
+    # Counter for Structure (Sections, Sentences, Images, etc.)
+    struct_counter = start_from
+    
+    # Counter for Keywords
+    kw_counter = 1
+    
+    # Registry for Keywords: { "term_lowercase": "kw_0001" }
+    keyword_map = {}
+
+    def get_struct_id():
+        nonlocal struct_counter
+        nid = f"{struct_counter:04d}"
+        struct_counter += 1
+        return nid
+
+    def get_keyword_id(term: str):
+        nonlocal kw_counter
+        key = term.lower().strip()
+        
+        if key in keyword_map:
+            return keyword_map[key]
+        else:
+            # Create new ID
+            nid = f"kw_{kw_counter:04d}"
+            keyword_map[key] = nid
+            kw_counter += 1
+            return nid
+
+    # Traverse Depth-First
+    for section in doc.structure:
+        section.node_id = get_struct_id()
+        
+        for group in section.nodes:
+            group.node_id = get_struct_id()
+            
+            for item in group.nodes:
+                # Handle Structural Leaves (Sentence, Image, Table)
+                item.node_id = get_struct_id()
+                
+                # If it's a Sentence, it might have children (Keywords)
+                if hasattr(item, 'nodes'):
+                    for keyword in item.nodes:
+                        # Use the deduplicated Keyword ID logic
+                        term = keyword.metadata.term
+                        keyword.node_id = get_keyword_id(term)
+                        
+    print(f"  ✓ Re-indexed {struct_counter - 1} structural nodes.")
+    print(f"  ✓ Mapped {kw_counter - 1} unique keywords.")
+    
+    return doc, keyword_map
+
 # ==========================================
 # 4. THE ORCHESTRATOR
 # ==========================================
@@ -479,22 +735,74 @@ async def main_pipeline(md_text: str):
         doc_name="parsed_doc",
         structure=processed_sections
     )
+
+    # 5. Reindex (Now returns the map too!)
+    final_doc, keyword_registry = reindex_document_tree(final_doc)
+    
+    # Optional: You can attach the registry to the final output if you want
+    # or just return the doc. 
+    result = final_doc.model_dump()
+    
+    # Inject the global keyword map into the JSON output (Optional but useful)
+    result['global_keyword_map'] = keyword_registry
+    
     return final_doc.model_dump()
 
 # ==========================================
 # 5. EXECUTION
 # ==========================================
 
-md_path = "./tests/markdowns/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes/short_original.md"
-# md_path = "./tests/markdowns/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes.md"
+async def run_main():
+    import argparse
+    import os
+    import json # Added this import for json.dump
 
-# Run it
-with open(md_path, "r", encoding="utf-8") as f:
-    raw_md = f.read()
+    parser = argparse.ArgumentParser(description='Async Semantic Parser for Markdown')
+    parser.add_argument('md_path', help='Path to the input markdown file')
+    parser.add_argument('--output', '-o', help='Path to the output JSON file', default=None)
+    
 
-result = asyncio.run(main_pipeline(raw_md))
-print("\n--- Final Structured Output ---")
+    print("\n--- Starting Async Semantic Parser ---")
+    args = parser.parse_args()
+    
+    if not os.path.exists(args.md_path):
+        print(f"Error: File not found: {args.md_path}")
+        return
 
-# save the result
-with open('./results/test-results3.json', 'w') as f:
-    json.dump(result, f, indent=4)
+    print(f"Processing: {args.md_path}")
+
+    # Run it
+    with open(args.md_path, "r", encoding="utf-8") as f:
+        raw_md = f.read()
+
+    result = await main_pipeline(raw_md)
+    print("\n--- Final Structured Output ---")
+    
+    # Determine output path
+    if args.output:
+        output_path = args.output
+    else:
+        # Default to results/md_filename_structure.json
+        basename = os.path.splitext(os.path.basename(args.md_path))[0]
+        output_path = f'./results/{basename}_structure.json'
+        
+    # Ensure results directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # save the result
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, indent=4, ensure_ascii=False)
+    
+    print(f"✓ Saved to: {output_path}")
+    import os; os._exit(0)
+
+if __name__ == '__main__':
+    try:
+        print("\n--- Starting Async Semantic Parser ---")
+        asyncio.run(run_main())
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        os._exit(0)

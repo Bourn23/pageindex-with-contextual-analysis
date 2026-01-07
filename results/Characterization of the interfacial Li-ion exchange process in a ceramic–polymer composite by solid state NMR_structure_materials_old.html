@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parsed_doc - Extraction Audit</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #e8f5e9;
+            --border: #e0e0e0;
+            --text: #333;
+            --danger: #d32f2f;
+            --danger-bg: #ffebee;
+            --warning: #ed6c02;
+            --bg: #f5f5f5;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header & Stats */
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .header h1 { font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .header .doc-name { color: #666; font-weight: normal; font-size: 0.9rem; margin-top: 0.2rem; }
+        
+        .stats { display: flex; gap: 1.5rem; }
+        .stat-item { text-align: right; }
+        .stat-val { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        .stat-lbl { font-size: 0.7rem; color: #777; text-transform: uppercase; }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .search-container { padding: 1rem; border-bottom: 1px solid var(--border); }
+        .search-box {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .material-list { flex: 1; overflow-y: auto; padding: 0.5rem; }
+        
+        .type-header {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            padding: 0.8rem 0.5rem 0.4rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .mat-item {
+            padding: 0.8rem;
+            margin-bottom: 0.3rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .mat-item:hover { background: var(--bg); }
+        .mat-item.active { background: var(--primary-light); border-left-color: var(--primary); }
+        
+        /* Invalid items get a red indicator in the list */
+        .mat-item.invalid { border-left-color: var(--danger); opacity: 0.8; }
+        .mat-item.invalid.active { background: var(--danger-bg); }
+        
+        .mat-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
+        .mat-cond { font-size: 0.8rem; color: #666; font-family: monospace; }
+        
+        /* Content Area */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            max-width: 1000px;
+        }
+        
+        .detail-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Detail Elements */
+        .detail-header { margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+        .detail-title { font-size: 1.6rem; color: var(--text); margin-bottom: 0.5rem; }
+        .detail-subtitle { font-size: 1rem; color: #666; font-weight: 400; }
+        
+        .badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .badge { padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+        
+        .bg-class { background: #e3f2fd; color: #1565c0; }
+        .bg-conf-high { background: #e8f5e9; color: #2e7d32; }
+        .bg-conf-medium { background: #fff3e0; color: #ef6c00; }
+        .bg-conf-low { background: #ffebee; color: #c62828; }
+        .bg-source { background: #f3e5f5; color: #7b1fa2; }
+        
+        /* Validation Box */
+        .validation-box {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger);
+            color: var(--danger);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+        .validation-title { font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .validation-list { padding-left: 1.5rem; font-size: 0.9rem; }
+        
+        /* Grid Layout for Properties */
+        .prop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prop-box {
+            background: var(--bg);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        
+        .prop-label { font-size: 0.75rem; color: #666; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+        .prop-value { font-size: 1.1rem; font-weight: 500; font-family: monospace; }
+        .prop-meta { font-size: 0.8rem; color: #888; margin-top: 0.3rem; }
+        
+        /* Quote Block */
+        .quote-block {
+            border-left: 4px solid var(--primary);
+            background: #f9f9f9;
+            padding: 1rem 1.5rem;
+            font-style: italic;
+            color: #555;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+            line-height: 1.6;
+        }
+        
+        /* Tables */
+        .meta-table { width: 100%; font-size: 0.9rem; border-collapse: collapse; }
+        .meta-table td { padding: 0.5rem; border-bottom: 1px solid var(--border); }
+        .meta-table td:first-child { width: 150px; color: #666; font-weight: 500; }
+        
+        .empty-state { padding: 4rem; text-align: center; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>⚡ Material Extraction Audit</h1>
+            <div class="doc-name">parsed_doc</div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-val">18</div>
+                <div class="stat-lbl">Total Materials</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val" style="color: var(--danger)">
+                    6
+                </div>
+                <div class="stat-lbl">Issues Found</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="search-container">
+                <input type="text" id="search" class="search-box" placeholder="Filter materials...">
+            </div>
+            <div class="material-list" id="sidebar-list">
+                <div class="type-header">Composite (10)</div>
+                <div class="mat-item" id="mat-2" onclick="selectMaterial(2)">
+                    <div class="mat-name">PEO-LiTFSI-LLZO</div>
+                    <div class="mat-cond">N/A S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-3" onclick="selectMaterial(3)">
+                    <div class="mat-name">PEO-LiTFSI-LLZO</div>
+                    <div class="mat-cond">N/A S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-4" onclick="selectMaterial(4)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">4.5 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-5" onclick="selectMaterial(5)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">3.5 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-6" onclick="selectMaterial(6)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">2.5 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-7" onclick="selectMaterial(7)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">1.7 × 10⁻⁴ S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-8" onclick="selectMaterial(8)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">4.5 × 10⁻⁵ S/cm</div>
+                </div>
+            
+                <div class="mat-item invalid" id="mat-9" onclick="selectMaterial(9)">
+                    <div class="mat-name">PEO:LiTFSI + LLZO</div>
+                    <div class="mat-cond">5.5 × 10⁻⁶ S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-10" onclick="selectMaterial(10)">
+                    <div class="mat-name">PEO:LiTFSI-LLZO</div>
+                    <div class="mat-cond">slight increase S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-11" onclick="selectMaterial(11)">
+                    <div class="mat-name">PEO:LiTFSI-LLZO</div>
+                    <div class="mat-cond">N/A S/cm</div>
+                </div>
+            <div class="type-header">Ceramic (2)</div>
+                <div class="mat-item" id="mat-0" onclick="selectMaterial(0)">
+                    <div class="mat-name">ceramic electrolytes</div>
+                    <div class="mat-cond">high S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-1" onclick="selectMaterial(1)">
+                    <div class="mat-name">LLZO</div>
+                    <div class="mat-cond">10⁻³ S/cm</div>
+                </div>
+            <div class="type-header">Polymer (5)</div>
+                <div class="mat-item" id="mat-13" onclick="selectMaterial(13)">
+                    <div class="mat-name">polymers</div>
+                    <div class="mat-cond">low S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-14" onclick="selectMaterial(14)">
+                    <div class="mat-name">PEO + LiTFSI</div>
+                    <div class="mat-cond">10⁻⁶ to 10⁻⁸ S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-15" onclick="selectMaterial(15)">
+                    <div class="mat-name">PEO, LiTFSI</div>
+                    <div class="mat-cond">10⁻⁶ to 10⁻⁸ S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-16" onclick="selectMaterial(16)">
+                    <div class="mat-name">PEO:LiTFSI</div>
+                    <div class="mat-cond">~10⁻⁵ S/cm</div>
+                </div>
+            
+                <div class="mat-item" id="mat-17" onclick="selectMaterial(17)">
+                    <div class="mat-name">PEO:LiTFSI</div>
+                    <div class="mat-cond">$10^{-6}$ S/cm</div>
+                </div>
+            <div class="type-header">Other (1)</div>
+                <div class="mat-item" id="mat-12" onclick="selectMaterial(12)">
+                    <div class="mat-name">LLZO</div>
+                    <div class="mat-cond">N/A S/cm</div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="content" id="detail-view">
+            <div class="empty-state">Select a material from the sidebar to view extraction details.</div>
+        </div>
+    </div>
+
+    <script>
+        // We dump the ALREADY SORTED list here so indices match perfectly
+        const materials = [{"material_class": "Ceramic", "electrolyte_name": {"full_name": "ceramic electrolytes", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "high", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "Ceramics can have a wide electrochemical stability and a high Li-ion conductivity at room temperature, but suffer from poor mechanical properties due to their hardness and fragility.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "hard and fragile, wide electrochemical stability", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "3c2a211e", "title": "Challenges and Advantages of Ceramic and Polymer Electrolytes", "section": "Introduction"}, "_index": 7, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0015, "_norm_temp": 25, "_ui_index": 0}, {"material_class": "Ceramic", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": "24-36"}, "ionic_conductivity_S_per_cm": "10⁻³", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "24-36 LLZO with suitable dopants crystallizes in a cubic phase and has a high ionic conductivity at room temperature", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "cubic phase", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "a143443a", "title": "Specific Example: LLZO and PEO Composite", "section": "Introduction"}, "_index": 9, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1e-06, "_norm_temp": 25, "_ui_index": 1}, {"material_class": "Composite", "electrolyte_name": {"full_name": "PEO:-LiTFSI-LLZO system", "acronym": "PEO-LiTFSI-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "room temperature", "confidence": "low", "data_source": "inferred", "exact_quote": "Thus, it can be possible to roughly estimate that the timescale necessary for having a proper exchange (under an electrochemical field), in order to actively participate in the bulk ionic conductivity, should be shorter than 0.2 ms.", "specific_source_location": "main text", "refers_to_figure": "ESI Fig. S4", "refers_to_table": null, "material_description": "N/A", "processing_method": "N/A", "source_node": {"node_id": "f6fa1f72", "title": "Comparison of NMR Exchange Timescales with EIS Measurements", "section": "Results and discussion"}, "_index": 16, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0, "_norm_temp": 25, "_ui_index": 2}, {"material_class": "Composite", "electrolyte_name": {"full_name": "PEO:-LiTFSI-LLZO system", "acronym": "PEO-LiTFSI-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "This result is in agreement with the ionic conductivity results of the PEO:-LiTFSI-LLZO system suggesting that the ionic conductivity is dominated by the polymer phase.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "f6fa1f72", "title": "Comparison of NMR Exchange Timescales with EIS Measurements", "section": "Results and discussion"}, "_index": 17, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": null, "_norm_temp": null, "_ui_index": 3}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "4.5 × 10⁻⁴", "measurement_temperature": "80°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 0, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_norm_cond": 4.5e-07, "_norm_temp": 80, "_ui_index": 4}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "3.5 × 10⁻⁴", "measurement_temperature": "70°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 1, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_ui_index": 5}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "2.5 × 10⁻⁴", "measurement_temperature": "60°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 2, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_ui_index": 6}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "1.7 × 10⁻⁴", "measurement_temperature": "50°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 3, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_norm_cond": 1.7000000000000002e-06, "_norm_temp": 50, "_ui_index": 7}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "4.5 × 10⁻⁵", "measurement_temperature": "40°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 4, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_norm_cond": 4.5000000000000006e-08, "_norm_temp": 40, "_ui_index": 8}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI + LLZO", "proportion": "EO:Li = 20:1, 10 vol% LLZO"}, "ionic_conductivity_S_per_cm": "5.5 × 10⁻⁶", "measurement_temperature": "25°C", "confidence": "high", "data_source": "primary", "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO", "specific_source_location": "Figure 2d", "refers_to_figure": "Figure 2d", "refers_to_table": null, "material_description": "Composite electrolyte containing PEO, LiTFSI salt (20:1 molar ratio), and 10 vol% LLZO ceramic filler.", "processing_method": "N/A (Not specified in provided text)", "source_node": {"node_id": "d0e95237", "title": "Pseudo-3D NMR Experiments for Investigating Exchange Processes", "section": "Results and discussion"}, "_index": 5, "_validation": {"is_valid": false, "issues": ["LLM Audit Failed: The text does not mention any conductivity values for the material at any temperature. The provided text discusses NMR spectroscopy experiments and the exchange processes of Li-ions between different phases. It does not contain any information about conductivity measurements."], "audited_by_llm": true}, "_norm_cond": 5.5e-08, "_norm_temp": 25, "_ui_index": 9}, {"material_class": "Composite", "electrolyte_name": {"full_name": "PEO:LiTFSI-LLZO composite", "acronym": "PEO:LiTFSI-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "slight increase", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "The slight increase of the conductivity of the PEO:-LiTFSI-LLZO composite, compared to the pure PEO:LiTFSI electrolyte, has been explained by the amorphization of PEO by the ceramic filler where the Li-ion diffusion pathway occurs mainly through the polymer phase for ceramic-in-polymer electrolytes.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "ddf9ddad", "title": "Challenges and Limitations of Composite Electrolytes", "section": "Introduction"}, "_index": 13, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0, "_norm_temp": 25, "_ui_index": 10}, {"material_class": "Composite", "electrolyte_name": {"full_name": "Polyethylene oxide: Lithium bis(trifluoromethanesulfonyl)imide-Lithium Lanthanum Zirconate Oxide", "acronym": "PEO:LiTFSI-LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "In our previous work the interfacial Li-ion exchange process in a PEO:LiTFSI-LLZO composite was detected by a 7Li 2D EXSY correlation with a mixing time of 0.6 seconds.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "89d83b97", "title": "Enhanced Resolution with 6Li NMR and Initial EXSY Experiments", "section": "Results and discussion"}, "_index": 14, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.075, "_norm_temp": 25, "_ui_index": 11}, {"material_class": "Other", "electrolyte_name": {"full_name": "Lithium Lanthanum Zirconate Oxide", "acronym": "LLZO", "proportion": null}, "ionic_conductivity_S_per_cm": "N/A", "measurement_temperature": "N/A", "confidence": "medium", "data_source": "cited", "exact_quote": "Similar exchange processes have been demonstrated by 6Li NMR EXSY experiments between Li-ion-containing inorganic electrolytes,63 but were never characterized before for a polymer-ceramic interface.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "89d83b97", "title": "Enhanced Resolution with 6Li NMR and Initial EXSY Experiments", "section": "Results and discussion"}, "_index": 15, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 0.0, "_norm_temp": 0, "_ui_index": 12}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "polymers", "acronym": null, "proportion": null}, "ionic_conductivity_S_per_cm": "low", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "However, their low ionic conductivity at room temperature and inability to suppress dendrite growth (as they can be easily penetrated by sharp Li dendrites due to their soft nature)21 limit their battery performances.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "malleable, soft nature, easily penetrated by Li dendrites", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "3c2a211e", "title": "Challenges and Advantages of Ceramic and Polymer Electrolytes", "section": "Introduction"}, "_index": 8, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_ui_index": 13}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polyethylene Oxide with Lithium Bis(trifluoromethane)sulfonimide", "acronym": "PEO + LiTFSI", "proportion": null}, "ionic_conductivity_S_per_cm": "10⁻⁶ to 10⁻⁸", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "On the other hand, PEO mixed with Li salt (i.e. LiTFSI) is less expensive, but presents a low ionic conductivity at room temperature ( $\\sigma \\approx 10^{-6}$  to 10<sup>-8</sup> S cm<sup>-1</sup>) due to their high crystallinity at room temperature.", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "high crystallinity", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "a143443a", "title": "Specific Example: LLZO and PEO Composite", "section": "Introduction"}, "_index": 10, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1e-06, "_norm_temp": 25, "_ui_index": 14}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "Polyethylene oxide mixed with Lithium bis(trifluoromethanesulfonyl)imide", "acronym": "PEO, LiTFSI", "proportion": null}, "ionic_conductivity_S_per_cm": "10⁻⁶ to 10⁻⁸", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "On the other hand, PEO mixed with Li salt (i.e. LiTFSI) is less expensive, but presents a low ionic conductivity at room temperature ( $\\sigma \\approx 10^{-6}$  to 10<sup>-8</sup> S cm<sup>-1</sup>) due to their high crystallinity at room temperature.40", "specific_source_location": "main text paragraph 1", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "197aaefc", "title": "Potential Benefits of Composite Membranes", "section": "Introduction"}, "_index": 6, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1e-08, "_norm_temp": 25, "_ui_index": 15}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "PEO:LiTFSI electrolyte", "acronym": "PEO:LiTFSI", "proportion": null}, "ionic_conductivity_S_per_cm": "~10⁻⁵", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "However, the influence of the ceramic particles on the ionic conductivity is not significant without the addition of plasticizers ( $\\sigma \\approx 10^{-6}$  to  $10^{-5}$  S cm<sup>-1</sup> at room temperature).", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "ddf9ddad", "title": "Challenges and Limitations of Composite Electrolytes", "section": "Introduction"}, "_index": 11, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1.0000000000000001e-07, "_norm_temp": 25, "_ui_index": 16}, {"material_class": "Polymer", "electrolyte_name": {"full_name": "PEO:LiTFSI electrolyte", "acronym": "PEO:LiTFSI", "proportion": null}, "ionic_conductivity_S_per_cm": "$10^{-6}$", "measurement_temperature": "room temperature", "confidence": "medium", "data_source": "cited", "exact_quote": "However, the influence of the ceramic particles on the ionic conductivity is not significant without the addition of plasticizers ( $\\sigma \\approx 10^{-6}$  to  $10^{-5}$  S cm<sup>-1</sup> at room temperature).", "specific_source_location": "main text", "refers_to_figure": null, "refers_to_table": null, "material_description": "N/A (Cited Work)", "processing_method": "N/A (Cited Work)", "source_node": {"node_id": "ddf9ddad", "title": "Challenges and Limitations of Composite Electrolytes", "section": "Introduction"}, "_index": 12, "_validation": {"is_valid": true, "issues": [], "audited_by_llm": true}, "_norm_cond": 1e-08, "_norm_temp": 25, "_ui_index": 17}];
+        
+        function selectMaterial(index) {
+            // Remove active class from all items
+            document.querySelectorAll('.mat-item').forEach(el => el.classList.remove('active'));
+            
+            // Add active class to selected
+            const sidebarItem = document.getElementById(`mat-${index}`);
+            if(sidebarItem) sidebarItem.classList.add('active');
+            
+            renderDetail(index);
+        }
+        
+        function renderDetail(index) {
+            const mat = materials[index];
+            if(!mat) return;
+            
+            const elName = mat.electrolyte_name || {};
+            const valid = mat._validation || { is_valid: true, issues: [] };
+            
+            let html = `
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <div class="detail-title">
+                            ${escape(elName.acronym || elName.full_name || 'Unknown Material')}
+                        </div>
+                        ${elName.full_name && elName.acronym ? 
+                            `<div class="detail-subtitle">${escape(elName.full_name)}</div>` : ''}
+                        
+                        <div class="badges">
+                            <span class="badge bg-class">${escape(mat.material_class)}</span>
+                            <span class="badge bg-conf-${mat.confidence || 'low'}">
+                                Confidence: ${mat.confidence}
+                            </span>
+                            <span class="badge bg-source">
+                                Source: ${mat.data_source}
+                            </span>
+                             ${valid.audited_by_llm ? 
+                                `<span class="badge" style="border:1px solid #ccc; background:white; color:#666">🤖 LLM Audited</span>` : ''}
+                        </div>
+                    </div>
+            `;
+            
+            // 1. Validation Warning
+            if (!valid.is_valid && valid.issues.length > 0) {
+                html += `
+                    <div class="validation-box">
+                        <div class="validation-title">⚠️ Validation Issues</div>
+                        <ul class="validation-list">
+                            ${valid.issues.map(i => `<li>${escape(i)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            // 2. Primary Data Grid
+            html += `
+                <div class="prop-grid">
+                    <div class="prop-box">
+                        <div class="prop-label">Ionic Conductivity</div>
+                        <div class="prop-value">${escape(mat.ionic_conductivity_S_per_cm)} <span style="font-size:0.8em">S/cm</span></div>
+                        
+                        ${typeof mat._norm_cond === 'number' ? 
+                            `<div class="prop-meta">Normalized: ${mat._norm_cond.toExponential(2)}</div>` : ''}
+                    </div>
+                    
+                    <div class="prop-box">
+                        <div class="prop-label">Temperature</div>
+                        <div class="prop-value">${escape(mat.measurement_temperature)}</div>
+                        
+                        ${typeof mat._norm_temp === 'number' ? 
+                            `<div class="prop-meta">Normalized: ${mat._norm_temp} °C</div>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            // 3. Evidence / Quote
+            if (mat.exact_quote) {
+                html += `
+                    <div style="margin-bottom: 2rem">
+                        <div class="prop-label">Extracted Evidence</div>
+                        <div class="quote-block">"${escape(mat.exact_quote)}"</div>
+                        <div style="text-align: right; font-size: 0.8rem; color: #888;">
+                            Location: ${escape(mat.specific_source_location || 'Unknown')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 4. Meta Table
+            html += `
+                <div class="prop-label">Additional Details</div>
+                <table class="meta-table">
+                    ${mat.electrolyte_name.proportion ? 
+                        `<tr><td>Proportion</td><td>${escape(mat.electrolyte_name.proportion)}</td></tr>` : ''}
+                    <tr>
+                        <td>Description</td>
+                        <td>${escape(mat.material_description || 'N/A')}</td>
+                    </tr>
+                    <tr>
+                        <td>Processing</td>
+                        <td>${escape(mat.processing_method || 'N/A')}</td>
+                    </tr>
+                    ${mat.source_node ? `
+                    <tr>
+                        <td>Source Node</td>
+                        <td>
+                            <strong>${escape(mat.source_node.title)}</strong><br>
+                            <span style="color:#888; font-size:0.8em">Section: ${escape(mat.source_node.section)} (ID: ${mat.source_node.node_id})</span>
+                        </td>
+                    </tr>
+                    ` : ''}
+                </table>
+            `;
+            
+            html += `</div>`; // End detail card
+            document.getElementById('detail-view').innerHTML = html;
+        }
+        
+        // Utils
+        function escape(str) {
+            if (str === null || str === undefined) return '';
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // Search
+        document.getElementById('search').addEventListener('keyup', (e) => {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.mat-item').forEach(item => {
+                const text = item.innerText.toLowerCase();
+                item.style.display = text.includes(term) ? 'block' : 'none';
+            });
+        });
+        
+        // Select first item on load
+        if(materials.length > 0) selectMaterial(0);
+    </script>
+</body>
+</html>

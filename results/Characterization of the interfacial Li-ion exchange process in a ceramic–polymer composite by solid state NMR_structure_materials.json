@@ -1,0 +1,524 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Characterization of the interfacial Li-ion exchange process in a ceramic–polymer composite by solid state NMR_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 16,
+    "after_dedup": 16,
+    "valid_count": 10,
+    "invalid_count": 6,
+    "by_confidence": {
+      "high": 6,
+      "medium": 10,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 12,
+      "cited": 4,
+      "inferred": 0
+    },
+    "from_text_nodes": 10,
+    "from_image_nodes": 6,
+    "final_count": 16
+  },
+  "material_count": 16,
+  "materials": [
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁶",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 5e-06,
+      "_norm_temp": 25,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "4.2 × 10⁻⁵",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻⁴",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 × 10⁻⁴",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 0.00025,
+      "_norm_temp": 60,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "3.5 × 10⁻⁴",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 0.00035,
+      "_norm_temp": 70,
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO:LiTFSI + LLZO",
+        "proportion": "20:1 + 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "4.5 × 10⁻⁴",
+      "measurement_temperature": "80°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "exact_quote": "PEO:LiTFSI (20:1) + 10 vol% LLZO",
+      "specific_source_location": "Figure d",
+      "refers_to_figure": "Figure d",
+      "refers_to_table": null,
+      "material_description": "Composite material consisting of a PEO-LiTFSI polymer matrix (20:1 ether oxygen to lithium ratio) with 10 volume percent LLZO filler.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0203",
+        "title": "Pseudo 3D NMR for Exchange Processes involving LiOH",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 0.00045,
+      "_norm_temp": 80,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "PEO:-LiTFSI-LLZO composite",
+        "acronym": "PEO:LiTFSI-LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁵",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "However, the influence of the ceramic particles on the ionic conductivity is not significant without the addition of plasticizers ( $\\sigma \\approx 10^{-6}$  to  $10^{-5}$  S cm<sup>-1</sup> at room temperature).",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0056",
+        "title": "Challenges and Limitations in Composite Electrolytes",
+        "section": "Introduction"
+      },
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "PEO:-LiTFSI-LLZO composite",
+        "acronym": "PEO:LiTFSI-LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "However, the influence of the ceramic particles on the ionic conductivity is not significant without the addition of plasticizers ( $\\sigma \\approx 10^{-6}$  to  $10^{-5}$  S cm<sup>-1</sup> at room temperature).",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0056",
+        "title": "Challenges and Limitations in Composite Electrolytes",
+        "section": "Introduction"
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide",
+        "acronym": "LLZO",
+        "proportion": "with suitable dopants"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "24-36 LLZO with suitable dopants crystallizes in a cubic phase and has a high ionic conductivity at room temperature",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "cubic phase, high ionic conductivity, wide voltage window",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0053",
+        "title": "LLZO and PEO as Promising Candidates",
+        "section": "Introduction"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyethylene Oxide with Lithium Bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO/LiTFSI",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ to 10⁻⁸",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "exact_quote": "On the other hand, PEO mixed with Li salt (i.e. LiTFSI) is less expensive, but presents a low ionic conductivity at room temperature ( $\\sigma \\approx 10^{-6}$  to 10<sup>-8</sup> S cm<sup>-1</sup>) due to their high crystallinity at room temperature.",
+      "specific_source_location": "main text",
+      "refers_to_figure": null,
+      "refers_to_table": null,
+      "material_description": "less expensive, low ionic conductivity, high crystallinity",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0053",
+        "title": "LLZO and PEO as Promising Candidates",
+        "section": "Introduction"
+      },
+      "_norm_cond": 1e-08,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-6",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-5",
+      "measurement_temperature": "40°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "1.7e-4",
+      "measurement_temperature": "50°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00017,
+      "_norm_temp": 50,
+      "_index": 12,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-4",
+      "measurement_temperature": "60°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00025,
+      "_norm_temp": 60,
+      "_index": 13,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-4",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00035,
+      "_norm_temp": 70,
+      "_index": 14,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    },
+    {
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide and Lithium Lanthanum Zirconate Oxide",
+        "acronym": "PEO:LiTFSI + 10 vol% LLZO",
+        "proportion": "20:1 [EO]:[Li], 10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-4",
+      "measurement_temperature": "80°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "exact_quote": "Derived from Plot _page_2_Figure_4.jpeg",
+      "specific_source_location": "_page_2_Figure_4.jpeg",
+      "refers_to_figure": "_page_2_Figure_4.jpeg",
+      "refers_to_table": null,
+      "material_description": "PEO:LiTFSI (20:1) + 10 vol% LLZO composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0105",
+        "title": "_page_2_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "LLM Audit Failed: The source text does not contain any information about conductivity or temperature for the given material."
+        ],
+        "audited_by_llm": true
+      }
+    }
+  ]
+}

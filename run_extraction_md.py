@@ -24,6 +24,8 @@ import re
 from PIL import Image
 from dotenv import load_dotenv
 import base64
+from google.genai import types
+import math
 
 load_dotenv()
 
@@ -131,6 +133,378 @@ class ValidationResult(BaseModel):
     suggestions: List[str] = Field(default_factory=list, description="Suggestions for fixing issues.")
 
 
+class ValidationVerdict(BaseModel):
+    """The auditor's verdict on a single data point."""
+    data_point_index: int = Field(..., description="The index of the data point in the provided list.")
+    reason: str = Field(..., description="Explanation of why it is valid or invalid (cite the text).")
+    correction: Optional[str] = Field(None, description="If invalid, provide the correct value/unit from text.")
+    is_supported: bool = Field(..., description="True if the text explicitly supports this extracted value.")
+
+class BatchValidationResponse(BaseModel):
+    """Response containing verdicts for a batch of data points."""
+    verdicts: List[ValidationVerdict] = Field(default_factory=list)
+
+
+# ============================================================================
+# UTILITIES for Robust LLM Execution
+# ============================================================================
+async def _safe_llm_call_async(func, *args, retries=3, timeout=60, default=None, **kwargs):
+    """
+    Executes a blocking LLM call (func) inside a DETACHED thread executor.
+    1. Async Timeout (to kill blocking calls that hang)
+    2. Retries (to handle transient failures or timeouts)
+    3. Thread Isolation (Uses a fresh executor per call so hung threads don't starve the global pool)
+    """
+    import concurrent.futures
+    loop = asyncio.get_running_loop()
+    
+    for attempt in range(retries):
+        executor = None
+        try:
+            # Create a FRESH executor for this attempt only.
+            # If the thread hangs, we abandon the executor (leak the thread) rather than filling a global pool.
+            executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+            
+            result = await asyncio.wait_for(
+                loop.run_in_executor(executor, lambda: func(*args, **kwargs)), 
+                timeout=timeout
+            )
+            
+            # Clean up the executor if successful
+            executor.shutdown(wait=False)
+            return result
+            
+        except asyncio.TimeoutError:
+            print(f"⚠️ LLM Call Timed Out (Attempt {attempt+1}/{retries})")
+            # CRITICAL: Do NOT join/wait for the executor, because the thread is stuck.
+            # We effectively 'leak' this executor/thread pair until process exit.
+            
+        except Exception as e:
+            print(f"⚠️ LLM Call Failed: {e} (Attempt {attempt+1}/{retries})")
+            if executor:
+                executor.shutdown(wait=False)
+        
+        # Backoff before retry (unless it's the last attempt)
+        if attempt < retries - 1:
+            await asyncio.sleep(1 * (attempt + 1))
+            
+    print("❌ All LLM retries failed.")
+    return default
+# Define the tool for the model
+def normalize_scientific_data(
+    conductivity_value: float, 
+    conductivity_unit: str, 
+    temperature_value: float, 
+    temperature_unit: str
+):
+    """Call this to normalize ionic conductivity and temperature values."""
+    # This is a dummy for the LLM to see the signature
+    pass
+
+def calculate_standard_units(
+    cond_value: float, 
+    cond_unit: str, 
+    temp_value: Optional[float], 
+    temp_unit: Optional[str]
+) -> dict:
+    """Deterministic conversion logic."""
+    # Unit mapping to S/cm
+    # 1 S/m = 0.01 S/cm
+    # 1 mS/cm = 0.001 S/cm
+    unit_multipliers = {
+        "s/cm": 1.0, "s·cm⁻¹": 1.0, "scm-1": 1.0,
+        "ms/cm": 1e-3, "ms·cm⁻¹": 1e-3,
+        "μs/cm": 1e-6, "us/cm": 1e-6, "µs/cm": 1e-6,
+        "s/m": 0.01, "s·m⁻¹": 0.01
+    }
+    
+    # Normalize conductivity
+    multiplier = unit_multipliers.get(cond_unit.lower().strip(), 1.0)
+    norm_cond = cond_value * multiplier
+    
+    # Normalize temperature to Celsius
+    norm_temp = temp_value
+    if temp_unit:
+        u = temp_unit.upper().strip()
+        if u == "K":
+            norm_temp = temp_value - 273.15
+        elif u in ["RT", "ROOM", "ROOM TEMPERATURE"]:
+            norm_temp = 25.0
+            
+    return {"norm_cond": norm_cond, "norm_temp": norm_temp}
+
+class ScientificNormalizer:
+    def __init__(self, client, model_name="gemini-2.0-flash-lite"):
+        self.client = client
+        self.model_name = model_name
+        # Define the tool signature for the LLM
+        self.tools = [calculate_standard_units]
+
+    async def normalize_batch(self, materials: List[dict]):
+        print(f"  → Normalizing {len(materials)} data points [CONCURRENT, MAX 7]...")
+        sem = asyncio.Semaphore(7)
+
+        async def _norm_item(mat):
+            # Skip empty or clearly invalid data to save tokens
+            cond_raw = mat.get('ionic_conductivity_S_per_cm')
+            temp_raw = mat.get('measurement_temperature')
+            if not cond_raw or not temp_raw:
+                # Debug logging if needed, or silent skip
+                return
+
+            prompt = (
+                f"Extract numeric values and units for the following:\n"
+                f"IMPORTANT: If no unit is explicitly written (e.g., just '10^-4'), "
+                f"ASSUME the unit is 'S/cm' and set cond_unit='S/cm'.\n\n"
+                f"for temperature, make an educated guess based on the value.\n\n"
+                f"Conductivity: {cond_raw}\n"
+                f"Temperature: {temp_raw}"
+            )
+            
+            async with sem:
+                try:
+                    # Force function calling using safe wrapper
+                    # Calls self.client.models.generate_content
+                    # IMPORTANT: _safe_llm_call_async expects a function and its args
+                    response = await _safe_llm_call_async(
+                        self.client.models.generate_content,
+                        model=self.model_name,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(
+                            tools=self.tools,
+                            tool_config=types.ToolConfig(
+                                function_calling_config=types.FunctionCallingConfig(
+                                    mode="ANY"
+                                )
+                            )
+                        )
+                    )
+                    
+                    if not response or not response.candidates:
+                        # Warning suppressed/handled
+                        return
+
+                    # check if content exists before accessing parts
+                    first_candidate = response.candidates[0]
+                    if not first_candidate.content or not first_candidate.content.parts:
+                        print(f"    Warning: Empty content for {mat.get('electrolyte_name', 'Unknown')} (Finish Reason: {first_candidate.finish_reason})")
+                        return
+
+                    # Execute the tool call in Python
+                    for part in first_candidate.content.parts:
+                        if part.function_call:
+                            # Extract args from Gemini and pass to our Python function
+                            args = part.function_call.args
+                            results = calculate_standard_units(**args)
+                            
+                            mat['_norm_cond'] = results['norm_cond']
+                            mat['_norm_temp'] = results['norm_temp']
+                except Exception as e:
+                    print(f"    Warning: Could not normalize {mat.get('electrolyte_name')}: {e}")
+                    mat['_norm_cond'] = None
+                    mat['_norm_temp'] = None
+
+        # Create tasks for all items
+        tasks = [_norm_item(mat) for mat in materials]
+        await asyncio.gather(*tasks)
+
+        return materials
+
+
+# ============================================================================
+# Stage 4: LLM-as-a-Judge for Validation
+# ============================================================================
+
+class DataValidator:
+    """
+    Validates extracted materials using a hybrid approach:
+    1. Heuristic Checks: Fast physical bounds and sanity checks.
+    2. LLM Semantic Verification: "Auditor" model checks extraction against source text.
+    """
+    def __init__(self, client, figure_index: Dict[str, List[Path]], model_name: str = "gemini-2.5-flash"):
+        self.client = client
+        self.model_name = model_name
+        self.figure_index = figure_index
+
+    def validate_all(self, materials: List[dict], nodes_map: Dict[str, dict]) -> List[dict]:
+        """Main entry point: Runs heuristics, then runs LLM verification on survivors."""
+        
+        # 1. Run Heuristics (Fast, CPU-bound)
+        print(f"  → Running physical heuristic checks on {len(materials)} points...")
+        for i, mat in enumerate(materials):
+            mat['_index'] = i  # Tag with ID for tracking
+            mat = self._check_physics_and_metadata(mat)
+
+        # 2. Group by Source Node for Batched LLM Verification
+        # We only want to validate points that seem physically plausible but might be hallucinations
+        to_verify = [m for m in materials if m.get('_validation', {}).get('is_valid', True)]
+        
+        grouped_by_node = {}
+        for mat in to_verify:
+            node_id = mat.get('source_node', {}).get('node_id')
+            if node_id:
+                if node_id not in grouped_by_node:
+                    grouped_by_node[node_id] = []
+                grouped_by_node[node_id].append(mat)
+
+        # 3. Run LLM Verification (Slow, IO-bound)
+        # In production, you would run this with asyncio.gather
+        print(f"  → Running LLM semantic verification on {len(to_verify)} points...")
+        if grouped_by_node:
+            try:
+                asyncio.run(self._batch_verify_with_llm(grouped_by_node, nodes_map))
+            except Exception as e:
+                print(f"    ! Warning: LLM verification failed: {e}")
+
+        return materials
+
+    def _check_physics_and_metadata(self, mat: dict) -> dict:
+        """Run standard rule-based checks."""
+        issues = []
+        
+        # Physics Checks (using pre-normalized values if available)
+        cond = mat.get('_norm_cond')
+        if cond and (cond > 5.0 or cond < 1e-12):
+            issues.append(f"Physical Improbability: Conductivity {cond:.2e} S/cm is outside typical bounds.")
+
+        temp = mat.get('_norm_temp')
+        if temp and (temp < -50 or temp > 1000):
+            issues.append(f"Physical Improbability: Temperature {temp}°C is outside typical bounds.")
+
+        # Metadata Checks
+        if not mat.get('exact_quote'):
+            issues.append("Metadata Error: Missing source quote.")
+
+        # Initialize validation state
+        mat['_validation'] = {
+            'is_valid': len(issues) == 0,
+            'issues': issues,
+            'audited_by_llm': False
+        }
+        return mat
+
+    async def _batch_verify_with_llm(self, groups: Dict[str, List[dict]], nodes_map: Dict[str, dict]):
+        """
+        Asynchronously verifies batches of data points against their source text.
+        """
+        sem = asyncio.Semaphore(7)
+        tasks = []
+        for node_id, batch in groups.items():
+            # Ensure node exists and is a dict
+            node = nodes_map.get(node_id)
+            if not node:
+                print(f"    Warning: Node ID {node_id} not found in map, skipping verification.")
+                print(f"    FYI: {node}")
+                continue
+
+            if isinstance(node, list):
+                # Handle edge case where node might be wrapped in a list
+                node = node[0]
+                print(f"    FYI: {node}")
+            if node:
+                tasks.append(self._verify_node_batch(node, batch, sem))
+        
+        await asyncio.gather(*tasks)
+
+    async def _verify_node_batch(self, node: dict, batch: List[dict], sem: asyncio.Semaphore):
+        """Ask LLM to audit a specific list of claims against a text WITH images attached."""
+        from google.genai import types
+        # Prepare the context
+        claims_text = ""
+        for item in batch:
+            claims_text += (
+                f"ID {item['_index']}: "
+                f"Material='{item['electrolyte_name']['full_name']}', "
+                f"Conductivity='{item['ionic_conductivity_S_per_cm']}', "
+                f"Temp='{item['measurement_temperature']}'\n"
+            )
+
+        text_content = node.get('text', '')
+
+        # 2. RESOLVE IMAGES (Re-using logic from Extractor)
+        # Regex to find "Figure 4", "Fig. 2", etc.
+        refs = re.findall(r'\b(?:[Ff]ig\.?|[Ff]igure)\s*([A-Za-z]?\d+)', text_content, re.IGNORECASE)
+        
+        relevant_image_parts = []
+        seen_paths = set()
+        
+        # Look up paths in the figure_index we passed in __init__
+        for fig_num in refs:
+            if fig_num in self.figure_index:
+                for path in self.figure_index[fig_num]:
+                    if path not in seen_paths:
+                        try:
+                            # Create the image part for Gemini
+                            image_bytes = path.read_bytes()
+                            image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+                            mime = "image/png" if path.suffix.lower() == '.png' else "image/jpeg"
+                            
+                            relevant_image_parts.append(types.Part(
+                                inline_data=types.Blob(mime_type=mime, data=image_b64),
+                                media_resolution={"level": "media_resolution_high"} # Critical for reading charts
+                            ))
+                            seen_paths.add(path)
+                        except Exception as e:
+                            print(f"    Auditor Warning: Could not load {path}: {e}")
+        
+        prompt_text = f"""You are a Scientific Data Auditor. Verify these extracted values against the provided text.
+
+SOURCE TEXT:
+"{text_content}"
+
+CLAIMS TO VERIFY:
+{claims_text}
+
+INSTRUCTIONS:
+1. For each claim, check if the Source Text *explicitly* supports the Conductivity and Temperature values.
+2. Watch out for unit errors (e.g., text says "mS/cm" but claim is treated as "S/cm").
+3. Watch out for hallucinations (claims not in text).
+4. Ignore minor formatting differences.
+5. Attach the images to the text."
+
+Respond with JSON."""
+        
+        # Combine text and images
+        contents_payload = [types.Content(parts=[types.Part(text=prompt_text)] + relevant_image_parts)]
+
+        async with sem:
+            try:
+                # Use safe wrapper instead of raw asyncio.to_thread
+                response = await _safe_llm_call_async(
+                    self.client.models.generate_content,
+                    model=self.model_name,
+                    contents=contents_payload,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_json_schema=BatchValidationResponse.model_json_schema()
+                    )
+                )
+                print('...>>>', text_content)
+                print('>>>', response.text)
+                if not response or not response.text:
+                    return
+            
+                # Parse and Apply Verdicts
+                result = BatchValidationResponse.model_validate_json(response.text)
+                
+                # Map verdicts back to the original objects
+                batch_map = {m['_index']: m for m in batch}
+                
+                for verdict in result.verdicts:
+                    if verdict.data_point_index in batch_map:
+                        mat = batch_map[verdict.data_point_index]
+                        mat['_validation']['audited_by_llm'] = True
+                        
+                        if not verdict.is_supported:
+                            mat['_validation']['is_valid'] = False
+                            mat['_validation']['issues'].append(f"LLM Audit Failed: {verdict.reason}")
+                            if verdict.correction:
+                                mat['_validation']['suggested_correction'] = verdict.correction
+                            
+            except Exception as e:
+                print(f"    Validation Error on Node {node.get('node_id')}: {e}")
+
+
 # ============================================================================
 # Material Extractor - Four Stage Pipeline
 # ============================================================================
@@ -172,32 +546,67 @@ class MaterialExtractor:
         # Reset index to store lists: {'2': [PathA, PathB]}
         self.figure_index: Dict[str, List[Path]] = {} 
         
-        def find_images(nodes):
-            for node in nodes:
-                text = node.get('text', '')
-                matches = re.findall(r'!\[.*?\]\((.*?)\)', text)
+        # def find_images(nodes):
+        #     for node in nodes:
+        #         text = node.get('text', '')
+        #         matches = re.findall(r'!\[.*?\]\((.*?)\)', text)
                 
-                for image_rel_path in matches:
-                    # Regex looks for "Fig" or "Figure" followed by a number
-                    fig_match = re.search(r'(?:fig|figure)[-_]?(\d+)', image_rel_path, re.IGNORECASE)
+        #         for image_rel_path in matches:
+        #             # Regex looks for "Fig" or "Figure" followed by a number
+        #             fig_match = re.search(r'(?:fig|figure)[-_]?(\d+)', image_rel_path, re.IGNORECASE)
                     
-                    if fig_match:
-                        fig_num = fig_match.group(1) # e.g., "2"
-                        full_path = base_path / image_rel_path
+        #             if fig_match:
+        #                 fig_num = fig_match.group(1) # e.g., "2"
+        #                 full_path = base_path / image_rel_path
                         
-                        if full_path.exists():
+        #                 if full_path.exists():
+        #                     if fig_num not in self.figure_index:
+        #                         self.figure_index[fig_num] = []
+                            
+        #                     # Avoid adding the exact same file path twice
+        #                     if full_path not in self.figure_index[fig_num]:
+        #                         self.figure_index[fig_num].append(full_path)
+        #                         print(f"    Indexed Figure {fig_num} -> {image_rel_path}")
+                
+        #         if 'nodes' in node:
+        #             find_images(node['nodes'])
+
+        # find_images(structure)
+        
+        # # Stats
+        # total_images = sum(len(paths) for paths in self.figure_index.values())
+        # print(f"  Total figures indexed: {total_images} across {len(self.figure_index)} distinct figure numbers.")
+        def traverse_for_images(nodes):
+            for node in nodes:
+                # 1. Check if this is an Image Node
+                if node.get('node_type') == 'image':
+                    src = node.get('src', '')
+                    if src:
+                        # Construct full path
+                        full_path = base_path / src
+                        
+                        # Extract Figure Number from filename
+                        # Matches: "Figure_4", "Figure4", "Fig_2", etc.
+                        # Adjust regex if your filenames vary (e.g. "image-05.jpg")
+                        fig_match = re.search(r'(?:Figure|Fig)[-_]?(\d+)', src, re.IGNORECASE)
+                        
+                        if fig_match and full_path.exists():
+                            fig_num = fig_match.group(1) # e.g., "4"
+                            
                             if fig_num not in self.figure_index:
                                 self.figure_index[fig_num] = []
                             
-                            # Avoid adding the exact same file path twice
                             if full_path not in self.figure_index[fig_num]:
                                 self.figure_index[fig_num].append(full_path)
-                                print(f"    Indexed Figure {fig_num} -> {image_rel_path}")
-                
-                if 'nodes' in node:
-                    find_images(node['nodes'])
+                                print(f"    Indexed Figure {fig_num} -> {src}")
+                        elif not full_path.exists():
+                             print(f"    Warning: Image file missing at {full_path}")
 
-        find_images(structure)
+                # 2. Recurse into children (if any)
+                if 'nodes' in node and isinstance(node['nodes'], list):
+                    traverse_for_images(node['nodes'])
+
+        traverse_for_images(structure)
         
         # Stats
         total_images = sum(len(paths) for paths in self.figure_index.values())
@@ -301,6 +710,8 @@ Consider:
 
 Respond with JSON only."""
 
+
+
         async with semaphore:
             try:
                 # print(prompt)
@@ -310,10 +721,10 @@ Respond with JSON only."""
                     loop.run_in_executor(
                         None,
                         lambda: self.client.models.generate_content(
-                            model=self.model,
+                            model=self.model_text,
                             contents=prompt,
                             config=types.GenerateContentConfig(
-                                temperature=0,
+                                temperature=0.7,
                                 max_output_tokens=4096,
                                 response_mime_type="application/json",
                                 response_json_schema=NodeRelevanceResponse.model_json_schema()
@@ -323,6 +734,9 @@ Respond with JSON only."""
                     timeout=timeout
                 )
                 
+                # print(">>>", prompt)
+                # print(">>>", response.text)
+
                 result = NodeRelevanceResponse.model_validate_json(response.text)
                 return (node, result.is_relevant, result.relevance_reason)
             
@@ -333,26 +747,63 @@ Respond with JSON only."""
                 # On error, include the node (be permissive)
                 return (node, True, f"Error checking relevance: {e}")
     
-    async def _filter_relevant_nodes(self, nodes: List[dict], batch_size: int = 10) -> List[dict]:
-        """Filter nodes to only those likely containing ionic conductivity data."""
+    async def _filter_relevant_nodes(self, nodes: List[dict], batch_size: int = 7) -> List[dict]:
+        """
+        Filter nodes to only those likely containing ionic conductivity data.
+        Heuristic: if a node has an image or references a figure, AUTO-INCLUDE it.
+        otherwise ask the LLM.
+        
+        """
         print(f"\n[Stage 1] Filtering {len(nodes)} nodes for relevance...")
         
         semaphore = asyncio.Semaphore(batch_size)
-        tasks = [self._check_node_relevance(node, semaphore) for node in nodes]
-        
+        # tasks = [self._check_node_relevance(node, semaphore) for node in nodes]
+        tasks = []
         relevant_nodes = []
+
+        # Regex for finding figure references
+        fig_ref_regex = re.compile(r'\b(Figure|Fig|Fig.\s?\d+|fig.\s?\d+)\b', re.IGNORECASE)
+        # img_embed_pattern = re.compile(r'!\[.*?\]\(.*?\)')
+        img_embed_pattern = re.compile(r'__IMG_[a-zA-Z0-9]+__')
+        
+        for node in nodes:
+            text = node.get('text', '')
+            has_embedded_image = bool(img_embed_pattern.search(text))
+            has_figure_reference = bool(fig_ref_regex.search(text))
+
+            if has_figure_reference: # this is still important even though we separately handle images
+                reason="Auto-included: References a figure"
+                node['is_relevant'] = True
+                node['relevance_reason'] = reason
+                relevant_nodes.append(node)
+
+            if has_embedded_image:
+                # reason = "Auto-included: Contains figure"
+                # print(f"    Auto-included: {node.get('title', 'Unknown')}")
+
+                # node['is_relevant'] = True
+                # node['relevance_reason'] = reason
+                # relevant_nodes.append(node)
+                tasks.append(self._check_node_relevance(node, semaphore))
+                
+            else:
+                tasks.append(self._check_node_relevance(node, semaphore))   
+
+        
         completed = 0
         
-        for coro in asyncio.as_completed(tasks):
-            node, is_relevant, reason = await coro
-            completed += 1
-            
-            status = "✓" if is_relevant else "○"
-            title = node.get('title', 'Unknown')[:40]
-            print(f"  [{completed}/{len(nodes)}] {status} {title}...")
-            
-            if is_relevant:
-                relevant_nodes.append(node)
+        if tasks:
+            print(f"  → Checking {len(tasks)} text-only nodes with LLM...")
+            for coro in asyncio.as_completed(tasks):
+                node, is_relevant, reason = await coro
+                completed += 1
+                
+                status = "✓" if is_relevant else "○"
+                title = node.get('title', 'Unknown')[:40]
+                print(f"  [{completed}/{len(nodes)}] {status} {title}...")
+                
+                if is_relevant:
+                    relevant_nodes.append(node)
         
         print(f"  → {len(relevant_nodes)} relevant nodes identified")
         return relevant_nodes
@@ -414,17 +865,14 @@ Respond with JSON only."""
 
         # 1. Resolve images (handle multiple figures + disconnected context)
         image_paths = self._resolve_relevant_images(text_content)
+
+        # Record that we are about to process these images
+        for path in image_paths:
+            self.processed_images.add(path)
+
         # 2. Build content payload
         prompt_text = self._build_extraction_prompt(node)
         
-        # raw_contents = [
-        #     types.Content(
-        #         parts=[
-        #             types.Part(text=prompt_text)
-        #         ]
-        #     )
-        # ]
-
         raw_parts = [types.Part(text=prompt_text)]
         
 
@@ -459,6 +907,7 @@ Respond with JSON only."""
         if image_paths:
             active_model = self.model_vision
             temperature = 1.0 # as recommended by Gemini docs
+            print('>>> Vision needed for ', node_title)
         else:
             active_model = self.model_text
             temperature = 0.0    
@@ -530,6 +979,126 @@ Respond with JSON only."""
         print(f"  → {len(all_materials)} total data points extracted")
         return all_materials
 
+    # ========================================================================
+    # Stage 2.5: Process leftover images
+    # ========================================================================
+    def _collect_image_nodes(self, structure: List[dict]) -> List[dict]:
+        """Collect all 'image' nodes from the structure."""
+        image_nodes = []
+        
+        def traverse(nodes):
+            for node in nodes:
+                if node.get('node_type') == 'image':
+                    image_nodes.append(node)
+                
+                if 'nodes' in node:
+                    traverse(node['nodes'])
+        
+        traverse(structure)
+        return image_nodes
+    
+    async def _extract_from_image_only(self, node: dict, base_path: Path, semaphore: asyncio.Semaphore) -> tuple[str, List[dict]]:
+        """
+        Directly extract data from an image node using the Vision model.
+        """
+        from google.genai import types
+        
+        src = node.get('src', '')
+        # Fallback to title if src is missing/empty, assuming title contains the filename
+        if not src: 
+             src = node.get('title', '')
+             
+        full_path = base_path / src
+        node_id = node.get('node_id', 'img')
+
+        if not full_path.exists():
+            print(f"    Warning: Skipping missing image {src}")
+            return (src, [])
+
+        # Prompt specifically designed for standalone images
+        prompt_text = f"""Analyze this scientific image (Figure/Table) specifically for Ionic Conductivity Data.
+
+Image Filename: {src}
+
+INSTRUCTIONS:
+1. If this is a Data Plot (e.g., Arrhenius plot, Conductivity vs Temperature):
+   - Extract data points carefully.
+   - If multiple lines exist, identify the material for each line.
+   - Estimate values as precisely as possible.
+
+2. If this is a Table:
+   - Extract rows containing ionic conductivity.
+
+3. If this is NOT related to ionic conductivity (e.g., SEM micrograph, XRD pattern, photo of a battery):
+   - Return an empty list.
+
+For EACH measurement found:
+- material_class: Ceramic, Polymer, Composite, or Other
+- electrolyte_name: Name of the material (look at legends, labels)
+- ionic_conductivity_S_per_cm: Numeric value (e.g. "1.2e-4")
+- measurement_temperature: Temperature (Look for x-axis labels like 1000/T or °C)
+- confidence: "high" (clear text/table), "medium" (plot estimation)
+- data_source: "primary"
+- exact_quote: "Derived from Plot {src}" or content of table cell.
+- specific_source_location: "{src}"
+- refers_to_figure: "{src}"
+- material_description: Any details in legends/labels
+- processing_method: "N/A"
+
+Respond with JSON only."""
+
+        try:
+            image_bytes = full_path.read_bytes()
+            image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+            
+            # Determine mime type
+            mime = "image/png" if full_path.suffix.lower() == '.png' else "image/jpeg"
+
+            async with semaphore:
+                # print(f"    Processing Image: {src}")
+                response = await _safe_llm_call_async(
+                    self.client.models.generate_content,
+                    model=self.model_vision, # MUST use vision model
+                    contents=[
+                        types.Content(
+                            parts=[
+                                types.Part(text=prompt_text),
+                                types.Part(
+                                    inline_data=types.Blob(mime_type=mime, data=image_b64),
+                                    media_resolution={"level": "media_resolution_high"}
+                                )
+                            ]
+                        )
+                    ],
+                    config=types.GenerateContentConfig(
+                        temperature=0.2, # Lower temperature for precise reading
+                        max_output_tokens=4096,
+                        response_mime_type="application/json",
+                        response_json_schema=MaterialExtractionResponse.model_json_schema()
+                    )
+                )
+
+                if not response or not response.text:
+                    return (src, [])
+
+                result = MaterialExtractionResponse.model_validate_json(response.text)
+                
+                # Tag results
+                materials = []
+                for mat in result.materials:
+                    mat_dict = mat.model_dump()
+                    mat_dict['source_node'] = {
+                        'node_id': node_id,
+                        'title': src,
+                        'section': 'Image-Only Extraction'
+                    }
+                    materials.append(mat_dict)
+                
+                return (src, materials)
+
+        except Exception as e:
+            print(f"    Error processing image {src}: {e}")
+            return (src, [])
     # ========================================================================
     # Stage 3: Smart Deduplication
     # ========================================================================
@@ -636,59 +1205,51 @@ Respond with JSON only."""
         """Remove duplicate data points using normalized values and cross-references."""
         print(f"\n[Stage 3] Deduplicating {len(materials)} data points...")
         
-        # Add normalized values
-        for mat in materials:
-            mat['_norm_cond'] = self._normalize_conductivity(mat.get('ionic_conductivity_S_per_cm', ''))
-            mat['_norm_temp'] = self._normalize_temperature(mat.get('measurement_temperature', ''))
-        
-        # Group by material name
-        groups: Dict[str, List[dict]] = {}
-        for mat in materials:
-            electrolyte = mat.get('electrolyte_name', {})
-            key = (electrolyte.get('acronym') or electrolyte.get('full_name') or 'unknown').lower()
-            if key not in groups:
-                groups[key] = []
-            groups[key].append(mat)
-        
+        # Priority sorting: high confidence and primary data first
+        materials.sort(key=lambda x: (
+            0 if x.get('confidence') == 'high' else 1,
+            0 if x.get('data_type') == 'primary' else 1
+        ))
+
+        # Remove duplicates
         unique = []
         duplicates_removed = 0
-        
-        for material_name, candidates in groups.items():
-            if len(candidates) == 1:
-                unique.append(candidates[0])
-                continue
+
+        for candidate in materials:
+            is_dup = False
+            c_cond = candidate.get('_norm_cond')
+            c_temp = candidate.get('_norm_temp')
+            # Normalize name for comparison (strip spaces/case)
+            c_name = (candidate.get('electrolyte_name', {}).get('acronym') or 
+                    candidate.get('electrolyte_name', {}).get('full_name') or "").lower().strip()
+
+            for existing in unique:
+                e_cond = existing.get('_norm_cond')
+                e_temp = existing.get('_norm_temp')
+                e_name = (existing.get('electrolyte_name', {}).get('acronym') or 
+                        existing.get('electrolyte_name', {}).get('full_name') or "").lower().strip()
+
+                # Logic: If names match and we have valid floats for both
+                if c_name == e_name and c_cond is not None and e_cond is not None:
+                    # 1. Conductivity: Use 5% relative tolerance
+                    # 2. Temperature: Use 2°C absolute tolerance
+                    cond_match = math.isclose(c_cond, e_cond, rel_tol=0.05)
+                    
+                    # Handle cases where temp might be None
+                    temp_match = True
+                    if c_temp is not None and e_temp is not None:
+                        temp_match = abs(c_temp - e_temp) <= 2.0
+                    
+                    if cond_match and temp_match:
+                        is_dup = True
+                        break
             
-            # Find duplicates within this material group
-            seen = set()
-            for mat in candidates:
-                # Create dedup key from normalized values
-                cond = mat['_norm_cond']
-                temp = mat['_norm_temp']
+            if is_dup:
+                duplicates_removed += 1
+            else:
+                unique.append(candidate)
                 
-                # Round for fuzzy matching (within 5% for conductivity, 2°C for temp)
-                cond_key = round(cond, 6) if cond else mat.get('ionic_conductivity_S_per_cm', '')
-                temp_key = round(temp / 2) * 2 if temp else mat.get('measurement_temperature', '')
-                
-                key = (cond_key, temp_key)
-                
-                if key not in seen:
-                    seen.add(key)
-                    unique.append(mat)
-                else:
-                    duplicates_removed += 1
-        
-        # Clean up temp fields
-        for mat in unique:
-            mat.pop('_norm_cond', None)
-            mat.pop('_norm_temp', None)
-        
-        # Sort by material name
-        unique.sort(key=lambda x: (
-            x.get('electrolyte_name', {}).get('acronym') or 
-            x.get('electrolyte_name', {}).get('full_name') or ''
-        ).lower())
-        
-        print(f"  → Removed {duplicates_removed} duplicates, {len(unique)} unique data points remain")
+        print(f"  → Removed {duplicates_removed} duplicates, {len(unique)} unique points remain.")
         return unique
 
     # ========================================================================
@@ -797,7 +1358,29 @@ Respond with JSON only."""
     # ========================================================================
     # Main Pipeline
     # ========================================================================
-    
+    async def _run_image_pipeline(self, image_nodes: List[dict], base_path: Path, batch_size: int = 5) -> List[dict]:
+        """Orchestrator for the image-only extraction stage."""
+        print(f"\n[Stage 2b] Processing {len(image_nodes)} images directly...")
+        
+        semaphore = asyncio.Semaphore(batch_size)
+        tasks = [self._extract_from_image_only(node, base_path, semaphore) for node in image_nodes]
+        
+        all_materials = []
+        completed = 0
+        
+        for coro in asyncio.as_completed(tasks):
+            src, materials = await coro
+            completed += 1
+            if materials:
+                print(f"  [{completed}/{len(image_nodes)}] ✓ {src} ({len(materials)} points)")
+                all_materials.extend(materials)
+            else:
+                # Optional: verbose logging for empty images
+                # print(f"  [{completed}/{len(image_nodes)}] ○ {src}")
+                pass
+                
+        return all_materials
+
     def extract(self, structure: List[dict], base_path: Path, batch_size: int = 7) -> dict:
         """
         Run the full four-stage extraction pipeline.
@@ -807,44 +1390,68 @@ Respond with JSON only."""
         """
         # 0. Index Figures First
         self._index_figures(base_path, structure)
+        self.processed_images = set()
 
         # Collect all nodes
-        all_nodes = self._collect_all_nodes(structure)
-        print(f"Found {len(all_nodes)} semantic_unit nodes in structure")
+        text_nodes = self._collect_all_nodes(structure)
+        image_nodes = self._collect_image_nodes(structure)
+        print(f"Found {len(text_nodes)} text nodes and {len(image_nodes)} image nodes.")
         
-        if not all_nodes:
-            return {'materials': [], 'stats': {'total_nodes': 0}}
+        # if not all_nodes:
+        #     return {'materials': [], 'stats': {'total_nodes': 0}}
         
         # Stage 1: Filter relevant nodes
-        relevant_nodes = asyncio.run(self._filter_relevant_nodes(all_nodes, batch_size))
+        relevant_text_nodes = asyncio.run(self._filter_relevant_nodes(text_nodes, batch_size))
+
+        # 3. Stage 2a: Extract from Text Nodes
+        # (This uses your existing text extraction logic)
+        text_materials = []
+        if relevant_text_nodes:
+            text_materials = asyncio.run(self._extract_from_nodes(relevant_text_nodes, batch_size))
+
+        # 4. Stage 2b: Extract from Image Nodes (NEW)
+        image_materials = []
+        if image_nodes:
+            image_materials = asyncio.run(self._run_image_pipeline(image_nodes, base_path, batch_size))
+
+        # Merge Results
+        print(f"\nMerging: {len(text_materials)} text-based + {len(image_materials)} image-based points.")
+        combined_materials = text_materials + image_materials
         
-        if not relevant_nodes:
+        if not combined_materials:
             print("No relevant nodes found!")
             return {'materials': [], 'stats': {'total_nodes': len(all_nodes), 'relevant_nodes': 0}}
         
-        # Stage 2: Extract from relevant nodes
-        materials = asyncio.run(self._extract_from_nodes(relevant_nodes, batch_size))
+        # # Stage 2: Extract from relevant nodes
+        # materials = asyncio.run(self._extract_from_nodes(relevant_nodes, batch_size))
+
+        # # Stage 2.5: Extract from leftover images
+        # orphan_materials = asyncio.run(self._process_leftover_images(batch_size))
+        # materials.extend(orphan_materials)
         
-        if not materials:
-            print("No data points extracted!")
-            return {'materials': [], 'stats': {
-                'total_nodes': len(all_nodes),
-                'relevant_nodes': len(relevant_nodes),
-                'extracted': 0
-            }}
+        # if not materials:
+        #     print("No data points extracted!")
+        #     return {'materials': [], 'stats': {
+        #         'total_nodes': len(all_nodes),
+        #         'relevant_nodes': len(relevant_nodes),
+        #         'extracted': 0
+        #     }}
         
-        # Stage 3: Deduplicate
-        unique_materials = self._deduplicate(materials)
+        # Stage 3: Normalize & Deduplicate
+        normalizer = ScientificNormalizer(self.client, model_name=self.model_text)
+        materials_with_floats = asyncio.run(normalizer.normalize_batch(combined_materials))
+        unique_materials = self._deduplicate(materials_with_floats)
         
         # Stage 4: Validate
-        validated_materials = self._validate_data_points(unique_materials)
-        validated_materials = self._cross_reference_check(validated_materials)
+        nodes_map = {n['node_id']: n for n in relevant_text_nodes + image_nodes}
+        validator = DataValidator(self.client, self.figure_index, model_name=self.model_text)
+        validated_materials = validator.validate_all(unique_materials, nodes_map)
         
         # Compile stats
         stats = {
-            'total_nodes': len(all_nodes),
-            'relevant_nodes': len(relevant_nodes),
-            'raw_extracted': len(materials),
+            # 'total_nodes': len(all_nodes),
+            # 'relevant_nodes': len(relevant_nodes),
+            'raw_extracted': len(combined_materials),
             'after_dedup': len(unique_materials),
             'valid_count': sum(1 for m in validated_materials if m.get('_validation', {}).get('is_valid', True)),
             'invalid_count': sum(1 for m in validated_materials if not m.get('_validation', {}).get('is_valid', True)),
@@ -857,7 +1464,10 @@ Respond with JSON only."""
                 'primary': sum(1 for m in validated_materials if m.get('data_source') == 'primary'),
                 'cited': sum(1 for m in validated_materials if m.get('data_source') == 'cited'),
                 'inferred': sum(1 for m in validated_materials if m.get('data_source') == 'inferred'),
-            }
+            },
+            'from_text_nodes': len(text_materials),
+            'from_image_nodes': len(image_materials),
+            'final_count': len(unique_materials)
         }
         
         return {'materials': validated_materials, 'stats': stats}
@@ -989,7 +1599,9 @@ Examples:
     if len(materials) > 5:
         print(f"  ... and {len(materials) - 5} more")
     
-    return 0
+    # Force exit to prevent hanging on thread cleanup
+    import os
+    os._exit(0)
 
 
 if __name__ == '__main__':
