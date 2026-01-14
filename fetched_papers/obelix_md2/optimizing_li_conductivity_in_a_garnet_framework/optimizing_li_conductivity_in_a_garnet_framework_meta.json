@@ -1,0 +1,445 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Journal of Materials Chemistry",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          40.53400503778337,
+          8.759765625
+        ],
+        [
+          230.44332493702768,
+          8.759765625
+        ],
+        [
+          230.44332493702768,
+          56.748046875
+        ],
+        [
+          40.53400503778337,
+          56.748046875
+        ]
+      ]
+    },
+    {
+      "title": "Optimizing Li<sup>+</sup> conductivity in a garnet framework",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          42.0352644836272,
+          117.0
+        ],
+        [
+          385.823677581864,
+          117.0
+        ],
+        [
+          385.823677581864,
+          133.30078125
+        ],
+        [
+          42.0352644836272,
+          133.30078125
+        ]
+      ]
+    },
+    {
+      "title": "Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          42.785894206549116,
+          318.779296875
+        ],
+        [
+          100.58438287153652,
+          318.779296875
+        ],
+        [
+          100.58438287153652,
+          328.5
+        ],
+        [
+          42.785894206549116,
+          328.5
+        ]
+      ]
+    },
+    {
+      "title": "Methods",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          305.275390625,
+          653.25
+        ],
+        [
+          347.5415617128463,
+          653.25
+        ],
+        [
+          347.5415617128463,
+          662.314453125
+        ],
+        [
+          305.275390625,
+          662.314453125
+        ]
+      ]
+    },
+    {
+      "title": "Results and discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          42.0352644836272,
+          527.25
+        ],
+        [
+          144.87153652392948,
+          527.25
+        ],
+        [
+          144.87153652392948,
+          537.392578125
+        ],
+        [
+          42.0352644836272,
+          537.392578125
+        ]
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          42.779296875,
+          280.5
+        ],
+        [
+          94.5793450881612,
+          280.5
+        ],
+        [
+          94.5793450881612,
+          289.5
+        ],
+        [
+          42.779296875,
+          289.5
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgements",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.5062972292191,
+          53.701171875
+        ],
+        [
+          394.8312342569269,
+          53.701171875
+        ],
+        [
+          394.8312342569269,
+          63.603515625
+        ],
+        [
+          305.5062972292191,
+          63.603515625
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.5062972292191,
+          212.51953125
+        ],
+        [
+          356.5491183879093,
+          212.51953125
+        ],
+        [
+          356.5491183879093,
+          220.5
+        ],
+        [
+          305.5062972292191,
+          220.5
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          108
+        ],
+        [
+          "Span",
+          101
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 3768,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          111
+        ],
+        [
+          "Span",
+          104
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          175
+        ],
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          74
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 2,
+        "llm_error_count": 0,
+        "llm_tokens_used": 9157,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          103
+        ],
+        [
+          "Span",
+          76
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          107
+        ],
+        [
+          "Line",
+          78
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Optimizing Li_ conductivity in a garnet framework"
+}

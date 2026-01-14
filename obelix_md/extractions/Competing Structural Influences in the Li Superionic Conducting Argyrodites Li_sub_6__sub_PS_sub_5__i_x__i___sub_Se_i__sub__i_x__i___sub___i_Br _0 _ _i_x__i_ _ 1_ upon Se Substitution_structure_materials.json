@@ -1,0 +1,1088 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Competing Structural Influences in the Li Superionic Conducting Argyrodites Li_sub_6__sub_PS_sub_5__i_x__i___sub_Se_i__sub__i_x__i___sub___i_Br _0 _ _i_x__i_ _ 1_ upon Se Substitution_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 84,
+    "after_dedup": 39,
+    "valid_count": 37,
+    "invalid_count": 2,
+    "by_confidence": {
+      "high": 36,
+      "medium": 3,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 39,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 73,
+    "from_image_nodes": 11,
+    "final_count": 39
+  },
+  "material_count": 39,
+  "materials": [
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Hexa-Phosphorus-Selenide-Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.7 to 3.9 mS·cm⁻¹",
+      "measurement_temperature": "Room-temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "fast-ionic conducting nature of the argyrodites",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures 6 and 7: Conductivity and Activation Energy Plots",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 0.0039,
+      "_norm_temp": 21.11,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0224",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium conductivity in the argyrodite structure",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS·cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "highest reported value for Li⁺ conductivity in the argyrodite structure",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0221",
+        "title": "Ionic Transport Results: Conductivity and Activation Energy Trends",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 0.0039,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0274",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium thiophosphate superionic conductors",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS·cm",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "argyrodite structure",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0273",
+        "title": "Overall Conclusion and Future Implications",
+        "section": "5. CONCLUSION"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Hexa-Phosphorus-Selenide-Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.7 to 3.9 mS·cm⁻¹",
+      "measurement_temperature": "Room-temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "fast-ionic conducting nature of the argyrodites",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures 6 and 7: Conductivity and Activation Energy Plots",
+        "section": "3. RESULTS"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0196",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "conductivity values",
+      "measurement_temperature": "temperature-dependent",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Arrhenius plots of the conductivity values",
+      "processing_method": "temperature-dependent impedance spectroscopy",
+      "source_node": {
+        "node_id": "0194",
+        "title": "Figure 5 and Impedance Spectroscopy Analysis Details",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 4,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0201",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Selenium Bromide",
+        "acronym": "Li6PS4.5Se0.5Br",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "fast",
+      "measurement_temperature": ">263 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ionic conductivity",
+      "processing_method": "impedance analyzer",
+      "source_node": {
+        "node_id": "0194",
+        "title": "Figure 5 and Impedance Spectroscopy Analysis Details",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": -10.149999999999977,
+      "_index": 5,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0028,
+      "_norm_temp": 25.0,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "3.9 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0039,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.6 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0036,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.7"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.003,
+      "_norm_temp": 25,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.9"
+      },
+      "ionic_conductivity_S_per_cm": "3.8 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6PS5-xSexBr system with cubic close packed lattice",
+      "processing_method": "Synthesis and characterization using XRD, neutron PDF, impedance spectroscopy, and ultrasonic sound response measurements.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0180",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type Li6PS5-xSexBr solid electrolyte",
+      "processing_method": "Temperature-dependent electrochemical impedance spectroscopy",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Li+ Sublattice Evolution and Diffusion Pathways",
+        "section": "3. RESULTS"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0180",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.7"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type Li6PS5-xSexBr solid electrolyte",
+      "processing_method": "Temperature-dependent electrochemical impedance spectroscopy",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Li+ Sublattice Evolution and Diffusion Pathways",
+        "section": "3. RESULTS"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0180",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.9"
+      },
+      "ionic_conductivity_S_per_cm": "3.8 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type Li6PS5-xSexBr solid electrolyte",
+      "processing_method": "Temperature-dependent electrochemical impedance spectroscopy",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Li+ Sublattice Evolution and Diffusion Pathways",
+        "section": "3. RESULTS"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfur selenium bromide argyrodite",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure solid solution with Se substitution",
+      "processing_method": "Not described in provided text",
+      "source_node": {
+        "node_id": "0023",
+        "title": "Argyrodite Structure and Lithium Ion Diffusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0032,
+      "_norm_temp": 298.15,
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfur selenium bromide argyrodite",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "3.7 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure solid solution with Se substitution",
+      "processing_method": "Not described in provided text",
+      "source_node": {
+        "node_id": "0023",
+        "title": "Argyrodite Structure and Lithium Ion Diffusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Bromide",
+        "acronym": "Li6PS5Br",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.28 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "294 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure solid solution; exhibits site disorder between Br and the chalcogenide anions.",
+      "processing_method": "Synthesis of solid solutions.",
+      "source_node": {
+        "node_id": "0131",
+        "title": "Lattice Parameters and Chalcogenide Site Occupancy Results",
+        "section": "3. RESULTS"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS4.5Se0.5Br",
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.78 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "294 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure solid solution; exhibits lattice expansion due to larger Se2- ionic radius and site disorder between Br and the chalcogenide anions.",
+      "processing_method": "Synthesis of solid solutions.",
+      "source_node": {
+        "node_id": "0131",
+        "title": "Lattice Parameters and Chalcogenide Site Occupancy Results",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 0.00278,
+      "_norm_temp": 20.850000000000023,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS4SeBr",
+        "proportion": "x = 1.0"
+      },
+      "ionic_conductivity_S_per_cm": "3.40 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "294 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure solid solution where approximately 50% of selenium occupies the free Ch2- site and 50% replaces sulfur on the PS4 tetrahedra; exhibits site disorder between Br and the chalcogenide anions.",
+      "processing_method": "Synthesis of solid solutions.",
+      "source_node": {
+        "node_id": "0131",
+        "title": "Lattice Parameters and Chalcogenide Site Occupancy Results",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 0.0034,
+      "_norm_temp": 20.850000000000023,
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0207",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "overall ionic conductivities",
+      "measurement_temperature": "elevated temperatures",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "overall ionic conductivities",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0194",
+        "title": "Figure 5 and Impedance Spectroscopy Analysis Details",
+        "section": "3. RESULTS"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 30,
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenide Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure; Br⁻ anions form a cubic close packed lattice with PS₄ tetrahedra in octahedral sites.",
+      "processing_method": "Characterized via impedance spectroscopy, X-ray diffraction, and neutron pair distribution function.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenide Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.8"
+      },
+      "ionic_conductivity_S_per_cm": "3.5 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure with Selenium substitution.",
+      "processing_method": "Characterized via impedance spectroscopy, X-ray diffraction, and neutron pair distribution function.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0035",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenide Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 1.0"
+      },
+      "ionic_conductivity_S_per_cm": "3.6 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure; broader diffusion pathways due to larger anion (Se) but offset by structural reordering.",
+      "processing_method": "Characterized via impedance spectroscopy, X-ray diffraction, and neutron pair distribution function.",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Results, Implications, and Conclusion",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide bromide argyrodite",
+        "acronym": "Li6PS5Br",
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.9Se0.1Br",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.8Se0.2Br",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.7Se0.3Br",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.6 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0036000000000000003,
+      "_norm_temp": 25,
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.6Se0.4Br",
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "3.7 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0037,
+      "_norm_temp": 25,
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.5Se0.5Br",
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.7 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0027,
+      "_norm_temp": 25,
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.4Se0.6Br",
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0028,
+      "_norm_temp": 25,
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.3Se0.7Br",
+        "proportion": "x=0.7"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.003,
+      "_norm_temp": 25,
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.2Se0.8Br",
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "3.5 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0035,
+      "_norm_temp": 25,
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4.1Se0.9Br",
+        "proportion": "x=0.9"
+      },
+      "ionic_conductivity_S_per_cm": "3.8 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0038,
+      "_norm_temp": 25,
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0050",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus sulfide selenide bromide",
+        "acronym": "Li6PS4SeBr",
+        "proportion": "x=1.0"
+      },
+      "ionic_conductivity_S_per_cm": "3.6 mS cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered crystal structure of Li6PCh5Br; Br- anions form a cubic close packed lattice with PCh4 tetrahedra in the octahedral sites and the free Ch2- in half of the tetrahedral sites",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Figure Descriptions and Author Affiliations",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 0.0036000000000000003,
+      "_norm_temp": 25,
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.7e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6PS5-xSexBr argyrodite solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.8"
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6PS5-xSexBr argyrodite solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfur Selenium Bromide",
+        "acronym": "Li6PS5-xSexBr",
+        "proportion": "x = 0.9"
+      },
+      "ionic_conductivity_S_per_cm": "3.8e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6PS5-xSexBr argyrodite solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

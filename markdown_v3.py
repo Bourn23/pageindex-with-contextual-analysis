@@ -10,6 +10,7 @@ from typing import List, Optional, Dict, Any, Tuple, Union
 from itertools import groupby
 from operator import itemgetter
 from concurrent.futures import ThreadPoolExecutor
+import random
 
 # --- GEMINI/Pydantic Setup (Requires 'google-genai' and 'pydantic' installed) ---
 from google import genai
@@ -187,7 +188,7 @@ def extract_special_blocks(text: str) -> Tuple[str, BlockRegistry]:
             node = ImageNode(
                 title=f"Figure: {src}",
                 src=src,
-                alt_text=alt_text,
+                text=alt_text,
                 node_id=get_uuid()
             )
             registry.register(block_id, node)
@@ -222,7 +223,7 @@ def extract_special_blocks(text: str) -> Tuple[str, BlockRegistry]:
             block_id = f"__TBL_{get_uuid()}__"
             node = TableNode(
                 title=caption,
-                markdown_content="\n".join(table_lines),
+                text="\n".join(table_lines),
                 node_id=get_uuid()
             )
             registry.register(block_id, node)
@@ -292,12 +293,15 @@ async def llm_call_async(prompt: str, json_schema: Optional[Dict[str, Any]] = No
     Includes a timeout to prevent infinite hangs.
     """
     loop = asyncio.get_running_loop()
-    
+
+    max_retries = 3
+    base_delay = 2
+
     # Define the blocking work
     def blocking_io():
         # --- CACHING LOGIC CAN GO HERE ---
         return client.models.generate_content(
-            model="gemini-2.5-flash-lite", # Flash is faster for this
+            model="gemini-2.5-flash", # Flash is faster for this
             contents=prompt,
             config={
                 "response_mime_type": "application/json",
@@ -306,11 +310,31 @@ async def llm_call_async(prompt: str, json_schema: Optional[Dict[str, Any]] = No
         ).text
 
     # Run in a thread pool with a timeout
-    try:
-        return await asyncio.wait_for(loop.run_in_executor(None, blocking_io), timeout=timeout)
-    except asyncio.TimeoutError:
-        print(f"⚠️ LLM Call Timed Out after {timeout}s.")
-        raise
+    for attempt in range(max_retries):
+        try:
+            return await asyncio.wait_for(loop.run_in_executor(None, blocking_io), timeout=timeout)
+        except asyncio.TimeoutError:
+            delay = base_delay * (2 ** attempt)
+            print(f"  ⚠️ Timeout (Attempt {attempt + 1}/{max_retries}). Retrying in {delay}s...")
+            await asyncio.sleep(delay)
+        except Exception as e:
+            error_str = e
+
+            # Check for specific "Overloaded" (503) or "Rate Limit" (429) errors
+            if "503" in error_str or "429" in error_str or "Overloaded" in error_str or "UNAVAILABLE" in error_str:
+                if attempt < max_retries - 1:
+                    # Calculate delay: 2s, 4s, 8s, 16s... + random jitter
+                    sleep_time = (base_delay * (2 ** attempt)) + random.uniform(0.1, 1.0)
+                    
+                    print(f"  ⏳ Server Busy (503). Retrying in {sleep_time:.1f}s... (Attempt {attempt + 1}/{max_retries})")
+                    await asyncio.sleep(sleep_time)
+                    continue # Try loop again
+            
+            # If it's a different error (e.g., 400 Bad Request), or we ran out of retries, crash.
+            print(f"❌ Unrecoverable LLM Error: {e}")
+            raise
+
+    raise Exception(f"Failed to get LLM response after {max_retries} retries.")
 
 def chain(input_data: str, prompts: list[tuple[str, BaseModel]]) -> str:
     """Chain multiple LLM calls sequentially, using Pydantic schema for output."""
@@ -498,7 +522,12 @@ async def process_group_async(
         {indexed_group_text}
         
         Task: Extract scientific keywords for EACH sentence index provided above.
-        Each sentence index is denoted by [int].
+        
+        CRITICAL FORMATTING INSTRUCTIONS:
+        1. The output must be a Dictionary where the KEY is the Integer Index (e.g. 0, 1, 5).
+        2. NEVER use the text content (e.g. "University of Illinois") as the key.
+        3. Only use the integer provided in the square brackets [] above.
+        
         Return a Dict[int, List[KeywordMetadata]].
         """
 

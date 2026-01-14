@@ -1,0 +1,1356 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Ionic Conductivity of Solid Electrolytes Based on Lithium Titanium Phosphate_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 50,
+    "after_dedup": 48,
+    "valid_count": 43,
+    "invalid_count": 5,
+    "by_confidence": {
+      "high": 20,
+      "medium": 23,
+      "low": 5
+    },
+    "by_source": {
+      "primary": 41,
+      "cited": 7,
+      "inferred": 0
+    },
+    "from_text_nodes": 35,
+    "from_image_nodes": 15,
+    "final_count": 48
+  },
+  "material_count": 48,
+  "materials": [
+    {
+      "source_sentence_id": "0240",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium titanium phosphate",
+        "acronym": "LTP",
+        "proportion": "Li₁.₃M₀.₃Ti₁.₇(PO₄)₃ (M = Al or Sc)"
+      },
+      "ionic_conductivity_S_per_cm": "7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "excellent solid electrolytes for their high lithium ionic conductivity even at room temperature and have a high stability in air",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0239",
+        "title": "Achieved performance and conclusion on material suitability",
+        "section": "Conclusion"
+      },
+      "_norm_cond": 0.0007,
+      "_norm_temp": 24.850000000000023,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0099",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Silicon Phosphate Oxide",
+        "acronym": "LTSP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li1+xTi2SixP3-xO12 system",
+      "processing_method": "Sintering at 1473 K for 2h",
+      "source_node": {
+        "node_id": "0087",
+        "title": "Li1+xTi2SixP3-xO12 System Analysis",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.00032,
+      "_norm_temp": 24.850000000000023,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0152",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Aluminum Titanium Phosphate",
+        "acronym": "LATP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7×10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li1.3Al0.3Ti1.7(PO4)3",
+      "processing_method": "M3+ substitution",
+      "source_node": {
+        "node_id": "0150",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Conductivity Analysis",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0007,
+      "_norm_temp": 24.850000000000023,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0152",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Scandium Titanium Phosphate",
+        "acronym": "LSTP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7×10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "processing_method": "M3+ substitution",
+      "source_node": {
+        "node_id": "0150",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Conductivity Analysis",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0007,
+      "_norm_temp": 24.850000000000023,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0016",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Aluminum Scandium Titanium Phosphate",
+        "acronym": "Li_{1.3}M_{0.3}Ti_{1.7}(PO_4)_3 (M = Al and Sc)",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Partially replacing Ti⁴⁺ and P⁵⁺ in LiTi₂(PO₄)₃ with M³⁺ (M³⁺ = Al³⁺, Sc³⁺) and Si⁴⁺ ions.",
+      "processing_method": "Sintered pellet",
+      "source_node": {
+        "node_id": "0013",
+        "title": "Key Experimental Results",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 7.0,
+      "_norm_temp": 24.850000000000023,
+      "_index": 4,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 7.00e+00 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0031",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium 2 Phosphate 3",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "conductivities",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Substitution effects of Ti4+ by various ions (Al3+, Sc3+, Y3+, and La3+)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 0,
+      "_index": 5,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0160",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 &#215; 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Unsubstituted NASICON-type lithium ion conductor (porosity ≈ 34%)",
+      "processing_method": "Solid state reaction",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 2.5e-06,
+      "_norm_temp": 24.850000000000023,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0163",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Aluminum Titanium Phosphate",
+        "acronym": "Li1.3Al0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 7 &#215; 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase NASICON-type lithium ion conductor",
+      "processing_method": "Substitution of Ti4+ sites by Al3+",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0007,
+      "_norm_temp": 24.850000000000023,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0163",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanium Phosphate",
+        "acronym": "Li1.3La0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 5 &#215; 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mixed-phase NASICON-type lithium ion conductor",
+      "processing_method": "Substitution of Ti4+ sites by La3+",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 24.850000000000023,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0110",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium trivalent-cation substituted Titanium Phosphate system",
+        "acronym": "Li1.3M(III)0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.9 × 10⁻⁴ S/cm",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase NASICON-type structure where M is a trivalent cation (Al, Cr, Ga, Fe, Sc, or In).",
+      "processing_method": "Starting materials synthesized at elevated temperatures; specific mention of vaporization risk for In2O3 precursors.",
+      "source_node": {
+        "node_id": "0100",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Effect of M3+ Substitution on Lattice Constants and Phase Formation",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.00079,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0110",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium trivalent-cation substituted Titanium Phosphate system",
+        "acronym": "Li1.3M(III)0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻¹ S/cm",
+      "measurement_temperature": "400°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase NASICON-type structure where M is a trivalent cation (Al, Cr, Ga, Fe, Sc, or In).",
+      "processing_method": "Starting materials synthesized at elevated temperatures; specific mention of vaporization risk for In2O3 precursors.",
+      "source_node": {
+        "node_id": "0100",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Effect of M3+ Substitution on Lattice Constants and Phase Formation",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.16,
+      "_norm_temp": 400,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0110",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium trivalent-cation substituted Titanium Phosphate system (alternative dopant)",
+        "acronym": "Li1.3M(III)0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.5 × 10⁻⁴ S/cm",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase NASICON-type structure corresponding to the lower curve in the Arrhenius plot (open squares).",
+      "processing_method": "Starting materials synthesized at elevated temperatures; specific mention of vaporization risk for In2O3 precursors.",
+      "source_node": {
+        "node_id": "0100",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Effect of M3+ Substitution on Lattice Constants and Phase Formation",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0110",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium trivalent-cation substituted Titanium Phosphate system (alternative dopant)",
+        "acronym": "Li1.3M(III)0.3Ti1.7(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.9 × 10⁻² S/cm",
+      "measurement_temperature": "400°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase NASICON-type structure corresponding to the lower curve in the Arrhenius plot (open squares).",
+      "processing_method": "Starting materials synthesized at elevated temperatures; specific mention of vaporization risk for In2O3 precursors.",
+      "source_node": {
+        "node_id": "0100",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Effect of M3+ Substitution on Lattice Constants and Phase Formation",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0160",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.6 × 10⁻⁶ S/cm",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pure NASICON-type lithium titanium phosphate ceramic (34% porosity)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 1.6e-06,
+      "_norm_temp": 24.850000000000023,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0160",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Mixed-phase Lithium metal-substituted Titanium Phosphate",
+        "acronym": "Li1+xMxTi2-x(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.0 × 10⁻⁴ to 6.3 × 10⁻⁴ S/cm",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mixed-phase samples at low porosity (<2%), possibly including Al or La substitutions",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.00063,
+      "_norm_temp": 24.850000000000023,
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0073",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Silicon Phosphorus Oxide",
+        "acronym": "Li1+xTi2SixP3-xO12",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid electrolyte based on the LiTi2(PO4)3 system with a rhombohedral (R-3C) structure; sintered pellets with remarkably decreased porosity compared to lower substitution levels.",
+      "processing_method": "Sintering conducted at 1473 K for 2h.",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Li1+xMxTi2-x(PO4)3 Systems: Introduction to Lattice Constants and Phase Limits",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.00032,
+      "_norm_temp": 24.850000000000023,
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate mixed-phase system",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": "x = 0.3, 0.4"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mixed-phase system (Lu3+, Y3+, or La3+) showing high conductivity and density",
+      "processing_method": "Sintered pellets",
+      "source_node": {
+        "node_id": "0168",
+        "title": "Conductivity-Porosity Relationship and Conduction Mechanism",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 25,
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate single-phase system",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": "x = 0.2, 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase system (Al3+, Cr3+, Ga3+, Fe3+, Sc3+, or In3+)",
+      "processing_method": "Sintered pellets",
+      "source_node": {
+        "node_id": "0168",
+        "title": "Conductivity-Porosity Relationship and Conduction Mechanism",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.00032,
+      "_norm_temp": 25,
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate mixed-phase system",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": "x = 0.3, 0.4"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻¹ S cm⁻¹",
+      "measurement_temperature": "400°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mixed-phase system exhibiting the highest conductivity in the series",
+      "processing_method": "Sintered pellets",
+      "source_node": {
+        "node_id": "0168",
+        "title": "Conductivity-Porosity Relationship and Conduction Mechanism",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate single-phase system",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": "x = 0.2, 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.9 × 10⁻² S cm⁻¹",
+      "measurement_temperature": "400°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase system (Al3+, Cr3+, Ga3+, Fe3+, Sc3+, or In3+)",
+      "processing_method": "Sintered pellets",
+      "source_node": {
+        "node_id": "0168",
+        "title": "Conductivity-Porosity Relationship and Conduction Mechanism",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0022",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Lithium nitride",
+        "acronym": "Li3N",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest conductivity",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0023",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Glasses based on Lithium sulfide",
+        "acronym": "Li2S",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "reasonably high",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0025",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "NASICON-type network structure",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0026",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sodium 1+x Zirconium 2 Silicon x Phosphorus 3-x Oxide 12",
+        "acronym": "Na1+xZr2SixP3-xO12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high sodium ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "NASICON system with P5+ site partially substituted with Si4+ in NaZr2(PO4)3",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium 1+x Zirconium 2 Silicon x Phosphorus 3-x Oxide 12",
+        "acronym": "Li1+xZr2SixP3-xO12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "low ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Li analogue of Na1+xZr2SixP3-xO12 system",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0028",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium 2 Phosphate 3",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "greatly increased",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Zr4+ in LiZr2(PO4)3 replaced by Ti4+",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium 2 Phosphate 3",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "increases appreciably",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Ti4+ in the phosphate partially substituted by a larger cation such as Ga3+, Cr3+, Sc3+, or In3+",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0019",
+        "title": "Background and Prior Research on Solid Electrolytes",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0185",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3M2(PO4)3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "lower conductivity",
+      "measurement_temperature": "298 K",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "second phase of Li3M2(PO4)3 is a lower conductivity ionic conductor",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Effect of Binders on Sintering and Conductivity",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0195",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3 + a second phase",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Their conductivities",
+      "measurement_temperature": "298 K",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Sintered samples were mixed phases [LiTi2(PO4)3 + a second phase]. A glassy phase might be formed in appreciable quantity by the binder utilization.",
+      "processing_method": "Sintered at 1173 K for 2h",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Effect of Binders on Sintering and Conductivity",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 24.850000000000023,
+      "_index": 28,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0196",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3 + a second phase",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "The conductivity was increased",
+      "measurement_temperature": "298 K",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Increased conductivity and decreased porosity greatly by binder addition.",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Effect of Binders on Sintering and Conductivity",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 24.850000000000023,
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0160",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium metal-substituted Titanium Phosphate",
+        "acronym": "Li1+xMxTi2-x(PO4)3",
+        "proportion": "x = 0.2-0.3, M = Al, Cr, Ga, Fe, Sc, In"
+      },
+      "ionic_conductivity_S_per_cm": "~7.9 × 10⁻⁴ S/cm",
+      "measurement_temperature": "298 K",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Extrapolated value for single-phase substituted NASICON system at 0% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0159",
+        "title": "Conductivity Trends with M3+ Substitution",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Aluminum Titanium Phosphate Oxide",
+        "acronym": "LATP",
+        "proportion": "1.3Al0.3Ti1.7(PO4)3 + 0.3Li2O"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Li1.3Al0.3Ti1.7(PO4)3 + 0.3Li2O sample",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0201",
+        "title": "Role of Lithium Concentration and Grain Boundaries",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 31,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate Oxide",
+        "acronym": "LTPO",
+        "proportion": "+ 0.3Li2O"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "LiTi2(PO4)3 + 0.3Li2O sample",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0201",
+        "title": "Role of Lithium Concentration and Grain Boundaries",
+        "section": "**Results and Discussion**"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.3e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "single phase, ~2% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0176",
+        "title": "_page_3_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00063,
+      "_norm_temp": 25,
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "single phase, ~10% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0176",
+        "title": "_page_3_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0002,
+      "_norm_temp": 25,
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "single phase, ~34% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0176",
+        "title": "_page_3_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "mixed phase, ~0% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0176",
+        "title": "_page_3_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "mixed phase, ~4% porosity",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0176",
+        "title": "_page_3_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00025,
+      "_norm_temp": 23,
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Unspecified material (solid circles)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-3 S cm^-1",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Data series represented by solid circles in Arrhenius plot",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0161",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Unspecified material (solid circles)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-1 S cm^-1",
+      "measurement_temperature": "400°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Data series represented by solid circles in Arrhenius plot",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0161",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.16,
+      "_norm_temp": 400,
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Unspecified material (open squares)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-4 S cm^-1",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Data series represented by open squares in Arrhenius plot",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0161",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25,
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Unspecified material (open squares)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-1 S cm^-1",
+      "measurement_temperature": "400°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Data series represented by open squares in Arrhenius plot",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0161",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.1,
+      "_norm_temp": 400,
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Titanium Phosphate",
+        "acronym": "LiTi2(PO4)3",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-6 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Undoped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Scandium-doped Lithium Titanium Phosphate",
+        "acronym": "Li1+xScxTi2-x(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.9e-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sc-doped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00079,
+      "_norm_temp": 25.5,
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Aluminum-doped Lithium Titanium Phosphate",
+        "acronym": "Li1+xAlxTi2-x(PO4)3",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "6.3e-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Al-doped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00063,
+      "_norm_temp": 25,
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Indium-doped Lithium Titanium Phosphate",
+        "acronym": "Li1+xInxTi2-x(PO4)3",
+        "proportion": "x = 0.4"
+      },
+      "ionic_conductivity_S_per_cm": "6.3e-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "In-doped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00063,
+      "_norm_temp": 25.5,
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lanthanum-doped Lithium Titanium Phosphate",
+        "acronym": "Li1+xLaxTi2-x(PO4)3",
+        "proportion": "x = 0.4"
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "La-doped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 25,
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Chromium-doped Lithium Titanium Phosphate",
+        "acronym": "Li1+xCrxTi2-x(PO4)3",
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Cr-doped NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0157",
+        "title": "_page_2_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25,
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

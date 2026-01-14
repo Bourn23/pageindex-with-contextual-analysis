@@ -1,0 +1,876 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Composite Polymer Electrolytes with Li7La3Zr2O12 Garnet-Type Nanowires as Ceramic Fillers_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 33,
+    "after_dedup": 31,
+    "valid_count": 27,
+    "invalid_count": 4,
+    "by_confidence": {
+      "high": 18,
+      "medium": 13,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 27,
+      "cited": 4,
+      "inferred": 0
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 10,
+    "final_count": 31
+  },
+  "material_count": 31,
+  "materials": [
+    {
+      "source_sentence_id": "0195",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer ceramic electrolyte with undoped Lithium Lanthanum Zirconate Nanowires",
+        "acronym": "CPE with 5 wt % undoped LLZO NWs",
+        "proportion": "5 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPE with 5 wt % undoped LLZO NWs",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Li+ Transference Number Determination",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.01,
+      "_norm_temp": 20,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0008",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "polyacrylonitrile-LiClO\n4\n-based composite",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.31 × 10⁻⁴ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "polyacrylonitrile-LiClO\n4\n-based composite with 5 wt % of undoped, cubic-phase LLZO nanowires",
+      "processing_method": "electrospinning",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Conductivity Enhancement with Undoped LLZO Nanowires",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0122",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "blank sample containing only PAN and LiClO4"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁷ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "blank sample containing only PAN and LiClO4",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 20,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0124",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % loading of undoped LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "1.31 × 10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs loaded with undoped LLZO NWs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0130",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % Al- or Ta-LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs with doped LLZO NW fillers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0130",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % undoped LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs with undoped LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % BM-LLZO NPs"
+      },
+      "ionic_conductivity_S_per_cm": "1.13 × 10⁻⁵ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPE with BM-LLZO NPs as fillers",
+      "processing_method": "ball-milling bulk t-LLZO (BM-LLZO NPs)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0137",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % Al2O3 NWs"
+      },
+      "ionic_conductivity_S_per_cm": "1.13 × 10⁻⁵ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPE with Al2O3 NWs as passive fillers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.13e-05,
+      "_norm_temp": 23,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0137",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "blank sample containing only PAN and LiClO4"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁷ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "blank sample containing only PAN and LiClO4",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0195",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer ceramic electrolyte with undoped Lithium Lanthanum Zirconate Nanowires",
+        "acronym": "CPE with 5 wt % undoped LLZO NWs",
+        "proportion": "5 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPE with 5 wt % undoped LLZO NWs",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Li+ Transference Number Determination",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 20,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0124",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % loading of undoped LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "1.31 × 10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs loaded with undoped LLZO NWs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.000131,
+      "_norm_temp": 20,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0130",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % Al- or Ta-LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs with doped LLZO NW fillers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0130",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % undoped LLZO NWs"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs with undoped LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 20,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "5 wt % BM-LLZO NPs"
+      },
+      "ionic_conductivity_S_per_cm": "1.13 × 10⁻⁵ S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPE with BM-LLZO NPs as fillers",
+      "processing_method": "ball-milling bulk t-LLZO (BM-LLZO NPs)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.13e-05,
+      "_norm_temp": 20,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0137",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte",
+        "acronym": "CPE",
+        "proportion": "blank sample containing only PAN and LiClO4"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁷ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "blank sample containing only PAN and LiClO4",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0105",
+        "title": "Ionic Conductivity Performance and Analysis",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0213",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte with LLZO NWs",
+        "acronym": "CPEs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs with LLZO NWs as ceramic fillers",
+      "processing_method": "fabricated",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Main Achievement",
+        "section": "CONCLUSIONS"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "polyacrylonitrile",
+        "acronym": "PAN",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3 orders of magnitude improvement compared to the polymer and Li+ salt alone",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLTO NWs embedded into polyacrylonitrile (PAN)",
+      "processing_method": "Electrospinning",
+      "source_node": {
+        "node_id": "0024",
+        "title": "Promising Results with Nanowire (NW) Ceramic Fillers",
+        "section": "**■ INTRODUCTION**"
+      },
+      "_norm_cond": 1000.0,
+      "_norm_temp": 25,
+      "_index": 16,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyacrylonitrile with Lithium Perchlorate",
+        "acronym": "PAN + LiClO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10^-7 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Base polymer electrolyte without ceramic filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 20,
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0196",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte with Aluminum Oxide",
+        "acronym": "PAN-LiClO4-Al2O3",
+        "proportion": "N/A"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "25 °C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "PAN-LiClO4-Al2O3",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Li+ Transference Number Determination",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0196",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte with Aluminum Oxide",
+        "acronym": "PAN-LiClO4-Al2O3",
+        "proportion": "N/A"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "25 °C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "PAN-LiClO4-Al2O3",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Li+ Transference Number Determination",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 25.0,
+      "_norm_temp": 25,
+      "_index": 19,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 2.50e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "tetragonal phase LLZO",
+        "acronym": "t-LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2 orders of magnitude lower than c-LLZO",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0031",
+        "title": "Remaining Challenges and Previous Research on c-LLZO Phase Stability",
+        "section": "**■ INTRODUCTION**"
+      },
+      "_norm_cond": -4.0,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity -4.00e+00 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "cubic structure LLZO",
+        "acronym": "c-LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0031",
+        "title": "Remaining Challenges and Previous Research on c-LLZO Phase Stability",
+        "section": "**■ INTRODUCTION**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 21,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Undoped LLZO Nanowires in PAN + LiClO4",
+        "acronym": "Undoped LLZO NWs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-4 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with undoped LLZO nanowire filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Al-doped LLZO Nanowires in PAN + LiClO4",
+        "acronym": "Al-doped LLZO NWs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.25e-4 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with Al-doped LLZO nanowire filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Ta-doped LLZO Nanowires in PAN + LiClO4",
+        "acronym": "Ta-doped LLZO NWs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-4 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with Ta-doped LLZO nanowire filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO Nanoparticles in PAN + LiClO4",
+        "acronym": "LLZO NPs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.1e-4 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with LLZO nanoparticle filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_0_Figure_11.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Al2O3 Nanowires in PAN + LiClO4",
+        "acronym": "Al2O3 NWs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.15e-4 S/cm",
+      "measurement_temperature": "20 °C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with Al2O3 nanowire filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0011",
+        "title": "_page_0_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 20,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg (f)",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolyte (0 wt% filler)",
+        "acronym": "Polymer host",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-7 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Base polymer electrolyte without filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0107",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg (f)",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite electrolyte with 5 wt% Al-doped LLZO nanowires",
+        "acronym": "Al-LLZO NWs composite",
+        "proportion": "5 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-4 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte containing Al-doped LLZO nanowires at optimized loading",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0107",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg (g)",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite electrolyte",
+        "acronym": "LLZO NW composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.26e-4 S/cm",
+      "measurement_temperature": "20°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Temperature dependence of ionic conductivity for the composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0107",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.000126,
+      "_norm_temp": 20,
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_2.jpeg (g)",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite electrolyte",
+        "acronym": "LLZO NW composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.9e-4 S/cm",
+      "measurement_temperature": "80°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Temperature dependence of ionic conductivity for the composite electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0107",
+        "title": "_page_3_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00089,
+      "_norm_temp": 80,
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,634 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Inducing High Ionic Conductivity in the Lithium Superionic Argyrodites Li_sub_6__i_x__i___sub_P_sub_1__i_x__i___sub_Ge_sub__i_x__i___sub_S_sub_5__sub_I for All-Solid-State Batteries_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 24,
+    "after_dedup": 22,
+    "valid_count": 20,
+    "invalid_count": 2,
+    "by_confidence": {
+      "high": 14,
+      "medium": 6,
+      "low": 2
+    },
+    "by_source": {
+      "primary": 14,
+      "cited": 5,
+      "inferred": 3
+    },
+    "from_text_nodes": 24,
+    "from_image_nodes": 0,
+    "final_count": 22
+  },
+  "material_count": 22,
+  "materials": [
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium argyrodite",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "cold-pressed state",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "With increasing Ge content, an anion site disorder is induced and the activation barrier for ionic motion drops significantly",
+      "processing_method": "cold-pressed state",
+      "source_node": {
+        "node_id": "0042",
+        "title": "Key Findings and Performance",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.0054,
+      "_norm_temp": -5,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium argyrodite",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "sintering",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "With increasing Ge content, an anion site disorder is induced and the activation barrier for ionic motion drops significantly",
+      "processing_method": "sintering",
+      "source_node": {
+        "node_id": "0042",
+        "title": "Key Findings and Performance",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.0184,
+      "_norm_temp": null,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0271",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Sulfide Iodide",
+        "acronym": "Li6+xP1-xGexS5I",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high ionic conductivity",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure with aliovalent substitution of Li6+xP1-xGexS5I",
+      "processing_method": "Rietveld refinements against neutron and X-ray diffraction data",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0269",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorous Sulfide Halide",
+        "acronym": "Li6PS5X",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "higher ionic conductivities",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid electrolytes with tailored disorder",
+      "processing_method": "tailoring the disorder",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0271",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Sulfide Iodide",
+        "acronym": "Li6+xP1-xGexS5I",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high ionic conductivity",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite structure with aliovalent substitution of Li6+xP1-xGexS5I",
+      "processing_method": "Rietveld refinements against neutron and X-ray diffraction data",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 4,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0269",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorous Sulfide Halide",
+        "acronym": "Li6PS5X",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "higher ionic conductivities",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid electrolytes with tailored disorder",
+      "processing_method": "tailoring the disorder",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 5,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest Li⁺-conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "fast conducting",
+      "processing_method": "cold-pressed",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0283",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "thiophosphate solid electrolyte",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "60 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "superionic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 60,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0074",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium argyrodites",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "lithium argyrodites",
+      "processing_method": "cold-pressed",
+      "source_node": {
+        "node_id": "0072",
+        "title": "Key Findings and Performance of Ge-Substituted Argyrodites",
+        "section": "**1. Introduction**"
+      },
+      "_norm_cond": 0.0054,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0074",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "lithium argyrodites",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "lithium argyrodites",
+      "processing_method": "sintering",
+      "source_node": {
+        "node_id": "0072",
+        "title": "Key Findings and Performance of Ge-Substituted Argyrodites",
+        "section": "**1. Introduction**"
+      },
+      "_norm_cond": 0.0184,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0301",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Germanium Sulfide Iodide",
+        "acronym": "Li6.6P0.4Ge0.6S5I",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li6.6P0.4Ge0.6S5I",
+      "processing_method": "sintering of the pellets",
+      "source_node": {
+        "node_id": "0297",
+        "title": "Structural Changes and Conductivity Enhancement",
+        "section": "**5. Conclusion**"
+      },
+      "_norm_cond": 0.0054,
+      "_norm_temp": 25,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0301",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Germanium Sulfide Iodide",
+        "acronym": "Li6.6P0.4Ge0.6S5I",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "not specified",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li6.6P0.4Ge0.6S5I",
+      "processing_method": "sintering of the pellets",
+      "source_node": {
+        "node_id": "0297",
+        "title": "Structural Changes and Conductivity Enhancement",
+        "section": "**5. Conclusion**"
+      },
+      "_norm_cond": 0.0184,
+      "_norm_temp": 25,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest Li⁺-conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "fast conducting",
+      "processing_method": "cold-pressed",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0283",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "thiophosphate solid electrolyte",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "60 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "superionic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0259",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorous Sulfide Bromide Iodide",
+        "acronym": "Li6PS5Br1-xIx",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "not specified",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0259",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorous Sulfide Bromide Iodide",
+        "acronym": "Li6PS5Br1-xIx",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "not specified",
+      "measurement_temperature": "not specified",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0251",
+        "title": "Structure-Transport Correlation",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest Li⁺-conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "sintered",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "iodine containing argyrodites",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3·10-6 S cm-1",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0063",
+        "title": "Site-Disorder in Argyrodites and Prior Work",
+        "section": "**1. Introduction**"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest Li⁺-conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "sintered",
+      "source_node": {
+        "node_id": "0274",
+        "title": "Solid State Battery Performance",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfide Iodide",
+        "acronym": "Li6PS5I",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.6·10-5 S cm-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Undoped Li6PS5I argyrodite",
+      "processing_method": "Estimated using Einstein-Smoluchowski and Nernst-Einstein equations from frequency of motion obtained via NMR",
+      "source_node": {
+        "node_id": "0195",
+        "title": "Ionic Transport",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 2.6e-05,
+      "_norm_temp": 25,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0249",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Germanium Sulfide Iodide",
+        "acronym": "Li6.25P0.75Ge0.25S5I",
+        "proportion": "x = 0.25"
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Ge-substituted lithium argyrodite (x = 0.25)",
+      "processing_method": "Estimated using Einstein-Smoluchowski and Nernst-Einstein equations from NMR dynamical studies",
+      "source_node": {
+        "node_id": "0195",
+        "title": "Ionic Transport",
+        "section": "**3. Results**"
+      },
+      "_norm_cond": 0.0039,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0249",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Germanium Sulfide Iodide",
+        "acronym": "Li6.6P0.4Ge0.6S5I",
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "7.5 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Ge-substituted lithium argyrodite (x = 0.6)",
+      "processing_method": "Estimated using Einstein-Smoluchowski and Nernst-Einstein equations from NMR dynamical studies",
+      "source_node": {
+        "node_id": "0195",
+        "title": "Ionic Transport",
+        "section": "**3. Results**"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

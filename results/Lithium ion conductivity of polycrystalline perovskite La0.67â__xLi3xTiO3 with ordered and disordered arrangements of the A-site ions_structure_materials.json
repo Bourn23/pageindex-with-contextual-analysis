@@ -1,0 +1,1396 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Lithium ion conductivity of polycrystalline perovskite La0.67â__xLi3xTiO3 with ordered and disordered arrangements of the A-site ions_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 57,
+    "after_dedup": 50,
+    "valid_count": 49,
+    "invalid_count": 1,
+    "by_confidence": {
+      "high": 41,
+      "medium": 8,
+      "low": 1
+    },
+    "by_source": {
+      "primary": 41,
+      "cited": 8,
+      "inferred": 1
+    },
+    "from_text_nodes": 57,
+    "from_image_nodes": 0,
+    "final_count": 50
+  },
+  "material_count": 50,
+  "materials": [
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "perovskite solid solutions",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Bulk Conductivities at 25°C and Compositional Effects (Fig. 3)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "perovskite solid solutions",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "6.88 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Bulk Conductivities at 25°C and Compositional Effects (Fig. 3)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000688,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "perovskite solid solutions",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Bulk Conductivities at 25°C and Compositional Effects (Fig. 3)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00153,
+      "_norm_temp": 25,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0168",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La_{0.67-x}Li_{3x}TiO_3",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "simple cubic form with disordered arrangements of the A-site ions",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0167",
+        "title": "Conclusions on Conductivity and Structural Properties",
+        "section": "4. Conclusions"
+      },
+      "_norm_cond": 0.00153,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La_{0.67-x}Li_{3x}TiO_3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.88 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "tetragonal form",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0167",
+        "title": "Conclusions on Conductivity and Structural Properties",
+        "section": "4. Conclusions"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0015",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La Li TiO",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻¹ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "disordered sample",
+      "processing_method": "prepared by quenching from 1350°C into liquid N₂",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Abstract Summary",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.153,
+      "_norm_temp": 25,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0015",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La Li TiO",
+        "acronym": null,
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "6.88 × 10⁻¹ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ordered sample (S = 0.6)",
+      "processing_method": "prepared by quenching from 1350°C into liquid N₂ and annealing at 800°C for 3 days",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Abstract Summary",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.688,
+      "_norm_temp": 25,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "1.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Disordered (quenched) lithium ion conducting perovskite",
+      "processing_method": "Quenched sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00018,
+      "_norm_temp": 25,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "7.9 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Disordered (quenched) lithium ion conducting perovskite",
+      "processing_method": "Quenched sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00079,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.3 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Disordered (quenched) lithium ion conducting perovskite",
+      "processing_method": "Quenched sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.0013,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Disordered (quenched) lithium ion conducting perovskite",
+      "processing_method": "Quenched sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered (annealed) lithium ion conducting perovskite",
+      "processing_method": "Annealed sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "5.6 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered (annealed) lithium ion conducting perovskite",
+      "processing_method": "Annealed sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00056,
+      "_norm_temp": 25,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "6.3 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered (annealed) lithium ion conducting perovskite",
+      "processing_method": "Annealed sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00063,
+      "_norm_temp": 25,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "6.6 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered (annealed) lithium ion conducting perovskite",
+      "processing_method": "Annealed sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conducting perovskite",
+        "acronym": null,
+        "proportion": "x = 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered (annealed) lithium ion conducting perovskite",
+      "processing_method": "Annealed sample",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "1.78 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched disordered sample",
+      "processing_method": "quenched",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000178,
+      "_norm_temp": 25,
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "7.94 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched disordered sample",
+      "processing_method": "quenched",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000794,
+      "_norm_temp": 25,
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.41 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched disordered sample",
+      "processing_method": "quenched",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.78 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched disordered sample",
+      "processing_method": "quenched",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00178,
+      "_norm_temp": 25,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.13"
+      },
+      "ionic_conductivity_S_per_cm": "1.26 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "quenched disordered sample",
+      "processing_method": "quenched",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00126,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "3.55 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed ordered sample",
+      "processing_method": "quenching-annealing cycles",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000355,
+      "_norm_temp": 25,
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "5.62 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed ordered sample",
+      "processing_method": "quenching-annealing cycles",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000562,
+      "_norm_temp": 25,
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "6.31 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed ordered sample",
+      "processing_method": "quenching-annealing cycles",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000631,
+      "_norm_temp": 25,
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.13"
+      },
+      "ionic_conductivity_S_per_cm": "6.31 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed ordered sample",
+      "processing_method": "quenching-annealing cycles",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0121",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Titanate Perovskite",
+        "acronym": "LLTO",
+        "proportion": "x = 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "4.79 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "annealed ordered sample",
+      "processing_method": "quenching-annealing cycles",
+      "source_node": {
+        "node_id": "0118",
+        "title": "Order-Disorder Transition Reversibility and Initial Conductivity Analysis",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000479,
+      "_norm_temp": 25,
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0107",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Annealed sample (Tetragonal, ordered form)",
+        "acronym": "LLTO",
+        "proportion": "x in the range 0.06 to 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "6.7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "300 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed sample adopting a tetragonal, doubled cell/ordered form.",
+      "processing_method": "Annealed to allow alternate arrangement giving rise to tetragonal distortion.",
+      "source_node": {
+        "node_id": "0097",
+        "title": "Lattice Parameters and their Compositional Dependence (Fig. 2)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0107",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Quenched sample (Simple cubic form)",
+        "acronym": "LLTO",
+        "proportion": "x in the range 0.06 to 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "3.8 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "333 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched sample with simple cubic form, extracted from Arrhenius plot at 1000/T = 3.0.",
+      "processing_method": "Quenched from high temperature.",
+      "source_node": {
+        "node_id": "0097",
+        "title": "Lattice Parameters and their Compositional Dependence (Fig. 2)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.0038,
+      "_norm_temp": 59.85000000000002,
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0107",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Annealed sample (Tetragonal, ordered form)",
+        "acronym": "LLTO",
+        "proportion": "x in the range 0.06 to 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "333 K",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed sample adopting a tetragonal ordered form, extracted from Arrhenius plot at 1000/T = 3.0.",
+      "processing_method": "Annealed.",
+      "source_node": {
+        "node_id": "0097",
+        "title": "Lattice Parameters and their Compositional Dependence (Fig. 2)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.06",
+        "acronym": "x = 0.06",
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "1.78 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.09",
+        "acronym": "x = 0.09",
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "7.59 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000759,
+      "_norm_temp": 25,
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0129",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.11",
+        "acronym": "x = 0.11",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.26 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.12",
+        "acronym": "x = 0.12",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.58 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.13",
+        "acronym": "x = 0.13",
+        "proportion": "x = 0.13"
+      },
+      "ionic_conductivity_S_per_cm": "1.20 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00012,
+      "_norm_temp": 25,
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.15",
+        "acronym": "x = 0.15",
+        "proportion": "x = 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "7.08 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched (disordered)",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000708,
+      "_norm_temp": 25,
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.06",
+        "acronym": "x = 0.06",
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "3.80 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.00038,
+      "_norm_temp": 25,
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.09",
+        "acronym": "x = 0.09",
+        "proportion": "x = 0.09"
+      },
+      "ionic_conductivity_S_per_cm": "5.75 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000575,
+      "_norm_temp": 25,
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0129",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.11",
+        "acronym": "x = 0.11",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "6.61 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.12",
+        "acronym": "x = 0.12",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "6.61 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000661,
+      "_norm_temp": 25,
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.13",
+        "acronym": "x = 0.13",
+        "proportion": "x = 0.13"
+      },
+      "ionic_conductivity_S_per_cm": "6.31 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000631,
+      "_norm_temp": 25,
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0128",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sample with x = 0.15",
+        "acronym": "x = 0.15",
+        "proportion": "x = 0.15"
+      },
+      "ionic_conductivity_S_per_cm": "4.79 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed (ordered)",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure Descriptions (Fig. 4 and Fig. 5)",
+        "section": "3. Results and discussion"
+      },
+      "_norm_cond": 0.000479,
+      "_norm_temp": 25,
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0236",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Y. Inaguma, J. Yu, T. Katsumata, M. Itoh",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Gornikov, Izv. Akad. Nauk SSSR., Neorg. Mater. 23 (1987)",
+        "section": "References"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0030",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "titanate-based solid solutions with perovskite-related structures",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10 –10 S cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "High Conductivity in Perovskite-Related Titanates and Tantalates",
+        "section": "**Abstract**"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "oxide-based electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "High Conductivity in Perovskite-Related Titanates and Tantalates",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.1,
+      "_norm_temp": 25,
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "g-Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "High Conductivity in Perovskite-Related Titanates and Tantalates",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 0.0,
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "tantalate-based perovskites",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "High Conductivity in Perovskite-Related Titanates and Tantalates",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0042",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "lithium ion conducting materials",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "highest",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "High Conductivity in Perovskite-Related Titanates and Tantalates",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 46,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0051",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.67-xLi3xTiO3",
+        "acronym": null,
+        "proportion": "x=0.11"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0050",
+        "title": "Prior Research on LaLiTiO3 Conductivity and Superstructure",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0054",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.59Li0.27TiO3.02",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "300 K",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Anisotropic ionic conductivity observed in single crystal with alternate arrangements",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0050",
+        "title": "Prior Research on LaLiTiO3 Conductivity and Superstructure",
+        "section": "**Abstract**"
+      },
+      "_norm_cond": 0.00058,
+      "_norm_temp": 26.850000000000023,
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0054",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.59Li0.27TiO3.02",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "300 K",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Anisotropic ionic conductivity observed in single crystal with alternate arrangements",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0050",
+        "title": "Prior Research on LaLiTiO3 Conductivity and Superstructure",
+        "section": "**Abstract**"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

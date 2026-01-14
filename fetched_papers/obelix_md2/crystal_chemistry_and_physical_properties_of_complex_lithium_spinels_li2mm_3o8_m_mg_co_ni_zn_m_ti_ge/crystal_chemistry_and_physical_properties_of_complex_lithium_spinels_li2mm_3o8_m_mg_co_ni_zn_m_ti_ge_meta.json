@@ -1,0 +1,629 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Crystal chemistry and physical properties of complex lithium spinels \\text{Li}_2\\text{MM}'_3\\text{O}_8 (M = Mg, Co, Ni, Zn; M' = Ti, Ge)",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          47.979874213836474,
+          39.46875
+        ],
+        [
+          443.81383647798737,
+          39.46875
+        ],
+        [
+          443.81383647798737,
+          70.47907390917186
+        ],
+        [
+          47.979874213836474,
+          70.47907390917186
+        ]
+      ]
+    },
+    {
+      "title": "Experimental",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          304.37232704402516,
+          569.0810329474622
+        ],
+        [
+          368.8452830188679,
+          569.0810329474622
+        ],
+        [
+          368.8452830188679,
+          580.1083984375
+        ],
+        [
+          304.37232704402516,
+          580.1083984375
+        ]
+      ]
+    },
+    {
+      "title": "Results and Discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          305.1220125786163,
+          110.96705253784505
+        ],
+        [
+          410.91406249999994,
+          110.96705253784505
+        ],
+        [
+          410.91406249999994,
+          119.96438112199465
+        ],
+        [
+          305.1220125786163,
+          119.96438112199465
+        ]
+      ]
+    },
+    {
+      "title": "Structure refinement",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          304.37232704402516,
+          266.0029296875
+        ],
+        [
+          382.685546875,
+          266.0029296875
+        ],
+        [
+          382.685546875,
+          273.4033203125
+        ],
+        [
+          304.37232704402516,
+          273.4033203125
+        ]
+      ]
+    },
+    {
+      "title": "Structure descriptions and cation distributions",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          303.23828125,
+          130.4612644701692
+        ],
+        [
+          476.79999999999995,
+          130.4612644701692
+        ],
+        [
+          476.79999999999995,
+          138.962890625
+        ],
+        [
+          303.23828125,
+          138.962890625
+        ]
+      ]
+    },
+    {
+      "title": "Order-disorder phenomena and solid solution formation",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          47.979874213836474,
+          317.90560997328583
+        ],
+        [
+          257.89182389937105,
+          317.90560997328583
+        ],
+        [
+          257.89182389937105,
+          326.90293855743545
+        ],
+        [
+          47.979874213836474,
+          326.90293855743545
+        ]
+      ]
+    },
+    {
+      "title": "Magnetic properties",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          304.111328125,
+          198.5771484375
+        ],
+        [
+          381.5899371069182,
+          198.5771484375
+        ],
+        [
+          381.5899371069182,
+          207.68833481745324
+        ],
+        [
+          304.111328125,
+          207.68833481745324
+        ]
+      ]
+    },
+    {
+      "title": "Electrical properties",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          47.979874213836474,
+          527.8432769367764
+        ],
+        [
+          125.19748427672955,
+          527.8432769367764
+        ],
+        [
+          125.19748427672955,
+          537.3505859375
+        ],
+        [
+          47.979874213836474,
+          537.3505859375
+        ]
+      ]
+    },
+    {
+      "title": "Electrochemical properties",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          47.435546875,
+          345.6473731077471
+        ],
+        [
+          149.18742138364777,
+          345.6473731077471
+        ],
+        [
+          149.18742138364777,
+          354.64470169189667
+        ],
+        [
+          47.435546875,
+          354.64470169189667
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          305.1220125786163,
+          577.3285841495992
+        ],
+        [
+          347.1044025157232,
+          577.3285841495992
+        ],
+        [
+          347.1044025157232,
+          586.6865234375
+        ],
+        [
+          305.1220125786163,
+          586.6865234375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          105
+        ],
+        [
+          "Span",
+          69
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 4444,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          186
+        ],
+        [
+          "Line",
+          98
+        ],
+        [
+          "Span",
+          81
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 2,
+        "llm_error_count": 0,
+        "llm_tokens_used": 9683,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          342
+        ],
+        [
+          "Span",
+          106
+        ],
+        [
+          "Line",
+          75
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 2,
+        "llm_error_count": 0,
+        "llm_tokens_used": 13473,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          442
+        ],
+        [
+          "Span",
+          56
+        ],
+        [
+          "Line",
+          37
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 3,
+        "llm_error_count": 0,
+        "llm_tokens_used": 19714,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          141
+        ],
+        [
+          "Line",
+          116
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          124
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "TableCell",
+          72
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 2,
+        "llm_error_count": 0,
+        "llm_tokens_used": 7066,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          134
+        ],
+        [
+          "Span",
+          95
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          23
+        ],
+        [
+          "Line",
+          14
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Crystal chemistry and physical properties of complex lithium spinels Li2MM_3O8 _M_Mg_ Co_ Ni_ Zn_ M__Ti_ Ge_"
+}

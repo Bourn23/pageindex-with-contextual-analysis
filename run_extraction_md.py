@@ -12,9 +12,12 @@ Usage:
     python run_extraction.py results/paper_keywords_structure.json
     python run_extraction.py results/paper_keywords_structure.json --output materials.json
 """
-
-import argparse
+import threading
+import concurrent.futures
 import asyncio
+import logging
+import time
+import argparse
 import json
 import os
 from pathlib import Path
@@ -27,9 +30,15 @@ import base64
 from google.genai import types
 import math
 
+logging.basicConfig(filename='run_extraction.log', level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
 load_dotenv()
 
-
+SCIENTIFIC_NORMALIZER_MODEL = "gemini-2.5-pro" # normalizes the extracted value 
+DATA_VALIDATOR_MODEL = "gemini-3-flash-preview" # validates the extraction
+MATERIAL_NAME_NORMALIZER_MODEL = "gemini-3-flash-preview" # normalizes the material names
+EXTRACTOR_TEXT_MODEL = "gemini-3-flash-preview" # extracts text from the node
+EXTRACTOR_VISION_MODEL = "gemini-3-flash-preview" # extracts text from the node
+SCIENTIFIC_NORMALIZER_THINKING_LEVEL = 'low' # or 'high
 # ============================================================================
 # Pydantic Models for Structured Output
 # ============================================================================
@@ -38,20 +47,33 @@ class ElectrolyteName(BaseModel):
     """A structured representation of the electrolyte's name."""
     full_name: str = Field(
         ...,
-        description="The complete, formal name of the electrolyte (e.g., Lithium Lanthanum Zirconate Oxide)."
+        description=(
+            "The complete, systematic name of the electrolyte. PRIORITY ORDER:\n"
+            "1. Chemical formula if present in text/figure/table (e.g., Li6PS5I, Li7La3Zr2O12, Li1.3Al0.3Ti1.7(PO4)3)\n"
+            "2. Systematic IUPAC name (e.g., Lithium Phosphorus Sulfide Iodide, Lithium Lanthanum Zirconate Oxide)\n"
+            "3. Standard abbreviation (e.g., LLZO, LATP, PEO)\n"
+            "AVOID generic terms like 'solid electrolyte', 'argyrodite', 'sample', 'material' unless no other information exists."
+        )
     )
     acronym: Optional[str] = Field(
         None,
-        description="The abbreviation, chemical formula, or common name (e.g., LLZO, PEO)."
+        description=(
+            "Chemical formula OR standard abbreviation if different from full_name.\n"
+            "Examples: 'LLZO', 'PEO', 'Li6PS5I'. Leave empty if full_name already contains the formula."
+        )
     )
     proportion: Optional[str] = Field(
         None,
-        description="Stoichiometric ratios, molar ratios, or concentrations (e.g., 90:10 wt%)."
+        description="Stoichiometric ratios, doping levels, or concentrations (e.g., 90:10 wt%, x=0.25, 10 mol%, Li/P=1.5)."
     )
 
 
 class IonicConductivityDataPoint(BaseModel):
     """Represents a single extracted data point for ionic conductivity."""
+    source_sentence_id: str = Field(
+        ...,
+        description="The ID of the specific source sentence (e.g., '0054') where this data point was extracted."
+    )
     material_class: str = Field(
         ...,
         description="Primary functional class: Ceramic, Polymer, Composite, or Other."
@@ -62,37 +84,24 @@ class IonicConductivityDataPoint(BaseModel):
     )
     ionic_conductivity_S_per_cm: str = Field(
         ...,
-        description="Ionic conductivity value in S cm⁻¹ (e.g., '1.2 × 10⁻⁴', '~10⁻⁵')."
+        description="Ionic conductivity value including the unit (e.g., '1.2 × 10⁻⁴ S cm⁻¹', '~10⁻⁵ S cm⁻¹')."
     )
     measurement_temperature: str = Field(
         ...,
         description="Temperature of measurement (e.g., '25°C', 'RT', 'room temperature')."
     )
     # Provenance tracking
+    reason: str = Field(
+        ...,
+        description="A brief explanation of how and why this data point was extracted."
+    )
     confidence: str = Field(
         ...,
         description="Confidence level: 'high' (primary data from this study), 'medium' (clearly stated cited data), 'low' (ambiguous or inferred)."
     )
     data_source: str = Field(
         ...,
-        description="Data origin: 'primary' (this paper's measurement), 'cited' (from a reference), 'inferred' (calculated or estimated)."
-    )
-    exact_quote: str = Field(
-        ...,
-        description="The exact sentence or phrase containing this measurement."
-    )
-    specific_source_location: str = Field(
-        ...,
-        description="Location in document (e.g., 'Figure 3', 'Table 2', 'main text paragraph 5')."
-    )
-    # Cross-reference detection
-    refers_to_figure: Optional[str] = Field(
-        None,
-        description="If this data refers to a figure (e.g., 'Figure 3', 'Fig. 2a')."
-    )
-    refers_to_table: Optional[str] = Field(
-        None,
-        description="If this data refers to a table (e.g., 'Table 2', 'Table S1')."
+        description="Data origin: 'primary' (this paper's measurement), 'internal-citation' (from a reference figure/table/section of this paper), 'external-citation' (from another paper), 'inferred' (calculated or estimated)."
     )
     # Material details
     material_description: str = Field(
@@ -103,7 +112,7 @@ class IonicConductivityDataPoint(BaseModel):
         ...,
         description="Synthesis steps, or 'N/A (Cited Work)' if from a reference."
     )
-
+    
 
 class MaterialExtractionResponse(BaseModel):
     """Response containing ionic conductivity data points extracted from a node."""
@@ -126,28 +135,130 @@ class NodeRelevanceResponse(BaseModel):
     )
 
 
-class ValidationResult(BaseModel):
-    """Result of validation checks."""
-    is_valid: bool = Field(..., description="Whether the data point passed validation.")
-    issues: List[str] = Field(default_factory=list, description="List of validation issues found.")
-    suggestions: List[str] = Field(default_factory=list, description="Suggestions for fixing issues.")
-
-
 class ValidationVerdict(BaseModel):
     """The auditor's verdict on a single data point."""
     data_point_index: int = Field(..., description="The index of the data point in the provided list.")
-    reason: str = Field(..., description="Explanation of why it is valid or invalid (cite the text).")
-    correction: Optional[str] = Field(None, description="If invalid, provide the correct value/unit from text.")
-    is_supported: bool = Field(..., description="True if the text explicitly supports this extracted value.")
+    text_check: bool = Field(..., description="True if the text explicitly supports this extracted value.")
+    figure_check: bool = Field(..., description="True if the figure explicitly supports this extracted value.")
+    
+    reason: str = Field(..., description="Explanation of why it is valid or invalid.")
+    double_check: str = Field(..., description="Double check the correctness ofyour answer and the original answer including the reasoning for both.")
 
+    is_valid: bool = Field(..., description="The final verdict on the data point: True if the data point is valid, False otherwise.")
+    correction_temp: Optional[str] = Field(None, description="If invalid, provide the correct value/unit temperature.")
+    correction_conductivity: Optional[str] = Field(None, description="If invalid, provide the correct value/unit conductivity.")
+    
 class BatchValidationResponse(BaseModel):
     """Response containing verdicts for a batch of data points."""
     verdicts: List[ValidationVerdict] = Field(default_factory=list)
 
 
+class CanonicalMaterialName(BaseModel):
+    """Canonical representation of a material in a document."""
+    canonical_formula: str = Field(
+        ...,
+        description="The canonical chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)"
+    )
+    canonical_name: str = Field(
+        ...,
+        description="The canonical systematic name (e.g., Lithium Phosphorus Sulfide Iodide)"
+    )
+    abbreviation: Optional[str] = Field(
+        None,
+        description="Standard abbreviation if commonly used (e.g., LLZO, LATP)"
+    )
+    variant_names: List[str] = Field(
+        default_factory=list,
+        description="All name variants found in the document that refer to this material"
+    )
+
+
+class DocumentNameMapping(BaseModel):
+    """Mapping of material names across a document."""
+    materials: List[CanonicalMaterialName] = Field(default_factory=list)
+
+
 # ============================================================================
-# UTILITIES for Robust LLM Execution
+# UTILITIES for Robust LLM Execution + Cost Tracking
 # ============================================================================
+class CostTracker:
+    # Pricing Estimates (USD per 1M tokens) - Update as pricing changes
+    # Logic: Defaults to standard Pro/Flash tiers if exact model string isn't found
+    PRICING_TIERS = [
+        # Model Substring          Input Cost    Output Cost
+        ("2.5-flash-lite",       {"input": 0.10, "output": 0.40}),
+        ("2.5-flash",            {"input": 0.30, "output": 2.50}),
+        ("2.5-pro",              {"input": 1.25, "output": 10.00}),
+        ("3-flash",              {"input": 0.50, "output": 3.00}), # Matches "gemini-3-flash-preview"
+        ("3-pro",                {"input": 2.00, "output": 12.00}), # Matches "gemini-3-pro-preview"
+    ]
+
+    # Fallback for older models (Gemini 2.5 Flash, etc.) if needed
+    DEFAULT_PRICING = {"input": 0.30, "output": 2.50}
+
+    def __init__(self):
+        self.total_input_tokens = 0
+        self.total_output_tokens = 0
+        self.total_cost_usd = 0.0
+        self.call_counts = {}
+
+    def track(self, response, model_name: str):
+        """Parses response metadata and accumulates cost."""
+        if not response or not hasattr(response, 'usage_metadata') or not response.usage_metadata:
+            return
+
+        usage = response.usage_metadata
+        in_tok = usage.prompt_token_count or 0
+        try :out_tok = usage.total_token_count-in_tok or 0
+        except: 
+            print("Failed to calculate output tokens")
+            print(usage)
+            out_tok = usage.candidates_token_count if hasattr(usage, 'candidates_token_count') else 0
+        
+        
+        # 2. Determine Pricing Tier
+        model_name_lower = model_name.lower()
+        pricing = self.DEFAULT_PRICING
+        
+        for substring, prices in self.PRICING_TIERS:
+            if substring in model_name_lower:
+                pricing = prices
+                break # Stop at first match (vital for lite vs flash)
+            
+        # 3. Calculate Cost (Price per 1M tokens)
+        cost = (in_tok / 1_000_000 * pricing["input"]) + \
+               (out_tok / 1_000_000 * pricing["output"])
+
+        # 4. Update Totals
+        self.total_input_tokens += in_tok
+        self.total_output_tokens += out_tok
+        self.total_cost_usd += cost
+        
+        # Track calls per model
+        self.call_counts[model_name] = self.call_counts.get(model_name, 0) + 1
+
+    def print_summary(self):
+        print("\n" + "="*50)
+        print("💰 PIPELINE COST SUMMARY")
+        print("="*50)
+        print(f"{'Total Calls:':<20} {sum(self.call_counts.values())}")
+        print(f"{'Total Input:':<20} {self.total_input_tokens:,} tokens")
+        print(f"{'Total Output:':<20} {self.total_output_tokens:,} tokens")
+        print("-" * 50)
+        print(f"{'TOTAL COST:':<20} ${self.total_cost_usd:.4f}")
+        print("-" * 50)
+        print("Breakdown by Model:")
+        for model, count in self.call_counts.items():
+            print(f"  - {model:<30}: {count} calls")
+        print("="*50 + "\n")
+
+# Global singleton instance
+tracker = CostTracker()
+
+# At module level
+_global_executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
+
+
 async def _safe_llm_call_async(func, *args, retries=3, timeout=60, default=None, **kwargs):
     """
     Executes a blocking LLM call (func) inside a DETACHED thread executor.
@@ -155,23 +266,26 @@ async def _safe_llm_call_async(func, *args, retries=3, timeout=60, default=None,
     2. Retries (to handle transient failures or timeouts)
     3. Thread Isolation (Uses a fresh executor per call so hung threads don't starve the global pool)
     """
-    import concurrent.futures
     loop = asyncio.get_running_loop()
-    
+    # print("arguments are ", args, kwargs)
+    # Extract model name for tracking (usually passed in kwargs)
+    model_name = kwargs.get('model', 'unknown_model')
+    # print(">>> INSIDE ASYNC MODEL NAME", model_name)
+    # model_name = 'gemini-3-flash-preview'
+
     for attempt in range(retries):
         executor = None
-        try:
-            # Create a FRESH executor for this attempt only.
-            # If the thread hangs, we abandon the executor (leak the thread) rather than filling a global pool.
-            executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-            
+        try:           
             result = await asyncio.wait_for(
-                loop.run_in_executor(executor, lambda: func(*args, **kwargs)), 
+                asyncio.get_running_loop().run_in_executor(
+                    _global_executor, 
+                    lambda: func(*args, **kwargs)
+                ), 
                 timeout=timeout
             )
             
-            # Clean up the executor if successful
-            executor.shutdown(wait=False)
+            if result: 
+                tracker.track(result, model_name)
             return result
             
         except asyncio.TimeoutError:
@@ -201,40 +315,80 @@ def normalize_scientific_data(
     # This is a dummy for the LLM to see the signature
     pass
 
+
 def calculate_standard_units(
     cond_value: float, 
     cond_unit: str, 
-    temp_value: Optional[float], 
-    temp_unit: Optional[str]
+    temp_value: Optional[float] = None, 
+    temp_unit: Optional[str] = None
 ) -> dict:
-    """Deterministic conversion logic."""
-    # Unit mapping to S/cm
-    # 1 S/m = 0.01 S/cm
-    # 1 mS/cm = 0.001 S/cm
-    unit_multipliers = {
-        "s/cm": 1.0, "s·cm⁻¹": 1.0, "scm-1": 1.0,
-        "ms/cm": 1e-3, "ms·cm⁻¹": 1e-3,
-        "μs/cm": 1e-6, "us/cm": 1e-6, "µs/cm": 1e-6,
-        "s/m": 0.01, "s·m⁻¹": 0.01
-    }
     
-    # Normalize conductivity
-    multiplier = unit_multipliers.get(cond_unit.lower().strip(), 1.0)
+    # --- 1. Robust Conductivity Normalization ---
+    # Clean string: lowercase, remove spaces/dots/weird chars
+    # "mS cm-1" -> "mscm-1"
+    if not cond_unit:
+        return {"norm_cond": None, "norm_temp": None}
+
+    u_clean = cond_unit.lower().replace(" ", "").replace("·", "").replace(".", "")
+    
+    # Base Multiplier
+    multiplier = 1.0
+    
+    # Determine Metric Prefix (Order matters! Check longest first)
+    if "ms" in u_clean:          # Milli (10^-3)
+        multiplier = 1e-3
+    elif "us" in u_clean or "μs" in u_clean or "µs" in u_clean: # Micro (10^-6)
+        multiplier = 1e-6
+    elif "ns" in u_clean:        # Nano (10^-9)
+        multiplier = 1e-9
+    elif "ks" in u_clean:        # Kilo (10^3) - Added this just in case
+        multiplier = 1000.0
+    elif "s" in u_clean:         # Base Siemens
+        multiplier = 1.0
+        
+    # Determine Geometry (cm vs m)
+    # Target is S/cm.
+    # If unit is S/m, we must divide by 100 (1 S/m = 0.01 S/cm)
+    # We look for explicit meter indicators WITHOUT centi markers
+    if "m" in u_clean and "cm" not in u_clean and "mm" not in u_clean:
+        # Check for inverse meters (m-1) or per meter (/m)
+        if "m-1" in u_clean or "/m" in u_clean:
+             multiplier *= 0.01
+
     norm_cond = cond_value * multiplier
     
-    # Normalize temperature to Celsius
+    # --- 2. Robust Temperature Normalization ---
     norm_temp = temp_value
+    
+    # Handle the case where LLM passes "RT" as a unit (failsafe)
+    # or converts per our new prompt instructions
     if temp_unit:
-        u = temp_unit.upper().strip()
-        if u == "K":
-            norm_temp = temp_value - 273.15
-        elif u in ["RT", "ROOM", "ROOM TEMPERATURE"]:
+        tu_clean = temp_unit.lower().strip()
+        
+        # Kelvin
+        if "k" in tu_clean:
+            # Sanity check: If value is small (<100), it might be C labeled as K error, 
+            # but usually we trust the unit.
+            if norm_temp is not None:
+                norm_temp = norm_temp - 273.15
+                
+        # Fahrenheit
+        elif "f" in tu_clean:
+            if norm_temp is not None:
+                norm_temp = (norm_temp - 32) * 5/9
+        
+        # Failsafe for text residuals
+        elif "rt" in tu_clean or "room" in tu_clean:
             norm_temp = 25.0
+
+    # Final Failsafe: If temp is None but unit implies RT
+    if norm_temp is None and temp_unit and ("rt" in temp_unit.lower() or "room" in temp_unit.lower()):
+        norm_temp = 25.0
             
     return {"norm_cond": norm_cond, "norm_temp": norm_temp}
 
 class ScientificNormalizer:
-    def __init__(self, client, model_name="gemini-2.0-flash-lite"):
+    def __init__(self, client, model_name=SCIENTIFIC_NORMALIZER_MODEL):
         self.client = client
         self.model_name = model_name
         # Define the tool signature for the LLM
@@ -248,17 +402,20 @@ class ScientificNormalizer:
             # Skip empty or clearly invalid data to save tokens
             cond_raw = mat.get('ionic_conductivity_S_per_cm')
             temp_raw = mat.get('measurement_temperature')
+
             if not cond_raw or not temp_raw:
                 # Debug logging if needed, or silent skip
                 return
 
             prompt = (
                 f"Extract numeric values and units for the following:\n"
-                f"IMPORTANT: If no unit is explicitly written (e.g., just '10^-4'), "
-                f"ASSUME the unit is 'S/cm' and set cond_unit='S/cm'.\n\n"
-                f"for temperature, make an educated guess based on the value.\n\n"
                 f"Conductivity: {cond_raw}\n"
-                f"Temperature: {temp_raw}"
+                f"Temperature: {temp_raw}\n\n"
+                f"RULES:\n"
+                f"1. Conductivity: If no unit is written (e.g. '10^-4'), ASSUME 'S/cm'.\n"
+                f"2. Temperature: If the text says 'RT', 'Room Temperature', 'Ambient', or similar, "
+                f"YOU MUST set temp_value=25 and temp_unit='C'.\n"
+                f"3. Do not omit the temperature if it is 'RT'. Convert it."
             )
             
             async with sem:
@@ -271,6 +428,7 @@ class ScientificNormalizer:
                         model=self.model_name,
                         contents=prompt,
                         config=types.GenerateContentConfig(
+                            thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) if self.model_name == 'gemini-3-flash-preview' else None,
                             tools=self.tools,
                             tool_config=types.ToolConfig(
                                 function_calling_config=types.FunctionCallingConfig(
@@ -295,12 +453,21 @@ class ScientificNormalizer:
                         if part.function_call:
                             # Extract args from Gemini and pass to our Python function
                             args = part.function_call.args
+
+                            # DEBUG LOGGING -------------------------------------
+                            # Un-comment this to see exactly which inputs are failing
+                            print(f"    [DEBUG Norm] Input: Cond='{cond_raw}', Temp='{temp_raw}'")
+                            # -------------------------------------------------------
+                            print(f"    [DEBUG Norm] Tool Args: {args}")
+                            # ---------------------------------------------------
                             results = calculate_standard_units(**args)
                             
                             mat['_norm_cond'] = results['norm_cond']
                             mat['_norm_temp'] = results['norm_temp']
                 except Exception as e:
-                    print(f"    Warning: Could not normalize {mat.get('electrolyte_name')}: {e}")
+                    error_msg = f"    Warning: Could not normalize {mat.get('electrolyte_name')}: {e}"
+                    logging.warning(error_msg)
+                    mat['_norm_error'] = str(e)
                     mat['_norm_cond'] = None
                     mat['_norm_temp'] = None
 
@@ -308,6 +475,163 @@ class ScientificNormalizer:
         tasks = [_norm_item(mat) for mat in materials]
         await asyncio.gather(*tasks)
 
+        return materials
+
+class MaterialNameNormalizer:
+    """
+    Normalizes material names across a document using LLM-based analysis.
+    Resolves cases where the same material is referred to by different names.
+    """
+    
+    def __init__(self, client, model_name=MATERIAL_NAME_NORMALIZER_MODEL):
+        self.client = client
+        self.model_name = model_name
+    
+    async def normalize_document_names(
+        self, 
+        materials: List[dict], 
+        doc_title: str = "Unknown Document"
+    ) -> List[dict]:
+        """
+        Normalize all material names in a document to canonical forms.
+        
+        Args:
+            materials: List of extracted material dictionaries
+            doc_title: Title of the source document for context
+            
+        Returns:
+            Updated materials list with normalized names
+        """
+        if not materials:
+            return materials
+        
+        print(f"\n[Stage 2.5] Normalizing material names across document...")
+        
+        # 1. Collect all unique material names WITH their proportions
+        # We need to track name+proportion pairs to avoid over-grouping
+        name_variants = set()
+        name_with_proportion = []  # Track full context
+        
+        for mat in materials:
+            full_name = mat.get('electrolyte_name', {}).get('full_name', '')
+            acronym = mat.get('electrolyte_name', {}).get('acronym', '')
+            proportion = mat.get('electrolyte_name', {}).get('proportion', '')
+            
+            if full_name:
+                name_variants.add(full_name)
+                # Store the combination for context
+                if proportion:
+                    name_with_proportion.append(f"{full_name} ({proportion})")
+                else:
+                    name_with_proportion.append(full_name)
+            if acronym:
+                name_variants.add(acronym)
+        
+        if len(name_variants) <= 1:
+            print(f"  → Only {len(name_variants)} unique name(s), skipping normalization")
+            return materials
+        
+        print(f"  → Found {len(name_variants)} unique name variants")
+        
+        # 2. Ask LLM to create canonical mapping
+        # Show unique combinations to give LLM full context
+        unique_combinations = sorted(set(name_with_proportion))
+        
+        prompt = f"""Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: {doc_title}
+
+Material Names Found (with proportions where applicable):
+{chr(10).join(f'- "{name}"' for name in unique_combinations)}
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only."""
+        
+        try:
+            print(" >>>> CANNONICAL PROMPT >>>>", prompt)
+            from google.genai import types
+            
+            response = await _safe_llm_call_async(
+                self.client.models.generate_content,
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) if self.model_name == 'gemini-3-flash-preview' else None,
+                    temperature=0.2,
+                    max_output_tokens=4096,
+                    response_mime_type="application/json",
+                    response_json_schema=DocumentNameMapping.model_json_schema()
+                )
+            )
+            
+            if not response or not response.text:
+                print("  → LLM normalization failed, keeping original names")
+                return materials
+            
+            mapping = DocumentNameMapping.model_validate_json(response.text)
+            print(" >>>> CANNONICAL RESPONSE >>>>", mapping)
+            # 3. Build lookup dictionary: variant_name -> canonical_material
+            variant_to_canonical = {}
+            for canonical_mat in mapping.materials:
+                for variant in canonical_mat.variant_names:
+                    variant_to_canonical[variant.strip().lower()] = canonical_mat
+            
+            print(f"  → Created {len(mapping.materials)} canonical material(s)")
+            
+            # 4. Apply mapping to all materials
+            updated_count = 0
+            for mat in materials:
+                original_full = mat.get('electrolyte_name', {}).get('full_name', '')
+                original_acronym = mat.get('electrolyte_name', {}).get('acronym', '')
+                original_proportion = mat.get('electrolyte_name', {}).get('proportion', '')
+                
+                # Build lookup key with proportion if it exists
+                if original_proportion:
+                    lookup_key_full = f"{original_full} ({original_proportion})".strip().lower()
+                else:
+                    lookup_key_full = original_full.strip().lower()
+                
+                # Try to find canonical mapping
+                canonical = None
+                if lookup_key_full in variant_to_canonical:
+                    canonical = variant_to_canonical[lookup_key_full]
+                elif original_full.strip().lower() in variant_to_canonical:
+                    # Fallback: try without proportion
+                    canonical = variant_to_canonical[original_full.strip().lower()]
+                elif original_acronym and original_acronym.strip().lower() in variant_to_canonical:
+                    canonical = variant_to_canonical[original_acronym.strip().lower()]
+                
+                if canonical:
+                    # Update with canonical names
+                    mat['electrolyte_name']['full_name'] = canonical.canonical_formula or canonical.canonical_name
+                    mat['electrolyte_name']['acronym'] = canonical.abbreviation
+                    mat['canonical_formula'] = canonical.canonical_formula
+                    # Store original name for reference
+                    mat['_original_name'] = original_full
+                    updated_count += 1
+            
+            print(f"  → Updated {updated_count}/{len(materials)} material names")
+            
+        except Exception as e:
+            print(f"  → Name normalization error: {e}")
+            print("  → Keeping original names")
+        
         return materials
 
 
@@ -321,7 +645,7 @@ class DataValidator:
     1. Heuristic Checks: Fast physical bounds and sanity checks.
     2. LLM Semantic Verification: "Auditor" model checks extraction against source text.
     """
-    def __init__(self, client, figure_index: Dict[str, List[Path]], model_name: str = "gemini-2.5-flash"):
+    def __init__(self, client, figure_index: Dict[str, List[Path]], model_name: str = DATA_VALIDATOR_MODEL):
         self.client = client
         self.model_name = model_name
         self.figure_index = figure_index
@@ -364,16 +688,12 @@ class DataValidator:
         
         # Physics Checks (using pre-normalized values if available)
         cond = mat.get('_norm_cond')
-        if cond and (cond > 5.0 or cond < 1e-12):
-            issues.append(f"Physical Improbability: Conductivity {cond:.2e} S/cm is outside typical bounds.")
+        if cond and (cond >= 1.0 or cond < 1e-12):
+            issues.append(f"Physical Improbability: Conductivity {cond:.2e} S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)")
 
         temp = mat.get('_norm_temp')
         if temp and (temp < -50 or temp > 1000):
-            issues.append(f"Physical Improbability: Temperature {temp}°C is outside typical bounds.")
-
-        # Metadata Checks
-        if not mat.get('exact_quote'):
-            issues.append("Metadata Error: Missing source quote.")
+            issues.append(f"Physical Improbability: Temperature {temp}°C is outside typical bounds. (temp < -50 or temp > 1000)")
 
         # Initialize validation state
         mat['_validation'] = {
@@ -409,18 +729,28 @@ class DataValidator:
     async def _verify_node_batch(self, node: dict, batch: List[dict], sem: asyncio.Semaphore):
         """Ask LLM to audit a specific list of claims against a text WITH images attached."""
         from google.genai import types
+        
+
+        
+
+
         # Prepare the context
         claims_text = ""
         for item in batch:
             claims_text += (
                 f"ID {item['_index']}: "
+                f"Reason: {item['reason']}\n"
                 f"Material='{item['electrolyte_name']['full_name']}', "
-                f"Conductivity='{item['ionic_conductivity_S_per_cm']}', "
-                f"Temp='{item['measurement_temperature']}'\n"
+                f"Conductivity='{item['ionic_conductivity_S_per_cm']}' and Normalized Conductivity='{item['_norm_cond']}', "
+                f"Temp='{item['measurement_temperature']}' and Normalized Temperature='{item['_norm_temp']}\n"
             )
 
+        # detect if it's image node
+        is_image_node = node.get('section') == 'Image-Only Extraction' or not node.get('text', '').strip()
+        
         text_content = node.get('text', '')
-
+        if is_image_node:
+            text_content = f"[IMAGE CONTEXT]: The data was extracted exclusively from the attached image (Node ID: {node.get('node_id')}). Verify the claims by visually inspecting the image."
         # 2. RESOLVE IMAGES (Re-using logic from Extractor)
         # Regex to find "Figure 4", "Fig. 2", etc.
         refs = re.findall(r'\b(?:[Ff]ig\.?|[Ff]igure)\s*([A-Za-z]?\d+)', text_content, re.IGNORECASE)
@@ -447,7 +777,7 @@ class DataValidator:
                         except Exception as e:
                             print(f"    Auditor Warning: Could not load {path}: {e}")
         
-        prompt_text = f"""You are a Scientific Data Auditor. Verify these extracted values against the provided text.
+        prompt_text = f"""You are a Skeptical Scientific Data Auditor. Verify these extracted values against the provided text.
 
 SOURCE TEXT:
 "{text_content}"
@@ -456,11 +786,9 @@ CLAIMS TO VERIFY:
 {claims_text}
 
 INSTRUCTIONS:
-1. For each claim, check if the Source Text *explicitly* supports the Conductivity and Temperature values.
-2. Watch out for unit errors (e.g., text says "mS/cm" but claim is treated as "S/cm").
-3. Watch out for hallucinations (claims not in text).
-4. Ignore minor formatting differences.
-5. Attach the images to the text."
+1. If the Source Context indicates an image-only extraction, rely ENTIRELY on the attached image.
+2. If text is present, check if the text *explicitly* supports the value OR refers to a figure that supports it.
+3. If the Extractor said "not specified" but the Figure clearly shows a value, mark it as Invalid and provide the CORRECTION.
 
 Respond with JSON."""
         
@@ -475,12 +803,15 @@ Respond with JSON."""
                     model=self.model_name,
                     contents=contents_payload,
                     config=types.GenerateContentConfig(
+                        thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) if self.model_name == 'gemini-3-flash-preview' else None,
                         response_mime_type="application/json",
                         response_json_schema=BatchValidationResponse.model_json_schema()
                     )
                 )
-                print('...>>>', text_content)
-                print('>>>', response.text)
+                print('OG Text>>>', text_content)
+                print('OG Claims>>>', claims_text)
+                print('Response>>>', response.text)
+                print('\n\n\n')
                 if not response or not response.text:
                     return
             
@@ -494,17 +825,376 @@ Respond with JSON."""
                     if verdict.data_point_index in batch_map:
                         mat = batch_map[verdict.data_point_index]
                         mat['_validation']['audited_by_llm'] = True
-                        
-                        if not verdict.is_supported:
+                        mat['_validation']['double_check'] = verdict.double_check
+                        if not verdict.is_valid:
                             mat['_validation']['is_valid'] = False
                             mat['_validation']['issues'].append(f"LLM Audit Failed: {verdict.reason}")
-                            if verdict.correction:
-                                mat['_validation']['suggested_correction'] = verdict.correction
-                            
+
+                            correction_applied = False
+                            if verdict.correction_temp:
+                                print(f"  -> Applying Auditor Correction: {mat['measurement_temperature']} -> {verdict.correction_temp}")
+                                mat['_validation']['old_measurement_temperature'] = mat['measurement_temperature']
+                                mat['measurement_temperature'] = verdict.correction_temp
+                                correction_applied = True
+                            if verdict.correction_conductivity:
+                                print(f"  -> Applying Auditor Correction: {mat['ionic_conductivity_S_per_cm']} -> {verdict.correction_conductivity}")
+                                mat['_validation']['old_ionic_conductivity_S_per_cm'] = mat['ionic_conductivity_S_per_cm']
+                                mat['ionic_conductivity_S_per_cm'] = verdict.correction_conductivity
+                                correction_applied = True
+                            if correction_applied:
+                                mat['_validation']['is_valid'] = True
+                                mat['_validation']['issues'].append("\n AUTO-CORRECTED by Auditor")
+                        else:
+                            mat['_validation']['is_valid'] = True
+                            mat['_validation']['issues'].append(f"LLM Audit Success: {verdict.reason}")
+                            correction_applied = False
             except Exception as e:
                 print(f"    Validation Error on Node {node.get('node_id')}: {e}")
 
 
+# class GlobalMetadataEnricher:
+#     """
+#     Stage 5: Global Context Enrichment.
+#     Reads the ENTIRE document text to find processing methods.
+#     Includes robust 'Imputation' to ensure no material is left with N/A.
+#     """
+#     def __init__(self, client, model_name="gemini-3-flash-preview"):
+#         self.client = client
+#         self.model_name = model_name
+
+#     def _get_full_text(self, structure: List[dict]) -> str:
+#         """Flattens the PageIndex structure into a single text string."""
+#         texts = []
+#         def traverse(nodes):
+#             for node in nodes:
+#                 if node.get('title'):
+#                     texts.append(f"\n--- SECTION: {node.get('title')} ---\n")
+#                 if node.get('text'):
+#                     texts.append(node.get('text'))
+#                 if 'nodes' in node:
+#                     traverse(node['nodes'])
+#         traverse(structure)
+#         return "\n".join(texts)
+
+#     async def enrich_processing_methods(self, materials: List[dict], structure: List[dict]) -> List[dict]:
+#         """
+#         Sends full text + extracted materials to LLM to find synthesis details.
+#         """
+#         if not materials:
+#             return materials
+
+#         print(f"\n[Stage 5] Enriching processing methods (Robust Mode)...")
+
+#         # 1. Prepare Context
+#         full_text = self._get_full_text(structure)[:500000] # Cap at 500k chars
+        
+#         # 2. Build Target List
+#         targets = []
+#         for idx, mat in enumerate(materials):
+#             mat['_enrich_id'] = idx
+#             name = mat.get('electrolyte_name', {}).get('full_name', 'Unknown')
+#             acronym = mat.get('electrolyte_name', {}).get('acronym', '')
+#             targets.append(f"ID {idx}: {name} (Acronym: {acronym})")
+
+#         targets_str = "\n".join(targets)
+
+#         # 3. Robust Prompt with "General Method" Logic
+#         prompt = f"""You are a Material Science Expert. 
+# I have a list of Electrolytes extracted from a battery research paper. I need the Processing/Synthesis method for EVERY single one.
+
+# TARGET MATERIALS:
+# {targets_str}
+
+# FULL DOCUMENT TEXT:
+# {full_text}
+
+# CRITICAL INSTRUCTIONS:
+# 1. **Find the General Synthesis**: Papers often describe ONE synthesis method (e.g., "Solid-state reaction at 500C") in the "Experimental" section that applies to ALL samples.
+# 2. **Apply Generously**: If a general method is described, ASSUME it applies to all specific variants (e.g., x=0.1, x=0.2) unless the text explicitly says a specific sample was made differently.
+# 3. **No "N/A" Allowed**: Do not return "Not Specified" if there is a general synthesis method described for the material class.
+# 4. **Commercial Materials**: If the text says a material was purchased/supplied by a company, state that.
+# 5. **Format**: Return a JSON object where keys are the IDs and values are the methods.
+
+# Respond with JSON only: {{ "0": "Solid-state reaction...", "1": "Solid-state reaction..." }}
+# """
+
+#         # 4. Call LLM
+#         from google.genai import types
+#         try:
+#             response = await _safe_llm_call_async(
+#                 self.client.models.generate_content,
+#                 model=self.model_name,
+#                 contents=prompt,
+#                 config=types.GenerateContentConfig(
+#                     response_mime_type="application/json",
+#                     temperature=0.1
+#                 )
+#             )
+
+#             if response and response.text:
+#                 updates = json.loads(response.text)
+                
+#                 # Apply updates
+#                 for idx_str, method in updates.items():
+#                     try:
+#                         idx = int(idx_str)
+#                         if 0 <= idx < len(materials):
+#                             self._apply_method_update(materials[idx], method)
+#                     except ValueError:
+#                         continue
+                        
+#             # 5. ROBUSTNESS CHECK: Impute missing values
+#             self._impute_missing_values(materials)
+
+#         except Exception as e:
+#             print(f"  -> Warning: Global enrichment failed: {e}")
+
+#         # Cleanup
+#         for mat in materials:
+#             mat.pop('_enrich_id', None)
+
+#         return materials
+
+#     def _apply_method_update(self, mat: dict, new_method: str):
+#         """Helper to safely update the method without overwriting valid existing data."""
+#         if not new_method or new_method.lower() in ['not specified', 'unknown', 'n/a']:
+#             return
+
+#         old_method = mat.get('processing_method', '')
+#         is_old_na = not old_method or old_method.lower() in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']
+        
+#         if is_old_na:
+#             mat['processing_method'] = new_method
+#             mat['_enriched'] = True
+#         elif new_method.lower() not in old_method.lower():
+#             # If we have a new detailed method, append it
+#             mat['processing_method'] = f"{old_method} | {new_method}"
+#             mat['_enriched'] = True
+
+#     def _impute_missing_values(self, materials: List[dict]):
+#         """
+#         Final Safety Net: If some materials have methods and others don't, 
+#         propagate the most common method to the empty ones.
+#         """
+#         # 1. Collect all valid methods found so far
+#         valid_methods = []
+#         for mat in materials:
+#             method = mat.get('processing_method', '')
+#             if method and method.lower() not in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']:
+#                 valid_methods.append(method)
+        
+#         if not valid_methods:
+#             print("  -> No processing methods found in document to impute from.")
+#             return
+
+#         # 2. Find the most common method (The "Dominant" Method)
+#         from collections import Counter
+#         # Simple frequency count
+#         most_common_method = Counter(valid_methods).most_common(1)[0][0]
+        
+#         # 3. Fill in the blanks
+#         imputed_count = 0
+#         for mat in materials:
+#             current = mat.get('processing_method', '')
+#             if not current or current.lower() in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']:
+#                 # Tag it so we know it was imputed
+#                 mat['processing_method'] = f"{most_common_method} [Inferred from General Context]"
+#                 mat['_enriched'] = True
+#                 mat['data_source'] = "inferred" # Update source to reflect inference
+#                 imputed_count += 1
+        
+#         if imputed_count > 0:
+#             print(f"  -> Imputed synthesis method for {imputed_count} missing items using: '{most_common_method[:30]}...'")
+
+class GlobalMetadataEnricher:
+    """
+    Stage 5: Global Context Enrichment.
+    Reads the ENTIRE document text to find processing methods.
+    Uses a highly verbose, few-shot prompt to ensure high recall of synthesis details.
+    """
+    def __init__(self, client, model_name="gemini-3-flash-preview"):
+        self.client = client
+        self.model_name = model_name
+
+    def _get_full_text(self, structure: List[dict]) -> str:
+        """Flattens the PageIndex structure into a single text string."""
+        texts = []
+        def traverse(nodes):
+            for node in nodes:
+                if node.get('title'):
+                    texts.append(f"\n--- SECTION: {node.get('title')} ---\n")
+                if node.get('text'):
+                    texts.append(node.get('text'))
+                if 'nodes' in node:
+                    traverse(node['nodes'])
+        traverse(structure)
+        return "\n".join(texts)
+
+    async def enrich_processing_methods(self, materials: List[dict], structure: List[dict]) -> List[dict]:
+        """
+        Sends full text + extracted materials to LLM to find synthesis details.
+        """
+        if not materials:
+            return materials
+
+        print(f"\n[Stage 5] Enriching processing methods (High-Recall Mode)...")
+
+        # 1. Prepare Context (Cap at 800k chars to be safe, though Flash supports more)
+        full_text = self._get_full_text(structure)[:800000]
+        
+        # 2. Build Target List
+        targets = []
+        for idx, mat in enumerate(materials):
+            mat['_enrich_id'] = idx
+            name = mat.get('electrolyte_name', {}).get('full_name', 'Unknown')
+            acronym = mat.get('electrolyte_name', {}).get('acronym', '')
+            prop = mat.get('electrolyte_name', {}).get('proportion', '')
+            
+            # Context string for the LLM
+            mat_str = f"ID {idx}: {name}"
+            if acronym:
+                mat_str += f" (aka {acronym})"
+            if prop:
+                mat_str += f" [Composition/Doping: {prop}]"
+            targets.append(mat_str)
+
+        targets_str = "\n".join(targets)
+
+        # 3. The "Super-Prompt"
+        prompt = f"""You are a Senior Data Curator for a Materials Science Database specializing in Batteries and Solid Electrolytes. 
+Your goal is to extract the **Processing/Synthesis Method** for specific material entries.
+
+I have provided a list of TARGET MATERIALS (IDs) and the FULL DOCUMENT TEXT.
+You must find the synthesis method for *every single target*.
+
+### TARGET MATERIALS:
+{targets_str}
+
+### FULL DOCUMENT TEXT:
+{full_text}
+
+### EXTRACTION PROTOCOLS (Read Carefully):
+
+**1. HIERARCHY OF SEARCH (Where to look):**
+   - **Priority A:** "Experimental", "Methods", or "Synthesis" sections.
+   - **Priority B:** Figure captions (e.g., "SEM image of ball-milled...").
+   - **Priority C:** Results/Discussion (often mentions "The sintered pellet...").
+
+**2. AGGRESSIVE INFERENCE (How to handle variants):**
+   - **The "General Rule":** Papers typically describe ONE synthesis method for a whole family of materials (e.g., "All $Li_6PS_5X$ samples were prepared by...").
+   - **Action:** If the text describes a method for a *parent compound* or a *series*, you MUST apply that method to ALL specific doped/substituted variants in the target list.
+   - *Example:* If Target is "Li6PS5Cl (x=0.3)" and text says "Li6PS5Cl samples were prepared by ball milling at 500rpm", EXTRACT THAT METHOD. Do not return "Not Specified".
+
+**3. DATA RICHNESS (What to extract):**
+   - Do not just say "Solid State Reaction".
+   - **REQUIRED DETAILS:** Extract Precursors, Method (Sol-gel, Ball-mill, Solid-state), Temperatures (Calcination/Sintering), Dwell Times, and Atmosphere (Ar, N2, Air) if available.
+   - *Good:* "High-energy ball milling (500 rpm, 10h) followed by annealing at 550°C for 8h in Argon."
+   - *Good:* "Commercial film supplied by Ohara Corp."
+   - *Bad:* "Synthesized."
+   - *Bad:* "See text."
+
+**4. HANDLING EDGE CASES:**
+   - **Cited Methods:** If text says "Prepared according to Ref [12]", output: "Synthesized according to Ref [12] (details not in text)."
+   - **Commercial:** If purchased, output: "Commercial purchase from [Company Name]."
+   - **Multiple Steps:** Include all steps (mixing -> milling -> pressing -> sintering).
+
+**5. FORMATTING:**
+   - Return a JSON object.
+   - Keys: The string IDs provided above (e.g., "0", "1").
+   - Values: The extracted text string.
+   - If absolutely NO information is found after checking all sections and inferring from general classes, use "Not Specified".
+
+### JSON RESPONSE:
+"""
+
+        # 4. Call LLM
+        from google.genai import types
+        try:
+            response = await _safe_llm_call_async(
+                self.client.models.generate_content,
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.1 # Low temp for factual extraction
+                )
+            )
+
+            if response and response.text:
+                updates = json.loads(response.text)
+                
+                # Apply updates
+                for idx_str, method in updates.items():
+                    try:
+                        idx = int(idx_str)
+                        if 0 <= idx < len(materials):
+                            self._apply_method_update(materials[idx], method)
+                    except ValueError:
+                        continue
+                        
+            # 5. FINAL SAFETY NET: Impute missing values
+            self._impute_missing_values(materials)
+
+        except Exception as e:
+            print(f"  -> Warning: Global enrichment failed: {e}")
+
+        # Cleanup
+        for mat in materials:
+            mat.pop('_enrich_id', None)
+
+        return materials
+
+    def _apply_method_update(self, mat: dict, new_method: str):
+        """Helper to safely update the method without overwriting valid existing data."""
+        if not new_method or new_method.lower() in ['not specified', 'unknown', 'n/a']:
+            return
+
+        old_method = mat.get('processing_method', '')
+        is_old_na = not old_method or old_method.lower() in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']
+        
+        # If the LLM says "Not Specified" but we already had data, KEEP the old data.
+        if "not specified" in new_method.lower() and not is_old_na:
+            return
+
+        if is_old_na:
+            mat['processing_method'] = new_method
+            mat['_enriched'] = True
+        elif new_method.lower() not in old_method.lower():
+            # If new method is significantly different/longer, append it
+            mat['processing_method'] = f"{old_method} | {new_method}"
+            mat['_enriched'] = True
+
+    def _impute_missing_values(self, materials: List[dict]):
+        """
+        Final Safety Net: If some materials have methods and others don't, 
+        propagate the most common method to the empty ones.
+        """
+        valid_methods = []
+        for mat in materials:
+            method = mat.get('processing_method', '')
+            if method and method.lower() not in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']:
+                valid_methods.append(method)
+        
+        if not valid_methods:
+            return
+
+        from collections import Counter
+        # Get the most common method string
+        most_common_method = Counter(valid_methods).most_common(1)[0][0]
+        
+        count = 0
+        for mat in materials:
+            current = mat.get('processing_method', '')
+            if not current or current.lower() in ['n/a', 'not specified', 'unknown', 'n/a (cited work)']:
+                # Mark as inferred
+                mat['processing_method'] = f"{most_common_method} [Inferred]"
+                mat['data_source'] = "inferred"
+                mat['_enriched'] = True
+                count += 1
+        
+        if count > 0:
+            print(f"  -> Imputed general method for {count} missing items.")
+            
 # ============================================================================
 # Material Extractor - Four Stage Pipeline
 # ============================================================================
@@ -520,7 +1210,7 @@ class MaterialExtractor:
     4. Validation
     """
     
-    def __init__(self, model_text: str = "gemini-2.5-flash-lite", model_vision: str = 'gemini-3-flash-preview'):
+    def __init__(self, model_text: str = "gemini-3-flash-preview", model_vision: str = 'gemini-3-flash-preview'):
         self.model_text = model_text
         self.model_vision = model_vision
         
@@ -529,7 +1219,7 @@ class MaterialExtractor:
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise ValueError("GEMINI_API_KEY not found in environment")
-        self.client = client = genai.Client(api_key=api_key, http_options={'api_version': 'v1alpha'})
+        self.client = genai.Client(api_key=api_key, http_options={'api_version': 'v1alpha'})
 
         self.figure_index = {} # stores mapping: "2" -> Path/to/Figure2.jpg
 
@@ -546,36 +1236,6 @@ class MaterialExtractor:
         # Reset index to store lists: {'2': [PathA, PathB]}
         self.figure_index: Dict[str, List[Path]] = {} 
         
-        # def find_images(nodes):
-        #     for node in nodes:
-        #         text = node.get('text', '')
-        #         matches = re.findall(r'!\[.*?\]\((.*?)\)', text)
-                
-        #         for image_rel_path in matches:
-        #             # Regex looks for "Fig" or "Figure" followed by a number
-        #             fig_match = re.search(r'(?:fig|figure)[-_]?(\d+)', image_rel_path, re.IGNORECASE)
-                    
-        #             if fig_match:
-        #                 fig_num = fig_match.group(1) # e.g., "2"
-        #                 full_path = base_path / image_rel_path
-                        
-        #                 if full_path.exists():
-        #                     if fig_num not in self.figure_index:
-        #                         self.figure_index[fig_num] = []
-                            
-        #                     # Avoid adding the exact same file path twice
-        #                     if full_path not in self.figure_index[fig_num]:
-        #                         self.figure_index[fig_num].append(full_path)
-        #                         print(f"    Indexed Figure {fig_num} -> {image_rel_path}")
-                
-        #         if 'nodes' in node:
-        #             find_images(node['nodes'])
-
-        # find_images(structure)
-        
-        # # Stats
-        # total_images = sum(len(paths) for paths in self.figure_index.values())
-        # print(f"  Total figures indexed: {total_images} across {len(self.figure_index)} distinct figure numbers.")
         def traverse_for_images(nodes):
             for node in nodes:
                 # 1. Check if this is an Image Node
@@ -667,6 +1327,15 @@ class MaterialExtractor:
                                     kw_metadata = kw_child.get('metadata', {})
                                     kw_context = kw_metadata.get('relevance', '') or kw_metadata.get('summary', '')
                                     keywords.append({'term': kw_title, 'context': kw_context})
+
+                    child_sentences = []
+                    if 'nodes' in node:
+                        for child in node['nodes']:
+                            if child.get('node_type') == 'sentence':
+                                child_sentences.append(
+                                    {'node_id': child.get('node_id', ''),
+                                    'text': child.get('text', '')}
+                                )
                     
                     nodes.append({
                         'node_id': node.get('node_id', ''),
@@ -676,7 +1345,8 @@ class MaterialExtractor:
                         'section_title': current_section,
                         'parent_title': parent_title,
                         'keywords': keywords,
-                        'metadata': node.get('metadata', {})
+                        'metadata': node.get('metadata', {}),
+                        'sentences': child_sentences,
                     })
                 
                 # Recurse
@@ -710,42 +1380,36 @@ Consider:
 
 Respond with JSON only."""
 
-
+        config = types.GenerateContentConfig(
+            thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) 
+                            if self.model_text == 'gemini-3-flash-preview' else None,
+            temperature=0.7 if "2.5" in self.model_text else 1.0,
+            max_output_tokens=4096,
+            response_mime_type="application/json",
+            response_json_schema=NodeRelevanceResponse.model_json_schema()
+        )
 
         async with semaphore:
-            try:
-                # print(prompt)
-                # raise BaseException()
-                loop = asyncio.get_event_loop()
-                response = await asyncio.wait_for(
-                    loop.run_in_executor(
-                        None,
-                        lambda: self.client.models.generate_content(
-                            model=self.model_text,
-                            contents=prompt,
-                            config=types.GenerateContentConfig(
-                                temperature=0.7,
-                                max_output_tokens=4096,
-                                response_mime_type="application/json",
-                                response_json_schema=NodeRelevanceResponse.model_json_schema()
-                            )
-                        )
-                    ),
-                    timeout=timeout
-                )
-                
-                # print(">>>", prompt)
-                # print(">>>", response.text)
+            # Use the safe wrapper (handles retries, thread pooling, and COST TRACKING)
+            response = await _safe_llm_call_async(
+                self.client.models.generate_content, # The function to call
+                model=self.model_text,               # Passed to func AND used by cost tracker
+                contents=prompt,                     # Passed to func
+                config=config,                       # Passed to func
+                timeout=timeout                      # Wrapper timeout
+            )
+            
+            # Handle Failure (Wrapper returns None on persistent failure)
+            if not response or not response.text:
+                return (node, True, "LLM Call Failed/Timed out - including by default (Permissive)")
 
+            # Handle Success
+            try:
                 result = NodeRelevanceResponse.model_validate_json(response.text)
                 return (node, result.is_relevant, result.relevance_reason)
-            
-            except asyncio.TimeoutError:
-                # On timeout, include the node (be permissive)
-                return (node, True, "Timeout - including by default")
             except Exception as e:
-                # On error, include the node (be permissive)
-                return (node, True, f"Error checking relevance: {e}")
+                # If parsing fails, be permissive so we don't lose data
+                return (node, True, f"JSON Parsing Error: {e} - including by default")
     
     async def _filter_relevant_nodes(self, nodes: List[dict], batch_size: int = 7) -> List[dict]:
         """
@@ -809,13 +1473,25 @@ Respond with JSON only."""
         return relevant_nodes
 
     # ========================================================================
-    # Stage 2: Full Extraction with Provenance
+    # Stage 2a: Full Extraction with Provenance (Text Only)
     # ========================================================================
     
     def _build_extraction_prompt(self, node: dict) -> str:
         """Build extraction prompt with full context."""
         keywords_str = ', '.join([kw['term'] for kw in node.get('keywords', [])]) or 'None'
         
+        # 1. FORMAT THE TEXT WITH IDs
+        # If we have sentence breakdown, use it. Otherwise fall back to raw text.
+        formatted_text = ""
+        if node.get('sentences'):
+            for sent in node['sentences']:
+                # We use an explicit tag format that is easy for the LLM to reference
+                formatted_text += f"[Sentence ID: {sent['node_id']}] {sent['text']}\n\n"
+        else:
+            # Fallback for nodes without children
+            formatted_text = node.get('text', '')
+
+
         return f"""Extract ALL ionic conductivity measurements from this text.
 
 Section: {node.get('section_title', 'Unknown')}
@@ -823,32 +1499,46 @@ Title: {node.get('title', 'Unknown')}
 Keywords: {keywords_str}
 
 Text:
-{node.get('text', '')}
+{formatted_text}
 
 INSTRUCTIONS:
+0. If specific numerical values are not present, DO NOT return a JSON object for that material.
 1. Analyze the provided text text for ionic conductivity data.
 2. If an image is provided along with this text, analyze it as well. 
    - If the image is a data plot (e.g., Arrhenius plot), extract the specific conductivity values from the data points in the plot.
    - If the image is a table, extract the values from the table rows.
 
 For EACH ionic conductivity measurement, extract:
-1. material_class: Ceramic, Polymer, Composite, or Other
-2. electrolyte_name: full_name, acronym, proportion
-3. ionic_conductivity_S_per_cm: The value (e.g., "1.2 × 10⁻⁴")
-4. measurement_temperature: Temperature (e.g., "25°C", "RT")
-5. confidence: "high" (primary data), "medium" (cited clearly), "low" (ambiguous)
-6. data_source: "primary" (this paper), "cited" (from reference), "inferred"
-7. exact_quote: The EXACT sentence containing this measurement
-8. specific_source_location: Where in document (e.g., "Figure 3", "Table 2", "main text")
-9. refers_to_figure: If references a figure (e.g., "Figure 3")
-10. refers_to_table: If references a table (e.g., "Table 2")
-11. material_description: Properties, or "N/A (Cited Work)"
-12. processing_method: Synthesis, or "N/A (Cited Work)"
+1. reason: A brief explanation of how and why this data point was extracted.
+2. confidence: "high" (primary data), "medium" (clearly stated cited data), "low" (ambiguous or inferred)
+3. data_source: "primary" (this paper), "internal-citation" (from reference figure/table/section of this paper), "external-citation" (from another paper), "inferred"
+4. source_sentence_id: The ID of the sentence containing this measurement. Always in the format of 0000 (e.g., "0001", "0042", etc..)
+5. material_class: Ceramic, Polymer, Composite, or Other
+6. electrolyte_name: full_name, acronym, proportion
+7. ionic_conductivity_S_per_cm: The NUMERIC value including units. 
+   - BAD: "highest conductivity", "not specified", "see Fig 4"
+   - GOOD: "2.4 x 10^-3 S/cm", "0.7 mS/cm"
+   - If the text says "see Figure 4", you MUST estimate the value from the attached Figure 4. Do not return placeholders.
+8. measurement_temperature: Temperature (e.g., "25°C", "RT")
+9. material_description: Any material description as much as included in the text, or "N/A (Cited Work)"
+10. processing_method: Synthesis details and method as much as included in the text, or "N/A (Cited Work)"
+
+CRITICAL - Material Naming Guidelines (electrolyte_name field):
+- ALWAYS extract the chemical formula if visible in text, figures, or tables
+  ✓ Good: "Li6PS5I", "Li7La3Zr2O12", "Li1.3Al0.3Ti1.7(PO4)3"
+  ✗ Avoid: "argyrodite", "garnet", "NASICON"
+- If a formula appears in a figure caption, table header, or nearby text, use it
+- Prefer specific formulas over generic class names:
+  ✓ Prefer: "Li6PS5I" over "lithium argyrodite"
+  ✓ Prefer: "Li7La3Zr2O12" over "LLZO garnet"
+- For doped/substituted materials, include base formula in full_name and doping in proportion:
+  ✓ full_name: "Li6PS5-xSexBr", proportion: "x=0.5"
+  ✓ full_name: "Li7La3Zr2O12", proportion: "Al-doped"
+- Only use generic names ("solid electrolyte", "sample") if NO formula or systematic name exists
+- Check figure captions and table headers for formulas even if not in the sentence text
 
 IMPORTANT:
 - Extract EVERY measurement, even from cited references
-- Include the EXACT quote for each measurement
-- Note cross-references to figures/tables
 - If same material has multiple temperatures, create separate entries
 - Be precise with values - preserve scientific notation
 
@@ -863,12 +1553,19 @@ Respond with JSON only."""
         text_content = node.get('text', '')
 
 
-        # 1. Resolve images (handle multiple figures + disconnected context)
-        image_paths = self._resolve_relevant_images(text_content)
+        # # 1. Resolve images (handle multiple figures + disconnected context)
+        # all_image_paths = self._resolve_relevant_images(text_content)
 
-        # Record that we are about to process these images
-        for path in image_paths:
-            self.processed_images.add(path)
+        # # Record that we are about to process these images
+        # # Filter: only keep images that are not already processed
+        # image_paths = []
+        # for path in all_image_paths:
+        #     with self._image_lock:
+        #         if path not in self.processed_images:
+        #             image_paths.append(path)
+        #             self.processed_images.add(path) # Mark as seen immediately
+        #         else:
+        #             print(f"        (Skipping) Image {path.name} already processed.")
 
         # 2. Build content payload
         prompt_text = self._build_extraction_prompt(node)
@@ -876,41 +1573,42 @@ Respond with JSON only."""
         raw_parts = [types.Part(text=prompt_text)]
         
 
-        # Add images using Gemini 3.0 spec (media_resolution)
-        for img_path in image_paths:
-            try:
-                # Read image bytes
-                image_bytes = img_path.read_bytes()
-                image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+        # # Add images using Gemini 3.0 spec (media_resolution)
+        # attched_figures = []
+        # for img_path in image_paths:
+        #     try:
+        #         # Read image bytes
+        #         image_bytes = img_path.read_bytes()
+        #         image_b64 = base64.b64encode(image_bytes).decode('utf-8')
 
-                mime_type = "image/png" if img_path.suffix.lower() == '.png' else "image/jpeg"
+        #         mime_type = "image/png" if img_path.suffix.lower() == '.png' else "image/jpeg"
 
-                # Add Part with High Resolution setting
-                # Construct raw dict matching the API spec
-                image_part = types.Part(
-                    inline_data=types.Blob(
-                        mime_type=mime_type,
-                        data=image_b64
-                    ),
-                    # Ensure your self.client was initialized with api_version='v1alpha'
-                    media_resolution={"level": "media_resolution_high"}
-                )
+        #         # Add Part with High Resolution setting
+        #         # Construct raw dict matching the API spec
+        #         image_part = types.Part(
+        #             inline_data=types.Blob(
+        #                 mime_type=mime_type,
+        #                 data=image_b64
+        #             ),
+        #             # Ensure your self.client was initialized with api_version='v1alpha'
+        #             media_resolution={"level": "media_resolution_high"}
+        #         )
 
-                raw_parts.append(image_part)
+        #         raw_parts.append(image_part)
+        #         attched_figures.append(img_path.name)
 
-                print(f"        (Multimodal) Attached {img_path.name} to {node_title}")
-            except Exception as e:
-                print(f"    Error loading image {img_path}: {e}")
+        #         print(f"        (Multimodal) Attached {img_path.name} to {node_title}")
+        #     except Exception as e:
+        #         print(f"    Error loading image {img_path}: {e}")
         
         # 3. Choose model & config
         # if we have images, use Gemini 3 Flash, if text only, use lighter model
-        if image_paths:
-            active_model = self.model_vision
-            temperature = 1.0 # as recommended by Gemini docs
-            print('>>> Vision needed for ', node_title)
-        else:
-            active_model = self.model_text
-            temperature = 0.0    
+        # if image_paths:
+        #     active_model = self.model_vision
+        #     temperature = 1.0 # as recommended by Gemini docs
+        # else:
+        active_model = self.model_text
+        temperature = 0.0    
         
         async with semaphore:
             try:
@@ -927,6 +1625,7 @@ Respond with JSON only."""
                             ],
                             config=types.GenerateContentConfig(
                                 temperature=temperature,
+                                thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) if active_model == 'gemini-3-flash-preview' else None,
                                 max_output_tokens=8192,
                                 response_mime_type="application/json",
                                 response_json_schema=MaterialExtractionResponse.model_json_schema()
@@ -935,9 +1634,15 @@ Respond with JSON only."""
                     ),
                     timeout=timeout
                 )
-                
+                # print('*****************\n')
+                # if active_model == self.model_vision:
+                #     print('>>> Vision needed for ', node_title)
+                #     print(response.usage_metadata.prompt_tokens_details)
+                #     # In _extract_from_node, right before the LLM call:
+                #     print(f"\nAttached files: {attched_figures}")
                 result = MaterialExtractionResponse.model_validate_json(response.text)
-                
+                # print(">>> Extract from node: ", node_title, "\n", result)
+                # print('----------------\n')
                 # Add source node info
                 materials = []
                 for mat in result.materials:
@@ -980,7 +1685,7 @@ Respond with JSON only."""
         return all_materials
 
     # ========================================================================
-    # Stage 2.5: Process leftover images
+    # Stage 2b: Process images
     # ========================================================================
     def _collect_image_nodes(self, structure: List[dict]) -> List[dict]:
         """Collect all 'image' nodes from the structure."""
@@ -1009,6 +1714,10 @@ Respond with JSON only."""
              src = node.get('title', '')
              
         full_path = base_path / src
+
+        # Filter: Skip if this image was already attached to a text node in Stage 2a
+        # self.processed_images.add(full_path)
+        
         node_id = node.get('node_id', 'img')
 
         if not full_path.exists():
@@ -1016,36 +1725,85 @@ Respond with JSON only."""
             return (src, [])
 
         # Prompt specifically designed for standalone images
-        prompt_text = f"""Analyze this scientific image (Figure/Table) specifically for Ionic Conductivity Data.
+#         prompt_text = f"""Analyze this scientific image (Figure/Table) specifically for Ionic Conductivity Data.
+
+# Image Filename: {src}
+# Node ID: {node_id}
+
+# INSTRUCTIONS:
+# 1. If this is a Data Plot (e.g., Arrhenius plot, Conductivity vs Temperature):
+#    - Extract data points carefully.
+#    - If multiple lines exist, identify the material for each line.
+#    - Estimate values as precisely as possible.
+
+# 2. If this is a Table:
+#    - Extract rows containing ionic conductivity.
+
+# 3. If this is NOT related to ionic conductivity (e.g., SEM micrograph, XRD pattern, photo of a battery):
+#    - Return an empty list.
+
+# For EACH measurement found:
+# - source_sentence_id: "Derived from Plot {src}" or content of table cell.
+# - material_class: Ceramic, Polymer, Composite, or Other
+# - electrolyte_name: Name of the material (look at legends, labels)
+# - ionic_conductivity_S_per_cm: Numeric value with units (e.g. "1.2e-4 S cm^-1")
+# - measurement_temperature: Temperature (Look for x-axis labels like 1000/T or °C)
+# - confidence: "high" (clear text/table), "medium" (plot estimation)
+# - data_source: "primary"
+# - material_description: Any details in legends/labels
+# - processing_method: "N/A" or any relevant details visibly mentioned
+
+# Respond with JSON only."""
+
+        prompt_text = f"""Analyze this scientific image (Figure/Table) to extract Ionic Conductivity Data with MAXIMUM PRECISION.
 
 Image Filename: {src}
+Node ID: {node_id}
 
-INSTRUCTIONS:
-1. If this is a Data Plot (e.g., Arrhenius plot, Conductivity vs Temperature):
-   - Extract data points carefully.
-   - If multiple lines exist, identify the material for each line.
-   - Estimate values as precisely as possible.
+CRITICAL INSTRUCTIONS:
 
-2. If this is a Table:
-   - Extract rows containing ionic conductivity.
+1. DATA PLOTS (Arrhenius plots, Conductivity vs. Composition, etc.):
+   - Extract EVERY visible data point - do not skip any points
+   - For plots with multiple series/lines, identify the material for EACH series (check legends, labels, captions)
+   - Read axis values with EXTREME care:
+     * Note axis scales (linear, log, etc.)
+     * For composition plots (x vs. ionic conductivity), extract the EXACT x-value for each point
+     * For temperature-dependent plots, convert units if needed (1000/T → T in K or °C)
+     * Report conductivity in S cm^-1 (convert from mS cm^-1 if needed: 1 mS cm^-1 = 0.001 S cm^-1)
+   - If estimating values from a plot, be conservative and precise
+   - Include ALL data series, not just a subset
 
-3. If this is NOT related to ionic conductivity (e.g., SEM micrograph, XRD pattern, photo of a battery):
-   - Return an empty list.
+2. TABLES:
+   - Extract ALL rows containing ionic conductivity
+   - Preserve exact numerical values from the table
+   - Match compositions precisely to their conductivity values
 
-For EACH measurement found:
+3. COMPOSITION NOTATION:
+   - Pay attention to chemical formulas in legends (e.g., Li6+xP1-xSixS5Br where x varies)
+   - For each data point, calculate or identify the specific x value
+   - Ensure stoichiometry is internally consistent
+
+4. NON-RELEVANT IMAGES:
+   - If NOT related to ionic conductivity data (SEM, XRD, schematics, photos), return empty list
+
+5. QUALITY CHECKS:
+   - Count data points: Does your extraction match the number of visible points?
+   - Check for duplicates: Have you extracted the same point twice?
+   - Verify trends: Do conductivity values follow logical patterns with composition/temperature?
+
+OUTPUT FORMAT for EACH measurement:
+- source_sentence_id: "Derived from Plot {src}" or table reference
 - material_class: Ceramic, Polymer, Composite, or Other
-- electrolyte_name: Name of the material (look at legends, labels)
-- ionic_conductivity_S_per_cm: Numeric value (e.g. "1.2e-4")
-- measurement_temperature: Temperature (Look for x-axis labels like 1000/T or °C)
-- confidence: "high" (clear text/table), "medium" (plot estimation)
+- electrolyte_name: Full chemical formula with specific composition
+- ionic_conductivity_S_per_cm: Exact numeric value in S cm^-1 (e.g., "1.2e-3 S cm^-1" NOT "1.2 mS cm^-1")
+- measurement_temperature: Specific temperature (e.g., "300 K", "25 °C", "room temperature")
+- confidence: "high" (table/clear markers), "medium" (plot estimation requiring interpolation)
 - data_source: "primary"
-- exact_quote: "Derived from Plot {src}" or content of table cell.
-- specific_source_location: "{src}"
-- refers_to_figure: "{src}"
-- material_description: Any details in legends/labels
-- processing_method: "N/A"
+- material_description: Material details from legends/labels/captions
+- processing_method: "N/A" unless explicitly mentioned
+- reason: Brief explanation of how you extracted this data point (e.g., "Read from x=0.5 point on conductivity plot")
 
-Respond with JSON only."""
+Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
 
         try:
             image_bytes = full_path.read_bytes()
@@ -1071,7 +1829,8 @@ Respond with JSON only."""
                         )
                     ],
                     config=types.GenerateContentConfig(
-                        temperature=0.2, # Lower temperature for precise reading
+                        temperature=0.2 if "2.5" in self.model_vision else 1.0, # Lower temperature for precise reading
+                        thinking_config=types.ThinkingConfig(thinking_level=SCIENTIFIC_NORMALIZER_THINKING_LEVEL) if self.model_vision == 'gemini-3-flash-preview' else None,
                         max_output_tokens=4096,
                         response_mime_type="application/json",
                         response_json_schema=MaterialExtractionResponse.model_json_schema()
@@ -1082,6 +1841,10 @@ Respond with JSON only."""
                     return (src, [])
 
                 result = MaterialExtractionResponse.model_validate_json(response.text)
+
+                print('88888888888888888888')
+                print(">>> Extract from image: ", src, "\n", result)
+                print('88888888888888888888')
                 
                 # Tag results
                 materials = []
@@ -1102,259 +1865,125 @@ Respond with JSON only."""
     # ========================================================================
     # Stage 3: Smart Deduplication
     # ========================================================================
-    
-    def _unicode_superscript_to_int(self, superscript: str) -> int:
-        """Convert Unicode superscript numbers to regular integers."""
-        superscript_map = {
-            '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
-            '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9'
-        }
-        regular = ''.join(superscript_map.get(c, c) for c in superscript)
-        return int(regular)
-
-    def _normalize_conductivity(self, value: str) -> Optional[float]:
-        """Normalize conductivity string to float in S/cm."""
-        import re
-        if not value:
-            return None
-        
-        value = value.strip().lower()
-        
-        # Handle scientific notation variants including LaTeX and Unicode
-        # "1.2 × 10⁻⁴", "1.2e-4", "1.2 x 10^-4", "10⁻⁴", "$10^{-6}$", "10^{-7}", "10⁻⁶"
-        patterns = [
-            r'([\d.]+)\s*[×x]\s*10[⁻\-^](\d+)',           # 1.2 × 10⁻⁴
-            r'([\d.]+)e[⁻\-]?(\d+)',                       # 1.2e-4
-            r'[\$]?10[\^]?[\{]?[⁻\-](\d+)[\}]?[\$]?',     # $10^{-6}$, 10^{-7}, $10^-6$
-            r'10[⁻\-^](\d+)',                             # 10⁻⁴ (coefficient = 1)
-        ]
-        
-        for i, pattern in enumerate(patterns):
-            match = re.search(pattern, value)
-            if match:
-                if i < 2:
-                    coef = float(match.group(1))
-                    exp = int(match.group(2))
-                else:  # Single 10^-x format
-                    coef = 1.0
-                    exp = int(match.group(1))
-                return coef * (10 ** -exp)
-        
-        # Handle ranges like "10^{-6} – 10^{-7}" or "10⁻⁶ – 10⁻⁷" - take the better (higher) value
-        range_patterns = [
-            r'[\$]?10[\^]?[\{]?[⁻\-](\d+)[\}]?[\$]?\s*[–\-]\s*[\$]?10[\^]?[\{]?[⁻\-](\d+)[\}]?[\$]?',  # LaTeX ranges
-            r'10[⁻\-][⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*[–\-]\s*10[⁻\-][⁰¹²³⁴⁵⁶⁷⁸⁹]+',  # Unicode superscript ranges like "10⁻⁶ – 10⁻⁷"
-        ]
-        
-        for i, range_pattern in enumerate(range_patterns):
-            range_match = re.search(range_pattern, value)
-            if range_match:
-                if i == 0:  # LaTeX format
-                    exp1, exp2 = int(range_match.group(1)), int(range_match.group(2))
-                else:  # Unicode superscript format
-                    # Extract the superscript parts
-                    unicode_match = re.search(r'10[⁻\-]([⁰¹²³⁴⁵⁶⁷⁸⁹]+)\s*[–\-]\s*10[⁻\-]([⁰¹²³⁴⁵⁶⁷⁸⁹]+)', value)
-                    if unicode_match:
-                        exp1 = self._unicode_superscript_to_int(unicode_match.group(1))
-                        exp2 = self._unicode_superscript_to_int(unicode_match.group(2))
-                    else:
-                        continue
-                # Take the smaller exponent (higher conductivity)
-                exp = min(exp1, exp2)
-                return 1.0 * (10 ** -exp)
-        
-        # Try direct float
-        try:
-            # Remove ~ and other qualifiers
-            clean = re.sub(r'[~≈<>${}]', '', value)
-            clean = re.sub(r's/?cm.*', '', clean).strip()
-            return float(clean)
-        except:
-            return None
-    
-    def _normalize_temperature(self, value: str) -> Optional[float]:
-        """Normalize temperature string to Celsius."""
-        import re
-        if not value:
-            return None
-        
-        value = value.strip().lower()
-        
-        # Room temperature
-        if 'rt' in value or 'room' in value:
-            return 25.0
-        
-        # Kelvin
-        match = re.search(r'(\d+)\s*k\b', value)
-        if match:
-            return float(match.group(1)) - 273.15
-        
-        # Celsius
-        match = re.search(r'(\d+)\s*°?c', value)
-        if match:
-            return float(match.group(1))
-        
-        # Just a number (assume Celsius)
-        match = re.search(r'(\d+)', value)
-        if match:
-            return float(match.group(1))
-        
-        return None
-    
     def _deduplicate(self, materials: List[dict]) -> List[dict]:
         """Remove duplicate data points using normalized values and cross-references."""
         print(f"\n[Stage 3] Deduplicating {len(materials)} data points...")
         
-        # Priority sorting: high confidence and primary data first
+        # --- FIX 1: Sort by Completeness ---
+        # We want to keep the record that has the most data.
+        # Priority: High Confidence > Primary Source > Has Valid Temperature > Has Valid Conductivity
         materials.sort(key=lambda x: (
             0 if x.get('confidence') == 'high' else 1,
-            0 if x.get('data_type') == 'primary' else 1
+            0 if x.get('data_type') == 'primary' else 1,
+            0 if x.get('_norm_temp') is not None else 1,
+            0 if x.get('_norm_cond') is not None else 1
         ))
 
-        # Remove duplicates
         unique = []
-        duplicates_removed = 0
+        merged_count = 0
 
         for candidate in materials:
             is_dup = False
+            
+            # Get Candidate Key
             c_cond = candidate.get('_norm_cond')
             c_temp = candidate.get('_norm_temp')
-            # Normalize name for comparison (strip spaces/case)
-            c_name = (candidate.get('electrolyte_name', {}).get('acronym') or 
-                    candidate.get('electrolyte_name', {}).get('full_name') or "").lower().strip()
+            c_canon = candidate.get('canonical_formula')
+            
+            if c_canon:
+                c_key = c_canon.strip().lower()
+            else:
+                c_name = candidate.get('electrolyte_name', {}).get('full_name', "")
+                c_prop = candidate.get('electrolyte_name', {}).get('proportion', "")
+                c_key = f"{c_name} {c_prop}".lower().strip().replace(" ", "")
 
             for existing in unique:
+                # Get Existing Key
                 e_cond = existing.get('_norm_cond')
                 e_temp = existing.get('_norm_temp')
-                e_name = (existing.get('electrolyte_name', {}).get('acronym') or 
-                        existing.get('electrolyte_name', {}).get('full_name') or "").lower().strip()
+                e_canon = existing.get('canonical_formula')
+                
+                if e_canon:
+                    e_key = e_canon.strip().lower()
+                else:
+                    e_name = existing.get('electrolyte_name', {}).get('full_name', "")
+                    e_prop = existing.get('electrolyte_name', {}).get('proportion', "")
+                    e_key = f"{e_name} {e_prop}".lower().strip().replace(" ", "")
 
-                # Logic: If names match and we have valid floats for both
-                if c_name == e_name and c_cond is not None and e_cond is not None:
-                    # 1. Conductivity: Use 5% relative tolerance
-                    # 2. Temperature: Use 2°C absolute tolerance
-                    cond_match = math.isclose(c_cond, e_cond, rel_tol=0.05)
-                    
-                    # Handle cases where temp might be None
-                    temp_match = True
-                    if c_temp is not None and e_temp is not None:
-                        temp_match = abs(c_temp - e_temp) <= 2.0
-                    
-                    if cond_match and temp_match:
-                        is_dup = True
-                        break
+                # MATCHING LOGIC
+                if c_key == e_key and c_cond is not None and e_cond is not None:
+                    # 1. Check Conductivity (5% tolerance)
+                    if math.isclose(c_cond, e_cond, rel_tol=0.05):
+                        # 2. Check Temperature (2.0 deg tolerance)
+                        temp_match = True
+                        if c_temp is not None and e_temp is not None:
+                            temp_match = abs(c_temp - e_temp) <= 2.0
+                        
+                        if temp_match:
+                            # IT IS A DUPLICATE!
+                            # MERGE candidate info INTO existing record
+                            self._merge_records(target=existing, source=candidate)
+                            is_dup = True
+                            merged_count += 1
+                            break
             
-            if is_dup:
-                duplicates_removed += 1
-            else:
+            if not is_dup:
                 unique.append(candidate)
                 
-        print(f"  → Removed {duplicates_removed} duplicates, {len(unique)} unique points remain.")
+        print(f"  → Merged {merged_count} duplicates, {len(unique)} unique points remain.")
         return unique
 
-    # ========================================================================
-    # Stage 4: Validation
-    # ========================================================================
-    
-    def _validate_data_points(self, materials: List[dict]) -> List[dict]:
-        """Validate extracted data points and flag issues."""
-        print(f"\n[Stage 4] Validating {len(materials)} data points...")
+    def _merge_records(self, target: dict, source: dict):
+        """
+        Intelligently merges 'source' data into 'target' data.
+        """
+        # 1. Merge Processing Method (Text often has this, Images often miss it)
+        t_proc = target.get('processing_method')
+        s_proc = source.get('processing_method')
         
-        issues_found = 0
-        
-        for mat in materials:
-            issues = []
-            
-            # Check conductivity value
-            cond = self._normalize_conductivity(mat.get('ionic_conductivity_S_per_cm', ''))
-            if cond is None:
-                issues.append("Could not parse conductivity value")
-            elif cond > 1:
-                issues.append(f"Conductivity unusually high: {cond} S/cm")
-            elif cond < 1e-12:
-                issues.append(f"Conductivity unusually low: {cond} S/cm")
-            
-            # Check temperature
-            temp = self._normalize_temperature(mat.get('measurement_temperature', ''))
-            if temp is None and 'not specified' not in mat.get('measurement_temperature', '').lower():
-                issues.append("Could not parse temperature")
-            elif temp is not None and (temp < -50 or temp > 500):
-                issues.append(f"Temperature out of typical range: {temp}°C")
-            
-            # Check for missing exact quote
-            if not mat.get('exact_quote') or len(mat.get('exact_quote', '')) < 10:
-                issues.append("Missing or too short exact quote")
-            
-            # Check confidence vs data_source consistency
-            if mat.get('data_source') == 'primary' and mat.get('confidence') == 'low':
-                issues.append("Primary data should not have low confidence")
-            
-            # Check cross-reference consistency
-            quote = mat.get('exact_quote', '').lower()
-            if 'figure' in quote and not mat.get('refers_to_figure'):
-                issues.append("Quote mentions figure but refers_to_figure not set")
-            if 'table' in quote and not mat.get('refers_to_table'):
-                issues.append("Quote mentions table but refers_to_table not set")
-            
-            # Store validation results
-            mat['_validation'] = {
-                'is_valid': len(issues) == 0,
-                'issues': issues
-            }
-            
-            if issues:
-                issues_found += 1
-        
-        print(f"  → {issues_found} data points have validation issues")
-        return materials
-    
-    def _cross_reference_check(self, materials: List[dict]) -> List[dict]:
-        """Check for cross-reference consistency across all data points."""
-        print("  Checking cross-references...")
-        
-        # Group by figure/table references
-        figure_refs: Dict[str, List[dict]] = {}
-        table_refs: Dict[str, List[dict]] = {}
-        
-        for mat in materials:
-            if mat.get('refers_to_figure'):
-                fig = mat['refers_to_figure'].lower()
-                if fig not in figure_refs:
-                    figure_refs[fig] = []
-                figure_refs[fig].append(mat)
-            
-            if mat.get('refers_to_table'):
-                tbl = mat['refers_to_table'].lower()
-                if tbl not in table_refs:
-                    table_refs[tbl] = []
-                table_refs[tbl].append(mat)
-        
-        # Check for inconsistencies within same figure/table
-        for ref_type, refs in [('figure', figure_refs), ('table', table_refs)]:
-            for ref_name, mats in refs.items():
-                if len(mats) > 1:
-                    # Check if same material has different values
-                    by_material: Dict[str, List[dict]] = {}
-                    for m in mats:
-                        name = (m.get('electrolyte_name', {}).get('acronym') or 
-                               m.get('electrolyte_name', {}).get('full_name') or 'unknown').lower()
-                        if name not in by_material:
-                            by_material[name] = []
-                        by_material[name].append(m)
-                    
-                    for name, same_mat in by_material.items():
-                        if len(same_mat) > 1:
-                            conds = [self._normalize_conductivity(m.get('ionic_conductivity_S_per_cm', '')) for m in same_mat]
-                            conds = [c for c in conds if c is not None]
-                            if conds and max(conds) / min(conds) > 2:
-                                for m in same_mat:
-                                    m['_validation']['issues'].append(
-                                        f"Inconsistent values for {name} in {ref_type} {ref_name}"
-                                    )
-                                    m['_validation']['is_valid'] = False
-        
-        return materials
+        if not t_proc or t_proc.lower() in ["n/a", "not specified", "unknown"]:
+            if s_proc and s_proc.lower() not in ["n/a", "not specified"]:
+                target['processing_method'] = s_proc
+        elif s_proc and s_proc.lower() not in ["n/a", "not specified"]:
+            if s_proc.lower() not in t_proc.lower():
+                # Append if different and valid
+                target['processing_method'] = f"{t_proc} | {s_proc}"
 
+        # 2. Merge Description
+        t_desc = target.get('material_description')
+        s_desc = source.get('material_description')
+        
+        if not t_desc or t_desc.lower() in ["n/a", "not specified"]:
+            if s_desc: target['material_description'] = s_desc
+        elif s_desc and len(s_desc) > 10: # Only merge substantial descriptions
+            if s_desc.lower() not in t_desc.lower():
+                target['material_description'] = f"{t_desc} ; {s_desc}"
+
+        # 3. Merge Source Sentence IDs (Traceability)
+        # This lets you know this data point came from "Text AND Figure 5"
+        t_src = str(target.get('source_sentence_id', ''))
+        s_src = str(source.get('source_sentence_id', ''))
+        if s_src and s_src not in t_src:
+            target['source_sentence_id'] = f"{t_src}, {s_src}"
+    # ========================================================================
+    # Stage 4: Validation -- see DataValidator class for details
+    # ========================================================================    
+    def _final_sanity_check(self, materials):
+        clean_materials = []
+        for mat in materials:
+            # 1. Check if "not specified" or empty
+            val = mat.get('ionic_conductivity_S_per_cm', '').lower()
+            if 'not specified' in val or 'unknown' in val:
+                continue
+                
+            # 2. Check if it contains at least one digit
+            if not any(char.isdigit() for char in val):
+                # e.g. "highest conductivity"
+                continue
+                
+            clean_materials.append(mat)
+        return clean_materials
+    
     # ========================================================================
     # Main Pipeline
     # ========================================================================
@@ -1388,9 +2017,13 @@ Respond with JSON only."""
         Returns:
             dict with 'materials' list and 'stats' summary
         """
+        # track time
+        start_time = time.time()
+
         # 0. Index Figures First
-        self._index_figures(base_path, structure)
-        self.processed_images = set()
+        # self._index_figures(base_path, structure)
+        # self.processed_images = set()
+        # self._image_lock = threading.Lock()
 
         # Collect all nodes
         text_nodes = self._collect_all_nodes(structure)
@@ -1401,7 +2034,8 @@ Respond with JSON only."""
         #     return {'materials': [], 'stats': {'total_nodes': 0}}
         
         # Stage 1: Filter relevant nodes
-        relevant_text_nodes = asyncio.run(self._filter_relevant_nodes(text_nodes, batch_size))
+        # relevant_text_nodes = asyncio.run(self._filter_relevant_nodes(text_nodes, batch_size)) # skipping, this is redundant
+        relevant_text_nodes = text_nodes
 
         # 3. Stage 2a: Extract from Text Nodes
         # (This uses your existing text extraction logic)
@@ -1420,39 +2054,42 @@ Respond with JSON only."""
         
         if not combined_materials:
             print("No relevant nodes found!")
-            return {'materials': [], 'stats': {'total_nodes': len(all_nodes), 'relevant_nodes': 0}}
+            return {'materials': [], 'stats': {'total_nodes': len(combined_materials), 'relevant_nodes': 0}}
         
-        # # Stage 2: Extract from relevant nodes
-        # materials = asyncio.run(self._extract_from_nodes(relevant_nodes, batch_size))
+        
 
-        # # Stage 2.5: Extract from leftover images
-        # orphan_materials = asyncio.run(self._process_leftover_images(batch_size))
-        # materials.extend(orphan_materials)
-        
-        # if not materials:
-        #     print("No data points extracted!")
-        #     return {'materials': [], 'stats': {
-        #         'total_nodes': len(all_nodes),
-        #         'relevant_nodes': len(relevant_nodes),
-        #         'extracted': 0
-        #     }}
-        
-        # Stage 3: Normalize & Deduplicate
-        normalizer = ScientificNormalizer(self.client, model_name=self.model_text)
-        materials_with_floats = asyncio.run(normalizer.normalize_batch(combined_materials))
-        unique_materials = self._deduplicate(materials_with_floats)
-        
-        # Stage 4: Validate
+        # Stage 3: Validate
         nodes_map = {n['node_id']: n for n in relevant_text_nodes + image_nodes}
         validator = DataValidator(self.client, self.figure_index, model_name=self.model_text)
-        validated_materials = validator.validate_all(unique_materials, nodes_map)
+        validated_materials = validator.validate_all(combined_materials, nodes_map)
         
+        # Stage 4: Document-Level Name Normalization
+        doc_name = structure[0].get('title', 'Unknown') if structure else 'Unknown'
+        name_normalizer = MaterialNameNormalizer(self.client, model_name=self.model_text)
+        normalized_materials = asyncio.run(
+            name_normalizer.normalize_document_names(validated_materials, doc_name)
+        )
+
+        # Stage 5: Normalize & Deduplicate
+        normalizer = ScientificNormalizer(self.client, model_name=self.model_text)
+        materials_with_floats = asyncio.run(normalizer.normalize_batch(normalized_materials))
+        unique_materials = self._deduplicate(materials_with_floats)
+        unique_materials = self._final_sanity_check(unique_materials) # clean non-numeric values
+        # unique_materials = materials_with_floats # skip deduplication for now
+        
+        # Stage 6: Enrich Processing Methods
+        enricher = GlobalMetadataEnricher(self.client, model_name=self.model_text)
+        enriched_materials = asyncio.run(enricher.enrich_processing_methods(unique_materials, structure))
+
         # Compile stats
+        end_time = time.time() - start_time
+        validated_materials = enriched_materials # just we don't want to change all the variables below.
         stats = {
-            # 'total_nodes': len(all_nodes),
+            'total_nodes': len(text_nodes) + len(image_nodes),
             # 'relevant_nodes': len(relevant_nodes),
             'raw_extracted': len(combined_materials),
             'after_dedup': len(unique_materials),
+            'time_elapsed': end_time,
             'valid_count': sum(1 for m in validated_materials if m.get('_validation', {}).get('is_valid', True)),
             'invalid_count': sum(1 for m in validated_materials if not m.get('_validation', {}).get('is_valid', True)),
             'by_confidence': {
@@ -1470,6 +2107,7 @@ Respond with JSON only."""
             'final_count': len(unique_materials)
         }
         
+
         return {'materials': validated_materials, 'stats': stats}
 
     ## Helpers
@@ -1519,7 +2157,6 @@ Examples:
     parser.add_argument('input_file', help='Path to PageIndex JSON file')
     parser.add_argument('--asset_dir', help='Path to original MD folder where assets like images are')
     parser.add_argument('--output', '-o', help='Output JSON file path')
-    parser.add_argument('--model', default='gemini-2.5-flash-lite', help='LLM model to use')
     parser.add_argument('--batch-size', '-b', type=int, default=7, 
                         help='Max concurrent API calls (default: 7)')
     
@@ -1540,11 +2177,17 @@ Examples:
     
     print(f"Document: {doc_name}")
     print("=" * 70)
-    
+
+    print("MODELS USED")
+    print(f"SCIENTIFIC_NORMALIZER_MODEL: {SCIENTIFIC_NORMALIZER_MODEL}")
+    print(f"DATA_VALIDATOR_MODEL: {DATA_VALIDATOR_MODEL}")
+    print(f"MATERIAL_NAME_NORMALIZER_MODEL: {MATERIAL_NAME_NORMALIZER_MODEL}")
+    print(f"EXTRACTOR_TEXT_MODEL: {EXTRACTOR_TEXT_MODEL}")
+    print(f"EXTRACTOR_VISION_MODEL: {EXTRACTOR_VISION_MODEL}")    
     # Run extraction pipeline
     base_path = Path(args.asset_dir)
-    print(base_path)
-    extractor = MaterialExtractor(model_text=args.model, model_vision="gemini-3-flash-preview")
+
+    extractor = MaterialExtractor(model_text=EXTRACTOR_TEXT_MODEL, model_vision=EXTRACTOR_VISION_MODEL)
     result = extractor.extract(structure, base_path=base_path, batch_size=args.batch_size)
     
     materials = result['materials']
@@ -1556,9 +2199,26 @@ Examples:
     else:
         output_path = input_path.parent / f"{input_path.stem}_materials.json"
     
+
+    # Print cost summary
+    tracker.print_summary()
+
     # Save results
     output_data = {
         'doc_name': doc_name,
+        'models_used': {
+            'SCIENTIFIC_NORMALIZER_MODEL': SCIENTIFIC_NORMALIZER_MODEL,
+            'DATA_VALIDATOR_MODEL': DATA_VALIDATOR_MODEL,
+            'MATERIAL_NAME_NORMALIZER_MODEL': MATERIAL_NAME_NORMALIZER_MODEL,
+            'EXTRACTOR_TEXT_MODEL': EXTRACTOR_TEXT_MODEL,
+            'EXTRACTOR_VISION_MODEL': EXTRACTOR_VISION_MODEL
+        },
+        'cost_summary': {
+            'total_input_tokens': tracker.total_input_tokens,
+            'total_output_tokens': tracker.total_output_tokens,
+            'total_cost_usd': tracker.total_cost_usd,
+            'call_counts': tracker.call_counts
+        },
         'source_file': str(input_path),
         'extraction_stats': stats,
         'material_count': len(materials),
@@ -1573,12 +2233,13 @@ Examples:
     print("EXTRACTION COMPLETE")
     print("=" * 70)
     print(f"✓ Saved to: {output_path}")
+    print(f"Time elapsed (s) ", stats.get('time_elapsed', 0))
     print(f"\nStatistics:")
-    print(f"  Nodes analyzed: {stats.get('total_nodes', 0)}")
-    print(f"  Relevant nodes: {stats.get('relevant_nodes', 0)}")
-    print(f"  Raw data points: {stats.get('raw_extracted', 0)}")
-    print(f"  After dedup: {stats.get('after_dedup', 0)}")
-    print(f"  Valid: {stats.get('valid_count', 0)}, Invalid: {stats.get('invalid_count', 0)}")
+    print(f"  Nodes analyzed: {stats.get('total_nodes', -1)}")
+    # print(f"  Relevant nodes: {stats.get('relevant_nodes', -1)}")
+    print(f"  Raw data points: {stats.get('raw_extracted', -1)}")
+    print(f"  After dedup: {stats.get('after_dedup', -1)}")
+    print(f"  Valid: {stats.get('valid_count', -1)}, Invalid: {stats.get('invalid_count', -1)}")
     print(f"\nBy Confidence:")
     for level, count in stats.get('by_confidence', {}).items():
         print(f"  {level}: {count}")

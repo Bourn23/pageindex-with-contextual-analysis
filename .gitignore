@@ -15,6 +15,7 @@ parts/*
 json_results/*
 *.md
 test_*.py
+OBELiX/
 
 !DEVELOPER_GUIDE.md
 !README.md

@@ -1,0 +1,326 @@
+{
+  "table_of_contents": [
+    {
+      "title": "High Ionic Conductivity Lithium Garnet Oxides of Li<sub>7-x</sub>La<sub>3</sub>Zr<sub>2-x</sub>Ta<sub>x</sub>O<sub>12</sub> Compositions",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          122.8271484375,
+          63.08349609375
+        ],
+        [
+          412.5,
+          63.08349609375
+        ],
+        [
+          412.5,
+          90.0
+        ],
+        [
+          122.8271484375,
+          90.0
+        ]
+      ]
+    },
+    {
+      "title": "Experimental",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          136.5,
+          613.5
+        ],
+        [
+          192.0,
+          613.5
+        ],
+        [
+          192.0,
+          622.04150390625
+        ],
+        [
+          136.5,
+          622.04150390625
+        ]
+      ]
+    },
+    {
+      "title": "Results and Discussion",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          387.0,
+          699.27099609375
+        ],
+        [
+          476.25,
+          699.27099609375
+        ],
+        [
+          476.25,
+          707.68212890625
+        ],
+        [
+          387.0,
+          707.68212890625
+        ]
+      ]
+    },
+    {
+      "title": "Conclusions",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          406.47216796875,
+          99.75
+        ],
+        [
+          456.75,
+          99.75
+        ],
+        [
+          456.75,
+          108.0
+        ],
+        [
+          406.47216796875,
+          108.0
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          405.0,
+          290.18408203125
+        ],
+        [
+          448.17626953125,
+          290.18408203125
+        ],
+        [
+          448.17626953125,
+          298.5
+        ],
+        [
+          405.0,
+          298.5
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          129
+        ],
+        [
+          "Span",
+          113
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 1908,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          120
+        ],
+        [
+          "Span",
+          119
+        ],
+        [
+          "Line",
+          116
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 2757,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          131
+        ],
+        [
+          "Span",
+          104
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          151
+        ],
+        [
+          "Span",
+          95
+        ],
+        [
+          "ListItem",
+          29
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/High Ionic Conductivity Lithium Garnet Oxides of Li7_xLa3Zr2_xTaxO12 Compositions"
+}

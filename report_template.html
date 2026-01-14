@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit: {{ doc_name }}</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-bg: #e8f0fe;
+            --border: #dadce0;
+            --bg: #f8f9fa;
+            --text: #202124;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--text);
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+
+        .header h1 {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #444;
+        }
+
+        .stat-badge {
+            background: var(--primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .search-box {
+            margin: 1rem;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .group-header {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #5f6368;
+            text-transform: uppercase;
+            padding: 1rem 1rem 0.5rem;
+            background: #fff;
+            position: sticky;
+            top: 0;
+        }
+
+        .formula-group {
+            padding: 0 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-title {
+            padding: 0.4rem 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #3c4043;
+            background: #f1f3f4;
+            border-radius: 4px;
+            margin-bottom: 2px;
+        }
+
+        .mat-item {
+            padding: 0.5rem 0.8rem;
+            margin-left: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            border-left: 3px solid transparent;
+        }
+
+        .mat-item:hover {
+            background: var(--bg);
+        }
+
+        .mat-item.active {
+            background: var(--primary-bg);
+            border-left-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .mat-item.invalid {
+            border-left-color: #d93025;
+            background: #fce8e6;
+        }
+
+        .conf-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .conf-high {
+            background: #1e8e3e;
+        }
+
+        .conf-medium {
+            background: #f9ab00;
+        }
+
+        .conf-low {
+            background: #d93025;
+        }
+
+        /* Content */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .plot-card {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            height: 450px;
+            position: relative;
+        }
+
+        /* Detail View */
+        .detail-card {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+        .chem-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .tag-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-blue {
+            background: #e8f0fe;
+            color: #1967d2;
+        }
+
+        .tag-green {
+            background: #e6f4ea;
+            color: #137333;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .data-item label {
+            display: block;
+            font-size: 0.75rem;
+            color: #5f6368;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .data-item div {
+            font-size: 1.2rem;
+            font-family: monospace;
+            font-weight: 600;
+            color: #202124;
+        }
+
+        .meta-box {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-row {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-label {
+            width: 140px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .meta-val {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .source-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .source-btn {
+            border: 1px solid var(--border);
+            background: white;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .source-btn:hover {
+            background: #f1f3f4;
+            border-color: #999;
+        }
+
+        .source-btn.img-source {
+            border-color: #fce8e6;
+            color: #c5221f;
+            background: #fce8e6;
+        }
+
+        .source-btn.img-source:hover {
+            background: #fad2cf;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-card {
+            background: white;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🔍 Extraction Audit: {{ doc_name }}</h1>
+        <span class="stat-badge">{{ materials|length }} Materials</span>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" id="search" class="search-box" placeholder="Filter by formula...">
+            <div id="sidebar-list">
+                {% for mtype, formulas in sidebar_tree.items() %}
+                <div class="group-header">{{ mtype }}</div>
+                {% for form_name, mat_list in formulas.items() %}
+                <div class="formula-group">
+                    <div class="formula-title">{{ mat_list[0]._ui_formula | safe }}</div>
+                    {% for mat in mat_list %}
+                    <div class="mat-item {{ 'invalid' if not mat._validation.is_valid else '' }}"
+                        id="mat-{{ mat._ui_index }}" onclick="selectMaterial({{ mat._ui_index }})">
+                        <div style="display:flex; align-items:center;">
+                            <span class="conf-dot conf-{{ mat.confidence|lower }}"
+                                title="Confidence: {{ mat.confidence }}"></span>
+                            <span>{{ mat._norm_temp if mat._norm_temp is not none else 'Unknown' }}{{ '°C' if
+                                mat._norm_temp is not none else '' }}</span>
+                        </div>
+                        <span style="font-family:monospace; color:#555">
+                            {{ "%.1e"|format(mat._norm_cond) if mat._norm_cond else "N/A" }}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="plot-card" id="arrhenius-plot"></div>
+            <div id="detail-view">
+                <div style="text-align:center; padding: 4rem; color: #999;">
+                    Select a data point from the sidebar or plot to view details.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="sourceModal" onclick="closeModal(event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <strong id="modalTitle">Source Context</strong>
+                <button onclick="closeModal()"
+                    style="border:none; background:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div class="modal-body" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Data Injection
+        const materials = {{ materials | tojson }};
+        const sourceMap = {{ structure_map | tojson }};
+        const plotData = {{ plot_data | tojson }};
+        const assetDir = "{{ asset_dir }}"; // Injected by Python
+
+        // --- PLOTLY INIT ---
+        function initPlot() {
+            if (plotData.length === 0) {
+                document.getElementById('arrhenius-plot').innerHTML = '<div style="text-align:center; padding:2rem; color:#888">No plottable data available (Requires Temp & Cond)</div>';
+                return;
+            }
+
+            // Grouping Logic: Split by "Real" vs "Estimated" to assign colors
+            const traces = [];
+            const groups = {};
+
+            plotData.forEach(p => {
+                // Key differentiator: Group + IsEstimated
+                const key = p.group + (p.is_estimated ? " (Est. Temp)" : "");
+
+                if (!groups[key]) {
+                    groups[key] = { x: [], y: [], text: [], ids: [], symbols: [], is_est: p.is_estimated };
+                }
+                groups[key].x.push(p.x);
+                groups[key].y.push(p.y);
+                groups[key].text.push(p.text);
+                groups[key].ids.push(p.id);
+                groups[key].symbols.push(p.marker_symbol);
+            });
+
+            // Create Traces
+            Object.keys(groups).forEach(g => {
+                const grp = groups[g];
+                // Color Logic: Estimated = Red/Orange, Real = Default Cycle
+                const color = grp.is_est ? '#d93025' : null;
+
+                traces.push({
+                    x: grp.x,
+                    y: grp.y,
+                    text: grp.text,
+                    customdata: grp.ids,
+                    mode: 'markers',
+                    type: 'scatter',
+                    name: g,
+                    marker: {
+                        size: 12,
+                        opacity: 0.7,
+                        symbol: grp.symbols,
+                        color: color // If null, Plotly uses default theme colors
+                    }
+                });
+            });
+
+            const layout = {
+                title: 'Arrhenius Plot (Color = Temp Source, Shape = Confidence)',
+                xaxis: { title: '1000 / T (K⁻¹)' },
+                yaxis: { title: 'log₁₀(σ) (S/cm)' },
+                hovermode: 'closest',
+                template: 'plotly_white'
+            };
+
+            Plotly.newPlot('arrhenius-plot', traces, layout, { responsive: true });
+
+            document.getElementById('arrhenius-plot').on('plotly_click', function (data) {
+                const pt = data.points[0];
+                selectMaterial(pt.customdata);
+                const el = document.getElementById('mat-' + pt.customdata);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
+        // --- UI LOGIC ---
+        function selectMaterial(index) {
+            document.querySelectorAll('.mat-item').forEach(el => el.classList.remove('active'));
+            const btn = document.getElementById('mat-' + index);
+            if (btn) btn.classList.add('active');
+
+            const mat = materials[index];
+            renderDetail(mat);
+        }
+
+        function renderDetail(mat) {
+            // Multi-source Parser
+            const rawSource = mat.source_sentence_id || "";
+            const sourceParts = rawSource.split(/,\s*/);
+
+            let sourceBtns = '';
+            sourceParts.forEach(part => {
+                part = part.trim();
+                if (!part) return;
+
+                if (sourceMap[part]) {
+                    sourceBtns += `<button class="source-btn" onclick="showSource('${part}')">📄 ${part} (Text)</button>`;
+                } else if (part.toLowerCase().includes('plot') || part.toLowerCase().includes('figure') || part.toLowerCase().includes('derived')) {
+                    const fallback = mat.source_node ? mat.source_node.node_id : null;
+                    const validFallback = (fallback && sourceMap[fallback]);
+                    const action = validFallback ? `onclick="showSource('${fallback}')"` : '';
+                    const style = validFallback ? '' : 'style="opacity:0.6; cursor:default"';
+                    sourceBtns += `<button class="source-btn img-source" ${action} ${style}>📷 ${part}</button>`;
+                } else {
+                    sourceBtns += `<span style="font-size:0.8rem; color:#666; padding:4px;">${escape(part)}</span>`;
+                }
+            });
+
+            if (sourceBtns === '') sourceBtns = '<span style="color:#999">No direct source link</span>';
+
+            const html = `
+                <div class="detail-card">
+                    <div class="chem-title">${mat._ui_formula}</div>
+                    
+                    <div class="tag-row">
+                        <span class="tag tag-blue">${mat.material_class}</span>
+                        <span class="tag" style="border:1px solid #ccc">Confidence: ${mat.confidence}</span>
+                        <span class="tag" style="border:1px solid #ccc">${mat.data_source}</span>
+                    </div>
+                    
+                    ${(!mat._validation.is_valid) ?
+                    `<div style="background:#fce8e6; color:#c5221f; padding:1rem; border-radius:6px; margin-bottom:1rem;">
+                            <strong>Validation Issues:</strong> ${(mat._validation.issues || []).join(', ')}
+                        </div>` : ''}
+
+                    <div class="data-grid">
+                        <div class="data-item">
+                            <label>Conductivity</label>
+                            <div>${mat._norm_cond ? mat._norm_cond.toExponential(2) : mat.ionic_conductivity_S_per_cm} <small>S/cm</small></div>
+                        </div>
+                        <div class="data-item">
+                            <label>Temperature</label>
+                            <div>
+                                ${mat._norm_temp !== null ? mat._norm_temp : mat.measurement_temperature} 
+                                <small>${mat._norm_temp !== null ? '°C' : ''}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="meta-box">
+                        <div style="margin-bottom:0.8rem; border-bottom:1px solid #eee; padding-bottom:0.4rem; font-weight:700; color:#444;">Context & Metadata</div>
+                        
+                        <div class="meta-row">
+                            <div class="meta-label">Description:</div>
+                            <div class="meta-val">${escape(mat.material_description || '-')}</div>
+                        </div>
+                        <div class="meta-row">
+                            <div class="meta-label">Processing:</div>
+                            <div class="meta-val">${escape(mat.processing_method || '-')}</div>
+                        </div>
+                         <div class="meta-row">
+                            <div class="meta-label">Proportion:</div>
+                            <div class="meta-val">${escape(mat.electrolyte_name.proportion || '-')}</div>
+                        </div>
+                        <div class="meta-row">
+                            <div class="meta-label">Extraction Logic:</div>
+                            <div class="meta-val" style="color:#155724;">${escape(mat.reason)}</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top:2rem; border-top:1px solid #eee; padding-top:1rem;">
+                        <small style="text-transform:uppercase; color:#888; font-weight:bold;">Source Traceability</small>
+                        <div class="source-tags">${sourceBtns}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('detail-view').innerHTML = html;
+        }
+
+        function showSource(nodeId) {
+            const node = sourceMap[nodeId];
+            if (!node) return;
+
+            let content = '';
+            // Prepend assetDir if it is an image node
+            if (node.type === 'image' || node.text.includes('.jpeg') || node.text.includes('.png')) {
+                // Ensure no double slashes if assetDir is used
+                const srcPath = assetDir + node.src;
+                content = `<img src="${srcPath}" class="modal-img"><div style="margin-top:1rem; color:#666">${escape(node.text)}</div>`;
+            } else {
+                content = `<div style="white-space:pre-wrap; font-family:serif; font-size:1.1rem; color:#333;">${escape(node.text)}</div>`;
+                if (node.parent_id) content = `<small>Section: ${node.parent_id}</small>` + content;
+            }
+
+            document.getElementById('modalTitle').innerText = `Source Node: ${nodeId}`;
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('sourceModal').style.display = 'flex';
+        }
+
+        function closeModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('sourceModal').style.display = 'none';
+        }
+
+        function escape(s) {
+            if (!s) return '';
+            return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        // Search Filter
+        document.getElementById('search').addEventListener('keyup', (e) => {
+            const val = e.target.value.toLowerCase();
+            document.querySelectorAll('.formula-group').forEach(grp => {
+                const txt = grp.innerText.toLowerCase();
+                grp.style.display = txt.includes(val) ? 'block' : 'none';
+            });
+        });
+
+        initPlot();
+        if (materials.length > 0) selectMaterial(0);
+    </script>
+</body>
+
+</html>

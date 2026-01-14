@@ -1,0 +1,2156 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Understanding the Influence of Li7La3Zr2O12 Nanofibers on Critical Current Density and Coulombic Efficiency in Composite Polymer Electrolytes_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 83,
+    "after_dedup": 77,
+    "valid_count": 67,
+    "invalid_count": 10,
+    "by_confidence": {
+      "high": 41,
+      "medium": 19,
+      "low": 17
+    },
+    "by_source": {
+      "primary": 64,
+      "cited": 11,
+      "inferred": 2
+    },
+    "from_text_nodes": 75,
+    "from_image_nodes": 8,
+    "final_count": 77
+  },
+  "material_count": 77,
+  "materials": [
+    {
+      "source_sentence_id": "0185",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Nanofibers",
+        "acronym": "LLZO",
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "681 \n$\\\\Omega$ cm²",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Electrolytes with 50 wt % LLZO nanofibers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Interfacial Resistance and Critical Current Density (CCD)",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 681.0,
+      "_norm_temp": 60,
+      "_index": 0,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 6.81e+02 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0185",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Electrolyte without LLZO",
+        "acronym": null,
+        "proportion": "0 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "684 \n$\\\\Omega$ cm²",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Electrolytes without LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Interfacial Resistance and Critical Current Density (CCD)",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 684.0,
+      "_norm_temp": 60,
+      "_index": 1,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 6.84e+02 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0106",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide-Lithium lanthanum zirconate oxide composite",
+        "acronym": "PEO-LiTFSI-LLZO",
+        "proportion": "50:50 wt/wt"
+      },
+      "ionic_conductivity_S_per_cm": "usable conductivity",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "50 wt % LLZO corresponds to approximately 20 volume percent LLZO in the polymer phase",
+      "processing_method": "Slurry preparation and slot-die coating",
+      "source_node": {
+        "node_id": "0086",
+        "title": "Fabrication of CPEs",
+        "section": "MATERIALS AND METHODS"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 2,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0112",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide)-Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "0 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "usable conductivity",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolytes without added LLZO fibers",
+      "processing_method": "Slot-die coating",
+      "source_node": {
+        "node_id": "0086",
+        "title": "Fabrication of CPEs",
+        "section": "MATERIALS AND METHODS"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "8.0 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁴ S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 60,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁴ S/cm",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0002,
+      "_norm_temp": 50,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁵ S/cm",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 5e-05,
+      "_norm_temp": 40,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁵ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁶ S/cm",
+      "measurement_temperature": "20°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 3e-06,
+      "_norm_temp": 20,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "8.0 × 10⁻⁷ S/cm",
+      "measurement_temperature": "10°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 8e-07,
+      "_norm_temp": 10,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁷ S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte comprising 600 kDa PEO and 30 wt% LiTFSI, 0 wt% LLZO.",
+      "processing_method": "Polymer-salt ink in MeCN solution, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 3e-07,
+      "_norm_temp": 0,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁴ S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "7.0 × 10⁻⁵ S/cm",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 7e-05,
+      "_norm_temp": 50,
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁵ S/cm",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "8.0 × 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁶ S/cm",
+      "measurement_temperature": "20°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁷ S/cm",
+      "measurement_temperature": "10°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0204",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in Poly(ethylene oxide) and Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "7.0 × 10⁻⁸ S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte comprising LLZO nanofibers, 600 kDa PEO, and 30 wt% LiTFSI.",
+      "processing_method": "Roll-to-roll electrospinning of nanofibers, annealing at 750°C, mixing with PEO-LiTFSI ink in MeCN, slot-die coating and drying.",
+      "source_node": {
+        "node_id": "0193",
+        "title": "CCD and Coulombic Efficiency: The Trade-off",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 7e-08,
+      "_norm_temp": 0,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "7.5 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "4.2 × 10⁻⁴ S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.00042,
+      "_norm_temp": 60,
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2.2 × 10⁻⁴ S/cm",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.00022,
+      "_norm_temp": 50,
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "4.8 × 10⁻⁵ S/cm",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 4.8e-05,
+      "_norm_temp": 40,
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "1.1 × 10⁻⁵ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.1e-05,
+      "_norm_temp": 30,
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁶ S/cm",
+      "measurement_temperature": "20°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁶ S/cm",
+      "measurement_temperature": "10°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 10,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide electrolyte",
+        "acronym": "0 wt% LLZO CPE",
+        "proportion": "30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3.5 × 10⁻⁷ S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "PEO (600 kDa) with 30 wt% LiTFSI, without LLZO nanofibers.",
+      "processing_method": "Polymer-salt ink prepared in MeCN solution, slot-die coated onto a moving web, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 3.5e-07,
+      "_norm_temp": 0,
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻⁴ S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.00016,
+      "_norm_temp": 60,
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "6.8 × 10⁻⁵ S/cm",
+      "measurement_temperature": "50°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 6.8e-05,
+      "_norm_temp": 50,
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁵ S/cm",
+      "measurement_temperature": "40°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 × 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 2.5e-06,
+      "_norm_temp": 30,
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "6.0 × 10⁻⁷ S/cm",
+      "measurement_temperature": "20°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁷ S/cm",
+      "measurement_temperature": "10°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.5e-07,
+      "_norm_temp": 10,
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium lanthanum zirconium oxide - poly(ethylene oxide) - lithium bis(trifluoromethanesulfonyl)imide composite electrolyte",
+        "acronym": "50 wt% LLZO CPE",
+        "proportion": "50 wt% LLZO, 30 wt% LiTFSI in PEO"
+      },
+      "ionic_conductivity_S_per_cm": "7.0 × 10⁻⁸ S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte containing 50 wt% LLZO nanofibers in a PEO-LiTFSI matrix.",
+      "processing_method": "LLZO nanofibers synthesized via roll-to-roll electrospinning and annealing (750°C), mixed with PEO and LiTFSI in MeCN solution, slot-die coated, and dried.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Figures: Half-cell Cycling, CCD, and CE",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 7e-08,
+      "_norm_temp": 0,
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0233",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "0 wt % LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte matrix; 600 kDa PEO.",
+      "processing_method": "Slot-die coating of polymer-salt ink from MeCN solution followed by drying.",
+      "source_node": {
+        "node_id": "0219",
+        "title": "Impact of Nanofiber Loading on CE and CCD",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0008,
+      "_norm_temp": 70,
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0233",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": "0 wt % LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "5 × 10⁻⁵ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polymer electrolyte matrix; 600 kDa PEO.",
+      "processing_method": "Slot-die coating of polymer-salt ink from MeCN solution followed by drying.",
+      "source_node": {
+        "node_id": "0219",
+        "title": "Impact of Nanofiber Loading on CE and CCD",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0233",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide nanofibers in PEO-LiTFSI",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt % LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "3 × 10⁻⁴ S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with LLZO nanofibers in a 600 kDa PEO matrix.",
+      "processing_method": "LLZO nanofibers synthesized by roll-to-roll electrospinning and annealing at 750 °C; slot-die coating of homogeneous polymer-salt-nanofiber ink from MeCN solution.",
+      "source_node": {
+        "node_id": "0219",
+        "title": "Impact of Nanofiber Loading on CE and CCD",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0003,
+      "_norm_temp": 70,
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0233",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide nanofibers in PEO-LiTFSI",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt % LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "2 × 10⁻⁴ S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with LLZO nanofibers in a 600 kDa PEO matrix.",
+      "processing_method": "LLZO nanofibers synthesized by roll-to-roll electrospinning and annealing at 750 °C; slot-die coating of homogeneous polymer-salt-nanofiber ink from MeCN solution.",
+      "source_node": {
+        "node_id": "0219",
+        "title": "Impact of Nanofiber Loading on CE and CCD",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0002,
+      "_norm_temp": 60,
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0233",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide nanofibers in PEO-LiTFSI",
+        "acronym": "LLZO-PEO-LiTFSI",
+        "proportion": "50 wt % LLZO, 30 wt% LiTFSI"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁵ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite electrolyte with LLZO nanofibers in a 600 kDa PEO matrix.",
+      "processing_method": "LLZO nanofibers synthesized by roll-to-roll electrospinning and annealing at 750 °C; slot-die coating of homogeneous polymer-salt-nanofiber ink from MeCN solution.",
+      "source_node": {
+        "node_id": "0219",
+        "title": "Impact of Nanofiber Loading on CE and CCD",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 30,
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "PEO-LiTFSI with 50 wt % LLZO nanofibers",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "lower conductivity",
+      "measurement_temperature": "various temperatures",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "composite electrolytes with 50 wt % nanofibers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 41,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "PEO-LiTFSI alone",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "higher conductivity",
+      "measurement_temperature": "various temperatures",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "PEO-LiTFSI alone",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 0,
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "0 wt % LLZO composite",
+        "acronym": null,
+        "proportion": "0 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "slight deviations in conductivity",
+      "measurement_temperature": "Below 30 °C",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "0 wt % LLZO composite",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "50 wt % LLZO composite",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "slight deviations in conductivity",
+      "measurement_temperature": "Below 30 °C",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "50 wt % LLZO composite",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0176",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "50 wt % LLZO nanofibers",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "lower Li+ transport",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "50 wt % LLZO nanofibers in CPEs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0176",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "0 wt % LLZO nanofibers",
+        "acronym": null,
+        "proportion": "0 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "higher Li+ transport",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "0 wt % LLZO nanofibers in CPEs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 46,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0177",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in CPEs",
+        "acronym": "CPEs",
+        "proportion": "high LLZO-loading"
+      },
+      "ionic_conductivity_S_per_cm": "low bulk ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "high LLZO-loading CPEs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "crosslinking PEO",
+        "acronym": "PEO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "plasticizing or wetting additives",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 49,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "varying LLZO content",
+        "acronym": null,
+        "proportion": "varying"
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 50,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "modifying the LLZO interface",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "PEO-LiTFSI with 50 wt % LLZO nanofibers",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "lower conductivity",
+      "measurement_temperature": "various temperatures",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "composite electrolytes with 50 wt % nanofibers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_index": 52,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "PEO-LiTFSI alone",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "higher conductivity",
+      "measurement_temperature": "various temperatures",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "PEO-LiTFSI alone",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.1,
+      "_norm_temp": 25,
+      "_index": 53,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "0 wt % LLZO composite",
+        "acronym": null,
+        "proportion": "0 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "slight deviations in conductivity",
+      "measurement_temperature": "Below 30 °C",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "0 wt % LLZO composite",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 54,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0173",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "50 wt % LLZO composite",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "slight deviations in conductivity",
+      "measurement_temperature": "Below 30 °C",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "50 wt % LLZO composite",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 55,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0176",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "50 wt % LLZO nanofibers",
+        "acronym": null,
+        "proportion": "50 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "lower Li+ transport",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "50 wt % LLZO nanofibers in CPEs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 56,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0177",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO nanofibers in CPEs",
+        "acronym": "CPEs",
+        "proportion": "high LLZO-loading"
+      },
+      "ionic_conductivity_S_per_cm": "low bulk ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "high LLZO-loading CPEs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 57,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "crosslinking PEO",
+        "acronym": "PEO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 58,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "plasticizing or wetting additives",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10000.0,
+      "_norm_temp": 25,
+      "_index": 59,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+04 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "varying LLZO content",
+        "acronym": null,
+        "proportion": "varying"
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 60,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0178",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "modifying the LLZO interface",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "enhancing bulk Li+ conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0165",
+        "title": "Conductivity and Initial Observations in Symmetric Cells",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 25,
+      "_index": 61,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0037",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite polymer electrolytes",
+        "acronym": "CPEs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "≥ 0.1 mS/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Li+-conducting ceramic fillers in a polymer matrix",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0035",
+        "title": "Introduction to Composite Polymer Electrolytes and LLZO",
+        "section": "INTRODUCTION"
+      },
+      "_index": 62,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0038",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Cubic Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1 mS/cm",
+      "measurement_temperature": "25 °C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "ceramic filler, having inherently high conductivity",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0035",
+        "title": "Introduction to Composite Polymer Electrolytes and LLZO",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 63,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0279",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer ceramic electrolyte",
+        "acronym": "CPE",
+        "proportion": "50 wt % LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "weak electrolytes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0270",
+        "title": "Mesoscale Modeling of Dendrite Growth with Nanofibers",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 64,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0278",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "weak electrolytes",
+        "acronym": "N/A",
+        "proportion": "N/A"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "weak electrolytes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0270",
+        "title": "Mesoscale Modeling of Dendrite Growth with Nanofibers",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 65,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0278",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "strong electrolytes",
+        "acronym": "N/A",
+        "proportion": "N/A"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "strong electrolytes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0270",
+        "title": "Mesoscale Modeling of Dendrite Growth with Nanofibers",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 66,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0277",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "PEO-based CPEs",
+        "acronym": "CPEs",
+        "proportion": "N/A"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0270",
+        "title": "Mesoscale Modeling of Dendrite Growth with Nanofibers",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 67,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0279",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CPEs",
+        "acronym": "CPEs",
+        "proportion": "50 wt % LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "weak electrolytes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0270",
+        "title": "Mesoscale Modeling of Dendrite Growth with Nanofibers",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 26.850000000000023,
+      "_index": 68,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "0 wt% LLZO",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "8.0e-4 S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 0 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0008,
+      "_norm_temp": 70,
+      "_index": 69,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "0 wt% LLZO",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-4 S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 0 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 60,
+      "_index": 70,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "0 wt% LLZO",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "8.0e-6 S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 0 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 8e-06,
+      "_norm_temp": 30,
+      "_index": 71,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "0 wt% LLZO",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-7 S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 0 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 3e-07,
+      "_norm_temp": 0,
+      "_index": 72,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "50 wt% LLZO",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-4 S/cm",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 50 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 73,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "50 wt% LLZO",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-4 S/cm",
+      "measurement_temperature": "60°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 50 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 0.00018,
+      "_norm_temp": 60,
+      "_index": 74,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "50 wt% LLZO",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-6 S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 50 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 3e-06,
+      "_norm_temp": 30,
+      "_index": 75,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_3.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite Polymer Electrolyte",
+        "acronym": "50 wt% LLZO",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "7.0e-8 S/cm",
+      "measurement_temperature": "0°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composite polymer electrolyte with 50 wt% LLZO filler",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0153",
+        "title": "_page_3_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 7e-08,
+      "_norm_temp": 0,
+      "_index": 76,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

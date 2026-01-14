@@ -1,0 +1,408 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 17,
+    "after_dedup": 13,
+    "valid_count": 12,
+    "invalid_count": 1,
+    "by_confidence": {
+      "high": 9,
+      "medium": 0,
+      "low": 4
+    },
+    "by_source": {
+      "primary": 12,
+      "cited": 0,
+      "inferred": 1
+    },
+    "from_text_nodes": 17,
+    "from_image_nodes": 0,
+    "final_count": 13
+  },
+  "material_count": 13,
+  "materials": [
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "unsubstituted"
+      },
+      "ionic_conductivity_S_per_cm": "0.7 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the ionic conductivity value for the unsubstituted sample.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unsubstituted sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the ionic conductivity value for the Si-substituted sample.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li6.35P0.65Si0.35S5Br",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0055",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x"
+      },
+      "ionic_conductivity_S_per_cm": "2 mS cm⁻¹",
+      "measurement_temperature": "N/A",
+      "reason": "The text states that increasing Si4+ content increases conductivity to greater than 2 mS cm⁻¹.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Aliovalent doped argyrodite solid solution",
+      "processing_method": "Aliovalent doping (substitution of P5+ with Si4+)",
+      "source_node": {
+        "node_id": "0051",
+        "title": "Aliovalent Doping Experiment and Results",
+        "section": "1. Introduction"
+      },
+      "_original_name": "Li6+xP1-xSixS5X",
+      "_norm_cond": 0.002,
+      "_norm_temp": 25,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the ionic conductivity value for the Si-substituted sample.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li6.35P0.65Si0.35S5Br",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0024,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0164",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "0.7 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Data point extracted from Figure 5a showing room temperature ionic conductivity for the composition x=0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite-type solid electrolyte with high pellet density.",
+      "processing_method": "Impedance data fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0164",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x = 0.125"
+      },
+      "ionic_conductivity_S_per_cm": "0.9 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Data point extracted from Figure 5a showing room temperature ionic conductivity for the composition x=0.125 (labeled 12.5 in text).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite-type solid electrolyte with high pellet density.",
+      "processing_method": "Impedance data fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0164",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x = 0.25"
+      },
+      "ionic_conductivity_S_per_cm": "1.4 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Data point extracted from Figure 5a showing room temperature ionic conductivity for the composition x=0.25 (labeled 25 in text).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite-type solid electrolyte with high pellet density.",
+      "processing_method": "Impedance data fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0014,
+      "_norm_temp": 25,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0164",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x = 0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Maximum ionic conductivity value observed in the conductivity plot (Figure 5a) for the Si-substituted series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite-type solid electrolyte with high pellet density.",
+      "processing_method": "Impedance data fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0164",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Data point extracted from Figure 5a showing room temperature ionic conductivity for the composition x=0.5 (labeled 50 in text).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite-type solid electrolyte with high pellet density.",
+      "processing_method": "Impedance data fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0022,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0013",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "Si substituted"
+      },
+      "ionic_conductivity_S_per_cm": "three-fold improvement",
+      "measurement_temperature": "N/A",
+      "reason": "The text mentions a 'three-fold improvement of the ionic conductivity' due to Si substitution in Li-argyrodites.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "N/A",
+      "processing_method": "Si substitution",
+      "source_node": {
+        "node_id": "0011",
+        "title": "Structural Changes and Enhanced Ionic Conductivity",
+        "section": "Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites†"
+      },
+      "_original_name": "Li-argyrodites",
+      "_norm_cond": 3.0,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0184",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Not specified",
+      "measurement_temperature": "room temperature",
+      "reason": "The text mentions Arrhenius fits of conductivity values for the specified material at room temperature, but the specific conductivity value is not provided in the text.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Li6+xP1-xSixS5Br",
+      "processing_method": "impedance spectroscopy",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 10,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0184",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Not specified",
+      "measurement_temperature": "room temperature",
+      "reason": "The text mentions Arrhenius fits of conductivity values for the specified material at room temperature, but the specific conductivity value is not provided in the text.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Li6+xP1-xSixS5Br",
+      "processing_method": "impedance spectroscopy",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0,
+      "_norm_temp": 25,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5Br",
+        "acronym": null,
+        "proportion": "x = 0.35"
+      },
+      "ionic_conductivity_S_per_cm": "Not specified",
+      "measurement_temperature": "Room temperature",
+      "reason": "The text states that the highest conductivity is achieved for x = 0.35, implying a specific conductivity value, but the value itself is not provided.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Li6+xP1-xSixS5Br",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

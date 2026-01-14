@@ -1,0 +1,365 @@
+{
+  "table_of_contents": [
+    {
+      "title": "New La_{2/3-x}Sr_xLi_xTiO_3 Solid Solution: Structure,\nMicrostructure, and Li<sup>+</sup> Conductivity",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          127.8984375,
+          56.07421875
+        ],
+        [
+          483.0,
+          56.07421875
+        ],
+        [
+          483.0,
+          86.23828125
+        ],
+        [
+          127.8984375,
+          86.23828125
+        ]
+      ]
+    },
+    {
+      "title": "Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          141.64453125,
+          321.0
+        ],
+        [
+          206.25,
+          321.0
+        ],
+        [
+          206.25,
+          330.0
+        ],
+        [
+          141.64453125,
+          330.0
+        ]
+      ]
+    },
+    {
+      "title": "Experimental Section",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          382.5,
+          657.0
+        ],
+        [
+          492.0,
+          657.0
+        ],
+        [
+          492.0,
+          666.31640625
+        ],
+        [
+          382.5,
+          666.31640625
+        ]
+      ]
+    },
+    {
+      "title": "Results and Discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          378.75,
+          199.5
+        ],
+        [
+          496.5,
+          199.5
+        ],
+        [
+          496.5,
+          208.5
+        ],
+        [
+          378.75,
+          208.5
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          153
+        ],
+        [
+          "Line",
+          91
+        ],
+        [
+          "Footnote",
+          10
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 2783,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          153
+        ],
+        [
+          "Line",
+          118
+        ],
+        [
+          "TableCell",
+          64
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 4351,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          147
+        ],
+        [
+          "Line",
+          77
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          123
+        ],
+        [
+          "Line",
+          100
+        ],
+        [
+          "TableCell",
+          85
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "Figure",
+          4
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "PictureGroup",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 3684,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          121
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "TableCell",
+          45
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 4755,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/New La_sub_2_3__sub__sub_-__sub__i__sub_x__sub___i_Sr_i__sub_x__sub___i_Li_i__sub_x__sub___i_TiO_sub_3__sub_ Solid Solution__ Structure_ Microstructure_ and Li_sup____sup_ Conductivity"
+}

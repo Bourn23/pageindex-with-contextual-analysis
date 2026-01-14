@@ -1,0 +1,794 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/New Insights into the Compositional Dependence of Li-Ion Transport in polymer-ceramic composite electrolytes_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 30,
+    "after_dedup": 28,
+    "valid_count": 26,
+    "invalid_count": 2,
+    "by_confidence": {
+      "high": 9,
+      "medium": 16,
+      "low": 3
+    },
+    "by_source": {
+      "primary": 14,
+      "cited": 11,
+      "inferred": 3
+    },
+    "from_text_nodes": 25,
+    "from_image_nodes": 5,
+    "final_count": 28
+  },
+  "material_count": 28,
+  "materials": [
+    {
+      "source_sentence_id": "0047",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLTO-PAN composite electrolytes",
+        "acronym": "LLTO-PAN",
+        "proportion": "15 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "highest conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "nanowire LLTO-PAN composite electrolytes",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0044",
+        "title": "Composite Electrolytes with Conductive Fillers",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0049",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LAGP-PEO composite electrolytes",
+        "acronym": "LAGP-PEO",
+        "proportion": "80 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "highest conductivity",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LAGP-PEO composite electrolytes",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0044",
+        "title": "Composite Electrolytes with Conductive Fillers",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0040",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite electrolytes with insulating fillers",
+        "acronym": null,
+        "proportion": "10 wt %"
+      },
+      "ionic_conductivity_S_per_cm": "optimal ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "N/A",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Composite Electrolytes with Insulating Fillers",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0041",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite electrolytes with insulating fillers",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "conductivity decrease",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "N/A",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Composite Electrolytes with Insulating Fillers",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0235",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) with Lithium Bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO (LiTFSI)",
+        "proportion": "0 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "1.1 × 10⁻⁵ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Poly(ethylene oxide) electrolyte with LiTFSI salt.",
+      "processing_method": "Ball milling followed by casting.",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Ionic Conductivity Results and Interpretation from EIS",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1.1e-05,
+      "_norm_temp": 25,
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0235",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-PEO (LiTFSI) composite",
+        "acronym": "LLZO (5 wt%)–PEO (LiTFSI)",
+        "proportion": "5 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "0.9 × 10⁻⁵ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZO-PEO (LiTFSI) composite film; shows slight reduction in conductivity due to blocking effect.",
+      "processing_method": "Ball milling and casting.",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Ionic Conductivity Results and Interpretation from EIS",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 9e-06,
+      "_norm_temp": 25,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0235",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-PEO (LiTFSI) composite",
+        "acronym": "LLZO (20 wt%)–PEO (LiTFSI)",
+        "proportion": "20 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "1.3 × 10⁻⁵ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZO-PEO (LiTFSI) composite film; 1.5-fold enhancement attributed to increase in Li salt concentration from decomposed LLZO.",
+      "processing_method": "Ball milling and casting.",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Ionic Conductivity Results and Interpretation from EIS",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0235",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-PEO (LiTFSI) composite",
+        "acronym": "LLZO (50 wt%)–PEO (LiTFSI)",
+        "proportion": "50 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "0.8 × 10⁻⁵ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZO-PEO (LiTFSI) composite film; notably lower conductivity as LLZO particles block pathways through PEO.",
+      "processing_method": "Ball milling and casting.",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Ionic Conductivity Results and Interpretation from EIS",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0235",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-PEO (LiTFSI) with Tetraethylene Glycol Dimethyl Ether",
+        "acronym": "LLZO (50 wt%)–PEO (LiTFSI) (50 wt%)–TEGDME",
+        "proportion": "50 wt% LLZO, 50 wt% TEGDME"
+      },
+      "ionic_conductivity_S_per_cm": "5.8 × 10⁻⁵ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "TEGDME-modified LLZO-PEO composite; significant enhancement due to increased ion mobility and re-established conduction channels.",
+      "processing_method": "Ball milling and casting.",
+      "source_node": {
+        "node_id": "0232",
+        "title": "Ionic Conductivity Results and Interpretation from EIS",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 5.8e-05,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ceramic electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S/cm",
+      "measurement_temperature": "room temperature (RT)",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "rigid and brittle with low flexibility, which leads to poor contact and high resistance at the electrolyte-electrode interfaces",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Inorganic Solid Electrolytes: Properties and Limitations",
+        "section": "INTRODUCTION"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0037",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite electrolytes with nonconductive oxides",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "increase of conductivity by 2 orders of magnitude",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0034",
+        "title": "Composite Electrolytes with Insulating Fillers",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 2.0,
+      "_norm_temp": 0.0,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0032",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "poly-(ethylene oxide)",
+        "acronym": "PEO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ - 10⁻⁸ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "widely studied polymers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Polymer Solid Electrolytes: Properties and Limitations",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24.850000000000023,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0032",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "polyacrylonitrile",
+        "acronym": "PAN",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ - 10⁻⁸ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "widely studied polymers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Polymer Solid Electrolytes: Properties and Limitations",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 1e-08,
+      "_norm_temp": 25,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0032",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "poly-(methyl methacrylate)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ - 10⁻⁸ S/cm",
+      "measurement_temperature": "RT",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "widely studied polymers",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Polymer Solid Electrolytes: Properties and Limitations",
+        "section": "INTRODUCTION"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 23.850000000000023,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyethylene oxide - Lithium perchlorate",
+        "acronym": "PEO-LiClO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Role of Decomposed LLZO and Li-Salt Type in Pathways",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyethylene oxide - Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO-LiTFSI",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Role of Decomposed LLZO and Li-Salt Type in Pathways",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25,
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0227",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LLZO particles",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ – 10⁻⁷ S/cm",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "loosely connected LLZO particles",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0215",
+        "title": "Integrated Discussion on LLZO's Effects on Ionic Conductivity",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polyethylene oxide - Lithium perchlorate",
+        "acronym": "PEO-LiClO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Role of Decomposed LLZO and Li-Salt Type in Pathways",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0205",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "ceramic pellets",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "much lower",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "dense ceramic pellets",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0201",
+        "title": "Summary of Pathway Transitions and Active Li-ion Quantification",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0205",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "ceramic electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "much lower",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "loose particles",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0201",
+        "title": "Summary of Pathway Transitions and Active Li-ion Quantification",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 1e-09,
+      "_norm_temp": 25,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-PEO (LiTFSI)",
+        "acronym": "LLZO-PEO (LiTFSI)",
+        "proportion": "20 wt % LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "improved",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0201",
+        "title": "Summary of Pathway Transitions and Active Li-ion Quantification",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0195",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "tetraethylene glycol dimethyl ether",
+        "acronym": "TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "nonflammable liquid electrolyte for LIBs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Impact of TEGDME on Li-ion Transport Pathways",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0195",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Tetraethylene glycol dimethyl ether",
+        "acronym": "TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0193",
+        "title": "Impact of TEGDME on Li-ion Transport Pathways",
+        "section": "RESULTS AND DISCUSSION"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_4.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO composite",
+        "acronym": "LLZO",
+        "proportion": "0 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-5 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "0 wt% LLZO fraction",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0234",
+        "title": "_page_5_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_4.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO composite",
+        "acronym": "LLZO",
+        "proportion": "5 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "0.9e-5 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "5 wt% LLZO fraction",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0234",
+        "title": "_page_5_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 9e-06,
+      "_norm_temp": 25,
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_4.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO composite",
+        "acronym": "LLZO",
+        "proportion": "20 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-5 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "20 wt% LLZO fraction",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0234",
+        "title": "_page_5_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_4.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO composite",
+        "acronym": "LLZO",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "0.8e-5 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "50 wt% LLZO fraction",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0234",
+        "title": "_page_5_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 8e-06,
+      "_norm_temp": 25,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_4.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO composite with TEGDME",
+        "acronym": "LLZO-TEGDME",
+        "proportion": "50 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "5.8e-5 S/cm",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "50 wt% LLZO fraction with TEGDME",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0234",
+        "title": "_page_5_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 5.8e-05,
+      "_norm_temp": 20,
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 36,
+    "after_dedup": 23,
+    "valid_count": 23,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 23,
+      "medium": 0,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 23,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 36,
+    "from_image_nodes": 0,
+    "final_count": 23
+  },
+  "material_count": 23,
+  "materials": [
+    {
+      "source_sentence_id": "0055",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Sulfide X",
+        "acronym": "Li6+xP1-xSixS5X",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2 mS cm⁻¹",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solutions with substitution of P5+ with Si4+",
+      "processing_method": "Aliovalent doping",
+      "source_node": {
+        "node_id": "0051",
+        "title": "Aliovalent Doping Experiment and Results",
+        "section": "1. Introduction"
+      },
+      "_norm_cond": 0.002,
+      "_norm_temp": null,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.7 mS cm⁻¹",
+      "measurement_temperature": "room-temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unsubstituted sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6.35P0.65Si0.35S5Br",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm⁻¹",
+      "measurement_temperature": "room-temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Si⁴⁺ content",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6.35P0.65Si0.35S5Br",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm⁻¹",
+      "measurement_temperature": "room-temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Si⁴⁺ content",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0170",
+        "title": "Effect of Silicon Content on Ionic Conductivity",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.0024,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6.35P0.65Si0.35S5Br",
+        "proportion": "x = 0.35"
+      },
+      "ionic_conductivity_S_per_cm": "~2.4 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with enhanced Li+-Li+ correlation in the 24g site",
+      "processing_method": "Impedance spectroscopy, neutron diffraction analysis",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0185",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6.175P0.825Si0.175S5Br",
+        "proportion": "x = 0.175"
+      },
+      "ionic_conductivity_S_per_cm": "~0.95 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte (Li6+xP1-xSixS5Br)",
+      "processing_method": "Impedance spectroscopy, equivalent circuit fitting until 1 MHz",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphorus Silicon Sulfide Bromide",
+        "acronym": "Li6PS5Br",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "~0.7 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Parent argyrodite-type solid electrolyte Li6PS5Br",
+      "processing_method": "Impedance spectroscopy",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.025"
+      },
+      "ionic_conductivity_S_per_cm": "8.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.05"
+      },
+      "ionic_conductivity_S_per_cm": "4.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00044,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.075"
+      },
+      "ionic_conductivity_S_per_cm": "8.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.1"
+      },
+      "ionic_conductivity_S_per_cm": "8.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00082,
+      "_norm_temp": 25,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.115"
+      },
+      "ionic_conductivity_S_per_cm": "1.15 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00115,
+      "_norm_temp": 25,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.125"
+      },
+      "ionic_conductivity_S_per_cm": "9.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0186",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.175"
+      },
+      "ionic_conductivity_S_per_cm": "9.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte showing capacitances in range of bulk transport",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit until 1 MHz",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00094,
+      "_norm_temp": 25,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.70 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.0017,
+      "_norm_temp": 25,
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.225"
+      },
+      "ionic_conductivity_S_per_cm": "1.08 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00108,
+      "_norm_temp": 25,
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.25"
+      },
+      "ionic_conductivity_S_per_cm": "1.43 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00143,
+      "_norm_temp": 25,
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.36 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with highest conductivity in the series",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0190",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium silicon phosphorus sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.22 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Impedance spectroscopy fit with equivalent circuit",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figures and Explanations",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00222,
+      "_norm_temp": 25,
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus silicon sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x=0.025"
+      },
+      "ionic_conductivity_S_per_cm": "8.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite solid electrolyte with silicon substitution, high pellet density, bulk transport dominant",
+      "processing_method": "Pelletized samples measured via impedance spectroscopy (up to 1 MHz), fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE representing blocking electrodes.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus silicon sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x=0.175"
+      },
+      "ionic_conductivity_S_per_cm": "9.6 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite solid electrolyte with silicon substitution, high pellet density, bulk transport dominant",
+      "processing_method": "Pelletized samples measured via impedance spectroscopy (up to 1 MHz), fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE representing blocking electrodes.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus silicon sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.71 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite solid electrolyte with silicon substitution, high pellet density, bulk transport dominant",
+      "processing_method": "Pelletized samples measured via impedance spectroscopy (up to 1 MHz), fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE representing blocking electrodes.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0169",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphorus silicon sulfide bromide",
+        "acronym": "Li6+xP1-xSixS5Br",
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.36 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite solid electrolyte with silicon substitution, high pellet density, bulk transport dominant",
+      "processing_method": "Pelletized samples measured via impedance spectroscopy (up to 1 MHz), fit with an equivalent circuit consisting of one parallel CPE/resistor in series with a CPE representing blocking electrodes.",
+      "source_node": {
+        "node_id": "0162",
+        "title": "Impedance Spectroscopy Methodology and Data Fitting",
+        "section": "Ionic transport"
+      },
+      "_norm_cond": 0.00236,
+      "_norm_temp": 25,
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

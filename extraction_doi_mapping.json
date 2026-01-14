@@ -1,0 +1,50 @@
+[
+  {
+    "DOI": "10.1021/jacs.8b10282",
+    "Title": "Inducing High Ionic Conductivity in the Lithium Superionic Argyrodites Li<sub>6+<i>x</i></sub>P<sub>1\u2013<i>x</i></sub>Ge<sub><i>x</i></sub>S<sub>5</sub>I for All-Solid-State Batteries",
+    "ExtractionFile": "Inducing High Ionic Conductivity in the Lithium Superionic Argyrodites Li_sub_6__i_x__i___sub_P_sub_1__i_x__i___sub_Ge_sub__i_x__i___sub_S_sub_5__sub_I for All-Solid-State Batteries_structure.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1016/s0167-2738(98)00070-8",
+    "Title": "Lithium ion conductivity of polycrystalline perovskite La0.67\u00e2\u0088\u0092xLi3xTiO3 with ordered and disordered arrangements of the A-site ions",
+    "ExtractionFile": "Lithium ion conductivity of polycrystalline perovskite La0.67\u00e2__xLi3xTiO3 with ordered and disordered arrangements of the A-site ions_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1039/c7ta08581h",
+    "Title": "Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites",
+    "ExtractionFile": "Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1016/0167-2738(93)90387-i",
+    "Title": "Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2(PO4)3",
+    "ExtractionFile": "Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2_PO4_3_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1021/acs.inorgchem.8b02443",
+    "Title": "Competing Structural Influences in the Li Superionic Conducting Argyrodites Li<sub>6</sub>PS<sub>5\u2013<i>x</i></sub>Se<i><sub><i>x</i></sub></i>Br (0 \u2264 <i>x</i> \u2264 1) upon Se Substitution",
+    "ExtractionFile": "Competing Structural Influences in the Li Superionic Conducting Argyrodites Li_sub_6__sub_PS_sub_5__i_x__i___sub_Se_i__sub__i_x__i___sub___i_Br _0 _ _i_x__i_ _ 1_ upon Se Substitution_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1021/acs.chemmater.8b01504",
+    "Title": "Lithium Conductivity and Meyer-Neldel Rule in Li<sub>3</sub>PO<sub>4</sub>\u2013Li<sub>3</sub>VO<sub>4</sub>\u2013Li<sub>4</sub>GeO<sub>4</sub> Lithium Superionic Conductors",
+    "ExtractionFile": "Lithium Conductivity and Meyer-Neldel Rule in Li_sub_3__sub_PO_sub_4__sub__Li_sub_3__sub_VO_sub_4__sub__Li_sub_4__sub_GeO_sub_4__sub_ Lithium Superionic Conductors_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1016/j.ssi.2014.07.018",
+    "Title": "A systematic study of Nasicon-type Li1+xMxTi2\u2212x(PO4)3 (M: Cr, Al, Fe) by neutron diffraction and impedance spectroscopy",
+    "ExtractionFile": "A systematic study of Nasicon-type Li1_xMxTi2_x_PO4_3 _M_ Cr_ Al_ Fe_ by neutron diffraction and impedance spectroscopy_structure_materials.json",
+    "Overlap": 1.0
+  },
+  {
+    "DOI": "10.1149/1.2086597",
+    "Title": "Ionic Conductivity of Solid Electrolytes Based on Lithium Titanium Phosphate",
+    "ExtractionFile": "Ionic Conductivity of Solid Electrolytes Based on Lithium Titanium Phosphate_structure_materials.json",
+    "Overlap": 1.0
+  }
+]

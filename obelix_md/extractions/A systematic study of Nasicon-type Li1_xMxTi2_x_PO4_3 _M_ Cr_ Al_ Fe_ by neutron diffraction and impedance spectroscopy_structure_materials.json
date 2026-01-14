@@ -1,0 +1,108 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/A systematic study of Nasicon-type Li1_xMxTi2_x_PO4_3 _M_ Cr_ Al_ Fe_ by neutron diffraction and impedance spectroscopy_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 3,
+    "after_dedup": 3,
+    "valid_count": 3,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 3,
+      "medium": 0,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 3,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 3,
+    "from_image_nodes": 0,
+    "final_count": 3
+  },
+  "material_count": 3,
+  "materials": [
+    {
+      "source_sentence_id": "0030",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Aluminum Titanium Phosphate",
+        "acronym": "LATP",
+        "proportion": "Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub>"
+      },
+      "ionic_conductivity_S_per_cm": "6.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "highest conductivity sample",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0025",
+        "title": "Electrical Properties and Ionic Conductivity",
+        "section": "ABSTRACT"
+      },
+      "_norm_cond": 0.0062,
+      "_norm_temp": 25,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0230",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.2 × 10−3 S cm−1",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "bulk conductivity",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0225",
+        "title": "Analysis of Conductivity, Activation Energy, and Substitution Effects",
+        "section": "3.3. Impedance spectroscopy"
+      },
+      "_norm_cond": 0.0062,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0230",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.3 × 10−5 S cm−1",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "grain boundary conductivity",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0225",
+        "title": "Analysis of Conductivity, Activation Energy, and Substitution Effects",
+        "section": "3.3. Impedance spectroscopy"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

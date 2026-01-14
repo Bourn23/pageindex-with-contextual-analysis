@@ -1,0 +1,752 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Solid State Ionics",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          240.20151133501258,
+          84.7233238904627
+        ],
+        [
+          349.0428211586902,
+          84.7233238904627
+        ],
+        [
+          349.0428211586902,
+          96.1484375
+        ],
+        [
+          240.20151133501258,
+          96.1484375
+        ]
+      ]
+    },
+    {
+      "title": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          31.4296875,
+          166.3212890625
+        ],
+        [
+          448.87657430730474,
+          166.3212890625
+        ],
+        [
+          448.87657430730474,
+          195.6883852691218
+        ],
+        [
+          31.4296875,
+          195.6883852691218
+        ]
+      ]
+    },
+    {
+      "title": "ARTICLE INFO",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          32.01171875,
+          321.64872521246457
+        ],
+        [
+          129.10831234256926,
+          320.8989612842304
+        ],
+        [
+          129.10831234256926,
+          329.1463644948064
+        ],
+        [
+          32.01171875,
+          330.64589235127477
+        ]
+      ]
+    },
+    {
+      "title": "Article history:\nReceived 16 June 2015\nReceived in revised form 8 October 2015\nAccepted 30 October 2015",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          32.277078085642316,
+          340.39282341831915
+        ],
+        [
+          149.37531486146094,
+          340.39282341831915
+        ],
+        [
+          149.37531486146094,
+          373.3824362606232
+        ],
+        [
+          32.277078085642316,
+          373.3824362606232
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          196.66498740554155,
+          320.8989612842304
+        ],
+        [
+          264.22166246851384,
+          320.8989612842304
+        ],
+        [
+          264.22166246851384,
+          329.1463644948064
+        ],
+        [
+          196.66498740554155,
+          329.1463644948064
+        ]
+      ]
+    },
+    {
+      "title": "1. Synthesis",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          41.28463476070529,
+          338.845703125
+        ],
+        [
+          86.32241813602015,
+          338.845703125
+        ],
+        [
+          86.32241813602015,
+          347.890462700661
+        ],
+        [
+          41.28463476070529,
+          347.890462700661
+        ]
+      ]
+    },
+    {
+      "title": "2. Characterization",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          40.53400503778337,
+          578.8291015625
+        ],
+        [
+          114.09571788413098,
+          578.8291015625
+        ],
+        [
+          114.09571788413098,
+          587.8149197355996
+        ],
+        [
+          40.53400503778337,
+          587.8149197355996
+        ]
+      ]
+    },
+    {
+      "title": "2.1. X-ray powder diffraction",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          40.53400503778337,
+          600.5400390625
+        ],
+        [
+          141.86901763224182,
+          600.5400390625
+        ],
+        [
+          141.86901763224182,
+          609.0693359375
+        ],
+        [
+          40.53400503778337,
+          609.0693359375
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Thermogravimetric analysis",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          40.53400503778337,
+          693.5869140625
+        ],
+        [
+          151.6272040302267,
+          693.5869140625
+        ],
+        [
+          151.6272040302267,
+          702.5288007554296
+        ],
+        [
+          40.53400503778337,
+          702.5288007554296
+        ]
+      ]
+    },
+    {
+      "title": "2.3. Electrochemical testing",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          309.2594458438287,
+          55.82812499999999
+        ],
+        [
+          404.51171875,
+          55.82812499999999
+        ],
+        [
+          404.51171875,
+          64.47969782813975
+        ],
+        [
+          309.2594458438287,
+          64.47969782813975
+        ]
+      ]
+    },
+    {
+      "title": "2.4. Ionic conductivity measurements",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          309.2594458438287,
+          175.23828125
+        ],
+        [
+          437.978515625,
+          175.23828125
+        ],
+        [
+          437.978515625,
+          183.69216241737487
+        ],
+        [
+          309.2594458438287,
+          183.69216241737487
+        ]
+      ]
+    },
+    {
+      "title": "3. Results and discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          309.2594458438287,
+          380.716796875
+        ],
+        [
+          403.088161209068,
+          380.716796875
+        ],
+        [
+          403.088161209068,
+          388.470703125
+        ],
+        [
+          309.2594458438287,
+          388.470703125
+        ]
+      ]
+    },
+    {
+      "title": "4. Conclusion",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          32.01171875,
+          266.734375
+        ],
+        [
+          83.64966583251953,
+          266.734375
+        ],
+        [
+          83.64966583251953,
+          274.84405517578125
+        ],
+        [
+          32.01171875,
+          274.84405517578125
+        ]
+      ]
+    },
+    {
+      "title": "Author contributions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          32.59375,
+          405.1416015625
+        ],
+        [
+          113.33677673339844,
+          405.1416015625
+        ],
+        [
+          113.33677673339844,
+          416.8066711425781
+        ],
+        [
+          32.59375,
+          416.8066711425781
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgment",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          32.01171875,
+          485.78222656249994
+        ],
+        [
+          99.62004089355469,
+          485.78222656249994
+        ],
+        [
+          99.62004089355469,
+          496.0703125
+        ],
+        [
+          32.01171875,
+          496.0703125
+        ]
+      ]
+    },
+    {
+      "title": "Appendix A. Supplementary data",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          301.201171875,
+          56.99121093749999
+        ],
+        [
+          425.173828125,
+          56.99121093749999
+        ],
+        [
+          425.173828125,
+          65.66351318359375
+        ],
+        [
+          301.201171875,
+          65.66351318359375
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          300.91015625,
+          109.33007812499999
+        ],
+        [
+          342.009765625,
+          109.33007812499999
+        ],
+        [
+          342.009765625,
+          117.9400634765625
+        ],
+        [
+          300.91015625,
+          117.9400634765625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          110
+        ],
+        [
+          "Span",
+          73
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "ListItem",
+          7
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 6035,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          135
+        ],
+        [
+          "Span",
+          133
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          7
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          91
+        ],
+        [
+          "TableCell",
+          70
+        ],
+        [
+          "Span",
+          60
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 4804,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          121
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          135
+        ],
+        [
+          "Line",
+          125
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          105
+        ],
+        [
+          "Span",
+          44
+        ],
+        [
+          "TableCell",
+          18
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 2284,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          356
+        ],
+        [
+          "Line",
+          81
+        ],
+        [
+          "ListItem",
+          38
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+}

@@ -1,0 +1,798 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Lithium Conductivity and Meyer-Neldel Rule in Li_sub_3__sub_PO_sub_4__sub__Li_sub_3__sub_VO_sub_4__sub__Li_sub_4__sub_GeO_sub_4__sub_ Lithium Superionic Conductors_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 29,
+    "after_dedup": 28,
+    "valid_count": 26,
+    "invalid_count": 2,
+    "by_confidence": {
+      "high": 12,
+      "medium": 14,
+      "low": 2
+    },
+    "by_source": {
+      "primary": 12,
+      "cited": 16,
+      "inferred": 0
+    },
+    "from_text_nodes": 29,
+    "from_image_nodes": 0,
+    "final_count": 28
+  },
+  "material_count": 28,
+  "materials": [
+    {
+      "source_sentence_id": "0247",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium phosphate-lithium vanadate-lithium germanate system",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~7 orders of magnitude increase",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li3PO4 or Li3VO4 doped with Ge to create partial lithium occupancy",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0245",
+        "title": "Experimental Results on Ge Doping and Activation Energy",
+        "section": "CONCLUSIONS"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Vanadate",
+        "acronym": "Li3VO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.5 &times; 10⁻¹³ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 1.5e-13,
+      "_norm_temp": 30,
+      "_index": 1,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.50e-13 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Vanadium Oxide",
+        "acronym": "Li3.2Ge0.2V0.8O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~3 &times; 10⁻⁵ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 3e-05,
+      "_norm_temp": 30,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Vanadium Oxide",
+        "acronym": "Li3.4Ge0.4V0.6O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~8 &times; 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 8e-06,
+      "_norm_temp": 30,
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Vanadium Oxide",
+        "acronym": "Li3.6Ge0.6V0.4O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~2 &times; 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 2e-06,
+      "_norm_temp": 30,
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Vanadium Oxide",
+        "acronym": "Li3.8Ge0.8V0.2O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~3 &times; 10⁻⁷ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanate",
+        "acronym": "Li4GeO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.3 &times; 10⁻¹² S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 1.3e-12,
+      "_norm_temp": 30,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Phosphate",
+        "acronym": "Li3.2Ge0.2P0.8O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1 &times; 10⁻⁷ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets with partial lithium occupancy; exhibits two semicircles in EIS at low temperatures.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Phosphate",
+        "acronym": "Li3.4Ge0.4P0.6O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~7 &times; 10⁻⁷ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 7e-07,
+      "_norm_temp": 30,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Phosphate",
+        "acronym": "Li3.6Ge0.6P0.4O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~5 &times; 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_norm_cond": 5e-06,
+      "_norm_temp": 30,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Germanium Phosphate",
+        "acronym": "Li3.8Ge0.8P0.2O4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.5 &times; 10⁻⁶ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets, gold-sputtered.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0115",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Phosphate",
+        "acronym": "Li3PO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~3 &times; 10⁻¹³ S/cm",
+      "measurement_temperature": "30°C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Polycrystalline ceramic pellets without partial lithium occupancy; fitted with one semicircle in EIS.",
+      "processing_method": "EIS data collected from gold sputtered pellets between stainless steel current collectors; frequency 7 MHz to 0.1 Hz, 1 V AC amplitude.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Electrochemical Impedance Spectroscopy (EIS) Characterization",
+        "section": "2.1 Synthesis and Experimental Characterizations."
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0074",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "LISICONs",
+        "acronym": "LISICONs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~15 orders of magnitude",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0073",
+        "title": "Research Approach: Investigating LISICONs through Cation Substitution",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0074",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "LISICONs",
+        "acronym": "LISICONs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~15 orders of magnitude",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0073",
+        "title": "Research Approach: Investigating LISICONs through Cation Substitution",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0366",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Thiophosphate",
+        "acronym": "Li3PS4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 1.1e-05,
+      "_norm_temp": 25,
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0367",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Lithium Orthosilicate—Lithium Phosphate Solid Solutions",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 0.00015,
+      "_norm_temp": 25,
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0395",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "γ-Li3PO4",
+        "acronym": "γ-Li3PO4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0398",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LISICON, Li2+2xZn1-xGeO4",
+        "acronym": "LISICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0417",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiI(MIV)2-x(NIV)x(PO4)3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0420",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ge Substituted Li3AsS4 Solid Electrolyte",
+        "acronym": "Li3AsS4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0423",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Arsenic-Substituted Li4SnS4",
+        "acronym": "Li4SnS4",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0425",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10(Ge1-xMx)P2S12 (M = Si, Sn)",
+        "acronym": "Li10(Ge1-xMx)P2S12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻² S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0433",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Ln3Te2O12",
+        "acronym": "Li3Ln3Te2O12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25,
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0435",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3Nb2O12",
+        "acronym": "Li5La3Nb2O12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0436",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Garnet-like Solid Li-Electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0439",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6ALa2Nb2O12 (A=Ca, Sr, Ba)",
+        "acronym": "Li6ALa2Nb2O12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0442",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6BaLa2M2O12 with Coexisting Nb and Ta on the M Sites",
+        "acronym": "Li6BaLa2M2O12",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0297",
+        "title": "General",
+        "section": "REFERENCES"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0068",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LISICON Li\n2+2x\nZn\n1-x\nGeO\n4\nsolid solutions",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "Lowering the activation energy from 1.0 to 0.6 eV is accompanied with a decreased pre-exponential factor, σ₀, of ~6 orders of magnitude.",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0063",
+        "title": "Factors Influencing Lithium-ion Conductivity and Their Relationship",
+        "section": "1. INTRODUCTION"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 27,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Communication",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          43.03125,
+          110.7960205078125
+        ],
+        [
+          135.29800415039062,
+          110.7960205078125
+        ],
+        [
+          135.29800415039062,
+          123.7960205078125
+        ],
+        [
+          43.03125,
+          123.7960205078125
+        ]
+      ]
+    },
+    {
+      "title": "Correlation of structure and fast ion conductivity\nin the solid solution series Li1+2xZn1-xPS4",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          138.781005859375,
+          131.09765625
+        ],
+        [
+          473.23541259765625,
+          131.09765625
+        ],
+        [
+          473.23541259765625,
+          164.1322021484375
+        ],
+        [
+          138.781005859375,
+          164.1322021484375
+        ]
+      ]
+    },
+    {
+      "title": "Just Accepted",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.419921875,
+          260.85406494140625
+        ],
+        [
+          147.18499755859375,
+          260.85406494140625
+        ],
+        [
+          147.18499755859375,
+          273.0234375
+        ],
+        [
+          71.419921875,
+          273.0234375
+        ]
+      ]
+    },
+    {
+      "title": "Correlation of structure and fast ion conductivity in the solid solution series \\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          53.25,
+          106.734375
+        ],
+        [
+          558.0,
+          106.734375
+        ],
+        [
+          558.0,
+          145.40625
+        ],
+        [
+          53.25,
+          145.40625
+        ]
+      ]
+    },
+    {
+      "title": "ASSOCIATED CONTENT",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          317.6402893066406,
+          573.4894409179688
+        ],
+        [
+          430.0733642578125,
+          573.4894409179688
+        ],
+        [
+          430.0733642578125,
+          584.0292663574219
+        ],
+        [
+          317.6402893066406,
+          584.0292663574219
+        ]
+      ]
+    },
+    {
+      "title": "AUTHOR INFORMATION",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          325.125,
+          651.1295166015625
+        ],
+        [
+          442.9191589355469,
+          651.1295166015625
+        ],
+        [
+          442.9191589355469,
+          661.6693420410156
+        ],
+        [
+          325.125,
+          661.6693420410156
+        ]
+      ]
+    },
+    {
+      "title": "Corresponding Author",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          317.35546875,
+          669.8186187744141
+        ],
+        [
+          410.8209228515625,
+          669.8186187744141
+        ],
+        [
+          410.8209228515625,
+          679.2804183959961
+        ],
+        [
+          317.35546875,
+          679.2804183959961
+        ]
+      ]
+    },
+    {
+      "title": "ACKNOWLEDGEMENTS",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          324.228515625,
+          701.12109375
+        ],
+        [
+          439.69219970703125,
+          701.12109375
+        ],
+        [
+          439.69219970703125,
+          714.5893936157227
+        ],
+        [
+          324.228515625,
+          714.5893936157227
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          54.685546875,
+          215.76910400390625
+        ],
+        [
+          119.30066680908203,
+          215.76910400390625
+        ],
+        [
+          119.30066680908203,
+          226.3089599609375
+        ],
+        [
+          54.685546875,
+          226.3089599609375
+        ]
+      ]
+    },
+    {
+      "title": "Insert Table of Contents artwork here",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          209.52005004882812,
+          37.8984375
+        ],
+        [
+          405.3406982421875,
+          37.8984375
+        ],
+        [
+          405.3406982421875,
+          50.30950927734375
+        ],
+        [
+          209.52005004882812,
+          50.30950927734375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          59
+        ],
+        [
+          "Line",
+          28
+        ],
+        [
+          "Picture",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 3610,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          155
+        ],
+        [
+          "Span",
+          123
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          403
+        ],
+        [
+          "Line",
+          139
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          666
+        ],
+        [
+          "TableCell",
+          203
+        ],
+        [
+          "Line",
+          174
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 4,
+        "llm_error_count": 0,
+        "llm_tokens_used": 9915,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          592
+        ],
+        [
+          "Line",
+          177
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          632
+        ],
+        [
+          "Line",
+          189
+        ],
+        [
+          "ListItem",
+          28
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          113
+        ],
+        [
+          "Line",
+          57
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Correlation of Structure and Fast Ion Conductivity in the Solid Solution Series Li_sub_1_2_i_x__i___sub_Zn_sub_1__i_x__i___sub_PS_sub_4__sub_"
+}

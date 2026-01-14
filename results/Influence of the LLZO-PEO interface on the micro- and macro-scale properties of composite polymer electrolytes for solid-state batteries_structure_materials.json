@@ -1,0 +1,996 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Influence of the LLZO-PEO interface on the micro- and macro-scale properties of composite polymer electrolytes for solid-state batteries_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 49,
+    "after_dedup": 35,
+    "valid_count": 27,
+    "invalid_count": 8,
+    "by_confidence": {
+      "high": 19,
+      "medium": 7,
+      "low": 9
+    },
+    "by_source": {
+      "primary": 27,
+      "cited": 4,
+      "inferred": 4
+    },
+    "from_text_nodes": 42,
+    "from_image_nodes": 7,
+    "final_count": 35
+  },
+  "material_count": 35,
+  "materials": [
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "6Li",
+        "acronym": "6Li",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "30–80 °C with 10 °C intervals",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "CPEs",
+      "processing_method": "stainless steel—blocking electrodes",
+      "source_node": {
+        "node_id": "0111",
+        "title": "NMR Spectroscopy",
+        "section": "2. Experimental section"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 80,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0256",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Pristine LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "low",
+      "measurement_temperature": "room temperature (RT)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "garnet-rich CPEs containing 80 wt% pristine LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0256",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Heat-Treated LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "high enough to operate in a device",
+      "measurement_temperature": "70 °C",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "garnet-rich CPEs containing 80 wt% heat-treated LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 70,
+      "_index": 2,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0257",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Pristine LLZO",
+        "acronym": "CPE",
+        "proportion": "90 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "decrease",
+      "measurement_temperature": "room temperature (RT)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "garnet-rich CPEs containing 90 wt% pristine LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 3,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0261",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Heat-Treated LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "better",
+      "measurement_temperature": "whole temperature range",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "membranes with 80 wt% LLZO fraction (heat-treated)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 0,
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0261",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Heat-Treated LLZO",
+        "acronym": "CPE",
+        "proportion": "90 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "better",
+      "measurement_temperature": "whole temperature range",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "membranes with 90 wt% LLZO fraction (heat-treated)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0263",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Ceramic-rich membrane with uniform polymer phase distribution",
+        "acronym": "CA80",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "facile",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "ceramic-rich membrane, uniform distribution of the polymer phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0263",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite with phase segregation and poor polymer phase distribution",
+        "acronym": "CP80",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "lower ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "phase segregation, poor distribution of the PEO phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 25,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0264",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "90 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "enhancement",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "90 wt% LLZO content, higher phase segregation",
+      "processing_method": "heat treatment",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0266",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite with uniform polymer phase distribution",
+        "acronym": "CA80",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "higher ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "uniform distribution of the polymer phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0256",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Pristine LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "low",
+      "measurement_temperature": "room temperature (RT)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "garnet-rich CPEs containing 80 wt% pristine LLZO",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0261",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with Pristine LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "better",
+      "measurement_temperature": "whole temperature range",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "membranes with 80 wt% LLZO fraction (pristine)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 1.0,
+      "_norm_temp": 20,
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0263",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite with phase segregation and poor polymer phase distribution",
+        "acronym": "CP80",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "lower ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "phase segregation, poor distribution of the PEO phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 12,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0264",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "90 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "enhancement",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "90 wt% LLZO content, higher phase segregation",
+      "processing_method": "heat treatment",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0264",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "enhancement",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "80 wt% LLZO content",
+      "processing_method": "heat treatment",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0266",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Composite with uniform polymer phase distribution",
+        "acronym": "CA80",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "higher ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "uniform distribution of the polymer phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0307",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "garnet-rich composite polymer electrolytes",
+        "acronym": "CPEs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "improved",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZO heat treatment improved the ionic conductivity, more significant when LLZO content was increased",
+      "processing_method": "heat-treated LLZO",
+      "source_node": {
+        "node_id": "0304",
+        "title": "Detailed Analysis of Ionic Conduction and Remaining Challenges",
+        "section": "4. Concluding remarks"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0308",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite polymer electrolytes",
+        "acronym": "CPEs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "higher",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "homogenous microstructure of CPEs with heat-treated LLZO",
+      "processing_method": "heat-treated LLZO",
+      "source_node": {
+        "node_id": "0304",
+        "title": "Detailed Analysis of Ionic Conduction and Remaining Challenges",
+        "section": "4. Concluding remarks"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 25,
+      "_index": 17,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0309",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite polymer electrolytes",
+        "acronym": "CPEs",
+        "proportion": "90 wt%"
+      },
+      "ionic_conductivity_S_per_cm": "high",
+      "measurement_temperature": "N/A",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZO fraction reaches 90 wt%",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0304",
+        "title": "Detailed Analysis of Ionic Conduction and Remaining Challenges",
+        "section": "4. Concluding remarks"
+      },
+      "_norm_cond": 10.0,
+      "_norm_temp": 0.0,
+      "_index": 18,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+01 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0298",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "CPE membranes",
+        "acronym": "CPE",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "low ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "CPE membranes",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0287",
+        "title": "Overpotential, Interface Resistance, and Cycling Stability",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 1e-08,
+      "_norm_temp": 25.0,
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0042",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "inorganic electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "high ionic conductivity",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "high thermal, mechanical, and electrochemical stability",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0039",
+        "title": "Solid-State Electrolytes as a Solution",
+        "section": "1. Introduction"
+      },
+      "_norm_cond": 1000.0,
+      "_norm_temp": 25,
+      "_index": 20,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0042",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "polymer electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "simple processability and an acceptable interface with the electrodes",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0039",
+        "title": "Solid-State Electrolytes as a Solution",
+        "section": "1. Introduction"
+      },
+      "_norm_cond": 9.999999999999999e-06,
+      "_norm_temp": 25,
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0268",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "90 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "higher ionic conductivities would be expected",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "LLZO/PEO interface as a possible pathway for Li conduction",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0268",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "lower ionic conductivities",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "LLZO/PEO interface as a possible pathway for Li conduction",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0268",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Polymer Electrolyte with LLZO",
+        "acronym": "CPE",
+        "proportion": "80 wt% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "lower ionic conductivities",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "LLZO/PEO interface as a possible pathway for Li conduction",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0255",
+        "title": "Ionic Conductivity Results and Interpretation",
+        "section": "3. Results and discussions"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0306",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "composite polymer electrolytes",
+        "acronym": "CPEs",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "too high",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "grain boundary resistance is too high for facile ion transport through the inorganic phase",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0304",
+        "title": "Detailed Analysis of Ionic Conduction and Remaining Challenges",
+        "section": "4. Concluding remarks"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0202",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "ceramic-polymer composite electrolytes",
+        "acronym": "CPEs",
+        "proportion": "10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "2D EXSY NMR Study of Li-ion Exchange",
+        "section": "3. Results and discussions"
+      },
+      "_norm_cond": 100.0,
+      "_norm_temp": 25,
+      "_index": 26,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+02 S/cm is outside typical bounds."
+        ],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0202",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "ceramic-polymer composite electrolytes",
+        "acronym": "CPEs",
+        "proportion": "10 vol% LLZO"
+      },
+      "ionic_conductivity_S_per_cm": "N/A",
+      "measurement_temperature": "N/A",
+      "confidence": "low",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "2D EXSY NMR Study of Li-ion Exchange",
+        "section": "3. Results and discussions"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Poly(ethylene oxide) / Lithium bis(trifluoromethanesulfonyl)imide",
+        "acronym": "PEO/LiTFSI",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-4 S cm^-1",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Standard PEO/LiTFSI polymer electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CA80",
+        "acronym": "CA80",
+        "proportion": "80wt%"
+      },
+      "ionic_conductivity_S_per_cm": "3.1e-5 S cm^-1",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "80wt% Heat Treated composite electrolyte",
+      "processing_method": "Heat Treated",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CP80",
+        "acronym": "CP80",
+        "proportion": "80wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-5 S cm^-1",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "80wt% Pristine composite electrolyte",
+      "processing_method": "Pristine",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CA90",
+        "acronym": "CA90",
+        "proportion": "90wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-5 S cm^-1",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "90wt% Heat Treated composite electrolyte",
+      "processing_method": "Heat Treated",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CP90",
+        "acronym": "CP90",
+        "proportion": "90wt%"
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-6 S cm^-1",
+      "measurement_temperature": "70°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "90wt% Pristine composite electrolyte",
+      "processing_method": "Pristine",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 2.8e-06,
+      "_norm_temp": 70,
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CA80",
+        "acronym": "CA80",
+        "proportion": "80wt%"
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-7 S cm^-1",
+      "measurement_temperature": "20°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "80wt% Heat Treated composite electrolyte",
+      "processing_method": "Heat Treated",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 5e-07,
+      "_norm_temp": 20,
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_9.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "CP80",
+        "acronym": "CP80",
+        "proportion": "80wt%"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-7 S cm^-1",
+      "measurement_temperature": "20°C",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "80wt% Pristine composite electrolyte",
+      "processing_method": "Pristine",
+      "source_node": {
+        "node_id": "0278",
+        "title": "_page_5_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

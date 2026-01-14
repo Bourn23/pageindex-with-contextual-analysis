@@ -1,0 +1,14 @@
+gt_id,status,match_index,reason
+9zr,FOUND,2.0,Li24.0P4.0S20.0Br4.0 is equivalent to Li6PS5Br
+a8v,FOUND,5.0,Li24.1P3.9Si0.1S20.0Br4.0 is stoichiometrically similar to Li6.1P0.9Si0.1S5Br with a slight deviation in Li content. The ground truth's Li content is close to 4x the candidate.
+09w,FOUND,5.0,"Li24.2P3.8Si0.2S20.0Br4.0 is chemically similar to Li6.1P0.9Si0.1S5Br with slight deviations in stoichiometry that can be attributed to experimental variations or doping. Considering the practical limitations of synthesizing exact compositions, the match is considered valid."
+x2v,FOUND,5.0,"Li24.3P3.7Si0.3S20.0Br4.0 is close in composition to Li6.1P0.9Si0.1S5Br. After accounting for stoichiometry and rounding, the composition of ID 5 is very similar to the target. The conductivities are also close."
+bnh,FOUND,5.0,Li24.4P3.8Si0.4S20.0Br4.0 is within the tolerance of Li6.1P0.9Si0.1S5Br and Li6.125P0.875Si0.125S5Br (which rounds to Li6.1P0.9Si0.1S5Br). Both also exhibit similar conductivity.
+x9d,FOUND,11.0,Li24.5P3.5Si0.5S20Br4 is equivalent to 4 * (Li6.125P0.875Si0.125S5Br) which is present in the candidates.
+ish,FOUND,11.0,Li24.7P3.3Si0.7S20.0Br4.0 is close to 4 * (Li6.175P0.825Si0.175S5Br). Candidate ID 11 (Li6.125P0.875Si0.125S5Br) is closest in composition and conductivity.
+iiy,FOUND,6.0,"Li24.8P3.2Si0.8S20.0Br4.0 is approximately 4x the unit cell of Li6.2P0.8Si0.2S5Br, where ID 6: Li6.2P0.8Si0.2S5Br (0.0017 S/cm) is closest to the GT conductivity 0.00169 S/cm."
+3zo,FOUND,11.0,"Li24.9P3.1Si0.9S20.0Br4.0 is stoichiometrically equivalent to Li6.225P0.775Si0.225S5Br which is close to candidates ID 6, 7, 11, and 12. ID 11 has the closest composition."
+vj7,FOUND,12.0,"Li25.0P3.0Si1.0S20.0Br4.0 is very close to 4 * Li6.25P0.75Si0.25S5Br, with minor deviation in stoichiometry likely due to experimental error or rounding. Conductivity values are also close (0.00141 S/cm vs 0.0014 S/cm)."
+wsd,FOUND,7.0,Li25.2P2.8Si1.2S20.0Br4.0 is chemically equivalent to Li6.3P0.7Si0.3S5Br (ID 7) because the ratios of elements are the same. The conductivity value is also a match.
+10s,ERROR_DURING_FORENSICS,,
+fkj,ERROR_DURING_FORENSICS,,

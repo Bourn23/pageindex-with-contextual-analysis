@@ -1,0 +1,889 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Faraday Discussions",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          60.81864406779661,
+          19.77734375
+        ],
+        [
+          183.95762711864407,
+          19.77734375
+        ],
+        [
+          183.95762711864407,
+          35.98828125
+        ],
+        [
+          60.81864406779661,
+          35.98828125
+        ]
+      ]
+    },
+    {
+      "title": "Synthesis, structure, and ionic conductivity\nof solid solution, \\text{Li}_{10+\\delta}M_{1+\\delta}P_{2-\\delta}S_{12}\n(M = Si, Sn)",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          60.81864406779661,
+          98.88671875
+        ],
+        [
+          380.703125,
+          98.88671875
+        ],
+        [
+          380.703125,
+          150.11328125
+        ],
+        [
+          60.81864406779661,
+          150.11328125
+        ]
+      ]
+    },
+    {
+      "title": "Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          60.81864406779661,
+          393.89830508474574
+        ],
+        [
+          141.91016949152544,
+          391.6474576271186
+        ],
+        [
+          141.91016949152544,
+          404.625
+        ],
+        [
+          60.81864406779661,
+          405.1525423728814
+        ]
+      ]
+    },
+    {
+      "title": "Experimental",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          60.78271484375,
+          29.50390625
+        ],
+        [
+          146.41525423728814,
+          29.50390625
+        ],
+        [
+          146.41525423728814,
+          43.12109375
+        ],
+        [
+          60.78271484375,
+          43.12109375
+        ]
+      ]
+    },
+    {
+      "title": "Results and discussion",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          60.81864406779661,
+          447.74609375
+        ],
+        [
+          206.48305084745763,
+          447.74609375
+        ],
+        [
+          206.48305084745763,
+          460.06640625
+        ],
+        [
+          60.81864406779661,
+          460.06640625
+        ]
+      ]
+    },
+    {
+      "title": "Materials synthesis",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          61.56949152542373,
+          467.425988700565
+        ],
+        [
+          138.90677966101697,
+          467.425988700565
+        ],
+        [
+          138.90677966101697,
+          478.22265625
+        ],
+        [
+          61.56949152542373,
+          478.22265625
+        ]
+      ]
+    },
+    {
+      "title": "Silicon system",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          60.81864406779661,
+          30.4765625
+        ],
+        [
+          119.38474576271187,
+          30.4765625
+        ],
+        [
+          119.38474576271187,
+          38.264406779661016
+        ],
+        [
+          60.81864406779661,
+          38.264406779661016
+        ]
+      ]
+    },
+    {
+      "title": "Silicon solid-solution system",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          60.81864406779661,
+          365.3875706214689
+        ],
+        [
+          177.373046875,
+          365.3875706214689
+        ],
+        [
+          177.373046875,
+          374.47265625
+        ],
+        [
+          60.81864406779661,
+          374.47265625
+        ]
+      ]
+    },
+    {
+      "title": "Tin solid-solution system",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          60.067796610169495,
+          576.2169491525424
+        ],
+        [
+          162.93389830508477,
+          576.2169491525424
+        ],
+        [
+          162.93389830508477,
+          585.2203389830509
+        ],
+        [
+          60.067796610169495,
+          585.2203389830509
+        ]
+      ]
+    },
+    {
+      "title": "Solid solutions of the LGPS-type phases",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          60.81864406779661,
+          528.1988700564972
+        ],
+        [
+          220.74915254237288,
+          528.1988700564972
+        ],
+        [
+          220.74915254237288,
+          537.87890625
+        ],
+        [
+          60.81864406779661,
+          537.87890625
+        ]
+      ]
+    },
+    {
+      "title": "Electrochemical properties",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          60.81864406779661,
+          456.1717514124294
+        ],
+        [
+          168.9406779661017,
+          456.1717514124294
+        ],
+        [
+          168.9406779661017,
+          465.25390625
+        ],
+        [
+          60.81864406779661,
+          465.25390625
+        ]
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          60.81864406779661,
+          273.10282485875706
+        ],
+        [
+          134.40169491525424,
+          273.10282485875706
+        ],
+        [
+          134.40169491525424,
+          284.35706214689264
+        ],
+        [
+          60.81864406779661,
+          284.35706214689264
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgements",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          60.067796610169495,
+          420.9084745762712
+        ],
+        [
+          189.21355932203392,
+          420.9084745762712
+        ],
+        [
+          189.21355932203392,
+          434.453125
+        ],
+        [
+          60.067796610169495,
+          434.453125
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          61.56949152542373,
+          553.765625
+        ],
+        [
+          132.9,
+          553.765625
+        ],
+        [
+          132.9,
+          566.734375
+        ],
+        [
+          61.56949152542373,
+          566.734375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          58
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 6893,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          45
+        ],
+        [
+          "Span",
+          41
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          74
+        ],
+        [
+          "Line",
+          56
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          93
+        ],
+        [
+          "Line",
+          72
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          234
+        ],
+        [
+          "Span",
+          82
+        ],
+        [
+          "Line",
+          39
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 7757,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          79
+        ],
+        [
+          "Line",
+          71
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          72
+        ],
+        [
+          "Span",
+          65
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          77
+        ],
+        [
+          "Span",
+          66
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          85
+        ],
+        [
+          "Span",
+          26
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          77
+        ],
+        [
+          "Line",
+          70
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          57
+        ],
+        [
+          "Span",
+          56
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          37
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "ListItem",
+          14
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Synthesis_ structure_ and ionic conductivity of solid solution_ Li_sub_10_\u03b4__sub_M_sub_1_\u03b4__sub_P_sub_2_\u03b4__sub_S_sub_12__sub_ _M _ Si_ Sn_"
+}

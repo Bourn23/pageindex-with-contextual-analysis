@@ -1,0 +1,794 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Solid State Ionics",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          249.109375,
+          86.97261567516524
+        ],
+        [
+          358.05037783375315,
+          86.97261567516524
+        ],
+        [
+          358.05037783375315,
+          98.474609375
+        ],
+        [
+          249.109375,
+          98.474609375
+        ]
+      ]
+    },
+    {
+      "title": "A systematic study of Nasicon-type \\text{Li}_{1+x}\\text{M}_x\\text{Ti}_{2-x}(\\text{PO}_4)_3 (M: Cr, Al, Fe) by neutron diffraction and impedance spectroscopy",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          40.53400503778337,
+          165.93359375
+        ],
+        [
+          478.9017632241813,
+          165.93359375
+        ],
+        [
+          478.9017632241813,
+          196.94921875
+        ],
+        [
+          40.53400503778337,
+          196.94921875
+        ]
+      ]
+    },
+    {
+      "title": "ARTICLE INFO",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          40.53400503778337,
+          283.4107648725212
+        ],
+        [
+          138.11586901763224,
+          283.4107648725212
+        ],
+        [
+          138.11586901763224,
+          291.6581680830972
+        ],
+        [
+          40.53400503778337,
+          291.6581680830972
+        ]
+      ]
+    },
+    {
+      "title": "Article history:\nReceived 7 March 2014\nReceived in revised form 1 July 2014\nAccepted 30 July 2014\nAvailable online 24 August 2014",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          40.53400503778337,
+          302.1548630783758
+        ],
+        [
+          147.1234256926952,
+          302.1548630783758
+        ],
+        [
+          147.1234256926952,
+          344.14164305949004
+        ],
+        [
+          40.53400503778337,
+          344.14164305949004
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          205.67254408060452,
+          283.4107648725212
+        ],
+        [
+          271.727959697733,
+          283.4107648725212
+        ],
+        [
+          271.727959697733,
+          290.15864022662885
+        ],
+        [
+          205.67254408060452,
+          290.15864022662885
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          41.28463476070529,
+          488.88378906249994
+        ],
+        [
+          99.08312342569269,
+          488.88378906249994
+        ],
+        [
+          99.08312342569269,
+          498.5930122757318
+        ],
+        [
+          41.28463476070529,
+          498.5930122757318
+        ]
+      ]
+    },
+    {
+      "title": "2. Experimental",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          32.01171875,
+          213.23242187499997
+        ],
+        [
+          92.53590393066406,
+          213.23242187499997
+        ],
+        [
+          92.53590393066406,
+          222.572021484375
+        ],
+        [
+          32.01171875,
+          222.572021484375
+        ]
+      ]
+    },
+    {
+      "title": "2.1. Sample preparation",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          31.4296875,
+          234.94335937499997
+        ],
+        [
+          114.59822845458984,
+          234.94335937499997
+        ],
+        [
+          114.59822845458984,
+          243.49139404296875
+        ],
+        [
+          31.4296875,
+          243.49139404296875
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Structural characterization",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          32.01171875,
+          442.36035156249994
+        ],
+        [
+          138.69189453125,
+          442.36035156249994
+        ],
+        [
+          138.69189453125,
+          452.7464599609375
+        ],
+        [
+          32.01171875,
+          452.7464599609375
+        ]
+      ]
+    },
+    {
+      "title": "2.3. Ionic conductivity measurements",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          299.74609375,
+          57.37890624999999
+        ],
+        [
+          427.75140380859375,
+          57.37890624999999
+        ],
+        [
+          427.75140380859375,
+          65.64190673828125
+        ],
+        [
+          299.74609375,
+          65.64190673828125
+        ]
+      ]
+    },
+    {
+      "title": "3. Results and discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          300.91015625,
+          192.296875
+        ],
+        [
+          393.9331970214844,
+          192.296875
+        ],
+        [
+          393.9331970214844,
+          201.65313720703125
+        ],
+        [
+          300.91015625,
+          201.65313720703125
+        ]
+      ]
+    },
+    {
+      "title": "3.1. X-ray diffraction at room temperature",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          300.037109375,
+          213.23242187499997
+        ],
+        [
+          445.05169677734375,
+          213.23242187499997
+        ],
+        [
+          445.05169677734375,
+          222.572509765625
+        ],
+        [
+          300.037109375,
+          222.572509765625
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Neutron diffraction as a function of temperature",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          301.71875,
+          413.3674621582031
+        ],
+        [
+          479.1242980957031,
+          413.3674621582031
+        ],
+        [
+          479.1242980957031,
+          422.97558593749994
+        ],
+        [
+          301.71875,
+          422.97558593749994
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Impedance spectroscopy",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          309.2594458438287,
+          671.8759765625
+        ],
+        [
+          407.59193954659946,
+          671.8759765625
+        ],
+        [
+          407.59193954659946,
+          681.5354107648725
+        ],
+        [
+          309.2594458438287,
+          681.5354107648725
+        ]
+      ]
+    },
+    {
+      "title": "4. Conclusions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          41.033203125,
+          366.759765625
+        ],
+        [
+          95.80299377441406,
+          366.759765625
+        ],
+        [
+          95.80299377441406,
+          376.09637451171875
+        ],
+        [
+          41.033203125,
+          376.09637451171875
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgments",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          309.640625,
+          380.716796875
+        ],
+        [
+          379.8872985839844,
+          380.716796875
+        ],
+        [
+          379.8872985839844,
+          390.49725341796875
+        ],
+        [
+          309.640625,
+          390.49725341796875
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          32.302734375,
+          55.82812499999999
+        ],
+        [
+          74.18106842041016,
+          55.82812499999999
+        ],
+        [
+          74.18106842041016,
+          65.64715576171875
+        ],
+        [
+          32.302734375,
+          65.64715576171875
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          110
+        ],
+        [
+          "Span",
+          86
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 6372,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          565
+        ],
+        [
+          "Line",
+          123
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          7
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          142
+        ],
+        [
+          "Span",
+          91
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          41
+        ],
+        [
+          "Line",
+          9
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          365
+        ],
+        [
+          "Line",
+          83
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          227
+        ],
+        [
+          "TableCell",
+          204
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 5817,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          461
+        ],
+        [
+          "TableCell",
+          232
+        ],
+        [
+          "Line",
+          83
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 5854,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          350
+        ],
+        [
+          "Line",
+          75
+        ],
+        [
+          "ListItem",
+          50
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/A systematic study of Nasicon-type Li1_xMxTi2_x_PO4_3 _M_ Cr_ Al_ Fe_ by neutron diffraction and impedance spectroscopy"
+}

@@ -1,0 +1,510 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Journal of The Electrochemical Society",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          266.25,
+          85.5
+        ],
+        [
+          526.5,
+          85.5
+        ],
+        [
+          526.5,
+          105.0
+        ],
+        [
+          266.25,
+          105.0
+        ]
+      ]
+    },
+    {
+      "title": "Lithium Ionic Conductor Thio-LISICON: The \\text{Li}_2?S??-?GeS_2?-??P?_2?S?_5 System",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          81.75,
+          143.25
+        ],
+        [
+          512.25,
+          141.0
+        ],
+        [
+          512.25,
+          176.34375
+        ],
+        [
+          81.75,
+          178.5
+        ]
+      ]
+    },
+    {
+      "title": "Lithium Ionic Conductor Thio-LISICON",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          133.5,
+          69.22265625
+        ],
+        [
+          384.0,
+          69.22265625
+        ],
+        [
+          384.0,
+          82.5
+        ],
+        [
+          133.5,
+          82.5
+        ]
+      ]
+    },
+    {
+      "title": "The Li<sub>2</sub>S-GeS<sub>2</sub>-P<sub>2</sub>S<sub>5</sub> System",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          133.5,
+          90.75
+        ],
+        [
+          276.75,
+          90.75
+        ],
+        [
+          276.75,
+          104.25
+        ],
+        [
+          133.5,
+          104.25
+        ]
+      ]
+    },
+    {
+      "title": "Experimental",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          408.0,
+          286.5
+        ],
+        [
+          463.5,
+          286.5
+        ],
+        [
+          463.5,
+          295.5
+        ],
+        [
+          408.0,
+          295.5
+        ]
+      ]
+    },
+    {
+      "title": "Results and Discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          390.0,
+          549.0
+        ],
+        [
+          480.75,
+          549.0
+        ],
+        [
+          480.75,
+          558.03515625
+        ],
+        [
+          390.0,
+          558.03515625
+        ]
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          413.25,
+          549.0
+        ],
+        [
+          456.75,
+          549.0
+        ],
+        [
+          456.75,
+          558.03515625
+        ],
+        [
+          413.25,
+          558.03515625
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgments",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          132.0,
+          330.75
+        ],
+        [
+          204.0,
+          330.75
+        ],
+        [
+          204.0,
+          339.5390625
+        ],
+        [
+          132.0,
+          339.5390625
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          146.126953125,
+          405.75
+        ],
+        [
+          189.0,
+          405.75
+        ],
+        [
+          189.0,
+          415.72265625
+        ],
+        [
+          146.126953125,
+          415.72265625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          22
+        ],
+        [
+          "Span",
+          20
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 5624,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          131
+        ],
+        [
+          "Line",
+          128
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          379
+        ],
+        [
+          "TableCell",
+          107
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 1,
+        "llm_error_count": 0,
+        "llm_tokens_used": 3940,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          144
+        ],
+        [
+          "Line",
+          121
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          88
+        ],
+        [
+          "Span",
+          82
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          156
+        ],
+        [
+          "Span",
+          61
+        ],
+        [
+          "ListItem",
+          30
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Lithium Ionic Conductor Thio-LISICON_ The Li_sub 2_S-GeS_sub 2_-P_sub 2_S_sub 5_ System"
+}

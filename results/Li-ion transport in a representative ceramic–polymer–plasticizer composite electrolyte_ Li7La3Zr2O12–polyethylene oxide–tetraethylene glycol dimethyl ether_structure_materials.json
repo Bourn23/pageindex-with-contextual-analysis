@@ -1,0 +1,384 @@
+{
+  "doc_name": "parsed_doc",
+  "source_file": "results/Li-ion transport in a representative ceramic–polymer–plasticizer composite electrolyte_ Li7La3Zr2O12–polyethylene oxide–tetraethylene glycol dimethyl ether_structure.json",
+  "extraction_stats": {
+    "raw_extracted": 14,
+    "after_dedup": 13,
+    "valid_count": 13,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 5,
+      "medium": 8,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 10,
+      "cited": 3,
+      "inferred": 0
+    },
+    "from_text_nodes": 9,
+    "from_image_nodes": 5,
+    "final_count": 13
+  },
+  "material_count": 13,
+  "materials": [
+    {
+      "source_sentence_id": "0197",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) (Lithium perchlorate) - Tetraethylene glycol dimethyl ether",
+        "acronym": "LLZO-PEO (LiClO4)-TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.15 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Freshly made composite film; average of at least three battery cells.",
+      "processing_method": "Slurry casting to form a composite film.",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Electrochemical Stability and Li-ion Transference Number",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 5.15e-05,
+      "_norm_temp": 25,
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0199",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) (Lithium perchlorate) - Tetraethylene glycol dimethyl ether",
+        "acronym": "LLZO-PEO (LiClO4)-TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.90 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite film after aging for 2 days; average of at least three battery cells.",
+      "processing_method": "Slurry casting to form a composite film.",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Electrochemical Stability and Li-ion Transference Number",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 2.9e-05,
+      "_norm_temp": 25,
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0201",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide - Poly(ethylene oxide) (Lithium perchlorate) - Tetraethylene glycol dimethyl ether",
+        "acronym": "LLZO-PEO (LiClO4)-TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.34 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite film after aging for 20 days; average of at least three battery cells.",
+      "processing_method": "Slurry casting to form a composite film.",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Electrochemical Stability and Li-ion Transference Number",
+        "section": "Results and discussion"
+      },
+      "_norm_cond": 2.34e-05,
+      "_norm_temp": 25,
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0199",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide) (Lithium Perchlorate)-Tetraethylene Glycol Dimethyl Ether",
+        "acronym": "LLZO-PEO (LiClO4)-TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.90 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite film aged for two days",
+      "processing_method": "Slurry casting, assembled into a symmetric cell using Li metal as electrodes.",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Electrochemical Stability and Li-ion Transference Number",
+        "section": "Results and discussion"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0201",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "Lithium Lanthanum Zirconate Oxide-Poly(ethylene oxide) (Lithium Perchlorate)-Tetraethylene Glycol Dimethyl Ether",
+        "acronym": "LLZO-PEO (LiClO4)-TEGDME",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.34 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Composite film aged for 20 days",
+      "processing_method": "Slurry casting, assembled into a symmetric cell using Li metal as electrodes.",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Electrochemical Stability and Li-ion Transference Number",
+        "section": "Results and discussion"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0041",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "polymer and composite electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "orders of magnitude",
+      "measurement_temperature": "N/A",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0036",
+        "title": "Challenges and Strategies for Improving Composite Electrolytes",
+        "section": "Introduction"
+      },
+      "_norm_cond": null,
+      "_norm_temp": null,
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0033",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Inorganic electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻² – 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "rigid and brittle, resulting in poor contact with electrodes and mechanical failure",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0031",
+        "title": "Classes and Properties of Solid Electrolytes",
+        "section": "Introduction"
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0034",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "Polymer electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "<10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "ambient temperature",
+      "confidence": "medium",
+      "data_source": "cited",
+      "material_description": "flexible, but their low conductivity at ambient temperature and poor stability at high temperatures limit their utilization in LIBs",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0031",
+        "title": "Classes and Properties of Solid Electrolytes",
+        "section": "Introduction"
+      },
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_10.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-based composite electrolyte",
+        "acronym": "LLZO composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.2e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Fresh sample (0 days)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0192",
+        "title": "_page_4_Figure_10.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 5.2e-05,
+      "_norm_temp": 25,
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_10.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-based composite electrolyte",
+        "acronym": "LLZO composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.9e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample after 2 days",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0192",
+        "title": "_page_4_Figure_10.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 2.9e-05,
+      "_norm_temp": 25,
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_10.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-based composite electrolyte",
+        "acronym": "LLZO composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample after 5 days",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0192",
+        "title": "_page_4_Figure_10.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 2.8e-05,
+      "_norm_temp": 20,
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_10.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-based composite electrolyte",
+        "acronym": "LLZO composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample after 10 days",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0192",
+        "title": "_page_4_Figure_10.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_10.jpeg",
+      "material_class": "Composite",
+      "electrolyte_name": {
+        "full_name": "LLZO-based composite electrolyte",
+        "acronym": "LLZO composite",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample after 20 days",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0192",
+        "title": "_page_4_Figure_10.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_norm_cond": 2.4e-05,
+      "_norm_temp": 25,
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}
