@@ -22,6 +22,7 @@ from dotenv import load_dotenv
 import uuid
 from dataclasses import dataclass, field
 from scifigure_parser import SciFigureParser
+from pageindex.llm_client import get_llm_client
 
 load_dotenv()
 
@@ -178,26 +179,33 @@ async def safe_image_call_with_retry(img_path, context, client, model_name, sem,
             print(f"   ⏱️  {img_path.name}: Timeout")
             return [], False
             
-        except Exception as e:
-            # Handle 503 overload errors with retry
-            if "503" in str(e) or "overloaded" in str(e).lower():
-                wait_time = random.uniform(1, 3)
-                print(f"   🔄 {img_path.name}: Overloaded, retrying in {wait_time:.1f}s...")
-                await asyncio.sleep(wait_time)
-                # Retry once on overload
-                try:
-                    result, raw_response, success = await asyncio.wait_for(
-                        process_image(client, model_name, img_path, context, sf_parser=sf_parser), 
-                        timeout=timeout
-                    )
-                    if raw_response:
-                        tracker.track(raw_response, model_name)
-                    return result, success
-                except:
-                    pass
-            
-            print(f"   ❌ {img_path.name}: {e}")
-            return [], False
+async def safe_table_call_with_retry(table_data, client, model_name, sem, timeout=120, max_retries=3):
+    async with sem:
+        for attempt in range(max_retries):
+            try:
+                result, raw_response, success = await asyncio.wait_for(
+                    process_table_node(client, model_name, table_data), 
+                    timeout=timeout
+                )
+                
+                if raw_response:
+                    tracker.track(raw_response, model_name)
+                return result, success
+
+            except asyncio.TimeoutError:
+                print(f"   \033[93m[Timeout]\033[0m {table_data['caption']} (Attempt {attempt+1})")
+                if attempt == max_retries - 1: return None, False
+                
+            except Exception as e:
+                err_str = str(e).lower()
+                if "503" in err_str or "overloaded" in err_str:
+                    wait_time = (2 ** (attempt + 1)) + random.random()
+                    print(f"   [Retry] {table_data['caption']} - Model overloaded. Waiting {wait_time:.1f}s")
+                    await asyncio.sleep(wait_time)
+                else:
+                    print(f"   \033[91m[Table Error]\033[0m {table_data['caption']}: {e}")
+                    break 
+    return ExtractionResult(measurements=[]), False
 # ==============================================================================
 # 1. Data Schema (Enhanced)
 # ==============================================================================
@@ -430,9 +438,9 @@ class MarkdownContextParser:
                     table_lines.append(lines[i])
                     i += 1
                 
-                # Search for caption (Look Behind 3, Ahead 3)
+                # Search for caption (Look Behind 5, Ahead 5)
                 caption, tab_id = "No caption found", "Unknown"
-                search_indices = list(range(start_line - 3, start_line)) + list(range(i, i + 3))
+                search_indices = list(range(start_line - 5, start_line)) + list(range(i, i + 5))
                 
                 for idx in search_indices:
                     if 0 <= idx < len(lines):
@@ -772,6 +780,24 @@ async def process_text(client, model, text_content, text_title, max_retries: int
         print(f"   \033[91m[Text Error]\033[0m {text_title}: Failed after {max_retries} attempts. Last error: {last_exception}")
         return ExtractionResult(measurements=[]), None, False
 
+def _map_sf_to_measurements(sf_result: Dict[str, Any]) -> List[MeasuredPoint]:
+    """Helper to map SciFigureParser output to MeasuredPoint list."""
+    measurements = []
+    should_extract = sf_result.get("isIonicConductivity", True)
+    if should_extract:
+        for dp in sf_result.get("dataPoints", []):
+            m = MeasuredPoint(
+                raw_composition=dp.get("label", "Unknown"),
+                raw_conductivity=str(dp.get("yValue")),
+                raw_conductivity_unit=sf_result.get("yAxis", {}).get("unit", "S/cm"),
+                raw_temperature=str(dp.get("xValue")),
+                raw_temperature_unit=sf_result.get("xAxis", {}).get("unit", "Celsius"),
+                source="figure",
+                confidence="high"
+            )
+            measurements.append(m)
+    return measurements
+
 async def process_image(client, model, img_path, context_dict: dict, max_retries: int = 3, sf_parser: Optional[SciFigureParser] = None):
     if "logo" in img_path.name.lower(): 
         return [], None, True
@@ -789,49 +815,47 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     if sf_parser:
         try:
             print(f"   🔍 {img_path.name} ({fig_id}): Detecting subplot...")
-            box = sf_parser.detect_subplot(str(img_path), "ionic conductivity")
+            detection_result = sf_parser.detect_subplot(str(img_path), "ionic conductivity")
             
             # Check if SciFigureParser detected ionic conductivity data
-            if not box.get("isIonicConductivity", True):
+            if not detection_result.get("isIonicConductivity", True):
                 print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): No ionic conductivity measurements detected by SciFigureParser.")
                 return ExtractionResult(measurements=[]), None, True
 
-            print(f"   ✂️ {img_path.name}: Cropping relevant region...")
-            cropped_path = sf_parser.crop_image(str(img_path), box, padding=80)
+            is_multi = detection_result.get("is_multi_plot", False)
+            detections = detection_result.get("detections", [])
             
-            print(f"   📊 {img_path.name}: Extracting data with grid grounding...")
-            sf_result = sf_parser.extract_data(cropped_path, grid_config={"enabled": True, "rows": 2, "cols": 2})
+            all_measurements = []
+
+            if not is_multi or not detections:
+                # Case 1: Single plot or no specific detections - process original image directly
+                print(f"   📊 {img_path.name}: Single plot detected (or no specific subplots). Extracting directly...")
+                sf_result = sf_parser.extract_data(str(img_path), grid_config={"enabled": True, "rows": 2, "cols": 2})
+                all_measurements.extend(_map_sf_to_measurements(sf_result))
+            else:
+                # Case 2: Multi-plot - crop and extract for each detection
+                print(f"   ✂️ {img_path.name}: Multi-plot detected ({len(detections)} panels). Processing each...")
+                for i, box in enumerate(detections):
+                    label = box.get('label', f'Panel {i+1}')
+                    print(f"      - Processing {label}...")
+                    cropped_path = sf_parser.crop_image(str(img_path), box, padding=80)
+                    sf_result = sf_parser.extract_data(cropped_path, grid_config={"enabled": True, "rows": 2, "cols": 2})
+                    measurements = _map_sf_to_measurements(sf_result)
+                    all_measurements.extend(measurements)
             
-            # Map SciFigureParser result to ExtractionResult
-            measurements = []
-            # We relax the check: if isIonicConductivity is missing or True, AND we have data points, we extract them.
-            # Since we specifically asked for ionic conductivity subplots, we can be a bit more trustful here.
-            should_extract = sf_result.get("isIonicConductivity", True)
-            if should_extract:
-                for dp in sf_result.get("dataPoints", []):
-                    m = MeasuredPoint(
-                        raw_composition=dp.get("label", "Unknown"),
-                        raw_conductivity=str(dp.get("yValue")),
-                        raw_conductivity_unit=sf_result.get("yAxis", {}).get("unit", "S/cm"),
-                        raw_temperature=str(dp.get("xValue")),
-                        raw_temperature_unit=sf_result.get("xAxis", {}).get("unit", "Celsius"),
-                        source="figure",
-                        confidence="high"
-                    )
-                    measurements.append(m)
-            
-            result = ExtractionResult(measurements=measurements)
+            result = ExtractionResult(measurements=all_measurements)
             
             # Write to debug log
             log_dir = FILE_DIR if FILE_DIR else img_path.parent
             with open(f"{log_dir}/results_log_v5.json", "a") as f:
                 f.write(f"\n\n[SCI-FIGURE DEBUG] {img_path.name}:\n")
-                f.write(f"- Result: {json.dumps(sf_result, indent=2)}\n")
+                f.write(f"- Detection Result: {json.dumps(detection_result, indent=2)}\n")
+                f.write(f"- Combined Measurements: {len(all_measurements)}\n")
 
             if len(result.measurements) > 0:
-                print(f"   ✓ {img_path.name} ({fig_id}): Found {len(result.measurements)} points via SciFigureParser")
+                print(f"   ✓ {img_path.name} ({fig_id}): Found {len(result.measurements)} points total via SciFigureParser")
             
-            return result, None, True # raw_response is None for now as it's handled inside parser
+            return result, None, True 
             
         except Exception as e:
             print(f"   ⚠️ {img_path.name}: SciFigureParser failed: {e}. Falling back to standard processing...")
@@ -986,6 +1010,73 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     return ExtractionResult(measurements=[]), None, False
 
 
+async def process_table_node(client, model, table_data: dict, max_retries: int = 3):
+    """
+    Extract data from a Markdown table found via regex.
+    """
+    prompt = f"""
+    Extract ionic conductivity data points from this Markdown table.
+    
+    **Table Caption:** {table_data['caption']}
+    
+    **Table Content:**
+    ```markdown
+    {table_data['content']}
+    ```
+
+    **Task**:
+    Extract all Ionic Conductivity measurements.
+    For each:
+    - raw_composition: Material name
+    - raw_conductivity: Numeric value
+    - raw_conductivity_unit: Unit (e.g. "S/cm", "mS cm-1")
+    - raw_temperature: Value (e.g. "25", "room temperature")
+    - raw_temperature_unit: Unit (e.g. "Celsius", "K")
+    - source: "markdown_table"
+    - confidence: "high"
+
+    If activation energy is present, you can include it if it's the only value, but prioritize conductivity.
+    If the table ONLY contains activation energy, extract that as a value but note the unit as "eV".
+
+    Return JSON with measurements array.
+    """
+
+    last_exception = None
+    log_dir = FILE_DIR 
+    for attempt in range(1, max_retries+1):
+        with open(f"{log_dir}/results_log_v5.json", "a") as f:
+            try:
+                response = await client.aio.models.generate_content(
+                    model=model,
+                    contents=[prompt],
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_json_schema=ExtractionResult.model_json_schema(),
+                        temperature=0.0,
+                    )
+                )
+            
+                if not response.text:
+                    print(f"   ⚠️  {table_data['caption']}: Empty response")
+                    last_exception = "Empty response"
+                    continue
+
+                f.write(f"\n\n[TABLE DEBUG] {table_data['caption']}:\n")
+                f.write(f"- Response: {response.text}\n")
+
+                result = ExtractionResult.model_validate_json(response.text)
+                
+                if len(result.measurements) > 0:
+                    print(f"   ✓ {table_data['caption']}: Found {len(result.measurements)} points")
+                return result, response, True
+            except Exception as e:
+                last_exception = e
+                await asyncio.sleep(1 * attempt)
+                
+    print(f"   ❌ {table_data['caption']}: Failed - {last_exception}")
+    return ExtractionResult(measurements=[]), None, False
+
+
 # ==============================================================================
 # 6. Main Orchestrator
 # ==============================================================================
@@ -1011,6 +1102,16 @@ async def run_pipeline(markdown_file, asset_dir, model):
     
     # 2. Linking (The Magic Step)
     parser.link_assets_to_sections(sections, all_images, all_tables)
+
+    # 2.1 Table De-duplication: Replace MD tables with placeholders in section contents
+    if all_tables:
+        print(f"   ✂️ De-duplicating {len(all_tables)} tables from Markdown text...")
+        for table_info in all_tables:
+            for sec in sections:
+                if table_info.content in sec.content:
+                    placeholder = f"\n\n[{table_info.id}: {table_info.caption} processed separately]\n\n"
+                    sec.content = sec.content.replace(table_info.content, placeholder)
+                    print(f"       - Replaced '{table_info.id}' in section '{sec.title}'")
 
     # 2.5 Initialize SciFigureParser
     sf_parser = SciFigureParser(api_key=api_key, model_name=VISION_MODEL, debug=True)
@@ -1088,7 +1189,11 @@ async def run_pipeline(markdown_file, asset_dir, model):
     # Add Image Tasks
     img_files = []
     for pattern in ["*.png", "*.jpg", "*.jpeg", "*.bmp"]:
-        img_files.extend(list(asset_dir.glob(pattern)))
+        # Only grab original assets, skip debug/cropped/detected files
+        candidates = list(asset_dir.glob(pattern))
+        for cand in candidates:
+            if "debug" not in cand.name.lower() and "cropped" not in cand.name.lower() and "detected" not in cand.name.lower():
+                img_files.append(cand)
     
     for img_path in sorted(img_files):
         # Retrieve context from registry (as you already do)
@@ -1100,6 +1205,14 @@ async def run_pipeline(markdown_file, asset_dir, model):
         except:
             context = image_context_registry.get('_'+filename, {"id": "Unknown", "caption": "No caption"})
         tasks.append(safe_image_call_with_retry(img_path, context, client, VISION_MODEL, sem, sf_parser=sf_parser))
+
+    # Add Table Tasks
+    for table_info in all_tables:
+        table_data = {
+            'caption': f"{table_info.id}: {table_info.caption}",
+            'content': table_info.content
+        }
+        tasks.append(safe_table_call_with_retry(table_data, client, TEXT_MODEL, sem))
 
     # 4. Execute Simultaneously
     print(f"   ... Processing {len(tasks)} items (Text + Images) simultaneously ...")
