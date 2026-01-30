@@ -263,8 +263,8 @@ class MeasuredPoint(BaseModel):
 
     normalized_temperature_c: Optional[float] = Field(None, description="Temperature in Celsius.")
     
-    # source_figure_id: Optional[str] = Field(None, description="The real Figure ID (e.g. 'Fig. 5') if known.")
-    # source_caption: Optional[str] = Field(None, description="The context from the figure caption.")
+    source_figure_id: Optional[str] = Field(None, description="The real Figure ID (e.g. 'Fig. 5') if known.")
+    source_caption: Optional[str] = Field(None, description="The context from the figure caption.")
     source: str = Field(..., description="The source of the data choose from: 'figure', 'table', 'text'.")
     confidence: str = Field(..., description="high/medium/low")
 
@@ -557,36 +557,82 @@ class MarkdownContextParser:
 def calculate_standard_units(cond_val: str, cond_unit: str, temp_val: str, temp_unit: str) -> dict:
     """
     Robust normalizer using the split Value/Unit fields.
+    Handles non-numeric values like "room temperature" or "RT".
     """
+    def safe_float(val: str) -> float:
+        if not val:
+            raise ValueError("Empty value")
+        
+        # Clean string
+        clean = str(val).lower().strip().replace(',', '')
+        
+        # Handle "room temperature" and variations
+        if clean in ["room temperature", "rt", "room temp", "room-temperature"]:
+            return 25.0
+            
+        # Try direct conversion
+        try:
+            return float(clean)
+        except ValueError:
+            # Try to extract the first number
+            import re
+            match = re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", clean)
+            if match:
+                return float(match.group())
+            raise ValueError(f"Could not convert '{val}' to float")
+
     try:
         # --- 1. Temperature Normalization ---
-        # The LLM has already cleaned 'temp_val' to be just a number (e.g. "2.4")
-        raw_t = float(temp_val) 
+        # Get raw value, handling room temperature and known non-numeric strings
+        temp_val_clean = str(temp_val).lower().strip()
+        if temp_val_clean in ["n/a", "none", "unknown", "arrhenius plot"]:
+             return {"cond": None, "temp": None}
+
+        raw_t = safe_float(temp_val)
         unit_clean = temp_unit.lower().strip()
         
+        # If it was "RT", force Celsius unit if not already set specifically
+        if temp_val_clean in ["room temperature", "rt", "room temp", "room-temperature"]:
+            if not unit_clean or unit_clean == "celsius":
+                unit_clean = "c" # Force Celsius path
+
         temp_k = None      # Kelvin (needed for conductivity calc)
         norm_temp_c = None # Celsius (for DB)
-
+        
+        # Logic Branch: Composition vs Arrhenius
+        # If the extracted "temperature" is actually a small number (x < 1.0) and unit is ambiguous,
+        # it is likely a Composition value (x in Li...x...), NOT temperature.
+        # In this case, we assume Room Temperature (25 C).
+        # ADDED: Check for common stoichiometry labels in unit string
+        if (raw_t < 1.0 or any(m in unit_clean for m in ['x=', 'z=', 'y='])) and "k" not in unit_clean and "c" not in unit_clean:
+             norm_temp_c = 25.0
+             temp_k = 298.15
+        
         # CHECK 1: Is this an Arrhenius inverse scale?
-        # We look for "1000" or "10^3" combined with "T" in the UNIT field
+        # CHECK 1: Is this an Arrhenius inverse scale?
         if ("1000" in unit_clean or "10^3" in unit_clean) and "t" in unit_clean:
-            # Formula: X = 1000/T  ->  T = 1000/X
             if raw_t > 0:
                 temp_k = 1000.0 / raw_t
                 norm_temp_c = temp_k - 273.15
         
+        # CHECK 1b: Implicit Arrhenius (Unit is just K-1 but values are 1000/T range)
+        elif ("k-1" in unit_clean or "1/k" in unit_clean) and 0.2 < raw_t < 10.0:
+             # Heuristic: 1000/T usually falls between 0.5 (2000K) and 5.0 (200K)
+             # If it were really 1/T, values would be ~0.001 - 0.005
+             temp_k = 1000.0 / raw_t
+             norm_temp_c = temp_k - 273.15
+
         # CHECK 2: Standard Kelvin
         elif "k" in unit_clean and "c" not in unit_clean: 
-             # (checking 'c' prevents matching 'black' or 'thick')
              temp_k = raw_t
-             norm_temp_c = raw_t - 273.15
+             norm_temp_c = temp_k - 273.15
              
         # CHECK 3: Standard Celsius
         elif "c" in unit_clean:
             norm_temp_c = raw_t
             temp_k = raw_t + 273.15
             
-        # Fallback: Guess based on magnitude if unit is ambiguous
+        # Fallback: Guess based on magnitude
         else:
             if raw_t > 200: # Likely Kelvin
                 temp_k = raw_t
@@ -596,21 +642,32 @@ def calculate_standard_units(cond_val: str, cond_unit: str, temp_val: str, temp_
                 temp_k = raw_t + 273.15
 
         # --- 2. Conductivity Normalization ---
-        # Same logic as before, but using the robust 'temp_k'
-        raw_c = float(cond_val) # Assuming LLM cleaned this too
+        cond_val_clean = str(cond_val).lower().strip()
+        if cond_val_clean in ["n/a", "none", "unknown"]:
+            return {"cond": None, "temp": norm_temp_c}
+
+        raw_c = safe_float(cond_val)
         cond_u_clean = cond_unit.lower().strip()
         norm_cond = None
 
-        if "log" in cond_u_clean and temp_k:
-            # Handle log(σT) -> σ = (10^y)/T
-            sigma_times_t = 10 ** raw_c
-            norm_cond = sigma_times_t / temp_k
+        if "log" in cond_u_clean:
+            # Case A: log(Sigma * T)
+            if ("t" in cond_u_clean) and temp_k:
+                sigma_times_t = 10 ** raw_c
+                norm_cond = sigma_times_t / temp_k
+            # Case B: just log(Sigma)
+            else:
+                norm_cond = 10 ** raw_c
             
-        elif "ln" in cond_u_clean and temp_k:
-             # Handle ln(σT) -> σ = (e^y)/T
+        elif "ln" in cond_u_clean:
             import math
-            sigma_times_t = math.exp(raw_c)
-            norm_cond = sigma_times_t / temp_k
+            # Case A: ln(Sigma * T)
+            if ("t" in cond_u_clean) and temp_k:
+                sigma_times_t = math.exp(raw_c)
+                norm_cond = sigma_times_t / temp_k
+            # Case B: ln(Sigma)
+            else:
+                 norm_cond = math.exp(raw_c)
             
         else:
             # Standard Linear Units
@@ -626,11 +683,23 @@ def calculate_standard_units(cond_val: str, cond_unit: str, temp_val: str, temp_
 
             norm_cond = raw_c * multiplier
 
-        return {"cond": norm_cond, "temp": round(norm_temp_c, 2)}
+        return {"cond": norm_cond, "temp": round(norm_temp_c, 2) if norm_temp_c is not None else None}
 
     except Exception as e:
-        print(f"Norm Error: {e}")
+        # Only log if it's not a known non-numeric string that somehow got through
+        if "could not convert" in str(e).lower() and any(x in str(e) for x in ["'N/A'", "'Arrhenius plot'"]):
+            pass
+        else:
+            print(f"Norm Error: {e}")
         return {"cond": None, "temp": None}
+
+    # --- 3. Activation Energy Filter ---
+    # Convert extracted unit to lower case for check
+    cond_u_clean_final = cond_unit.lower().strip()
+    if any(x in cond_u_clean_final for x in ['ev', 'kj', 'joule', 'mol']):
+        return {"cond": None, "temp": None} # discard activation energy
+
+    return {"cond": norm_cond, "temp": round(norm_temp_c, 2) if norm_temp_c is not None else None}
 
 # ==============================================================================
 # 4. Canonicalizer (Solves Problem 3: Useless Names)
@@ -657,7 +726,7 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
 
     prompt = f"""
     You are a Chemical Context Resolver.
-    I have a list of abbreviated material names extracted from figures (e.g., "x=0.1").
+    I have a list of abbreviated material names extracted from figures (e.g., "x=0.1", "Square", "Series 1").
     I have a list of Material Definitions found in the paper text.
 
     Your Task: Map the abbreviated names to their Full Canonical Chemical Formulas.
@@ -669,9 +738,12 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     {items_str}
 
     Logic:
-    - If text says "series Li(4-2x)MgxTi(5-x)/3O4" and item is "x=0.1", calculate the formula:
-      Li(4-0.2)Mg(0.1)Ti(1.63)O4 -> Li3.8Mg0.1Ti1.63O4.
-    - If exact calculation isn't possible, return the General Formula with the specific variable (e.g. "Li(4-2x)MgxTi(5-x)/3O4 (x=0.1)").
+    1. **Formula Calculation**: If text says "series Li(4-2x)MgxTi(5-x)/3O4" and item is "x=0.1", calculate the formula:
+       Li(4-0.2)Mg(0.1)Ti(1.63)O4 -> Li3.8Mg0.1Ti1.63O4.
+    2. **Legend/Symbol Mapping**: 
+       - If item is "Square", "Triangle", etc., LOOK for text in the Source Caption or Definitions like "Squares represent In-doped samples".
+       - Example: "Squares" -> In -> Li...In...
+    3. **General Fallback**: If exact calculation isn't possible, return the General Formula with the specific variable.
 
     Return JSON: {{ "mappings": {{ "ID": "Canonical Formula" }} }}
     """
@@ -780,19 +852,54 @@ async def process_text(client, model, text_content, text_title, max_retries: int
         print(f"   \033[91m[Text Error]\033[0m {text_title}: Failed after {max_retries} attempts. Last error: {last_exception}")
         return ExtractionResult(measurements=[]), None, False
 
-def _map_sf_to_measurements(sf_result: Dict[str, Any]) -> List[MeasuredPoint]:
+def _map_sf_to_measurements(sf_result: Dict[str, Any], fig_id: str = None, caption: str = None) -> List[MeasuredPoint]:
     """Helper to map SciFigureParser output to MeasuredPoint list."""
     measurements = []
     should_extract = sf_result.get("isIonicConductivity", True)
+    
+    # Try to extract a fixed temperature from the caption if it's a stoichiometry plot
+    fixed_temp = "Not Specified"
+    fixed_temp_unit = "Celsius"
+    if caption:
+        # Heuristic: search for "room temperature", "RT", "298 K", "25 °C"
+        cap_lower = caption.lower()
+        if "room temperature" in cap_lower or " rt " in cap_lower or " at rt" in cap_lower:
+            fixed_temp = "25"
+            fixed_temp_unit = "Celsius"
+        elif "298 k" in cap_lower:
+            fixed_temp = "298"
+            fixed_temp_unit = "K"
+        elif "25 °c" in cap_lower or "25 c" in cap_lower:
+            fixed_temp = "25"
+            fixed_temp_unit = "Celsius"
+
     if should_extract:
+        x_axis_type = sf_result.get("xAxis", {}).get("axisType", "temperature")
         for dp in sf_result.get("dataPoints", []):
+            raw_comp = dp.get("label", "Unknown")
+            raw_temp = str(dp.get("xValue"))
+            raw_temp_unit = sf_result.get("xAxis", {}).get("unit", "Celsius")
+            
+            if x_axis_type == "stoichiometry":
+                # Special handling for stoichiometry axes:
+                # 1. The xValue is actually part of the composition (x=...)
+                # 2. The temperature is likely fixed in the caption
+                stoich_val = str(dp.get("xValue"))
+                if "x=" not in raw_comp.lower() and "x =" not in raw_comp.lower():
+                    raw_comp = f"{raw_comp} (x={stoich_val})"
+                
+                raw_temp = fixed_temp
+                raw_temp_unit = fixed_temp_unit
+
             m = MeasuredPoint(
-                raw_composition=dp.get("label", "Unknown"),
+                raw_composition=raw_comp,
                 raw_conductivity=str(dp.get("yValue")),
                 raw_conductivity_unit=sf_result.get("yAxis", {}).get("unit", "S/cm"),
-                raw_temperature=str(dp.get("xValue")),
-                raw_temperature_unit=sf_result.get("xAxis", {}).get("unit", "Celsius"),
+                raw_temperature=raw_temp,
+                raw_temperature_unit=raw_temp_unit,
                 source="figure",
+                source_figure_id=fig_id,
+                source_caption=caption,
                 confidence="high"
             )
             measurements.append(m)
@@ -812,10 +919,12 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
         return [], None, False
 
     # --- SCI-FIGURE PARSER INTEGRATION ---
+    # Note: sf_parser should be initialized with save_debug=False for production speed.
     if sf_parser:
         try:
             print(f"   🔍 {img_path.name} ({fig_id}): Detecting subplot...")
-            detection_result = sf_parser.detect_subplot(str(img_path), "ionic conductivity")
+            # [OPTIMIZED] Using async detection
+            detection_result = await sf_parser.detect_subplot_async(str(img_path), "ionic conductivity")
             
             # Check if SciFigureParser detected ionic conductivity data
             if not detection_result.get("isIonicConductivity", True):
@@ -830,17 +939,30 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             if not is_multi or not detections:
                 # Case 1: Single plot or no specific detections - process original image directly
                 print(f"   📊 {img_path.name}: Single plot detected (or no specific subplots). Extracting directly...")
-                sf_result = sf_parser.extract_data(str(img_path), grid_config={"enabled": True, "rows": 2, "cols": 2})
-                all_measurements.extend(_map_sf_to_measurements(sf_result))
+                # [OPTIMIZED] Using async extraction
+                sf_result = await sf_parser.extract_data_async(str(img_path), grid_config={"enabled": True, "rows": 2, "cols": 2}, context=caption)
+                all_measurements.extend(_map_sf_to_measurements(sf_result, fig_id=fig_id, caption=caption))
             else:
-                # Case 2: Multi-plot - crop and extract for each detection
-                print(f"   ✂️ {img_path.name}: Multi-plot detected ({len(detections)} panels). Processing each...")
-                for i, box in enumerate(detections):
-                    label = box.get('label', f'Panel {i+1}')
-                    print(f"      - Processing {label}...")
-                    cropped_path = sf_parser.crop_image(str(img_path), box, padding=80)
-                    sf_result = sf_parser.extract_data(cropped_path, grid_config={"enabled": True, "rows": 2, "cols": 2})
-                    measurements = _map_sf_to_measurements(sf_result)
+                # Case 2: Multi-plot - crop and extract for each detection IN PARALLEL
+                print(f"   ✂️ {img_path.name}: Multi-plot detected ({len(detections)} panels). Processing each in parallel...")
+                
+                async def process_subplot(box, idx):
+                    label = box.get('label', f'Panel {idx+1}')
+                    # print(f"      - Processing {label}...") # Can be too noisy in parallel
+                    
+                    # Create a safe suffix from the label
+                    safe_label = re.sub(r'[^a-zA-Z0-9]', '_', label)
+                    unique_suffix = f"_cropped_{safe_label}"
+                    
+                    cropped_path = sf_parser.crop_image(str(img_path), box, padding=80, suffix=unique_suffix)
+                    sf_result = await sf_parser.extract_data_async(cropped_path, grid_config={"enabled": True, "rows": 2, "cols": 2}, context=caption)
+                    return _map_sf_to_measurements(sf_result, fig_id=fig_id, caption=caption)
+
+                # [OPTIMIZED] Parallel processing of subplots
+                subplot_tasks = [process_subplot(box, i) for i, box in enumerate(detections)]
+                subplot_results = await asyncio.gather(*subplot_tasks)
+                
+                for measurements in subplot_results:
                     all_measurements.extend(measurements)
             
             result = ExtractionResult(measurements=all_measurements)
@@ -902,23 +1024,28 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     "raw_temperature_unit": "1000/T (K-1)"
     }}
 
-    Case 4: Complex Axis Label
-    Input: "Graph axis: 10³/T / K⁻¹ value is 2.4"
+    Case 4: Stoichiometry Plot (Composition vs Conductivity)
+    Input: "The x-axis represents the variable x in Li1+xAlxTi2-x(PO4)3, and caption states 298 K."
     Output:
     {{
-    "raw_temperature": "2.4",
-    "raw_temperature_unit": "10^3/T / K-1"
+    "raw_temperature": "298",
+    "raw_temperature_unit": "K",
+    "raw_composition": "[Material Name] (x=0.2)"
     }}
 
     **Task**:
     **Step 1: Classify the image**
     Is this a:
-    - [ ] Data plot with conductivity values (Arrhenius plot, bar chart, etc.)
+    - [ ] Data plot with conductivity values (Arrhenius plot, stoichiometry plot, bar chart, etc.)
     - [ ] Table with conductivity measurements
     - [ ] Structural diagram / schematic / photo (NO DATA)
     
     **Step 2: Extract (ONLY if you checked the first two options)**
-    If this contains conductivity data, extract measurements. Otherwise return empty.
+    If this contains conductivity data, extract measurements. 
+    - CRITICAL: Detect if the X-axis is stoichiometry (e.g., 'x', 'z', 'composition').
+    - If it is stoichiometry, extract the x-value and append it to 'raw_composition' (e.g. "Al (x=0.2)").
+    - If the caption specifies a fixed temperature for the whole plot, use it for 'raw_temperature'.
+    Otherwise return empty.
 
     **Step 3: Extract Material Definitions**
     - If the image contains a description of the material composition, extract it.
@@ -981,6 +1108,8 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             
                 # Tag the source and also check the source if it's other than figure we should skip those measurements
                 for m in result.measurements:
+                    m.source_figure_id = fig_id
+                    m.source_caption = caption
                     if m.source != "figure":
                         print(f"   \033[91m[Image Warning]\033[0m {img_path.name}: {m.raw_composition} not from figure, skipping measurement")
                         m.raw_composition = "Not Specified"
@@ -1066,6 +1195,11 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
 
                 result = ExtractionResult.model_validate_json(response.text)
                 
+                # Tag metadata
+                for m in result.measurements:
+                    m.source_caption = table_data['caption']
+                    m.source_figure_id = table_data['caption'].split(':')[0] if ':' in table_data['caption'] else "Table"
+
                 if len(result.measurements) > 0:
                     print(f"   ✓ {table_data['caption']}: Found {len(result.measurements)} points")
                 return result, response, True
@@ -1085,201 +1219,199 @@ async def run_pipeline(markdown_file, asset_dir, model):
     api_key = os.getenv("GEMINI_API_KEY")
     client = genai.Client(api_key=api_key, http_options={'api_version': 'v1alpha'})
 
-    sem = asyncio.Semaphore(NUM_WORKERS)
+    try:
+        sem = asyncio.Semaphore(NUM_WORKERS)
 
-    # Create a log file
-    FILE_DIR = markdown_file.parent
-    with open(f"{FILE_DIR}/results_log_v5.json", "w") as f:
-        f.write(f"\n\n--- [Document] {markdown_file.name} ---\n")
-    
-    # 1. Parse Markdown & Build Context Map
-    text_content = markdown_file.read_text(encoding='utf-8')
-    parser = MarkdownContextParser()
-    # 1. Parse Sections and Title (New Functionality)
-    doc_title, sections = parser.parse_structure(text_content)
-    all_images = parser.parse_images(text_content)
-    all_tables = parser.parse_tables(text_content)
-    
-    # 2. Linking (The Magic Step)
-    parser.link_assets_to_sections(sections, all_images, all_tables)
+        # Create a log file
+        FILE_DIR = markdown_file.parent
+        with open(f"{FILE_DIR}/results_log_v5.json", "w") as f:
+            f.write(f"\n\n--- [Document] {markdown_file.name} ---\n")
+        
+        # 1. Parse Markdown & Build Context Map
+        text_content = markdown_file.read_text(encoding='utf-8')
+        parser = MarkdownContextParser()
+        # 1. Parse Sections and Title (New Functionality)
+        doc_title, sections = parser.parse_structure(text_content)
+        all_images = parser.parse_images(text_content)
+        all_tables = parser.parse_tables(text_content)
+        
+        # 2. Linking (The Magic Step)
+        parser.link_assets_to_sections(sections, all_images, all_tables)
 
-    # 2.1 Table De-duplication: Replace MD tables with placeholders in section contents
-    if all_tables:
-        print(f"   ✂️ De-duplicating {len(all_tables)} tables from Markdown text...")
+        # 2.1 Table De-duplication: Replace MD tables with placeholders in section contents
+        if all_tables:
+            print(f"   ✂️ De-duplicating {len(all_tables)} tables from Markdown text...")
+            for table_info in all_tables:
+                for sec in sections:
+                    if table_info.content in sec.content:
+                        placeholder = f"\n\n[{table_info.id}: {table_info.caption} processed separately]\n\n"
+                        sec.content = sec.content.replace(table_info.content, placeholder)
+                        print(f"       - Replaced '{table_info.id}' in section '{sec.title}'")
+
+        # 2.5 Initialize SciFigureParser - [OPTIMIZED] save_debug=False for speed
+        sf_parser = SciFigureParser(api_key=api_key, model_name=VISION_MODEL, debug=True, save_debug=False)
+
+        # 3. Reporting
+        print(f"   --- Document: {doc_title}")
+        print(f"   --- Found: {len(sections)} Sections")
+        print(f"   --- Found: {len(all_images)} Figures, {len(all_tables)} Tables")
+
+        # check the length of all images found are the same as the image files in the asset directory
+        img_patterns = ["*.png", "*.jpg", "*.jpeg", "*.bmp"]
+        img_files = []
+        for pattern in img_patterns:
+            img_files.extend(list(asset_dir.glob(pattern)))
+        img_files = sorted(img_files)
+        if len(all_images) != len(img_files):
+            print("   \033[91m[Warning]\033[0m Number of images found does not match number of image files in asset directory")
+
+        # Example Output
+        print("\n   --- Found Assets in Sections:")
+        for sec in sections:
+            has_assets = sec.images or sec.tables
+            if has_assets:
+                print(f"\n   >>> Section '{sec.title}' contains:")
+                if sec.images: print(f"       - {len(sec.images)} Images: {[img.id for img in sec.images]}")
+                if sec.tables: print(f"       - {len(sec.tables)} Tables: {[tab.id for tab in sec.tables]}")
+        print("\n   --- Found Assets in Sections ---\n\n")
+        
+        # Build Image Context Registry
+        # We need to map filename -> {caption, section_info} so the image processor can find it.
+        image_context_registry = {}
+        
+        # Initialize with basic info from all_images
+        for img in all_images:
+            image_context_registry[img.filename.lower()] = {
+                "id": img.id,
+                "caption": img.caption,
+                "section_title": "Unassigned", # Default
+                "section_summary": ""
+            }
+
+        # Enrich with Section Data
+        # (Since sections "own" images now, we reverse-lookup to fill the registry)
+        for sec in sections:
+            for img in sec.images:
+                if img.filename.lower() in image_context_registry:
+                    image_context_registry[img.filename.lower()]["section_title"] = sec.title
+                    # We can pass the first 500 chars of the section as "background context" for the image
+                    image_context_registry[img.filename.lower()]["section"] = parser._extract_nearby_text(
+                            img, sec.content, window_lines=5, max_chars=1000
+                        )
+
+        # Build tasks
+        tasks = []
+        # Extract from text (section-by-section)
+        all_measurements = []
+        material_defs = [] # You might want to accumulate these or merge them later
+
+        # We process sections in parallel batches (or sequentially if rate limits matter)
+        skip_sections = ['acknowledgements', 'references']
+        for sec in sections:
+            if any(skip in sec.title.lower() for skip in skip_sections):
+                print(f"   \033[91m[Warning]\033[0m Skipping section: {sec.title}")
+                continue        
+            tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem))
+
+        # # 3. Extract from Images (Parallel)
+        # Add Image Tasks
+        img_files = []
+        for pattern in ["*.png", "*.jpg", "*.jpeg", "*.bmp"]:
+            # Only grab original assets, skip debug/cropped/detected files
+            candidates = list(asset_dir.glob(pattern))
+            for cand in candidates:
+                if "debug" not in cand.name.lower() and "cropped" not in cand.name.lower() and "detected" not in cand.name.lower():
+                    img_files.append(cand)
+        
+        for img_path in sorted(img_files):
+            # Retrieve context from registry (as you already do)
+            filename = img_path.name
+
+            # this is a temporary fix
+            try:
+                context = image_context_registry[filename]
+            except:
+                context = image_context_registry.get('_'+filename, {"id": "Unknown", "caption": "No caption"})
+            tasks.append(safe_image_call_with_retry(img_path, context, client, VISION_MODEL, sem, sf_parser=sf_parser))
+
+        # Add Table Tasks
         for table_info in all_tables:
-            for sec in sections:
-                if table_info.content in sec.content:
-                    placeholder = f"\n\n[{table_info.id}: {table_info.caption} processed separately]\n\n"
-                    sec.content = sec.content.replace(table_info.content, placeholder)
-                    print(f"       - Replaced '{table_info.id}' in section '{sec.title}'")
+            table_data = {
+                'caption': f"{table_info.id}: {table_info.caption}",
+                'content': table_info.content
+            }
+            tasks.append(safe_table_call_with_retry(table_data, client, TEXT_MODEL, sem))
 
-    # 2.5 Initialize SciFigureParser
-    sf_parser = SciFigureParser(api_key=api_key, model_name=VISION_MODEL, debug=True)
+        # 4. Execute Simultaneously
+        print(f"   ... Processing {len(tasks)} items (Text + Images) simultaneously ...")
+        results = await asyncio.gather(*tasks)
 
-    # 3. Reporting
-    print(f"   --- Document: {doc_title}")
-    print(f"   --- Found: {len(sections)} Sections")
-    print(f"   --- Found: {len(all_images)} Figures, {len(all_tables)} Tables")
+        # Merge Image Results
+        all_measurements = []
+        failed_count = 0
+        skipped_count = 0
 
-    # check the length of all images found are the same as the image files in the asset directory
-    img_patterns = ["*.png", "*.jpg", "*.jpeg", "*.bmp"]
-    img_files = []
-    for pattern in img_patterns:
-        img_files.extend(list(asset_dir.glob(pattern)))
-    img_files = sorted(img_files)
-    if len(all_images) != len(img_files):
-        print("   \033[91m[Warning]\033[0m Number of images found does not match number of image files in asset directory")
-
-    # Example Output
-    print("\n   --- Found Assets in Sections:")
-    for sec in sections:
-        has_assets = sec.images or sec.tables
-        if has_assets:
-            print(f"\n   >>> Section '{sec.title}' contains:")
-            if sec.images: print(f"       - {len(sec.images)} Images: {[img.id for img in sec.images]}")
-            if sec.tables: print(f"       - {len(sec.tables)} Tables: {[tab.id for tab in sec.tables]}")
-    print("\n   --- Found Assets in Sections ---\n\n")
-    
-    # Build Image Context Registry
-    # We need to map filename -> {caption, section_info} so the image processor can find it.
-    image_context_registry = {}
-    
-    # Initialize with basic info from all_images
-    for img in all_images:
-        image_context_registry[img.filename.lower()] = {
-            "id": img.id,
-            "caption": img.caption,
-            "section_title": "Unassigned", # Default
-            "section_summary": ""
-        }
-
-    # print('>>> IMAGE CONTEXT REGISTRY >>>\n', image_context_registry)
-    # print('\n\n')
-
-    # Enrich with Section Data
-    # (Since sections "own" images now, we reverse-lookup to fill the registry)
-    for sec in sections:
-        for img in sec.images:
-            if img.filename.lower() in image_context_registry:
-                
-                image_context_registry[img.filename.lower()]["section_title"] = sec.title
-                # We can pass the first 500 chars of the section as "background context" for the image
-                image_context_registry[img.filename.lower()]["section"] = parser._extract_nearby_text(
-                        img, sec.content, window_lines=5, max_chars=1000
-                    )
-                # print('>>> UPDATING IMAGE CONTEXT REGISTRY >>>', image_context_registry[img.filename.lower()])
-
-    
-    # Build tasks
-    tasks = []
-    # Extract from text (section-by-section)
-    all_measurements = []
-    material_defs = [] # You might want to accumulate these or merge them later
-
-    # We process sections in parallel batches (or sequentially if rate limits matter)
-    # Here is a sequential loop for safety, or you can use asyncio.gather for speed.
-    skip_sections = ['acknowledgements', 'references']
-    for sec in sections:
-        if any(skip in sec.title.lower() for skip in skip_sections):
-            print(f"   \033[91m[Warning]\033[0m Skipping section: {sec.title}")
-            continue        
-        tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem))
-
-    # # 3. Extract from Images (Parallel)
-    # Add Image Tasks
-    img_files = []
-    for pattern in ["*.png", "*.jpg", "*.jpeg", "*.bmp"]:
-        # Only grab original assets, skip debug/cropped/detected files
-        candidates = list(asset_dir.glob(pattern))
-        for cand in candidates:
-            if "debug" not in cand.name.lower() and "cropped" not in cand.name.lower() and "detected" not in cand.name.lower():
-                img_files.append(cand)
-    
-    for img_path in sorted(img_files):
-        # Retrieve context from registry (as you already do)
-        filename = img_path.name
-
-        # this is a temporary fix
-        try:
-            context = image_context_registry[filename]
-        except:
-            context = image_context_registry.get('_'+filename, {"id": "Unknown", "caption": "No caption"})
-        tasks.append(safe_image_call_with_retry(img_path, context, client, VISION_MODEL, sem, sf_parser=sf_parser))
-
-    # Add Table Tasks
-    for table_info in all_tables:
-        table_data = {
-            'caption': f"{table_info.id}: {table_info.caption}",
-            'content': table_info.content
-        }
-        tasks.append(safe_table_call_with_retry(table_data, client, TEXT_MODEL, sem))
-
-    # 4. Execute Simultaneously
-    print(f"   ... Processing {len(tasks)} items (Text + Images) simultaneously ...")
-    results = await asyncio.gather(*tasks)
-
-    # Merge Image Results
-    all_measurements = []
-    failed_count = 0
-    skipped_count = 0
-
-    for i, res in enumerate(results):
-        # Handle exceptions from gather
-        if isinstance(res, Exception):
-            print(f"   ❌ Task {i} raised exception: {res}")
-            failed_count += 1
-            continue
-        
-        # Check if this is an image result (tuple) or text result (object)
-        if isinstance(res, tuple): # this is for image results
-            result, success = res
-            if success:
-                if len(result.measurements) == 0:
-                    skipped_count += 1  # No data found (valid)
+        for i, res in enumerate(results):
+            # Handle exceptions from gather
+            if isinstance(res, Exception):
+                print(f"   ❌ Task {i} raised exception: {res}")
+                failed_count += 1
+                continue
+            
+            # Check if this is an image result (tuple) or text result (object)
+            if isinstance(res, tuple): # this is for image results
+                result, success = res
+                if success:
+                    if len(result.measurements) == 0:
+                        skipped_count += 1  # No data found (valid)
+                    else:
+                        all_measurements.extend(result.measurements)
                 else:
-                    all_measurements.extend(result.measurements)
-            else:
-                failed_count += 1  # Actual failure
-        elif hasattr(res, 'measurements'):
-            # Text extraction result
-            if len(res.measurements) == 0:
-                skipped_count += 1
-            else:
-                all_measurements.extend(res.measurements)
-        elif res is None:
-            failed_count += 1
+                    failed_count += 1  # Actual failure
+            elif hasattr(res, 'measurements'):
+                # Text extraction result
+                if len(res.measurements) == 0:
+                    skipped_count += 1
+                else:
+                    all_measurements.extend(res.measurements)
+            elif res is None:
+                failed_count += 1
 
-    # # 4. Canonicalize Names (Solves Problem 3)
-    # # We pass the definitions found in text + the measurements from figures
-    # all_measurements = await canonicalize_materials(client, all_measurements, material_defs)
+        # 4. Canonicalize Names (Solves Problem 3)
+        # We pass the definitions found in text + the measurements from figures
+        all_measurements = await canonicalize_materials(client, all_measurements, material_defs)
 
-    # # 5. Normalize Values (Solves Problem 2)
-    print("   ... Normalizing Units & Temperatures...")
-    for m in all_measurements:
-        norm = calculate_standard_units(m.raw_conductivity, m.raw_conductivity_unit, m.raw_temperature, m.raw_temperature_unit)
-        m.normalized_conductivity = norm['cond']
-        m.normalized_temperature_c = norm['temp']
-        
-        # Fallback: if canonical name is still empty, copy raw
-        if not m.canonical_formula:
-            m.canonical_formula = m.raw_composition
+        # # 5. Normalize Values (Solves Problem 2)
+        print("   ... Normalizing Units & Temperatures...")
+        for m in all_measurements:
+            norm = calculate_standard_units(m.raw_conductivity, m.raw_conductivity_unit, m.raw_temperature, m.raw_temperature_unit)
+            m.normalized_conductivity = norm['cond']
+            m.normalized_temperature_c = norm['temp']
+            
+            # Fallback: if canonical name is still empty, copy raw
+            if not m.canonical_formula:
+                m.canonical_formula = m.raw_composition
 
-    # Report statistics
-    print(f"\n   📊 Extraction Summary:")
-    print(f"      - Extracted: {len(all_measurements)} measurements")
-    print(f"      - Skipped (no data): {skipped_count} images")
-    print(f"      - Failed: {failed_count} items")
+        # Report statistics
+        print(f"\n   📊 Extraction Summary:")
+        print(f"      - Extracted: {len(all_measurements)} measurements")
+        print(f"      - Skipped (no data): {skipped_count} images")
+        print(f"      - Failed: {failed_count} items")
 
-    pipeline_stats = {
-        "extracted_count": len(all_measurements),
-        "skipped_images": skipped_count,
-        "failed_items": failed_count,
-        "total_sections_processed": len(sections),
-        "total_images_processed": len(img_files)
-    }
+        pipeline_stats = {
+            "extracted_count": len(all_measurements),
+            "skipped_images": skipped_count,
+            "failed_items": failed_count,
+            "total_sections_processed": len(sections),
+            "total_images_processed": len(img_files)
+        }
 
-    # [CHANGED] Return stats along with data
-    return all_measurements, material_defs, pipeline_stats
+        # [CHANGED] Return stats along with data
+        return all_measurements, material_defs, pipeline_stats
+    finally:
+        # [NEW] Ensure the Gemini client is closed gracefully to prevent SSL/Event loop errors on exit
+        if 'client' in locals() and client:
+            await client.aio.aclose()
 
 def main():
     parser = argparse.ArgumentParser()
