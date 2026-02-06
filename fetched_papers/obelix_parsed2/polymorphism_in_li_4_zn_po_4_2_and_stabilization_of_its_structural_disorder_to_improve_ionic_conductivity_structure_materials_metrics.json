@@ -1,0 +1,39 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-51",
+      "extracted_id": "EX-6",
+      "reason": "The ground truth material Li16.0Zn4.0P8.0O32.0 normalizes to Li4Zn(PO4)2, which exactly matches EX-6. The conductivity values are also nearly identical (5.55e-18 S/cm vs 5.5e-18 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-66",
+      "extracted_id": null,
+      "reason": "The ground truth material Li7.4Zn1.4Ga0.6P4.0O16.0 normalizes to Li3.7Zn0.7Ga0.3(PO4)2. While EX-5 has the exact same chemical formula, its conductivity (5e-06 S/cm) is six orders of magnitude higher than the ground truth (5.65e-12 S/cm), indicating it is not the same material or measurement. No other extracted entry matches both the specific composition and conductivity.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-108",
+      "extracted_id": "EX-9",
+      "reason": "The ground truth material Li8.0Zn2.0P4.0O16.0 normalizes to Li4Zn(PO4)2, which matches EX-9. The conductivity values are also within the same order of magnitude (1e-15 S/cm vs 1.8e-15 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-109",
+      "extracted_id": null,
+      "reason": "The ground truth material Li7.0Zn1.0Ga1.0P4.0O16.0 normalizes to Li3.5Zn0.5Ga0.5(PO4)2. No extracted entry has this specific chemical formula. Furthermore, the conductivity (1e-15 S/cm) does not match any of the general or specific Ga-doped LiZnPO4 entries in the extracted data, which are typically in the 10^-12 to 10^-14 S/cm range or higher.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted two of the four ground truth entries, demonstrating good performance for exact matches in both composition and conductivity. However, it failed to match two entries where either the specific stoichiometry was not present in the extracted data or the conductivity values for the same composition were vastly different, suggesting potential issues with either extraction specificity or property value accuracy for certain materials.",
+  "metrics": {
+    "recall": 50.0,
+    "precision": 7.4074074074074066,
+    "f1": 12.903225806451612,
+    "avg_log10_error": 0.12960139936586934,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 4,
+    "total_ex": 27
+  }
+}

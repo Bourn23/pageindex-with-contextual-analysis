@@ -1,0 +1,18 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-443   | None     | 1.13e-05   | None       | N/A        | ❌ MISSING
+GT-444   | None     | 1.37e-05   | None       | N/A        | ❌ MISSING
+GT-445   | None     | 5.3e-05    | None       | N/A        | ❌ MISSING
+GT-446   | None     | 7.64e-05   | None       | N/A        | ❌ MISSING
+GT-447   | None     | 6.04e-05   | None       | N/A        | ❌ MISSING
+GT-448   | EX-3     | 1.92e-05   | None       | Null/Zero  | ❌ No Value
+================================================================================
+RESULTS SUMMARY
+Recall:      16.67%
+Precision:   25.00%
+F1 Score:    20.00
+Numeric Accuracy: 0.00%
+Avg Log10 Error: 0.0000 (Lower is better)
+================================================================================

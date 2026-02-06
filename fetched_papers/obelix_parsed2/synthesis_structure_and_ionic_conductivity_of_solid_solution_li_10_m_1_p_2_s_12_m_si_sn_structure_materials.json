@@ -1,0 +1,1099 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 175438,
+    "total_output_tokens": 20180,
+    "total_cost_usd": 0.14825899999999995,
+    "call_counts": {
+      "gemini-3-flash-preview": 76
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/synthesis_structure_and_ionic_conductivity_of_solid_solution_li_10_m_1_p_2_s_12_m_si_sn_structure.json",
+  "extraction_stats": {
+    "total_nodes": 65,
+    "raw_extracted": 65,
+    "after_dedup": 33,
+    "time_elapsed": 192.83474397659302,
+    "valid_count": 33,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 20,
+      "medium": 13,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 26,
+      "cited": 0,
+      "inferred": 4
+    },
+    "from_text_nodes": 15,
+    "from_image_nodes": 22,
+    "final_count": 33
+  },
+  "material_count": 33,
+  "materials": [
+    {
+      "source_sentence_id": "0199, Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10SnP2S12",
+        "acronym": null,
+        "proportion": "k=0.67"
+      },
+      "ionic_conductivity_S_per_cm": "3.7 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted primary measurement for the Sn-based LGPS-type phase at k=0.67 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LGPS-type phase, nominal composition Li10SnP2S12, out of the solid-solution range. ; Solid solution Li4-kM1-kPkS4 with M = Sn ; Lithium-tin thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S (Idemitsu Kosan, >99.9% purity), P2S5 (Aldrich, >99.9% purity), and SnS2 (Kojundo Chemical Laboratory, >99% purity) were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The mixture was pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature.",
+      "source_node": {
+        "node_id": "0196",
+        "title": "Compositional and Structural Factors on Ionic Conductivity (Figure 8)",
+        "section": "**Electrochemical properties**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10SnP2S12",
+      "_original_name": "Li10SnP2S12",
+      "_norm_cond": 0.0037,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0200, Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.27Sn0.27P0.73S4",
+        "acronym": null,
+        "proportion": "k=0.73"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted maximum conductivity value for the Sn-based LGPS-type phase at k=0.73.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Single-phase LGPS-type structure in the Sn system. ; Lithium-tin thiophosphate series ; Single-phase LGPS-type phase in the Sn system. ; Solid solution Li4-kM1-kPkS4 with M = Sn",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S (Idemitsu Kosan, >99.9% purity), P2S5 (Aldrich, >99.9% purity), and SnS2 (Kojundo Chemical Laboratory, >99% purity) were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The mixture was pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature.",
+      "source_node": {
+        "node_id": "0196",
+        "title": "Compositional and Structural Factors on Ionic Conductivity (Figure 8)",
+        "section": "**Electrochemical properties**"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.27Sn0.27P0.73S4",
+      "_original_name": "Li3.27Sn0.27P0.73S4",
+      "_norm_cond": 0.005,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.98Sn0.98Sb0.02S4",
+        "acronym": null,
+        "proportion": "x=0.02"
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 4) for the composition x=0.02 at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Tin solid-solution system Li4-xSn1-xSbxS4",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. [Inferred]",
+      "source_node": {
+        "node_id": "0116",
+        "title": "Visual Reference",
+        "section": "Tin solid-solution system"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.98Sn0.98Sb0.02S4",
+      "_original_name": "Li3.98Sn0.98Sb0.02S4",
+      "_norm_cond": 0.00011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.95Sn0.95Sb0.05S4",
+        "acronym": null,
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 4) for the composition x=0.05 at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Tin solid-solution system Li4-xSn1-xSbxS4",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. [Inferred]",
+      "source_node": {
+        "node_id": "0116",
+        "title": "Visual Reference",
+        "section": "Tin solid-solution system"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.95Sn0.95Sb0.05S4",
+      "_original_name": "Li3.95Sn0.95Sb0.05S4",
+      "_norm_cond": 0.00025,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.9Sn0.9Sb0.1S4",
+        "acronym": null,
+        "proportion": "x=0.10"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 4) for the composition x=0.10 at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Tin solid-solution system Li4-xSn1-xSbxS4",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. [Inferred]",
+      "source_node": {
+        "node_id": "0116",
+        "title": "Visual Reference",
+        "section": "Tin solid-solution system"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.9Sn0.9Sb0.1S4",
+      "_original_name": "Li3.9Sn0.9Sb0.1S4",
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS4",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "7.0 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 4) for the base composition Li4SnS4 (x=0) at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine tin sulfide electrolyte ; Tin solid-solution system Li4-xSn1-xSbxS4",
+      "processing_method": "Conventional solid-state reaction: Precursors (Li2S and SnS2) mixed via planetary ball-milling for 40 h, pelletized, sealed in an evacuated silica tube (10 Pa), and heated at 823 K for 3 days. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Starting materials and crystal structure information are cited from Ref 14 and 15 (details not provided in the current text).",
+      "source_node": {
+        "node_id": "0116",
+        "title": "Visual Reference",
+        "section": "Tin solid-solution system"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS4",
+      "_original_name": "Li4SnS4",
+      "_norm_cond": 7e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg, 0194, Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "6.7 &times; 10⁻³ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Text label explicitly states sigma_298 K = 6.7 x 10^-3 S cm^-1 for the composition Li3.45Si0.45P0.55S4.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; LGPS-type phase in the Li4-kSi1-kPkS4 system. ; Lithium-silicon thiophosphate series ; Li3.45Si0.45P0.55S4 (Li-Si-P-S system) ; Solid solution Li4-kM1-kPkS4 with M = Si",
+      "processing_method": "Calculated as a sum of bulk and grain boundary resistances from impedance plots. | Conventional solid-state reaction: Starting materials (Li2S, P2S5, SiS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Not specified in the provided text snippet. | Conventional solid-state reaction: Starting materials Li2S (Idemitsu Kosan, >99.9% purity), P2S5 (Aldrich, >99.9% purity), and SiS2 (Mitsuwa Chemical, >99% purity) were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The mixture was pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.0067,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xSn1-xSbxS4 (x=0.15)",
+        "acronym": null,
+        "proportion": "x=0.15"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 4) for the composition x=0.15 at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Tin solid-solution system Li4-xSn1-xSbxS4",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days. [Inferred]",
+      "source_node": {
+        "node_id": "0116",
+        "title": "Visual Reference",
+        "section": "Tin solid-solution system"
+      },
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xSn1-xSbxS4 (x=0.15)",
+      "_original_name": "Li4-xSn1-xSbxS4",
+      "_norm_cond": 0.00015,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.5Si0.5P0.5S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "11.0e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Si at k=0.50 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Si",
+      "processing_method": "Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, and heated in a sealed, evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days, followed by slow cooling.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 50,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.5Si0.5P0.5S4",
+      "_original_name": "Li3.5Si0.5P0.5S4",
+      "_norm_cond": 0.011,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.48Si0.48P0.52S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.2e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Si at k=0.52 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Si ; Lithium-silicon thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, and heated in a sealed, evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days, followed by slow cooling.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.48Si0.48P0.52S4",
+      "_original_name": "Li3.48Si0.48P0.52S4",
+      "_norm_cond": 0.0052,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.42Si0.42P0.58S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.6e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Si at k=0.58 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Si ; Lithium-silicon thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, and heated in a sealed, evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days, followed by slow cooling.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 53,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.42Si0.42P0.58S4",
+      "_original_name": "Li3.42Si0.42P0.58S4",
+      "_norm_cond": 0.0056,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Si0.4P0.6S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.2e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Si at k=0.60 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Si",
+      "processing_method": "Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, and heated in a sealed, evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days, followed by slow cooling.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 54,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "_original_name": "Li3.4Si0.4P0.6S4",
+      "_norm_cond": 0.0042,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.5Ge0.5P0.5S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "11.0e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Ge at k=0.50 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Ge ; Lithium-germanium thiophosphate (argyrodite-type derivative or LISICON-like series)",
+      "processing_method": "Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Conventional solid-state reaction at 823 K. Synthesis details and composition range (0 ≤ δ ≤ 0.35) are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 55,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.5Ge0.5P0.5S4",
+      "_original_name": "Li3.5Ge0.5P0.5S4",
+      "_norm_cond": 0.011,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Ge0.45P0.55S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "14.2e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Ge at k=0.55 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Ge ; Lithium-germanium thiophosphate (argyrodite-type derivative or LISICON-like series)",
+      "processing_method": "Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Conventional solid-state reaction at 823 K. Synthesis details and composition range (0 ≤ δ ≤ 0.35) are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 56,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Ge0.45P0.55S4",
+      "_original_name": "Li3.45Ge0.45P0.55S4",
+      "_norm_cond": 0.0142,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.42Ge0.42P0.58S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "13.8e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Ge at k=0.58 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Ge",
+      "processing_method": "Conventional solid-state reaction at 823 K. Synthesis details and composition range (0 ≤ δ ≤ 0.35) are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 57,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.42Ge0.42P0.58S4",
+      "_original_name": "Li3.42Ge0.42P0.58S4",
+      "_norm_cond": 0.0138,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.31Ge0.31P0.69S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "12.1e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Ge at k=0.69 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Ge",
+      "processing_method": "Conventional solid-state reaction at 823 K. Synthesis details and composition range (0 ≤ δ ≤ 0.35) are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 59,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.31Ge0.31P0.69S4",
+      "_original_name": "Li3.31Ge0.31P0.69S4",
+      "_norm_cond": 0.0121,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.29Sn0.29P0.71S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.1e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Sn at k=0.71 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Sn ; Lithium-tin thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SnS2 were weighed in appropriate molar ratios in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The specimens were then pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 61,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.29Sn0.29P0.71S4",
+      "_original_name": "Li3.29Sn0.29P0.71S4",
+      "_norm_cond": 0.0041,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.25Sn0.25P0.75S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Sn at k=0.75 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Sn ; Lithium-tin thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SnS2 were weighed in appropriate molar ratios in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The specimens were then pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 63,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.25Sn0.25P0.75S4",
+      "_original_name": "Li3.25Sn0.25P0.75S4",
+      "_norm_cond": 0.0045,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.23Sn0.23P0.77S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.7e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Sn at k=0.77 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Sn ; Lithium-tin thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SnS2 were weighed in appropriate molar ratios in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. The specimens were then pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 64,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.23Sn0.23P0.77S4",
+      "_original_name": "Li3.23Sn0.23P0.77S4",
+      "_norm_cond": 0.0037,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.33Ge0.33P0.67S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "12.5e-3 S cm-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point for M=Ge at k=0.67 in Figure 5(a)",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid solution Li4-kM1-kPkS4 with M = Ge ; Lithium-germanium thiophosphate (argyrodite-type derivative or LISICON-like series)",
+      "processing_method": "Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Conventional solid-state reaction at 823 K. Synthesis details and composition range are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 58,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.33Ge0.33P0.67S4",
+      "_original_name": "Li3.33Ge0.33P0.67S4",
+      "_norm_cond": 0.0125,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0026, 0199",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10SnP2S12",
+        "acronym": null,
+        "proportion": "Sn4+ substitution"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for the Sn-substituted LGPS-type material mentioned in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "Sn4+ substituted LGPS-type compound ; N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction: Starting materials (Li2S, P2S5, SnS2) mixed by planetary ball-milling for 40 h in an Ar-filled glove box, pressed into pellets, sealed in a carbon-coated quartz tube at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SnS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | N/A (Cited Work) | Conventional solid-state reaction in an evacuated silica tube at 823 K. Precursors include Li2S, P2S5, and SnS2, which are mixed by planetary ball-milling (40 h) followed by sintering in a carbon-coated quartz tube (10 Pa) for 3 days.",
+      "source_node": {
+        "node_id": "0024",
+        "title": "Challenges and Analogous LGPS-Type Materials",
+        "section": "Introduction"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10SnP2S12",
+      "_original_name": "Li10SnP2S12",
+      "_norm_cond": 0.004,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0194, 0073",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Si0.4P0.6S4",
+        "acronym": null,
+        "proportion": "thio-LISICON-type"
+      },
+      "ionic_conductivity_S_per_cm": "6.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted as a comparison value for the thio-LISICON phase of the Si-based system.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [13] (details not provided in current text; identified as a member of the thio-LISICON family with a three-dimensional framework structure). | Synthesized according to Ref 13 (details not in text; noted as a member of the thio-LISICON family). | N/A (Cited Work) | Synthesized as a member of the thio-LISICON family according to Ref 13 (details not provided in the current text).",
+      "source_node": {
+        "node_id": "0185",
+        "title": "Ionic Conductivity Analysis and Results (Figure 7)",
+        "section": "**Electrochemical properties**"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "_original_name": "Li3.4Si0.4P0.6S4",
+      "_norm_cond": 0.00064,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "2.82e-2 S cm^-1",
+      "measurement_temperature": "100 °C",
+      "reason": "Point estimated from Arrhenius plot at 100°C (approx. 10^3/T = 2.68). log(sigma) is approx. -1.55.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.0282,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "1.91e-2 S cm^-1",
+      "measurement_temperature": "80 °C",
+      "reason": "Point estimated from Arrhenius plot at 80°C (approx. 10^3/T = 2.83). log(sigma) is approx. -1.72.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.0191,
+      "_norm_temp": 80,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "1.23e-2 S cm^-1",
+      "measurement_temperature": "60 °C",
+      "reason": "Point estimated from Arrhenius plot at 60°C (approx. 10^3/T = 3.00). log(sigma) is approx. -1.91.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.0123,
+      "_norm_temp": 60,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "6.61e-3 S cm^-1",
+      "measurement_temperature": "40 °C",
+      "reason": "Point estimated from Arrhenius plot at 40°C (approx. 10^3/T = 3.19). log(sigma) is approx. -2.18.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.00661,
+      "_norm_temp": 40,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "2.82e-3 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Point estimated from Arrhenius plot at 20°C (approx. 10^3/T = 3.41). log(sigma) is approx. -2.55.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution. ; Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.00282,
+      "_norm_temp": 20,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": "k=0.55"
+      },
+      "ionic_conductivity_S_per_cm": "1.05e-3 S cm^-1",
+      "measurement_temperature": "-20 °C",
+      "reason": "Point estimated from Arrhenius plot at -20°C (approx. 10^3/T = 3.95). log(sigma) is approx. -2.98.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Solid-state electrolyte with Si/P substitution.",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Starting materials Li2S, P2S5, and SiS2 were mixed by planetary ball-milling for 40 h in an Ar-filled glove box. The pellets were sealed in a carbon-coated quartz tube (10 Pa) and heated at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.00105,
+      "_norm_temp": -20,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Ge0.4P0.6S4",
+        "acronym": null,
+        "proportion": "k = 0.60"
+      },
+      "ionic_conductivity_S_per_cm": "1.35e-2 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point extracted from Figure 5a for M = Ge at k = 0.60.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium-germanium thiophosphate (argyrodite-type derivative or LISICON-like series)",
+      "processing_method": "Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Conventional solid-state reaction at 823 K. Synthesis details are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Ge0.4P0.6S4",
+      "_original_name": "Li3.4Ge0.4P0.6S4",
+      "_norm_cond": 0.0135,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.3Ge0.3P0.7S4",
+        "acronym": null,
+        "proportion": "k = 0.70"
+      },
+      "ionic_conductivity_S_per_cm": "1.2e-2 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point extracted from Figure 5a for M = Ge at k = 0.70.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium-germanium thiophosphate (argyrodite-type derivative or LISICON-like series)",
+      "processing_method": "Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Conventional solid-state reaction at 823 K. Synthesis details are cited from previous studies (Ref 12).",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.3Ge0.3P0.7S4",
+      "_original_name": "Li3.3Ge0.3P0.7S4",
+      "_norm_cond": 0.012,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0020, 0194",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻² S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for Li10GeP2S12 (LGPS) mentioned in the introduction as a cited high-performance material.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work) | Conventional solid-state reaction: Synthesized at 823 K (precursors mixed in an Ar-filled glove box, ball-milled for 40 h, pelletized, and heated for 3 days in a sealed and evacuated silica tube). Details also cited from Ref [3] and [12]. | Synthesized by conventional solid-state reaction at 823 K as described in Ref 12. | Crystalline solid electrolyte Li10GeP2S12 (LGPS) synthesized according to methods described in Ref 3 and 12.",
+      "source_node": {
+        "node_id": "0018",
+        "title": "Introduction to Solid Lithium Ion Conductors and LGPS",
+        "section": "Introduction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_8_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.45Si0.45P0.55S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.05e-3 S cm^-1",
+      "measurement_temperature": "0 °C",
+      "reason": "Estimated from Arrhenius plot (Figure 6b) at T=0°C (10^3/T ~ 3.66). log(sigma) is approximately -2.98.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li3.45Si0.45P0.55S4 ceramic electrolyte",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 mixed via planetary ball-milling (40 h, Argon), pelletized, and heated in an evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0190",
+        "title": "_page_8_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "_original_name": "Li3.45Si0.45P0.55S4",
+      "_norm_cond": 0.00105,
+      "_norm_temp": 0.0001,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_9_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.39Si0.39P0.61S4",
+        "acronym": null,
+        "proportion": "k = 0.61"
+      },
+      "ionic_conductivity_S_per_cm": "4.2e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Data point extracted from Figure 5a for M = Si at k = 0.61.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium-silicon thiophosphate series",
+      "processing_method": "Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 were weighed in an Ar-filled glove box and mixed by planetary ball-milling for 40 h. Specimens were pressed into pellets, sealed in carbon-coated quartz tubes at 10 Pa, and heated at 823 K for 3 days, followed by slow cooling to room temperature. | Conventional solid-state reaction: Precursors Li2S, P2S5, and SiS2 mixed via planetary ball-milling (40 h, Argon), pelletized, and heated in an evacuated carbon-coated quartz tube (10 Pa) at 823 K for 3 days.",
+      "source_node": {
+        "node_id": "0207",
+        "title": "_page_9_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.39Si0.39P0.61S4",
+      "_original_name": "Li3.39Si0.39P0.61S4",
+      "_norm_cond": 0.0042,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

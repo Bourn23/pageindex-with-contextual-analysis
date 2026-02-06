@@ -1,0 +1,11 @@
+GT-403     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions like Li6PS5Br.
+GT-404     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-405     | ✅ MATCH         | The extracted data correctly identifies the maximum conductivity of the series, and the value 0.0039 S/cm is an approximate match for 0.00392 S/cm.
+GT-406     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-407     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-408     | ✅ MATCH         | The extracted data correctly identifies the minimum conductivity of the series, and the value 0.0027 S/cm is an approximate match for 0.00268 S/cm.
+GT-409     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-410     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-411     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-412     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.
+GT-413     | ❌ MISSING/BAD   | The extracted data only provides general series information and extreme conductivity values, not specific compositions.

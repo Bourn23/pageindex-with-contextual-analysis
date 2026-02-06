@@ -1,0 +1,190 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons_v5_pipeline_20260203_120044.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Two-Dimensional Substitution: Toward a Better Understanding of the Structure—Transport Correlations in the Li-Superionic Thio-LISICONs
+   --- Found: 13 Sections
+   --- Found: 17 Figures, 0 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 3 Images: ['Unknown', 'Unknown', 'Unknown']
+
+   >>> Section '1. INTRODUCTION' contains:
+       - 3 Images: ['Fig 1', 'Fig 1a', 'Fig 1a']
+
+   >>> Section '2. EXPERIMENTAL SECTION' contains:
+       - 1 Images: ['Fig 2']
+
+   >>> Section '3. RESULTS' contains:
+       - 7 Images: ['Fig 4', 'Fig 5', 'Fig 2', 'Fig 8', 'Fig 7', 'Fig 3', 'Fig 6']
+
+   >>> Section '4. DISCUSSION' contains:
+       - 5 Images: ['Fig 9', 'Fig 10', 'Fig 3', 'Fig 11', 'Fig 5']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 29 items (Text + Images) simultaneously ...
+   🔍 page_0_figure_5.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_figure_7.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_13.jpeg (Unknown): Detecting subplot...
+   ⚠️ page_0_picture_1.jpeg: SciFigureParser failed: list index out of range. Falling back to standard processing...
+   [93m[Skip][0m page_0_figure_5.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_0_picture_20.jpeg (Fig 1a): Detecting subplot...
+   🔍 page_0_picture_21.jpeg (Fig 1a): Detecting subplot...
+   🔍 page_10_figure_1.jpeg (Fig 10): Detecting subplot...
+   [93m[Skip][0m page_0_picture_13.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_10_picture_6.jpeg (Fig 11): Detecting subplot...
+   ⚠️ page_0_figure_7.jpeg: SciFigureParser failed: list index out of range. Falling back to standard processing...
+   [93m[Skip][0m page_0_picture_21.jpeg (Fig 1a): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_1_figure_2.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_1.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_picture_20.jpeg (Fig 1a): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_1.jpeg (Fig 3): Detecting subplot...
+   ✂️ page_10_figure_1.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+Passing box coords  [23, 55, 348, 844]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons/scifig_debug/page_10_figure_1_cropped_a.jpeg
+   [93m[Skip][0m page_10_figure_1.jpeg (Fig 10): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_figure_1.jpeg (Fig 10): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_2_figure_1.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_2_figure_1.jpeg (Fig 2): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_2_figure_1.jpeg (Fig 2): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_figure_1.jpeg (Fig 4): Detecting subplot...
+   ✂️ page_1_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_1_figure_2.jpeg (Fig 1): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_1_figure_2.jpeg (Fig 1): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_figure_3.jpeg (Fig 5): Detecting subplot...
+   ✂️ page_4_figure_1.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_1.jpeg (Fig 4): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_1.jpeg (Fig 4): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_5_figure_7.jpeg (Fig 6): Detecting subplot...
+   ✂️ page_3_figure_1.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_1.jpeg (Fig 3): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_1.jpeg (Fig 3): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_1.jpeg (Fig 3): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_1.jpeg (Fig 3): d - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_6_figure_1.jpeg (Fig 7): Detecting subplot...
+   ✓ page_10_figure_1.jpeg (Fig 10): Found 16 points total via SciFigureParser
+   🔍 page_7_figure_1.jpeg (Fig 8): Detecting subplot...
+   ✂️ page_5_figure_7.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 6): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 6): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 6): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 6): d - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_9_figure_1.jpeg (Fig 9): Detecting subplot...
+   ✂️ page_4_figure_3.jpeg: Multi-plot detected (1 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_3.jpeg (Fig 5): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_6_figure_1.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_6_figure_1.jpeg (Fig 7): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+Passing box coords  [15, 515, 360, 985]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons/scifig_debug/page_6_figure_1_cropped_b.jpeg
+Passing box coords  [375, 15, 685, 985]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons/scifig_debug/page_6_figure_1_cropped_c.jpeg
+   [93m[Skip][0m page_6_figure_1.jpeg (Fig 7): d - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_10_picture_6.jpeg: Multi-plot detected (6 panels). Processing each in parallel...
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): top_left - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): top_middle - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): top_right - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): bottom_left - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): bottom_middle - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_10_picture_6.jpeg (Fig 11): bottom_right - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_7_figure_1.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_7_figure_1.jpeg (Fig 8): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_7_figure_1.jpeg (Fig 8): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_7_figure_1.jpeg (Fig 8): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_7_figure_1.jpeg (Fig 8): d - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_6_figure_1.jpeg (Fig 7): Found 42 points total via SciFigureParser
+   ⏱️  page_9_figure_1.jpeg: Timeout
+   ... Canonicalizing Materials...
+   ... Resolving 60 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+Norm Error: Could not convert 'null' to float
+Norm Error: Could not convert 'null' to float
+
+   📊 Extraction Summary:
+      - Extracted: 61 measurements
+      - Skipped (no data): 24 images
+      - Failed: 1 items
+
+Done! Extracted 61 points.
+Saved to: fetched_papers/obelix_md2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         14
+Total Input:         20,707 tokens
+Total Output:        10,676 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0337
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 12 calls
+  - gemini-3-flash-preview        : 2 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.chemmater.0c04150
+GT-584: Li16.0Sn4.0S12.0Se4.0 | 7.5e-05 S/cm
+GT-585: Li16.0Sn4.0S4.0Se12.0 | 9.5e-07 S/cm
+GT-586: Li16.0Sn4.0S8.0Se8.0 | 3.6e-05 S/cm
+GT-587: Li16.0Sn4.0Se16.0 | 4.5e-08 S/cm
+GT-588: Li16.0Ge3.0Sn1.0Se16.0 | 6e-06 S/cm
+GT-589: Li16.0Ge2.0Sn2.0Se16.0 | 1.8e-06 S/cm
+GT-590: Li16.0Ge1.0Sn3.0Se16.0 | 8.3e-07 S/cm
+GT-591: Li16.0Ge4.0S12.0Se4.0 | 8.5e-06 S/cm
+GT-592: Li16.0Ge4.0S8.0Se8.0 | 2.8e-05 S/cm
+GT-593: Li16.0Ge4.0Se16.0 | 5e-06 S/cm
+GT-594: Li16.0Ge4.0S4.0Se12.0 | 1.5e-05 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 1028 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-584     | ✅ MATCH         | The ground truth formula Li16.0Sn4.0S12.0Se4.0 simplifies to Li4SnS3Se, and the extracted conductivity 7.5e-05 S/cm matches exactly.
+GT-585     | ✅ MATCH         | The ground truth formula Li16.0Sn4.0S4.0Se12.0 simplifies to Li4SnSSe3, and the extracted conductivity 9.5e-07 S/cm matches exactly.
+GT-586     | ✅ MATCH         | The ground truth formula Li16.0Sn4.0S8.0Se8.0 simplifies to Li4SnS2Se2, and the extracted conductivity 3.4e-05 S/cm is approximately 3.6e-05 S/cm.
+GT-587     | ✅ MATCH         | The ground truth formula Li16.0Sn4.0Se16.0 simplifies to Li4SnSe4, and the extracted conductivity 4.8e-08 S/cm is approximately 4.5e-08 S/cm.
+GT-588     | ✅ MATCH         | The ground truth formula Li16.0Ge3.0Sn1.0Se16.0 simplifies to Li4Ge0.75Sn0.25Se4, and the extracted conductivity 5.8e-06 S/cm is approximately 6e-06 S/cm.
+GT-589     | ✅ MATCH         | The ground truth formula Li16.0Ge2.0Sn2.0Se16.0 simplifies to Li4Ge0.5Sn0.5Se4, and the extracted conductivity 1.8e-06 S/cm matches exactly.
+GT-590     | ✅ MATCH         | The ground truth formula Li16.0Ge1.0Sn3.0Se16.0 simplifies to Li4Ge0.25Sn0.75Se4, and the extracted conductivity 7.3e-07 S/cm is approximately 8.3e-07 S/cm.
+GT-591     | ✅ MATCH         | The ground truth formula Li16.0Ge4.0S12.0Se4.0 simplifies to Li4GeS3Se, and the extracted conductivity 8e-06 S/cm is approximately 8.5e-06 S/cm.
+GT-592     | ✅ MATCH         | The ground truth formula Li16.0Ge4.0S8.0Se8.0 simplifies to Li4GeS2Se2, and the extracted conductivity 2.5e-05 S/cm is approximately 2.8e-05 S/cm.
+GT-593     | ✅ MATCH         | The ground truth formula Li16.0Ge4.0Se16.0 simplifies to Li4GeSe4, and the extracted conductivity 4.5e-06 S/cm is approximately 5e-06 S/cm.
+GT-594     | ✅ MATCH         | The ground truth formula Li16.0Ge4.0S4.0Se12.0 simplifies to Li4GeSSe3, and the extracted conductivity 1.4e-05 S/cm is approximately 1.5e-05 S/cm.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons
+[0;34m[INFO][0m DOI: 10.1021/acs.chemmater.0c04150
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons_v5_pipeline_20260203_120044.log
+

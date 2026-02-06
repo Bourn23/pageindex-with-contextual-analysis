@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 52.319961071014404,
+    "images_attached": 10,
+    "input_token_count": 21056,
+    "output_token_count": 1158
+  },
+  "data": [
+    {
+      "composition": "Li6PS5Br",
+      "ionic_conductivity_value": "7.2e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.025P0.975Si0.025S5Br",
+      "ionic_conductivity_value": "8.8e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.05P0.95Si0.05S5Br",
+      "ionic_conductivity_value": "4.5e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.075P0.925Si0.075S5Br",
+      "ionic_conductivity_value": "8.9e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.1P0.9Si0.1S5Br",
+      "ionic_conductivity_value": "8.2e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.125P0.875Si0.125S5Br",
+      "ionic_conductivity_value": "1.15e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.15P0.85Si0.15S5Br",
+      "ionic_conductivity_value": "9.1e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.175P0.825Si0.175S5Br",
+      "ionic_conductivity_value": "9.4e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.2P0.8Si0.2S5Br",
+      "ionic_conductivity_value": "1.7e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.225P0.775Si0.225S5Br",
+      "ionic_conductivity_value": "1.1e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.25P0.75Si0.25S5Br",
+      "ionic_conductivity_value": "1.42e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.3P0.7Si0.3S5Br",
+      "ionic_conductivity_value": "1.65e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    },
+    {
+      "composition": "Li6.35P0.65Si0.35S5Br",
+      "ionic_conductivity_value": "2.4e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a and main text"
+    },
+    {
+      "composition": "Li6.5P0.5Si0.5S5Br",
+      "ionic_conductivity_value": "2.22e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6a"
+    }
+  ]
+}

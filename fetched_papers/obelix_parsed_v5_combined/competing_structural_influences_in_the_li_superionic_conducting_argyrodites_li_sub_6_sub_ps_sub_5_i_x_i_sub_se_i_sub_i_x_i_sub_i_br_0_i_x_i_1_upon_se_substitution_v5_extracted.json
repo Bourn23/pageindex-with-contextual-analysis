@@ -1,0 +1,338 @@
+{
+  "doc_name": "competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution",
+  "timestamp": "2026-01-23 11:41:13",
+  "execution_time_seconds": 53.72,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 28191,
+    "total_output_tokens": 24668,
+    "total_cost_usd": 0.0816,
+    "call_counts": {
+      "gemini-flash-latest": 11,
+      "gemini-3-flash-preview": 9
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 19,
+    "skipped_images": 16,
+    "failed_items": 0,
+    "total_sections_processed": 12,
+    "total_images_processed": 9
+  },
+  "material_count": 19,
+  "measurements": [
+    {
+      "raw_composition": "Li6PS(5-x)SexBr",
+      "canonical_formula": "Li6PS(5-x)SexBr",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS(5-x)SexBr (0 <= x <= 1) were synthesized to study the influence of increasing anion polarizability and replacing the free S2- site with Se2-.",
+        "The materials are solid solutions confirmed by obeying Vegard's law and are well described by the cubic F43m argyrodite structure.",
+        "All compounds exhibit minor impurity phase fractions (<5 wt %) of LiBr and Li3OBr.",
+        "The ionic conductivities span from 2.7 to 3.9 mS*cm-1 over the entire compositional range."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS\tcm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS5-xSexBr",
+      "material_definitions": [
+        "In this work, Se2- substitution within Li6PS5-xSexBr ( 0 \b\n\nle x \b\n\nle 1) was performed to study the effect of the changing lattice polarizability, as well as the influence of the Br-/Ch2- exchange on the free chalcogen Ch2-site, on the structure and lithium transport properties.",
+        "With increasing Se2- substitution, an increase in the lattice parameters and the occupancy of the 16e Wyckoff position by Se2-, corresponding to the formation of PS3Se3- polyhedra, was observed.",
+        "In addition, a drastic decrease in the Br-/Ch2- site disorder was also observed."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS5Br",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "1.0",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.008154845485377135,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li6PS5Br",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "-2.5",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.0003283399944955952,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li6PS4.5Se0.5Br",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "1.0",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.008154845485377135,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li6PS4.5Se0.5Br",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "-2.6",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.0002970943128573355,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li6PS4SeBr",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "1.4",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.012165599900534025,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li6PS4SeBr",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [
+        "Argyrodite-type solid solutions Li6PS5-xSexBr (x=0, 0.5, 1.0).",
+        "Selenium substitution for sulfur is evaluated for its effect on ionic transport.",
+        "Samples were prepared as pellets for impedance spectroscopy measurements.",
+        "Conductivity measurements were conducted in the temperature range from approximately 240 K to 340 K."
+      ],
+      "raw_conductivity": "-2.4",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K S cm-1)",
+      "normalized_conductivity": 0.00036287181315765006,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "2.8",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0028,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.1",
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.2",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0032,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2",
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3",
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0036000000000000003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.4",
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.7",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0037,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "2.7",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.6",
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "2.8",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0028,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.7",
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.0",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.8",
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.5",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0035,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.9",
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.8",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0038,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=1.0",
+      "canonical_formula": "Li6PS4Se1Br",
+      "material_definitions": [
+        "Argyrodite solid solutions of the series Li6PS5-xSexBr."
+      ],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0036000000000000003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

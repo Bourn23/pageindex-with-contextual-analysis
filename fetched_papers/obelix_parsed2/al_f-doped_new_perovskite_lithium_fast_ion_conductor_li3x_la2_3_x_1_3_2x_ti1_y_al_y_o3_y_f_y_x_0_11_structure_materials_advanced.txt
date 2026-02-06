@@ -1,0 +1,20 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-148   | None     | 0.00098    | None       | N/A        | ❌ MISSING
+GT-149   | EX-1     | 0.00106    | 0.00106    | 0.0000     | ✅ Accurate
+GT-150   | None     | 0.000928   | None       | N/A        | ❌ MISSING
+GT-151   | None     | 0.000622   | None       | N/A        | ❌ MISSING
+GT-152   | None     | 0.000176   | None       | N/A        | ❌ MISSING
+GT-153   | None     | 0.000106   | None       | N/A        | ❌ MISSING
+GT-154   | None     | 0.000645   | None       | N/A        | ❌ MISSING
+GT-155   | None     | 0.000494   | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      12.50%
+Precision:   16.67%
+F1 Score:    14.29
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.0000 (Lower is better)
+================================================================================

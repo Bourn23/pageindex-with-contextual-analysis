@@ -1,0 +1,22 @@
+**1. Method Name:**
+Solid-State Reaction with Mechanochemical Activation (Ball Milling)
+
+**2. Procedure Summary:**
+The materials were synthesized by mixing stoichiometric amounts of lithium sulfide (Li2S), phosphorus pentasulfide (P2S5), elemental sulfur (S8), germanium sulfide (GeS), and tin sulfide (SnS). An additional 3 wt% excess of sulfur was included to compensate for potential loss during high-temperature processing. This mixture was then subjected to high-energy ball milling to create a uniform precursor. The resulting powder was pressed into pellets, which were subsequently sealed under vacuum in quartz ampoules. These ampoules underwent a two-stage heat treatment: an initial annealing step followed by cooling. For the specific composition Li10SnP2S12 (Li20.0Sn2.0P4.0S24.0), an additional reheating step was performed to minimize side phases. Finally, the annealed powder was ground and isostatically pressed into pellets for further characterization.
+
+**3. Key Conditions:**
+*   **Atmosphere:** All preparations and sample treatments were carried out under an argon atmosphere (O2 < 1 ppm, H2O < 5 ppm). Pellets were sealed under vacuum in quartz ampoules.
+*   **Ball Milling:**
+    *   Equipment: Fritsch Pulveristette 7 premium line.
+    *   Speed: 400 rpm.
+    *   Duration: 48 hours, with intermediate cooling times (15 minutes cooling after every 10 minutes of milling).
+    *   Milling Media: ZrO2 milling set (80 mL bowl, 90 g of 3 mm diameter balls).
+*   **First Heat Treatment (for all compositions):**
+    *   Temperature: Heated to 773 K (500 °C).
+    *   Heating Rate: 27 K·h−1.
+    *   Dwell Time: Annealed for 20 hours.
+    *   Cooling: Cooled to room temperature.
+*   **Second Heat Treatment (for Li10SnP2S12 only):**
+    *   Temperature: Reheated at 873 K (600 °C).
+    *   Heating Rate: 50 K·h−1.
+    *   Dwell Time: 48 hours.

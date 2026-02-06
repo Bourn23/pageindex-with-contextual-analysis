@@ -1,0 +1,57 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-82",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.4Na0.1La0.5Nb2.0O6.0.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-83",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.3Na0.2La0.5Nb2.0O6.0.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-84",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.2Na0.3La0.5Nb2.0O6.0.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-85",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.1Na0.4La0.5Nb2.0O6.0.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-86",
+      "extracted_id": "EX-1",
+      "reason": "The chemical formula Li0.07Na0.43La0.5Nb2O6 and conductivity (1.23e-05 S/cm vs 1.28e-05 S/cm) are a direct match, and temperatures are consistent (room temperature).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-87",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.04Na0.46La0.5Nb2.0O6.0.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-88",
+      "extracted_id": null,
+      "reason": "No extracted data entry matches the composition Li0.02Na0.48La0.5Nb2.0O6.0.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Only one ground truth entry (GT-86) found a direct match in the extracted data (EX-1) based on chemical composition and conductivity. The remaining ground truth entries did not have corresponding extracted data. The extracted data also contained many entries for different material systems (AgI-Ag2O-V2O5 and Li-La-Ti-O) that were not present in the ground truth.",
+  "metrics": {
+    "recall": 14.285714285714285,
+    "precision": 4.545454545454546,
+    "f1": 6.896551724137931,
+    "avg_log10_error": 0.01730485820847072,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 7,
+    "total_ex": 22
+  }
+}

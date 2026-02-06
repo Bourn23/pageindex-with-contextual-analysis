@@ -1,0 +1,263 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 61818,
+    "total_output_tokens": 3217,
+    "total_cost_usd": 0.04056,
+    "call_counts": {
+      "gemini-3-flash-preview": 12
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure.json",
+  "extraction_stats": {
+    "total_nodes": 60,
+    "raw_extracted": 10,
+    "after_dedup": 7,
+    "time_elapsed": 46.92259383201599,
+    "valid_count": 7,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 5,
+      "medium": 2,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 4,
+      "cited": 0,
+      "inferred": 1
+    },
+    "from_text_nodes": 10,
+    "from_image_nodes": 0,
+    "final_count": 7
+  },
+  "material_count": 7,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": "LPSCl",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the front matter image which displays the ionic conductivity of the argyrodite Li6PS5Cl electrolyte.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte ; Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Ball-milling followed by annealing at 550°C.",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Front Matter Image",
+        "section": "Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": "LPSCl",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 3) for the pristine Li6PS5Cl sample at 100°C (approx. 1000/T = 2.68).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Ball-milling followed by annealing at 550°C.",
+      "source_node": {
+        "node_id": "0135",
+        "title": "Recovered Content",
+        "section": "3.3. *Electrical conductivity*"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 3) for the Cl-rich Li5.5PS4.5Cl1.5 sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Chlorine-rich argyrodite-type solid electrolyte.",
+      "processing_method": "Ball-milling followed by annealing at 550°C.",
+      "source_node": {
+        "node_id": "0135",
+        "title": "Recovered Content",
+        "section": "3.3. *Electrical conductivity*"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 3) for the Cl-rich Li5.5PS4.5Cl1.5 sample at 100°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Chlorine-rich argyrodite-type solid electrolyte.",
+      "processing_method": "Ball-milling followed by annealing at 550°C.",
+      "source_node": {
+        "node_id": "0135",
+        "title": "Recovered Content",
+        "section": "3.3. *Electrical conductivity*"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.02,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": "LPSCl",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-1 S/cm",
+      "measurement_temperature": "150°C",
+      "reason": "Extracted from the Arrhenius plot in the front matter image (IMG_28aa1b6b) for the Li6PS5Cl (LPSCl) sample at high temperature.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Ball-milling followed by annealing at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0006",
+        "title": "Front Matter Image",
+        "section": "Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.1,
+      "_norm_temp": 150,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0037",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La2/3-xLi3xTiO3 (x=0.13)",
+        "acronym": "LLTO",
+        "proportion": "La series"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the introduction where the maximum conductivity for the La series of lithium lanthanum perovskites is cited from Inaguma's group.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction using stoichiometric amounts of Li2CO3, La2O3 (pre-heated at 700°C before weighing), and TiO2. Reagents were ground together in an agate mortar and heated at 800°C for 4 h to eliminate CO2. The products were then reground, cold-pressed at 150 MPa, and heated at 1150°C for 12 h. Finally, powders were pressed and heated again at 1350°C for 6 h. A heating rate of 1°C/min was maintained during all treatments to avoid lithium losses.",
+      "source_node": {
+        "node_id": "0014",
+        "title": "General",
+        "section": "**Abstract**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La2/3-xLi3xTiO3 (x=0.13)",
+      "_original_name": "Lithium Lanthanum Titanate",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0223",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La2/3-xLi3xTiO3 (x=0.13)",
+        "acronym": "LLTO",
+        "proportion": "tetragonal phase"
+      },
+      "ionic_conductivity_S_per_cm": "enhanced by a factor about 2",
+      "measurement_temperature": "not specified",
+      "reason": "The text describes an enhancement of ionic conductivity by a factor of 2 in quenched samples compared to annealed ones for the LLTO series, citing previous work.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction using stoichiometric amounts of Li2CO3, La2O3 (pre-heated at 700°C before weighing), and TiO2. Reagents were ground together in an agate mortar and heated at 800°C for 4 h to eliminate CO2. The products were then reground, cold-pressed at 150 MPa, and heated at 1150°C for 12 h. Finally, powders were pressed and heated again at 1350°C for 6 h. A heating rate of 1°C/min was maintained during all treatments to avoid lithium losses.",
+      "source_node": {
+        "node_id": "0206",
+        "title": "Ionic Conductivity and Transport Mechanisms",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La2/3-xLi3xTiO3 (x=0.13)",
+      "_original_name": "La2/3-xLi3xTiO3",
+      "_norm_cond": 2.0,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

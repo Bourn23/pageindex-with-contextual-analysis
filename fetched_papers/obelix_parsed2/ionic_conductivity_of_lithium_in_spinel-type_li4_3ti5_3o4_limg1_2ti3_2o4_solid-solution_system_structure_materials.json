@@ -1,0 +1,1349 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 184592,
+    "total_output_tokens": 20223,
+    "total_cost_usd": 0.15296500000000002,
+    "call_counts": {
+      "gemini-3-flash-preview": 70
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json",
+  "extraction_stats": {
+    "total_nodes": 100,
+    "raw_extracted": 50,
+    "after_dedup": 41,
+    "time_elapsed": 249.642560005188,
+    "valid_count": 40,
+    "invalid_count": 1,
+    "by_confidence": {
+      "high": 17,
+      "medium": 24,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 26,
+      "cited": 0,
+      "inferred": 13
+    },
+    "from_text_nodes": 15,
+    "from_image_nodes": 23,
+    "final_count": 41
+  },
+  "material_count": 41,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in image IMG_7265b038 for the Li6PS5Cl sample at 25°C (approx. 3.35 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.0 x 10^-3 S/cm",
+      "measurement_temperature": "60°C",
+      "reason": "Extracted from the Arrhenius plot in image IMG_7265b038 for the Li6PS5Cl sample at 60°C (approx. 3.0 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.004,
+      "_norm_temp": 60,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in image IMG_7265b038 for the Li6PS5Cl sample at 100°C (approx. 2.68 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Mg0.3Ti1.567O4",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 caption and corresponding data points in the Arrhenius plot (Fig 9) and composition plot (Fig 10) for x=0.3.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+      "_original_name": "Li3.4Mg0.3Ti1.567O4",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Mg0.4Ti1.533O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "1.3 x 10^-5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 caption and corresponding data points in the Arrhenius plot (Fig 9) and composition plot (Fig 10) for x=0.4.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+      "_original_name": "Li3.2Mg0.4Ti1.533O4",
+      "_norm_cond": 1.3e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Mg0.5Ti1.5O4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 x 10^-5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 caption and corresponding data points in the Arrhenius plot (Fig 9) and composition plot (Fig 10) for x=0.5.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3Mg0.5Ti1.5O4",
+      "_original_name": "Li3.0Mg0.5Ti1.5O4",
+      "_norm_cond": 1.6e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Mg0.2Ti1.6O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-6 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 caption and corresponding data points in the Arrhenius plot (Fig 9) and composition plot (Fig 10) for x=0.2.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+      "_original_name": "Li3.6Mg0.2Ti1.6O4",
+      "_norm_cond": 5e-06,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 as referenced in sentence 0212, showing the ionic conductivity of the base material (x=0) at 298 K.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mg-doped lithium titanate spinel-type structure",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "Effect of Mg Doping on Ionic Conductivity and Activation Energy",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li(4-2x)MgxTi(5-x)/3O4",
+      "_norm_cond": 1.2e-06,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Mg0.3Ti1.567O4",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 as referenced in sentence 0212 and 0214, showing the ionic conductivity at the composition x=0.3 where a phase transition occurs.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mg-doped lithium titanate with ordering of cation arrangement",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "Effect of Mg Doping on Ionic Conductivity and Activation Energy",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+      "_original_name": "Li(4-2x)MgxTi(5-x)/3O4",
+      "_norm_cond": 2.5e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Mg0.5Ti1.5O4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 as referenced in sentence 0212, showing the ionic conductivity for the highest Mg doping level shown in the plot.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Mg-doped lithium titanate spinel-type structure",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "Effect of Mg Doping on Ionic Conductivity and Activation Energy",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3Mg0.5Ti1.5O4",
+      "_original_name": "Li(4-2x)MgxTi(5-x)/3O4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0193",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Fig. 9",
+      "measurement_temperature": "313 K",
+      "reason": "Extracted as a primary measurement target for the study, though specific numerical values are referenced to be in Fig. 9.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Typical AC impedance plots for Li4/3Ti5/3O4",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0192",
+        "title": "AC Impedance Measurements and Bulk Conductivity Calculation",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4/3Ti5/3O4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 39.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0201",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li(4-2x)MgxTi(5-x)/3O4",
+        "acronym": null,
+        "proportion": "x=0, 0.1, 0.2"
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Fig. 9",
+      "measurement_temperature": "373 K",
+      "reason": "Extracted as a primary measurement target for the study, though specific numerical values are referenced to be in Fig. 9.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Typical AC impedance plots for Li(4-2x)MgxTi(5-x)/3O4",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0192",
+        "title": "AC Impedance Measurements and Bulk Conductivity Calculation",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 99.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 (Arrhenius plot data point) as described in sentence 0276 for the composition x=0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Magnesium-doped lithium titanate spinel structure ; Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li(4-2x)MgxTi(5-x)/3O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Mg0.5Ti1.5O4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 (Arrhenius plot data point) as described in sentence 0276 for the composition x=0.5.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Magnesium-doped lithium titanate spinel structure",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3Mg0.5Ti1.5O4",
+      "_original_name": "Li(4-2x)MgxTi(5-x)/3O4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0276",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Mg0.1Ti1.633O4",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-6 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 10 caption and corresponding data points in the Arrhenius plot (Fig 9) and composition plot (Fig 10) for x=0.1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 spinel-type solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0269",
+        "title": "Figure 9 & 10 Captions",
+        "section": "5. Discussion"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+      "_original_name": "Li3.8Mg0.1Ti1.633O4",
+      "_norm_cond": 2.5e-06,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0193",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Fig. 9",
+      "measurement_temperature": "333 K",
+      "reason": "Extracted as a primary measurement target for the study, though specific numerical values are referenced to be in Fig. 9.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Typical AC impedance plots for Li4/3Ti5/3O4",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0192",
+        "title": "AC Impedance Measurements and Bulk Conductivity Calculation",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4/3Ti5/3O4",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0193",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Fig. 9",
+      "measurement_temperature": "353 K",
+      "reason": "Extracted as a primary measurement target for the study, though specific numerical values are referenced to be in Fig. 9.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Typical AC impedance plots for Li4/3Ti5/3O4",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0192",
+        "title": "AC Impedance Measurements and Bulk Conductivity Calculation",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4/3Ti5/3O4",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0046",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-13 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "The text explicitly states that Li4/3Ti5/3O4 is a pure ionic conductor with a very low electronic conductivity of 10^-13 S cm^-1 at room temperature.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0044",
+        "title": "Electronic Conductivity Challenges and Doping Solutions",
+        "section": "1. Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e-13 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4Ti5O12",
+      "_norm_cond": 1e-13,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the text mentioning ionic conductivity at 298 K for the composition series Li(4-2x)MgxTi(5-x)/3O4. The specific value for x=0 is estimated from the trend described in Sentence 0213 and the context of Fig 10.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Mg-doped lithium titanate spinel-type structure",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "Effect of Mg Doping on Ionic Conductivity and Activation Energy",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4Ti5O12",
+      "_norm_cond": 1.2e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0049",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xMgxTi5O12",
+        "acronym": null,
+        "proportion": "Mg ions partially for Li 8a sites"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻² S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "The text describes an improvement in conductivity for Mg-doped Li4/3Ti5/3O4 (Li4-xMgxTi5O12) as reported by Chen et al. in reference [10].",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [10] by substituting Mg ions partially for Li 8a sites to introduce Ti3+ (d1) ions (details not in text).",
+      "source_node": {
+        "node_id": "0044",
+        "title": "Electronic Conductivity Challenges and Doping Solutions",
+        "section": "1. Introduction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.01,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.58e-7 S cm^-1",
+      "measurement_temperature": "40 °C",
+      "reason": "Calculated from log(sigma*T) = -4.3 at 1000/T = 3.2 K^-1.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0)",
+      "_norm_cond": 1.58e-07,
+      "_norm_temp": 40,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.26e-6 S cm^-1",
+      "measurement_temperature": "100 °C",
+      "reason": "Calculated from log(sigma*T) = -3.3 at 1000/T = 2.68 K^-1 (100°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0)",
+      "_norm_cond": 1.26e-06,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.31e-5 S cm^-1",
+      "measurement_temperature": "200 °C",
+      "reason": "Calculated from log(sigma*T) = -1.52 at 1000/T = 2.11 K^-1 (200°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0)",
+      "_norm_cond": 6.31e-05,
+      "_norm_temp": 200,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.1P0.9Si0.1S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.03e-7 S cm^-1",
+      "measurement_temperature": "50 °C",
+      "reason": "Calculated from log(sigma*T) = -4.48 at 1000/T = 3.1 K^-1 (50°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.1 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.1)",
+      "_norm_cond": 1.03e-07,
+      "_norm_temp": 50,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.1P0.9Si0.1S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.10e-5 S cm^-1",
+      "measurement_temperature": "200 °C",
+      "reason": "Calculated from log(sigma*T) = -2.0 at 1000/T = 2.11 K^-1 (200°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.1 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.1)",
+      "_norm_cond": 2.1e-05,
+      "_norm_temp": 200,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Si0.2S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.18e-8 S cm^-1",
+      "measurement_temperature": "60 °C",
+      "reason": "Calculated from log(sigma*T) = -4.85 at 1000/T = 3.0 K^-1 (60°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.2 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.2)",
+      "_norm_cond": 4.18e-08,
+      "_norm_temp": 60,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Si0.2S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.84e-5 S cm^-1",
+      "measurement_temperature": "200 °C",
+      "reason": "Calculated from log(sigma*T) = -2.06 at 1000/T = 2.11 K^-1 (200°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.2 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.2)",
+      "_norm_cond": 1.84e-05,
+      "_norm_temp": 200,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.3P0.7Si0.3S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.43e-8 S cm^-1",
+      "measurement_temperature": "70 °C",
+      "reason": "Calculated from log(sigma*T) = -4.93 at 1000/T = 2.91 K^-1 (70°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.3 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.3P0.7Si0.3S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.3)",
+      "_norm_cond": 3.43e-08,
+      "_norm_temp": 70,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.4P0.6Si0.4S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.21e-8 S cm^-1",
+      "measurement_temperature": "80 °C",
+      "reason": "Calculated from log(sigma*T) = -5.11 at 1000/T = 2.83 K^-1 (80°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.4 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4P0.6Si0.4S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.4)",
+      "_norm_cond": 2.21e-08,
+      "_norm_temp": 80,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Si0.5S5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.41e-8 S cm^-1",
+      "measurement_temperature": "130 °C",
+      "reason": "Calculated from log(sigma*T) = -5.01 at 1000/T = 2.48 K^-1 (130°C).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite solid electrolyte with x=0.5 substitution.",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h. [Inferred]",
+      "source_node": {
+        "node_id": "0271",
+        "title": "_page_6_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br (x=0.5)",
+      "_norm_cond": 2.41e-08,
+      "_norm_temp": 130,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ti5O12",
+        "acronym": "LTO",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1e-10.9 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ti5O12",
+      "_original_name": "Li4Mg0Ti1.67O4",
+      "_norm_cond": 1.25892541179417e-11,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Mg0.1Ti1.633O4",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "1e-10.2 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.1 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+      "_original_name": "Li3.8Mg0.1Ti1.63O4",
+      "_norm_cond": 6.3095734448e-11,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Mg0.2Ti1.6O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1e-9.5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.2 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+      "_original_name": "Li3.6Mg0.2Ti1.6O4",
+      "_norm_cond": 3.16227766e-10,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Mg0.3Ti1.567O4",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1e-9.1 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.3 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+      "_original_name": "Li3.4Mg0.3Ti1.57O4",
+      "_norm_cond": 7.94328234724282e-10,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Mg0.4Ti1.533O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "1e-8.5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.4 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+      "_original_name": "Li3.2Mg0.4Ti1.53O4",
+      "_norm_cond": 3.16227766e-09,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.1Mg0.45Ti1.52O4",
+        "acronym": null,
+        "proportion": "x=0.45"
+      },
+      "ionic_conductivity_S_per_cm": "1e-8.2 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.45 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.1Mg0.45Ti1.52O4",
+      "_original_name": "Li3.1Mg0.45Ti1.52O4",
+      "_norm_cond": 6.30957344480193e-09,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.04Mg0.48Ti1.51O4",
+        "acronym": null,
+        "proportion": "x=0.48"
+      },
+      "ionic_conductivity_S_per_cm": "1e-7.8 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.48 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.04Mg0.48Ti1.51O4",
+      "_original_name": "Li3.04Mg0.48Ti1.51O4",
+      "_norm_cond": 1.58489319246111e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.02Mg0.49Ti1.5O4",
+        "acronym": null,
+        "proportion": "x=0.49"
+      },
+      "ionic_conductivity_S_per_cm": "1e-7.5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.49 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.02Mg0.49Ti1.5O4",
+      "_original_name": "Li3.02Mg0.49Ti1.5O4",
+      "_norm_cond": 3.16227766e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Mg0.5Ti1.5O4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1e-7.2 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.5 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3Mg0.5Ti1.5O4",
+      "_original_name": "Li3Mg0.5Ti1.5O4",
+      "_norm_cond": 6.30957344480193e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Mg0.3Ti1.567O4",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted based on the specific mention of composition x=0.3 in Sentence 0214 and the general trend of decreasing conductivity with Mg doping described in Sentence 0213.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Mg-doped lithium titanate with ordering of cation arrangement",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "Effect of Mg Doping on Ionic Conductivity and Activation Energy",
+        "section": "4.2. Ionic conductivity"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+      "_original_name": "Li3.4Mg0.3Ti1.567O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.06Mg0.47Ti1.51O4",
+        "acronym": null,
+        "proportion": "x=0.47"
+      },
+      "ionic_conductivity_S_per_cm": "1e-7.9 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from point at x=0.47 on the log conductivity plot (black circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li(4-2x)MgxTi(5-x)/3O4 solid solution",
+      "processing_method": "Conventional solid-state reaction using stoichiometric mixtures of Li2CO3, MgCO3, and anatase-TiO2 starting materials. The mixture was calcined at 700 °C for 24 h on a Pt foil, then heated at 900 °C for 24 h with intermittent grounding. The obtained powder was pelletized at 1500 kg/cm2 and sintered at 1000 °C for 72 h.",
+      "source_node": {
+        "node_id": "0274",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.06Mg0.47Ti1.51O4",
+      "_original_name": "Li3.06Mg0.47Ti1.51O4",
+      "_norm_cond": 1.25892541e-08,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

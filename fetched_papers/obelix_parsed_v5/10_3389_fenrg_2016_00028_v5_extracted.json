@@ -1,0 +1,996 @@
+{
+  "doc_name": "10_3389_fenrg_2016_00028",
+  "timestamp": "2026-02-03 11:54:37",
+  "execution_time_seconds": 117.56,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 16640,
+    "total_output_tokens": 21979,
+    "total_cost_usd": 0.0599,
+    "call_counts": {
+      "gemini-flash-latest": 18
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 53,
+    "skipped_images": 26,
+    "failed_items": 0,
+    "total_sections_processed": 17,
+    "total_images_processed": 15
+  },
+  "material_count": 53,
+  "measurements": [
+    {
+      "raw_composition": "x = 0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Lithium-stuffed garnet-type oxide solid electrolytes (LLBZT) were developed by simultaneous substitution of Ta5+ into the Zr4+ site and Ba2+ into the La3+ site in Li7La3Zr2O12 (LLZ).",
+        "The overall formula is Li6.5La3\u2212xBaxZr1.5\u2212xTa0.5+xO12, where Ba contents x range from 0 to 0.3.",
+        "All LLBZT samples possess a cubic garnet structure without secondary phases.",
+        "The relative densities of LLBZT are between 89 and 93%."
+      ],
+      "raw_conductivity": "8.34e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000834,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0 (LLZT)",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Lithium-stuffed garnet-type oxide solid electrolytes (LLBZT) were developed by simultaneous substitution of Ta5+ into the Zr4+ site and Ba2+ into the La3+ site in Li7La3Zr2O12 (LLZ).",
+        "The overall formula is Li6.5La3\u2212xBaxZr1.5\u2212xTa0.5+xO12, where Ba contents x range from 0 to 0.3.",
+        "All LLBZT samples possess a cubic garnet structure without secondary phases.",
+        "The relative densities of LLBZT are between 89 and 93%."
+      ],
+      "raw_conductivity": "7.94e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000794,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li+ concentration of 6.5",
+      "canonical_formula": null,
+      "material_definitions": [
+        "LLBZT oxides with fixed Li content of 6.5 but different Ba content x = 0, 0.05, 0.1, 0.20, and 0.30 were prepared by a conventional solid state reaction method.",
+        "Stoichiometric amounts of LiOH\b7H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were used in the synthesis.",
+        "The synthesis involved calcination at 900\b0C for 6 h, pressing into pellets, and final sintering at 1150\b0C for 15 h in air using a Pt\b1Au 5% alloy crucible.",
+        "The conductivity of each LLBZT sample was evaluated with AC impedance measurements at a temperature from 27 to 100\b0C."
+      ],
+      "raw_conductivity": "6.1e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00061,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature (25 C) inferred as standard room temperature.",
+        "Conductivity value cited from external source (Inada et al., 2014a)."
+      ]
+    },
+    {
+      "raw_composition": "LLBZT without Ba substitution (x = 0)",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Garnet-type LLBZT solid solutions were synthesized with varying Ba contents (x=0 to 0.3).",
+        "Samples were prepared via solid state synthesis, sintered at 1150\u00b0C.",
+        "Conductivity was measured using AC impedance spectroscopy with Li-ion-blocking Au electrodes.",
+        "Total conductivity includes contributions from both bulk and grain boundaries."
+      ],
+      "raw_conductivity": "7.94e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000794,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LLBZT with x = 0.1",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Garnet-type LLBZT solid solutions were synthesized with varying Ba contents (x=0 to 0.3).",
+        "Samples were prepared via solid state synthesis, sintered at 1150\u00b0C.",
+        "Conductivity was measured using AC impedance spectroscopy with Li-ion-blocking Au electrodes.",
+        "Total conductivity includes contributions from both bulk and grain boundaries."
+      ],
+      "raw_conductivity": "8.34e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000834,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LLBZT with x = 0.3",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Garnet-type LLBZT solid solutions were synthesized with varying Ba contents (x=0 to 0.3).",
+        "Samples were prepared via solid state synthesis, sintered at 1150\u00b0C.",
+        "Conductivity was measured using AC impedance spectroscopy with Li-ion-blocking Au electrodes.",
+        "Total conductivity includes contributions from both bulk and grain boundaries."
+      ],
+      "raw_conductivity": "4.92e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000492,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "The material series investigated is garnet-type Li+ conducting oxide solid electrolytes (LLBZT).",
+        "The samples are derived from LLZ with simultaneous substitution of Ta5+ into the Zr4+ site and Ba2+ into the La3+ site.",
+        "The general composition is Li6.5La3\u2212xBaxZr1.5\u2212xTa0.5+xO12, with Ba contents x ranging from 0 to 0.30.",
+        "All LLBZT samples possess a cubic garnet-type structure without any secondary phases."
+      ],
+      "raw_conductivity": "8.34e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000834,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LLZT (x=0)",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "The material series investigated is garnet-type Li+ conducting oxide solid electrolytes (LLBZT).",
+        "The samples are derived from LLZ with simultaneous substitution of Ta5+ into the Zr4+ site and Ba2+ into the La3+ site.",
+        "The general composition is Li6.5La3\u2212xBaxZr1.5\u2212xTa0.5+xO12, with Ba contents x ranging from 0 to 0.30.",
+        "All LLBZT samples possess a cubic garnet-type structure without any secondary phases."
+      ],
+      "raw_conductivity": "7.94e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000794,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "sigma at 27\u00b0C",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.79",
+      "raw_conductivity_unit": "\u03c3 at 27\u00b0C / mS cm\u207b\u00b9",
+      "normalized_conductivity": 0.00079,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "<span id=\"page-6-1\"></span>Temperature dependence of the conductivity for all LLBZT was also evaluated in the temperature range from 27 to 100\u00b0C. **[Figure 8](#page-7-0)** shows the variation of \u03c3 for all sintered samples as a function of an inverse of temperature 1000*T*<sup>\u2212</sup><sup>1</sup> . The temperature dependence of \u03c3 is expressed by the Arrhenius equation as \u03c3 = \u03c30exp[\u2212*E*a/(*k*B*T*)], where \u03c30 is constant, *E*a is activation energy of conductivity, and *k*B is Boltzmann constant (= 1.381 \u00d7 10<sup>\u2212</sup>23 J/K). The *E*a of each sample are estimated from the slope of \u03c3*T* data plotted in **[Figure 8](#page-7-0)** and summarized in **[Table 2](#page-7-1)**, together with \u03c3 at 27\u00b0C. The sample without Ba [Series: sigma at 27\u00b0C] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "sigma at 27\u00b0C",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.83",
+      "raw_conductivity_unit": "\u03c3 at 27\u00b0C / mS cm\u207b\u00b9",
+      "normalized_conductivity": 0.00083,
+      "raw_temperature": "0.025",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.03,
+      "source_figure_id": "Fig 8",
+      "source_caption": "<span id=\"page-6-1\"></span>Temperature dependence of the conductivity for all LLBZT was also evaluated in the temperature range from 27 to 100\u00b0C. **[Figure 8](#page-7-0)** shows the variation of \u03c3 for all sintered samples as a function of an inverse of temperature 1000*T*<sup>\u2212</sup><sup>1</sup> . The temperature dependence of \u03c3 is expressed by the Arrhenius equation as \u03c3 = \u03c30exp[\u2212*E*a/(*k*B*T*)], where \u03c30 is constant, *E*a is activation energy of conductivity, and *k*B is Boltzmann constant (= 1.381 \u00d7 10<sup>\u2212</sup>23 J/K). The *E*a of each sample are estimated from the slope of \u03c3*T* data plotted in **[Figure 8](#page-7-0)** and summarized in **[Table 2](#page-7-1)**, together with \u03c3 at 27\u00b0C. The sample without Ba [Series: sigma at 27\u00b0C] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "sigma at 27\u00b0C",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.83",
+      "raw_conductivity_unit": "\u03c3 at 27\u00b0C / mS cm\u207b\u00b9",
+      "normalized_conductivity": 0.00083,
+      "raw_temperature": "0.05",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.05,
+      "source_figure_id": "Fig 8",
+      "source_caption": "<span id=\"page-6-1\"></span>Temperature dependence of the conductivity for all LLBZT was also evaluated in the temperature range from 27 to 100\u00b0C. **[Figure 8](#page-7-0)** shows the variation of \u03c3 for all sintered samples as a function of an inverse of temperature 1000*T*<sup>\u2212</sup><sup>1</sup> . The temperature dependence of \u03c3 is expressed by the Arrhenius equation as \u03c3 = \u03c30exp[\u2212*E*a/(*k*B*T*)], where \u03c30 is constant, *E*a is activation energy of conductivity, and *k*B is Boltzmann constant (= 1.381 \u00d7 10<sup>\u2212</sup>23 J/K). The *E*a of each sample are estimated from the slope of \u03c3*T* data plotted in **[Figure 8](#page-7-0)** and summarized in **[Table 2](#page-7-1)**, together with \u03c3 at 27\u00b0C. The sample without Ba [Series: sigma at 27\u00b0C] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "sigma at 27\u00b0C",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.63",
+      "raw_conductivity_unit": "\u03c3 at 27\u00b0C / mS cm\u207b\u00b9",
+      "normalized_conductivity": 0.00063,
+      "raw_temperature": "0.075",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.07,
+      "source_figure_id": "Fig 8",
+      "source_caption": "<span id=\"page-6-1\"></span>Temperature dependence of the conductivity for all LLBZT was also evaluated in the temperature range from 27 to 100\u00b0C. **[Figure 8](#page-7-0)** shows the variation of \u03c3 for all sintered samples as a function of an inverse of temperature 1000*T*<sup>\u2212</sup><sup>1</sup> . The temperature dependence of \u03c3 is expressed by the Arrhenius equation as \u03c3 = \u03c30exp[\u2212*E*a/(*k*B*T*)], where \u03c30 is constant, *E*a is activation energy of conductivity, and *k*B is Boltzmann constant (= 1.381 \u00d7 10<sup>\u2212</sup>23 J/K). The *E*a of each sample are estimated from the slope of \u03c3*T* data plotted in **[Figure 8](#page-7-0)** and summarized in **[Table 2](#page-7-1)**, together with \u03c3 at 27\u00b0C. The sample without Ba [Series: sigma at 27\u00b0C] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "sigma at 27\u00b0C",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.49",
+      "raw_conductivity_unit": "\u03c3 at 27\u00b0C / mS cm\u207b\u00b9",
+      "normalized_conductivity": 0.00049,
+      "raw_temperature": "0.1",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.1,
+      "source_figure_id": "Fig 8",
+      "source_caption": "<span id=\"page-6-1\"></span>Temperature dependence of the conductivity for all LLBZT was also evaluated in the temperature range from 27 to 100\u00b0C. **[Figure 8](#page-7-0)** shows the variation of \u03c3 for all sintered samples as a function of an inverse of temperature 1000*T*<sup>\u2212</sup><sup>1</sup> . The temperature dependence of \u03c3 is expressed by the Arrhenius equation as \u03c3 = \u03c30exp[\u2212*E*a/(*k*B*T*)], where \u03c30 is constant, *E*a is activation energy of conductivity, and *k*B is Boltzmann constant (= 1.381 \u00d7 10<sup>\u2212</sup>23 J/K). The *E*a of each sample are estimated from the slope of \u03c3*T* data plotted in **[Figure 8](#page-7-0)** and summarized in **[Table 2](#page-7-1)**, together with \u03c3 at 27\u00b0C. The sample without Ba [Series: sigma at 27\u00b0C] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "1.81",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 1.81,
+      "raw_temperature": "2.667",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.8100 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.98",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.98,
+      "raw_temperature": "2.857",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.9800 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-0.12",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.12,
+      "raw_temperature": "3.077",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.20e-01)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-1.41",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.41,
+      "raw_temperature": "3.333",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.41e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "1.71",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 1.71,
+      "raw_temperature": "2.667",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.05] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.7100 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.86",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.86,
+      "raw_temperature": "2.857",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.05] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.8600 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-0.22",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.22,
+      "raw_temperature": "3.077",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.05] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.20e-01)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-1.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.45,
+      "raw_temperature": "3.333",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.05] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "1.51",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 1.51,
+      "raw_temperature": "2.667",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.10] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.5100 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.64",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.64,
+      "raw_temperature": "2.857",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.10] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.6400 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-0.36",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.36,
+      "raw_temperature": "3.077",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.10] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.60e-01)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-1.54",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.54,
+      "raw_temperature": "3.333",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.10] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.54e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "1.29",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 1.29,
+      "raw_temperature": "2.667",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.20] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.2900 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.44",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.44,
+      "raw_temperature": "2.857",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.20] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-0.57",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.57,
+      "raw_temperature": "3.077",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.20] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.70e-01)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-1.68",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.68,
+      "raw_temperature": "3.333",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.20] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.68e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.88,
+      "raw_temperature": "2.667",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.30] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.8800 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "0.22",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.22,
+      "raw_temperature": "2.857",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.30] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-0.74",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.74,
+      "raw_temperature": "3.077",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.30] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.40e-01)"
+      ]
+    },
+    {
+      "raw_composition": "x = 0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [],
+      "raw_conductivity": "-1.74",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.74,
+      "raw_temperature": "3.333",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Table 2",
+      "source_caption": "<span id=\"page-7-1\"></span><span id=\"page-7-0\"></span>TABLE 2 | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30. [Series: x = 0.30] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.74e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "7.94e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000794,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "2.70e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "50",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 50.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "7.5e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0075,
+      "raw_temperature": "75",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 75.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "16.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.016,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "8.32e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000832,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "2.50e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0025,
+      "raw_temperature": "50",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 50.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "6.6e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0066,
+      "raw_temperature": "75",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 75.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.05",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "14.4e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0144,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "8.34e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000834,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "2.20e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0022,
+      "raw_temperature": "50",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 50.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "5.40e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "75",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 75.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.10",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "11.9e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0119,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "6.31e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000631,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "1.80e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0018,
+      "raw_temperature": "50",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 50.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "4.50e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0045,
+      "raw_temperature": "75",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 75.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.20",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "10.6e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0106,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "4.92e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000492,
+      "raw_temperature": "27",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 27.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "1.30e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0013,
+      "raw_temperature": "50",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 50.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "3.10e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0031,
+      "raw_temperature": "75",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 75.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.30",
+      "canonical_formula": "Li_{6.80}La_{2.20}Ba_{0.30}Zr_{1}Ti_{1}O_{12}",
+      "material_definitions": [
+        "Total conductivity measurements for LLBZT solid solutions with varying Ba content x (0 to 0.30)."
+      ],
+      "raw_conductivity": "5.40e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: | Total conductivity **\u03c3** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0\u20130.30.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    }
+  ],
+  "material_definitions": []
+}

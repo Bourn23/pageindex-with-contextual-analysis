@@ -1,0 +1,89 @@
+{
+  "title": "Arrhenius plot of the conductivity \u03c3 for LLZBT",
+  "xAxis": {
+    "label": "1000T\u207b\u00b9",
+    "unit": "K\u207b\u00b9"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T)",
+    "unit": "S cm\u207b\u00b9 K\u207b\u00b9"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.6,
+      "yValue": 1.8
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.9,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.25,
+      "yValue": -1.4
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.6,
+      "yValue": 1.5
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.9,
+      "yValue": 0.6
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.25,
+      "yValue": -1.5
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.6,
+      "yValue": 1.3
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.9,
+      "yValue": 0.3
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.25,
+      "yValue": -1.6
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.6,
+      "yValue": 1.1
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.9,
+      "yValue": 0.1
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.25,
+      "yValue": -1.65
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.6,
+      "yValue": 0.8
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.9,
+      "yValue": 0.1
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.25,
+      "yValue": -1.7
+    }
+  ],
+  "summary": "The Arrhenius plot shows the relationship between conductivity and temperature for LLZBT at different values of x. As the temperature increases, the conductivity decreases. For a given temperature, the conductivity decreases as the value of x increases."
+}

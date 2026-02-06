@@ -1,0 +1,75 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-180",
+      "extracted_id": "EX-6",
+      "reason": "The ground truth formula Li20.7Si2.7P3.3S24.0 perfectly matches the normalized extracted formula Li(3.45*6)Si(0.45*6)P(0.55*6)S(4*6) = Li20.7Si2.7P3.3S24.0. The conductivity values (0.00673 S/cm vs 0.0067 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-181",
+      "extracted_id": "EX-9",
+      "reason": "The ground truth formula Li20.85Si2.85P3.15S24.0 is very close to the normalized extracted formula Li(3.48*6)Si(0.48*6)P(0.52*6)S(4*6) = Li20.88Si2.88P3.12S24.0. The conductivity values (0.00527 S/cm vs 0.0052 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-182",
+      "extracted_id": "EX-10",
+      "reason": "The ground truth formula Li20.55Si2.55P3.45S24.0 is very close to the normalized extracted formula Li(3.42*6)Si(0.42*6)P(0.58*6)S(4*6) = Li20.52Si2.52P3.48S24.0. The conductivity values (0.00565 S/cm vs 0.0056 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-183",
+      "extracted_id": "EX-11",
+      "reason": "The ground truth formula Li20.4Si2.4P3.6S24.0 perfectly matches the normalized extracted formula Li(3.4*6)Si(0.4*6)P(0.6*6)S(4*6) = Li20.4Si2.4P3.6S24.0. The conductivity values (0.00421 S/cm vs 0.0042 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-184",
+      "extracted_id": "EX-0",
+      "reason": "The ground truth formula Li20.01Sn1.98P4.02S24.0 is very close to the normalized extracted formula Li(10*2)Sn(1*2)P(2*2)S(12*2) = Li20Sn2P4S24.0. The conductivity values (0.00373 S/cm vs 0.0037 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-185",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the composition Li19.8Sn1.8P4.2S24.0 and conductivity 0.00365 S/cm closely enough. While EX-18 has a similar conductivity (0.0037 S/cm), its normalized formula Li19.38Sn1.38P4.62S24.0 has significantly different Sn and P ratios.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-186",
+      "extracted_id": "EX-16",
+      "reason": "The ground truth formula Li19.71Sn1.68P4.32S24.0 is very close to the normalized extracted formula Li(3.29*6)Sn(0.29*6)P(0.71*6)S(4*6) = Li19.74Sn1.74P4.26S24.0. The conductivity values (0.00436 S/cm vs 0.0041 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-187",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the composition Li19.62Sn1.62P4.38S24.0 and conductivity 0.00496 S/cm closely enough. EX-17 (normalized Li19.5Sn1.5P4.5S24.0) has somewhat similar composition but the Sn and P ratios are different, and conductivity (0.0045 S/cm) is also not a very close match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-188",
+      "extracted_id": "EX-17",
+      "reason": "The ground truth formula Li19.56Sn1.56P4.44S24.0 is very close to the normalized extracted formula Li(3.25*6)Sn(0.25*6)P(0.75*6)S(4*6) = Li19.5Sn1.5P4.5S24.0. The conductivity values (0.00453 S/cm vs 0.0045 S/cm) and temperatures (room temperature) are also a very close match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-189",
+      "extracted_id": null,
+      "reason": "While EX-17 has a perfect formula match (normalized Li19.5Sn1.5P4.5S24.0), its conductivity (0.0045 S/cm) is significantly different from the ground truth (0.0036 S/cm). EX-18 has a closer conductivity (0.0037 S/cm) but its normalized formula (Li19.38Sn1.38P4.62S24.0) is not a close compositional match.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "8 out of 10 Ground Truth entries were successfully matched to Extracted Data. The mismatches were primarily due to either significant differences in chemical composition or a notable discrepancy in conductivity values, even when one aspect was close.",
+  "metrics": {
+    "recall": 70.0,
+    "precision": 21.21212121212121,
+    "f1": 32.558139534883715,
+    "avg_log10_error": 0.006533741125705118,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 7,
+    "total_gt": 10,
+    "total_ex": 33
+  }
+}

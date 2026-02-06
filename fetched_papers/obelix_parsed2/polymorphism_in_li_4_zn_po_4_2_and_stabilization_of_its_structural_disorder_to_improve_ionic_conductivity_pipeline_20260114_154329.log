@@ -1,0 +1,439 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_pipeline_20260114_154329.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: **Just Accepted**
+  -> Started Section: Polymorphism in Li<sub>4</sub>Zn(PO<sub>4</sub>)<sub>2</sub> and Stabilization of its Structural Disorder to Improve Ionic Conductivity
+  -> Started Section: **ABSTRACT**
+  -> Started Section: INTRODUCTION
+  -> Started Section: EXPERIMENTAL SECTION
+  -> Started Section: RESULTS AND DISCUSSIONS
+  -> Started Section: CONCLUSIONS
+  -> Started Section: **Supporting Information**
+  -> Started Section: **Corresponding Author**
+  -> Started Section: **Notes**
+  -> Started Section: ACKNOWLEDGMENTS
+  -> Started Section: REFERENCES
+  -> Started Section: **Table of Contents**
+  🔍 Checking placeholder: '__IMG_98740221__'
+  ✅ Found Special Node: __IMG_98740221__
+  🔍 Checking placeholder: '__IMG_c5d6fcf2__'
+  ✅ Found Special Node: __IMG_c5d6fcf2__
+  ✓ Finished Section: Introduction
+  🔍 Checking placeholder: '__IMG_dc673156__'
+  ✅ Found Special Node: __IMG_dc673156__
+  ✓ Finished Section: **Table of Contents**
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: **Corresponding Author**
+  ✓ Finished Section: Polymorphism in Li<sub>4</sub>Zn(PO<sub>4</sub>)<sub>2</sub> and Stabilization of its Structural Disorder to Improve Ionic Conductivity
+⚠️ Warning: LLM dropped sentences [11] in '**Just Accepted**'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_e3437710__'
+  ✅ Found Special Node: __IMG_e3437710__
+  ✓ Finished Section: **Notes**
+  ✓ Finished Section: ACKNOWLEDGMENTS
+  ✓ Finished Section: CONCLUSIONS
+  ✓ Finished Section: **ABSTRACT**
+  ✓ Finished Section: **Just Accepted**
+  ✓ Finished Section: **Supporting Information**
+  ✓ Finished Section: INTRODUCTION
+  ✓ Finished Section: EXPERIMENTAL SECTION
+  ✓ Finished Section: REFERENCES
+  🔍 Checking placeholder: '__TBL_514c5418__'
+  ✅ Found Special Node: __TBL_514c5418__
+  🔍 Checking placeholder: '__TBL_ce2841e8__'
+  ✅ Found Special Node: __TBL_ce2841e8__
+  🔍 Checking placeholder: '__IMG_fa503a81__'
+  ✅ Found Special Node: __IMG_fa503a81__
+  🔍 Checking placeholder: '__IMG_c5d04f91__'
+  ✅ Found Special Node: __IMG_c5d04f91__
+  🔍 Checking placeholder: '__IMG_8c6225cc__'
+  ✅ Found Special Node: __IMG_8c6225cc__
+  🔍 Checking placeholder: '__IMG_6cc06e1c__'
+  ✅ Found Special Node: __IMG_6cc06e1c__
+  🔍 Checking placeholder: '__IMG_0fb2280e__'
+  ✅ Found Special Node: __IMG_0fb2280e__
+  🔍 Checking placeholder: '__IMG_d5d96c50__'
+  ✅ Found Special Node: __IMG_d5d96c50__
+  🔍 Checking placeholder: '__IMG_9fca1959__'
+  ✅ Found Special Node: __IMG_9fca1959__
+  🔍 Checking placeholder: '__IMG_053c453c__'
+  ✅ Found Special Node: __IMG_053c453c__
+  🔍 Checking placeholder: '__IMG_ff91e4d5__'
+  ✅ Found Special Node: __IMG_ff91e4d5__
+  🔍 Checking placeholder: '__TBL_f18fd19b__'
+  ✅ Found Special Node: __TBL_f18fd19b__
+  🔍 Checking placeholder: '__IMG_faebb889__'
+  ✅ Found Special Node: __IMG_faebb889__
+  🔍 Checking placeholder: '__IMG_063ec64e__'
+  ✅ Found Special Node: __IMG_063ec64e__
+  🔍 Checking placeholder: '__TBL_169e0fa6__'
+  ✅ Found Special Node: __TBL_169e0fa6__
+  🔍 Checking placeholder: '__TBL_8310dbb7__'
+  ✅ Found Special Node: __TBL_8310dbb7__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 2/3). Retrying in 4s...
+  ✓ Finished Section: RESULTS AND DISCUSSIONS
+  ✓ Re-indexed 578 structural nodes.
+  ✓ Mapped 583 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 97 text nodes and 15 image nodes.
+
+[Stage 2] Extracting from 97 relevant nodes...
+  [1/97] ○ BVEL Analysis for Li+ Conduction Pathways (Figure ... (0 data points)
+  [2/97] ○ Interpretation of BVEL Results and Conduction Mech... (0 data points)
+  [3/97] ○ General Trends in Ionic Conductivity of Ga-Substit... (0 data points)
+  [4/97] ○ Representative AC Impedance Spectra (Figure 9a)... (0 data points)
+  [5/97] ○ Summary of Initial Findings and Phase Transition... (0 data points)
+  [6/97] ○ Room Temperature Stabilization and Characterizatio... (0 data points)
+  [7/97] ○ Limitations and Future Perspectives... (0 data points)
+  [8/97] ○ Supporting Information (PDF)... (0 data points)
+  [9/97] ○ Corresponding Author... (0 data points)
+  [10/97] ○ Crystallographic Data (CIF)... (0 data points)
+  [11/97] ✓ Discussion on Factors Influencing Ionic Conductivi... (2 data points)
+  [12/97] ○ Conflict of Interest Declaration... (0 data points)
+  [13/97] ✓ Enhanced Ionic Conductivity and Conduction Mechani... (2 data points)
+  [14/97] ○ Acknowledgments... (0 data points)
+  [15/97] ○ Reference 1... (0 data points)
+  [16/97] ✓ Arrhenius Plot of Ionic Conductivity for Ga-Substi... (4 data points)
+  [17/97] ○ Reference 2... (0 data points)
+  [18/97] ○ Reference 3... (0 data points)
+  [19/97] ○ Reference 4... (0 data points)
+  [20/97] ○ Reference 9... (0 data points)
+  [21/97] ○ Reference 5... (0 data points)
+  [22/97] ○ Reference 7... (0 data points)
+  [23/97] ○ Reference 6... (0 data points)
+  [24/97] ○ Reference 8... (0 data points)
+  [25/97] ○ Reference 11... (0 data points)
+  [26/97] ○ Reference 10... (0 data points)
+  [27/97] ○ Reference 12... (0 data points)
+  [28/97] ○ Reference 14... (0 data points)
+  [29/97] ○ Reference 15... (0 data points)
+  [30/97] ○ Reference 16... (0 data points)
+  [31/97] ○ Reference 17... (0 data points)
+  [32/97] ○ Reference 18... (0 data points)
+  [33/97] ✓ Reference 13... (1 data points)
+  [34/97] ✓ Ionic Conductivity of Pristine and Ball-Milled Li4... (7 data points)
+  [35/97] ○ Reference 20... (0 data points)
+  [36/97] ○ Reference 21... (0 data points)
+  [37/97] ○ Bibliographic Information... (0 data points)
+  [38/97] ✓ Detailed Analysis of Ionic Conductivities and Acti... (7 data points)
+  [39/97] ○ Reference 22... (0 data points)
+  [40/97] ○ Reference 23... (0 data points)
+  [41/97] ○ Definition and Purpose... (0 data points)
+  [42/97] ✓ Reference 19... (1 data points)
+  [43/97] ○ Format, Status, and Citability... (0 data points)
+  [44/97] ○ Reference 24... (0 data points)
+  [45/97] ○ Optionality of Service... (0 data points)
+  [46/97] ○ Reference 25... (0 data points)
+  [47/97] ○ Reference 26... (0 data points)
+  [48/97] ○ Post-Acceptance Process and Responsibilities... (0 data points)
+  [49/97] ○ Reference 27... (0 data points)
+  [50/97] ○ Authors... (0 data points)
+  [51/97] ○ Reference 28... (0 data points)
+  [52/97] ○ Introduction to Solid Electrolytes... (0 data points)
+  [53/97] ○ Reference 29... (0 data points)
+  [54/97] ○ Investigation of Li4Zn(PO4)2 Polymorphs and Instab... (0 data points)
+  [55/97] ○ Reference 30... (0 data points)
+  [56/97] ○ Ga Substitution for Stabilization and Conductivity... (0 data points)
+  [57/97] ○ Reference 31... (0 data points)
+  [58/97] ○ Elucidation of Conduction Mechanism... (0 data points)
+  [59/97] ✓ Introduction... (3 data points)
+  [60/97] ○ Reference 32... (0 data points)
+  [61/97] ○ Reference 34... (0 data points)
+  [62/97] ○ Reference 33... (0 data points)
+  [63/97] ○ Identifying Li4Zn(PO4)2 as a Promising Phosphate C... (0 data points)
+  [64/97] ○ Review of Prior Studies on Li4Zn(PO4)2 Polymorphs ... (0 data points)
+  [65/97] ○ Reference 35... (0 data points)
+  [66/97] ○ Strategies for Stabilizing High-Temperature Disord... (0 data points)
+  [67/97] ○ Stabilization and Characterization of Disordered L... (0 data points)
+  [68/97] ○ Reference 36... (0 data points)
+  [69/97] ○ Reference 37... (0 data points)
+  [70/97] ○ Reference 38... (0 data points)
+  [71/97] ○ Synthesis... (0 data points)
+  [72/97] ○ Reference 39... (0 data points)
+  [73/97] ○ Characterization... (0 data points)
+  [74/97] ✓ Recovered Content... (3 data points)
+  [75/97] ○ Structural Characterization of α-Li4Zn(PO4)2 and S... (0 data points)
+  [76/97] ✓ Background and Motivation for Solid Electrolytes... (2 data points)
+  [77/97] ○ Phase Transition to High-Temperature β-Li4Zn(PO4)2... (0 data points)
+  [78/97] ○ Reference 41... (0 data points)
+  [79/97] ○ Reference 40... (0 data points)
+  [80/97] ○ Structural Elucidation of High-Temperature β-Li4Zn... (0 data points)
+  [81/97] ○ Reference 42... (0 data points)
+  [82/97] ○ Visual Summary of Alpha, Beta, and Beta-Prime Crys... (0 data points)
+  [83/97] ○ Reference 43... (0 data points)
+  [84/97] ○ Attempts to Stabilize β-Phase via Ball-Milling... (0 data points)
+  [85/97] ○ Overview of Ga-Substituted Samples and Their Phase... (0 data points)
+  [86/97] ○ Reference 44... (0 data points)
+  [87/97] ○ Introduction to Chemical Substitution with Ga and ... (0 data points)
+  [88/97] ○ Structural Parameters for β'-Li3.7Zn0.7Ga0.3(PO4)2... (0 data points)
+  [89/97] ○ Structural Parameters for β-Li3.5Zn0.5Ga0.5(PO4)2 ... (0 data points)
+  [90/97] ○ Rietveld Refinement for β'-Li3.7Zn0.7Ga0.3(PO4)2 (... (0 data points)
+  [91/97] ○ Characterization of Ga-Stabilized β-Li3.5Zn0.5Ga0.... (0 data points)
+  [92/97] ○ Influence of Cooling Rate and Temperature-Dependen... (0 data points)
+  [93/97] ○ Temperature-Dependent XRD Patterns of Ga-Substitut... (0 data points)
+  [94/97] ○ DSC Confirmation and Phase Diagram Establishment f... (0 data points)
+  [95/97] ○ Temperature-Composition Phase Diagram (Figure 8)... (0 data points)
+  [96/97] ✓ Ionic Conductivity Measurement Methodology... (1 data points)
+  [97/97] ✓ Image... (3 data points)
+  → 36 total data points extracted
+
+[Stage 2b] Processing 15 images directly...
+    Warning: Skipping missing image _page_18_Figure_3.jpeg
+    Warning: Skipping missing image _page_5_Figure_5.jpeg
+    Warning: Skipping missing image _page_13_Figure_3.jpeg
+    Warning: Skipping missing image _page_0_Picture_0.jpeg
+    Warning: Skipping missing image _page_25_Figure_4.jpeg
+    Warning: Skipping missing image _page_7_Figure_3.jpeg
+    Warning: Skipping missing image _page_14_Figure_4.jpeg
+    Warning: Skipping missing image _page_0_Picture_1.jpeg
+    Warning: Skipping missing image _page_8_Figure_6.jpeg
+    Warning: Skipping missing image _page_15_Figure_4.jpeg
+    Warning: Skipping missing image _page_0_Picture_8.jpeg
+    Warning: Skipping missing image _page_9_Figure_4.jpeg
+    Warning: Skipping missing image _page_16_Figure_4.jpeg
+    Warning: Skipping missing image _page_5_Figure_3.jpeg
+    Warning: Skipping missing image _page_11_Figure_3.jpeg
+
+Merging: 36 text-based + 0 image-based points.
+  → Running physical heuristic checks on 36 points...
+  → Running LLM semantic verification on 36 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 21 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li10GeP2S12"
+- "Li11−xM2−xP1+xS12 (M = Si, Ge, Sn)"
+- "Li3.9Zn0.9Ga0.1(PO4)2 (x=0.1)"
+- "Li4-xZn1-xGax(PO4)2 (beta-phase)"
+- "Li4-xZn1-xGax(PO4)2 (x > 0.40)"
+- "Li4-xZn1-xGax(PO4)2 (x)"
+- "Li4-xZn1-xGax(PO4)2 (x=0)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.0)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.05)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.05, 0.10)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.1)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.10)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.2)"
+- "Li4-xZn1-xGax(PO4)2 (x=0.3)"
+- "Li4Zn(PO4)2"
+- "Li4Zn(PO4)2 (pristine)"
+- "Li4Zn(PO4)2 (α-form)"
+- "Li4Zn(PO4)2 (β-polymorph)"
+- "Li6PS5Br"
+- "Li6PS5Cl"
+- "Li6PS5I"
+- "Li7La3Zr2O12"
+- "garnets, perovskites"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li10GeP2S12', canonical_name='Lithium Germanium Phosphorus Sulfide', abbreviation='LGPS', variant_names=['Li10GeP2S12']), CanonicalMaterialName(canonical_formula='Li11-xM2-xP1+xS12 (M = Si, Ge, Sn)', canonical_name='Lithium Metal Phosphorus Sulfide', abbreviation=None, variant_names=['Li11−xM2−xP1+xS12 (M = Si, Ge, Sn)']), CanonicalMaterialName(canonical_formula='Li3.9Zn0.9Ga0.1(PO4)2', canonical_name='Lithium Zinc Gallium Phosphate (x=0.1)', abbreviation=None, variant_names=['Li3.9Zn0.9Ga0.1(PO4)2 (x=0.1)', 'Li4-xZn1-xGax(PO4)2 (x=0.1)', 'Li4-xZn1-xGax(PO4)2 (x=0.10)']), CanonicalMaterialName(canonical_formula='Li4-xZn1-xGax(PO4)2', canonical_name='Lithium Zinc Gallium Phosphate', abbreviation=None, variant_names=['Li4-xZn1-xGax(PO4)2 (beta-phase)', 'Li4-xZn1-xGax(PO4)2 (x > 0.40)', 'Li4-xZn1-xGax(PO4)2 (x)', 'Li4-xZn1-xGax(PO4)2 (x=0.05, 0.10)']), CanonicalMaterialName(canonical_formula='Li4Zn(PO4)2', canonical_name='Lithium Zinc Phosphate', abbreviation=None, variant_names=['Li4-xZn1-xGax(PO4)2 (x=0)', 'Li4-xZn1-xGax(PO4)2 (x=0.0)', 'Li4Zn(PO4)2', 'Li4Zn(PO4)2 (pristine)', 'Li4Zn(PO4)2 (α-form)', 'Li4Zn(PO4)2 (β-polymorph)']), CanonicalMaterialName(canonical_formula='Li3.95Zn0.95Ga0.05(PO4)2', canonical_name='Lithium Zinc Gallium Phosphate (x=0.05)', abbreviation=None, variant_names=['Li4-xZn1-xGax(PO4)2 (x=0.05)']), CanonicalMaterialName(canonical_formula='Li3.8Zn0.8Ga0.2(PO4)2', canonical_name='Lithium Zinc Gallium Phosphate (x=0.2)', abbreviation=None, variant_names=['Li4-xZn1-xGax(PO4)2 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li3.7Zn0.7Ga0.3(PO4)2', canonical_name='Lithium Zinc Gallium Phosphate (x=0.3)', abbreviation=None, variant_names=['Li4-xZn1-xGax(PO4)2 (x=0.3)']), CanonicalMaterialName(canonical_formula='Li6PS5Br', canonical_name='Lithium Phosphorus Sulfide Bromide', abbreviation=None, variant_names=['Li6PS5Br']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='Li6PS5I', canonical_name='Lithium Phosphorus Sulfide Iodide', abbreviation=None, variant_names=['Li6PS5I']), CanonicalMaterialName(canonical_formula='Li7La3Zr2O12', canonical_name='Lithium Lanthanum Zirconium Oxide', abbreviation='LLZO', variant_names=['Li7La3Zr2O12', 'garnets']), CanonicalMaterialName(canonical_formula='ABO3', canonical_name='Perovskite', abbreviation=None, variant_names=['perovskites'])]
+  → Created 13 canonical material(s)
+  → Updated 35/36 material names
+  → Normalizing 36 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='2.5 x 10^-7 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 2.5e-07, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-8 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 1e-08, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='nearly similar', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='nearly similar', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='~2-5 x 10-13 S·cm-1', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 3.5e-13, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.2 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.2e-06, 'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='several orders of magnitudes lower than 2-5 x 10-13 S·cm-1', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 5e-13}
+    [DEBUG Norm] Input: Cond='5.0 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 5e-06}
+    [DEBUG Norm] Input: Cond='5.5x10-18 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 5.5e-18, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.8x10-15 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1.8e-15, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.5x10-19 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 3.5e-19, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='3 x 10^-15 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 3e-15, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='~1– 2 x10⁻¹² S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-12, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='~1– 2 x10⁻¹² S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 2e-12}
+    [DEBUG Norm] Input: Cond='2.4x10-15 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 2.4e-15, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.8x10-19 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 1.8e-19}
+    [DEBUG Norm] Input: Cond='~1– 2 x10⁻¹² S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.5e-12, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='5.55·10⁻¹⁸ S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 5.55e-18, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.7 x 10^-14 S·cm-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 1.7e-14, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='~4-8 x10⁻¹⁴ S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 4e-14, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='~6 x10⁻¹² S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 6e-12}
+    [DEBUG Norm] Input: Cond='6.8 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.00068}
+    [DEBUG Norm] Input: Cond='7.2 x 10^-7 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 7.2e-07}
+    [DEBUG Norm] Input: Cond='~2 x10⁻¹² S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 2e-12, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='~4-8 x10⁻¹⁴ S·cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 6e-14, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.0011, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0011}
+    [DEBUG Norm] Input: Cond='4.5 x 10^-3 S/cm', Temp='60°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0045, 'temp_value': 60, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='~10-4-10-6 Scm-1', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'Scm-1'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.01, 'cond_unit': 'S/cm', 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='not specified', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='~10-2-10-3 Scm-1', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.01}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.0011}
+    [DEBUG Norm] Input: Cond='1.3 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 1.3e-06, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.8 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.00068, 'temp_unit': 'C', 'temp_value': 25}
+
+[Stage 3] Deduplicating 36 data points...
+  → Merged 5 duplicates, 31 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         38
+Total Input:         182,634 tokens
+Total Output:        7,410 tokens
+--------------------------------------------------
+TOTAL COST:          $0.1135
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 38 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure_materials.json
+Time elapsed (s)  115.94527578353882
+
+Statistics:
+  Nodes analyzed: 112
+  Raw data points: 36
+  After dedup: 27
+  Valid: 27, Invalid: 0
+
+By Confidence:
+  high: 25
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 25
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li4-xZn1-xGax(PO4)2: ~2-5 x 10-13 S·cm-1 @ RT [high]
+  ✓ Li4Zn(PO4)2: several orders of magnitudes lower than 2-5 x 10-13 S·cm-1 @ RT [high]
+  ✓ Li4Zn(PO4)2: 1.0 x 10^-8 S/cm @ 25°C [high]
+  ✓ Li3.9Zn0.9Ga0.1(PO4)2: 2.5 x 10^-7 S/cm @ 25°C [high]
+  ✓ Li3.8Zn0.8Ga0.2(PO4)2: 1.2 x 10^-6 S/cm @ 25°C [high]
+  ... and 22 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.chemmater.7b05139
+                  Composition  Ionic conductivity (S cm-1)
+51       Li16.0Zn4.0P8.0O32.0                 5.550000e-18
+66   Li7.4Zn1.4Ga0.6P4.0O16.0                 5.650000e-12
+108       Li8.0Zn2.0P4.0O16.0                 1.000000e-15
+109  Li7.0Zn1.0Ga1.0P4.0O16.0                 1.000000e-15
+Starting Evaluation on 4 Ground Truth Points...
+
+Evaluation Complete: 3/4 Matched (75.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity
+[0;34m[INFO][0m DOI: 10.1021/acs.chemmater.7b05139
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_pipeline_20260114_154329.log
+

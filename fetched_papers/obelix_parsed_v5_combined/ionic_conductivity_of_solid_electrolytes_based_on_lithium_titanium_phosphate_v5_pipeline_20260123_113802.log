@@ -1,0 +1,169 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_pipeline_20260123_113802.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Ionic Conductivity of Solid Electrolytes Based on Lithium Titanium Phosphate
+   --- Found: 8 Sections
+   --- Found: 11 Figures, 4 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section '**Results and Discussion**' contains:
+       - 11 Images: ['Fig 9', 'Fig 4', 'Fig 8', 'Fig 3', 'Fig 5', 'Fig 1', 'Fig 6', 'Fig 7', 'Fig 2', 'Unknown', 'Fig 9']
+       - 4 Tables: ['Unknown', 'Unknown', 'Unknown', 'Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 18 items (Text + Images) simultaneously ...
+   [Retry 1/3] JSON Error for **Results and Discussion**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 9 column ...
+   [91m[Image Warning][0m page_2_figure_5.jpeg: LiTi2(PO4)3 not from figure, skipping measurement
+   [Retry 1/3] page_2_figure_5.jpeg: "MeasuredPoint" object has no field "ionic_conductivity"
+   ✓ page_2_figure_11.jpeg (Fig 6): Found 5 points
+   ❌ page_2_figure_5.jpeg: Failed after 3 attempts - "MeasuredPoint" object has no field "ionic_conductivity"
+   [Retry 2/3] JSON Error for **Results and Discussion**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 10 column...
+   [91m[Image Warning][0m page_2_figure_2.jpeg: LiTi2(PO4)3 not from figure, skipping measurement
+   [Retry 1/3] page_2_figure_2.jpeg: "MeasuredPoint" object has no field "ionic_conductivity"
+   ❌ page_2_figure_2.jpeg: Failed after 3 attempts - "MeasuredPoint" object has no field "ionic_conductivity"
+   [Retry 3/3] JSON Error for **Results and Discussion**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 9 column ...
+   [91m[Image Warning][0m page_3_figure_2.jpeg: LiTi2(PO4)3 (bulk) not from figure, skipping measurement
+   [Retry 1/3] page_3_figure_2.jpeg: "MeasuredPoint" object has no field "ionic_conductivity"
+   ❌ page_3_figure_2.jpeg: Failed after 3 attempts - "MeasuredPoint" object has no field "ionic_conductivity"
+   [91m[Image Warning][0m page_1_figure_7.jpeg: Li1.3M0.3Ti1.7(PO4)3 (M = Al) not from figure, skipping measurement
+   [Retry 1/3] page_1_figure_7.jpeg: "MeasuredPoint" object has no field "ionic_conductivity"
+   [91m[Text Error][0m **Results and Discussion**: Failed after 3 attempts. Last error: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 9 column 59 [type=json_invalid, input_value='{\n  "measurements": [\n....2 x 10^-4 S cm^-1 at 2', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+   ❌ page_1_figure_7.jpeg: Failed after 3 attempts - "MeasuredPoint" object has no field "ionic_conductivity"
+   [91m[Image Warning][0m page_2_figure_7.jpeg: LiTi2(PO4)3 + 0.2 Li2O not from figure, skipping measurement
+   [Retry 1/3] page_2_figure_7.jpeg: "MeasuredPoint" object has no field "ionic_conductivity"
+   ❌ page_2_figure_7.jpeg: Failed after 3 attempts - "MeasuredPoint" object has no field "ionic_conductivity"
+   ✓ page_3_figure_7.jpeg (Fig 8): Found 4 points
+   ... Normalizing Units & Temperatures...
+Norm Error: could not convert string to float: '10^-3.1'
+Norm Error: could not convert string to float: '10^-3.2'
+Norm Error: could not convert string to float: '10^-3.3'
+Norm Error: could not convert string to float: '10^-5.4'
+
+   📊 Extraction Summary:
+      - Extracted: 12 measurements
+      - Skipped (no data): 8 images
+      - Failed: 6 items
+
+Done! Extracted 12 points.
+Saved to: fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         12
+Total Input:         14,902 tokens
+Total Output:        14,462 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0480
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 6 calls
+  - gemini-3-flash-preview        : 6 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1149/1.2086597
+GT-235: Li6.0Ti12.0P18.0O72.0 | 2e-06 S/cm
+GT-242: Li7.2Ti12.0Si1.2P16.8O72.0 | 8.6e-05 S/cm
+GT-243: Li7.8Ti12.0Si1.8P16.2O72.0 | 0.00032 S/cm
+GT-244: Li7.2Al1.2Ti10.8P18.0O72.0 | 0.000595 S/cm
+GT-245: Li7.8Al1.8Ti10.2P18.0O72.0 | 0.000722 S/cm
+GT-246: Li8.4Al2.4Ti9.6P18.0O72.0 | 0.000388 S/cm
+GT-247: Li9.0Al3.0Ti9.0P18.0O72.0 | 0.000248 S/cm
+GT-248: Li7.2Cr1.2Ti10.8P18.0O72.0 | 1.82e-05 S/cm
+GT-249: Li7.8Cr1.8Ti10.2P18.0O72.0 | 3.51e-05 S/cm
+GT-250: Li8.4Cr2.4Ti9.6P18.0O72.0 | 0.000149 S/cm
+GT-251: Li9.0Cr3.0Ti9.0P18.0O72.0 | 0.000386 S/cm
+GT-252: Li7.2Ga1.2Ti10.8P18.0O72.0 | 0.000162 S/cm
+GT-253: Li7.8Ga1.8Ti10.2P18.0O72.0 | 0.000261 S/cm
+GT-254: Li8.4Ga2.4Ti9.6P18.0O72.0 | 0.000128 S/cm
+GT-255: Li9.0Ga3.0Ti9.0P18.0O72.0 | 0.000122 S/cm
+GT-256: Li7.2Fe1.2Ti10.8P18.0O72.0 | 0.00018 S/cm
+GT-257: Li7.8Fe1.8Ti10.2P18.0O72.0 | 0.000246 S/cm
+GT-258: Li8.4Fe2.4Ti9.6P18.0O72.0 | 0.000392 S/cm
+GT-259: Li9.0Fe3.0Ti9.0P18.0O72.0 | 0.000174 S/cm
+GT-260: Li7.2Sc1.2Ti10.8P18.0O72.0 | 0.00069 S/cm
+GT-261: Li7.8Sc1.8Ti10.2P18.0O72.0 | 0.000703 S/cm
+GT-262: Li8.4Sc2.4Ti9.6P18.0O72.0 | 0.000515 S/cm
+GT-263: Li7.2In1.2Ti10.8P18.0O72.0 | 0.00039 S/cm
+GT-264: Li7.8In1.8Ti10.2P18.0O72.0 | 0.000393 S/cm
+GT-265: Li8.4In2.4Ti9.6P18.0O72.0 | 0.000302 S/cm
+GT-266: Li9.0In3.0Ti9.0P18.0O72.0 | 0.000204 S/cm
+GT-267: Li7.2La1.2Ti10.8P18.0O72.0 | 8e-05 S/cm
+GT-268: Li7.8La1.8Ti10.2P18.0O72.0 | 0.000523 S/cm
+GT-269: Li8.4La2.4Ti9.6P18.0O72.0 | 0.000498 S/cm
+GT-270: Li9.0La3.0Ti9.0P18.0O72.0 | 0.000281 S/cm
+--- Starting Validation ---
+Comparing 30 GT items vs 240 Extracted items...
+
+============================================================
+VALIDATION SCORE: 6.7%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-235     | ❌ MISSING/BAD   | Matching composition LiTi2(PO4)3 found, but conductivity 2e-06 S/cm is significantly different from 3.98e-06 S/cm.
+GT-242     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-243     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-244     | ❌ MISSING/BAD   | Matching composition Li1.2M0.2Ti1.8(PO4)3 found (assuming M=Al), but extracted conductivity is missing.
+GT-245     | ✅ MATCH         | The chemical formula Li7.8Al1.8Ti10.2P18.0O72.0 normalizes to Li1.3Al0.3Ti1.7(PO4)3, and 0.000722 S/cm is approximately 0.0007 S/cm.
+GT-246     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-247     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-248     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-249     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-250     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-251     | ❌ MISSING/BAD   | Matching composition Li1.5Cr0.5Ti1.5(PO4)3 found, but conductivity 0.000386 S/cm is significantly different from 1.0611e-06 S/cm.
+GT-252     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-253     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-254     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-255     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-256     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-257     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-258     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-259     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-260     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-261     | ✅ MATCH         | The chemical formula Li7.8Sc1.8Ti10.2P18.0O72.0 normalizes to Li1.3Sc0.3Ti1.7(PO4)3, and 0.000703 S/cm is approximately 0.0007 S/cm.
+GT-262     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-263     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-264     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-265     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-266     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-267     | ❌ MISSING/BAD   | Matching composition Li1.2La0.2Ti1.8(PO4)3 found, but conductivity 8e-05 S/cm is significantly different from 2.6655e-07 S/cm.
+GT-268     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-269     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+GT-270     | ❌ MISSING/BAD   | No matching composition found in extracted data.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m DOI: 10.1149/1.2086597
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_pipeline_20260123_113802.log
+

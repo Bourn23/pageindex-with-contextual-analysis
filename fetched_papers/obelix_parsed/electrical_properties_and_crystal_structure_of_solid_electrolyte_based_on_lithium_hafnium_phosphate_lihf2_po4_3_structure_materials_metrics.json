@@ -1,0 +1,105 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-318",
+      "extracted_id": "EX-23",
+      "reason": "The ground truth compound Li6.0Hf12.0P18.0O72.0 normalizes to Li1.0Hf2.0(PO4)3, which matches EX-23 LiHf2(PO4)3. Both are at room temperature (implied for GT, 24.85C for EX). The conductivity values are very close: GT is 6.85e-07 S/cm and EX-23 is 7.94e-07 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-319",
+      "extracted_id": "EX-26",
+      "reason": "The ground truth compound Li6.6Fe0.6Hf11.4P18.0O72.0 normalizes to Li1.1Fe0.1Hf1.9(PO4)3. This matches the stoichiometry of EX-26 Li1.1Hf1.9M0.1(PO4)3, assuming 'M' represents Fe. Both are at room temperature. The conductivity values are very close: GT is 1.07e-04 S/cm and EX-26 is 1.0e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-320",
+      "extracted_id": "EX-26",
+      "reason": "The ground truth compound Li6.6In0.6Hf11.4P18.0O72.0 normalizes to Li1.1In0.1Hf1.9(PO4)3. This matches the stoichiometry of EX-26 Li1.1Hf1.9M0.1(PO4)3, assuming 'M' represents In. Both are at room temperature. The conductivity values are within the same order of magnitude: GT is 5.13e-05 S/cm and EX-26 is 1.0e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-321",
+      "extracted_id": "EX-26",
+      "reason": "The ground truth compound Li6.6Lu0.6Hf11.4P18.0O72.0 normalizes to Li1.1Lu0.1Hf1.9(PO4)3. This matches the stoichiometry of EX-26 Li1.1Hf1.9M0.1(PO4)3, assuming 'M' represents Lu. Both are at room temperature. The conductivity values are within the same order of magnitude: GT is 5.88e-05 S/cm and EX-26 is 1.0e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-322",
+      "extracted_id": "EX-26",
+      "reason": "The ground truth compound Li6.6Sc0.6Hf11.4P18.0O72.0 normalizes to Li1.1Sc0.1Hf1.9(PO4)3. This matches the stoichiometry of EX-26 Li1.1Hf1.9M0.1(PO4)3, assuming 'M' represents Sc. Both are at room temperature. The conductivity values differ by a factor of ~4: GT is 2.45e-05 S/cm and EX-26 is 1.0e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-323",
+      "extracted_id": "EX-32",
+      "reason": "The ground truth compound Li7.2Lu1.2Hf10.8P18.0O72.0 normalizes to Li1.2Lu0.2Hf1.8(PO4)3. This is a perfect stoichiometric match with EX-32 Li1.2Hf1.8M0.2(PO4)3, assuming 'M' represents Lu. Both are at room temperature. EX-32 does not have a conductivity value, so only the composition and context can be matched.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-324",
+      "extracted_id": "EX-25",
+      "reason": "The ground truth compound Li7.8Cr1.8Hf10.2P18.0O72.0 normalizes to Li1.3Cr0.3Hf1.7(PO4)3. This is a perfect match with EX-25 Li1.3Hf1.7Cr0.3(PO4)3. Both are at room temperature. The conductivity values are very close: GT is 5.26e-07 S/cm and EX-25 is 5.0e-07 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-325",
+      "extracted_id": "EX-27",
+      "reason": "The ground truth compound Li7.8Fe1.8Hf10.2P18.0O72.0 normalizes to Li1.3Fe0.3Hf1.7(PO4)3. This matches the stoichiometry of EX-27 Li1.3Hf1.7M0.3(PO4)3, assuming 'M' represents Fe. Both are at room temperature. The conductivity values differ by a factor of ~2.6: GT is 5.4e-05 S/cm and EX-27 is 1.4e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-326",
+      "extracted_id": "EX-27",
+      "reason": "The ground truth compound Li7.8In1.8Hf10.2P18.0O72.0 normalizes to Li1.3In0.3Hf1.7(PO4)3. This matches the stoichiometry of EX-27 Li1.3Hf1.7M0.3(PO4)3, assuming 'M' represents In. Both are at room temperature. The conductivity values are very close: GT is 1.42e-04 S/cm and EX-27 is 1.4e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-327",
+      "extracted_id": "EX-27",
+      "reason": "The ground truth compound Li7.8Lu1.8Hf10.2P18.0O72.0 normalizes to Li1.3Lu0.3Hf1.7(PO4)3. This matches the stoichiometry of EX-27 Li1.3Hf1.7M0.3(PO4)3, assuming 'M' represents Lu. Both are at room temperature. The conductivity values differ by a factor of ~3.9: GT is 3.56e-05 S/cm and EX-27 is 1.4e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-328",
+      "extracted_id": "EX-27",
+      "reason": "The ground truth compound Li7.8Sc1.8Hf10.2P18.0O72.0 normalizes to Li1.3Sc0.3Hf1.7(PO4)3. This matches the stoichiometry of EX-27 Li1.3Hf1.7M0.3(PO4)3, assuming 'M' represents Sc. Both are at room temperature. The conductivity values are within the same order of magnitude: GT is 8.32e-05 S/cm and EX-27 is 1.4e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-329",
+      "extracted_id": "EX-27",
+      "reason": "The ground truth compound Li7.8Y1.8Hf10.2P18.0O72.0 normalizes to Li1.3Y0.3Hf1.7(PO4)3. This matches the stoichiometry of EX-27 Li1.3Hf1.7M0.3(PO4)3, assuming 'M' represents Y. Both are at room temperature. The conductivity values differ by a factor of ~4.4: GT is 3.19e-05 S/cm and EX-27 is 1.4e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-330",
+      "extracted_id": "EX-28",
+      "reason": "The ground truth compound Li8.4In2.4Hf9.6P18.0O72.0 normalizes to Li1.4In0.4Hf1.6(PO4)3. This matches the stoichiometry of EX-28 Li1.4Hf1.6M0.4(PO4)3, assuming 'M' represents In. Both are at room temperature. The conductivity values are very close: GT is 1.42e-04 S/cm and EX-28 is 1.4e-04 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-331",
+      "extracted_id": "EX-28",
+      "reason": "The ground truth compound Li8.4Lu2.4Hf9.6P18.0O72.0 normalizes to Li1.4Lu0.4Hf1.6(PO4)3. This matches the stoichiometry of EX-28 Li1.4Hf1.6M0.4(PO4)3, assuming 'M' represents Lu. Both are at room temperature. The conductivity values differ significantly: GT is 2.06e-05 S/cm and EX-28 is 1.4e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-332",
+      "extracted_id": "EX-28",
+      "reason": "The ground truth compound Li8.4Y2.4Hf9.6P18.0O72.0 normalizes to Li1.4Y0.4Hf1.6(PO4)3. This matches the stoichiometry of EX-28 Li1.4Hf1.6M0.4(PO4)3, assuming 'M' represents Y. Both are at room temperature. The conductivity values differ significantly: GT is 2.09e-05 S/cm and EX-28 is 1.4e-04 S/cm, but it's the best structural match.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "All Ground Truth entries were successfully matched to Extracted Data entries. The matching relied on normalizing the chemical formulas to a common (PO4)3 basis and interpreting 'M' in the extracted data as a placeholder for the specific dopant in the ground truth. Temperature contexts were consistent (room temperature). Conductivity values were used as a secondary validation, with some matches showing excellent agreement and others having larger discrepancies, but still representing the best available structural match.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 18.181818181818183,
+    "f1": 30.76923076923077,
+    "avg_log10_error": 0.3424418736243018,
+    "numeric_accuracy_pct": 64.28571428571429,
+    "num_valid_numeric_matches": 14,
+    "total_gt": 15,
+    "total_ex": 33
+  }
+}

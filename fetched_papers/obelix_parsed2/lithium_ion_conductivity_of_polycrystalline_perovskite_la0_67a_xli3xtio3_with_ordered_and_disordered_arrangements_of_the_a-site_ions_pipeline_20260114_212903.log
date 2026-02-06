@@ -1,0 +1,13 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_pipeline_20260114_212903.log
+
+[0;34m[INFO][0m Skipping STEP 1: Using existing structure: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+[0;31m[ERROR][0m Failed to extract material data

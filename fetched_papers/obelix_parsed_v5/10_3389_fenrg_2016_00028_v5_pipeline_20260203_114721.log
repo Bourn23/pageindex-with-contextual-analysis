@@ -1,0 +1,11 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: 10_3389_fenrg_2016_00028
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/10_3389_fenrg_2016_00028/10_3389_fenrg_2016_00028.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/10_3389_fenrg_2016_00028
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/10_3389_fenrg_2016_00028_v5_pipeline_20260203_114721.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+[0;31m[ERROR][0m Failed during extraction step

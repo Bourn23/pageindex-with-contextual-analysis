@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Laser-safe cantilever robotic arm (Option 1)
+- Units are in mm (viewBox matches mm), so stroke widths are physically meaningful when printed/exported.
+- Default: stroke 0.4mm, joint diameter 1.2mm (r=0.6mm).
+- "gripper" line is meant to sit under your name baseline (text can touch it or sit ~0.2mm above).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="30mm" viewBox="0 0 60 30">
+  <defs>
+    <style>
+      .arm {
+        fill: none;
+        stroke: #000;
+        stroke-width: 0.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .guide {
+        fill: none;
+        stroke: #000;
+        stroke-width: 0.25;
+        stroke-linecap: round;
+        stroke-dasharray: 1.2 1.2;
+        opacity: 0.35;
+      }
+    </style>
+  </defs>
+
+  <!-- Optional baseline guide (delete this in production) -->
+  <line class="guide" x1="0" y1="6" x2="60" y2="6"/>
+
+  <!-- Robotic cantilever arm -->
+  <g id="cantilever_arm" class="arm">
+    <!-- Geometry anchors:
+         Base joint  : (8, 22)
+         Elbow joint : (8, 14)
+         Wrist joint : (18, 14)
+         Support post: (18,  6)
+         Gripper line: y=6 from x=18 to x=36 (adjust to taste)
+    -->
+
+    <!-- Segments -->
+    <line x1="8"  y1="22" x2="8"  y2="14"/>  <!-- base -> elbow (vertical) -->
+    <line x1="8"  y1="14" x2="18" y2="14"/>  <!-- elbow -> wrist (horizontal) -->
+    <line x1="18" y1="14" x2="18" y2="6"/>   <!-- wrist -> support (vertical) -->
+
+    <!-- Gripper / support fork (this “holds” the name baseline) -->
+    <line id="gripper" x1="18" y1="6" x2="36" y2="6"/>
+
+    <!-- Joints (1.2mm diameter) -->
+    <circle cx="8"  cy="22" r="0.6"/>  <!-- base -->
+    <circle cx="8"  cy="14" r="0.6"/>  <!-- elbow -->
+    <circle cx="18" cy="14" r="0.6"/>  <!-- wrist -->
+    <circle cx="18" cy="6"  r="0.6"/>  <!-- support node (optional but nice) -->
+  </g>
+
+  <!-- OPTIONAL: placeholder text to show alignment (delete + replace with your typography) -->
+  <!--
+  <text x="18.2" y="6" font-family="Helvetica, Arial, sans-serif" font-size="6"
+        dominant-baseline="alphabetic" fill="#000">
+    Borna
+  </text>
+  -->
+</svg>

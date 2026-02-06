@@ -1,0 +1,114 @@
+{
+  "title": "Arrhenius plot of the conductivity \u03c3 for LLBZT",
+  "xAxis": {
+    "label": "1000T^-1",
+    "unit": "K^-1"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T / S cm^-1 K^-1)",
+    "unit": "dimensionless"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.66,
+      "yValue": 1.8
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.86,
+      "yValue": 0.95
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.08,
+      "yValue": -0.15
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.33,
+      "yValue": -1.4
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.66,
+      "yValue": 1.7
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.86,
+      "yValue": 0.85
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.08,
+      "yValue": -0.25
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.33,
+      "yValue": -1.45
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.66,
+      "yValue": 1.5
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.86,
+      "yValue": 0.65
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.08,
+      "yValue": -0.35
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.33,
+      "yValue": -1.5
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.66,
+      "yValue": 1.25
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.86,
+      "yValue": 0.4
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.08,
+      "yValue": -0.6
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.33,
+      "yValue": -1.7
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.66,
+      "yValue": 0.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.86,
+      "yValue": 0.2
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.08,
+      "yValue": -0.75
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.33,
+      "yValue": -1.75
+    }
+  ],
+  "summary": "The figure presents an Arrhenius plot showing the temperature dependence of conductivity (\u03c3) for LLBZT at various doping levels (x = 0 to 0.30). The linear relationship between ln(\u03c3T) and 1000/T indicates a thermally activated conduction mechanism. As the value of x increases, there is a consistent decrease in conductivity across the observed temperature range."
+}

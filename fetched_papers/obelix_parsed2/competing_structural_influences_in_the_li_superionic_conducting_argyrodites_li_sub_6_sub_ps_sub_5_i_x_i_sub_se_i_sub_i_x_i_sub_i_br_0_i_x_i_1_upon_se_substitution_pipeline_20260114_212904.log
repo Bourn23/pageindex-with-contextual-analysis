@@ -1,0 +1,13 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_pipeline_20260114_212904.log
+
+[0;34m[INFO][0m Skipping STEP 1: Using existing structure: ./fetched_papers/obelix_parsed2/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+[0;31m[ERROR][0m Failed to extract material data

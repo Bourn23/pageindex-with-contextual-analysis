@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-337",
+      "extracted_id": "EX-16",
+      "reason": "The normalized chemical formula Li1.1Al0.1Ge1.9(PO4)3 and conductivity 2.9e-06 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-338",
+      "extracted_id": "EX-17",
+      "reason": "The normalized chemical formula Li1.3Al0.3Ge1.7(PO4)3 and conductivity 3.9e-05 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-339",
+      "extracted_id": "EX-18",
+      "reason": "The normalized chemical formula Li1.5Al0.5Ge1.5(PO4)3 and conductivity 0.00028 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-340",
+      "extracted_id": "EX-20",
+      "reason": "The normalized chemical formula Li1.6Al0.6Ge1.4(PO4)3 is an exact match. The conductivity values (0.00014 S/cm vs 0.00015 S/cm) are very close, indicating a match within experimental variation.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-341",
+      "extracted_id": "EX-12",
+      "reason": "The normalized chemical formula Li1.1Al0.1Ti1.9(PO4)3 and conductivity 3e-05 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-343",
+      "extracted_id": "EX-13",
+      "reason": "The conductivity 2.3e-05 S/cm is an exact match. The normalized chemical formulas (GT: Li1.6Al0.6Ti1.4(PO4)3, EX: Li1.5Al0.5Ti1.5(PO4)3) are very similar, representing the same class of material (LATP) with minor stoichiometric variations, thus considered a match.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "All Ground Truth entries were successfully matched to Extracted Data entries. The matching was based on normalized chemical formulas and conductivity values, with minor discrepancies in stoichiometry or conductivity considered a match when values were very close or exact for one of the properties.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 11.76470588235294,
+    "f1": 21.052631578947366,
+    "avg_log10_error": 0.004993870562907195,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 6,
+    "total_gt": 6,
+    "total_ex": 51
+  }
+}

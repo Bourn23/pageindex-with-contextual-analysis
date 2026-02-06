@@ -1,0 +1,93 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-282",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.0Ti2.0(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-283",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.05Al0.05Ti1.95(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-284",
+      "extracted_id": "EX-29",
+      "reason": "The ground truth material Li1.1Al0.1Ti1.9(PO4)3 (normalized from Li6.6Al0.6Ti11.4P18.0O72.0) matches EX-29, Li1.1Al0.1Ti1.9(PO4)3, and both are at room temperature (25 \u00b0C).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-285",
+      "extracted_id": "EX-4",
+      "reason": "The ground truth material Li1.3Al0.3Ti1.7(PO4)3 (normalized from Li7.8Al1.8Ti10.2P18.0O72.0) matches EX-4, Li1.3Al0.3Ti1.7(PO4)3, and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-286",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.4Al0.4Ti1.6(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-287",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.05Cr0.05Ti1.95(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-288",
+      "extracted_id": "EX-32",
+      "reason": "The ground truth material Li1.1Cr0.1Ti1.9(PO4)3 (normalized from Li6.6Cr0.6Ti11.4P18.0O72.0) matches EX-32, Li1.1Cr0.1Ti1.9(PO4)3, and both are at room temperature (25 \u00b0C).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-289",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.2Cr0.2Ti1.8(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-290",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.3Cr0.3Ti1.7(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-291",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.05Fe0.05Ti1.95(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-292",
+      "extracted_id": "EX-31",
+      "reason": "The ground truth material Li1.1Fe0.1Ti1.9(PO4)3 (normalized from Li6.6Fe0.6Ti11.4P18.0O72.0) matches EX-31, Li1.1Fe0.1Ti1.9(PO4)3, and both are at room temperature (25 \u00b0C).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-293",
+      "extracted_id": null,
+      "reason": "The ground truth material Li1.2Fe0.2Ti1.8(PO4)3 does not have a corresponding entry in the extracted data with matching material and context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-294",
+      "extracted_id": "EX-30",
+      "reason": "The ground truth material Li1.3Fe0.3Ti1.7(PO4)3 (normalized from Li7.8Fe1.8Ti10.2P18.0O72.0) matches EX-30, Li1.3Fe0.3Ti1.7(PO4)3, and both are at room temperature (25 \u00b0C). EX-27 was excluded due to significantly different temperature (163 K).",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully identified 5 out of 13 NASICON-type compounds from the ground truth, specifically those with Al, Cr, or Fe doping at certain stoichiometries. The matching was based on normalized chemical formulas and consistent room temperature context. Many ground truth entries lacked a direct stoichiometric match, and the extracted data contained numerous irrelevant entries (e.g., Li6PS5Cl, unknown conductors, pre-exponential factors) or entries with significantly different temperature contexts.",
+  "metrics": {
+    "recall": 38.46153846153847,
+    "precision": 13.513513513513514,
+    "f1": 20.0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 13,
+    "total_ex": 37
+  }
+}

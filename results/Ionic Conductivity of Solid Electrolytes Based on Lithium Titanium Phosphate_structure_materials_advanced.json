@@ -1,0 +1,217 @@
+{
+  "score": 26.666666666666668,
+  "total_ground_truth": 30,
+  "total_matches": 8,
+  "details": [
+    {
+      "ground_truth_id": "GT-235",
+      "extracted_match": "Lithium Titanium Phosphate acronym: LiTi2(PO4)3 | 2.0e-6 S cm^-1 | room temperature",
+      "reason": "The ground truth formula Li6.0Ti12.0P18.0O72.0 normalizes to LiTi2(PO4)3, and the conductivity 2e-06 S/cm perfectly matches 2.0e-6 S cm^-1.",
+      "thinking": "Normalized GT formula Li6.0Ti12.0P18.0O72.0 by dividing all subscripts by 6 to get LiTi2(PO4)3. Searched for this formula and a conductivity of 2e-06 S/cm. EX-35 explicitly states LiTi2(PO4)3 and 2.0e-6 S cm^-1, which is a perfect match for both composition and value.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-242",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.2Ti2.0Si0.2P2.8O12.0 and the conductivity 8.6e-05 S/cm.",
+      "thinking": "Normalized GT formula Li7.2Ti12.0Si1.2P16.8O72.0 by dividing by 6 to get Li1.2Ti2.0Si0.2P2.8O12.0. Searched for this composition (specifically x=0.2 for Si-doped LATP) and conductivity 8.6e-05 S/cm. EX-1 and EX-15 have x=0.3 and a different conductivity (0.00032 S/cm), so they are not a match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-243",
+      "extracted_match": "Lithium Titanium Silicon Phosphorus Oxide acronym: Li1+xTi2SixP3-xO12 proportion: x = 0.3 | 0.00032 | 24.850000000000023",
+      "reason": "The ground truth formula Li7.8Ti12.0Si1.8P16.2O72.0 normalizes to Li1.3Ti2.0Si0.3P2.7O12.0 (which is Li1+xTi2SixP3-xO12 with x=0.3), and the conductivity 0.00032 S/cm perfectly matches the extracted value.",
+      "thinking": "Normalized GT formula Li7.8Ti12.0Si1.8P16.2O72.0 by dividing by 6 to get Li1.3Ti2.0Si0.3P2.7O12.0. This corresponds to Li1+xTi2SixP3-xO12 with x=0.3. EX-15 explicitly states this formula and a conductivity of 0.00032 S/cm, which is a perfect match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-244",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.2Al0.2Ti1.8(PO4)3 (x=0.2 for Al-doped LATP) and the conductivity 0.000595 S/cm.",
+      "thinking": "Normalized GT formula Li7.2Al1.2Ti10.8P18.0O72.0 by dividing by 6 to get Li1.2Al0.2Ti1.8(PO4)3, which is Li1+xAlxTi2-x(PO4)3 with x=0.2. All relevant extracted entries for Al-doped LATP (e.g., EX-0, EX-2, EX-7, EX-44) specify x=0.3, which is a different composition. Although EX-44's conductivity (0.00063 S/cm) is close to GT's (0.000595 S/cm), the compositional difference means it's not the same physical reality.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-245",
+      "extracted_match": "Lithium Aluminum Titanium Phosphate acronym: Li1.3Al0.3Ti1.7(PO4)3 proportion: x = 0.3 | 0.0007 | 24.850000000000023",
+      "reason": "The ground truth formula Li7.8Al1.8Ti10.2P18.0O72.0 normalizes to Li1.3Al0.3Ti1.7(PO4)3 (which is Li1+xAlxTi2-x(PO4)3 with x=0.3), and the conductivity 0.000722 S/cm is approximately 0.0007 S/cm.",
+      "thinking": "Normalized GT formula Li7.8Al1.8Ti10.2P18.0O72.0 by dividing by 6 to get Li1.3Al0.3Ti1.7(PO4)3. This corresponds to Li1+xAlxTi2-x(PO4)3 with x=0.3. EX-7 explicitly states this formula and a conductivity of 0.0007 S/cm, which is a close approximation to 0.000722 S/cm (within ~3% difference).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-246",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.4Al0.4Ti1.6(PO4)3 (x=0.4 for Al-doped LATP) and the conductivity 0.000388 S/cm.",
+      "thinking": "Normalized GT formula Li8.4Al2.4Ti9.6P18.0O72.0 by dividing by 6 to get Li1.4Al0.4Ti1.6(PO4)3, which is Li1+xAlxTi2-x(PO4)3 with x=0.4. No extracted entry specifies this x value for Al-doped LATP.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-247",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.5Al0.5Ti1.5(PO4)3 (x=0.5 for Al-doped LATP) and the conductivity 0.000248 S/cm.",
+      "thinking": "Normalized GT formula Li9.0Al3.0Ti9.0P18.0O72.0 by dividing by 6 to get Li1.5Al0.5Ti1.5(PO4)3, which is Li1+xAlxTi2-x(PO4)3 with x=0.5. No extracted entry specifies this x value for Al-doped LATP.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-248",
+      "extracted_match": "MISSING",
+      "reason": "Although EX-30 covers the formula Li1.2Cr0.2Ti1.8(PO4)3 (x=0.2 for Cr-doped LATP), its conductivity (~7.9e-4 S/cm) is significantly different from the ground truth (1.82e-05 S/cm).",
+      "thinking": "Normalized GT formula Li7.2Cr1.2Ti10.8P18.0O72.0 by dividing by 6 to get Li1.2Cr0.2Ti1.8(PO4)3, which is Li1+xCrxTi2-x(PO4)3 with x=0.2. EX-30 includes Cr for x=0.2, but the extracted conductivity (7.9e-4 S/cm) is orders of magnitude higher than the ground truth (1.82e-5 S/cm), indicating a mismatch.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-249",
+      "extracted_match": "MISSING",
+      "reason": "Although EX-30 covers the formula Li1.3Cr0.3Ti1.7(PO4)3 (x=0.3 for Cr-doped LATP), its conductivity (~7.9e-4 S/cm) is significantly different from the ground truth (3.51e-05 S/cm).",
+      "thinking": "Normalized GT formula Li7.8Cr1.8Ti10.2P18.0O72.0 by dividing by 6 to get Li1.3Cr0.3Ti1.7(PO4)3, which is Li1+xCrxTi2-x(PO4)3 with x=0.3. EX-30 includes Cr for x=0.3, but the extracted conductivity (7.9e-4 S/cm) is significantly higher than the ground truth (3.51e-5 S/cm), indicating a mismatch.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-250",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.4Cr0.4Ti1.6(PO4)3 (x=0.4 for Cr-doped LATP) and the conductivity 0.000149 S/cm.",
+      "thinking": "Normalized GT formula Li8.4Cr2.4Ti9.6P18.0O72.0 by dividing by 6 to get Li1.4Cr0.4Ti1.6(PO4)3, which is Li1+xCrxTi2-x(PO4)3 with x=0.4. EX-30 only covers x=0.2-0.3 for Cr, and EX-47 specifies x=0.5, so no direct formula match for x=0.4.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-251",
+      "extracted_match": "EX-47: Chromium-doped Lithium Titanium Phosphate acronym: Li1+xCrxTi2-x(PO4)3 proportion: x = 0.5 | 0.0004 | 25",
+      "reason": "The ground truth formula Li9.0Cr3.0Ti9.0P18.0O72.0 normalizes to Li1.5Cr0.5Ti1.5(PO4)3 (x=0.5, M=Cr), which matches the extracted formula. The conductivity 0.000386 S/cm is approximately 0.0004 S/cm, and the temperature 25C matches.",
+      "thinking": "The ground truth formula was normalized by dividing all subscripts by 6 to match the (PO4)3 unit, resulting in Li1.5Cr0.5Ti1.5(PO4)3, which corresponds to Li1+xCrxTi2-x(PO4)3 with x=0.5. Extracted data EX-47 explicitly states this formula and x value. The conductivity values (0.000386 S/cm vs 0.0004 S/cm) are within acceptable rounding differences (approx 3.6% difference), and the temperatures match (implied 25C for GT, explicit 25C for EX).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-252",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.2Ga0.2Ti1.8(PO4)3 (x=0.2, M=Ga) and conductivity 0.000162 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li7.2Ga1.2Ti10.8P18.0O72.0 normalizes to Li1.2Ga0.2Ti1.8(PO4)3 (x=0.2, M=Ga). I searched for extracted entries with Ga as the dopant and x=0.2, but none were found with a matching conductivity of 0.000162 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-253",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.3Ga0.3Ti1.7(PO4)3 (x=0.3, M=Ga) and conductivity 0.000261 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li7.8Ga1.8Ti10.2P18.0O72.0 normalizes to Li1.3Ga0.3Ti1.7(PO4)3 (x=0.3, M=Ga). I searched for extracted entries with Ga as the dopant and x=0.3, but none were found with a matching conductivity of 0.000261 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-254",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.4Ga0.4Ti1.6(PO4)3 (x=0.4, M=Ga) and conductivity 0.000128 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li8.4Ga2.4Ti9.6P18.0O72.0 normalizes to Li1.4Ga0.4Ti1.6(PO4)3 (x=0.4, M=Ga). I searched for extracted entries with Ga as the dopant and x=0.4, but none were found with a matching conductivity of 0.000128 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-255",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.5Ga0.5Ti1.5(PO4)3 (x=0.5, M=Ga) and conductivity 0.000122 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li9.0Ga3.0Ti9.0P18.0O72.0 normalizes to Li1.5Ga0.5Ti1.5(PO4)3 (x=0.5, M=Ga). I searched for extracted entries with Ga as the dopant and x=0.5, but none were found with a matching conductivity of 0.000122 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-256",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.2Fe0.2Ti1.8(PO4)3 (x=0.2, M=Fe) and conductivity 0.00018 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li7.2Fe1.2Ti10.8P18.0O72.0 normalizes to Li1.2Fe0.2Ti1.8(PO4)3 (x=0.2, M=Fe). I searched for extracted entries with Fe as the dopant and x=0.2, but none were found with a matching conductivity of 0.00018 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-257",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.3Fe0.3Ti1.7(PO4)3 (x=0.3, M=Fe) and conductivity 0.000246 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li7.8Fe1.8Ti10.2P18.0O72.0 normalizes to Li1.3Fe0.3Ti1.7(PO4)3 (x=0.3, M=Fe). I searched for extracted entries with Fe as the dopant and x=0.3, but none were found with a matching conductivity of 0.000246 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-258",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.4Fe0.4Ti1.6(PO4)3 (x=0.4, M=Fe) and conductivity 0.000392 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li8.4Fe2.4Ti9.6P18.0O72.0 normalizes to Li1.4Fe0.4Ti1.6(PO4)3 (x=0.4, M=Fe). I searched for extracted entries with Fe as the dopant and x=0.4, but none were found with a matching conductivity of 0.000392 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-259",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.5Fe0.5Ti1.5(PO4)3 (x=0.5, M=Fe) and conductivity 0.000174 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li9.0Fe3.0Ti9.0P18.0O72.0 normalizes to Li1.5Fe0.5Ti1.5(PO4)3 (x=0.5, M=Fe). I searched for extracted entries with Fe as the dopant and x=0.5, but none were found with a matching conductivity of 0.000174 S/cm. EX-30 is too general and its conductivity does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-260",
+      "extracted_match": "MISSING",
+      "reason": "No extracted entry matches the normalized formula Li1.2Sc0.2Ti1.8(PO4)3 (x=0.2, M=Sc) and conductivity 0.00069 S/cm at room temperature.",
+      "thinking": "The ground truth formula Li7.2Sc1.2Ti10.8P18.0O72.0 normalizes to Li1.2Sc0.2Ti1.8(PO4)3 (x=0.2, M=Sc). I searched for extracted entries with Sc as the dopant and x=0.2. EX-30 includes Sc and x=0.2, but its conductivity (~7.9e-4 S/cm) is not an approximate match for 0.00069 S/cm (6.9e-4 S/cm), representing a ~14.5% difference. Other Sc entries (EX-3, EX-43) have x=0.3, which does not match the composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-261",
+      "extracted_match": "Lithium Scandium Titanium Phosphate acronym: LSTP proportion: x=0.3 | 0.0007 | 24.850000000000023",
+      "reason": "The chemical formula Li7.8Sc1.8Ti10.2P18.0O72.0 normalizes to Li1.3Sc0.3Ti1.7(PO4)3, and the conductivity 0.0007 S/cm is an approximate match for 0.000703 S/cm.",
+      "thinking": "I normalized the ground truth formula by dividing all subscripts by 6 to match the (PO4)3 unit, resulting in Li1.3Sc0.3Ti1.7(PO4)3. I then identified EX-3, which explicitly states 'Lithium Scandium Titanium Phosphate acronym: LSTP proportion: x=0.3', corresponding to the normalized formula. The extracted conductivity of 0.0007 S/cm is very close to the ground truth of 0.000703 S/cm, and the temperature is room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-262",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.4Sc0.4Ti1.6(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.4Sc0.4Ti1.6(PO4)3. I then scanned all extracted entries for a material with Scandium doping at x=0.4 and a conductivity around 0.000515 S/cm. No such entry was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-263",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.2In0.2Ti1.8(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.2In0.2Ti1.8(PO4)3. I then searched for an extracted entry with Indium doping at x=0.2 and a conductivity around 0.00039 S/cm. No such entry was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-264",
+      "extracted_match": "Lithium trivalent-cation substituted Titanium Phosphate system (alternative dopant) acronym: Li1.3M(III)0.3Ti1.7(PO4)3 proportion: x = 0.3 | 3.5 \u00d7 10\u207b\u2074 S/cm | 25\u00b0C",
+      "reason": "The chemical formula Li7.8In1.8Ti10.2P18.0O72.0 normalizes to Li1.3In0.3Ti1.7(PO4)3, and the conductivity 3.5 \u00d7 10\u207b\u2074 S/cm (0.00035 S/cm) is an approximate match for 0.000393 S/cm.",
+      "thinking": "I normalized the ground truth formula to Li1.3In0.3Ti1.7(PO4)3. I identified EX-11 as a general trivalent-cation substituted material with x=0.3, which includes Indium. The extracted conductivity value of 3.5e-4 S/cm is within an acceptable range (approx. 10.9% difference) of the ground truth value of 0.000393 S/cm.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-265",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.4In0.4Ti1.6(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.4In0.4Ti1.6(PO4)3. While EX-45 has the correct Indium doping level (x=0.4), its conductivity value (0.00063 S/cm) is significantly different from the ground truth value (0.000302 S/cm), making it not a match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-266",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.5In0.5Ti1.5(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.5In0.5Ti1.5(PO4)3. I searched for an extracted entry with Indium doping at x=0.5 and a conductivity around 0.000204 S/cm. No such entry was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-267",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.2La0.2Ti1.8(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.2La0.2Ti1.8(PO4)3. I searched for an extracted entry with Lanthanum doping at x=0.2 and a conductivity around 0.00008 S/cm. No such entry was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-268",
+      "extracted_match": "Lithium Lanthanum Titanium Phosphate acronym: Li1.3La0.3Ti1.7(PO4)3 proportion: x = 0.3 | 0.0005 | 24.850000000000023",
+      "reason": "The chemical formula Li7.8La1.8Ti10.2P18.0O72.0 normalizes to Li1.3La0.3Ti1.7(PO4)3, and the conductivity 0.0005 S/cm is an approximate match for 0.000523 S/cm.",
+      "thinking": "I normalized the ground truth formula to Li1.3La0.3Ti1.7(PO4)3. I found EX-8 which directly matches the normalized formula for Lanthanum doping at x=0.3. The extracted conductivity value of 0.0005 S/cm is very close to the ground truth value of 0.000523 S/cm (approx. 4.4% difference).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-269",
+      "extracted_match": "Lanthanum-doped Lithium Titanium Phosphate acronym: Li1+xLaxTi2-x(PO4)3 proportion: x = 0.4 | 0.0005 | 25",
+      "reason": "The chemical formula Li8.4La2.4Ti9.6P18.0O72.0 normalizes to Li1.4La0.4Ti1.6(PO4)3, and the conductivity 0.0005 S/cm is an approximate match for 0.000498 S/cm.",
+      "thinking": "I normalized the ground truth formula to Li1.4La0.4Ti1.6(PO4)3. I found EX-46 which directly matches the normalized formula for Lanthanum doping at x=0.4. The extracted conductivity value of 0.0005 S/cm is very close to the ground truth value of 0.000498 S/cm (approx. 0.4% difference).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-270",
+      "extracted_match": "MISSING",
+      "reason": "No extracted data entry matches the specific chemical formula Li1.5La0.5Ti1.5(PO4)3 and its corresponding conductivity.",
+      "thinking": "I normalized the ground truth formula to Li1.5La0.5Ti1.5(PO4)3. I searched for an extracted entry with Lanthanum doping at x=0.5 and a conductivity around 0.000281 S/cm. No such entry was found.",
+      "is_match": false
+    }
+  ]
+}

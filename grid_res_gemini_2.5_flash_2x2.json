@@ -1,0 +1,114 @@
+{
+  "title": "Temperature Dependence of Electrical Conductivity",
+  "xAxis": {
+    "label": "1000T\u207b\u00b9",
+    "unit": "K\u207b\u00b9"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T)",
+    "unit": "S cm\u207b\u00b9 K\u207b\u00b9"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.65,
+      "yValue": 1.85
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.85,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.05,
+      "yValue": -0.1
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.35,
+      "yValue": -1.4
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.65,
+      "yValue": 1.6
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.85,
+      "yValue": 0.65
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.05,
+      "yValue": -0.3
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.35,
+      "yValue": -1.6
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.65,
+      "yValue": 1.45
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.85,
+      "yValue": 0.4
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.05,
+      "yValue": -0.5
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.35,
+      "yValue": -1.75
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.65,
+      "yValue": 1.25
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.85,
+      "yValue": 0.2
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.05,
+      "yValue": -0.7
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.35,
+      "yValue": -1.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.65,
+      "yValue": 0.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.85,
+      "yValue": 0.15
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.05,
+      "yValue": -0.8
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.35,
+      "yValue": -1.9
+    }
+  ],
+  "summary": "The figure displays the natural logarithm of the product of conductivity and temperature (ln(\u03c3T)) as a function of the inverse temperature (1000/T) for various compositions, denoted by 'x', ranging from 0 to 0.30. All five series exhibit a linear decrease in ln(\u03c3T) as 1000/T increases, indicating an Arrhenius-type behavior characteristic of thermally activated conductivity. A clear trend shows that as the 'x' value increases from 0 to 0.30, the overall conductivity (represented by ln(\u03c3T)) decreases across the entire measured temperature range. The slopes of the lines, which correspond to the activation energies for conduction, appear to be relatively consistent across the different compositions, suggesting that the fundamental mechanism of conduction might not significantly change, but the magnitude of conductivity is affected by the compositional variation."
+}

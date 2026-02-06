@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "timestamp": 1768784808.531931,
+    "duration_seconds": 48.546886920928955,
+    "total_points": 32
+  },
+  "data": [
+    {
+      "composition": "Composition x=0",
+      "conductivity": "5.3e-5",
+      "unit": "S/cm",
+      "temp": "200 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0",
+      "conductivity": "1.5e-5",
+      "unit": "S/cm",
+      "temp": "150 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0",
+      "conductivity": "2.7e-6",
+      "unit": "S/cm",
+      "temp": "100 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0",
+      "conductivity": "2.5e-7",
+      "unit": "S/cm",
+      "temp": "50 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.1",
+      "conductivity": "3.3e-5",
+      "unit": "S/cm",
+      "temp": "200 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.1",
+      "conductivity": "7.5e-6",
+      "unit": "S/cm",
+      "temp": "150 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.1",
+      "conductivity": "1.1e-6",
+      "unit": "S/cm",
+      "temp": "100 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.1",
+      "conductivity": "1.1e-7",
+      "unit": "S/cm",
+      "temp": "50 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.2",
+      "conductivity": "1.9e-5",
+      "unit": "S/cm",
+      "temp": "200 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.2",
+      "conductivity": "3.3e-6",
+      "unit": "S/cm",
+      "temp": "150 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.2",
+      "conductivity": "3.4e-7",
+      "unit": "S/cm",
+      "temp": "100 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.2",
+      "conductivity": "4.7e-8",
+      "unit": "S/cm",
+      "temp": "60 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.3",
+      "conductivity": "8.4e-6",
+      "unit": "S/cm",
+      "temp": "200 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.3",
+      "conductivity": "1.2e-6",
+      "unit": "S/cm",
+      "temp": "150 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.3",
+      "conductivity": "1.3e-7",
+      "unit": "S/cm",
+      "temp": "100 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.4",
+      "conductivity": "2.2e-6",
+      "unit": "S/cm",
+      "temp": "171 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.4",
+      "conductivity": "3.1e-7",
+      "unit": "S/cm",
+      "temp": "127 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.4",
+      "conductivity": "2.2e-8",
+      "unit": "S/cm",
+      "temp": "78 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.5",
+      "conductivity": "7.5e-7",
+      "unit": "S/cm",
+      "temp": "200 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.5",
+      "conductivity": "1.8e-7",
+      "unit": "S/cm",
+      "temp": "171 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Composition x=0.5",
+      "conductivity": "3.0e-8",
+      "unit": "S/cm",
+      "temp": "144 C",
+      "source": "Figure 5",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li4Ti1.667O4",
+      "conductivity": "1.26e-11",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.8Mg0.1Ti1.633O4",
+      "conductivity": "5.01e-11",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.6Mg0.2Ti1.6O4",
+      "conductivity": "2.00e-10",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.4Mg0.3Ti1.567O4",
+      "conductivity": "6.31e-10",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.2Mg0.4Ti1.533O4",
+      "conductivity": "2.00e-09",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.1Mg0.45Ti1.517O4",
+      "conductivity": "3.98e-09",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.08Mg0.46Ti1.513O4",
+      "conductivity": "6.31e-09",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.06Mg0.47Ti1.51O4",
+      "conductivity": "7.94e-09",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.04Mg0.48Ti1.507O4",
+      "conductivity": "1.26e-08",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3.02Mg0.49Ti1.503O4",
+      "conductivity": "2.51e-08",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    },
+    {
+      "composition": "Li3Mg0.5Ti1.5O4",
+      "conductivity": "6.31e-08",
+      "unit": "S/cm",
+      "temp": "298 K",
+      "source": "Figure 7",
+      "confidence": "medium"
+    }
+  ]
+}

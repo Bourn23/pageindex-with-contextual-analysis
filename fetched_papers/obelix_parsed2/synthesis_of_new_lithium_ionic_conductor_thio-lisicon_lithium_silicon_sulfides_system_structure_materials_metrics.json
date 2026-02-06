@@ -1,0 +1,69 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-20",
+      "extracted_id": "EX-9",
+      "reason": "The normalized chemical formula Li4SiS4 matches exactly. The conductivity values (1.59e-08 S/cm for GT-20 and 1e-07 S/cm for EX-9) are within a reasonable order of magnitude, which can be attributed to variations in synthesis or measurement conditions. Both are likely room temperature measurements.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-21",
+      "extracted_id": null,
+      "reason": "The normalized formula Li3.8Si0.8P0.2S4 does not match any extracted entry. While EX-1 is a Li-Si-P-S compound, its stoichiometry (Li3.4Si0.4P0.6S4) and conductivity (8.11e-07 S/cm vs 0.00064 S/cm) are significantly different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-22",
+      "extracted_id": null,
+      "reason": "The normalized formula Li3.6Si0.6P0.4S4 does not match any extracted entry. EX-1 (Li3.4Si0.4P0.6S4) has a different stoichiometry and conductivity (7.19e-05 S/cm vs 0.00064 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-23",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li3.4Si0.4P0.6S4 matches exactly. The conductivity values (0.000662 S/cm for GT-23 and 0.00064 S/cm for EX-1) are extremely close, indicating a strong match. Both are likely room temperature measurements.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-24",
+      "extracted_id": null,
+      "reason": "The normalized formula Li3.2Si0.2P0.8S4 does not match any extracted entry. EX-1 (Li3.4Si0.4P0.6S4) has a different stoichiometry and conductivity (3.2e-06 S/cm vs 0.00064 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-29",
+      "extracted_id": null,
+      "reason": "The normalized formula Li4.2Si0.8Al0.2S4 matches EX-18 in stoichiometry. However, the conductivity values (2.4e-08 S/cm for GT-29 vs 1.5e-05 S/cm for EX-18) differ by over three orders of magnitude, which is too large for a match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-30",
+      "extracted_id": null,
+      "reason": "The normalized formula Li4.4Si0.6Al0.4S4 does not match any extracted entry in terms of both stoichiometry and conductivity.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-31",
+      "extracted_id": null,
+      "reason": "The normalized formula Li4.6Si0.4Al0.6S4 does not match any extracted entry in terms of both stoichiometry and conductivity.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-32",
+      "extracted_id": "EX-0",
+      "reason": "The normalized chemical formula Li4.8Si0.2Al0.8S4 matches exactly. The conductivity values (2.29e-07 S/cm for GT-32 and 2.3e-07 S/cm for EX-0) are nearly identical, indicating a strong match. Both are room temperature measurements.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "Three out of nine ground truth entries were successfully matched to extracted data. Matches were based on exact or very close normalized chemical formulas and similar orders of magnitude for ionic conductivity, considering room temperature context for all entries. Mismatches were primarily due to significant differences in stoichiometry or large discrepancies in conductivity for otherwise similar compositions.",
+  "metrics": {
+    "recall": 33.33333333333333,
+    "precision": 14.285714285714285,
+    "f1": 19.999999999999996,
+    "avg_log10_error": 0.2717244149376887,
+    "numeric_accuracy_pct": 66.66666666666666,
+    "num_valid_numeric_matches": 3,
+    "total_gt": 9,
+    "total_ex": 21
+  }
+}

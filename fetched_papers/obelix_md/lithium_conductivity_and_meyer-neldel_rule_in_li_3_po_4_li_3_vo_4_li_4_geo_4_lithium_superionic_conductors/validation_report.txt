@@ -1,0 +1,15 @@
+GT-69      | ✅ MATCH         | The normalized formula Li3P0.2V0.8O4 matches, and 1.5e-13 S/cm is approximately 1.31e-13 S/cm at room temperature.
+GT-70      | ❌ MISSING/BAD   | The normalized formula Li3VO4 matches, but 1.5e-13 S/cm is not approximately 9.2e-14 S/cm (difference is ~63%).
+GT-124     | ✅ MATCH         | The normalized formula Li3.2Ge0.2P0.8O4 matches, and 1.2e-06 S/cm is approximately 1.14e-06 S/cm at room temperature.
+GT-125     | ❌ MISSING/BAD   | The normalized formula Li3.2Ge0.2V0.8O4 matches, but 2.5e-05 S/cm is not approximately 1.9e-05 S/cm (difference is ~31.6%).
+GT-126     | ✅ MATCH         | The normalized formula Li3.4Ge0.4P0.6O4 matches, and 4.8e-06 S/cm is approximately 4.5e-06 S/cm at room temperature.
+GT-127     | ❌ MISSING/BAD   | The normalized formula Li3.4Ge0.4V0.6O4 matches, but 5.5e-07 S/cm is not approximately 8.89e-07 S/cm (difference is ~38.1%).
+GT-128     | ❌ MISSING/BAD   | The normalized formula Li3.6Ge0.6P0.4O4 matches, but 3.8e-06 S/cm is not approximately 1.1e-05 S/cm (difference is ~189%).
+GT-129     | ✅ MATCH         | The normalized formula Li3.6Ge0.6V0.4O4 matches, and 3.5e-05 S/cm is approximately 3.19e-05 S/cm at room temperature.
+GT-130     | ❌ MISSING/BAD   | The normalized formula Li3.8Ge0.8P0.2O4 matches, but 2.8e-07 S/cm is not approximately 1.03e-06 S/cm (difference is ~268%).
+GT-131     | ❌ MISSING/BAD   | The normalized formula Li3.8Ge0.8V0.2O4 matches, but 2.2e-05 S/cm is not approximately 2.71e-06 S/cm (difference is ~711%).
+GT-132     | ❌ MISSING/BAD   | The normalized formula Li3P0.4V0.6O4 matches, but 5.0e-13 S/cm is not approximately 3.55e-13 S/cm (difference is ~40.8%).
+GT-133     | ✅ MATCH         | The normalized formula Li3P0.6V0.4O4 matches, and 3.0e-13 S/cm is approximately 3.2e-13 S/cm at room temperature.
+GT-134     | ❌ MISSING/BAD   | The normalized formula Li3P0.8V0.2O4 matches, but 3.0e-13 S/cm is not approximately 2.05e-13 S/cm (difference is ~46.3%).
+GT-135     | ✅ MATCH         | The normalized formula Li3PO4 matches, and 1.5e-13 S/cm is approximately 1.75e-13 S/cm at room temperature.
+GT-136     | ✅ MATCH         | The normalized formula Li4GeO4 matches, and 1.5e-12 S/cm is approximately 1.3e-12 S/cm at room temperature.

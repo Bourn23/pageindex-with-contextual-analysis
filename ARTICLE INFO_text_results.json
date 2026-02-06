@@ -1,0 +1,12 @@
+
+
+[DEBUG] ARTICLE INFO:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=104
+)] cached_content_token_count=104 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=168 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=168
+)] thoughts_token_count=109 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=283 traffic_type=None
+- chars: {"measurements": []}

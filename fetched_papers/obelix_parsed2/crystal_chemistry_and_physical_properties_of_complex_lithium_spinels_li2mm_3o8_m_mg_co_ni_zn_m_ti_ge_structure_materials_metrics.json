@@ -1,0 +1,39 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-371",
+      "extracted_id": null,
+      "reason": "The chemical formula Li8.0Mg4.0Ti12.0O32.0 from GT-371 is entirely different from Li6PS5Cl in EX-0. The conductivity values (1e-15 S/cm vs 0.0011 S/cm) are also vastly different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-372",
+      "extracted_id": null,
+      "reason": "The chemical formula Li8.0Co4.0Ti12.0O32.0 from GT-372 is entirely different from Li6PS5Cl in EX-0. The conductivity values (1e-15 S/cm vs 0.0011 S/cm) are also vastly different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-373",
+      "extracted_id": null,
+      "reason": "The chemical formula Li8.0Co4.0Ge12.0O32.0 from GT-373 is entirely different from Li6PS5Cl in EX-0. The conductivity values (1e-15 S/cm vs 0.0011 S/cm) are also vastly different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-374",
+      "extracted_id": null,
+      "reason": "The chemical formula Li8.0Zn4.0Ge12.0O32.0 from GT-374 is entirely different from Li6PS5Cl in EX-0. The conductivity values (1e-15 S/cm vs 0.0011 S/cm) are also vastly different.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "No matches were found between the Ground Truth and Extracted Data. The chemical compositions and conductivity values are completely dissimilar across all entries.",
+  "metrics": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 4,
+    "total_ex": 1
+  }
+}

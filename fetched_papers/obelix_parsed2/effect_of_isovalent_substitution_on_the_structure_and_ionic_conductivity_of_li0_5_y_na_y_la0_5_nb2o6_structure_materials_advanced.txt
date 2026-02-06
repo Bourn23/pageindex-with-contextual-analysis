@@ -1,0 +1,19 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-82    | None     | 9.92e-06   | None       | N/A        | ❌ MISSING
+GT-83    | None     | 1.11e-05   | None       | N/A        | ❌ MISSING
+GT-84    | None     | 1.18e-05   | None       | N/A        | ❌ MISSING
+GT-85    | None     | 1.21e-05   | None       | N/A        | ❌ MISSING
+GT-86    | EX-1     | 1.23e-05   | 1.28e-05   | 0.0173     | ✅ Accurate
+GT-87    | None     | 5.91e-06   | None       | N/A        | ❌ MISSING
+GT-88    | None     | 3.99e-06   | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      14.29%
+Precision:   4.55%
+F1 Score:    6.90
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.0173 (Lower is better)
+================================================================================

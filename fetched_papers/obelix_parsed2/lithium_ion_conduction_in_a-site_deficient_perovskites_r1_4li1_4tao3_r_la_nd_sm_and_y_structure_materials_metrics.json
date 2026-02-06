@@ -1,0 +1,33 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-166",
+      "extracted_id": null,
+      "reason": "The normalized formula Nd0.25Li0.25TaO3 is compositionally represented in EX-6 (R=Nd). However, EX-6 is measured at 400 K (127 C), which is not considered roughly similar to the assumed room temperature (25 C) for the Ground Truth entry. Additionally, the conductivity values are vastly different (1.31e-08 S/cm vs 0.001 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-167",
+      "extracted_id": null,
+      "reason": "The normalized formula Sm0.25Li0.25TaO3 is compositionally represented in EX-6 (R=Sm). However, EX-6 is measured at 400 K (127 C), which is not considered roughly similar to the assumed room temperature (25 C) for the Ground Truth entry. Additionally, the conductivity values are vastly different (4.32e-10 S/cm vs 0.001 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-456",
+      "extracted_id": null,
+      "reason": "The normalized formula La0.25Li0.25TaO3 does not have an exact compositional match in the Extracted Data at a roughly similar temperature. EX-3 and EX-6 (R=La) have the correct composition but are measured at 126.85 C / 400 K, which is not roughly similar to the assumed room temperature (25 C). EX-4 is at 25 C, but its composition (La0.273Li0.18TaO3) is not an exact match for La0.25Li0.25TaO3, specifically the Li stoichiometry differs significantly (0.25 vs 0.18).",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "No direct matches were found between Ground Truth and Extracted Data. While some extracted entries shared similar base compositions, the strict application of the 'roughly similar temperature' rule (assuming unspecified GT temperatures are room temperature, 25 C) and the requirement for exact compositional matching prevented any positive matches. A temperature difference of ~100 C was not considered 'roughly similar' for conductivity measurements.",
+  "metrics": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 3,
+    "total_ex": 7
+  }
+}

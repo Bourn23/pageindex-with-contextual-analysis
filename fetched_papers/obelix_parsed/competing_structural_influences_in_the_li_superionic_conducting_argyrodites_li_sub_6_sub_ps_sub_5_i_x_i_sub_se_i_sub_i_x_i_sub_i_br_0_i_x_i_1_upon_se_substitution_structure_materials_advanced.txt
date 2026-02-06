@@ -1,0 +1,23 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-403   | EX-5     | 0.00277    | 0.0028     | 0.0047     | ✅ Accurate
+GT-404   | EX-6     | 0.0032     | 0.0032     | 0.0000     | ✅ Accurate
+GT-405   | EX-12    | 0.00392    | None       | Null/Zero  | ❌ No Value
+GT-406   | EX-13    | 0.00362    | None       | Null/Zero  | ❌ No Value
+GT-407   | EX-14    | 0.00364    | None       | Null/Zero  | ❌ No Value
+GT-408   | EX-10    | 0.00268    | None       | Null/Zero  | ❌ No Value
+GT-409   | EX-16    | 0.00278    | None       | Null/Zero  | ❌ No Value
+GT-410   | EX-17    | 0.00301    | None       | Null/Zero  | ❌ No Value
+GT-411   | EX-18    | 0.00348    | None       | Null/Zero  | ❌ No Value
+GT-412   | EX-19    | 0.00382    | None       | Null/Zero  | ❌ No Value
+GT-413   | EX-11    | 0.00361    | None       | Null/Zero  | ❌ No Value
+================================================================================
+RESULTS SUMMARY
+Recall:      100.00%
+Precision:   39.29%
+F1 Score:    56.41
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.0023 (Lower is better)
+================================================================================

@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-282",
+      "extracted_match": "LiTi2(PO4)3 | 6.0e-05 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula LiTi2(PO4)3 is identical to the extracted formula, and the conductivity values 6e-05 S/cm and 6.0e-05 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-283",
+      "extracted_match": "Li1.05Al0.05Ti1.95(PO4)3 | 1.1e-03 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.05Al0.05Ti1.95(PO4)3 is identical to the extracted formula, and the conductivity values 0.0011 S/cm and 1.1e-03 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-284",
+      "extracted_match": "Li1.1Al0.1Ti1.9(PO4)3 | 6.7e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.1Al0.1Ti1.9(PO4)3 is identical to the extracted formula, and the conductivity values 0.00067 S/cm and 6.7e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-285",
+      "extracted_match": "Li1.3Al0.3Ti1.7(PO4)3 | 6.2e-03 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.3Al0.3Ti1.7(PO4)3 is identical to the extracted formula, and the conductivity values 0.0062 S/cm and 6.2e-03 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-286",
+      "extracted_match": "Li1.4Al0.4Ti1.6(PO4)3 | 3.3e-03 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.4Al0.4Ti1.6(PO4)3 is identical to the extracted formula, and the conductivity values 0.0033 S/cm and 3.3e-03 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-287",
+      "extracted_match": "Li1.05Cr0.05Ti1.95(PO4)3 | 1.8e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.05Cr0.05Ti1.95(PO4)3 is identical to the extracted formula, and the conductivity values 0.00018 S/cm and 1.8e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-288",
+      "extracted_match": "Li1.1Cr0.1Ti1.9(PO4)3 | 2.6e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.1Cr0.1Ti1.9(PO4)3 is identical to the extracted formula, and the conductivity values 0.00026 S/cm and 2.6e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-289",
+      "extracted_match": "Li1.2Cr0.2Ti1.8(PO4)3 | 4.3e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.2Cr0.2Ti1.8(PO4)3 is identical to the extracted formula, and the conductivity values 0.00043 S/cm and 4.3e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-290",
+      "extracted_match": "Li1.3Cr0.3Ti1.7(PO4)3 | 2.9e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.3Cr0.3Ti1.7(PO4)3 is identical to the extracted formula, and the conductivity values 0.00029 S/cm and 2.9e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-291",
+      "extracted_match": "Li1.05Fe0.05Ti1.95(PO4)3 | 1.3e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.05Fe0.05Ti1.95(PO4)3 is identical to the extracted formula, and the conductivity values 0.00013 S/cm and 1.3e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-292",
+      "extracted_match": "Li1.1Fe0.1Ti1.9(PO4)3 | 6.3e-04 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.1Fe0.1Ti1.9(PO4)3 is identical to the extracted formula, and the conductivity values 0.00063 S/cm and 6.3e-04 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-293",
+      "extracted_match": "Li1.2Fe0.2Ti1.8(PO4)3 | 1.4e-03 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.2Fe0.2Ti1.8(PO4)3 is identical to the extracted formula, and the conductivity values 0.0014 S/cm and 1.4e-03 S/cm are identical."
+    },
+    {
+      "ground_truth_id": "GT-294",
+      "extracted_match": "Li1.3Fe0.3Ti1.7(PO4)3 | 2.3e-03 | RT",
+      "is_match": true,
+      "reason": "The normalized ground truth formula Li1.3Fe0.3Ti1.7(PO4)3 is identical to the extracted formula, and the conductivity values 0.0023 S/cm and 2.3e-03 S/cm are identical."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 13
+}

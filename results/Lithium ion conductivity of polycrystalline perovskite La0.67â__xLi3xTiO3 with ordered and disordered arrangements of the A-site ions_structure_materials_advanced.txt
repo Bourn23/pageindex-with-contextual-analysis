@@ -1,0 +1,11 @@
+GT-159     | ✅ MATCH         | The normalized composition La0.61Li0.18TiO3 corresponds to x=0.06, and 4.0e-4 S/cm is approximately 0.000412 S/cm.
+GT-160     | ✅ MATCH         | The normalized composition La0.55Li0.36TiO3 corresponds to x=0.12, and the conductivity 0.000688 S/cm is an exact match.
+GT-161     | ✅ MATCH         | The normalized composition La0.54Li0.39TiO3 corresponds to x=0.13, and 6.31e-4 S/cm is approximately 0.000651 S/cm.
+GT-162     | ✅ MATCH         | The normalized composition La0.52Li0.45TiO3 corresponds to x=0.15, and 5.0e-4 S/cm is approximately 0.000501 S/cm.
+GT-163     | ✅ MATCH         | The normalized composition La0.58Li0.27TiO3 is very close to La0.59Li0.27TiO3.02, and 0.00058 S/cm is approximately 0.000599 S/cm.
+GT-164     | ✅ MATCH         | The normalized composition La0.56Li0.33TiO3 corresponds to x=0.11, and 6.61e-4 S/cm is approximately 0.000668 S/cm.
+GT-449     | ✅ MATCH         | The composition La0.58Li0.27TiO3 corresponds to x=0.09, and 0.000794 S/cm is approximately 0.000832 S/cm.
+GT-450     | ✅ MATCH         | The composition La0.56Li0.33TiO3 corresponds to x=0.11, and the conductivity 0.0013 S/cm is an exact match.
+GT-451     | ✅ MATCH         | The composition La0.55Li0.36TiO3 corresponds to x=0.12, and 1.53e-3 S/cm is approximately 0.00154 S/cm.
+GT-452     | ✅ MATCH         | The composition La0.54Li0.39TiO3 corresponds to x=0.13, and 0.00126 S/cm is approximately 0.00125 S/cm.
+GT-453     | ❌ MISSING/BAD   | No extracted entry for x=0.15 has a conductivity value approximately 0.000785 S/cm within an acceptable tolerance.

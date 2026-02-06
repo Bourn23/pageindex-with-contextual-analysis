@@ -1,0 +1,33 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-170",
+      "extracted_id": null,
+      "reason": "The chemical formula La2.6Li0.2Mg2.0W2.0O12.0 (normalized to La1.3Li0.1Mg1.0W1.0O6.0) matches the composition of EX-2 (La0.65Li0.05Mg0.5W0.5O3) and EX-11. However, the conductivity of GT-170 (1.8e-07 S/cm) does not match EX-2 (1e-04 S/cm) at a similar temperature (25\u00b0C). EX-11 has a significantly different temperature (226.85\u00b0C) and conductivity (1e-05 S/cm). Therefore, no suitable match was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-171",
+      "extracted_id": null,
+      "reason": "The chemical formula La2.52Li0.44Mg2.0W2.0O12.0 (normalized to La1.26Li0.22Mg1.0W1.0O6.0) matches the composition of EX-3 (La0.63Li0.11Mg0.5W0.5O3) and EX-12. However, the conductivity of GT-171 (6.8e-06 S/cm) does not match EX-3 (1.5e-04 S/cm) at a similar temperature (25\u00b0C). EX-12 has a significantly different temperature (226.85\u00b0C) and conductivity (1e-04 S/cm). Therefore, no suitable match was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-172",
+      "extracted_id": "EX-5",
+      "reason": "The chemical formula La2.48Li0.56Mg2.0W2.0O12.0 (normalized to La1.24Li0.28Mg1.0W1.0O6.0) perfectly matches the composition of EX-5 (La0.62Li0.14Mg0.5W0.5O3). The conductivity values are identical (1.2e-05 S/cm), and the temperatures are roughly similar (GT assumed room temp, EX-5 is 26.85\u00b0C).",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "Only one Ground Truth entry (GT-172) found a direct match in the Extracted Data (EX-5). For the other Ground Truth entries (GT-170, GT-171), while materials with matching compositions were present in the Extracted Data (EX-2, EX-3, EX-11, EX-12), the associated conductivity values and/or temperature conditions were significantly different, preventing a match based on the specified rules.",
+  "metrics": {
+    "recall": 33.33333333333333,
+    "precision": 5.555555555555555,
+    "f1": 9.523809523809524,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 3,
+    "total_ex": 18
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "doc_name": "inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries",
+  "timestamp": "2026-01-23 11:28:05",
+  "execution_time_seconds": 80.75,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 29281,
+    "total_output_tokens": 28243,
+    "total_cost_usd": 0.0916,
+    "call_counts": {
+      "gemini-flash-latest": 12,
+      "gemini-3-flash-preview": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 13,
+    "skipped_images": 21,
+    "failed_items": 2,
+    "total_sections_processed": 15,
+    "total_images_processed": 14
+  },
+  "material_count": 13,
+  "measurements": [
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (fastest argyrodite, cold-pressed)",
+      "canonical_formula": "Li6+xP1-xGexS5I (fastest argyrodite, cold-pressed)",
+      "material_definitions": [
+        "The material series investigated are the lithium argyrodites Li6+xP1-xGexS5I, systematically exploring the influence of aliovalent substitution.",
+        "The samples were characterized using X-ray and neutron diffraction, impedance spectroscopy and nuclear magnetic resonance.",
+        "Increasing Ge content induces an anion site disorder and significantly drops the activation barrier for ionic motion.",
+        "The fastest resulting argyrodite composition achieved 5.4 mS cm-1 in a cold-pressed state and 18.4 mS cm-1 upon sintering."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (inferred RT)",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (fastest argyrodite, sintered)",
+      "canonical_formula": "Li6+xP1-xGexS5I (fastest argyrodite, sintered)",
+      "material_definitions": [
+        "The material series investigated are the lithium argyrodites Li6+xP1-xGexS5I, systematically exploring the influence of aliovalent substitution.",
+        "The samples were characterized using X-ray and neutron diffraction, impedance spectroscopy and nuclear magnetic resonance.",
+        "Increasing Ge content induces an anion site disorder and significantly drops the activation barrier for ionic motion.",
+        "The fastest resulting argyrodite composition achieved 5.4 mS cm-1 in a cold-pressed state and 18.4 mS cm-1 upon sintering."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (inferred RT)",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS5I (iodine containing argyrodites)",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.3e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Highest lithium argyrodites (cold-pressed, Li6+xP1-xGexS5I)",
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "material_definitions": [
+        "Inspired by the possibility of incorporating Ge into a composition possessing a larger unit cell, we have investigated the effect of Ge4+ substitution in Li6+xP1-xGexS5I on the structuretransport relationships.",
+        "Using a combination of Rietveld refinements against neutron and X-ray diffraction data, we identify the underlying structural changes associated with the Li- and anion-substructures including changes to the site-disorder.",
+        "With increasing Ge-fraction, the diffusion pathways for Li+ expand and site disorder between the S2\u2013 and I\u2013 positions appears.",
+        "The increasing disorder is correlated to a sharp decrease in the activation barrier and an increase in the conductivity over orders of magnitude leading to the highest lithium argyrodites reported so far."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Highest lithium argyrodites (sintered, Li6+xP1-xGexS5I)",
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "material_definitions": [
+        "Inspired by the possibility of incorporating Ge into a composition possessing a larger unit cell, we have investigated the effect of Ge4+ substitution in Li6+xP1-xGexS5I on the structuretransport relationships.",
+        "Using a combination of Rietveld refinements against neutron and X-ray diffraction data, we identify the underlying structural changes associated with the Li- and anion-substructures including changes to the site-disorder.",
+        "With increasing Ge-fraction, the diffusion pathways for Li+ expand and site disorder between the S2\u2013 and I\u2013 positions appears.",
+        "The increasing disorder is correlated to a sharp decrease in the activation barrier and an increase in the conductivity over orders of magnitude leading to the highest lithium argyrodites reported so far."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed, investigating changes to structure and transport using diffraction, NMR, and impedance spectroscopy.",
+        "With increasing Ge content, significant changes in activation barrier were observed, coinciding with increasing I\u2013/S2\u2013 site disorder and increasing lattice volume.",
+        "The structural changes lead to opening of the bottle necks and more facile inter-cage jumps.",
+        "The resulting material, Li6.6P0.4Ge0.6S5I, exhibited a high ionic conductivity.",
+        "Sintering of the pellets further increased the ionic conductivity up to 18.4 mS cm-1."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed, investigating changes to structure and transport using diffraction, NMR, and impedance spectroscopy.",
+        "With increasing Ge content, significant changes in activation barrier were observed, coinciding with increasing I\u2013/S2\u2013 site disorder and increasing lattice volume.",
+        "The structural changes lead to opening of the bottle necks and more facile inter-cage jumps.",
+        "The resulting material, Li6.6P0.4Ge0.6S5I, exhibited a high ionic conductivity.",
+        "Sintering of the pellets further increased the ionic conductivity up to 18.4 mS cm-1."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "x = 0.00",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "-5.8",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 9.082664236127446e-06,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.00",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "-9.0",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 4.5167988295724726e-07,
+      "raw_temperature": "3.66",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 0.07,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.40",
+      "canonical_formula": "Li6.4P0.6Ge0.4S5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "0.2",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 0.00366420827448051,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.40",
+      "canonical_formula": "Li6.4P0.6Ge0.4S5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "-2.4",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 0.0003320277090392498,
+      "raw_temperature": "3.66",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 0.07,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.80",
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "1.5",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 0.013445067211014194,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.80",
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "material_definitions": [
+        "Solid solutions of the formula Li6+xP1-xGexS5I where x varies from 0 to 0.8.",
+        "These materials belong to the lithium argyrodite family.",
+        "The series involves substituting P5+ with Ge4+ and adding Li+ for charge balance.",
+        "The substitution affects the ionic conductivity and activation energy of the electrolyte."
+      ],
+      "raw_conductivity": "-0.6",
+      "raw_conductivity_unit": "ln(sigma\u00b7T / K\u00b7S\u00b7cm^-1)",
+      "normalized_conductivity": 0.002008650588104137,
+      "raw_temperature": "3.66",
+      "raw_temperature_unit": "1000\u00b7T^-1 / K^-1",
+      "normalized_temperature_c": 0.07,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

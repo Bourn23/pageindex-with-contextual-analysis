@@ -1,0 +1,124 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions_v5_pipeline_20260203_120931.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 1 tables from Markdown text...
+       - Replaced 'Unknown' in section '**Results and Discussion**'
+   --- Document: High Ionic Conductivity Lithium Garnet Oxides of Li<sub>7-x</sub>La<sub>3</sub>Zr<sub>2-x</sub>Ta<sub>x</sub>O<sub>12</sub> Compositions
+   --- Found: 6 Sections
+   --- Found: 8 Figures, 1 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**Results and Discussion**' contains:
+       - 7 Images: ['Fig 4', 'Fig 2', 'Fig 7', 'Fig 1', 'Fig 3', 'Fig 6', 'Fig 5']
+       - 1 Tables: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: References
+   ... Processing 14 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_2.jpeg (Unknown): Detecting subplot...
+   🔍 page_1_figure_2.jpeg (Fig 1): Detecting subplot...
+   [93m[Skip][0m page_0_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_1_figure_6.jpeg (Fig 2): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_1_figure_2.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_2_figure_6.jpeg (Fig 4): Detecting subplot...
+   🔍 page_2_figure_9.jpeg (Fig 5): Detecting subplot...
+   🔍 page_3_figure_4.jpeg (Fig 7): Detecting subplot...
+   📊 page_2_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_1_figure_6.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_2.jpeg (Fig 6): Detecting subplot...
+   📊 page_2_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_2_figure_2.jpeg (Fig 3): Found 19 points total via SciFigureParser
+   ✂️ page_3_figure_4.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_4.jpeg (Fig 7): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_4.jpeg (Fig 7): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 6): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ page_2_figure_9.jpeg (Fig 5): Found 16 points total via SciFigureParser
+   ✓ Unknown: No caption found: Found 9 points
+   ⏱️  page_2_figure_6.jpeg: Timeout
+   ... Canonicalizing Materials...
+   ... Resolving 48 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 53 measurements
+      - Skipped (no data): 7 images
+      - Failed: 1 items
+
+Done! Extracted 53 points.
+Saved to: fetched_papers/obelix_md2/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         6
+Total Input:         7,360 tokens
+Total Output:        15,678 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0414
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 6 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1149/2.024205esl
+GT-492: Li54.4La24.0Zr14.4Ta1.6O96.0 | 0.00073 S/cm
+GT-493: Li54.0La24.0Zr14.0Ta2.0O96.0 | 0.00063 S/cm
+GT-494: Li53.2La24.0Zr13.2Ta2.8O96.0 | 0.00046 S/cm
+GT-495: Li52.8La24.0Zr12.8Ta3.2O96.0 | 0.00047 S/cm
+GT-496: Li52.4La24.0Zr12.4Ta3.6O96.0 | 0.0004 S/cm
+GT-497: Li48.0La24.0Zr8.0Ta8.0O96.0 | 0.00035 S/cm
+GT-498: Li40.0La24.0Ta16.0O96.0 | 3.4e-05 S/cm
+GT-499: Li53.6La24.0Zr13.6Ta2.4O96.0 | 0.00069 S/cm
+GT-500: Li52.0La24.0Zr12.0Ta4.0O96.0 | 0.00028 S/cm
+--- Starting Validation ---
+Comparing 9 GT items vs 1002 Extracted items...
+
+============================================================
+VALIDATION SCORE: 22.2%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-492     | ✅ MATCH         | The normalized composition x=0.2 matches, and 0.00069 S/cm is approximately 0.00073 S/cm (within ~5.5% difference) at 25C.
+GT-493     | ❌ MISSING/BAD   | No extracted data for x=0.25 with a conductivity of 0.00063 S/cm at room temperature (25C) was found; the extracted value at 1130C is not a match.
+GT-494     | ❌ MISSING/BAD   | No extracted data for x=0.35 with a conductivity of 0.00046 S/cm at room temperature (25C) was found; the extracted value at 1130C is not a match.
+GT-495     | ❌ MISSING/BAD   | No extracted data for x=0.4 with a conductivity of 0.00047 S/cm at room temperature (25C) was found; the extracted value at 1130C is not a match.
+GT-496     | ❌ MISSING/BAD   | No extracted data for x=0.45 with a conductivity of 0.0004 S/cm at room temperature (25C) was found; the extracted value at 1130C is not a match.
+GT-497     | ❌ MISSING/BAD   | No extracted data for x=1.0 with a conductivity of 0.00035 S/cm at room temperature (25C) was found; the extracted value at 1100C is not a match.
+GT-498     | ❌ MISSING/BAD   | No extracted data for x=2.0 with a conductivity of 3.4e-05 S/cm at room temperature (25C) was found; the extracted value at 1230C is not a match.
+GT-499     | ✅ MATCH         | The normalized composition x=0.3 matches, and 0.00069 S/cm exactly matches at 25C.
+GT-500     | ❌ MISSING/BAD   | No extracted data for x=0.5 with a conductivity of 0.00028 S/cm at room temperature (25C) was found; the extracted value at 1130C is not a match.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions
+[0;34m[INFO][0m DOI: 10.1149/2.024205esl
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions_v5_pipeline_20260203_120931.log
+

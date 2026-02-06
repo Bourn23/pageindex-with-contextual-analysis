@@ -1,0 +1,12 @@
+
+
+[DEBUG] Solid State Ionics:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=91
+)] cached_content_token_count=91 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=144 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=144
+)] thoughts_token_count=108 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=258 traffic_type=None
+- chars: {"measurements": []}

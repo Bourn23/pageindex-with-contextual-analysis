@@ -1,0 +1,42 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-235   | EX-14    | 2e-06      | 2.51188643 | 0.0990     | ✅ Accurate
+GT-242   | None     | 8.6e-05    | None       | N/A        | ❌ MISSING
+GT-243   | EX-2     | 0.00032    | 0.00032    | 0.0000     | ✅ Accurate
+GT-244   | None     | 0.000595   | None       | N/A        | ❌ MISSING
+GT-245   | EX-0     | 0.000722   | 0.0007     | 0.0134     | ✅ Accurate
+GT-246   | None     | 0.000388   | None       | N/A        | ❌ MISSING
+GT-247   | None     | 0.000248   | None       | N/A        | ❌ MISSING
+GT-248   | None     | 1.82e-05   | None       | N/A        | ❌ MISSING
+GT-249   | None     | 3.51e-05   | None       | N/A        | ❌ MISSING
+GT-250   | None     | 0.000149   | None       | N/A        | ❌ MISSING
+GT-251   | EX-19    | 0.000386   | 0.00039810 | 0.0134     | ✅ Accurate
+GT-252   | None     | 0.000162   | None       | N/A        | ❌ MISSING
+GT-253   | None     | 0.000261   | None       | N/A        | ❌ MISSING
+GT-254   | None     | 0.000128   | None       | N/A        | ❌ MISSING
+GT-255   | None     | 0.000122   | None       | N/A        | ❌ MISSING
+GT-256   | None     | 0.00018    | None       | N/A        | ❌ MISSING
+GT-257   | EX-22    | 0.000246   | 0.00025118 | 0.0091     | ✅ Accurate
+GT-258   | None     | 0.000392   | None       | N/A        | ❌ MISSING
+GT-259   | None     | 0.000174   | None       | N/A        | ❌ MISSING
+GT-260   | None     | 0.00069    | None       | N/A        | ❌ MISSING
+GT-261   | EX-1     | 0.000703   | 0.0007     | 0.0019     | ✅ Accurate
+GT-262   | None     | 0.000515   | None       | N/A        | ❌ MISSING
+GT-263   | None     | 0.00039    | None       | N/A        | ❌ MISSING
+GT-264   | None     | 0.000393   | None       | N/A        | ❌ MISSING
+GT-265   | None     | 0.000302   | None       | N/A        | ❌ MISSING
+GT-266   | None     | 0.000204   | None       | N/A        | ❌ MISSING
+GT-267   | None     | 8e-05      | None       | N/A        | ❌ MISSING
+GT-268   | None     | 0.000523   | None       | N/A        | ❌ MISSING
+GT-269   | None     | 0.000498   | None       | N/A        | ❌ MISSING
+GT-270   | None     | 0.000281   | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      20.00%
+Precision:   20.69%
+F1 Score:    20.34
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.0228 (Lower is better)
+================================================================================

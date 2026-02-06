@@ -57,7 +57,7 @@ def main():
                 break
 
     print("-" * 30)
-    print(f"Done! Success: {successful_runs}, Failed: {failed_runs}")
+    print(f"Done! Papers Downloaded: {successful_runs}, Download Failures: {failed_runs}")
 
 if __name__ == "__main__":
     main()

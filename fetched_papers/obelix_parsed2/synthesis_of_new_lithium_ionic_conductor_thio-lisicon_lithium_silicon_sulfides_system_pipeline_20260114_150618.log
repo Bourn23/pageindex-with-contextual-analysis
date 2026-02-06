@@ -1,0 +1,406 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_pipeline_20260114_150618.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Abstract / Introduction
+  -> Started Section: INTRODUCTION
+  -> Started Section: **EXPERIMENTAL**
+  -> Started Section: Synthesis and Structures
+  -> Started Section: The Ternary $Li_2S$ – $SiS_2$ – $P_2S_5$ System
+  -> Started Section: The Ternary Li<sub>2</sub>S-SiS<sub>2</sub>-Al<sub>2</sub>S<sub>3</sub> System
+  -> Started Section: **Electrical Properties**
+  -> Started Section: The Ternary $Li_2S$ – $SiS_2$ – $Al_2S_3$ System
+  -> Started Section: Comparison with Other Ionic Conductors
+  -> Started Section: Electrochemical Properties
+  -> Started Section: CONCLUSION
+  -> Started Section: **ACKNOWLEDGMENTS**
+  -> Started Section: REFERENCES
+  ✓ Finished Section: **ACKNOWLEDGMENTS**
+  ✓ Finished Section: CONCLUSION
+  🔍 Checking placeholder: '__IMG_ef70584f__'
+  ✅ Found Special Node: __IMG_ef70584f__
+  🔍 Checking placeholder: '__TBL_09404675__'
+  ✅ Found Special Node: __TBL_09404675__
+  ✓ Finished Section: Abstract / Introduction
+  🔍 Checking placeholder: '__IMG_bad367f6__'
+  ✅ Found Special Node: __IMG_bad367f6__
+  🔍 Checking placeholder: '__TBL_2afd44ed__'
+  ✅ Found Special Node: __TBL_2afd44ed__
+  🔍 Checking placeholder: '__IMG_a3a76494__'
+  ✅ Found Special Node: __IMG_a3a76494__
+  🔍 Checking placeholder: '__TBL_2afd44ed__'
+  ✅ Found Special Node: __TBL_2afd44ed__
+  🔍 Checking placeholder: '__IMG_ef70584f__'
+  ✅ Found Special Node: __IMG_ef70584f__
+  ✓ Finished Section: The Ternary $Li_2S$ – $SiS_2$ – $P_2S_5$ System
+  🔍 Checking placeholder: '__IMG_5e189031__'
+  ✅ Found Special Node: __IMG_5e189031__
+  ✓ Finished Section: The Ternary Li<sub>2</sub>S-SiS<sub>2</sub>-Al<sub>2</sub>S<sub>3</sub> System
+  ✓ Finished Section: The Ternary $Li_2S$ – $SiS_2$ – $Al_2S_3$ System
+  ✓ Finished Section: Comparison with Other Ionic Conductors
+  🔍 Checking placeholder: '__IMG_a92d85ac__'
+  ✅ Found Special Node: __IMG_a92d85ac__
+  🔍 Checking placeholder: '__IMG_2d530e7f__'
+  ✅ Found Special Node: __IMG_2d530e7f__
+  🔍 Checking placeholder: '__IMG_1fb6e472__'
+  ✅ Found Special Node: __IMG_1fb6e472__
+  ✓ Finished Section: **Electrical Properties**
+  ✓ Finished Section: INTRODUCTION
+  🔍 Checking placeholder: '__IMG_c2a0786f__'
+  ✅ Found Special Node: __IMG_c2a0786f__
+  🔍 Checking placeholder: '__IMG_f1f1c574__'
+  ✅ Found Special Node: __IMG_f1f1c574__
+  🔍 Checking placeholder: '__IMG_d0c4f6de__'
+  ✅ Found Special Node: __IMG_d0c4f6de__
+  🔍 Checking placeholder: '__IMG_99c73f9e__'
+  ✅ Found Special Node: __IMG_99c73f9e__
+  🔍 Checking placeholder: '__IMG_1cd82bd6__'
+  ✅ Found Special Node: __IMG_1cd82bd6__
+  ✓ Finished Section: REFERENCES
+  🔍 Checking placeholder: '__IMG_c57bc32f__'
+  ✅ Found Special Node: __IMG_c57bc32f__
+  🔍 Checking placeholder: '__IMG_556cf388__'
+  ✅ Found Special Node: __IMG_556cf388__
+  ✓ Finished Section: Electrochemical Properties
+  ✓ Finished Section: **EXPERIMENTAL**
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: Synthesis and Structures
+  ✓ Re-indexed 342 structural nodes.
+  ✓ Mapped 266 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 76 text nodes and 15 image nodes.
+
+[Stage 2] Extracting from 76 relevant nodes...
+  [1/76] ○ Application in All-Solid-State Lithium Cell... (0 data points)
+  [2/76] ○ Rietveld Refinement Results for Li4SiS4... (0 data points)
+  [3/76] ○ Aliovalent Solid Solutions and Conduction Type... (0 data points)
+  [4/76] ○ V. W. Gratzer et al., 1971... (0 data points)
+  [5/76] ○ W. H. Baur and T. Ohta, 1982... (0 data points)
+  [6/76] ○ Material Modification and Conductivity Enhancement... (0 data points)
+  [7/76] ○ Structure of Li4SiS4... (0 data points)
+  [8/76] ○ Authors and Affiliations... (0 data points)
+  [9/76] ○ M. Murayama et al., in press... (0 data points)
+  [10/76] ○ Figure 6: Lattice Parameter Changes... (0 data points)
+  [11/76] ○ Acknowledgments... (0 data points)
+  [12/76] ○ Superlattice Reflections and Their Analysis... (0 data points)
+  [13/76] ○ Y. Inaguma et al., 1994... (0 data points)
+  [14/76] ○ Effect of P5+ Substitution on Conductivity... (0 data points)
+  [15/76] ○ Composition Dependence of Lattice Parameters... (0 data points)
+  [16/76] ○ Copyright... (0 data points)
+  [17/76] ○ S. Kondo, 1998... (0 data points)
+  [18/76] ✓ Conductivity and Activation Energy Results... (2 data points)
+  [19/76] ○ J. H. Kennedy and Y. Yang, 1987... (0 data points)
+  [20/76] ○ S. Kondo et al., 1992... (0 data points)
+  [21/76] ○ H. Y.-P. Hong, 1978... (0 data points)
+  [22/76] ○ Comparison with Related Thio-LISICON System... (0 data points)
+  [23/76] ✓ Abstract... (1 data points)
+  [24/76] ○ A. R. West, 1995... (0 data points)
+  [25/76] ○ Conclusion and Future Studies... (0 data points)
+  [26/76] ✓ Introduction to Solid Electrolytes and Early Chall... (1 data points)
+  [27/76] ✓ Comparison of Conductivity within Thio-LISICON Com... (1 data points)
+  [28/76] ○ CV Introduction for Electrochemical Stability... (0 data points)
+  [29/76] ○ Y.-W. Hu et al., 1977... (0 data points)
+  [30/76] ○ Synthesis and Initial Structural Analysis of Li4+x... (0 data points)
+  [31/76] ✓ Review of Oxide-Based LISICON System... (1 data points)
+  [32/76] ○ R. D. Shannon et al., 1977... (0 data points)
+  [33/76] ○ Description of Figure 2: X-ray Diffraction Pattern... (0 data points)
+  [34/76] ○ CV Results and Reactions... (0 data points)
+  [35/76] ○ Extent of Solid Solution Formation... (0 data points)
+  [36/76] ○ T. Takahashi et al., 1979... (0 data points)
+  [37/76] ○ Material Synthesis... (0 data points)
+  [38/76] ✓ Recent Thio-LISICON Discoveries and Scope of Prese... (1 data points)
+  [39/76] ○ R. Kanno et al., 1993... (0 data points)
+  [40/76] ✓ Figures on Impedance and Conductivity of Li4-xSi1-... (2 data points)
+  [41/76] ○ Measurement Setup and Method... (0 data points)
+  [42/76] ✓ Advantages of Sulfides and Past Crystalline Sulfid... (3 data points)
+  [43/76] ○ X-ray Diffraction (XRD) Analysis... (0 data points)
+  [44/76] ✓ Comparison of Conductivity with Other Ionic Conduc... (6 data points)
+  [45/76] ○ Overall Stability Conclusion (CV & XRD)... (0 data points)
+  [46/76] ✓ Figure 10: Complex Impedance Plots for Li4.8Si0.2A... (1 data points)
+  [47/76] ○ B. B. Owens and G. R. Argue, 1970... (0 data points)
+  [48/76] ○ Ionic Conductivity Measurement... (0 data points)
+  [49/76] ○ Electrochemical Cell Construction Introduction... (0 data points)
+  [50/76] ○ Impedance Plot Analysis... (0 data points)
+  [51/76] ○ J. Kuwano and M. Kato, 1978... (0 data points)
+  [52/76] ○ Conductivity Measurement Stability... (0 data points)
+  [53/76] ○ Cyclic Voltammetry (CV) Measurement... (0 data points)
+  [54/76] ○ M. Tachez et al., 1984... (0 data points)
+  [55/76] ○ Electrochemical Cell Assembly and Performance Test... (0 data points)
+  [56/76] ○ Figure 12 Caption and Electrolyte Pellet Formation... (0 data points)
+  [57/76] ○ R. Mercier et al., 1982... (0 data points)
+  [58/76] ○ Referenced Structural Data... (0 data points)
+  [59/76] ○ Introduction to Li4SiS4... (0 data points)
+  [60/76] ○ Electrode and Cell Assembly... (0 data points)
+  [61/76] ○ B. T. Ahn and R. A. Huggins, 1989... (0 data points)
+  [62/76] ○ Structural Characterization and Details of Li4SiS4... (0 data points)
+  [63/76] ○ Charge-Discharge Performance of In/LiCoO2 Cell... (0 data points)
+  [64/76] ✓ Overview of Conductivity and Activation Energy Tre... (1 data points)
+  [65/76] ○ R. Kanno and M. Murayama, 2001... (0 data points)
+  [66/76] ○ Synthesis of Solid Solutions... (0 data points)
+  [67/76] ✓ Specific Conductivity and Activation Energy Result... (1 data points)
+  [68/76] ○ R. Kanno et al., 2000... (0 data points)
+  [69/76] ○ Lattice Parameters (Table 2)... (0 data points)
+  [70/76] ○ Synthesis of Solid Solution... (0 data points)
+  [71/76] ○ X-ray Diffraction Patterns (Figure 5)... (0 data points)
+  [72/76] ○ F. Izumi and T. Ikeda, 2000... (0 data points)
+  [73/76] ○ X-ray Diffraction Patterns and Solid Solution Form... (0 data points)
+  [74/76] ✓ Material Introduction and Properties... (1 data points)
+  [75/76] ✓ Figure 11: Conductivities of Li4+xSi1-xAlxS4... (4 data points)
+  [76/76] ✓ Impedance Measurements and Resistivity Calculation... (3 data points)
+  → 29 total data points extracted
+
+[Stage 2b] Processing 15 images directly...
+    Warning: Skipping missing image _page_5_Figure_2.jpeg
+    Warning: Skipping missing image _page_6_Figure_9.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_7.jpeg
+    Warning: Skipping missing image _page_7_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+    Warning: Skipping missing image _page_5_Figure_9.jpeg
+    Warning: Skipping missing image _page_0_Picture_13.jpeg
+    Warning: Skipping missing image _page_7_Figure_5.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_6_Figure_2.jpeg
+    Warning: Skipping missing image _page_2_Picture_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_9.jpeg
+    Warning: Skipping missing image _page_6_Figure_5.jpeg
+    Warning: Skipping missing image _page_2_Picture_2.jpeg
+
+Merging: 29 text-based + 0 image-based points.
+  → Running physical heuristic checks on 29 points...
+  → Running LLM semantic verification on 29 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 19 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Abstract / Introduction
+
+Material Names Found (with proportions where applicable):
+- "H-doped Li3N (H-doped)"
+- "La0.62Li0.16TiO3"
+- "Li2S-SiS2-LiI"
+- "Li2SiS3"
+- "Li2S–SiS2–Li3PO4"
+- "Li3.4Si0.4P0.6S4 (Li3.4Si0.4P0.6S4)"
+- "Li3.6Si0.6P0.4O4 (Si/P=0.6/0.4)"
+- "Li3N (H-doped)"
+- "Li3N (intrinsic)"
+- "Li3PS4"
+- "Li4+xSi1-xAlxS4 (x=0)"
+- "Li4+xSi1-xAlxS4 (x=0.1)"
+- "Li4+xSi1-xAlxS4 (x=0.2)"
+- "Li4+xSi1-xAlxS4 (x=0.3)"
+- "Li4+xSi1-xAlxS4 (x=0.8)"
+- "Li4-xGe1-xPxS4"
+- "Li4-xSi1-xPxS4 (x = 0.6)"
+- "Li4-xSi1-xPxS4 (x=0.4)"
+- "Li4-xSi1-xPxS4 (x=0.6)"
+- "Li4.275Ge0.61Ga0.25S4"
+- "Li4.8Si0.2Al0.8S4"
+- "Li4.8Si0.2Al0.8S4 (Si=0.2, Al=0.8)"
+- "Li4SiS4"
+- "thio-LISICON"
+- "thio-LISICON based on lithium germanium sulfides"
+- "x = 0.6 (x = 0.6)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li3N', canonical_name='Lithium Nitride', abbreviation=None, variant_names=['H-doped Li3N (H-doped)', 'Li3N (H-doped)', 'Li3N (intrinsic)']), CanonicalMaterialName(canonical_formula='La0.62Li0.16TiO3', canonical_name='Lanthanum Lithium Titanium Oxide', abbreviation='LLTO', variant_names=['La0.62Li0.16TiO3']), CanonicalMaterialName(canonical_formula='Li2S-SiS2-LiI', canonical_name='Lithium Sulfide Silicon Sulfide Lithium Iodide', abbreviation=None, variant_names=['Li2S-SiS2-LiI']), CanonicalMaterialName(canonical_formula='Li2SiS3', canonical_name='Lithium Silicon Sulfide', abbreviation=None, variant_names=['Li2SiS3']), CanonicalMaterialName(canonical_formula='Li2S-SiS2-Li3PO4', canonical_name='Lithium Sulfide Silicon Sulfide Lithium Phosphate', abbreviation=None, variant_names=['Li2S–SiS2–Li3PO4']), CanonicalMaterialName(canonical_formula='Li3.4Si0.4P0.6S4', canonical_name='Lithium Silicon Phosphorus Sulfide', abbreviation=None, variant_names=['Li3.4Si0.4P0.6S4 (Li3.4Si0.4P0.6S4)', 'Li4-xSi1-xPxS4 (x = 0.6)', 'Li4-xSi1-xPxS4 (x=0.6)', 'x = 0.6 (x = 0.6)']), CanonicalMaterialName(canonical_formula='Li3.6Si0.6P0.4O4', canonical_name='Lithium Silicon Phosphorus Oxide', abbreviation=None, variant_names=['Li3.6Si0.6P0.4O4 (Si/P=0.6/0.4)', 'Li4-xSi1-xPxS4 (x=0.4)']), CanonicalMaterialName(canonical_formula='Li3PS4', canonical_name='Lithium Phosphorus Sulfide', abbreviation=None, variant_names=['Li3PS4']), CanonicalMaterialName(canonical_formula='Li4SiS4', canonical_name='Lithium Silicon Sulfide', abbreviation=None, variant_names=['Li4+xSi1-xAlxS4 (x=0)', 'Li4SiS4']), CanonicalMaterialName(canonical_formula='Li4.1Si0.9Al0.1S4', canonical_name='Lithium Silicon Aluminum Sulfide', abbreviation=None, variant_names=['Li4+xSi1-xAlxS4 (x=0.1)']), CanonicalMaterialName(canonical_formula='Li4.2Si0.8Al0.2S4', canonical_name='Lithium Silicon Aluminum Sulfide', abbreviation=None, variant_names=['Li4+xSi1-xAlxS4 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li4.3Si0.7Al0.3S4', canonical_name='Lithium Silicon Aluminum Sulfide', abbreviation=None, variant_names=['Li4+xSi1-xAlxS4 (x=0.3)']), CanonicalMaterialName(canonical_formula='Li4.8Si0.2Al0.8S4', canonical_name='Lithium Silicon Aluminum Sulfide', abbreviation=None, variant_names=['Li4+xSi1-xAlxS4 (x=0.8)', 'Li4.8Si0.2Al0.8S4', 'Li4.8Si0.2Al0.8S4 (Si=0.2, Al=0.8)']), CanonicalMaterialName(canonical_formula='Li4-xGe1-xPxS4', canonical_name='Lithium Germanium Phosphorus Sulfide', abbreviation='thio-LISICON', variant_names=['Li4-xGe1-xPxS4', 'thio-LISICON', 'thio-LISICON based on lithium germanium sulfides']), CanonicalMaterialName(canonical_formula='Li4.275Ge0.61Ga0.25S4', canonical_name='Lithium Germanium Gallium Sulfide', abbreviation=None, variant_names=['Li4.275Ge0.61Ga0.25S4'])]
+  → Created 15 canonical material(s)
+  → Updated 29/29 material names
+  → Normalizing 29 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='2.3 × 10⁻⁷ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S cm-1', 'cond_value': 2.3e-07}
+    [DEBUG Norm] Input: Cond='6.4 × 10⁻⁴ S cm⁻¹', Temp='27°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 27, 'cond_value': 0.00064, 'temp_unit': 'C', 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='10⁻³ S cm⁻¹', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='2.2 × 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0022}
+    [DEBUG Norm] Input: Cond='~10⁻⁶ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-06, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.5 × 10⁻⁵ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 6.5e-05}
+    [DEBUG Norm] Input: Cond='2.1 × 10⁻⁴ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 0.00021, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='6.4 × 10⁻⁴ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.00064}
+    [DEBUG Norm] Input: Cond='10⁻⁵ – 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1e-05, 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻⁵ – 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10⁻⁷ – 10⁻⁹ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-07, 'temp_unit': 'C', 'cond_unit': 'S cm⁻¹', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='10⁻⁷ – 10⁻⁹ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm⁻¹', 'temp_unit': 'C', 'temp_value': 25, 'cond_value': 1e-09}
+    [DEBUG Norm] Input: Cond='6.4 × 10⁻⁴ S cm⁻¹', Temp='27°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 27, 'cond_value': 0.00064, 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='10⁻⁷ – 10⁻⁹ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 1e-07}
+    [DEBUG Norm] Input: Cond='10⁻⁷ – 10⁻⁹ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1e-07, 'temp_value': 25, 'cond_unit': 'S cm⁻¹'}
+    [DEBUG Norm] Input: Cond='10⁻⁷ – 10⁻⁹ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1e-09, 'temp_value': 25, 'cond_unit': 'S cm⁻¹'}
+    [DEBUG Norm] Input: Cond='1 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S cm-1', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6 × 10⁻³ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.006, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='2-4 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S cm-1', 'cond_value': 0.0002}
+    [DEBUG Norm] Input: Cond='2-4 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S cm-1', 'cond_value': 0.0004, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.8 × 10⁻³ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.0018, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.4 x 10^-4 S cm^-1', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S cm^-1', 'cond_value': 0.00064, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.4 × 10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'temp_value': 25, 'cond_value': 0.00064, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.4 × 10⁻⁴ S cm⁻¹', Temp='27°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00064, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 27}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 25, 'cond_value': 1e-06}
+    [DEBUG Norm] Input: Cond='6.9 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00069, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.5 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 1.5e-05}
+    [DEBUG Norm] Input: Cond='2.3 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 2.3e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 1e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='150°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'temp_value': 150, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='90°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 90, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='130°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'temp_value': 130, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+
+[Stage 3] Deduplicating 29 data points...
+  → Merged 4 duplicates, 25 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         31
+Total Input:         105,060 tokens
+Total Output:        7,515 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0751
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 31 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure_materials.json
+Time elapsed (s)  102.17673921585083
+
+Statistics:
+  Nodes analyzed: 91
+  Raw data points: 29
+  After dedup: 21
+  Valid: 21, Invalid: 0
+
+By Confidence:
+  high: 4
+  medium: 17
+  low: 0
+
+By Data Source:
+  primary: 8
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li4.8Si0.2Al0.8S4: 2.3 × 10⁻⁷ S cm⁻¹ @ room temperature [high]
+  ✓ Li3.4Si0.4P0.6S4: 6.4 × 10⁻⁴ S cm⁻¹ @ 27°C [high]
+  ✓ Li3.6Si0.6P0.4O4: 2.1 × 10⁻⁴ S cm⁻¹ @ 25°C [high]
+  ✓ thio-LISICON: 6.4 × 10⁻⁴ S cm⁻¹ @ 27°C [high]
+  ✓ Li4.275Ge0.61Ga0.25S4: 6.5 × 10⁻⁵ S cm⁻¹ @ room temperature [medium]
+  ... and 16 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1006/jssc.2002.9701
+              Composition  Ionic conductivity (S cm-1)
+20         Li8.0Si2.0S8.0                 1.590000e-08
+21  Li91.2Si19.2P4.8S96.0                 8.110000e-07
+22  Li86.4Si14.4P9.6S96.0                 7.190000e-05
+23  Li81.6Si9.6P14.4S96.0                 6.620000e-04
+24  Li76.8Si4.8P19.2S96.0                 3.200000e-06
+29    Li8.4Si1.6Al0.4S8.0                 2.400000e-08
+30    Li8.8Si1.2Al0.8S8.0                 3.050000e-08
+31    Li9.2Si0.8Al1.2S8.0                 1.460000e-08
+32    Li9.6Si0.4Al1.6S8.0                 2.290000e-07
+Starting Evaluation on 9 Ground Truth Points...
+
+Evaluation Complete: 2/9 Matched (22.2%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system
+[0;34m[INFO][0m DOI: 10.1006/jssc.2002.9701
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_pipeline_20260114_150618.log
+

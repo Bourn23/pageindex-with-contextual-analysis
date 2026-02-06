@@ -1,0 +1,39 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-297",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula (Li1.4Al0.4Ti1.6(PO4)3) has no exact match in the extracted data with a roughly similar conductivity. EX-2 and EX-5 have the exact formula but vastly different conductivity values (orders of magnitude off). EX-0 has a very similar conductivity but a different formula (Li1.3Al0.3Ti1.7(PO4)3), thus not meeting the strict composition match criteria.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-298",
+      "extracted_id": "EX-6",
+      "reason": "The normalized ground truth formula (Li1.2Al0.2Ge1.8(PO4)3) is an exact match with EX-6. The conductivity values (GT: 7.94e-05 S/cm, EX-6: 0.0001 S/cm) are roughly similar (within approximately 26% difference), which is acceptable for a match given potential experimental variations.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-299",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula (Li1.5Al0.5Ge1.5(PO4)3) has several exact matches in the extracted data (EX-1, EX-3, EX-7, EX-8). However, the conductivity values for all these extracted entries are significantly different from the ground truth (GT: 0.00019 S/cm). For example, EX-8 (0.0001 S/cm) is nearly 50% lower, which is too large a discrepancy for a match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-300",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula (Li1.2Al0.2Ti1.8(PO4)3) is an exact match with EX-4. However, the conductivity values are vastly different (GT: 0.00338 S/cm, EX-4: 0.001 S/cm), representing a difference of approximately 70%. This significant discrepancy indicates it is not the same physical entity or measurement.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted one entry (GT-298) with an identical normalized chemical formula and roughly similar conductivity. However, it failed to match the other ground truth entries due to significant discrepancies in conductivity for exact formula matches, or lack of exact formula matches with acceptable conductivity similarity.",
+  "metrics": {
+    "recall": 25.0,
+    "precision": 9.090909090909092,
+    "f1": 13.333333333333332,
+    "avg_log10_error": 0.10017949757290356,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 4,
+    "total_ex": 11
+  }
+}

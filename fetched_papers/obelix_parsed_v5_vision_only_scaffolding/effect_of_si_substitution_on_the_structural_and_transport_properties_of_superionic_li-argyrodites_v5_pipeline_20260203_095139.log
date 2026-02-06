@@ -1,0 +1,128 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_pipeline_20260203_095139.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Journal of Materials Chemistry A
+   --- Found: 15 Sections
+   --- Found: 10 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '1. Introduction' contains:
+       - 1 Images: ['Fig 1a']
+
+   >>> Section 'Structural characterization' contains:
+       - 4 Images: ['Fig 3s', 'Fig 4s', 'Fig 2a', 'Fig 2a']
+
+   >>> Section 'Ionic transport' contains:
+       - 3 Images: ['Fig 5a', 'Fig 6a', 'Fig 6a']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: Acknowledgements
+   [91m[Warning][0m Skipping section: References
+   ... Processing 2 items (Text + Images) simultaneously ...
+   🔍 page_4_figure_9.jpeg (Fig 5a): Detecting subplot...
+   🔍 page_5_figure_5.jpeg (Fig 6a): Detecting subplot...
+   ✂️ page_5_figure_5.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+Passing box coords  [43, 18, 965, 487]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/scifig_debug/page_5_figure_5_cropped_a.jpeg
+   [93m[Skip][0m page_5_figure_5.jpeg (Fig 6a): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_4_figure_9.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+Passing box coords  [34, 49, 374, 965]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/scifig_debug/page_4_figure_9_cropped_a.jpeg
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 5a): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 5a): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_4_figure_9.jpeg (Fig 5a): Found 36 points total via SciFigureParser
+   ✓ page_5_figure_5.jpeg (Fig 6a): Found 14 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 50 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 50 measurements
+      - Skipped (no data): 0 images
+      - Failed: 0 items
+
+Done! Extracted 50 points.
+Saved to: fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         0
+Total Input:         0 tokens
+Total Output:        0 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0000
+--------------------------------------------------
+Breakdown by Model:
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1039/c7ta08581h
+GT-388: Li24.0P4.0S20.0Br4.0 | 0.000701 S/cm
+GT-389: Li24.1P3.9Si0.1S20.0Br4.0 | 0.000878 S/cm
+GT-390: Li24.2P3.8Si0.2S20.0Br4.0 | 0.000437 S/cm
+GT-391: Li24.3P3.7Si0.3S20.0Br4.0 | 0.000873 S/cm
+GT-392: Li24.4P3.8Si0.4S20.0Br4.0 | 0.000799 S/cm
+GT-393: Li24.5P3.5Si0.5S20.0Br4.0 | 0.000902 S/cm
+GT-394: Li24.7P3.3Si0.7S20.0Br4.0 | 0.000931 S/cm
+GT-395: Li24.8P3.2Si0.8S20.0Br4.0 | 0.00169 S/cm
+GT-396: Li24.9P3.1Si0.9S20.0Br4.0 | 0.00108 S/cm
+GT-397: Li25.0P3.0Si1.0S20.0Br4.0 | 0.00141 S/cm
+GT-398: Li25.2P2.8Si1.2S20.0Br4.0 | 0.00165 S/cm
+GT-399: Li25.4P2.6Si1.4S20.0Br4.0 | 0.00234 S/cm
+GT-400: Li26.0P2.0Si2.0S20.0Br4.0 | 0.00219 S/cm
+--- Starting Validation ---
+Comparing 13 GT items vs 863 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-388     | ✅ MATCH         | The extracted x=0.0 composition and 0.00073 S/cm conductivity are an approximate match for the ground truth x=0.0 and 0.000701 S/cm (4.13% difference).
+GT-389     | ✅ MATCH         | The extracted x=0.025 composition and 0.00088 S/cm conductivity are an approximate match for the ground truth x=0.025 and 0.000878 S/cm (0.23% difference).
+GT-390     | ✅ MATCH         | The extracted x=0.05 composition and 0.00046 S/cm conductivity are an approximate match for the ground truth x=0.05 and 0.000437 S/cm (5.26% difference, within absolute tolerance).
+GT-391     | ✅ MATCH         | The extracted x=0.075 composition and 0.00088 S/cm conductivity are an approximate match for the ground truth x=0.075 and 0.000873 S/cm (0.80% difference).
+GT-392     | ✅ MATCH         | The extracted x=0.1 composition and 0.00082 S/cm conductivity are an approximate match for the ground truth x=0.1 and 0.000799 S/cm (2.63% difference).
+GT-393     | ✅ MATCH         | The extracted x=0.125 composition and 0.00092 S/cm conductivity are an approximate match for the ground truth x=0.125 and 0.000902 S/cm (1.99% difference).
+GT-394     | ✅ MATCH         | The extracted x=0.175 composition and 0.00096 S/cm conductivity are an approximate match for the ground truth x=0.175 and 0.000931 S/cm (3.11% difference).
+GT-395     | ✅ MATCH         | The extracted x=0.2 composition and 0.00172 S/cm conductivity are an approximate match for the ground truth x=0.2 and 0.00169 S/cm (1.78% difference).
+GT-396     | ✅ MATCH         | The extracted x=0.225 composition and 0.0011 S/cm conductivity are an approximate match for the ground truth x=0.225 and 0.00108 S/cm (1.85% difference).
+GT-397     | ✅ MATCH         | The extracted x=0.25 composition and 0.00145 S/cm conductivity are an approximate match for the ground truth x=0.25 and 0.00141 S/cm (2.84% difference).
+GT-398     | ✅ MATCH         | The extracted x=0.3 composition and 0.00168 S/cm conductivity are an approximate match for the ground truth x=0.3 and 0.00165 S/cm (1.82% difference).
+GT-399     | ✅ MATCH         | The extracted x=0.35 composition and 0.00236 S/cm conductivity are an approximate match for the ground truth x=0.35 and 0.00234 S/cm (0.85% difference).
+GT-400     | ✅ MATCH         | The extracted x=0.5 composition and 0.00222 S/cm conductivity are an approximate match for the ground truth x=0.5 and 0.00219 S/cm (1.37% difference).
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m DOI: 10.1039/c7ta08581h
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_pipeline_20260203_095139.log
+

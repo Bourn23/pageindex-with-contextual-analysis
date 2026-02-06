@@ -1,0 +1,93 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260128_135050.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '*3.2. LiHf2(P04)3 + yLi20 system*'
+       - Replaced 'Table 2' in section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*'
+   --- Document: **Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2 (PO4)3**
+   --- Found: 11 Sections
+   --- Found: 13 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '*3.1. Crystal structure of LiHf2(P04)3*' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '*3.2. LiHf2(P04)3 + yLi20 system*' contains:
+       - 8 Images: ['Fig 2', 'Fig 5', 'Fig 6', 'Fig 4', 'Fig 3', 'Fig 7', 'Fig 5s', 'Fig 3']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*' contains:
+       - 3 Images: ['Fig 9', 'Fig 10', 'Fig 8']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 25 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_1_figure_10.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_picture_1.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_2.jpeg (Fig 5s): Detecting subplot...
+   [93m[Skip][0m page_1_figure_10.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_3.jpeg (Fig 3): Detecting subplot...
+   🔍 page_3_picture_4.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_3_picture_3.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_2.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 5s): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_4.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_3_picture_4.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_7.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_9.jpeg (Fig 7): Detecting subplot...
+   🔍 page_5_figure_7.jpeg (Fig 8): Detecting subplot...
+   📊 page_4_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_4_figure_4.jpeg (Fig 5): Found 20 points total via SciFigureParser
+   🔍 page_6_figure_2.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 8): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_4.jpeg (Fig 10): Detecting subplot...
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   📊 page_6_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_4_figure_7.jpeg (Fig 6): Found 26 points total via SciFigureParser
+   ✓ page_4_figure_2.jpeg (Fig 4): Found 32 points total via SciFigureParser
+   ✓ Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with: Found 4 points
+   ✓ Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-: Found 6 points
+   ✓ page_4_figure_9.jpeg (Fig 7): Found 5 points total via SciFigureParser
+   ✓ page_6_figure_4.jpeg (Fig 10): Found 10 points total via SciFigureParser
+   ... Resolving 54 ambiguous material names...
+Traceback (most recent call last):
+  File "/Users/bourn23/Downloads/general/PageIndex/basic_extraction_md_v5.py", line 1416, in <module>
+    main()
+  File "/Users/bourn23/Downloads/general/PageIndex/basic_extraction_md_v5.py", line 1373, in main
+    measurements, material_definitions, stats = asyncio.run(run_pipeline(args.markdown_file, args.asset_dir or args.markdown_file.parent, args.model))
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/Users/bourn23/Downloads/general/PageIndex/basic_extraction_md_v5.py", line 1335, in run_pipeline
+    all_measurements = await canonicalize_materials(client, all_measurements, material_defs)
+  File "/Users/bourn23/Downloads/general/PageIndex/basic_extraction_md_v5.py", line 724, in canonicalize_materials
+    items_str = "\n".join([f"ID {i}: {measurements[i].raw_composition} (Source: {measurements[i].source_caption or 'Text'})" for i in to_resolve])
+  File "/Users/bourn23/Downloads/general/PageIndex/basic_extraction_md_v5.py", line 724, in <listcomp>
+    items_str = "\n".join([f"ID {i}: {measurements[i].raw_composition} (Source: {measurements[i].source_caption or 'Text'})" for i in to_resolve])
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/site-packages/pydantic/main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'MeasuredPoint' object has no attribute 'source_caption'
+[0;31m[ERROR][0m Failed during extraction step

@@ -1,0 +1,329 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-01-23 09:53:25",
+  "execution_time_seconds": 39.21,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13627,
+    "total_output_tokens": 20204,
+    "total_cost_usd": 0.0674,
+    "call_counts": {
+      "gemini-3-flash-preview": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 18,
+    "skipped_images": 5,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 8
+  },
+  "material_count": 18,
+  "measurements": [
+    {
+      "raw_composition": "x=0.06 (quenched)",
+      "canonical_formula": "x=0.06 (quenched)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-3.8",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 5.315757814727869e-07,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12 (quenched)",
+      "canonical_formula": "x=0.12 (quenched)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-2.75",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 5.964378366724544e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.15 (quenched)",
+      "canonical_formula": "x=0.15 (quenched)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 2.374461795687198e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.06 (annealed)",
+      "canonical_formula": "x=0.06 (annealed)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-3.4",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 1.335257992800595e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12 (annealed)",
+      "canonical_formula": "x=0.12 (annealed)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 2.2159766829032225e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.15 (annealed)",
+      "canonical_formula": "x=0.15 (annealed)",
+      "material_definitions": [
+        "Quenched and annealed samples of an ordered perovskite with composition variable x.",
+        "Ordered perovskite exhibits anisotropic conductivity.",
+        "Samples were evaluated to compare bulk conductivities in quenched versus annealed states."
+      ],
+      "raw_conductivity": "-3.35",
+      "raw_conductivity_unit": "log(sigma / S cm^-1)",
+      "normalized_conductivity": 1.498184109176465e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (1st cycle, quenching)",
+      "canonical_formula": "x = 0.11 (1st cycle, quenching)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-2.9",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.11 (1st cycle, annealing)",
+      "canonical_formula": "x = 0.11 (1st cycle, annealing)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.11 (2nd cycle, quenching)",
+      "canonical_formula": "x = 0.11 (2nd cycle, quenching)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.11 (2nd cycle, annealing)",
+      "canonical_formula": "x = 0.11 (2nd cycle, annealing)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-3.13",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.11 (3rd cycle, quenching)",
+      "canonical_formula": "x = 0.11 (3rd cycle, quenching)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.11 (3rd cycle, annealing)",
+      "canonical_formula": "x = 0.11 (3rd cycle, annealing)",
+      "material_definitions": [
+        "sample with x = 0.11 during quenching\u2013annealing cycles"
+      ],
+      "raw_conductivity": "-3.13",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in a disordered state.",
+        "The disordered state is achieved by quenching.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "0.15",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 0.004237612633868263,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in a disordered state.",
+        "The disordered state is achieved by quenching.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "-1.4",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 0.00015924286822139894,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in a disordered state.",
+        "The disordered state is achieved by quenching.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 3.971641173621407e-06,
+      "raw_temperature": "5.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": -73.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in an ordered state.",
+        "The ordered state is achieved by annealing.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "-0.1",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 0.0023829847041728445,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in an ordered state.",
+        "The ordered state is achieved by annealing.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "-1.8",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 6.339572769844454e-05,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Samples with composition x = 0.12 in an ordered state.",
+        "The ordered state is achieved by annealing.",
+        "Measurements show the bulk conductivity on an Arrhenius plot.",
+        "Logarithmic plot of T*sigma vs inverse temperature."
+      ],
+      "raw_conductivity": "-3.6",
+      "raw_conductivity_unit": "log(T sigma / K Scm-1)",
+      "normalized_conductivity": 1.2559432157547899e-06,
+      "raw_temperature": "5.0",
+      "raw_temperature_unit": "10^3 T-1 / K-1",
+      "normalized_temperature_c": -73.15,
+      "source": "figure",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

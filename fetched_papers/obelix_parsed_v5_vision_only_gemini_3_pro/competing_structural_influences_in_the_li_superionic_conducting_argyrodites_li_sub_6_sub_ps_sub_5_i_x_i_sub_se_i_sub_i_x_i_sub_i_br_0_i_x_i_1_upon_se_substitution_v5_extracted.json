@@ -1,0 +1,194 @@
+{
+  "doc_name": "competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution",
+  "timestamp": "2026-01-23 09:22:52",
+  "execution_time_seconds": 98.03,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13973,
+    "total_output_tokens": 10383,
+    "total_cost_usd": 0.1525,
+    "call_counts": {
+      "gemini-3-pro-preview": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 11,
+    "skipped_images": 7,
+    "failed_items": 1,
+    "total_sections_processed": 12,
+    "total_images_processed": 9
+  },
+  "material_count": 11,
+  "measurements": [
+    {
+      "raw_composition": "x=0.0 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "2.8",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0028,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.1 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.2",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0032,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0036000000000000003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.4 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0036000000000000003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.5 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "2.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.6 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "2.8",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0028,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.7 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.0",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.8 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.5",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0035,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.9 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.8",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0038,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=1.0 in Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [
+        "Solid solution series Li6PS(5-x)SexBr as a function of the Se content x"
+      ],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0036000000000000003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

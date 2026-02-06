@@ -1,0 +1,518 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 132477,
+    "total_output_tokens": 8035,
+    "total_cost_usd": 0.09034350000000001,
+    "call_counts": {
+      "gemini-3-flash-preview": 32
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/enhancing_li_ion_conductivity_of_garnet-type_li_5_la_3_nb_2_o_12_by_y-_and_li-codoping_synthesis_structure_chemical_stability_and_transport_properties_structure.json",
+  "extraction_stats": {
+    "total_nodes": 132,
+    "raw_extracted": 30,
+    "after_dedup": 15,
+    "time_elapsed": 108.31431818008423,
+    "valid_count": 15,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 6,
+      "medium": 9,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 6,
+      "cited": 0,
+      "inferred": 7
+    },
+    "from_text_nodes": 30,
+    "from_image_nodes": 0,
+    "final_count": 15
+  },
+  "material_count": 15,
+  "materials": [
+    {
+      "source_sentence_id": "0334, 0064, 0211",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Nb1.25Y0.75O12",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "24 °C",
+      "reason": "Extracted primary conductivity data for the specific garnet-like composition mentioned in the conclusion.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-like cubic crystal structure with space group Ia-3d, higher lithium stuffed member. ; Novel garnet-like Li stuffed garnets, Y-substituted at the M site of the Nb member. ; Garnet-type oxide Li5+2xLa3Nb2-xYxO12",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible.",
+      "source_node": {
+        "node_id": "0330",
+        "title": "Key Properties and Performance",
+        "section": "4. CONCLUSIONS"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Nb1.25Y0.75O12",
+      "_original_name": "Li6.5La3Nb1.25Y0.75O12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0016, 0240",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Nb1.25Y0.75O12",
+        "acronym": null,
+        "proportion": "Nb=1.25, Y=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "2.7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted bulk ionic conductivity for the specific garnet-type compound Li6.5La3Nb1.25Y0.75O12 mentioned in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "garnet-type compound ; Garnet-type solid electrolyte with Nb and Y substitution.",
+      "processing_method": "Sintered at 1200°C for 6 hours. | Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible.",
+      "source_node": {
+        "node_id": "0014",
+        "title": "High Ionic Conductivity Finding",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Nb1.25Y0.75O12",
+      "_original_name": "Li6.5La3Nb1.25Y0.75O12",
+      "_norm_cond": 0.00027,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60144edb) for the Li6PS5Cl sample at 25°C (approx. 3.35 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction Section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.8 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60144edb) for the Li6PS5Br sample at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction Section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.1 x 10^-7 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60144edb) for the Li6PS5I sample at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction Section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 7.1e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0064, 0211",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La3Nb1.5Y0.5O12",
+        "acronym": null,
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for the x=0.5 member of the Li5+2xLa3Nb2-xYxO12 series as reported in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Novel garnet-like Li stuffed garnets, Y-substituted at the M site of the Nb member. ; Garnet-type oxide Li5+2xLa3Nb2-xYxO12",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible.",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Research Gap and Current Study's Contribution on Y-substituted Garnets",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La3Nb1.5Y0.5O12",
+      "_original_name": "Li5+2xLa3Nb2-xYxO12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0334, 0046",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "24 °C",
+      "reason": "Extracted comparison conductivity value for the well-known LLZO garnet mentioned as a benchmark.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0330",
+        "title": "Key Properties and Performance",
+        "section": "4. CONCLUSIONS"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3M2O12",
+        "acronym": null,
+        "proportion": "M = Nb, Ta"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "ambient temperature",
+      "reason": "Extracted total conductivity value for the Li5La3M2O12 (M = Nb, Ta) garnet-type compounds cited from Thangadurai et al. (2003).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0035",
+        "title": "Garnet-Type Solid Electrolytes: Structure and Initial Properties",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5La3M2O12",
+      "_original_name": "Li5La3M2O12 (M = Nb, Ta)",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La2BaTa2O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "22 °C",
+      "reason": "Extracted specific conductivity value and temperature for the chemical formula Li6La2BaTa2O12 mentioned in the text.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0041",
+        "title": "Strategies for Improving Garnet Conductivity and High-Performance Examples",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La2BaTa2O12",
+      "_original_name": "Li6La2BaTa2O12",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 22,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0044",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5+2xLa3Nb2-xYxO12",
+        "acronym": null,
+        "proportion": "substitution at the M-site"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ – 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted conductivity range for M-site substituted garnet-like compounds from a cited study.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of high purity precursors LiNO3 (10 wt% excess added), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated at 700 °C for 6 h, ball milled again, and pressed into pellets using an isostatic press. The pellets were sintered at 900 °C for 24 h followed by 1100 °C for 6 h in air, while covered with the mother powder in a clean alumina crucible.",
+      "source_node": {
+        "node_id": "0041",
+        "title": "Strategies for Improving Garnet Conductivity and High-Performance Examples",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5+2xLa3Nb2-xYxO12",
+      "_original_name": "garnet-like compounds",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0046",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "tetragonal phase"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Inferred conductivity for the tetragonal phase based on the statement that the cubic phase is 2 orders of magnitude higher (10⁻⁴ S cm⁻¹).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0041",
+        "title": "Strategies for Improving Garnet Conductivity and High-Performance Examples",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0240",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3Nb2O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-6 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the literature comparison data points in Figure 10.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0236",
+        "title": "Comparison of Li Ion Conductivity (Figure 10)",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5La3Nb2O12",
+      "_original_name": "Li5La3Nb2O12",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0240",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the literature comparison data points in Figure 10 for standard LLZO.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0236",
+        "title": "Comparison of Li Ion Conductivity (Figure 10)",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0240",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La3Ta1.5Y0.5O12",
+        "acronym": null,
+        "proportion": "Ta=1.5, Y=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.8 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the literature comparison data points in Figure 10 for Ta-substituted garnet.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible. [Inferred]",
+      "source_node": {
+        "node_id": "0236",
+        "title": "Comparison of Li Ion Conductivity (Figure 10)",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La3Ta1.5Y0.5O12",
+      "_original_name": "Li6La3Ta1.5Y0.5O12",
+      "_norm_cond": 0.00018,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0033",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Solid electrolytes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ – 10⁻² S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a general performance range for solid electrolytes mentioned in the introduction as potential replacements for polymer electrolytes.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "Solid electrolytes with high electrochemical stability (up to 5.5 V/Li)",
+      "processing_method": "Conventional solid-state ceramic technique: Stoichiometric amounts of precursors LiNO3 (10 wt% excess), La2O3 (preheated at 900 °C for 24 h), Nb2O5, and Y(NO3)3 were ball milled at 200 rpm for 12 h in 2-propanol using zirconium balls. The mixture was heat treated (calcined) at 700 °C for 6 h, followed by a second ball milling under the same conditions. The resulting powders were pressed into pellets using an isostatic press and sintered initially at 900 °C for 24 h, then at 1100 °C for 6 h in air, covered with mother powder in a clean alumina crucible.",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Introduction to Solid-State Li-ion Batteries and Electrolytes",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.01,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

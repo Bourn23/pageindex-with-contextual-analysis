@@ -1,0 +1,151 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i_v5_pipeline_20260203_121435.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Article
+   --- Found: 16 Sections
+   --- Found: 11 Figures, 0 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '3. Results' contains:
+       - 6 Images: ['Fig 6', 'Fig 5', 'Fig 2', 'Fig 4', 'Fig 3', 'Fig 1']
+
+   >>> Section '**4. Discussion**' contains:
+       - 5 Images: ['Fig 6', 'Fig 3', 'Fig 7', 'Fig 4', 'Fig 8']
+
+   >>> Section '**Table of contents entry**' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **Acknowledgements**
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 25 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_7.jpeg (Unknown): Detecting subplot...
+   🔍 page_10_figure_3.jpeg (Fig 2): Detecting subplot...
+   🔍 page_11_figure_4.jpeg (Fig 3): Detecting subplot...
+   🔍 page_12_figure_4.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_0_picture_1.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_13_figure_4.jpeg (Fig 5): Detecting subplot...
+   ⚠️ page_0_picture_7.jpeg: SciFigureParser failed: list index out of range. Falling back to standard processing...
+   🔍 page_15_figure_3.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_12_figure_4.jpeg (Fig 4): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_18_figure_4.jpeg (Fig 7): Detecting subplot...
+   ✂️ page_11_figure_4.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_11_figure_4.jpeg (Fig 3): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_11_figure_4.jpeg (Fig 3): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_11_figure_4.jpeg (Fig 3): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_11_figure_4.jpeg (Fig 3): d - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_18_picture_7.jpeg (Fig 8): Detecting subplot...
+   [93m[Skip][0m page_18_picture_7.jpeg (Fig 8): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_25_picture_8.jpeg (Unknown): Detecting subplot...
+   ✂️ page_18_figure_4.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_18_figure_4.jpeg (Fig 7): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_18_figure_4.jpeg (Fig 7): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_9_figure_3.jpeg (Fig 1): Detecting subplot...
+   [93m[Skip][0m page_25_picture_8.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   ✂️ page_13_figure_4.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+Passing box coords  [26, 42, 968, 494]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i/scifig_debug/page_13_figure_4_cropped_a.jpeg
+   [93m[Skip][0m page_13_figure_4.jpeg (Fig 5): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_9_figure_3.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_9_figure_3.jpeg (Fig 1): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_9_figure_3.jpeg (Fig 1): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_15_figure_3.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+   [93m[Skip][0m page_15_figure_3.jpeg (Fig 6): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+Passing box coords  [350, 60, 655, 960]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i/scifig_debug/page_15_figure_3_cropped_b.jpeg
+Passing box coords  [665, 60, 995, 870]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i/scifig_debug/page_15_figure_3_cropped_c.jpeg
+   ✓ page_13_figure_4.jpeg (Fig 5): Found 40 points total via SciFigureParser
+   ✓ page_15_figure_3.jpeg (Fig 6): Found 28 points total via SciFigureParser
+   ⏱️  page_10_figure_3.jpeg: Timeout
+   ... Canonicalizing Materials...
+   ... Resolving 69 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 70 measurements
+      - Skipped (no data): 21 images
+      - Failed: 1 items
+
+Done! Extracted 70 points.
+Saved to: fetched_papers/obelix_md2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         15
+Total Input:         15,628 tokens
+Total Output:        8,327 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0259
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 14 calls
+  - gemini-3-flash-preview        : 1 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/jacs.7b06327
+GT-379: Li24.0P4.0S20.0Cl1.0Br3.0 | 0.00186 S/cm
+GT-380: Li24.0P4.0S20.0Cl4.0 | 0.00205 S/cm
+GT-381: Li24.0P4.0S20.0Cl2.0Br2.0 | 0.00333 S/cm
+GT-382: Li24.0P4.0S20.0Br4.0 | 0.00115 S/cm
+GT-383: Li24.0P4.0S20.0Br2.0I2.0 | 2.62e-05 S/cm
+GT-384: Li24.0P4.0S20.0I4.0 | 1.3e-06 S/cm
+GT-385: Li24.0P4.0S20.0Cl3.0Br1.0 | 0.00226 S/cm
+GT-386: Li24.0P4.0S20.0Br3.0I1.0 | 0.000112 S/cm
+GT-387: Li24.0P4.0S20.0Br1.0I3.0 | 4.72e-06 S/cm
+--- Starting Validation ---
+Comparing 9 GT items vs 1196 Extracted items...
+
+============================================================
+VALIDATION SCORE: 22.2%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-379     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Cl0.25Br0.75.
+GT-380     | ❌ MISSING/BAD   | The extracted composition Li6PS5Cl matches 'Cl', but the extracted conductivity 0.00238 S/cm at ~30C is not an approximate match for 0.00205 S/cm at 25C (15.9% difference).
+GT-381     | ❌ MISSING/BAD   | The extracted composition Li6PS5Cl0.5Br0.5 matches 'Cl0.5Br0.5', but the extracted conductivity 0.00392 S/cm at ~30C is not an approximate match for 0.00333 S/cm at 25C (17.6% difference).
+GT-382     | ✅ MATCH         | The extracted composition Li6PS5Br matches 'Br' and the extracted conductivity 0.00106 S/cm at ~30C is an approximate match for 0.00115 S/cm at 25C (8.1% difference).
+GT-383     | ✅ MATCH         | The extracted composition Li6PS5Br0.5I0.5 matches 'Br0.5I0.5' and the extracted conductivity 2.37e-05 S/cm at ~30C is an approximate match for 2.62e-05 S/cm at 25C (9.6% difference).
+GT-384     | ❌ MISSING/BAD   | The extracted composition Li6PS5I matches 'I', but the extracted conductivity 1.83e-06 S/cm at ~30C is not an approximate match for 1.3e-06 S/cm at 25C (40.6% difference).
+GT-385     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Cl0.75Br0.25.
+GT-386     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Br0.75I0.25.
+GT-387     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Br0.25I0.75.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i
+[0;34m[INFO][0m DOI: 10.1021/jacs.7b06327
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i_v5_pipeline_20260203_121435.log
+

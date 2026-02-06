@@ -1,0 +1,118 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_pipeline_20260203_100004.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '3. Results and discussion'
+       - Replaced 'Table 2' in section '3. Results and discussion'
+   --- Document: Lithium ion conductivity of polycrystalline perovskite La Li TiO with ordered and disordered arrangements of the 0.672*<sup>x</sup>* <sup>3</sup>*<sup>x</sup>* <sup>3</sup> A-site ions
+   --- Found: 8 Sections
+   --- Found: 8 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '3. Results and discussion' contains:
+       - 6 Images: ['Fig 6', 'Fig 2', 'Fig 4', 'Fig 1', 'Fig 5', 'Fig 3']
+       - 2 Tables: ['Table 2', 'Table 1']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: Acknowledgements
+   [91m[Warning][0m Skipping section: References
+   ... Processing 3 items (Text + Images) simultaneously ...
+   🔍 page_3_figure_5.jpeg (Fig 3): Detecting subplot...
+   🔍 page_3_figure_9.jpeg (Fig 4): Detecting subplot...
+   🔍 page_4_figure_2.jpeg (Fig 5): Detecting subplot...
+   📊 page_3_figure_5.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_3_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_3_figure_5.jpeg (Fig 3): Found 12 points total via SciFigureParser
+   ✓ page_3_figure_9.jpeg (Fig 4): Found 6 points total via SciFigureParser
+   ✓ page_4_figure_2.jpeg (Fig 5): Found 27 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 45 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 45 measurements
+      - Skipped (no data): 0 images
+      - Failed: 0 items
+
+Done! Extracted 45 points.
+Saved to: fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         0
+Total Input:         0 tokens
+Total Output:        0 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0000
+--------------------------------------------------
+Breakdown by Model:
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0167-2738(98)00070-8
+GT-159: La1.22Li0.36Ti2.0O6.0 | 0.000412 S/cm
+GT-160: La1.1Li0.72Ti2.0O6.0 | 0.000688 S/cm
+GT-161: La1.08Li0.78Ti2.0O6.0 | 0.000651 S/cm
+GT-162: La1.04Li0.9Ti2.0O6.0 | 0.000501 S/cm
+GT-163: La1.16Li0.54Ti2.0O6.0 | 0.000599 S/cm
+GT-164: La1.12Li0.66Ti2.0O6.0 | 0.000668 S/cm
+GT-449: La0.58Li0.27Ti1.0O3.0 | 0.000832 S/cm
+GT-450: La0.56Li0.33Ti1.0O3.0 | 0.0013 S/cm
+GT-451: La0.55Li0.36Ti1.0O3.0 | 0.00154 S/cm
+GT-452: La0.54Li0.39Ti1.0O3.0 | 0.00125 S/cm
+GT-453: La0.52Li0.45Ti1.0O3.0 | 0.000785 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 835 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-159     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.22Li0.36Ti2.0O6.0 (normalized to La0.61Li0.18Ti1.0O3.0).
+GT-160     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.1Li0.72Ti2.0O6.0 (normalized to La0.55Li0.36Ti1.0O3.0).
+GT-161     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.08Li0.78Ti2.0O6.0 (normalized to La0.54Li0.39Ti1.0O3.0).
+GT-162     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.04Li0.9Ti2.0O6.0 (normalized to La0.52Li0.45Ti1.0O3.0).
+GT-163     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.16Li0.54Ti2.0O6.0 (normalized to La0.58Li0.27Ti1.0O3.0).
+GT-164     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La1.12Li0.66Ti2.0O6.0 (normalized to La0.56Li0.33Ti1.0O3.0).
+GT-449     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La0.58Li0.27Ti1.0O3.0.
+GT-450     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La0.56Li0.33Ti1.0O3.0.
+GT-451     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La0.55Li0.36Ti1.0O3.0.
+GT-452     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La0.54Li0.39Ti1.0O3.0.
+GT-453     | ❌ MISSING/BAD   | The extracted data consistently refers to a composition with x=0.12 (La0.79Li0.36TiO3), which does not match the ground truth composition La0.52Li0.45Ti1.0O3.0.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m DOI: 10.1016/s0167-2738(98)00070-8
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_pipeline_20260203_100004.log
+

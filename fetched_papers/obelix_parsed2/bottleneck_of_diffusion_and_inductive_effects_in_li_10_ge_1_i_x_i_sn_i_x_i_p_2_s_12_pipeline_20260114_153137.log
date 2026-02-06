@@ -1,0 +1,354 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_pipeline_20260114_153137.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: **Just Accepted**
+  -> Started Section: **The bottleneck of diffusion and inductive effects in Li10Ge1-***<sup>x</sup>***Sn***x***P2S<sup>12</sup>**
+  -> Started Section: **Abstract**
+  -> Started Section: **1. Introduction.**
+  -> Started Section: **2. Experimental Methods**
+  -> Started Section: 3. Results
+  -> Started Section: **4. Discussion**
+  -> Started Section: **5. Conclusion**
+  -> Started Section: **Supporting Information**
+  -> Started Section: **Corresponding Authors**
+  -> Started Section: **Notes**
+  -> Started Section: **Acknowledgements**
+  -> Started Section: **References**
+  -> Started Section: **Table of contents image**
+  🔍 Checking placeholder: '__IMG_92d7650c__'
+  ✅ Found Special Node: __IMG_92d7650c__
+  ✓ Finished Section: **Table of contents image**
+  ✓ Finished Section: **Notes**
+  ✓ Finished Section: **Corresponding Authors**
+⚠️ Warning: LLM dropped sentences [11] in '**Just Accepted**'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_5a8666c0__'
+  ✅ Found Special Node: __IMG_5a8666c0__
+  ✓ Finished Section: **Acknowledgements**
+  🔍 Checking placeholder: '__IMG_c1e29b62__'
+  ✅ Found Special Node: __IMG_c1e29b62__
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: **5. Conclusion**
+  ✓ Finished Section: **Abstract**
+  ✓ Finished Section: **Supporting Information**
+  ✓ Finished Section: **Just Accepted**
+  ✓ Finished Section: **The bottleneck of diffusion and inductive effects in Li10Ge1-***<sup>x</sup>***Sn***x***P2S<sup>12</sup>**
+  🔍 Checking placeholder: '__IMG_f3eadc33__'
+  ✅ Found Special Node: __IMG_f3eadc33__
+  🔍 Checking placeholder: '__IMG_4362dad8__'
+  ✅ Found Special Node: __IMG_4362dad8__
+  ✓ Finished Section: **1. Introduction.**
+  🔍 Checking placeholder: '__IMG_5345126b__'
+  ✅ Found Special Node: __IMG_5345126b__
+  🔍 Checking placeholder: '__IMG_f510f591__'
+  ✅ Found Special Node: __IMG_f510f591__
+  ✓ Finished Section: **2. Experimental Methods**
+  🔍 Checking placeholder: '__IMG_72340f94__'
+  ✅ Found Special Node: __IMG_72340f94__
+  🔍 Checking placeholder: '__IMG_8bb1f264__'
+  ✅ Found Special Node: __IMG_8bb1f264__
+  🔍 Checking placeholder: '__IMG_21996f8d__'
+  ✅ Found Special Node: __IMG_21996f8d__
+  ✓ Finished Section: **References**
+  ✓ Finished Section: 3. Results
+  🔍 Checking placeholder: '__IMG_3dc51613__'
+  ✅ Found Special Node: __IMG_3dc51613__
+  ✓ Finished Section: **4. Discussion**
+  ✓ Re-indexed 498 structural nodes.
+  ✓ Mapped 394 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 95 text nodes and 11 image nodes.
+
+[Stage 2] Extracting from 95 relevant nodes...
+  [1/95] ○ Figure 2: X-ray Diffraction Data and Rietveld Refi... (0 data points)
+  [2/95] ○ Figure 3: Dependence of Refined Sn Occupancy, Latt... (0 data points)
+  [3/95] ○ Figure 4: Effect of Sn-content on Selected Polyhed... (0 data points)
+  [4/95] ○ Structural Characterization: Analysis of Lattice P... (0 data points)
+  [5/95] ○ Figure 5: Longitudinal, Transverse, Mean Speeds of... (0 data points)
+  [6/95] ○ Lattice Dynamics: Softness and Speed of Sound Meas... (0 data points)
+  [7/95] ○ Introduction to Explanations for Decreasing Conduc... (0 data points)
+  [8/95] ○ Study Scope and Methodology... (0 data points)
+  [9/95] ○ Concluding Remarks and Interplay of Factors... (0 data points)
+  [10/95] ○ Reasons for Decreased Ionic Conductivity... (0 data points)
+  [11/95] ○ Broader Significance of the Work... (0 data points)
+  [12/95] ✓ Figure 6: Arrhenius and Nyquist Plots for Ionic Co... (1 data points)
+  [13/95] ○ Implications for Lithium Diffusion Mechanism... (0 data points)
+  [14/95] ✓ Structural Effects, Bottleneck Formation, and Z-ax... (1 data points)
+  [15/95] ✓ Ionic Transport: Temperature-Dependent Impedance S... (2 data points)
+  [16/95] ○ X-ray Diffraction Data and Refinements... (0 data points)
+  [17/95] ○ Additional Data and Files... (0 data points)
+  [18/95] ○ Corresponding Authors... (0 data points)
+  [19/95] ○ Notes... (0 data points)
+  [20/95] ○ 1... (0 data points)
+  [21/95] ○ Acknowledgements... (0 data points)
+  [22/95] ○ 2... (0 data points)
+  [23/95] ✓ Chemical Environment, Lattice Softness, and Li-S I... (3 data points)
+  [24/95] ○ 4... (0 data points)
+  [25/95] ○ 3... (0 data points)
+  [26/95] ○ 5... (0 data points)
+  [27/95] ○ 6... (0 data points)
+  [28/95] ○ 8... (0 data points)
+  [29/95] ○ 7... (0 data points)
+  [30/95] ○ 9... (0 data points)
+  [31/95] ○ 11... (0 data points)
+  [32/95] ○ 10... (0 data points)
+  [33/95] ○ 12... (0 data points)
+  [34/95] ○ 15... (0 data points)
+  [35/95] ○ 13... (0 data points)
+  [36/95] ○ 14... (0 data points)
+  [37/95] ○ 16... (0 data points)
+  [38/95] ○ 19... (0 data points)
+  [39/95] ○ 21... (0 data points)
+  [40/95] ○ 18... (0 data points)
+  [41/95] ○ 20... (0 data points)
+  [42/95] ○ 17... (0 data points)
+  [43/95] ○ 22... (0 data points)
+  [44/95] ○ 23... (0 data points)
+  [45/95] ○ 25... (0 data points)
+  [46/95] ○ Article Header... (0 data points)
+  [47/95] ○ 27... (0 data points)
+  [48/95] ○ 26... (0 data points)
+  [49/95] ○ 28... (0 data points)
+  [50/95] ○ Authors... (0 data points)
+  [51/95] ○ 29... (0 data points)
+  [52/95] ○ 31... (0 data points)
+  [53/95] ○ Definition and Purpose... (0 data points)
+  [54/95] ○ Publication Details... (0 data points)
+  [55/95] ○ 30... (0 data points)
+  [56/95] ✓ 24... (1 data points)
+  [57/95] ○ Format and Citability... (0 data points)
+  [58/95] ○ Transition to Publication... (0 data points)
+  [59/95] ○ 33... (0 data points)
+  [60/95] ○ Disclaimer... (0 data points)
+  [61/95] ○ 32... (0 data points)
+  [62/95] ○ 35... (0 data points)
+  [63/95] ○ 34... (0 data points)
+  [64/95] ○ Optional Service and Scope... (0 data points)
+  [65/95] ○ Authors and Affiliations... (0 data points)
+  [66/95] ○ 37... (0 data points)
+  [67/95] ○ 36... (0 data points)
+  [68/95] ○ 38... (0 data points)
+  [69/95] ○ Introduction to LGPS and its Significance... (0 data points)
+  [70/95] ✓ Introduction and Problem Statement... (1 data points)
+  [71/95] ○ 40... (0 data points)
+  [72/95] ○ Methodology and Explanation of Conductivity Decrea... (0 data points)
+  [73/95] ○ 39... (0 data points)
+  [74/95] ○ Structural Features and Early Understanding of Ion... (0 data points)
+  [75/95] ○ 41... (0 data points)
+  [76/95] ○ The Paradox of Lattice Volume and Conductivity in ... (0 data points)
+  [77/95] ○ 42... (0 data points)
+  [78/95] ○ Figure 1: Crystal Structure and Conduction Pathway... (0 data points)
+  [79/95] ○ 43... (0 data points)
+  [80/95] ○ Prior Investigations on Optimal Channel Size... (0 data points)
+  [81/95] ○ Current Study: Investigating the Impact of Lattice... (0 data points)
+  [82/95] ○ Synthesis... (0 data points)
+  [83/95] ○ 46... (0 data points)
+  [84/95] ○ 44... (0 data points)
+  [85/95] ○ 45... (0 data points)
+  [86/95] ○ X-Ray Powder Diffraction... (0 data points)
+  [87/95] ○ Rietveld-Analysis... (0 data points)
+  [88/95] ○ 47... (0 data points)
+  [89/95] ○ 48... (0 data points)
+  [90/95] ○ Electrochemical Impedance Spectroscopy... (0 data points)
+  [91/95] ○ Ultrasonic Speed of Sound Measurements... (0 data points)
+  [92/95] ✓ Recovered Content... (4 data points)
+  [93/95] ○ Structural Characterization: XRD and Rietveld Refi... (0 data points)
+  [94/95] ✓ 49... (1 data points)
+  [95/95] ✓ Table of contents image... (1 data points)
+  → 15 total data points extracted
+
+[Stage 2b] Processing 11 images directly...
+    Warning: Skipping missing image _page_3_Figure_4.jpeg
+    Warning: Skipping missing image _page_11_Figure_5.jpeg
+    Warning: Skipping missing image _page_7_Figure_3.jpeg
+    Warning: Skipping missing image _page_12_Figure_4.jpeg
+    Warning: Skipping missing image _page_8_Figure_3.jpeg
+    Warning: Skipping missing image _page_13_Figure_5.jpeg
+    Warning: Skipping missing image _page_0_Picture_0.jpeg
+    Warning: Skipping missing image _page_9_Figure_4.jpeg
+    Warning: Skipping missing image _page_20_Figure_10.jpeg
+    Warning: Skipping missing image _page_0_Picture_8.jpeg
+    Warning: Skipping missing image _page_10_Figure_4.jpeg
+
+Merging: 15 text-based + 0 image-based points.
+  → Running physical heuristic checks on 15 points...
+  → Running LLM semantic verification on 15 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 14 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li10Ge1-xSnxP2S12 (x=0 to 1)"
+- "Li10GeP2S12"
+- "Li10GexSn1−xP2S12 (x=0 to 1)"
+- "Li10Si0.3Sn0.7P2S12 (Si:Sn=0.3:0.7)"
+- "Li5.5PS4.5Cl1.5 (Cl-rich)"
+- "Li6PS5Cl"
+- "Li6PS5X"
+- "Na3P0.62As0.38S4 (P0.62As0.38)"
+- "Na3P1-xAsxS4 (x)"
+- "Na3PS4-xSex (x)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li10Ge1-xSnxP2S12', canonical_name='Lithium Germanium Tin Phosphorus Sulfide', abbreviation=None, variant_names=['Li10Ge1-xSnxP2S12 (x=0 to 1)', 'Li10GexSn1−xP2S12 (x=0 to 1)']), CanonicalMaterialName(canonical_formula='Li10GeP2S12', canonical_name='Lithium Germanium Phosphorus Sulfide', abbreviation='LGPS', variant_names=['Li10GeP2S12']), CanonicalMaterialName(canonical_formula='Li10Si0.3Sn0.7P2S12', canonical_name='Lithium Silicon Tin Phosphorus Sulfide', abbreviation=None, variant_names=['Li10Si0.3Sn0.7P2S12 (Si:Sn=0.3:0.7)']), CanonicalMaterialName(canonical_formula='Li5.5PS4.5Cl1.5', canonical_name='Chlorine-rich Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li5.5PS4.5Cl1.5 (Cl-rich)']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='Li6PS5X', canonical_name='Lithium Phosphorus Sulfide Halide', abbreviation='Lithium argyrodite', variant_names=['Li6PS5X']), CanonicalMaterialName(canonical_formula='Na3P0.62As0.38S4', canonical_name='Sodium Phosphorus Arsenic Sulfide', abbreviation=None, variant_names=['Na3P0.62As0.38S4 (P0.62As0.38)']), CanonicalMaterialName(canonical_formula='Na3P1-xAsxS4', canonical_name='Sodium Phosphorus Arsenic Sulfide', abbreviation=None, variant_names=['Na3P1-xAsxS4 (x)']), CanonicalMaterialName(canonical_formula='Na3PS4-xSex', canonical_name='Sodium Phosphorus Sulfide Selenide', abbreviation=None, variant_names=['Na3PS4-xSex (x)'])]
+  → Created 9 canonical material(s)
+  → Updated 15/15 material names
+  → Normalizing 15 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='lower conductivity', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='decreasing with increasing lattice softness', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='decreasing with increasing lattice softness', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='Negligible grain boundary resistance', Temp='233 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 233, 'cond_value': 0, 'cond_unit': 'S/cm', 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='12 mS·cm−1', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'mS/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 12}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.0011}
+    [DEBUG Norm] Input: Cond='3.2 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 0.0032, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.01, 'temp_value': 100, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='Not specified numerically in text (see Figure 5a)', Temp='Temperature-dependent (Arrhenius)'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='2.5 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.025, 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_unit': None, 'temp_value': None, 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='1.1 mS/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1.1, 'cond_unit': 'mS/cm', 'temp_value': 25}
+
+[Stage 3] Deduplicating 15 data points...
+  → Merged 2 duplicates, 13 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         17
+Total Input:         94,118 tokens
+Total Output:        5,345 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0631
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 17 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure_materials.json
+Time elapsed (s)  89.1027581691742
+
+Statistics:
+  Nodes analyzed: 106
+  Raw data points: 15
+  After dedup: 5
+  Valid: 5, Invalid: 0
+
+By Confidence:
+  high: 4
+  medium: 1
+  low: 0
+
+By Data Source:
+  primary: 4
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li6PS5Cl: 1.1 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li5.5PS4.5Cl1.5: 3.2 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li6PS5Cl: 1.0 x 10^-2 S/cm @ 100°C [high]
+  ✓ Li5.5PS4.5Cl1.5: 2.5 x 10^-2 S/cm @ 100°C [high]
+  ✓ LGPS: 12 mS·cm−1 @ RT [medium]
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.chemmater.8b00266
+                     Composition  Ionic conductivity (S cm-1)
+192         Li20.0Ge2.0P4.0S24.0                      0.02460
+193  Li20.0Ge1.55Sn0.45P4.0S24.0                      0.01410
+194         Li20.0Sn2.0P4.0S24.0                      0.00398
+195  Li20.0Ge0.83Sn1.17P4.0S24.0                      0.00743
+Starting Evaluation on 4 Ground Truth Points...
+
+Evaluation Complete: 0/4 Matched (0.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12
+[0;34m[INFO][0m DOI: 10.1021/acs.chemmater.8b00266
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_pipeline_20260114_153137.log
+

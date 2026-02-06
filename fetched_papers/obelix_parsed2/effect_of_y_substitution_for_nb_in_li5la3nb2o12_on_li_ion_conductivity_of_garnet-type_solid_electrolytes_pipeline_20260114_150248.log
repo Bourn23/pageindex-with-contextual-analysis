@@ -1,0 +1,356 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_pipeline_20260114_150248.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: Effect of Y substitution for Nb in Li<sub>5</sub>La<sub>3</sub>Nb<sub>2</sub>O<sub>12</sub> on Li ion conductivity of garnet-type solid electrolytes
+  -> Started Section: ARTICLE INFO
+  -> Started Section: ABSTRACT
+  -> Started Section: 1. Introduction
+  -> Started Section: 2.1. Synthesis
+  -> Started Section: 2.2. Characterizations
+  -> Started Section: 3.1. Phase characterization
+  -> Started Section: 3.2. Electrical properties
+  -> Started Section: 3.3. Chemical reactivity
+  -> Started Section: 4 Conclusions
+  -> Started Section: Acknowledgement
+  -> Started Section: References
+  ✓ Finished Section: Introduction
+  🔍 Checking placeholder: '__IMG_90c91bd6__'
+  ✅ Found Special Node: __IMG_90c91bd6__
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: Acknowledgement
+  ✓ Finished Section: Effect of Y substitution for Nb in Li<sub>5</sub>La<sub>3</sub>Nb<sub>2</sub>O<sub>12</sub> on Li ion conductivity of garnet-type solid electrolytes
+  🔍 Checking placeholder: '__IMG_de14e485__'
+  ✅ Found Special Node: __IMG_de14e485__
+  ✓ Finished Section: 4 Conclusions
+  ✓ Finished Section: ARTICLE INFO
+  ✓ Finished Section: ABSTRACT
+  ✓ Finished Section: 2.2. Characterizations
+  ✓ Finished Section: 2.1. Synthesis
+  🔍 Checking placeholder: '__IMG_f58447e3__'
+  ✅ Found Special Node: __IMG_f58447e3__
+  ✓ Finished Section: 3.1. Phase characterization
+  ✓ Finished Section: 1. Introduction
+  🔍 Checking placeholder: '__IMG_c75d48f3__'
+  ✅ Found Special Node: __IMG_c75d48f3__
+  🔍 Checking placeholder: '__IMG_20f2285d__'
+  ✅ Found Special Node: __IMG_20f2285d__
+  🔍 Checking placeholder: '__IMG_2d44f393__'
+  ✅ Found Special Node: __IMG_2d44f393__
+  ✓ Finished Section: 3.3. Chemical reactivity
+  🔍 Checking placeholder: '__TBL_b851b218__'
+  ✅ Found Special Node: __TBL_b851b218__
+  🔍 Checking placeholder: '__IMG_f6889c9f__'
+  ✅ Found Special Node: __IMG_f6889c9f__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__TBL_aba75a00__'
+  ✅ Found Special Node: __TBL_aba75a00__
+  🔍 Checking placeholder: '__IMG_6d3c43fd__'
+  ✅ Found Special Node: __IMG_6d3c43fd__
+  ✓ Finished Section: 3.2. Electrical properties
+  ✓ Finished Section: References
+  ✓ Re-indexed 282 structural nodes.
+  ✓ Mapped 269 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 68 text nodes and 8 image nodes.
+
+[Stage 2] Extracting from 68 relevant nodes...
+  [1/68] ○ Synthesis of Li5La3Nb2-xYxO12-δ compounds... (0 data points)
+  [2/68] ○ Corresponding Author Contact Information... (0 data points)
+  [3/68] ○ Reference [7]... (0 data points)
+  [4/68] ○ Reference [8]... (0 data points)
+  [5/68] ○ Synthesis of Li2FeMn3O8 cathode material... (0 data points)
+  [6/68] ○ Reference [9]... (0 data points)
+  [7/68] ○ Electrical Conductivity Measurement... (0 data points)
+  [8/68] ○ Header... (0 data points)
+  [9/68] ○ Introduction to PXRD Analysis... (0 data points)
+  [10/68] ✓ Further Comparisons and Factors Influencing Conduc... (2 data points)
+  [11/68] ○ Reference A.D. Robertson... (0 data points)
+  [12/68] ✓ Influence of Crystal Structure on Conductivity... (1 data points)
+  [13/68] ○ Powder X-ray Diffraction (PXRD)... (0 data points)
+  [14/68] ○ Reference V. Thangadurai... (0 data points)
+  [15/68] ○ Document Metadata... (0 data points)
+  [16/68] ○ 7Li MAS NMR... (0 data points)
+  [17/68] ✓ Table 2 and Figure 4 References... (2 data points)
+  [18/68] ○ Authors and Affiliation... (0 data points)
+  [19/68] ○ Reference [12]... (0 data points)
+  [20/68] ○ PXRD Results and Chemical Stability Conclusion... (0 data points)
+  [21/68] ○ Scanning Electron Microscopy (SEM)... (0 data points)
+  [22/68] ○ Article History... (0 data points)
+  [23/68] ✓ Figure 5: Arrhenius Plots for Electrical Conductiv... (1 data points)
+  [24/68] ✓ Initial Comparison of Electrical Conductivity... (5 data points)
+  [25/68] ○ Reference [13]... (0 data points)
+  [26/68] ○ Chemical Reactivity Test... (0 data points)
+  [27/68] ○ Objective of the Study... (0 data points)
+  [28/68] ○ Figure 7: Powder XRD Patterns of Chemical Reactivi... (0 data points)
+  [29/68] ○ Reference [14]... (0 data points)
+  [30/68] ○ Experimental Methods... (0 data points)
+  [31/68] ○ PXRD Analysis and Structural Characterization... (0 data points)
+  [32/68] ✓ Figure 6: Comparison of Li Ion Conductivity... (1 data points)
+  [33/68] ○ Reference [15]... (0 data points)
+  [34/68] ○ Synthesis and Structural Characterization... (0 data points)
+  [35/68] ○ Structural Characterization Results... (0 data points)
+  [36/68] ○ SEM Analysis and Morphological Characterization... (0 data points)
+  [37/68] ○ Reference V. Thangadurai... (0 data points)
+  [38/68] ○ NMR Analysis and Li Ion Environment and Mobility... (0 data points)
+  [39/68] ○ Reference [17]... (0 data points)
+  [40/68] ○ SEM Figure Description... (0 data points)
+  [41/68] ○ Chemical Stability... (0 data points)
+  [42/68] ○ Copyright Information... (0 data points)
+  [43/68] ○ Reference [18]... (0 data points)
+  [44/68] ○ Funding Acknowledgment... (0 data points)
+  [45/68] ✓ Ionic Conductivity Results... (1 data points)
+  [46/68] ○ Introduction to Li-ion Batteries and Solid Electro... (0 data points)
+  [47/68] ○ Reference [19]... (0 data points)
+  [48/68] ○ Reference [1]... (0 data points)
+  [49/68] ○ Impedance Data Analysis and Resistance Calculation... (0 data points)
+  [50/68] ○ Overview of Solid Li-ion Electrolytes with Focus o... (0 data points)
+  [51/68] ✓ Electrical Conductivity... (2 data points)
+  [52/68] ○ Reference [20]... (0 data points)
+  [53/68] ○ Reference [2]... (0 data points)
+  [54/68] ○ Reference [21]... (0 data points)
+  [55/68] ○ Reference B. Scrosati... (0 data points)
+  [56/68] ○ Impact of Y Doping and Oxygen Vacancies on Conduct... (0 data points)
+  [57/68] ○ Reference [4]... (0 data points)
+  [58/68] ○ Reference [22]... (0 data points)
+  [59/68] ✓ Introduction to AC Impedance Spectroscopy... (2 data points)
+  [60/68] ○ XRD and NMR Data References... (0 data points)
+  [61/68] ✓ Improving Garnet Conductivity through Chemical Sub... (1 data points)
+  [62/68] ○ Previous Structural Investigations... (0 data points)
+  [63/68] ○ Reference [5]... (0 data points)
+  [64/68] ✓ Conductivity of Li7La3Zr2O12 Garnet Phases... (2 data points)
+  [65/68] ○ Current Study: Y-Doping and Methodology... (0 data points)
+  [66/68] ○ Reference V. Thangadurai... (0 data points)
+  [67/68] ✓ Activation Energy, Diffusion Coefficient, and Oxyg... (1 data points)
+  [68/68] ✓ Conductivity Calculation and Arrhenius Plotting... (4 data points)
+  → 25 total data points extracted
+
+[Stage 2b] Processing 8 images directly...
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_2.jpeg
+    Warning: Skipping missing image _page_0_Picture_5.jpeg
+    Warning: Skipping missing image _page_3_Figure_4.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_7.jpeg
+    Warning: Skipping missing image _page_1_Figure_10.jpeg
+    Warning: Skipping missing image _page_4_Figure_10.jpeg
+
+Merging: 25 text-based + 0 image-based points.
+  → Running physical heuristic checks on 25 points...
+  → Running LLM semantic verification on 25 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 8 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Garnet-type Li ion conductor"
+- "Li5La3Nb1.9Y0.1O11.9 (Nb1.9Y0.1)"
+- "Li5La3Nb2-xYxO12-δ (Y-doped)"
+- "Li5La3Nb2-xYxO12-δ (x=0)"
+- "Li5La3Nb2-xYxO12-δ (x=0.0, 0.05, 0.1, 0.15, 0.2, 0.25)"
+- "Li5La3Nb2-xYxO12-δ (x=0.05)"
+- "Li5La3Nb2-xYxO12-δ (x=0.1)"
+- "Li5La3Nb2-xYxO12-δ (x=0.25)"
+- "Li5La3Nb2-xYxO12-δ (x=0.5)"
+- "Li5La3Nb2-xYxO12-δ (x=0.75)"
+- "Li5La3Nb2O12 (In-doped)"
+- "Li5La3Nb2O12 (parent)"
+- "Li6BaLa2Ta2O12"
+- "Li6BaLa2Ta2O12 (A = Ba)"
+- "Li7La3Zr2O12"
+- "Li7La3Zr2O12 (cubic structure)"
+- "Li7La3Zr2O12 (nominal composition)"
+- "Li7La3Zr2O12 (tetragonal modification)"
+- "Li7La3Zr2O12 (tetragonal phase)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li5La3Nb2O12', canonical_name='Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (x=0)', 'Li5La3Nb2O12 (parent)']), CanonicalMaterialName(canonical_formula='Li5La3Nb1.95Y0.05O11.95', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (x=0.05)']), CanonicalMaterialName(canonical_formula='Li5La3Nb1.9Y0.1O11.9', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation='Nb1.9Y0.1', variant_names=['Li5La3Nb1.9Y0.1O11.9 (Nb1.9Y0.1)', 'Li5La3Nb2-xYxO12-δ (x=0.1)']), CanonicalMaterialName(canonical_formula='Li5La3Nb1.75Y0.25O11.75', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (x=0.25)']), CanonicalMaterialName(canonical_formula='Li5La3Nb1.5Y0.5O11.5', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (x=0.5)']), CanonicalMaterialName(canonical_formula='Li5La3Nb1.25Y0.75O11.25', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (x=0.75)']), CanonicalMaterialName(canonical_formula='Li5La3Nb2-xYxO12-δ', canonical_name='Yttrium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2-xYxO12-δ (Y-doped)', 'Li5La3Nb2-xYxO12-δ (x=0.0, 0.05, 0.1, 0.15, 0.2, 0.25)']), CanonicalMaterialName(canonical_formula='Li5La3Nb2O12', canonical_name='Indium-doped Lithium Lanthanum Niobium Oxide', abbreviation=None, variant_names=['Li5La3Nb2O12 (In-doped)']), CanonicalMaterialName(canonical_formula='Li6BaLa2Ta2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Li6BaLa2Ta2O12', 'Li6BaLa2Ta2O12 (A = Ba)']), CanonicalMaterialName(canonical_formula='Li7La3Zr2O12', canonical_name='Lithium Lanthanum Zirconium Oxide', abbreviation='LLZO', variant_names=['Garnet-type Li ion conductor', 'Li7La3Zr2O12', 'Li7La3Zr2O12 (cubic structure)', 'Li7La3Zr2O12 (nominal composition)', 'Li7La3Zr2O12 (tetragonal modification)', 'Li7La3Zr2O12 (tetragonal phase)'])]
+  → Created 10 canonical material(s)
+  → Updated 25/25 material names
+  → Normalizing 25 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='10⁻⁴ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_unit': 'C', 'cond_unit': 'S cm⁻¹', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='10⁻⁵ S cm⁻¹', Temp='22°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-05, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 22}
+    [DEBUG Norm] Input: Cond='not specified', Temp='low and high temperatures'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='two orders of magnitude lower than cubic phase', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': None, 'cond_unit': 'S/cm', 'cond_value': 0, 'temp_unit': None}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm to 1.0 x 10^-4 S/cm', Temp='50 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-06}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm to 1.0 x 10^-4 S/cm', Temp='50 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='low and high temperatures'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='low and high temperatures'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='low and high temperatures'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm to 1.0 x 10^-3 S/cm', Temp='150 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-05, 'temp_value': 150, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm to 1.0 x 10^-3 S/cm', Temp='150 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001, 'temp_unit': 'C', 'temp_value': 150}
+    [DEBUG Norm] Input: Cond='not specified', Temp='low and high temperatures'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.44 × 10⁻⁵ Scm⁻¹', Temp='23°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 23, 'temp_unit': 'C', 'cond_value': 1.44e-05, 'cond_unit': 'Scm-1'}
+    [DEBUG Norm] Input: Cond='1.44 × 10⁻⁵ S cm⁻¹', Temp='23 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.44e-05, 'temp_value': 23, 'temp_unit': 'C', 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='1.34 × 10⁻⁵ S cm⁻¹', Temp='23 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 23, 'cond_value': 1.34e-05, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='Not specified in text', Temp='50°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0, 'temp_unit': 'C', 'temp_value': 50}
+    [DEBUG Norm] Input: Cond='4 × 10⁻⁵ S cm⁻¹', Temp='22 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 22, 'cond_value': 4e-05, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='Not specified in text', Temp='150°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0, 'temp_value': 150}
+    [DEBUG Norm] Input: Cond='10⁻⁶ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S cm-1', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.8 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.8e-05, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='4.0 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 4e-05, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0001, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.2 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1.2e-06, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10^-11 to 10^-12 cm^2 s^-1 (Diffusion Coefficient)', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'cm^2 s^-1', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 1e-11}
+    [DEBUG Norm] Input: Cond='10^-11 to 10^-12 cm^2 s^-1 (Diffusion Coefficient)', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'cm^2 s^-1', 'cond_value': 1e-12, 'temp_unit': 'C', 'temp_value': 25}
+
+[Stage 3] Deduplicating 25 data points...
+  → Merged 5 duplicates, 20 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         27
+Total Input:         92,378 tokens
+Total Output:        8,004 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0702
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 27 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure_materials.json
+Time elapsed (s)  100.64763379096985
+
+Statistics:
+  Nodes analyzed: 76
+  Raw data points: 25
+  After dedup: 14
+  Valid: 14, Invalid: 0
+
+By Confidence:
+  high: 8
+  medium: 5
+  low: 1
+
+By Data Source:
+  primary: 10
+  cited: 0
+  inferred: 1
+
+Sample data points:
+  ✓ Li6BaLa2Ta2O12: 10⁻⁵ S cm⁻¹ @ 22°C [high]
+  ✓ Nb1.9Y0.1: 1.44 × 10⁻⁵ Scm⁻¹ @ 23°C [high]
+  ✓ Li5La3Nb1.95Y0.05O11.95: 1.34 × 10⁻⁵ S cm⁻¹ @ 23 °C [high]
+  ✓ LLZO: 10^-11 to 10^-12 cm^2 s^-1 (Diffusion Coefficient) @ room temperature [high]
+  ✓ Li5La3Nb2O12: 1.2 x 10^-6 S/cm @ 25°C [high]
+  ... and 9 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.jpowsour.2011.05.031
+                     Composition  Ionic conductivity (S cm-1)
+548      Li40.0La24.0Nb16.0O96.0                     0.000005
+549  Li40.0La24.0Nb15.6Y0.4O96.0                     0.000013
+550  Li40.0La24.0Nb15.2Y0.8O96.0                     0.000014
+551  Li40.0La24.0Nb14.8Y1.2O96.0                     0.000006
+552  Li40.0La24.0Nb14.4Y1.6O96.0                     0.000009
+553  Li40.0La24.0Nb14.0Y2.0O96.0                     0.000010
+Starting Evaluation on 6 Ground Truth Points...
+
+Evaluation Complete: 3/6 Matched (50.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes
+[0;34m[INFO][0m DOI: 10.1016/j.jpowsour.2011.05.031
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/effect_of_y_substitution_for_nb_in_li5la3nb2o12_on_li_ion_conductivity_of_garnet-type_solid_electrolytes_pipeline_20260114_150248.log
+

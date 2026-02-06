@@ -1,0 +1,239 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-01-23 09:14:09",
+  "execution_time_seconds": 98.49,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 11995,
+    "total_output_tokens": 15410,
+    "total_cost_usd": 0.2089,
+    "call_counts": {
+      "gemini-3-pro-preview": 7
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 14,
+    "skipped_images": 5,
+    "failed_items": 1,
+    "total_sections_processed": 8,
+    "total_images_processed": 8
+  },
+  "material_count": 14,
+  "measurements": [
+    {
+      "raw_composition": "x=0.06, quenched",
+      "canonical_formula": "x=0.06, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.70",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 6.69214259590434e-07,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.06, annealed",
+      "canonical_formula": "x=0.06, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.38",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 1.3981867632746455e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.09, quenched",
+      "canonical_formula": "x=0.09, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.10",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.6641899537960133e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.09, annealed",
+      "canonical_formula": "x=0.09, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.28",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 1.760212846720687e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.11, quenched",
+      "canonical_formula": "x=0.11, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-2.85",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 4.737674139267999e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.11, annealed",
+      "canonical_formula": "x=0.11, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.22",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.0209947545676925e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12, quenched",
+      "canonical_formula": "x=0.12, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-2.72",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 6.39094656368689e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12, annealed",
+      "canonical_formula": "x=0.12, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.20",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.116241302968952e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.13, quenched",
+      "canonical_formula": "x=0.13, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-2.90",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 4.222456521194592e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.13, annealed",
+      "canonical_formula": "x=0.13, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.24",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 1.9300350070003576e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.15, quenched",
+      "canonical_formula": "x=0.15, quenched",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.374461795687198e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.15, annealed",
+      "canonical_formula": "x=0.15, annealed",
+      "material_definitions": [
+        "Ordered perovskite samples with varying composition x"
+      ],
+      "raw_conductivity": "-3.35",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 1.498184109176465e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11",
+      "canonical_formula": "x = 0.11",
+      "material_definitions": [
+        "Sample with composition parameter x = 0.11 subjected to quenching and annealing cycles."
+      ],
+      "raw_conductivity": "-2.90",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "Not specified",
+      "raw_temperature_unit": "Not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11",
+      "canonical_formula": "x = 0.11",
+      "material_definitions": [
+        "Sample with composition parameter x = 0.11 subjected to quenching and annealing cycles."
+      ],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": null,
+      "raw_temperature": "Not specified",
+      "raw_temperature_unit": "Not specified",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

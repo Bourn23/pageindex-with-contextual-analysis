@@ -1,0 +1,149 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "total_cost_usd": 0.0,
+    "call_counts": {}
+  },
+  "source_file": "fetched_papers/obelix_parsed2/new_la_2_3_-_i_x_i_sr_i_x_i_li_i_x_i_tio_3_solid_solution_structure_microstructure_and_li_conductivity_structure.json",
+  "extraction_stats": {
+    "total_nodes": 42,
+    "raw_extracted": 5,
+    "after_dedup": 4,
+    "time_elapsed": 16.635849952697754,
+    "valid_count": 4,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 1,
+      "medium": 3,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 1,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 5,
+    "from_image_nodes": 0,
+    "final_count": 4
+  },
+  "material_count": 4,
+  "materials": [
+    {
+      "source_sentence_id": "0012",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Lithium ion conductor",
+        "acronym": null,
+        "proportion": "x = 0.25"
+      },
+      "ionic_conductivity_S_per_cm": "7.12 × 10⁻⁵ S·cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for a specific composition (x = 0.25) at room temperature as stated in sentence 0012.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium ion conductor with composition x = 0.25",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Ionic Conductivity Study",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0021",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La2/3-xLi3xTiO3",
+        "acronym": "LLTO",
+        "proportion": "0.036 ≤ x ≤ 0.14"
+      },
+      "ionic_conductivity_S_per_cm": "1 !7 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk ionic conductivity for the general formula La2/3-xLi3xTiO3 mentioned as the highest reported to date in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0020",
+        "title": "Background on La-Li-TiO3 and Factors Affecting Conductivity",
+        "section": "Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0031",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "(La1/2-Li1/2)1-xSrxTiO3",
+        "acronym": null,
+        "proportion": "x = 0.05"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 1.5 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted bulk ionic conductivity for a specific Sr-substituted perovskite composition mentioned as a cited result in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Strategies for Improving Conductivity via Substitution",
+        "section": "Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "0031",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.57-2x/3SrxLi0.3TiO3",
+        "acronym": null,
+        "proportion": "x = 0.08"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 1.12 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "300K",
+      "reason": "Extracted lithium conductivity for a specific Sr-substituted perovskite composition from a cited recent study.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Strategies for Improving Conductivity via Substitution",
+        "section": "Introduction"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

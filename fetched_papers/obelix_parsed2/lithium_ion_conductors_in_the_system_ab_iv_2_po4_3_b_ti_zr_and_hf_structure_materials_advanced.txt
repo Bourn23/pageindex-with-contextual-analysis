@@ -1,0 +1,20 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-310   | None     | 0.000246   | None       | N/A        | ❌ MISSING
+GT-311   | EX-9     | 0.000407   | 0.0007     | 0.2355     | ✅ Accurate
+GT-312   | None     | 0.000158   | None       | N/A        | ❌ MISSING
+GT-313   | EX-10    | 1e-05      | 0.0        | Null/Zero  | ❌ No Value
+GT-314   | None     | 5.6e-08    | None       | N/A        | ❌ MISSING
+GT-315   | None     | 8.5e-08    | None       | N/A        | ❌ MISSING
+GT-316   | None     | 3.2e-08    | None       | N/A        | ❌ MISSING
+GT-317   | None     | 4e-06      | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      25.00%
+Precision:   12.50%
+F1 Score:    16.67
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.2355 (Lower is better)
+================================================================================

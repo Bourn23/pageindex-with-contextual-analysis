@@ -1,0 +1,81 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-584",
+      "extracted_id": "EX-24",
+      "reason": "The normalized chemical formula Li4SnS3Se matches exactly with EX-24, and the conductivity values are identical (7.5e-05 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-585",
+      "extracted_id": "EX-22",
+      "reason": "The normalized chemical formula Li4SnSSe3 matches EX-22. The conductivity values are very close (GT: 9.5e-07 S/cm, EX: 9.2e-07 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-586",
+      "extracted_id": "EX-23",
+      "reason": "The normalized chemical formula Li4SnS2Se2 matches EX-23. The conductivity values are very close (GT: 3.6e-05 S/cm, EX: 3.4e-05 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-587",
+      "extracted_id": "EX-8",
+      "reason": "The normalized chemical formula Li4SnSe4 matches exactly with EX-8, and the conductivity values are identical (4.5e-08 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-588",
+      "extracted_id": "EX-32",
+      "reason": "The normalized chemical formula Li4Ge0.75Sn0.25Se4 matches EX-32. The conductivity values are very close (GT: 6e-06 S/cm, EX: 5.6e-06 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-589",
+      "extracted_id": "EX-33",
+      "reason": "The normalized chemical formula Li4Ge0.5Sn0.5Se4 matches exactly with EX-33, and the conductivity values are identical (1.8e-06 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-590",
+      "extracted_id": "EX-34",
+      "reason": "The normalized chemical formula Li4Ge0.25Sn0.75Se4 matches EX-34. The conductivity values are close (GT: 8.3e-07 S/cm, EX: 7e-07 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-591",
+      "extracted_id": "EX-28",
+      "reason": "The normalized chemical formula Li4GeS3Se matches EX-28. The conductivity values are very close (GT: 8.5e-06 S/cm, EX: 7.8e-06 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-592",
+      "extracted_id": "EX-29",
+      "reason": "The normalized chemical formula Li4GeS2Se2 matches EX-29. The conductivity values are very close (GT: 2.8e-05 S/cm, EX: 2.4e-05 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-593",
+      "extracted_id": "EX-31",
+      "reason": "The normalized chemical formula Li4GeSe4 matches EX-31. The conductivity values are very close (GT: 5e-06 S/cm, EX: 4.5e-06 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-594",
+      "extracted_id": "EX-30",
+      "reason": "The normalized chemical formula Li4GeSSe3 matches EX-30. The conductivity values are very close (GT: 1.5e-05 S/cm, EX: 1.4e-05 S/cm).",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "All Ground Truth entries were successfully matched to Extracted Data entries. The chemical formulas, after normalization, and conductivity values showed excellent agreement, indicating high accuracy in the extraction for this dataset. All extracted data was at 25 degrees, which is consistent with typical room temperature measurements for these materials.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 31.428571428571427,
+    "f1": 47.82608695652174,
+    "avg_log10_error": 0.02933586036364795,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 11,
+    "total_gt": 11,
+    "total_ex": 35
+  }
+}

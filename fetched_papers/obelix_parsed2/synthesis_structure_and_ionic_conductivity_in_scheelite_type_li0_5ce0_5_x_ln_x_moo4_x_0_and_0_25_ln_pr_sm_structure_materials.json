@@ -1,0 +1,1379 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 178425,
+    "total_output_tokens": 17535,
+    "total_cost_usd": 0.14181749999999999,
+    "call_counts": {
+      "gemini-3-flash-preview": 75
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/synthesis_structure_and_ionic_conductivity_in_scheelite_type_li0_5ce0_5_x_ln_x_moo4_x_0_and_0_25_ln_pr_sm_structure.json",
+  "extraction_stats": {
+    "total_nodes": 68,
+    "raw_extracted": 66,
+    "after_dedup": 42,
+    "time_elapsed": 247.70567512512207,
+    "valid_count": 35,
+    "invalid_count": 7,
+    "by_confidence": {
+      "high": 12,
+      "medium": 19,
+      "low": 11
+    },
+    "by_source": {
+      "primary": 20,
+      "cited": 0,
+      "inferred": 20
+    },
+    "from_text_nodes": 25,
+    "from_image_nodes": 20,
+    "final_count": 42
+  },
+  "material_count": 42,
+  "materials": [
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.6 × 10⁻⁷ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted room temperature ionic conductivity for the LCM sample as explicitly stated in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unheated LCM",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Ionic Conductivity of As-Synthesized Samples and Substitution Effects",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 9.6e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.3 × 10⁻⁸ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted ionic conductivity for LCM at 100°C where the conductivity reaches a local minimum.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unheated LCM",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Ionic Conductivity of As-Synthesized Samples and Substitution Effects",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 9.3e-08,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0192",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted high-temperature conductivity for LCM as part of the 'all samples' group mentioned in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unheated LCM",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Ionic Conductivity of As-Synthesized Samples and Substitution Effects",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 0.0008,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0192",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Pr0.25MoO4",
+        "acronym": "LCPM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted high-temperature conductivity for LCPM as part of the 'all samples' group mentioned in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unheated LCPM",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Pr6O11, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, Pr6O11, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Ionic Conductivity of As-Synthesized Samples and Substitution Effects",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Pr0.25MoO4",
+      "_norm_cond": 0.0008,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0192",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted high-temperature conductivity for LCSM as part of the 'all samples' group mentioned in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "unheated LCSM",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Sm2O3, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0189",
+        "title": "Ionic Conductivity of As-Synthesized Samples and Substitution Effects",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 0.0008,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0010, 0205",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": "unsubstituted"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 × 10^-3 Ω^-1 cm^-1",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted the specific conductivity value at the maximum temperature point mentioned for the unsubstituted compound.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Scheelite type solid electrolyte, unsubstituted ; Preheated LCM pellet ; Unsubstituted scheelite type solid electrolyte",
+      "processing_method": "solid state method | Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0006",
+        "title": "Abstract",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 0.0025,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0202",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3 × 10⁻⁸ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity value for preheated LCM at 25°C from sentence 0202.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Preheated LCM pellet (heated at 120°C under vacuum for 12 h)",
+      "processing_method": "Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 1.3e-08,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0203, Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Pr0.25MoO4",
+        "acronym": "LCPM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1 × 10⁻⁹ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity value for preheated LCPM at 25°C from sentence 0203.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Preheated LCPM pellet (heated at 120°C under vacuum for 12 h) ; Preheated samples (120 °C/ 12h; vacuum)",
+      "processing_method": "Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Pr6O11, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Preheated samples (120 °C/ 12h; vacuum) | Solid state method: Appropriate molar ratios of precursors (CeO2, Pr6O11, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Pr0.25MoO4",
+      "_norm_cond": 1e-09,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0203",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8 × 10⁻¹⁰ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity value for preheated LCSM at 25°C from sentence 0203.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Preheated LCSM pellet (heated at 120°C under vacuum for 12 h)",
+      "processing_method": "Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Sm2O3, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 1.8e-10,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0205",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Pr0.25MoO4",
+        "acronym": "LCPM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3 × 10⁻³ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted high-temperature conductivity for LCPM from sentence 0205.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Preheated LCPM pellet",
+      "processing_method": "Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Pr6O11, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, Pr6O11, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Pr0.25MoO4",
+      "_norm_cond": 0.0013,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0205",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.9 × 10⁻⁴ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700°C",
+      "reason": "Extracted high-temperature conductivity for LCSM from sentence 0205.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Preheated LCSM pellet",
+      "processing_method": "Heated at 120°C under vacuum for 12 h | Solid state method: stoichiometric amounts of Li2CO3, CeO2, Sm2O3, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 0.00089,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0010",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": "unsubstituted"
+      },
+      "ionic_conductivity_S_per_cm": "10^-5 - 10^-3 Ω^-1 cm^-1",
+      "measurement_temperature": "300-700°C",
+      "reason": "Extracted the conductivity range for the unsubstituted scheelite compound as stated in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Scheelite type solid electrolyte, unsubstituted ; Unsubstituted scheelite type solid electrolyte",
+      "processing_method": "solid state method | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique).",
+      "source_node": {
+        "node_id": "0006",
+        "title": "Abstract",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 0.001,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0202",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": "unheated"
+      },
+      "ionic_conductivity_S_per_cm": "1.3 × 10⁻⁶ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Inferred from sentence 0202 which states the preheated LCM conductivity is lower by nearly two orders of magnitude compared to the unheated LCM.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Unheated (as-synthesized) LCM pellet containing adsorbed moisture",
+      "processing_method": "As-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. Samples in this entry were not subjected to the subsequent 120°C vacuum preheating step. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. This sample is specifically 'unheated', meaning it was not subjected to the vacuum preheating at 120°C for 12h used to remove adsorbed moisture.",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Effect of Preheating and Adsorbed Moisture",
+        "section": "3.3 Ionic conductivity from ac-impedance spectroscopy"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 1.3e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0034",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "A1-rLi2xBO4",
+        "acronym": null,
+        "proportion": "A = Ca, Sr, Ba and B = W, Mo"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻²-10⁻¹ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "700–900°C",
+      "reason": "Extracted ionic conductivity range for substituted scheelite structures mentioned in the introduction as reported in literature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Substituted scheelite type lithium ion conductors.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [17] (details not in text).",
+      "source_node": {
+        "node_id": "0032",
+        "title": "Scheelite type lithium ion conductors and their applications",
+        "section": "1. Introduction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "A1-rLi2xBO4",
+      "_original_name": "A1-rLi2xBO4",
+      "_norm_cond": 0.1,
+      "_norm_temp": 900,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.5e-4 S cm^-1",
+      "measurement_temperature": "975 K",
+      "reason": "Estimated from the first data point (1000/T ≈ 1.025) for Li0.5Ce0.5MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 0.00095,
+      "_norm_temp": 701.85,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-8 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the last data point (1000/T ≈ 3.35) for Li0.5Ce0.5MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Pr0.25MoO4",
+        "acronym": "LCPM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-3 S cm^-1",
+      "measurement_temperature": "975 K",
+      "reason": "Estimated from the first data point (1000/T ≈ 1.025) for Li0.5Ce0.25Pr0.25MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, Pr6O11, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Pr0.25MoO4",
+      "_norm_cond": 0.001,
+      "_norm_temp": 701.85,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Pr0.25MoO4",
+        "acronym": "LCPM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-8 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the last data point (1000/T ≈ 3.35) for Li0.5Ce0.25Pr0.25MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, Pr6O11, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Pr0.25MoO4",
+      "_norm_cond": 3.5e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-3 S cm^-1",
+      "measurement_temperature": "975 K",
+      "reason": "Estimated from the first data point (1000/T ≈ 1.025) for Li0.5Ce0.25Sm0.25MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 50,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 0.001,
+      "_norm_temp": 701.85,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0e-8 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the last data point (1000/T ≈ 3.35) for Li0.5Ce0.25Sm0.25MoO4 in plot (a).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "As synthesized",
+      "processing_method": "Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 7e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.5MoO4",
+        "acronym": "LCM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-8 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the last data point (1000/T ≈ 3.35) for Li0.5Ce0.5MoO4 in plot (b).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Preheated samples (120 °C/ 12h; vacuum)",
+      "processing_method": "Preheated samples (120 °C/ 12h; vacuum) | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 52,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "_original_name": "Li0.5Ce0.5MoO4",
+      "_norm_cond": 1.5e-08,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.5Ce0.25Sm0.25MoO4",
+        "acronym": "LCSM",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-10 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the last data point (1000/T ≈ 3.35) for Li0.5Ce0.25Sm0.25MoO4 in plot (b).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Preheated samples (120 °C/ 12h; vacuum)",
+      "processing_method": "Preheated samples (120 °C/ 12h; vacuum) | Solid state method: Appropriate molar ratios of precursors (CeO2, Sm2O3, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C.",
+      "source_node": {
+        "node_id": "0211",
+        "title": "_page_7_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 54,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "_original_name": "Li0.5Ce0.25Sm0.25MoO4",
+      "_norm_cond": 2e-10,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.06e-7 S cm^-1",
+      "measurement_temperature": "25°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (a) at approximately 9.4e6 Ohm; assuming a cell constant of 1 cm^-1 as a proxy for raw impedance data extraction.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 55,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1.06e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.43e-7 S cm^-1",
+      "measurement_temperature": "60°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (a) at approximately 7.0e6 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 56,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1.43e-07,
+      "_norm_temp": 60,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.33e-7 S cm^-1",
+      "measurement_temperature": "100°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (a) at approximately 3.0e6 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 57,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 3.33e-07,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.56e-6 S cm^-1",
+      "measurement_temperature": "200°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (b) at approximately 1.8e5 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 58,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5.56e-06,
+      "_norm_temp": 200,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.67e-5 S cm^-1",
+      "measurement_temperature": "250°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (b) at approximately 6.0e4 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 59,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1.67e-05,
+      "_norm_temp": 250,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.00e-5 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (b) at approximately 2.0e4 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 60,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5e-05,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.33e-5 S cm^-1",
+      "measurement_temperature": "400°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (c) at approximately 1.2e4 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 61,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 8.33e-05,
+      "_norm_temp": 400,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.50e-4 S cm^-1",
+      "measurement_temperature": "450°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (c) at approximately 4.0e3 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 62,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00025,
+      "_norm_temp": 450,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.33e-3 S cm^-1",
+      "measurement_temperature": "600°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (d) at approximately 1.2e2 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 63,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00833,
+      "_norm_temp": 600,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.54e-2 S cm^-1",
+      "measurement_temperature": "650°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (d) at approximately 6.5e1 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 64,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0154,
+      "_norm_temp": 650,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Proton-conducting electrolyte (from context)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.17e-2 S cm^-1",
+      "measurement_temperature": "700°C",
+      "reason": "Estimated from the x-axis intercept of the Nyquist plot in panel (d) at approximately 4.6e1 Ohm.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "Impedance spectra showing total resistance change with temperature.",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. | Solid state method: Appropriate molar ratios of precursors (CeO2, MoO3, Li2CO3) were mixed and ground with an agate pestle and mortar, cast into pellets and fired at 700°C for 24h. Pellets were then reground and annealed again for 24h at 700°C. Single crystals were also grown by melting the compounds at 1050°C in a platinum crucible and cooling at a rate of 25°C/h (melt-cool technique). [Inferred]",
+      "source_node": {
+        "node_id": "0182",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 65,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0217,
+      "_norm_temp": 700,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3xLa(2/3)-xTiO3",
+        "acronym": "LLTO",
+        "proportion": "0 < x < 0.16"
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for perovskite-type lithium lanthanum titanate from the introduction section.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work) ; perovskite type lithium lanthanum titanate",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [5–9] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3xLa(2/3)-xTiO3",
+      "_original_name": "Li3xLa(2/3)-xTiO3",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": "Ti substitution by Al, Cr, Ga, Fe, Sc, In, Lu, Y, or La"
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for doped NASICON-type lithium compounds.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work) ; doped NASICON type lithium compounds",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [10, 11] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-GeS2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for the thio-LISICON family.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | Synthesized according to Ref [12, 13] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+04 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-GeS2",
+      "_original_name": "Li2S-GeS2",
+      "_norm_cond": 10000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-GeS2-ZnS",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for the thio-LISICON family.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work) ; thio-LISICON family of compounds",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [12, 13] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-GeS2-ZnS",
+      "_original_name": "Li2S-GeS2-ZnS",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4+x-δGe1-x+δGaxS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for the thio-LISICON family.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work) ; thio-LISICON family of compounds",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [12, 13] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4+x-δGe1-x+δGaxS4",
+      "_original_name": "Li4+x-δGe1-x+δGaxS4",
+      "_norm_cond": 10000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3M2O12",
+        "acronym": null,
+        "proportion": "M = Ta, Nb"
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for garnet-type compounds.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | Synthesized according to Ref [14] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5La3M2O12",
+      "_original_name": "Li5La3M2O12",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0030",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La2BaTa2O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ Ω⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a cited example of high ionic conductivity for garnet-type compounds.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work) ; garnet-type compound",
+      "processing_method": "as-synthesized | Solid state method: stoichiometric amounts of Li2CO3, CeO2, and MoO3 were mixed and ground with an agate pestle and mortar, cast into pellets, and fired at 700°C for 24h. Pellets were reground and annealed for 24h at 700°C. To remove adsorbed water, pellets were preheated at 120°C for 12h under vacuum prior to characterization. [Inferred] | N/A (Cited Work) | Synthesized according to Ref [15, 16] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e+03 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La2BaTa2O12",
+      "_original_name": "Li6La2BaTa2O12",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0027",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-GeS2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ ̩⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as an example of a material with high ionic conductivity cited in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "thio-LISICON family of compounds",
+      "processing_method": "Synthesized according to Ref [12, 13] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-GeS2",
+      "_original_name": "Li2S - GeS2",
+      "_norm_cond": 1000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3M2O12",
+        "acronym": null,
+        "proportion": "M = Ta, Nb"
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁴ - 10⁳ ̩⁻¹ cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as an example of a material with high ionic conductivity cited in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "garnet-type compound",
+      "processing_method": "Synthesized according to Ref [14] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Review of known solid electrolyte materials",
+        "section": "1. Introduction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5La3M2O12",
+      "_original_name": "Li5La3M2O12",
+      "_norm_cond": 10000.0,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

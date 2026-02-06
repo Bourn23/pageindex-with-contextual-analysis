@@ -1,0 +1,322 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_pipeline_20260114_160321.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: 2.1 Synthetic Procedure
+  -> Started Section: 2.2 Instrumental Procedures
+  -> Started Section: 3. RESULTS
+  -> Started Section: 4. DISCUSSION
+  -> Started Section: ACKNOWLEDGEMENT
+  -> Started Section: REFERENCES
+  ✓ Finished Section: Introduction
+⚠️ Warning: LLM dropped sentences [13] in 'Abstract / Introduction'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_59ae9960__'
+  ✅ Found Special Node: __IMG_59ae9960__
+  🔍 Checking placeholder: '__TBL_9c1bc478__'
+  ✅ Found Special Node: __TBL_9c1bc478__
+  🔍 Checking placeholder: '__TBL_581b5ef2__'
+  ✅ Found Special Node: __TBL_581b5ef2__
+  ✓ Finished Section: Abstract / Introduction
+  🔍 Checking placeholder: '__IMG_98a43150__'
+  ✅ Found Special Node: __IMG_98a43150__
+  ✓ Finished Section: ACKNOWLEDGEMENT
+  🔍 Checking placeholder: '__IMG_4860c429__'
+  ✅ Found Special Node: __IMG_4860c429__
+  ✓ Finished Section: 2.1 Synthetic Procedure
+  ✓ Finished Section: 4. DISCUSSION
+  ✓ Finished Section: 2.2 Instrumental Procedures
+  ✓ Finished Section: REFERENCES
+  🔍 Checking placeholder: '__TBL_c84e62b8__'
+  ✅ Found Special Node: __TBL_c84e62b8__
+  🔍 Checking placeholder: '__IMG_da606566__'
+  ✅ Found Special Node: __IMG_da606566__
+  🔍 Checking placeholder: '__TBL_4814daf0__'
+  ✅ Found Special Node: __TBL_4814daf0__
+  🔍 Checking placeholder: '__IMG_987ab7dd__'
+  ✅ Found Special Node: __IMG_987ab7dd__
+  🔍 Checking placeholder: '__TBL_b8e3cf12__'
+  ✅ Found Special Node: __TBL_b8e3cf12__
+  🔍 Checking placeholder: '__TBL_cc9ccc36__'
+  ✅ Found Special Node: __TBL_cc9ccc36__
+  🔍 Checking placeholder: '__IMG_987ab7dd__'
+  ✅ Found Special Node: __IMG_987ab7dd__
+  🔍 Checking placeholder: '__TBL_b8e3cf12__'
+  ✅ Found Special Node: __TBL_b8e3cf12__
+  🔍 Checking placeholder: '__TBL_cc9ccc36__'
+  ✅ Found Special Node: __TBL_cc9ccc36__
+  ✓ Finished Section: 3. RESULTS
+  ✓ Re-indexed 251 structural nodes.
+  ✓ Mapped 260 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 44 text nodes and 6 image nodes.
+
+[Stage 2] Extracting from 44 relevant nodes...
+  [1/44] ○ Type II Cavities and NASICON Analogy... (0 data points)
+  [2/44] ○ Reference 11... (0 data points)
+  [3/44] ○ Reference 13... (0 data points)
+  [4/44] ○ General Factors for Ion Mobility... (0 data points)
+  [5/44] ○ Scope of the Current Paper... (0 data points)
+  [6/44] ○ Reference 12... (0 data points)
+  [7/44] ○ Recovered Content... (0 data points)
+  [8/44] ○ Conductivity Enhancement and Governing Factors... (0 data points)
+  [9/44] ○ Reference 14... (0 data points)
+  [10/44] ○ Reagent Preparation and Characterization... (0 data points)
+  [11/44] ✓ Background and Strategy for Fast Lithium Conductor... (1 data points)
+  [12/44] ○ Reference 15... (0 data points)
+  [13/44] ○ Copyright Information... (0 data points)
+  [14/44] ○ Optimum Conductivity and Indium Substitution... (0 data points)
+  [15/44] ○ Sample Synthesis Procedure... (0 data points)
+  [16/44] ○ Post-Synthesis Quality Control... (0 data points)
+  [17/44] ○ Future Directions for Enhanced Li+ Conductivity... (0 data points)
+  [18/44] ○ Powder Diffraction Analysis... (0 data points)
+  [19/44] ○ Acknowledgement... (0 data points)
+  [20/44] ○ Ionic Conductivity Measurements... (0 data points)
+  [21/44] ○ Additional References... (0 data points)
+  [22/44] ○ Reference 1... (0 data points)
+  [23/44] ○ Reference 2... (0 data points)
+  [24/44] ○ Reference 3... (0 data points)
+  [25/44] ✓ Hf-Based Conductors and Bottleneck Significance... (2 data points)
+  [26/44] ✓ Titanium Substitution and its Structural Effects... (3 data points)
+  [27/44] ○ Reference 4... (0 data points)
+  [28/44] ○ Reference 6... (0 data points)
+  [29/44] ✓ Figure 5 and Caption... (2 data points)
+  [30/44] ○ Reference 7... (0 data points)
+  [31/44] ✓ LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Conductiv... (2 data points)
+  [32/44] ○ Introduction to Materials and Scope... (0 data points)
+  [33/44] ○ Crystal Structure and Type I Cavities... (0 data points)
+  [34/44] ○ Reference 8... (0 data points)
+  [35/44] ✓ In 3+ Substitution in LiHf2(PO4)3... (1 data points)
+  [36/44] ○ Discussion Parameters... (0 data points)
+  [37/44] ✓ Sc 3+ Substitution: Introduction and Structural An... (3 data points)
+  [38/44] ✓ Sc 3+ Substitution: Conductivity Analysis... (2 data points)
+  [39/44] ○ Reference 9... (0 data points)
+  [40/44] ○ Reference 10... (0 data points)
+  [41/44] ○ Advantages of Lithium Ion Conductors... (0 data points)
+  [42/44] ○ Research Objective... (0 data points)
+  [43/44] ✓ LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structura... (5 data points)
+  [44/44] ✓ Illustrative Data (Figures and Tables)... (2 data points)
+  → 23 total data points extracted
+
+[Stage 2b] Processing 6 images directly...
+    Warning: Skipping missing image _page_5_Figure_7.jpeg
+    Warning: Skipping missing image _page_2_Figure_4.jpeg
+    Warning: Skipping missing image _page_6_Figure_9.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+    Warning: Skipping missing image _page_4_Figure_11.jpeg
+
+Merging: 23 text-based + 0 image-based points.
+  → Running physical heuristic checks on 23 points...
+  → Running LLM semantic verification on 23 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 16 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li1+xInxHf2-x(PO4)3 (x = 0.0)"
+- "Li1+xInxHf2-x(PO4)3 (x = 0.2)"
+- "Li1+xScxTi2-x(PO4)3 (x=0)"
+- "Li1+xScxTi2-x(PO4)3 (x=0.2)"
+- "Li1+xScxTi2-x(PO4)3 (x=0.3)"
+- "Li1.2Sc0.2Ti0.2Zr1.6(PO4)3 (Sc=0.2, Ti=0.2, Zr=1.6)"
+- "Li1.2Sc0.2Ti1.6Zr0.2(PO4)3 (Sc=0.2, Ti=1.6, Zr=0.2)"
+- "Li1.3In0.3Hf1.7(PO4)3 (x=0.3)"
+- "Li1.3Sc0.3Ti1.7(PO4)3 (x=0.3)"
+- "Li3Zr2Si2PO12"
+- "LiHf2(PO4)3"
+- "LiTi2(PO4)3"
+- "LiTi2(PO4)3 (x=2.0)"
+- "LiZr0.25Ti1.75(PO4)3 (x=1.75)"
+- "LiZr0.2Ti1.8(PO4)3 (x=0.2)"
+- "LiZr1.5Ti0.5(PO4)3 (x=0.5)"
+- "LiZr1.75Ti0.25(PO4)3 (x=0.25)"
+- "LiZr2(PO4)3"
+- "LiZr2(PO4)3 (triclinic or monoclinic phase)"
+- "LiZr2(PO4)3 (x=0)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='LiHf2(PO4)3', canonical_name='Lithium Hafnium Phosphate', abbreviation=None, variant_names=['Li1+xInxHf2-x(PO4)3 (x = 0.0)', 'LiHf2(PO4)3']), CanonicalMaterialName(canonical_formula='Li1.2In0.2Hf1.8(PO4)3', canonical_name='Lithium Indium Hafnium Phosphate', abbreviation=None, variant_names=['Li1+xInxHf2-x(PO4)3 (x = 0.2)']), CanonicalMaterialName(canonical_formula='LiTi2(PO4)3', canonical_name='Lithium Titanium Phosphate', abbreviation='LTP', variant_names=['Li1+xScxTi2-x(PO4)3 (x=0)', 'LiTi2(PO4)3', 'LiTi2(PO4)3 (x=2.0)']), CanonicalMaterialName(canonical_formula='Li1.2Sc0.2Ti1.8(PO4)3', canonical_name='Lithium Scandium Titanium Phosphate', abbreviation='LSTP', variant_names=['Li1+xScxTi2-x(PO4)3 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li1.3Sc0.3Ti1.7(PO4)3', canonical_name='Lithium Scandium Titanium Phosphate', abbreviation='LSTP', variant_names=['Li1+xScxTi2-x(PO4)3 (x=0.3)', 'Li1.3Sc0.3Ti1.7(PO4)3 (x=0.3)']), CanonicalMaterialName(canonical_formula='Li1.2Sc0.2Ti0.2Zr1.6(PO4)3', canonical_name='Lithium Scandium Titanium Zirconium Phosphate', abbreviation=None, variant_names=['Li1.2Sc0.2Ti0.2Zr1.6(PO4)3 (Sc=0.2, Ti=0.2, Zr=1.6)']), CanonicalMaterialName(canonical_formula='Li1.2Sc0.2Ti1.6Zr0.2(PO4)3', canonical_name='Lithium Scandium Titanium Zirconium Phosphate', abbreviation=None, variant_names=['Li1.2Sc0.2Ti1.6Zr0.2(PO4)3 (Sc=0.2, Ti=1.6, Zr=0.2)']), CanonicalMaterialName(canonical_formula='Li1.3In0.3Hf1.7(PO4)3', canonical_name='Lithium Indium Hafnium Phosphate', abbreviation=None, variant_names=['Li1.3In0.3Hf1.7(PO4)3 (x=0.3)']), CanonicalMaterialName(canonical_formula='Li3Zr2Si2PO12', canonical_name='Lithium Zirconium Silicon Phosphate', abbreviation='NASICON', variant_names=['Li3Zr2Si2PO12']), CanonicalMaterialName(canonical_formula='LiZr0.25Ti1.75(PO4)3', canonical_name='Lithium Zirconium Titanium Phosphate', abbreviation='LZTP', variant_names=['LiZr0.25Ti1.75(PO4)3 (x=1.75)']), CanonicalMaterialName(canonical_formula='LiZr0.2Ti1.8(PO4)3', canonical_name='Lithium Zirconium Titanium Phosphate', abbreviation='LZTP', variant_names=['LiZr0.2Ti1.8(PO4)3 (x=0.2)']), CanonicalMaterialName(canonical_formula='LiZr1.5Ti0.5(PO4)3', canonical_name='Lithium Zirconium Titanium Phosphate', abbreviation='LZTP', variant_names=['LiZr1.5Ti0.5(PO4)3 (x=0.5)']), CanonicalMaterialName(canonical_formula='LiZr1.75Ti0.25(PO4)3', canonical_name='Lithium Zirconium Titanium Phosphate', abbreviation='LZTP', variant_names=['LiZr1.75Ti0.25(PO4)3 (x=0.25)']), CanonicalMaterialName(canonical_formula='LiZr2(PO4)3', canonical_name='Lithium Zirconium Phosphate', abbreviation='LZP', variant_names=['LiZr2(PO4)3', 'LiZr2(PO4)3 (triclinic or monoclinic phase)', 'LiZr2(PO4)3 (x=0)'])]
+  → Created 14 canonical material(s)
+  → Updated 23/23 material names
+  → Normalizing 23 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='1.0 x 10^-3 S/cm', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_value': 300, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='200°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_value': 200}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-7 S/cm', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-07, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_value': 300, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='lower conductivity (see Tables 2, 3 and 4)', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='higher conductivity (see Tables 2, 3 and 4)', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='three orders of magnitude lower than Na3Zr2Si2PO12', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-06}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='200°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 1e-06, 'temp_value': 200}
+    [DEBUG Norm] Input: Cond='not specified in text (referenced in Table i)', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='higher than that of the corresponding Zr compound', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_unit': None, 'cond_unit': 'S/cm', 'temp_value': None, 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='approximately 10^-6 S cm^-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 1e-06, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='about two orders of magnitude greater than LiZr2(PO4)3', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-05}
+    [DEBUG Norm] Input: Cond='maximum in the series', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-8 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-08, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S/cm', 'temp_value': 300, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='100-300°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 100, 'cond_value': 0, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='100-300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'temp_value': 100, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_unit': 'S cm^-1', 'cond_value': 0.0001}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-7 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-07, 'temp_unit': 'C', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='maximum in the series', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='7.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.0007, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='2.0 x 10^-4 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_unit': 'S/cm', 'cond_value': 0.0002}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.0001}
+
+[Stage 3] Deduplicating 23 data points...
+  → Merged 1 duplicates, 22 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         25
+Total Input:         78,142 tokens
+Total Output:        8,828 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0656
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 25 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure_materials.json
+Time elapsed (s)  107.11997604370117
+
+Statistics:
+  Nodes analyzed: 50
+  Raw data points: 23
+  After dedup: 16
+  Valid: 16, Invalid: 0
+
+By Confidence:
+  high: 11
+  medium: 5
+  low: 0
+
+By Data Source:
+  primary: 14
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li1.2Sc0.2Ti1.6Zr0.2(PO4)3: 1.0 x 10^-3 S/cm @ 300°C [high]
+  ✓ Li1.2Sc0.2Ti0.2Zr1.6(PO4)3: 1.0 x 10^-4 S/cm @ 300°C [high]
+  ✓ LZP: 1.0 x 10^-7 S/cm @ 300°C [high]
+  ✓ LZP: 1.0 x 10^-8 S cm^-1 @ 300°C [high]
+  ✓ LZTP: 1.0 x 10^-7 S cm^-1 @ 300°C [high]
+  ... and 11 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/0167-2738(86)90179-7
+                    Composition  Ionic conductivity (S cm-1)
+310  Li7.2Sc1.2Ti10.8P18.0O72.0                 2.460000e-04
+311  Li7.8Sc1.8Ti10.2P18.0O72.0                 4.070000e-04
+312  Li6.6Sc0.6Ti11.4P18.0O72.0                 1.580000e-04
+313  Li7.8In1.8Hf10.2P18.0O72.0                 1.000000e-05
+314  Li6.0Ti1.2Zr10.8P18.0O72.0                 5.600000e-08
+315  Li6.0Ti10.8Zr1.2P18.0O72.0                 8.500000e-08
+316  Li6.0Ti0.6Zr11.4P18.0O72.0                 3.200000e-08
+317  Li7.2In1.2Hf10.8P18.0O72.0                 4.000000e-06
+Starting Evaluation on 8 Ground Truth Points...
+/Users/bourn23/Downloads/general/PageIndex/llm_evaluator.py:69: RuntimeWarning: divide by zero encountered in log10
+  ext_log = np.log10(float(ext_val))
+
+Evaluation Complete: 1/8 Matched (12.5%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf
+[0;34m[INFO][0m DOI: 10.1016/0167-2738(86)90179-7
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_pipeline_20260114_160321.log
+

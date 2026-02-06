@@ -1,0 +1,21 @@
+
+
+--- [Document] ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system.md ---
+
+
+[DEBUG] Introduction:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=243
+)] thoughts_token_count=131 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=380 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=343 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=343
+)] thoughts_token_count=169 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=518 traffic_type=None
+- chars: {"measurements": []}

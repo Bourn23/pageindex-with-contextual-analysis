@@ -1,0 +1,25 @@
+**1. Method Name:** Solid-State Reaction Method
+
+**2. Procedure Summary:**
+The materials were synthesized using a multi-step solid-state reaction process. First, stoichiometric amounts of high-purity precursor powders (Li2CO3, SiO2 for Si-substituted samples, M2O3 for M-substituted samples, TiO2, and (NH4)2HPO4) were thoroughly ground together. This mixture was then calcined at a high temperature in a platinum crucible. After the initial calcination, the resulting material was reground into a fine powder using a wet ball-milling process. The dried powder underwent a second calcination step, followed by another round of ball-milling to achieve a particle size smaller than 1 μm. To form dense pellets, a 3% polyvinyl alcohol (PVA) solution was added as a binder to the fine powder, and the mixture was pressed into disk-shaped pellets. Finally, these green pellets were sintered at specific high temperatures to achieve densification.
+
+**3. Key Conditions:**
+*   **Precursors:** Li2CO3, SiO2 (for Si-substituted samples), M2O3 (where M = Al, Cr, Ga, Fe, Sc, In, Lu, Y, La), TiO2, (NH4)2HPO4 (all reagent grade purity).
+*   **Initial Calcination:** 1173 K (900°C) for 2 hours in a platinum crucible.
+*   **Intermediate Grinding:** Wet ball-milling for 6 hours.
+*   **Second Calcination:** 1173 K (900°C) for 2 hours.
+*   **Final Grinding:** Ball-milling for 12 hours (resulting in particle size < 1 μm).
+*   **Binder:** 3% PVA solution.
+*   **Pellet Pressing:** 1 × 10^8 Pa.
+*   **Sintering:** For 2 hours. Specific temperatures varied based on composition:
+    *   **Li6.0Ti12.0P18.0O72.0 (LiTi2(PO4)3) and Li1+xTi2SixP3-xO12 (Si-substituted systems):** 1473 K (1200°C).
+    *   **Li1+xAlxTi2-x(PO4)3 (Al-substituted systems):** 1253-1273 K (980-1000°C).
+    *   **Li1+xCrxTi2-x(PO4)3 (Cr-substituted systems):** 1463-1523 K (1190-1250°C).
+    *   **Li1+xGaxTi2-x(PO4)3 (Ga-substituted systems):** 1173-1203 K (900-930°C).
+    *   **Li1+xFexTi2-x(PO4)3 (Fe-substituted systems):** 1323 K (1050°C).
+    *   **Li1+xScxTi2-x(PO4)3 (Sc-substituted systems):** 1473-1483 K (1200-1210°C).
+    *   **Li1+xInxTi2-x(PO4)3 (In-substituted systems):** 1273 K (1000°C).
+    *   **Li1+xLuxTi2-x(PO4)3 (Lu-substituted systems):** 1173 K (900°C).
+    *   **Li1+xYxTi2-x(PO4)3 (Y-substituted systems):** 1173 K (900°C).
+    *   **Li1+xLaxTi2-x(PO4)3 (La-substituted systems):** 1173 K (900°C).
+*   **Atmosphere:** Not explicitly specified (likely air, as heating was done in a platinum crucible).

@@ -1,0 +1,179 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260128_135818.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '*3.2. LiHf2(P04)3 + yLi20 system*'
+       - Replaced 'Table 2' in section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*'
+   --- Document: **Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2 (PO4)3**
+   --- Found: 11 Sections
+   --- Found: 13 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '*3.1. Crystal structure of LiHf2(P04)3*' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '*3.2. LiHf2(P04)3 + yLi20 system*' contains:
+       - 8 Images: ['Fig 5', 'Fig 2', 'Fig 5s', 'Fig 6', 'Fig 4', 'Fig 7', 'Fig 3', 'Fig 3']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*' contains:
+       - 3 Images: ['Fig 8', 'Fig 10', 'Fig 9']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 25 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_1_figure_10.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_picture_1.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_2.jpeg (Fig 5s): Detecting subplot...
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 5s): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_3.jpeg (Fig 3): Detecting subplot...
+   🔍 page_3_picture_4.jpeg (Fig 3): Detecting subplot...
+   🔍 page_4_figure_2.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_3_picture_4.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_4.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_3_picture_3.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_7.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_9.jpeg (Fig 7): Detecting subplot...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_4_figure_7.jpeg (Fig 6): Found 18 points total via SciFigureParser
+   🔍 page_5_figure_7.jpeg (Fig 8): Detecting subplot...
+   ✓ page_4_figure_4.jpeg (Fig 5): Found 24 points total via SciFigureParser
+   🔍 page_6_figure_2.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_1_figure_10.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_4.jpeg (Fig 10): Detecting subplot...
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 8): No ionic conductivity measurements detected by SciFigureParser.
+   📊 page_6_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ page_4_figure_2.jpeg (Fig 4): Found 32 points total via SciFigureParser
+   ✓ Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-: Found 6 points
+   ✓ Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with: Found 4 points
+   ✓ page_6_figure_4.jpeg (Fig 10): Found 17 points total via SciFigureParser
+   ⏱️  page_4_figure_9.jpeg: Timeout
+   ... Resolving 53 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 105 measurements
+      - Skipped (no data): 15 images
+      - Failed: 1 items
+
+Done! Extracted 105 points.
+Saved to: fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         12
+Total Input:         8,486 tokens
+Total Output:        15,560 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0414
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 12 calls
+==================================================
+
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x16c33d120>
+transport: <_SelectorSocketTransport closing fd=7>
+Traceback (most recent call last):
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 924, in write
+    n = self._sock.send(data)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 930, in write
+    self._fatal_error(exc, 'Fatal write error on socket transport')
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 725, in _fatal_error
+    self._force_close(exc)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 737, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/0167-2738(93)90387-i
+GT-318: Li6.0Hf12.0P18.0O72.0 | 6.85e-07 S/cm
+GT-319: Li6.6Fe0.6Hf11.4P18.0O72.0 | 0.000107 S/cm
+GT-320: Li6.6In0.6Hf11.4P18.0O72.0 | 5.13e-05 S/cm
+GT-321: Li6.6Lu0.6Hf11.4P18.0O72.0 | 5.88e-05 S/cm
+GT-322: Li6.6Sc0.6Hf11.4P18.0O72.0 | 2.45e-05 S/cm
+GT-323: Li7.2Lu1.2Hf10.8P18.0O72.0 | 9.79e-05 S/cm
+GT-324: Li7.8Cr1.8Hf10.2P18.0O72.0 | 5.26e-07 S/cm
+GT-325: Li7.8Fe1.8Hf10.2P18.0O72.0 | 5.4e-05 S/cm
+GT-326: Li7.8In1.8Hf10.2P18.0O72.0 | 0.000142 S/cm
+GT-327: Li7.8Lu1.8Hf10.2P18.0O72.0 | 3.56e-05 S/cm
+GT-328: Li7.8Sc1.8Hf10.2P18.0O72.0 | 8.32e-05 S/cm
+GT-329: Li7.8Y1.8Hf10.2P18.0O72.0 | 3.19e-05 S/cm
+GT-330: Li8.4In2.4Hf9.6P18.0O72.0 | 0.000142 S/cm
+GT-331: Li8.4Lu2.4Hf9.6P18.0O72.0 | 2.06e-05 S/cm
+GT-332: Li8.4Y2.4Hf9.6P18.0O72.0 | 2.09e-05 S/cm
+--- Starting Validation ---
+Comparing 15 GT items vs 1640 Extracted items...
+
+============================================================
+VALIDATION SCORE: 60.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-318     | ✅ MATCH         | The normalized formula LiHf2(PO4)3 matches, and the extracted conductivity 7.079e-07 S/cm is an approximate match to 6.85e-07 S/cm (3.34% difference) at the implied room temperature (298 K).
+GT-319     | ✅ MATCH         | The normalized formula Li1.1Fe0.1Hf1.9(PO4)3 matches, and the extracted conductivity 0.0001122 S/cm is an approximate match to 0.000107 S/cm (4.86% difference) at the implied room temperature (298 K).
+GT-320     | ✅ MATCH         | The normalized formula Li1.1In0.1Hf1.9(PO4)3 matches, and the extracted conductivity 5.623e-05 S/cm is an approximate match to 5.13e-05 S/cm (9.6% difference) at the implied room temperature (298 K).
+GT-321     | ❌ MISSING/BAD   | No extracted data point for Lu at x=0.1 (Li1.1Lu0.1Hf1.9(PO4)3) was found in the provided data.
+GT-322     | ✅ MATCH         | The normalized formula Li1.1Sc0.1Hf1.9(PO4)3 matches, and the extracted conductivity 2.512e-05 S/cm is an approximate match to 2.45e-05 S/cm (2.5% difference) at the implied room temperature (298 K).
+GT-323     | ❌ MISSING/BAD   | No extracted data point for Lu at x=0.2 (Li1.2Lu0.2Hf1.8(PO4)3) was found in the provided data.
+GT-324     | ✅ MATCH         | The normalized formula Li1.3Cr0.3Hf1.7(PO4)3 matches, and the extracted conductivity 5.623e-07 S/cm is an approximate match to 5.26e-07 S/cm (6.9% difference) at the implied room temperature (298 K).
+GT-325     | ✅ MATCH         | The normalized formula Li1.3Fe0.3Hf1.7(PO4)3 matches, and the extracted conductivity 5.623e-05 S/cm is an approximate match to 5.4e-05 S/cm (4.1% difference) at the implied room temperature (298 K).
+GT-326     | ✅ MATCH         | The normalized formula Li1.3In0.3Hf1.7(PO4)3 matches, and the extracted conductivity 0.0001413 S/cm is an approximate match to 0.000142 S/cm (0.52% difference) at the implied room temperature (298 K).
+GT-327     | ❌ MISSING/BAD   | No extracted data point for Lu at x=0.3 (Li1.3Lu0.3Hf1.7(PO4)3) was found in the provided data.
+GT-328     | ✅ MATCH         | The normalized formula Li1.3Sc0.3Hf1.7(PO4)3 matches, and the extracted conductivity 8.913e-05 S/cm is an approximate match to 8.32e-05 S/cm (7.1% difference) at the implied room temperature (298 K).
+GT-329     | ❌ MISSING/BAD   | No extracted data point for Y at x=0.3 (Li1.3Y0.3Hf1.7(PO4)3) was found in the provided data.
+GT-330     | ✅ MATCH         | The normalized formula Li1.4In0.4Hf1.6(PO4)3 matches, and the extracted conductivity 0.0001413 S/cm is an approximate match to 0.000142 S/cm (0.52% difference) at the implied room temperature (298 K).
+GT-331     | ❌ MISSING/BAD   | No extracted data point for Lu at x=0.4 (Li1.4Lu0.4Hf1.6(PO4)3) was found in the provided data.
+GT-332     | ❌ MISSING/BAD   | No extracted data point for Y at x=0.4 (Li1.4Y0.4Hf1.6(PO4)3) was found in the provided data.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m DOI: 10.1016/0167-2738(93)90387-i
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260128_135818.log
+

@@ -1,0 +1,15 @@
+GT-318     | ✅ MATCH         | Normalized formula LiHf2(PO4)3 matches, and conductivity 6.31e-07 S/cm is approximately 6.85e-07 S/cm (within 8% difference).
+GT-319     | ✅ MATCH         | Normalized formula Li1.1Fe0.1Hf1.9(PO4)3 matches, and conductivity 1.00e-04 S/cm is approximately 1.07e-04 S/cm (within 7% difference).
+GT-320     | ❌ MISSING/BAD   | Normalized formula Li1.1In0.1Hf1.9(PO4)3 matches, but conductivity 6.31e-05 S/cm is not approximately 5.13e-05 S/cm (difference is >20%).
+GT-321     | ❌ MISSING/BAD   | Normalized formula Li1.1Lu0.1Hf1.9(PO4)3 matches, but conductivity 5.01e-05 S/cm is not approximately 5.88e-05 S/cm (difference is >14%).
+GT-322     | ✅ MATCH         | Normalized formula Li1.1Sc0.1Hf1.9(PO4)3 matches, and conductivity 2.51e-05 S/cm is approximately 2.45e-05 S/cm (within 3% difference).
+GT-323     | ❌ MISSING/BAD   | Normalized formula Li1.2Lu0.2Hf1.8(PO4)3 matches, but conductivity 7.94e-05 S/cm is not approximately 9.79e-05 S/cm (difference is >18%).
+GT-324     | ✅ MATCH         | Normalized formula Li1.3Cr0.3Hf1.7(PO4)3 matches, and conductivity 5.01e-07 S/cm is approximately 5.26e-07 S/cm (within 5% difference).
+GT-325     | ❌ MISSING/BAD   | Normalized formula Li1.3Fe0.3Hf1.7(PO4)3 matches, but conductivity 6.31e-05 S/cm is not approximately 5.4e-05 S/cm (difference is >16%).
+GT-326     | ❌ MISSING/BAD   | Normalized formula Li1.3In0.3Hf1.7(PO4)3 matches, but conductivity 1.58e-04 S/cm is not approximately 1.42e-04 S/cm (difference is >11%).
+GT-327     | ❌ MISSING/BAD   | Normalized formula Li1.3Lu0.3Hf1.7(PO4)3 matches, but conductivity 3.16e-05 S/cm is not approximately 3.56e-05 S/cm (difference is >11%).
+GT-328     | ❌ MISSING/BAD   | Normalized formula Li1.3Sc0.3Hf1.7(PO4)3 matches, but conductivity 1.00e-04 S/cm is not approximately 8.32e-05 S/cm (difference is >20%).
+GT-329     | ❌ MISSING/BAD   | Normalized formula Li1.3Y0.3Hf1.7(PO4)3 matches, but conductivity 3.98e-05 S/cm is not approximately 3.19e-05 S/cm (difference is >24%).
+GT-330     | ❌ MISSING/BAD   | Normalized formula Li1.4In0.4Hf1.6(PO4)3 matches, but conductivity 1.58e-04 S/cm is not approximately 1.42e-04 S/cm (difference is >11%).
+GT-331     | ✅ MATCH         | Normalized formula Li1.4Lu0.4Hf1.6(PO4)3 matches, and conductivity 2.00e-05 S/cm is approximately 2.06e-05 S/cm (within 3% difference).
+GT-332     | ❌ MISSING/BAD   | Normalized formula Li1.4Y0.4Hf1.6(PO4)3 matches, but conductivity 2.51e-05 S/cm is not approximately 2.09e-05 S/cm (difference is >20%).

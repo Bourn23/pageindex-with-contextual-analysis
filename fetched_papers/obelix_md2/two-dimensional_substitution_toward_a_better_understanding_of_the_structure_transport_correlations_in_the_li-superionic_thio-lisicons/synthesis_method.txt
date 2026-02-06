@@ -1,0 +1,20 @@
+**Method Name:** High-temperature solid-state reaction
+
+**Procedure Summary:**
+The synthesis of the Li-superionic thio-LISICONs involved a two-step high-temperature solid-state reaction, all performed under an inert argon atmosphere. First, lithium selenide (Li2Se), a key precursor, was prepared by reacting metallic lithium (99.9%) with selenium powder (99.999%) in a graphite crucible placed inside a quartz ampoule. This ampoule was pre-treated at 1073 K under dynamic vacuum to remove moisture before the reaction. The reaction for Li2Se synthesis was carried out at 673 K for 48 hours, with a heating rate of 285 K/h. The resulting Li2Se was then pulverized.
+
+For the main material synthesis, appropriate stoichiometric ratios of the pre-synthesized lithium selenide, commercial lithium sulfide (Li2S, 99.9%), germanium (Ge, 99.995%), tin (Sn, 99.999%), sulfur (S, 99.999%), and selenium (Se, 99.999%) were thoroughly mixed by hand-grinding in an agate mortar for 15 minutes. The obtained powder mixtures were then pelletized and sealed under vacuum in carbon-coated quartz ampoules. These quartz tubes were also preheated at 1073 K under dynamic vacuum to eliminate any trace of water before filling. The sealed ampoules were then subjected to high-temperature annealing. After annealing, the products were ground for subsequent characterization.
+
+**Key Conditions:**
+*   **Atmosphere:** All preparations and sample treatments were carried out under an Argon (Ar) atmosphere. Quartz ampoules were sealed under vacuum for annealing.
+*   **Precursor Synthesis (Li2Se):**
+    *   Temperature: 673 K
+    *   Dwell Time: 48 hours
+    *   Heating Rate: 285 K/h
+    *   Pre-treatment: Quartz tube and carbon crucible heated at 1073 K under dynamic vacuum.
+*   **Main Material Synthesis (Li4MCh4):**
+    *   Pre-treatment: Quartz tubes carbon coated and preheated at 1073 K under dynamic vacuum.
+    *   Annealing Temperature and Dwell Time:
+        *   For Ge-containing samples (e.g., Li4GeS4, Li4GeSe4, and their S/Se solid solutions): 973 K for 16 hours.
+        *   For Sn-containing samples (e.g., Li4SnS4, Li4SnSe4, and their S/Se solid solutions): 873 K for 48 hours.
+        *   (Note: For samples containing both Ge and Sn, the paper states that the temperature and annealing time needed to be slightly different to produce materials with sufficient purity, implying optimization for specific compositions, but does not provide specific conditions for these mixed M-site compositions.)

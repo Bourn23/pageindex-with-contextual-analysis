@@ -1,0 +1,81 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-159",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the normalized composition La0.61Li0.18TiO3.0 and conductivity 0.000412 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-160",
+      "extracted_id": "EX-4",
+      "reason": "The ground truth composition La1.1Li0.72Ti2.0O6.0 normalizes to La0.55Li0.36TiO3.0. This exactly matches the composition La0.67-xLi3xTiO3 when x=0.12 (La0.55Li0.36TiO3). The conductivity 0.000688 S/cm also matches exactly, and the temperature (25\u00b0C) is consistent.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-161",
+      "extracted_id": null,
+      "reason": "The ground truth composition La1.08Li0.78Ti2.0O6.0 normalizes to La0.54Li0.39TiO3.0. While this composition fits the general formula of EX-4 (La0.67-xLi3xTiO3 for x=0.13), the conductivity 0.000651 S/cm does not match EX-4's conductivity of 0.000688 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-162",
+      "extracted_id": null,
+      "reason": "The ground truth composition La1.04Li0.9Ti2.0O6.0 normalizes to La0.52Li0.45TiO3.0. While this composition fits the general formula of EX-4 (La0.67-xLi3xTiO3 for x=0.15), the conductivity 0.000501 S/cm does not match EX-4's conductivity of 0.000688 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-163",
+      "extracted_id": null,
+      "reason": "The ground truth composition La1.16Li0.54Ti2.0O6.0 normalizes to La0.58Li0.27TiO3.0. While this composition fits the general formula of EX-4 (La0.67-xLi3xTiO3 for x=0.09), the conductivity 0.000599 S/cm does not match EX-4's conductivity of 0.000688 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-164",
+      "extracted_id": null,
+      "reason": "The ground truth composition La1.12Li0.66Ti2.0O6.0 normalizes to La0.56Li0.33TiO3.0. While this composition fits the general formula of EX-4 (La0.67-xLi3xTiO3 for x=0.11), the conductivity 0.000668 S/cm does not match EX-4's conductivity of 0.000688 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-449",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.58Li0.27Ti1.0O3.0 is very similar to EX-9 (La0.59Li0.27TiO3.02), but the conductivity 0.000832 S/cm does not match EX-9's conductivity of 0.00068 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-450",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the composition La0.56Li0.33Ti1.0O3.0 and conductivity 0.0013 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-451",
+      "extracted_id": null,
+      "reason": "The ground truth conductivity 0.00154 S/cm is very close to EX-3 (0.00153 S/cm), and the Li content (0.36) matches. However, the La content (0.55 vs 0.31) is significantly different, so it is not a match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-452",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the composition La0.54Li0.39Ti1.0O3.0 and conductivity 0.00125 S/cm.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-453",
+      "extracted_id": null,
+      "reason": "No extracted entry matches the composition La0.52Li0.45Ti1.0O3.0 and conductivity 0.000785 S/cm.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The extraction performance is low, with only one ground truth entry (GT-160) finding a precise match in the extracted data (EX-4) based on normalized composition and conductivity. Most other ground truth entries did not have a corresponding extracted entry with matching composition and conductivity values.",
+  "metrics": {
+    "recall": 9.090909090909092,
+    "precision": 3.8461538461538463,
+    "f1": 5.405405405405405,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 11,
+    "total_ex": 26
+  }
+}

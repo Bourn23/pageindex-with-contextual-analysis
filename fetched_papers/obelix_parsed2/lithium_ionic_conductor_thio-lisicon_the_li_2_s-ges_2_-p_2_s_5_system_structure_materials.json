@@ -1,0 +1,555 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 91506,
+    "total_output_tokens": 5893,
+    "total_cost_usd": 0.063432,
+    "call_counts": {
+      "gemini-3-flash-preview": 23
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/lithium_ionic_conductor_thio-lisicon_the_li_2_s-ges_2_-p_2_s_5_system_structure.json",
+  "extraction_stats": {
+    "total_nodes": 67,
+    "raw_extracted": 21,
+    "after_dedup": 16,
+    "time_elapsed": 82.37323713302612,
+    "valid_count": 16,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 7,
+      "medium": 9,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 4,
+      "cited": 0,
+      "inferred": 3
+    },
+    "from_text_nodes": 21,
+    "from_image_nodes": 0,
+    "final_count": 16
+  },
+  "material_count": 16,
+  "materials": [
+    {
+      "source_sentence_id": "0102, 0123, 0015",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xGe1-xPxS4 (x=0.75)",
+        "acronym": null,
+        "proportion": "x = 0.75"
+      },
+      "ionic_conductivity_S_per_cm": "2.17(6) × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted the highest conductivity value reported for the Li4-xGe1-xPxS4 series at the specific composition x=0.75.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li4-xGe1-xPxS4 solid electrolyte with x = 0.75 ; New thio-LISICON solid electrolyte in the Li4-xGe1-xPxS4 system. ; Solid solution member in the Li2S-GeS2-P2S5 system, crystalline material family, sintered ceramic, negligible electronic conductivity, high electrochemical stability, no reaction with lithium metal, no phase transition up to 500°C.",
+      "processing_method": "Synthesized at 700°C. | Sintered ceramic | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h.",
+      "source_node": {
+        "node_id": "0095",
+        "title": "Ionic Conductivity Measurements and Dependencies",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xGe1-xPxS4 (x=0.75)",
+      "_original_name": "Li4-xGe1-xPxS4",
+      "_norm_cond": 0.00217,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_db54e263) for the Li6PS5Cl sample at 1000/T = 3.35 (approx 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Sintered at 550°C | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_db54e263) for the Li6PS5Cl sample at 1000/T = 2.68 (approx 100°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Sintered at 550°C | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "-25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_db54e263) for the Li6PS5Cl sample at 1000/T = 4.03 (approx -25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Sintered at 550°C | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000, 0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.25Ge0.25P0.75S4",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "2.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (IMG_5d641ac9) showing the highest conductivity point for the Li2S-GeS2-P2S5 system at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Thio-LISICON solid solution in the Li2S-GeS2-P2S5 system. ; New thio-LISICON phase formed by partial substitution of P5+ for Ge4+ introducing lithium vacancies.",
+      "processing_method": "Sintered at 550°C | Sintered ceramics | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h.",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Lithium Ionic Conductor Thio-LISICON: The $\\text{Li}_2$ ?S??-?GeS $_2$ ?-??P? $_2$ ?S? $_5$ System"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.25Ge0.25P0.75S4",
+      "_original_name": "Li3.25Ge0.25P0.75S4",
+      "_norm_cond": 0.0022,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (IMG_5d641ac9) for the end-member Li4GeS4 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "End-member of the Li2S-GeS2-P2S5 system.",
+      "processing_method": "Sintered at 550°C | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h.",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Lithium Ionic Conductor Thio-LISICON: The $\\text{Li}_2$ ?S??-?GeS $_2$ ?-??P? $_2$ ?S? $_5$ System"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeS4",
+      "_original_name": "Li4GeS4",
+      "_norm_cond": 2e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.0 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (IMG_5d641ac9) for the end-member Li3PS4 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "End-member of the Li2S-GeS2-P2S5 system.",
+      "processing_method": "Sintered at 550°C | Solid-state reaction: Starting materials (Li2S, GeS2, and P2S5, >99.9% purity) were mixed in appropriate molar ratios in an argon-filled glove box. The mixture was sealed in a carbon-coated quartz tube and heated at 700°C for 8 h, followed by slow cooling to room temperature. The product was pressed into pellets (8 mm diameter, 2-3 mm thick) and heated under vacuum at 150°C for 3 h.",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Lithium Ionic Conductor Thio-LISICON: The $\\text{Li}_2$ ?S??-?GeS $_2$ ?-??P? $_2$ ?S? $_5$ System"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PS4",
+      "_original_name": "Li3PS4",
+      "_norm_cond": 3e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Si0.6P0.4O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "≈ 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for Li3.6Si0.6P0.4O4 mentioned as an example of a LISICON-type material at room temperature.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [8] and [9] (details not in text).",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Previous LISICON Materials and Their Limitations",
+        "section": "The Li<sub>2</sub>S-GeS<sub>2</sub>-P<sub>2</sub>S<sub>5</sub> System"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Si0.6P0.4O4",
+      "_original_name": "Li3.6Si0.6P0.4O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Si0.6P0.4O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ - 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value; the text states the primary material is 3-4 orders of magnitude higher than this material.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [8] and [9] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Si0.6P0.4O4",
+      "_original_name": "Li3.6Si0.6P0.4O4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.62Li0.14TiO3",
+        "acronym": "LLTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value for a known ceramic lithium ionic conductor.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Sintered ceramics | Synthesized according to Ref [26] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.62Li0.14TiO3",
+      "_original_name": "La0.62Li0.14TiO3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-LiI",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value for modified sulfide glasses.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized as sulfide glasses according to Ref [10] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-LiI",
+      "_original_name": "Li2S-SiS2-LiI",
+      "_norm_cond": 0.0018,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.9 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value for modified sulfide glasses (Li2S-SiS2-Li2MO4 where M=P).",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized as sulfide glasses according to Ref [11] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-Li3PO4",
+      "_original_name": "Li2S-SiS2-Li3PO4",
+      "_norm_cond": 0.00069,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0032",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-LiI",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ to 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for a specific sulfide glass system mentioned in the text with a citation.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "sulfide glasses",
+      "processing_method": "Synthesized as sulfide glasses according to Ref [10] (details not in text).",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Advantages of Sulfide Materials",
+        "section": "The Li<sub>2</sub>S-GeS<sub>2</sub>-P<sub>2</sub>S<sub>5</sub> System"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-LiI",
+      "_original_name": "Li2S-SiS2-LiI",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0032",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ to 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for a specific sulfide glass system mentioned in the text with a citation.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "sulfide glasses",
+      "processing_method": "Synthesized as sulfide glasses according to Ref [11] (details not in text).",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Advantages of Sulfide Materials",
+        "section": "The Li<sub>2</sub>S-GeS<sub>2</sub>-P<sub>2</sub>S<sub>5</sub> System"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-Li3PO4",
+      "_original_name": "Li2S-SiS2-Li3PO4",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li14Zn(GeO4)4",
+        "acronym": "LISICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ - 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value; the text states the primary material is 3-4 orders of magnitude higher than this material.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [7] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li14Zn(GeO4)4",
+      "_original_name": "Li14Zn(GeO4)4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3N",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2-4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as a cited comparison value for a known ceramic lithium ionic conductor.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Sintered ceramics | Synthesized according to Ref [25] and [27] (details not in text).",
+      "source_node": {
+        "node_id": "0104",
+        "title": "Electronic Conductivity Characterization and Comparative Performance",
+        "section": "**Results and Discussion**"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3N",
+      "_original_name": "Li3N",
+      "_norm_cond": 0.0002,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

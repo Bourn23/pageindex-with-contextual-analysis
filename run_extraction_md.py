@@ -764,6 +764,15 @@ class DataValidator:
                 for path in self.figure_index[fig_num]:
                     if path not in seen_paths:
                         try:
+                            # Try to load image, with fallback for missing leading underscore
+                            if not path.exists():
+                                alt_path = path.parent / path.name.lstrip('_')
+                                if alt_path.exists():
+                                    path = alt_path
+                                else:
+                                    print(f"    Auditor Warning: Image file missing at {path}")
+                                    continue
+
                             # Create the image part for Gemini
                             image_bytes = path.read_bytes()
                             image_b64 = base64.b64encode(image_bytes).decode('utf-8')
@@ -1116,7 +1125,7 @@ You must find the synthesis method for *every single target*.
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    temperature=0.1 # Low temp for factual extraction
+                    temperature=1.0 # Low temp for factual extraction
                 )
             )
 
@@ -1250,17 +1259,25 @@ class MaterialExtractor:
                         # Adjust regex if your filenames vary (e.g. "image-05.jpg")
                         fig_match = re.search(r'(?:Figure|Fig)[-_]?(\d+)', src, re.IGNORECASE)
                         
-                        if fig_match and full_path.exists():
+                        if fig_match:
+                            # Robust path check: handle leading underscore removal
+                            final_path = full_path
+                            if not final_path.exists():
+                                alt_path = full_path.parent / full_path.name.lstrip('_')
+                                if alt_path.exists():
+                                    final_path = alt_path
+                                else:
+                                    print(f"    Warning: Image file missing at {full_path}")
+                                    continue
+                            
                             fig_num = fig_match.group(1) # e.g., "4"
                             
                             if fig_num not in self.figure_index:
                                 self.figure_index[fig_num] = []
                             
-                            if full_path not in self.figure_index[fig_num]:
-                                self.figure_index[fig_num].append(full_path)
-                                print(f"    Indexed Figure {fig_num} -> {src}")
-                        elif not full_path.exists():
-                             print(f"    Warning: Image file missing at {full_path}")
+                            if final_path not in self.figure_index[fig_num]:
+                                self.figure_index[fig_num].append(final_path)
+                                print(f"    Indexed Figure {fig_num} -> {final_path.name}")
 
                 # 2. Recurse into children (if any)
                 if 'nodes' in node and isinstance(node['nodes'], list):
@@ -1720,40 +1737,14 @@ Respond with JSON only."""
         
         node_id = node.get('node_id', 'img')
 
+        # Robust path check: handle leading underscore removal
         if not full_path.exists():
-            print(f"    Warning: Skipping missing image {src}")
-            return (src, [])
-
-        # Prompt specifically designed for standalone images
-#         prompt_text = f"""Analyze this scientific image (Figure/Table) specifically for Ionic Conductivity Data.
-
-# Image Filename: {src}
-# Node ID: {node_id}
-
-# INSTRUCTIONS:
-# 1. If this is a Data Plot (e.g., Arrhenius plot, Conductivity vs Temperature):
-#    - Extract data points carefully.
-#    - If multiple lines exist, identify the material for each line.
-#    - Estimate values as precisely as possible.
-
-# 2. If this is a Table:
-#    - Extract rows containing ionic conductivity.
-
-# 3. If this is NOT related to ionic conductivity (e.g., SEM micrograph, XRD pattern, photo of a battery):
-#    - Return an empty list.
-
-# For EACH measurement found:
-# - source_sentence_id: "Derived from Plot {src}" or content of table cell.
-# - material_class: Ceramic, Polymer, Composite, or Other
-# - electrolyte_name: Name of the material (look at legends, labels)
-# - ionic_conductivity_S_per_cm: Numeric value with units (e.g. "1.2e-4 S cm^-1")
-# - measurement_temperature: Temperature (Look for x-axis labels like 1000/T or °C)
-# - confidence: "high" (clear text/table), "medium" (plot estimation)
-# - data_source: "primary"
-# - material_description: Any details in legends/labels
-# - processing_method: "N/A" or any relevant details visibly mentioned
-
-# Respond with JSON only."""
+            alt_path = full_path.parent / full_path.name.lstrip('_')
+            if alt_path.exists():
+                full_path = alt_path
+            else:
+                print(f"    Warning: Skipping missing image {src}")
+                return (src, [])
 
         prompt_text = f"""Analyze this scientific image (Figure/Table) to extract Ionic Conductivity Data with MAXIMUM PRECISION.
 
@@ -1795,13 +1786,13 @@ OUTPUT FORMAT for EACH measurement:
 - source_sentence_id: "Derived from Plot {src}" or table reference
 - material_class: Ceramic, Polymer, Composite, or Other
 - electrolyte_name: Full chemical formula with specific composition
-- ionic_conductivity_S_per_cm: Exact numeric value in S cm^-1 (e.g., "1.2e-3 S cm^-1" NOT "1.2 mS cm^-1")
+- ionic_conductivity_S_per_cm: Exact numeric value in the same unit measurement as the plot/table but mention it (e.g., "1.2e-3 S cm^-1" or "1.2 mS cm^-1")
 - measurement_temperature: Specific temperature (e.g., "300 K", "25 °C", "room temperature")
 - confidence: "high" (table/clear markers), "medium" (plot estimation requiring interpolation)
 - data_source: "primary"
 - material_description: Material details from legends/labels/captions
 - processing_method: "N/A" unless explicitly mentioned
-- reason: Brief explanation of how you extracted this data point (e.g., "Read from x=0.5 point on conductivity plot")
+- reason: Brief explanation of how you extracted this data point (e.g., "Read from x=0.5 point on conductivity plot") - One sentence max
 
 Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
 
@@ -1842,9 +1833,9 @@ Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
 
                 result = MaterialExtractionResponse.model_validate_json(response.text)
 
-                print('88888888888888888888')
-                print(">>> Extract from image: ", src, "\n", result)
-                print('88888888888888888888')
+                # print('88888888888888888888')
+                # print(">>> Extract from image: ", src, "\n", result)
+                # print('88888888888888888888')
                 
                 # Tag results
                 materials = []
@@ -2010,7 +2001,8 @@ Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
                 
         return all_materials
 
-    def extract(self, structure: List[dict], base_path: Path, batch_size: int = 7) -> dict:
+    def extract(self, structure: List[dict], base_path: Path, batch_size: int = 7, 
+                existing_materials: List[dict] = None, extraction_type: str = "both") -> dict:
         """
         Run the full four-stage extraction pipeline.
         
@@ -2020,46 +2012,43 @@ Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
         # track time
         start_time = time.time()
 
-        # 0. Index Figures First
-        # self._index_figures(base_path, structure)
-        # self.processed_images = set()
-        # self._image_lock = threading.Lock()
+        # 0. Index Figures if needed
+        if extraction_type in ["both", "figure"]:
+            self._index_figures(base_path, structure)
 
-        # Collect all nodes
+        # Always collect nodes for validation context
         text_nodes = self._collect_all_nodes(structure)
         image_nodes = self._collect_image_nodes(structure)
-        print(f"Found {len(text_nodes)} text nodes and {len(image_nodes)} image nodes.")
-        
-        # if not all_nodes:
-        #     return {'materials': [], 'stats': {'total_nodes': 0}}
-        
-        # Stage 1: Filter relevant nodes
-        # relevant_text_nodes = asyncio.run(self._filter_relevant_nodes(text_nodes, batch_size)) # skipping, this is redundant
-        relevant_text_nodes = text_nodes
+        relevant_text_nodes = []
 
-        # 3. Stage 2a: Extract from Text Nodes
-        # (This uses your existing text extraction logic)
+        # Stage 2a: Extract from Text Nodes
         text_materials = []
-        if relevant_text_nodes:
-            text_materials = asyncio.run(self._extract_from_nodes(relevant_text_nodes, batch_size))
+        if (extraction_type in ["both", "text"]):
+            print(f"Found {len(text_nodes)} text nodes.")
+            # relevant_text_nodes = asyncio.run(self._filter_relevant_nodes(text_nodes, batch_size)) # skipping, this is redundant
+            relevant_text_nodes = text_nodes
+            if relevant_text_nodes:
+                text_materials = asyncio.run(self._extract_from_nodes(relevant_text_nodes, batch_size))
 
-        # 4. Stage 2b: Extract from Image Nodes (NEW)
+        # Stage 2b: Extract from Image Nodes
         image_materials = []
-        if image_nodes:
-            image_materials = asyncio.run(self._run_image_pipeline(image_nodes, base_path, batch_size))
+        if (extraction_type in ["both", "figure"]):
+            print(f"Found {len(image_nodes)} image nodes.")
+            if image_nodes:
+                image_materials = asyncio.run(self._run_image_pipeline(image_nodes, base_path, batch_size))
 
-        # Merge Results
+        # Merge Results with existing materials if any
         print(f"\nMerging: {len(text_materials)} text-based + {len(image_materials)} image-based points.")
-        combined_materials = text_materials + image_materials
+        combined_materials = (existing_materials or []) + text_materials + image_materials
         
         if not combined_materials:
             print("No relevant nodes found!")
-            return {'materials': [], 'stats': {'total_nodes': len(combined_materials), 'relevant_nodes': 0}}
+            return {'materials': [], 'stats': {'total_nodes': len(text_nodes) + len(image_nodes), 'relevant_nodes': 0}}
         
-        
-
         # Stage 3: Validate
-        nodes_map = {n['node_id']: n for n in relevant_text_nodes + image_nodes}
+        # We use all nodes (text_nodes + image_nodes) for the map so that 
+        # existing materials can still be validated/contextualized if they are in the structure.
+        nodes_map = {n['node_id']: n for n in text_nodes + image_nodes}
         validator = DataValidator(self.client, self.figure_index, model_name=self.model_text)
         validated_materials = validator.validate_all(combined_materials, nodes_map)
         
@@ -2120,10 +2109,12 @@ Respond with JSON only. Prioritize COMPLETENESS and PRECISION over speed."""
         match = re.search(r'!\[.*?\]\((.*?)\)', text)
         
         if match:
-            image_rel_path = match.group(1)
-            # You might need to adjust logic to resolve the absolute path
-            # identifying where the images are stored relative to your script
             image_path = base_path / image_rel_path
+            
+            if not image_path.exists():
+                alt_path = image_path.parent / image_path.name.lstrip('_')
+                if alt_path.exists():
+                    image_path = alt_path
             
             if image_path.exists():
                 try:
@@ -2157,6 +2148,8 @@ Examples:
     parser.add_argument('input_file', help='Path to PageIndex JSON file')
     parser.add_argument('--asset_dir', help='Path to original MD folder where assets like images are')
     parser.add_argument('--output', '-o', help='Output JSON file path')
+    parser.add_argument('--extraction-type', choices=['both', 'text', 'figure'], default='both',
+                        help='Choose what to extract (default: both)')
     parser.add_argument('--batch-size', '-b', type=int, default=7, 
                         help='Max concurrent API calls (default: 7)')
     
@@ -2185,10 +2178,29 @@ Examples:
     print(f"EXTRACTOR_TEXT_MODEL: {EXTRACTOR_TEXT_MODEL}")
     print(f"EXTRACTOR_VISION_MODEL: {EXTRACTOR_VISION_MODEL}")    
     # Run extraction pipeline
-    base_path = Path(args.asset_dir)
+    base_path = Path(args.asset_dir) if args.asset_dir else input_path.parent
+    
+    # Optional: Load existing results (automatically check the same directory as input)
+    existing_materials = []
+    existing_res_path = input_path.parent / f"{input_path.stem}_materials.json"
+    if existing_res_path.exists():
+        print(f"Loading existing results from: {existing_res_path}")
+        try:
+            with open(existing_res_path, 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+                existing_materials = old_data.get('materials', [])
+                print(f"  → Found {len(existing_materials)} existing materials.")
+        except Exception as e:
+            print(f"  → Warning: Failed to load existing results: {e}")
 
     extractor = MaterialExtractor(model_text=EXTRACTOR_TEXT_MODEL, model_vision=EXTRACTOR_VISION_MODEL)
-    result = extractor.extract(structure, base_path=base_path, batch_size=args.batch_size)
+    result = extractor.extract(
+        structure, 
+        base_path=base_path, 
+        batch_size=args.batch_size,
+        existing_materials=existing_materials,
+        extraction_type=args.extraction_type
+    )
     
     materials = result['materials']
     stats = result['stats']

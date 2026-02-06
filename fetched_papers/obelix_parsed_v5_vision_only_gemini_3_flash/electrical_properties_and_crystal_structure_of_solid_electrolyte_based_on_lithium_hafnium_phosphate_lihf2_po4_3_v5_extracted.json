@@ -1,0 +1,304 @@
+{
+  "doc_name": "electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3",
+  "timestamp": "2026-01-23 09:52:04",
+  "execution_time_seconds": 55.02,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 19887,
+    "total_output_tokens": 22654,
+    "total_cost_usd": 0.0779,
+    "call_counts": {
+      "gemini-3-flash-preview": 12
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 15,
+    "skipped_images": 9,
+    "failed_items": 1,
+    "total_sections_processed": 11,
+    "total_images_processed": 13
+  },
+  "material_count": 15,
+  "measurements": [
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O sintered at 1293 K",
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "material_definitions": [
+        "Samples in the LiHf2(PO4)3 + 0.3Li2O system were prepared by sintering at various temperatures: 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The ionic conductivity was measured using AC impedance and is presented as a function of temperature in an Arrhenius-style plot.",
+        "The plot displays log(sigma*T) vs 1000/T, where sigma is the ionic conductivity.",
+        "Conductivity values vary significantly depending on the sintering temperature, with the 1293 K sample showing the highest performance."
+      ],
+      "raw_conductivity": "4.2e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 4.2e-05,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O sintered at 1293 K",
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "material_definitions": [
+        "Samples in the LiHf2(PO4)3 + 0.3Li2O system were prepared by sintering at various temperatures: 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The ionic conductivity was measured using AC impedance and is presented as a function of temperature in an Arrhenius-style plot.",
+        "The plot displays log(sigma*T) vs 1000/T, where sigma is the ionic conductivity.",
+        "Conductivity values vary significantly depending on the sintering temperature, with the 1293 K sample showing the highest performance."
+      ],
+      "raw_conductivity": "1.1e-2",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.011,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 300.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O sintered at 1073 K",
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "material_definitions": [
+        "Samples in the LiHf2(PO4)3 + 0.3Li2O system were prepared by sintering at various temperatures: 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The ionic conductivity was measured using AC impedance and is presented as a function of temperature in an Arrhenius-style plot.",
+        "The plot displays log(sigma*T) vs 1000/T, where sigma is the ionic conductivity.",
+        "Conductivity values vary significantly depending on the sintering temperature, with the 1293 K sample showing the highest performance."
+      ],
+      "raw_conductivity": "5.3e-8",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 5.3e-08,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O sintered at 1073 K",
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "material_definitions": [
+        "Samples in the LiHf2(PO4)3 + 0.3Li2O system were prepared by sintering at various temperatures: 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The ionic conductivity was measured using AC impedance and is presented as a function of temperature in an Arrhenius-style plot.",
+        "The plot displays log(sigma*T) vs 1000/T, where sigma is the ionic conductivity.",
+        "Conductivity values vary significantly depending on the sintering temperature, with the 1293 K sample showing the highest performance."
+      ],
+      "raw_conductivity": "4.4e-3",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0044,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 300.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O system is a NASICON-type solid electrolyte material.",
+        "It explores the effect of excess Li2O addition (y = 0 to 0.4) on densification and conductivity.",
+        "The ceramic samples were prepared by sintering at temperatures ranging from 1050 K to 1600 K.",
+        "Total ionic conductivity was determined at room temperature (298 K) using impedance spectroscopy.",
+        "The addition of Li2O significantly improves conductivity by four orders of magnitude compared to pure LiHf2(PO4)3."
+      ],
+      "raw_conductivity": "10^-6.1",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "LiHf2(PO4)3 + 0.1Li2O",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O system is a NASICON-type solid electrolyte material.",
+        "It explores the effect of excess Li2O addition (y = 0 to 0.4) on densification and conductivity.",
+        "The ceramic samples were prepared by sintering at temperatures ranging from 1050 K to 1600 K.",
+        "Total ionic conductivity was determined at room temperature (298 K) using impedance spectroscopy.",
+        "The addition of Li2O significantly improves conductivity by four orders of magnitude compared to pure LiHf2(PO4)3."
+      ],
+      "raw_conductivity": "10^-4.0",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "LiHf2(PO4)3 + 0.2Li2O",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O system is a NASICON-type solid electrolyte material.",
+        "It explores the effect of excess Li2O addition (y = 0 to 0.4) on densification and conductivity.",
+        "The ceramic samples were prepared by sintering at temperatures ranging from 1050 K to 1600 K.",
+        "Total ionic conductivity was determined at room temperature (298 K) using impedance spectroscopy.",
+        "The addition of Li2O significantly improves conductivity by four orders of magnitude compared to pure LiHf2(PO4)3."
+      ],
+      "raw_conductivity": "10^-4.5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O system is a NASICON-type solid electrolyte material.",
+        "It explores the effect of excess Li2O addition (y = 0 to 0.4) on densification and conductivity.",
+        "The ceramic samples were prepared by sintering at temperatures ranging from 1050 K to 1600 K.",
+        "Total ionic conductivity was determined at room temperature (298 K) using impedance spectroscopy.",
+        "The addition of Li2O significantly improves conductivity by four orders of magnitude compared to pure LiHf2(PO4)3."
+      ],
+      "raw_conductivity": "10^-4.6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "y=0.4",
+      "canonical_formula": "LiHf2(PO4)3 + 0.4Li2O",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O system is a NASICON-type solid electrolyte material.",
+        "It explores the effect of excess Li2O addition (y = 0 to 0.4) on densification and conductivity.",
+        "The ceramic samples were prepared by sintering at temperatures ranging from 1050 K to 1600 K.",
+        "Total ionic conductivity was determined at room temperature (298 K) using impedance spectroscopy.",
+        "The addition of Li2O significantly improves conductivity by four orders of magnitude compared to pure LiHf2(PO4)3."
+      ],
+      "raw_conductivity": "10^-4.5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-6.15",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2, M=Fe",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-3.8",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2, M=Sc",
+      "canonical_formula": "Li1.2Sc0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-4.2",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2, M=In",
+      "canonical_formula": "Li1.2In0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-3.9",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3, M=In",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-3.85",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3, M=Cr",
+      "canonical_formula": "Li1.3Cr0.3Hf1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions of the type Li1+xMxHf2-x(PO4)3 where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y) substituted for Hf4+.",
+        "The substitution is accompanied by the addition of Li+ for charge compensation.",
+        "The graph shows the total ionic conductivity as a function of the substitution level x.",
+        "Measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "10^-6.3",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

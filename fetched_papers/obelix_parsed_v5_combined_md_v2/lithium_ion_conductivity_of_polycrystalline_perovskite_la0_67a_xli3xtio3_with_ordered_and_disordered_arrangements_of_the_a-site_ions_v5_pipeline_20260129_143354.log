@@ -1,0 +1,144 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_pipeline_20260129_143354.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '3. Results and discussion'
+       - Replaced 'Table 2' in section '3. Results and discussion'
+   --- Document: Lithium ion conductivity of polycrystalline perovskite La Li TiO with ordered and disordered arrangements of the 0.672*<sup>x</sup>* <sup>3</sup>*<sup>x</sup>* <sup>3</sup> A-site ions
+   --- Found: 8 Sections
+   --- Found: 8 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '3. Results and discussion' contains:
+       - 6 Images: ['Fig 4', 'Fig 6', 'Fig 3', 'Fig 5', 'Fig 2', 'Fig 1']
+       - 2 Tables: ['Table 2', 'Table 1']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: Acknowledgements
+   [91m[Warning][0m Skipping section: References
+   ... Processing 16 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_0.jpeg (Unknown): Detecting subplot...
+   [93m[Skip][0m page_0_picture_0.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_0_picture_2.jpeg (Unknown): Detecting subplot...
+   🔍 page_2_figure_6.jpeg (Fig 1): Detecting subplot...
+   🔍 page_3_figure_2.jpeg (Fig 2): Detecting subplot...
+   🔍 page_3_figure_5.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_0_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_9.jpeg (Fig 4): Detecting subplot...
+   🔍 page_4_figure_2.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_5_figure_2.jpeg (Fig 6): Detecting subplot...
+   📊 page_3_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_3_figure_5.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✂️ page_5_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/scifig_debug/page_5_figure_2_cropped.jpeg
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/scifig_debug/page_5_figure_2_cropped.jpeg
+   ⚠️ page_5_figure_2.jpeg: SciFigureParser failed: [Errno 2] No such file or directory: '/Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/scifig_debug/page_5_figure_2_cropped.jpeg'. Falling back to standard processing...
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( $S \approx 0.6$ ) with x = 0.12: Found 2 points
+   ✓ page_4_figure_2.jpeg (Fig 5): Found 22 points total via SciFigureParser
+   ✓ page_3_figure_9.jpeg (Fig 4): Found 6 points total via SciFigureParser
+   ✓ page_3_figure_5.jpeg (Fig 3): Found 12 points total via SciFigureParser
+   ... Resolving 45 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+Norm Error: Could not convert 'Not Specified' to float
+
+   📊 Extraction Summary:
+      - Extracted: 48 measurements
+      - Skipped (no data): 9 images
+      - Failed: 0 items
+
+Done! Extracted 48 points.
+Saved to: fetched_papers/obelix_md/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         9
+Total Input:         9,013 tokens
+Total Output:        10,103 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0288
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 8 calls
+  - gemini-3-flash-preview        : 1 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0167-2738(98)00070-8
+GT-159: La1.22Li0.36Ti2.0O6.0 | 0.000412 S/cm
+GT-160: La1.1Li0.72Ti2.0O6.0 | 0.000688 S/cm
+GT-161: La1.08Li0.78Ti2.0O6.0 | 0.000651 S/cm
+GT-162: La1.04Li0.9Ti2.0O6.0 | 0.000501 S/cm
+GT-163: La1.16Li0.54Ti2.0O6.0 | 0.000599 S/cm
+GT-164: La1.12Li0.66Ti2.0O6.0 | 0.000668 S/cm
+GT-449: La0.58Li0.27Ti1.0O3.0 | 0.000832 S/cm
+GT-450: La0.56Li0.33Ti1.0O3.0 | 0.0013 S/cm
+GT-451: La0.55Li0.36Ti1.0O3.0 | 0.00154 S/cm
+GT-452: La0.54Li0.39Ti1.0O3.0 | 0.00125 S/cm
+GT-453: La0.52Li0.45Ti1.0O3.0 | 0.000785 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 784 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-159     | ✅ MATCH         | Composition La1.22Li0.36Ti2.0O6.0 simplifies to La0.61Li0.18TiO3 (x=0.06), and 0.000412 S/cm is approximately 0.000490 S/cm for the annealed phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-160     | ✅ MATCH         | Composition La1.1Li0.72Ti2.0O6.0 simplifies to La0.55Li0.36TiO3 (x=0.12), and 0.000688 S/cm matches the extracted value for the annealed/ordered phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-161     | ✅ MATCH         | Composition La1.08Li0.78Ti2.0O6.0 simplifies to La0.54Li0.39TiO3 (x=0.13), and 0.000651 S/cm is approximately 0.000661 S/cm for the annealed phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-162     | ✅ MATCH         | Composition La1.04Li0.9Ti2.0O6.0 simplifies to La0.52Li0.45TiO3 (x=0.15), and 0.000501 S/cm is approximately 0.000525 S/cm for the annealed phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-163     | ✅ MATCH         | Composition La1.16Li0.54Ti2.0O6.0 simplifies to La0.58Li0.27TiO3 (x=0.09), and 0.000599 S/cm is approximately 0.000617 S/cm for the annealed phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-164     | ✅ MATCH         | Composition La1.12Li0.66Ti2.0O6.0 simplifies to La0.56Li0.33TiO3 (x=0.11), and 0.000668 S/cm is approximately 0.000676 S/cm for the annealed phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-449     | ✅ MATCH         | Composition La0.58Li0.27Ti1.0O3.0 corresponds to La0.58Li0.27TiO3 (x=0.09), and 0.000832 S/cm is approximately 0.000776 S/cm for the quenched phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-450     | ✅ MATCH         | Composition La0.56Li0.33Ti1.0O3.0 corresponds to La0.56Li0.33TiO3 (x=0.11), and 0.0013 S/cm is approximately 0.001413 S/cm for the quenched phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-451     | ✅ MATCH         | Composition La0.55Li0.36Ti1.0O3.0 corresponds to La0.55Li0.36TiO3 (x=0.12), and 0.00154 S/cm is approximately 0.00153 S/cm for the quenched/disordered phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-452     | ✅ MATCH         | Composition La0.54Li0.39Ti1.0O3.0 corresponds to La0.54Li0.39TiO3 (x=0.13), and 0.00125 S/cm is approximately 0.001230 S/cm for the quenched phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+GT-453     | ✅ MATCH         | Composition La0.52Li0.45Ti1.0O3.0 corresponds to La0.52Li0.45TiO3 (x=0.15), and 0.000785 S/cm is approximately 0.000741 S/cm for the quenched phase. The extracted canonical formula was incorrect, but the raw composition and conductivity matched.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions
+[0;34m[INFO][0m DOI: 10.1016/s0167-2738(98)00070-8
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_v5_pipeline_20260129_143354.log
+

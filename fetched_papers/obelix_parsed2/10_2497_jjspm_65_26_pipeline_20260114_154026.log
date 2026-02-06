@@ -1,0 +1,312 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: 10_2497_jjspm_65_26
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/10_2497_jjspm_65_26/10_2497_jjspm_65_26.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/10_2497_jjspm_65_26
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_pipeline_20260114_154026.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/10_2497_jjspm_65_26/10_2497_jjspm_65_26.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: **Synthesis and Lithium-Ion Conductivity of LiSr***B***2O6F (***B* **= Nb5+, Ta5+) with a Pyrochlore Structure**
+  -> Started Section: **ABSTRACT**
+  -> Started Section: **KEY WORDS**
+  -> Started Section: **1. Introduction**
+  -> Started Section: 2. Experimental
+  -> Started Section: 3.1. Synthesis and structural characterization of LiSrB<sub>2</sub>O<sub>6</sub>F
+  -> Started Section: 3.2. Synthesis and structural characterization of LiSr12O6F12 and Li1+ySrB2yZryO6F
+  -> Started Section: 3.3. Li-ion conductivity
+  -> Started Section: 3.4. Crystal structure analysis
+  -> Started Section: 3.5. Relationship between the structure and conductivity
+  -> Started Section: 3.5.1 Stoichiometric LiSr*B*2O6F system
+  -> Started Section: 3.5.2 LiSr12O6F12 and Li1+ySrB2yZryO6F systems
+  -> Started Section: **4. Conclusions**
+  -> Started Section: **Acknowledgements**
+  -> Started Section: **References**
+  ✓ Finished Section: **References**
+  ✓ Finished Section: **KEY WORDS**
+  ✓ Finished Section: **Acknowledgements**
+  ✓ Finished Section: **ABSTRACT**
+  ✓ Finished Section: 3.5.1 Stoichiometric LiSr*B*2O6F system
+  🔍 Checking placeholder: '__TBL_facbc9ab__'
+  ✅ Found Special Node: __TBL_facbc9ab__
+  ✓ Finished Section: 2. Experimental
+  🔍 Checking placeholder: '__IMG_8c1557b4__'
+  ✅ Found Special Node: __IMG_8c1557b4__
+  🔍 Checking placeholder: '__TBL_cd52940e__'
+  ✅ Found Special Node: __TBL_cd52940e__
+  🔍 Checking placeholder: '__IMG_224c7ce3__'
+  ✅ Found Special Node: __IMG_224c7ce3__
+  ✓ Finished Section: **Synthesis and Lithium-Ion Conductivity of LiSr***B***2O6F (***B* **= Nb5+, Ta5+) with a Pyrochlore Structure**
+  ✓ Finished Section: 3.4. Crystal structure analysis
+  ✓ Finished Section: 3.2. Synthesis and structural characterization of LiSr12O6F12 and Li1+ySrB2yZryO6F
+  ✓ Finished Section: 3.5.2 LiSr12O6F12 and Li1+ySrB2yZryO6F systems
+  🔍 Checking placeholder: '__IMG_224c7ce3__'
+  ✅ Found Special Node: __IMG_224c7ce3__
+  🔍 Checking placeholder: '__TBL_facbc9ab__'
+  ✅ Found Special Node: __TBL_facbc9ab__
+  ✓ Finished Section: 3.1. Synthesis and structural characterization of LiSrB<sub>2</sub>O<sub>6</sub>F
+  🔍 Checking placeholder: '__IMG_2ed98780__'
+  ✅ Found Special Node: __IMG_2ed98780__
+  🔍 Checking placeholder: '__IMG_01752a34__'
+  ✅ Found Special Node: __IMG_01752a34__
+  🔍 Checking placeholder: '__TBL_46a13da5__'
+  ✅ Found Special Node: __TBL_46a13da5__
+  ✓ Finished Section: **4. Conclusions**
+  🔍 Checking placeholder: '__IMG_24c1591a__'
+  ✅ Found Special Node: __IMG_24c1591a__
+  ✓ Finished Section: 3.3. Li-ion conductivity
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: **1. Introduction**
+  🔍 Checking placeholder: '__IMG_46bfca28__'
+  ✅ Found Special Node: __IMG_46bfca28__
+  🔍 Checking placeholder: '__IMG_c3917070__'
+  ✅ Found Special Node: __IMG_c3917070__
+  ✓ Finished Section: 3.5. Relationship between the structure and conductivity
+  ✓ Re-indexed 258 structural nodes.
+  ✓ Mapped 356 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 51 text nodes and 8 image nodes.
+
+[Stage 2] Extracting from 51 relevant nodes...
+  [1/51] ○ General Pyrochlore Structural Characteristics and ... (0 data points)
+  [2/51] ○ Material Synthesis and Tailoring... (0 data points)
+  [3/51] ○ Pyrochlore Structure Definition and Oxy-fluoride P... (0 data points)
+  [4/51] ○ Refinement Constraints and Fixed Parameters... (0 data points)
+  [5/51] ○ Initial Structural Model and Refinement Methodolog... (0 data points)
+  [6/51] ○ Structural Characterization... (0 data points)
+  [7/51] ○ General Refinement Results and Model Validation... (0 data points)
+  [8/51] ○ Li-ion Diffusion Pathway... (0 data points)
+  [9/51] ○ Electrical Conductivity and Defect Chemistry... (0 data points)
+  [10/51] ○ Two-Phase Refinement for Specific Samples... (0 data points)
+  [11/51] ○ Funding Acknowledgment... (0 data points)
+  [12/51] ○ Objectives and Methodology of the Current Study... (0 data points)
+  [13/51] ○ Description of Figure 5 (Rietveld Analysis Pattern... (0 data points)
+  [14/51] ○ Material Synthesis... (0 data points)
+  [15/51] ○ Ionic Conductivity Measurement... (0 data points)
+  [16/51] ○ Description of Table 3 (Crystallographic Data)... (0 data points)
+  [17/51] ○ X-ray Diffraction Analysis... (0 data points)
+  [18/51] ○ Experimental Facility Acknowledgment... (0 data points)
+  [19/51] ○ References 1-10... (0 data points)
+  [20/51] ○ Pyrochlore Structure Description and Key Features... (0 data points)
+  [21/51] ○ Electronic Conductivity Measurement... (0 data points)
+  [22/51] ○ Comparison of Stoichiometric Samples and Implicati... (0 data points)
+  [23/51] ○ References 12-17... (0 data points)
+  [24/51] ○ X-ray Diffraction Patterns and Structural Indexing... (0 data points)
+  [25/51] ○ Reference 11... (0 data points)
+  [26/51] ○ Structural Parameters Affecting Lithium Migration... (0 data points)
+  [27/51] ○ Lattice Parameters and Electronegativity Effects... (0 data points)
+  [28/51] ○ References 18-24... (0 data points)
+  [29/51] ○ Elaboration of Key Structural Parameters... (0 data points)
+  [30/51] ○ Table 1: Lattice Parameters... (0 data points)
+  [31/51] ○ Figure 1: X-ray Diffraction Patterns... (0 data points)
+  [32/51] ○ Explaining Comparable Conductivity with Structural... (0 data points)
+  [33/51] ○ General XRD Characterization and Observations... (0 data points)
+  [34/51] ○ Authors and Affiliations... (0 data points)
+  [35/51] ○ Role and Location of Interstitial Lithium Ions... (0 data points)
+  [36/51] ○ Effect of Strontium Deficiency... (0 data points)
+  [37/51] ○ Effect of Zirconium Doping... (0 data points)
+  [38/51] ○ Study Objective... (0 data points)
+  [39/51] ✓ Compositional Dependence and Cation Migration... (2 data points)
+  [40/51] ○ Investigating Anion Contribution and Dominant Char... (0 data points)
+  [41/51] ○ Experimental Procedures... (0 data points)
+  [42/51] ○ Impedance Spectroscopy Analysis... (0 data points)
+  [43/51] ○ Structural Defects and Vacancy-Driven Conductivity... (0 data points)
+  [44/51] ○ Implications for Future Conductivity Enhancement S... (0 data points)
+  [45/51] ○ Materials for All-Solid-State Batteries... (0 data points)
+  [46/51] ✓ Initial Findings on Enhanced Conductivity in Doped... (2 data points)
+  [47/51] ○ Introduction to Pyrochlore Materials as Solid Elec... (0 data points)
+  [48/51] ✓ Arrhenius Analysis and Experimental Results Summar... (2 data points)
+  [49/51] ✓ Electronic Conductivity Assessment... (2 data points)
+  [50/51] ✓ Discussion of Ionic Conductivity Trends and Mechan... (2 data points)
+  [51/51] ✓ Key Findings on Conductivity... (4 data points)
+  → 14 total data points extracted
+
+[Stage 2b] Processing 8 images directly...
+    Warning: Skipping missing image _page_1_Figure_12.jpeg
+    Warning: Skipping missing image _page_5_Figure_2.jpeg
+    Warning: Skipping missing image _page_2_Figure_10.jpeg
+    Warning: Skipping missing image _page_5_Figure_4.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_8.jpeg
+    Warning: Skipping missing image _page_1_Figure_12.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+
+Merging: 14 text-based + 0 image-based points.
+  → Running physical heuristic checks on 14 points...
+  → Running LLM semantic verification on 14 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 15 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: **Synthesis and Lithium-Ion Conductivity of LiSr***B***2O6F (***B* **= Nb5+, Ta5+) with a Pyrochlore Structure**
+
+Material Names Found (with proportions where applicable):
+- "Li1-xSr1-x/2Nb2O6F (x = 0.1)"
+- "Li1-xSr1-x/2Ta2O6F (x = 0.1)"
+- "LiSr0.9Nb2O6F0.8 (Sr-deficient, Nb-based)"
+- "LiSr0.9Ta2O6F0.8 (Sr-deficient, Ta-based)"
+- "LiSrNb2O6F"
+- "LiSrTa2O6F"
+- "Nb-based cubic pyrochlore compounds"
+- "Pyrochlore-type fluoride (B = Nb5+)"
+- "Pyrochlore-type fluoride (B = Ta5+)"
+- "Sr2+ deficient Nb-containing sample (Sr2+ deficient)"
+- "Sr2+ deficient Ta-containing sample (Sr2+ deficient)"
+- "Ta-based cubic pyrochlore compounds"
+- "Zr4+-doped Nb-containing sample (Zr4+-doped)"
+- "Zr4+-doped Ta-containing sample (Zr4+-doped)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='LiSrNb2O6F', canonical_name='Lithium Strontium Niobium Oxide Fluoride', abbreviation=None, variant_names=['LiSrNb2O6F', 'Nb-based cubic pyrochlore compounds', 'Pyrochlore-type fluoride (B = Nb5+)']), CanonicalMaterialName(canonical_formula='LiSrTa2O6F', canonical_name='Lithium Strontium Tantalum Oxide Fluoride', abbreviation=None, variant_names=['LiSrTa2O6F', 'Ta-based cubic pyrochlore compounds', 'Pyrochlore-type fluoride (B = Ta5+)']), CanonicalMaterialName(canonical_formula='Li0.9Sr0.95Nb2O6F', canonical_name='Lithium Strontium Niobium Oxide Fluoride (x = 0.1)', abbreviation=None, variant_names=['Li1-xSr1-x/2Nb2O6F (x = 0.1)']), CanonicalMaterialName(canonical_formula='Li0.9Sr0.95Ta2O6F', canonical_name='Lithium Strontium Tantalum Oxide Fluoride (x = 0.1)', abbreviation=None, variant_names=['Li1-xSr1-x/2Ta2O6F (x = 0.1)']), CanonicalMaterialName(canonical_formula='LiSr0.9Nb2O6F0.8', canonical_name='Strontium-deficient Lithium Strontium Niobium Oxide Fluoride', abbreviation=None, variant_names=['LiSr0.9Nb2O6F0.8 (Sr-deficient, Nb-based)', 'Sr2+ deficient Nb-containing sample (Sr2+ deficient)']), CanonicalMaterialName(canonical_formula='LiSr0.9Ta2O6F0.8', canonical_name='Strontium-deficient Lithium Strontium Tantalum Oxide Fluoride', abbreviation=None, variant_names=['LiSr0.9Ta2O6F0.8 (Sr-deficient, Ta-based)', 'Sr2+ deficient Ta-containing sample (Sr2+ deficient)']), CanonicalMaterialName(canonical_formula='Zr-doped LiSrNb2O6F', canonical_name='Zirconium-doped Lithium Strontium Niobium Oxide Fluoride', abbreviation=None, variant_names=['Zr4+-doped Nb-containing sample (Zr4+-doped)']), CanonicalMaterialName(canonical_formula='Zr-doped LiSrTa2O6F', canonical_name='Zirconium-doped Lithium Strontium Tantalum Oxide Fluoride', abbreviation=None, variant_names=['Zr4+-doped Ta-containing sample (Zr4+-doped)'])]
+  → Created 8 canonical material(s)
+  → Updated 14/14 material names
+  → Normalizing 14 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='> 1.24 x 10^-6 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_unit': 'S cm^-1', 'cond_value': 1.24e-06}
+    [DEBUG Norm] Input: Cond='8.21 × 10−6 S cm−1', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 8.21e-06, 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='6.38 × 10−6 S cm−1', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 6.38e-06, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'temp_unit': 'C', 'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'cond_unit': 'S/cm', 'cond_value': 0, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='> 1.24 x 10^-6 S cm^-1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S cm^-1', 'cond_value': 1.24e-06, 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='6.38 × 10⁻⁶ S cm⁻¹', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 300, 'cond_unit': 'S cm-1', 'cond_value': 6.38e-06}
+    [DEBUG Norm] Input: Cond='8.21 × 10⁻⁶ S cm⁻¹', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 8.21e-06, 'temp_unit': 'C', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='8.21 × 10−6 S cm−1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'cond_value': 8.21e-06, 'temp_unit': 'C', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='5.58 × 10−6 S cm−1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 5.58e-06, 'cond_unit': 'S cm-1', 'temp_unit': 'C', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='3.58 × 10−6 S cm−1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'cond_value': 3.58e-06, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='6.38 × 10−6 S cm−1', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'cond_value': 6.38e-06, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+
+[Stage 3] Deduplicating 14 data points...
+  → Merged 4 duplicates, 10 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         16
+Total Input:         79,564 tokens
+Total Output:        3,984 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0517
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 16 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure_materials.json
+Time elapsed (s)  60.819502115249634
+
+Statistics:
+  Nodes analyzed: 59
+  Raw data points: 14
+  After dedup: 8
+  Valid: 8, Invalid: 0
+
+By Confidence:
+  high: 6
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 6
+  cited: 0
+  inferred: 2
+
+Sample data points:
+  ✓ LiSr0.9Nb2O6F0.8: 8.21 × 10⁻⁶ S cm⁻¹ @ 300°C [high]
+  ✓ LiSr0.9Ta2O6F0.8: 6.38 × 10⁻⁶ S cm⁻¹ @ 300°C [high]
+  ✓ Zr-doped LiSrNb2O6F: 5.58 × 10−6 S cm−1 @ 300°C [high]
+  ✓ Zr-doped LiSrTa2O6F: 3.58 × 10−6 S cm−1 @ 300°C [high]
+  ✓ Li0.9Sr0.95Nb2O6F: 8.21 × 10−6 S cm−1 @ not specified [high]
+  ... and 3 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.2497/jjspm.65.26
+                        Composition  Ionic conductivity (S cm-1)
+470       Li8.0Sr8.0Nb16.0O48.0F8.0                 1.000000e-15
+471       Li8.0Sr8.0Ta16.0O48.0F8.0                 1.000000e-15
+472       Li8.0Sr7.2Nb16.0O48.0F6.4                 1.000000e-15
+473       Li8.0Sr7.2Ta16.0O48.0F6.4                 1.000000e-15
+474  Li8.8Sr8.0Nb15.2Zr0.8O48.0F8.0                 1.000000e-15
+475  Li8.8Sr8.0Ta15.2Zr0.8O48.0F8.0                 1.000000e-15
+Starting Evaluation on 6 Ground Truth Points...
+
+Evaluation Complete: 0/6 Matched (0.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: 10_2497_jjspm_65_26
+[0;34m[INFO][0m DOI: 10.2497/jjspm.65.26
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/10_2497_jjspm_65_26_pipeline_20260114_154026.log
+

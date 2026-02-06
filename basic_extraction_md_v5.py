@@ -22,7 +22,6 @@ from dotenv import load_dotenv
 import uuid
 from dataclasses import dataclass, field, asdict
 from scifigure_parser import SciFigureParser
-from pageindex.llm_client import get_llm_client
 import numpy as np
 
 
@@ -33,6 +32,10 @@ VISION_MODEL = "gemini-3-flash-preview"
 TEXT_MODEL = "gemini-flash-latest"
 NUM_WORKERS = 5
 FILE_DIR = ""
+
+PROCESS_TEXT = True
+PROCESS_IMAGE = True
+PROCESS_TABLE = True
 
 try:
     import spacy
@@ -716,7 +719,8 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     # Filter points that need resolution (short names or variable 'x')
     to_resolve = []
     for i, m in enumerate(measurements):
-        if len(m.raw_composition) < 10 or "=" in m.raw_composition or "sample" in m.raw_composition.lower():
+        is_variable_axis = "x" in m.raw_temperature_unit.lower() or "=" in m.raw_temperature_unit
+        if len(m.raw_composition) < 10 or "=" in m.raw_composition or is_variable_axis:
             to_resolve.append(i)
     
     if not to_resolve: return measurements
@@ -725,8 +729,13 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
 
     # Build Context
     context_str = "\n".join([f"- {d}" for d in definitions])
-    items_str = "\n".join([f"ID {i}: {measurements[i].raw_composition} (Source: {measurements[i].source_caption or 'Text'})" for i in to_resolve])
-
+    items_str = "\n".join([
+        f"ID {i}: Label='{m.raw_composition}', "
+        f"X-Value='{m.raw_temperature}', "
+        f"X-Axis Info='{m.raw_temperature_unit}', "
+        f"Context='{m.source_caption}'" 
+        for i in to_resolve
+    ])
     prompt = f"""
     You are a Chemical Context Resolver.
     I have a list of abbreviated material names extracted from figures (e.g., "x=0.1", "Square", "Series 1").
@@ -812,16 +821,24 @@ async def process_text(client, model, text_content, text_title, max_retries: int
                     response_mime_type="application/json",
                     response_json_schema=ExtractionResult.model_json_schema(),
                     temperature=0.7 if '2.5' in model else 1.0, 
-                    max_output_tokens=4096,
+                    max_output_tokens=8192,
                     # thinking_config=types.ThinkingConfig(thinking_level="low") if '2.5' in model else None
                     )
                 )
+
+
+                if not response.candidates or not response.candidates[0].content.parts:
+                    finish_reason = response.candidates[0].finish_reason if response.candidates else "No candidates"
+                    print(f"   [Warning] No content generated. Reason: {finish_reason}")
+
                 if not response.text:
+                    print('>> DEBUG TEXT', response)
                     print(f"   [Text Warning] Empty response for {text_title}")
                     f.write(f"\n\n--- DEBUG INFO FOR {text_title} ---\n\n")
                     f.write(f"\n\n--- [Text Warning] Empty response for {text_title}")
+                    f.write(f"\n\n--- DEBUG INFO FOR {response} ---\n\n")
 
-                    return ExtractionResult(measurements=[]), response
+                    return ExtractionResult(measurements=[]), response, False
 
                 # if response:
                 #     print(f"\n   [DEBUG] {text_title}:")
@@ -854,101 +871,6 @@ async def process_text(client, model, text_content, text_title, max_retries: int
         # FINAL FAILURE HANDLER
         print(f"   \033[91m[Text Error]\033[0m {text_title}: Failed after {max_retries} attempts. Last error: {last_exception}")
         return ExtractionResult(measurements=[]), None, False
-
-def _map_sf_to_measurements(sf_result: Dict[str, Any], fig_id: str = None, caption: str = None) -> List[MeasuredPoint]:
-    """Helper to map SciFigureParser output to MeasuredPoint list."""
-    measurements = []
-
-    # Handle the new "data_series" key
-    all_series = sf_result.get('data_series', [])
-    axis_meta = sf_result.get('axis_metadata', {})
-
-    for series in all_series:
-        label = series['series_label']
-        axis_key = series['mapped_y_axis'] # left or right
-
-        # Get units from the injected metadata
-        y_unit = "Unknown"
-        if axis_meta.get(axis_key):
-             y_unit = axis_meta[axis_key].get('unit')
-
-        x_vals = series['x_values']
-        y_vals = series['y_values']
-
-
-        
-    # Try to extract a fixed temperature from the caption if it's a stoichiometry plot
-    fixed_temp = "Not Specified"
-    fixed_temp_unit = "Celsius"
-    if caption:
-        # Heuristic: search for "room temperature", "RT", "298 K", "25 °C"
-        cap_lower = caption.lower()
-        if "room temperature" in cap_lower or " rt " in cap_lower or " at rt" in cap_lower:
-            fixed_temp = "25"
-            fixed_temp_unit = "Celsius"
-        elif "298 k" in cap_lower:
-            fixed_temp = "298"
-            fixed_temp_unit = "K"
-        elif "25 °c" in cap_lower or "25 c" in cap_lower:
-            fixed_temp = "25"
-            fixed_temp_unit = "Celsius"
-
-    if should_extract:
-        x_axis_type = sf_result.get("xAxis", {}).get("axisType", "temperature")
-        y_axes = sf_result.get("yAxes", [])
-        
-        # Backward compatibility for single yAxis
-        if not y_axes and "yAxis" in sf_result:
-            y_axes = [sf_result["yAxis"]]
-
-        for dp in sf_result.get("dataPoints", []):
-            raw_comp = dp.get("label", "Unknown")
-            raw_temp = str(dp.get("xValue"))
-            
-            # Use X-axis unit as default temp unit
-            raw_temp_unit = sf_result.get("xAxis", {}).get("unit", "Celsius")
-            
-            # Get Y-axis info from yAxisIndex
-            y_idx = dp.get("yAxisIndex", 0)
-            if 0 <= y_idx < len(y_axes):
-                target_y_axis = y_axes[y_idx]
-                raw_cond_unit = target_y_axis.get("unit", "S/cm")
-                # Prepend the Y-axis label to help filter if it's activation energy
-                y_label = target_y_axis.get("label", "").lower()
-                if any(x in y_label for x in ["activation", "energy", "ea"]):
-                     # If the axis itself is labeled as activation energy, 
-                     # we should ensure the unit reflects that so it gets filtered out
-                     if "ev" not in raw_cond_unit.lower() and "kj" not in raw_cond_unit.lower():
-                          raw_cond_unit = f"{raw_cond_unit} (Activation Energy)"
-            else:
-                raw_cond_unit = "S/cm"
-
-            if x_axis_type == "stoichiometry":
-                # Special handling for stoichiometry axes:
-                # 1. The xValue is actually part of the composition (x=...)
-                # 2. The temperature is likely fixed in the caption
-                stoich_val = str(dp.get("xValue"))
-                if "x=" not in raw_comp.lower() and "x =" not in raw_comp.lower():
-                    raw_comp = f"{raw_comp} (x={stoich_val})"
-                
-                raw_temp = fixed_temp
-                raw_temp_unit = fixed_temp_unit
-
-            m = MeasuredPoint(
-                raw_composition=raw_comp,
-                raw_conductivity=str(dp.get("yValue")),
-                raw_conductivity_unit=raw_cond_unit,
-                raw_temperature=raw_temp,
-                raw_temperature_unit=raw_temp_unit,
-                source="figure",
-                source_figure_id=fig_id,
-                source_caption=caption,
-                confidence="high"
-            )
-            measurements.append(m)
-    return measurements
-
-
 
 
 from dataclasses import dataclass, asdict
@@ -992,16 +914,40 @@ class MeasurementProcessor:
         all_raw_series = sf_result.get('data_series', [])
         axis_meta = sf_result.get('axis_metadata', {})
         
+            # def clean_axis(ax_data):
+            #             if not ax_data: return None
+            #             return {
+            #                 "title_text": ax_data.get('title'), # Remap title -> title_text
+            #                 "unit": ax_data.get('unit'),
+            #                 "quantity_type": ax_data.get('quantity_type')
+            #             }
+                        
+            # axis_hints = {
+            #             "x_axis": clean_axis(detection_data.get('x_axis')),
+            #             "left_y_axis": clean_axis(detection_data.get('left_y_axis')),
+            #             "right_y_axis": clean_axis(detection_data.get('right_y_axis'))
+            #         }
         for raw_s in all_raw_series:
+            
             # Get axis metadata for this specific series
             axis_key = raw_s.get('mapped_y_axis', 'left')
             y_axis_def = axis_meta.get(axis_key, {})
             x_axis_def = axis_meta.get('x_axis', {})
+
             
             x_vals = raw_s.get('x_values', [])
             y_vals = raw_s.get('y_values', [])
             label = raw_s.get('series_label', 'Unknown')
 
+            # Add x-axis labels and y-axis labels to the caption
+            # Extract literal labels for the downstream LLM's formula mapping
+            raw_x_label = x_axis_def.get('label') or x_axis_def.get('title_text', 'X-axis')
+            raw_y_label = y_axis_def.get('label') or y_axis_def.get('title_text', 'Y-axis')
+            
+            caption = f"{context} {label}"
+            if x_axis_def: caption += f" ({raw_x_label})"
+            if y_axis_def: caption += f" ({raw_y_label})"
+            
             # 2. Physics Check: Arrhenius Slope
             # If X is 1000/T, Y (log sigma) should DECREASE as X INCREASES.
             # (Because higher 1000/T = colder temp = lower conductivity)
@@ -1034,24 +980,34 @@ class MeasurementProcessor:
                     warnings.append(f"Value below realistic detection limit ({cond_s_cm:.2e})")
 
                 # 6. Create Record
-                # meas = Measurement(
+                # meas = MeasuredPoint(
                 #     raw_composition=label,
-                #     temperature_c=round(temp_c, 2),
-                #     conductivity_s_cm=cond_s_cm,
+                #     raw_conductivity=str(cond_s_cm),
+                #     raw_conductivity_unit="S/cm",
+                #     raw_temperature=str(temp_c),
+                #     raw_temperature_unit="C",
+                #     source="figure",
+                #     source_figure_id=fig_id,
+                #     source_caption=context,
                 #     confidence="low" if warnings else "high",
-                #     warnings=warnings,
-                #     source_figure=fig_id
+                #     warnings=warnings
                 # )
 
                 meas = MeasuredPoint(
                     raw_composition=label,
-                    raw_conductivity=str(cond_s_cm),
-                    raw_conductivity_unit="S/cm",
-                    raw_temperature=str(temp_c),
-                    raw_temperature_unit="C",
+
+                    normalized_conductivity=cond_s_cm,
+                    normalized_temperature=temp_c,
+                    
+                    raw_conductivity=str(y),
+                    raw_conductivity_unit=raw_y_label,
+
+                    raw_temperature=str(x),
+                    raw_temperature_unit=raw_x_label,
+
+                    source_figure_id = fig_id,
+                    source_caption=f"{context} [Series: {label}] [X-Axis: {raw_x_label}]",
                     source="figure",
-                    source_figure_id=fig_id,
-                    source_caption=context,
                     confidence="low" if warnings else "high",
                     warnings=warnings
                 )
@@ -1165,7 +1121,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             # [OPTIMIZED] Using async detection
             detection_result = await sf_parser.detect_subplot_async(str(img_path), "ionic conductivity measurement")
             
-            print(f"   🔍 {img_path.name} ({fig_id}): Detection result: {detection_result}")
+            # print(f"   🔍 {img_path.name} ({fig_id}): Detection result: {detection_result}")
 
             is_multi = detection_result.get("is_multi_panel", False)
             detections = detection_result.get("subplots", [])
@@ -1174,7 +1130,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
 
             if not is_multi:
                 # Check if SciFigureParser detected ionic conductivity data
-                print(">> DEBUG : Detection Data in single plot: ", detection_result['subplots'][0])
+                # print(">> DEBUG : Detection Data in single plot: ", detection_result['subplots'][0])
                 if not detection_result['subplots'][0].get("contains_conductivity_data", True):
                     print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): No ionic conductivity measurements detected by SciFigureParser.")
                     return ExtractionResult(measurements=[]), None, True
@@ -1193,7 +1149,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
                     if not detection_data.get('contains_conductivity_data', False):
                         print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): {label} - No ionic conductivity measurements detected in this subplot by SciFigureParser.")
                         return ExtractionResult(measurements=[]), None, True
-                    print(">> DEBUG : Detection Data in multi plot (after filtering): ", detection_data)
+                    # print(">> DEBUG : Detection Data in multi plot (after filtering): ", detection_data)
                     # print(f"      - Processing {label}...") # Can be too noisy in parallel
                     # The detection schema uses 'title', but we want to pass a clean dict to the next step
                     def clean_axis(ax_data):
@@ -1587,8 +1543,9 @@ async def run_pipeline(markdown_file, asset_dir, model):
         for sec in sections:
             if any(skip in sec.title.lower() for skip in skip_sections):
                 print(f"   \033[91m[Warning]\033[0m Skipping section: {sec.title}")
-                continue        
-            tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem))
+                continue
+            if PROCESS_TEXT:
+                tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem))
 
         # # 3. Extract from Images (Parallel)
         # Add Image Tasks
@@ -1609,7 +1566,8 @@ async def run_pipeline(markdown_file, asset_dir, model):
                 context = image_context_registry[filename]
             except:
                 context = image_context_registry.get('_'+filename, {"id": "Unknown", "caption": "No caption"})
-            tasks.append(safe_image_call_with_retry(img_path, context, client, VISION_MODEL, sem, sf_parser=sf_parser))
+            if PROCESS_IMAGE:
+                tasks.append(safe_image_call_with_retry(img_path, context, client, VISION_MODEL, sem, sf_parser=sf_parser))
 
         # Add Table Tasks
         for table_info in all_tables:
@@ -1617,7 +1575,8 @@ async def run_pipeline(markdown_file, asset_dir, model):
                 'caption': f"{table_info.id}: {table_info.caption}",
                 'content': table_info.content
             }
-            tasks.append(safe_table_call_with_retry(table_data, client, TEXT_MODEL, sem))
+            if PROCESS_TABLE:
+                tasks.append(safe_table_call_with_retry(table_data, client, TEXT_MODEL, sem))
 
         # 4. Execute Simultaneously
         print(f"   ... Processing {len(tasks)} items (Text + Images) simultaneously ...")
@@ -1657,12 +1616,17 @@ async def run_pipeline(markdown_file, asset_dir, model):
         # 4. Canonicalize Names (Solves Problem 3)
         # We pass the definitions found in text + the measurements from figures
         print("   ... Canonicalizing Materials...")
-        print(">> DEBUG: all_measurements: ", all_measurements)
+        # print(">> DEBUG: all_measurements: ", all_measurements)
         all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL)
 
         # # 5. Normalize Values (Solves Problem 2)
         print("   ... Normalizing Units & Temperatures...")
         for m in all_measurements:
+            
+            #check if it has already been normalized
+            if m.normalized_conductivity and m.normalized_temperature_c:
+                continue
+            
             norm = calculate_standard_units(m.raw_conductivity, m.raw_conductivity_unit, m.raw_temperature, m.raw_temperature_unit)
             m.normalized_conductivity = norm['cond']
             m.normalized_temperature_c = norm['temp']

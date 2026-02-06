@@ -1,0 +1,205 @@
+{
+  "doc_name": "ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate",
+  "timestamp": "2026-01-23 09:19:46",
+  "execution_time_seconds": 110.72,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 17645,
+    "total_output_tokens": 23098,
+    "total_cost_usd": 0.3125,
+    "call_counts": {
+      "gemini-3-pro-preview": 9
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 11,
+    "skipped_images": 7,
+    "failed_items": 2,
+    "total_sections_processed": 8,
+    "total_images_processed": 11
+  },
+  "material_count": 11,
+  "measurements": [
+    {
+      "raw_composition": "LiTi2(PO4)3 (x=0)",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-5.8",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 5.318433531748705e-09,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=Sc, x=0.3",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 2.6655309890076553e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=Al, x=0.3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-3.2",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 2.1173065251013186e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=In, x=0.4",
+      "canonical_formula": "Li1.4In0.4Ti1.6(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-3.3",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 1.6818363544539346e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=Y, x=0.4",
+      "canonical_formula": "Li1.4Y0.4Ti1.6(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-3.4",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 1.3359301025285146e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=Cr, x=0.5",
+      "canonical_formula": "Li1.5Cr0.5Ti1.5(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-3.5",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 1.061167000056503e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "M=La, x=0.2",
+      "canonical_formula": "Li1.2La0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "Solid solutions Li(1+x)MxTi(2-x)(PO4)3 where M = Al, Cr, Ga, Fe, Sc, In, Y, La"
+      ],
+      "raw_conductivity": "-4.1",
+      "raw_conductivity_unit": "Log(S/cm)",
+      "normalized_conductivity": 2.6655309890076584e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li_{1+x}M_xTi_{2-x}(PO_4)_3) at x=0.3",
+      "canonical_formula": "Li1.3M0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The material represents a single-phase solid solution of the NASICON-type structure.",
+        "The general formula is Li(1+x)MxTi(2-x)(PO4)3 where M represents a trivalent cation substituent.",
+        "Measurements show the relationship between ionic conductivity and porosity at room temperature.",
+        "This specific sample corresponds to a substitution level of x=0.3."
+      ],
+      "raw_conductivity": "7.9e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00079,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li_{1+x}M_xTi_{2-x}(PO_4)_3) at x=0.2",
+      "canonical_formula": "Li1.2M0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "The material represents a single-phase solid solution of the NASICON-type structure.",
+        "The general formula is Li(1+x)MxTi(2-x)(PO4)3 where M represents a trivalent cation substituent.",
+        "Measurements show the relationship between ionic conductivity and porosity at room temperature.",
+        "This specific sample corresponds to a substitution level of x=0.2."
+      ],
+      "raw_conductivity": "7.1e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00071,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "mixed phase [LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]",
+      "canonical_formula": "mixed phase [LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]",
+      "material_definitions": [
+        "The sample consists of a mixed phase containing LiTi2(PO4)3 and Li3M2(PO4)3.",
+        "This composition likely results from exceeding the solubility limit of the substituent M in the NASICON framework.",
+        "The conductivity is generally lower than the single-phase solid solutions at equivalent porosity."
+      ],
+      "raw_conductivity": "5.6e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00056,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "The material is the unsubstituted parent compound LiTi2(PO4)3 with a NASICON structure.",
+        "It serves as a baseline for comparing the effect of substitution on ionic conductivity.",
+        "The measured sample exhibits significantly lower conductivity compared to the substituted phases.",
+        "The specific data point was obtained from a pellet with approximately 34% porosity."
+      ],
+      "raw_conductivity": "1.6e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.6e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

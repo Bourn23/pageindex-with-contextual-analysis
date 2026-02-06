@@ -1,0 +1,125 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_v5_pipeline_20260203_115922.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '**3.1.** *Phase identification*'
+       - Replaced 'Table 2' in section '3.2. *Conductivity measurements*'
+   --- Document: Ionic conductivity of Li<sup>+</sup> ion conductors Li<sub>2</sub>M<sup>3+</sup>M<sup>4+</sup>P<sub>3</sub>O<sub>12</sub>
+   --- Found: 9 Sections
+   --- Found: 6 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**3.1.** *Phase identification*' contains:
+       - 1 Tables: ['Table 1']
+
+   >>> Section '3.2. *Conductivity measurements*' contains:
+       - 4 Images: ['Fig 3', 'Fig 2', 'Fig 1', 'Fig 2']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 16 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_0.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_2.jpeg (Unknown): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_8.jpeg (Fig 2): Detecting subplot...
+   🔍 page_2_figure_9.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_6.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_0_picture_0.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   ✂️ page_2_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+Passing box coords  [48, 56, 513, 951]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12/scifig_debug/page_2_figure_2_cropped_a.jpeg
+Passing box coords  [538, 56, 994, 951]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12/scifig_debug/page_2_figure_2_cropped_b.jpeg
+   📊 page_2_figure_8.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_2_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_3_figure_6.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ page_2_figure_2.jpeg (Fig 1): Found 45 points total via SciFigureParser
+   ✓ page_2_figure_9.jpeg (Fig 2): Found 57 points total via SciFigureParser
+   ✓ page_2_figure_8.jpeg (Fig 2): Found 37 points total via SciFigureParser
+   ✓ Table 2: The maximum dispersion in the *E,* values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of *log(aT) vs. 1000/T* for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The *E,* value of Li,InTiP,O,, compares well: Found 16 points
+   ... Canonicalizing Materials...
+   ... Resolving 139 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 156 measurements
+      - Skipped (no data): 11 images
+      - Failed: 0 items
+
+Done! Extracted 156 points.
+Saved to: fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         10
+Total Input:         6,312 tokens
+Total Output:        14,723 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0387
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 10 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0167-2738(96)00565-6
+GT-97: Li16.0Cr8.0Ti8.0P24.0O96.0 | 4.41e-07 S/cm
+GT-98: Li16.0Cr8.0Zr8.0P24.0O96.0 | 5.91e-07 S/cm
+GT-99: Li16.0Cr8.0Hf8.0P24.0O96.0 | 4.2e-08 S/cm
+GT-100: Li16.0Fe8.0Ti8.0P24.0O96.0 | 3.34e-07 S/cm
+GT-101: Li16.0Fe8.0Zr8.0P24.0O96.0 | 1.44e-07 S/cm
+GT-102: Li16.0In8.0Hf8.0P24.0O96.0 | 2.74e-08 S/cm
+GT-103: Li16.0In8.0Ti8.0P24.0O96.0 | 8.3e-06 S/cm
+GT-104: Li16.0In8.0Zr8.0P24.0O96.0 | 8.22e-08 S/cm
+--- Starting Validation ---
+Comparing 8 GT items vs 2578 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-97      | ❌ MISSING/BAD   | The chemical formula Li2CrTiP3O12 matches Li16Cr8Ti8P24O96, but the extracted conductivity 4.41 S/cm is incorrect; it should be 4.41e-07 S/cm.
+GT-98      | ❌ MISSING/BAD   | The chemical formula Li2CrZrP3O12 matches Li16Cr8Zr8P24O96, but the extracted conductivity 5.91 S/cm is incorrect; it should be 5.91e-07 S/cm.
+GT-99      | ❌ MISSING/BAD   | The chemical formula Li2CrHfP3O12 matches Li16Cr8Hf8P24O96, but the extracted conductivity 4.2 S/cm is incorrect; it should be 4.2e-08 S/cm.
+GT-100     | ❌ MISSING/BAD   | The chemical formula Li2FeTiP3O12 matches Li16Fe8Ti8P24O96, but the extracted conductivity 3.34 S/cm is incorrect; it should be 3.34e-07 S/cm.
+GT-101     | ❌ MISSING/BAD   | The chemical formula Li2FeZrP3O12 matches Li16Fe8Zr8P24O96, but the extracted conductivity 1.44 S/cm is incorrect; it should be 1.44e-07 S/cm.
+GT-102     | ❌ MISSING/BAD   | The chemical formula Li2InHfP3O12 matches Li16In8Hf8P24O96, but the extracted conductivity 2.74 S/cm is incorrect; it should be 2.74e-08 S/cm.
+GT-103     | ❌ MISSING/BAD   | The chemical formula Li2InTiP3O12 matches Li16In8Ti8P24O96, but the extracted conductivity 8.3 S/cm is incorrect; it should be 8.3e-06 S/cm.
+GT-104     | ❌ MISSING/BAD   | The chemical formula Li2InZrP3O12 matches Li16In8Zr8P24O96, but the extracted conductivity 8.22 S/cm is incorrect; it should be 8.22e-08 S/cm.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12
+[0;34m[INFO][0m DOI: 10.1016/s0167-2738(96)00565-6
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_v5_pipeline_20260203_115922.log
+

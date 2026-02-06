@@ -1,0 +1,83 @@
+{
+  "doc_name": "competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution",
+  "timestamp": "2026-01-23 08:23:21",
+  "execution_time_seconds": 33.13,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 12472,
+    "total_output_tokens": 10012,
+    "total_cost_usd": 0.0288,
+    "call_counts": {
+      "gemini-flash-latest": 11
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 3,
+    "skipped_images": 9,
+    "failed_items": 0,
+    "total_sections_processed": 12,
+    "total_images_processed": 9
+  },
+  "material_count": 3,
+  "measurements": [
+    {
+      "raw_composition": "Li6PS(5-x)SexBr series (maximum)",
+      "canonical_formula": "Li6PS(5-x)SexBr series (maximum)",
+      "material_definitions": [
+        "The Li+ superionic argyrodites solid solutions Li6PS(5-x)SexBr (0 <= x <= 1) were synthesized to study the effects of increasing anion polarizability and replacing S2- with Se2- on transport properties.",
+        "Structural analysis confirms the samples are well described by the cubic F43m argyrodite structure and obey Vegard's law, confirming the successful synthesis of solid solutions.",
+        "All compounds exhibited minor impurity phase fractions of LiBr and Li3OBr (<5 wt %), which are generally unlikely to affect the ionic transport.",
+        "The ionic conductivities were measured using temperature-dependent electrochemical impedance spectroscopy."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room Temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS(5-x)SexBr series (minimum)",
+      "canonical_formula": "Li6PS(5-x)SexBr series (minimum)",
+      "material_definitions": [
+        "The Li+ superionic argyrodites solid solutions Li6PS(5-x)SexBr (0 <= x <= 1) were synthesized to study the effects of increasing anion polarizability and replacing S2- with Se2- on transport properties.",
+        "Structural analysis confirms the samples are well described by the cubic F43m argyrodite structure and obey Vegard's law, confirming the successful synthesis of solid solutions.",
+        "All compounds exhibited minor impurity phase fractions of LiBr and Li3OBr (<5 wt %), which are generally unlikely to affect the ionic transport.",
+        "The ionic conductivities were measured using temperature-dependent electrochemical impedance spectroscopy."
+      ],
+      "raw_conductivity": "2.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room Temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS5-xSexBr",
+      "material_definitions": [
+        "In this work, Se2- substitution within Li6PS5-xSexBr (0 <= x <= 1) was performed to study the effect of the changing lattice polarizability, as well as the influence of the Br-/Ch2- exchange on the free chalcogen Ch2-site, on the structure and lithium transport properties.",
+        "Using a combination of X-ray diffraction, neutron pair distribution function analysis, and electrochemical impedance spectroscopy, the influence of the structural changes brought on by an increasing Se content on the associated lithium transport behavior was elucidated.",
+        "With increasing Se2- substitution, an increase in the lattice parameters and the occupancy of the 16e Wyckoff position by Se2-, corresponding to the formation of PS3Se3- polyhedra, was observed.",
+        "The materials are lithium thiophosphate superionic conductors belonging to the argyrodite structure."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS\b7cm",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    }
+  ],
+  "material_definitions": []
+}

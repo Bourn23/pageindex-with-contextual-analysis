@@ -1,0 +1,872 @@
+
+
+--- [Document] inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.md ---
+
+
+[DEBUG] **Just Accepted**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=488 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=488
+)] thoughts_token_count=79 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=577 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=278 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=278
+)] thoughts_token_count=62 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=350 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=339 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=339
+)] thoughts_token_count=200 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=549 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=346
+)] cached_content_token_count=346 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=543
+)] thoughts_token_count=438 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=991 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **2. Experimental Methods**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2320 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2320
+)] thoughts_token_count=697 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3027 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Supporting Information**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=235
+)] cached_content_token_count=235 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=317 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=317
+)] thoughts_token_count=310 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=637 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Corresponding Authors**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=208
+)] cached_content_token_count=208 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=271 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=271
+)] thoughts_token_count=159 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=440 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Abstract**:
+- Response length: 2286 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=617 candidates_tokens_details=None prompt_token_count=496 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=496
+)] thoughts_token_count=1306 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2419 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed state)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The material series investigated is Li6+xP1-xGexS5I, focusing on aliovalent substitution of Ge for P.",
+        "The structure and properties were analyzed using X-ray and neutron diffraction, impedance spectroscopy, and nuclear magnetic resonance.",
+        "Increasing Ge content induces anion site disorder and significantly drops the activation barrier for ionic motion."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not explicitly stated, assumed room temperature (25 °C).",
+        "The specific value of x leading to this maximum conductivity is not mentioned in the abstract."
+      ]
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (sintered state)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The material series investigated is Li6+xP1-xGexS5I, focusing on aliovalent substitution of Ge for P.",
+        "The structure and properties were analyzed using X-ray and neutron diffraction, impedance spectroscopy, and nuclear magnetic resonance.",
+        "Increasing Ge content induces anion site disorder and significantly drops the activation barrier for ionic motion."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not explicitly stated, assumed room temperature (25 °C).",
+        "The specific value of x leading to this maximum conductivity is not mentioned in the abstract.",
+        "This conductivity is reported for the sintered state of the material."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] **For table of contents only**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=253 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=253
+)] thoughts_token_count=191 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=454 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Notes**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=243
+)] thoughts_token_count=564 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=817 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **5. Conclusion**:
+- Response length: 2101 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=669 candidates_tokens_details=None prompt_token_count=583 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=583
+)] thoughts_token_count=1533 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2785 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I solid solutions (argyrodite structure) was investigated.",
+        "The materials exhibit interpenetration of face-centered cubic lattices.",
+        "Structural changes and increasing I\r\n\r\n\r\n/S2\r\n\r\n\r\n site-disorder lead to opening of bottlenecks and more facile inter-cage jumps, dropping the activation barrier."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "Temperature is inferred as 298 K (room temperature) since it was not explicitly stated."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I solid solutions (argyrodite structure) was investigated.",
+        "The materials exhibit interpenetration of face-centered cubic lattices.",
+        "Structural changes and increasing I\r\n\r\n\r\n/S2\r\n\r\n\r\n site-disorder lead to opening of bottlenecks and more facile inter-cage jumps, dropping the activation barrier."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "Temperature is inferred as 298 K (room temperature) since it was not explicitly stated.",
+        "This conductivity value was achieved after sintering the pellets."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] **1. Introduction**:
+- Response length: 3644 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1022 candidates_tokens_details=None prompt_token_count=1454 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1454
+)] thoughts_token_count=2877 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5353 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6PS5I (iodine containing argyrodites)",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "The class of argyrodites Li6PS5X (X = Cl, Br, I) has attracted considerable interest.",
+        "If iodine is the halide in the structure, no site-disorder occurs due to the large size mismatch between S2– and I–.",
+        "Kraft et al. found that the absence of disorder in iodine containing argyrodites is associated with high activation barriers and low ionic conductivity."
+      ],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.3e-6,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as 25 C (room temperature) since no explicit value was given."
+      ]
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed, maximum conductivity)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The effect of Ge4+ substitution in Li6+xP1-xGexS5I (argyrodite structure) was investigated to tailor structure-transport relationships.",
+        "Increasing Ge-fraction induces site disorder between the S2– and I– positions and expands the diffusion pathways for Li+.",
+        "This structural change correlates to a sharp decrease in the activation barrier and an increase in conductivity.",
+        "This approach achieved the highest lithium argyrodites reported so far, with values reaching 18.4 mS cm-1 upon sintering."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as 25 C (room temperature) since no explicit value was given.",
+        "The specific value of 'x' corresponding to this maximum conductivity is not explicitly stated.",
+        "Uncertainty (± 0.8) ignored."
+      ]
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (sintered, maximum conductivity)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The effect of Ge4+ substitution in Li6+xP1-xGexS5I (argyrodite structure) was investigated to tailor structure-transport relationships.",
+        "Increasing Ge-fraction induces site disorder between the S2– and I– positions and expands the diffusion pathways for Li+.",
+        "This structural change correlates to a sharp decrease in the activation barrier and an increase in conductivity.",
+        "This approach achieved the highest lithium argyrodites reported so far, with values reaching 18.4 mS cm-1 upon sintering."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as 25 C (room temperature) since no explicit value was given.",
+        "The specific value of 'x' corresponding to this maximum conductivity is not explicitly stated.",
+        "Uncertainty (± 2.7) ignored."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_11_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x_N in Li_6+x P_1-x Ge_x S_5 I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Lattice parameter a / \u00c5",
+        "unit": "\u00c5",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        43,
+        47,
+        494,
+        494
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x_N in Li_6+x P_1-x Ge_x S_5 I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Ge-occupancy / %",
+        "unit": "%",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        43,
+        524,
+        494,
+        971
+      ],
+      "label": "b"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Volume (P_1-x Ge_x) S_4^(3+x)- / \u00c5^3",
+        "unit": "\u00c5^3",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        512,
+        47,
+        963,
+        494
+      ],
+      "label": "c"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "I-/S^2- site disorder / %",
+        "unit": "%",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        512,
+        524,
+        963,
+        971
+      ],
+      "label": "d"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_13_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Li occupancy / %",
+        "unit": "%",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        15,
+        55,
+        310,
+        845
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Li^+ - Li^+ jump distance / \u00c5",
+        "unit": "\u00c5",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        323,
+        55,
+        595,
+        845
+      ],
+      "label": "b"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Volume Li_xS_3I / \u00c5^3",
+        "unit": "\u00c5^3",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "Area Li_3S-plane / \u00c5^2",
+        "unit": "\u00c5^2",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        608,
+        50,
+        984,
+        954
+      ],
+      "label": "c"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[DEBUG] **3. Results**:
+- Response length: 4764 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1555 candidates_tokens_details=None prompt_token_count=5921 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=5921
+)] thoughts_token_count=3815 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11291 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
+        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature (298 K) is inferred as room temperature based on typical experimental practice and context provided in Figure 5a caption."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
+        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "The measurement temperature (298 K) is inferred as room temperature, typical for reporting optimized conductivity values. The composition is inferred to be Li6.6P0.4Ge0.6S5I, as this value refers to the sintered version of the maximum performing sample."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
+        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
+      ],
+      "raw_conductivity": "2.6e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.6e-5,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
+        "Temperature (298 K) is inferred as room temperature as stated in the text."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.25 in Li6+xP1-xGexS5I",
+      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
+        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
+        "Temperature (298 K) is inferred as room temperature based on context."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.6 in Li6+xP1-xGexS5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
+        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
+      ],
+      "raw_conductivity": "7.5",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0075,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
+        "Temperature (298 K) is inferred as room temperature based on context."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_22_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Capacity / mAh\u00b7g\u207b\u00b9",
+        "unit": "mAh\u00b7g\u207b\u00b9",
+        "quantity_type": "capacity",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Voltage V / vs. LTO",
+        "unit": "V",
+        "quantity_type": "voltage",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        37,
+        43,
+        354,
+        831
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Cycle no.",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Capacity / mAh\u00b7g\u207b\u00b9",
+        "unit": "mAh\u00b7g\u207b\u00b9",
+        "quantity_type": "capacity",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "Coulombic Efficiency / %",
+        "unit": "%",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        364,
+        47,
+        684,
+        878
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_17_figure_4.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "T / K",
+        "unit": "K",
+        "quantity_type": "temperature_absolute",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "FWHH / kHz",
+        "unit": "kHz",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        63,
+        44,
+        932,
+        482
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "1000\u00b7T\u207b\u00b9 / K\u207b\u00b9",
+        "unit": "K\u207b\u00b9",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "R\u2081 / s\u207b\u00b9",
+        "unit": "s\u207b\u00b9",
+        "quantity_type": "other",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        58,
+        513,
+        941,
+        934
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_2_figure_6.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        23,
+        818,
+        558
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        52,
+        585,
+        762,
+        989
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_14_figure_5.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Re(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
+        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "-Im(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
+        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        34,
+        22,
+        935,
+        510
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000\u00b7T\u207b\u00b9 / K\u207b\u00b9",
+        "unit": "K\u207b\u00b9",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "ln(\u03c3\u00b7T / K\u00b7S\u00b7cm\u207b\u00b9)",
+        "unit": "K\u00b7S\u00b7cm\u207b\u00b9",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        34,
+        545,
+        960,
+        985
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 44
+
+
+[SCI-FIGURE DEBUG] page_20_figure_4.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Activation energy E_A / eV",
+        "unit": "eV",
+        "quantity_type": "activation_energy",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "I-/S2- site disorder / %",
+        "unit": "%",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        43,
+        21,
+        949,
+        608
+      ],
+      "label": "a"
+    }
+  ]
+}
+- Combined Measurements: 0

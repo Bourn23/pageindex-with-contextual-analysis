@@ -1,0 +1,157 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260128_134133.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '*3.2. LiHf2(P04)3 + yLi20 system*'
+       - Replaced 'Table 2' in section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*'
+   --- Document: **Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2 (PO4)3**
+   --- Found: 11 Sections
+   --- Found: 13 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '*3.1. Crystal structure of LiHf2(P04)3*' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '*3.2. LiHf2(P04)3 + yLi20 system*' contains:
+       - 8 Images: ['Fig 2', 'Fig 3', 'Fig 5s', 'Fig 7', 'Fig 4', 'Fig 6', 'Fig 5', 'Fig 3']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*' contains:
+       - 3 Images: ['Fig 10', 'Fig 9', 'Fig 8']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 25 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_1_figure_10.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_picture_1.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_2.jpeg (Fig 5s): Detecting subplot...
+   🔍 page_3_picture_3.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_3_picture_3.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_4.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_1_figure_10.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_2.jpeg (Fig 4): Detecting subplot...
+   🔍 page_4_figure_4.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 5s): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_7.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_3_picture_4.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_9.jpeg (Fig 7): Detecting subplot...
+   📊 page_4_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_9.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_4_figure_9.jpeg (Fig 7): Found 6 points total via SciFigureParser
+   🔍 page_5_figure_7.jpeg (Fig 8): Detecting subplot...
+   ✓ page_4_figure_4.jpeg (Fig 5): Found 23 points total via SciFigureParser
+   🔍 page_6_figure_2.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 8): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_4.jpeg (Fig 10): Detecting subplot...
+   ✓ page_4_figure_2.jpeg (Fig 4): Found 20 points total via SciFigureParser
+   📊 page_6_figure_4.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ page_4_figure_7.jpeg (Fig 6): Found 26 points total via SciFigureParser
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with: Found 4 points
+   ✓ Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-: Found 6 points
+   ✓ page_6_figure_4.jpeg (Fig 10): Found 23 points total via SciFigureParser
+   ... Normalizing Units & Temperatures...
+Norm Error: Could not convert 'Arrhenius plot determination' to float
+Norm Error: Could not convert 'Arrhenius plot determination' to float
+
+   📊 Extraction Summary:
+      - Extracted: 111 measurements
+      - Skipped (no data): 15 images
+      - Failed: 0 items
+
+Done! Extracted 111 points.
+Saved to: fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         12
+Total Input:         8,486 tokens
+Total Output:        12,672 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0342
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 12 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/0167-2738(93)90387-i
+GT-318: Li6.0Hf12.0P18.0O72.0 | 6.85e-07 S/cm
+GT-319: Li6.6Fe0.6Hf11.4P18.0O72.0 | 0.000107 S/cm
+GT-320: Li6.6In0.6Hf11.4P18.0O72.0 | 5.13e-05 S/cm
+GT-321: Li6.6Lu0.6Hf11.4P18.0O72.0 | 5.88e-05 S/cm
+GT-322: Li6.6Sc0.6Hf11.4P18.0O72.0 | 2.45e-05 S/cm
+GT-323: Li7.2Lu1.2Hf10.8P18.0O72.0 | 9.79e-05 S/cm
+GT-324: Li7.8Cr1.8Hf10.2P18.0O72.0 | 5.26e-07 S/cm
+GT-325: Li7.8Fe1.8Hf10.2P18.0O72.0 | 5.4e-05 S/cm
+GT-326: Li7.8In1.8Hf10.2P18.0O72.0 | 0.000142 S/cm
+GT-327: Li7.8Lu1.8Hf10.2P18.0O72.0 | 3.56e-05 S/cm
+GT-328: Li7.8Sc1.8Hf10.2P18.0O72.0 | 8.32e-05 S/cm
+GT-329: Li7.8Y1.8Hf10.2P18.0O72.0 | 3.19e-05 S/cm
+GT-330: Li8.4In2.4Hf9.6P18.0O72.0 | 0.000142 S/cm
+GT-331: Li8.4Lu2.4Hf9.6P18.0O72.0 | 2.06e-05 S/cm
+GT-332: Li8.4Y2.4Hf9.6P18.0O72.0 | 2.09e-05 S/cm
+--- Starting Validation ---
+Comparing 15 GT items vs 1488 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-318     | ❌ MISSING/BAD   | The extracted composition LiHf2(PQ4)3 matches LiHf2P3O12, and the conductivity 7.08e-07 S/cm is close to 6.85e-07 S/cm, but the extracted temperature is 0.0 C, which is not considered room temperature (implied 25 C) for a valid comparison.
+GT-319     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.1Fe0.1Hf1.9P3O12 and conductivity 1.07e-04 S/cm at room temperature.
+GT-320     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.1In0.1Hf1.9P3O12 and conductivity 5.13e-05 S/cm at room temperature.
+GT-321     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.1Lu0.1Hf1.9P3O12 and conductivity 5.88e-05 S/cm at room temperature.
+GT-322     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.1Sc0.1Hf1.9P3O12 and conductivity 2.45e-05 S/cm at room temperature.
+GT-323     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.2Lu0.2Hf1.8P3O12 and conductivity 9.79e-05 S/cm at room temperature.
+GT-324     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.3Cr0.3Hf1.7P3O12 and conductivity 5.26e-07 S/cm at room temperature; generic 'Cr' entries lack full composition details.
+GT-325     | ❌ MISSING/BAD   | The extracted Li1.3Fe0.3Hf1.7(PO4)3 is an activation energy, not a conductivity value, and other Fe-doped entries have different compositions or conductivities.
+GT-326     | ❌ MISSING/BAD   | The extracted Li1.3In0.3Hf1.7(PO4)3 is an activation energy, not a conductivity value; generic 'Squares' entries lack full composition details.
+GT-327     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.3Lu0.3Hf1.7P3O12 and conductivity 3.56e-05 S/cm at room temperature; generic 'Downward triangles' entries lack full composition details.
+GT-328     | ❌ MISSING/BAD   | The extracted Li1.3Sc0.3Hf1.7(PO4)3 is an activation energy, not a conductivity value; generic 'Downward triangles' entries lack full composition details.
+GT-329     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.3Y0.3Hf1.7P3O12 and conductivity 3.19e-05 S/cm at room temperature.
+GT-330     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.4In0.4Hf1.6P3O12 and conductivity 1.42e-04 S/cm at room temperature; generic 'Squares' entries lack full composition details.
+GT-331     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.4Lu0.4Hf1.6P3O12 and conductivity 2.06e-05 S/cm at room temperature; generic 'Diamonds' entries lack full composition details.
+GT-332     | ❌ MISSING/BAD   | No extracted data matches the composition Li1.4Y0.4Hf1.6P3O12 and conductivity 2.09e-05 S/cm at room temperature.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m DOI: 10.1016/0167-2738(93)90387-i
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260128_134133.log
+

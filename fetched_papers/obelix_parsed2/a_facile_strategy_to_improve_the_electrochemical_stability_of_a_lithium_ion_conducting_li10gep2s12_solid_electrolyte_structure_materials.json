@@ -1,0 +1,322 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 77223,
+    "total_output_tokens": 5544,
+    "total_cost_usd": 0.0552435,
+    "call_counts": {
+      "gemini-3-flash-preview": 15
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/a_facile_strategy_to_improve_the_electrochemical_stability_of_a_lithium_ion_conducting_li10gep2s12_solid_electrolyte_structure.json",
+  "extraction_stats": {
+    "total_nodes": 75,
+    "raw_extracted": 13,
+    "after_dedup": 9,
+    "time_elapsed": 80.09744691848755,
+    "valid_count": 9,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 9,
+      "medium": 0,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 9,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 13,
+    "from_image_nodes": 0,
+    "final_count": 9
+  },
+  "material_count": 9,
+  "materials": [
+    {
+      "source_sentence_id": "0188",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li9.4Ba0.3GeP2S12",
+        "acronym": "LBGPS-3",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.21 x 10^-3 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "The ionic conductivity was calculated from the impedance plot shown in the inset of Figure 4 for the LBGPS-3 electrolyte. The bulk resistance (Rb) is approximately 165 Ohms. Using the cell dimensions (thickness ~0.2 cm, area ~1 cm^2), the conductivity is calculated as sigma = L / (Rb * A).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LBGPS-3 solid electrolyte used in a symmetric Li/LBGPS-3/Li cell.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0182",
+        "title": "Figure 3 and 4 Captions",
+        "section": "3. Results and discussion"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li9.4Ba0.3GeP2S12",
+      "_original_name": "LBGPS-3",
+      "_norm_cond": 0.00121,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000, 0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 2(a) for the pristine LGPS sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine Li10GeP2S12 solid electrolyte ; N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "A facile strategy to improve the electrochemical stability of a lithium ion conducting Li<sub>10</sub>GeP<sub>2</sub>S<sub>12</sub> solid electrolyte"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12/LiNbO3",
+        "acronym": null,
+        "proportion": "coated with LiNbO3"
+      },
+      "ionic_conductivity_S_per_cm": "8.5 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 2(a) for the LiNbO3-coated LGPS sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LiNbO3-coated Li10GeP2S12 solid electrolyte",
+      "processing_method": "Surface coating via facile strategy",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "A facile strategy to improve the electrochemical stability of a lithium ion conducting Li<sub>10</sub>GeP<sub>2</sub>S<sub>12</sub> solid electrolyte"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12/LiNbO3",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.0085,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_90616747) for the Li6PS5Cl sample at 25°C (approx. 3.35 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_90616747) for the Li6PS5Cl sample at 100°C (approx. 2.68 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "-25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_90616747) for the Li6PS5Cl sample at -25°C (approx. 4.03 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -25
+    },
+    {
+      "source_sentence_id": "0023, 0218, 0145",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li9.4Ba0.3GeP2S12",
+        "acronym": "LBGPS-3",
+        "proportion": "Ba-substituted"
+      },
+      "ionic_conductivity_S_per_cm": "7.04 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Directly stated ionic conductivity value for the specific composition Li9.4Ba0.3GeP2S12 in the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ba-substituted Li10GeP2S12 solid electrolyte ; Ba-substituted Li10GeP2S12 (Li10-2xBaxGeP2S12, x = 0.3) ; Ba-substituted LGPS sample with the highest ionic conductivity among the substituted series.",
+      "processing_method": "facile method | Ba-substitution/doping",
+      "source_node": {
+        "node_id": "0022",
+        "title": "Performance and Electrochemical Properties",
+        "section": "ABSTRACT"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li9.4Ba0.3GeP2S12",
+      "_original_name": "Li9.4Ba0.3GeP2S12",
+      "_norm_cond": 0.000704,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Table 1 (Arrhenius plot parameters) which lists the ionic conductivity at 25°C for the reference Li6PS5Cl material.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Reference argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0095",
+        "title": "Table 1: Arrhenius plot parameters",
+        "section": "2.3. Electrochemical measurements"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0024,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.4 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Table 1 (Arrhenius plot parameters) which lists the ionic conductivity at 25°C for the Li5.5PS4.5Cl1.5 material.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "High-conductivity argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0095",
+        "title": "Table 1: Arrhenius plot parameters",
+        "section": "2.3. Electrochemical measurements"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.0094,
+      "_norm_temp": 25
+    }
+  ]
+}

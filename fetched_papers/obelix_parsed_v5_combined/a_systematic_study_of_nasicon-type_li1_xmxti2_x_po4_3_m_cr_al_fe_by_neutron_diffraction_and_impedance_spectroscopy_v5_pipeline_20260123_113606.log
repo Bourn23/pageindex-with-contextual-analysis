@@ -1,0 +1,160 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_pipeline_20260123_113606.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: A systematic study of Nasicon-type $\text{Li}_{1+x}\text{M}_x\text{Ti}_{2-x}(\text{PO}_4)_3$ (M: Cr, Al, Fe) by neutron diffraction and impedance spectroscopy
+   --- Found: 15 Sections
+   --- Found: 13 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Solid State Ionics' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '3.1. X-ray diffraction at room temperature' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '3.2. Neutron diffraction as a function of temperature' contains:
+       - 7 Images: ['Fig 5', 'Fig 1', 'Fig 2', 'Fig 4', 'Fig 3', 'Fig 1', 'Fig 1']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '3.3. Impedance spectroscopy' contains:
+       - 8 Images: ['Fig 9', 'Fig 6', 'Fig 5', 'Fig 2', 'Fig 4', 'Fig 3', 'Fig 8', 'Fig 7']
+       - 2 Tables: ['Table 1', 'Table 2']
+
+   >>> Section '4. Conclusions' contains:
+       - 1 Images: ['Fig 8']
+       - 1 Tables: ['Table 2']
+
+   >>> Section 'Acknowledgments' contains:
+       - 1 Images: ['Fig 9']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: References
+   ... Processing 27 items (Text + Images) simultaneously ...
+   [Retry 1/3] page_2_figure_2.jpeg: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}
+   ❌ page_2_figure_2.jpeg: Failed after 3 attempts - 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}
+   [Retry 1/3] JSON Error for 4. Conclusions: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 8 column ...
+   [Retry 2/3] JSON Error for 4. Conclusions: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 10 column...
+   ✓ page_5_figure_11.jpeg (Fig 6): Found 5 points
+   ✓ page_6_figure_7.jpeg (Fig 8): Found 6 points
+   [Text Warning] Empty response for 4. Conclusions
+   [91m[Text Error][0m 4. Conclusions: not enough values to unpack (expected 3, got 2)
+   ... Normalizing Units & Temperatures...
+Norm Error: could not convert string to float: '6.2 x 10^-3'
+
+   📊 Extraction Summary:
+      - Extracted: 14 measurements
+      - Skipped (no data): 21 images
+      - Failed: 2 items
+
+Done! Extracted 14 points.
+Saved to: fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         25
+Total Input:         32,511 tokens
+Total Output:        28,877 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0950
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 13 calls
+  - gemini-3-flash-preview        : 12 calls
+==================================================
+
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x12fcd0910>
+transport: <_SelectorSocketTransport closing fd=16>
+Traceback (most recent call last):
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 924, in write
+    n = self._sock.send(data)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 930, in write
+    self._fatal_error(exc, 'Fatal write error on socket transport')
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 725, in _fatal_error
+    self._force_close(exc)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/selector_events.py", line 737, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "/Users/bourn23/miniforge3/envs/pokeagent/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.ssi.2014.07.018
+GT-282: Li6.0Ti12.0P18.0O72.0 | 6e-05 S/cm
+GT-283: Li6.3Al0.3Ti11.7P18.0O72.0 | 0.0011 S/cm
+GT-284: Li6.6Al0.6Ti11.4P18.0O72.0 | 0.00067 S/cm
+GT-285: Li7.8Al1.8Ti10.2P18.0O72.0 | 0.0062 S/cm
+GT-286: Li8.4Al2.4Ti9.6P18.0O72.0 | 0.0033 S/cm
+GT-287: Li6.3Cr0.3Ti11.7P18.0O72.0 | 0.00018 S/cm
+GT-288: Li6.6Cr0.6Ti11.4P18.0O72.0 | 0.00026 S/cm
+GT-289: Li7.2Cr1.2Ti10.8P18.0O72.0 | 0.00043 S/cm
+GT-290: Li7.8Cr1.8Ti10.2P18.0O72.0 | 0.00029 S/cm
+GT-291: Li6.3Fe0.3Ti11.7P18.0O72.0 | 0.00013 S/cm
+GT-292: Li6.6Fe0.6Ti11.4P18.0O72.0 | 0.00063 S/cm
+GT-293: Li7.2Fe1.2Ti10.8P18.0O72.0 | 0.0014 S/cm
+GT-294: Li7.8Fe1.8Ti10.2P18.0O72.0 | 0.0023 S/cm
+--- Starting Validation ---
+Comparing 13 GT items vs 267 Extracted items...
+
+============================================================
+VALIDATION SCORE: 7.7%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-282     | ❌ MISSING/BAD   | The ground truth formula Li6.0Ti12.0P18.0O72.0 (normalized to LiTi2(PO4)3) was not found in the extracted data.
+GT-283     | ❌ MISSING/BAD   | The ground truth formula Li6.3Al0.3Ti11.7P18.0O72.0 (normalized to Li1.05Al0.05Ti1.95(PO4)3) was not found in the extracted data.
+GT-284     | ❌ MISSING/BAD   | The ground truth formula Li6.6Al0.6Ti11.4P18.0O72.0 (normalized to Li1.1Al0.1Ti1.9(PO4)3) was not found as a bulk conductivity at room temperature in the extracted data; the closest extracted entry is for grain boundary conductivity and has a different value.
+GT-285     | ✅ MATCH         | The chemical formula Li7.8Al1.8Ti10.2P18.0O72.0 normalizes to Li1.3Al0.3Ti1.7(PO4)3, and the conductivity value of 0.0062 S/cm is an exact match at room temperature (25C).
+GT-286     | ❌ MISSING/BAD   | The ground truth formula Li8.4Al2.4Ti9.6P18.0O72.0 (normalized to Li1.4Al0.4Ti1.6(PO4)3) was not found in the extracted data.
+GT-287     | ❌ MISSING/BAD   | The ground truth formula Li6.3Cr0.3Ti11.7P18.0O72.0 (normalized to Li1.05Cr0.05Ti1.95(PO4)3) was not found in the extracted data.
+GT-288     | ❌ MISSING/BAD   | The ground truth formula Li6.6Cr0.6Ti11.4P18.0O72.0 (normalized to Li1.1Cr0.1Ti1.9(PO4)3) was not found in the extracted data.
+GT-289     | ❌ MISSING/BAD   | The ground truth formula Li7.2Cr1.2Ti10.8P18.0O72.0 (normalized to Li1.2Cr0.2Ti1.8(PO4)3) was not found in the extracted data.
+GT-290     | ❌ MISSING/BAD   | The ground truth formula Li7.8Cr1.8Ti10.2P18.0O72.0 (normalized to Li1.3Cr0.3Ti1.7(PO4)3) was not found as a bulk conductivity at room temperature in the extracted data; the closest extracted entry is for grain boundary conductivity and has a significantly different value.
+GT-291     | ❌ MISSING/BAD   | The ground truth formula Li6.3Fe0.3Ti11.7P18.0O72.0 (normalized to Li1.05Fe0.05Ti1.95(PO4)3) was not found in the extracted data.
+GT-292     | ❌ MISSING/BAD   | The ground truth formula Li6.6Fe0.6Ti11.4P18.0O72.0 (normalized to Li1.1Fe0.1Ti1.9(PO4)3) was not found in the extracted data.
+GT-293     | ❌ MISSING/BAD   | The ground truth formula Li7.2Fe1.2Ti10.8P18.0O72.0 (normalized to Li1.2Fe0.2Ti1.8(PO4)3) was not found in the extracted data.
+GT-294     | ❌ MISSING/BAD   | The ground truth formula Li7.8Fe1.8Ti10.2P18.0O72.0 (normalized to Li1.3Fe0.3Ti1.7(PO4)3) was found in the extracted data, but the conductivity values at room temperature (or closest available) are significantly different (0.0023 S/cm vs 1e-8 S/cm or 3.7e-4 S/cm).
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m DOI: 10.1016/j.ssi.2014.07.018
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_pipeline_20260123_113606.log
+

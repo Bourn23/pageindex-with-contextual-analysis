@@ -1,0 +1,200 @@
+[
+  {
+    "raw_composition": "x=0",
+    "canonical_formula": "Li4Ti1.667O4",
+    "raw_conductivity": "-1.6",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": -1.6,
+    "raw_temperature": "200 \u00b0C",
+    "normalized_temperature_c": 200.0,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0",
+    "canonical_formula": "Li4Ti1.667O4",
+    "raw_conductivity": "-4.35",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 3.2",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.1",
+    "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+    "raw_conductivity": "-1.75",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": -1.75,
+    "raw_temperature": "200 \u00b0C",
+    "normalized_temperature_c": 200.0,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.1",
+    "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+    "raw_conductivity": "-4.45",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 3.1",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.2",
+    "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+    "raw_conductivity": "-2.05",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": -2.05,
+    "raw_temperature": "200 \u00b0C",
+    "normalized_temperature_c": 200.0,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.2",
+    "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+    "raw_conductivity": "-4.8",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 3.0",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.3",
+    "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+    "raw_conductivity": "-2.35",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": -2.35,
+    "raw_temperature": "200 \u00b0C",
+    "normalized_temperature_c": 200.0,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.3",
+    "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+    "raw_conductivity": "-4.9",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 2.9",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.4",
+    "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+    "raw_conductivity": "-3.0",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 2.25",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.4",
+    "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+    "raw_conductivity": "-5.05",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 2.85",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.5",
+    "canonical_formula": "Li3Mg0.5Ti1.5O4",
+    "raw_conductivity": "-3.45",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": -3.45,
+    "raw_temperature": "200 \u00b0C",
+    "normalized_temperature_c": 200.0,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0.5",
+    "canonical_formula": "Li3Mg0.5Ti1.5O4",
+    "raw_conductivity": "-4.9",
+    "raw_unit": "log(\u0303\u03c3T/S cm-1 K)",
+    "normalized_conductivity": null,
+    "raw_temperature": "10^3 T^-1 / K = 2.5",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "high"
+  },
+  {
+    "raw_composition": "x=0",
+    "canonical_formula": "Li4Ti1.667O4",
+    "raw_conductivity": "10^-10.9",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  },
+  {
+    "raw_composition": "x=0.1",
+    "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+    "raw_conductivity": "10^-10.4",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  },
+  {
+    "raw_composition": "x=0.2",
+    "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+    "raw_conductivity": "10^-9.7",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  },
+  {
+    "raw_composition": "x=0.3",
+    "canonical_formula": "Li3.4Mg0.3Ti1.567O4",
+    "raw_conductivity": "10^-9.2",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  },
+  {
+    "raw_composition": "x=0.4",
+    "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+    "raw_conductivity": "10^-8.7",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  },
+  {
+    "raw_composition": "x=0.5",
+    "canonical_formula": "Li3Mg0.5Ti1.5O4",
+    "raw_conductivity": "10^-7.2",
+    "raw_unit": "S cm-1",
+    "normalized_conductivity": null,
+    "raw_temperature": "298 K",
+    "normalized_temperature_c": null,
+    "source": "figure",
+    "confidence": "medium"
+  }
+]

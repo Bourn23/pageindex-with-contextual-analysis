@@ -1,0 +1,330 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_pipeline_20260114_160640.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: extra:
+  -> Started Section: ■ EXPERIMENTAL SECTION
+  -> Started Section: RESULTS AND DISCUSSION
+  -> Started Section: CONCLUSION
+  -> Started Section: Supporting Information
+  -> Started Section: **Corresponding Author**
+  -> Started Section: Notes
+  -> Started Section: ACKNOWLEDGMENTS
+  -> Started Section: REFERENCES
+  🔍 Checking placeholder: '__IMG_ae7d9144__'
+  ✅ Found Special Node: __IMG_ae7d9144__
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: **Corresponding Author**
+  ✓ Finished Section: Notes
+  ✓ Finished Section: Supporting Information
+  ✓ Finished Section: ACKNOWLEDGMENTS
+  ✓ Finished Section: CONCLUSION
+  🔍 Checking placeholder: '__IMG_0e7885c7__'
+  ✅ Found Special Node: __IMG_0e7885c7__
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: ■ EXPERIMENTAL SECTION
+  ✓ Finished Section: REFERENCES
+  🔍 Checking placeholder: '__IMG_914b41c6__'
+  ✅ Found Special Node: __IMG_914b41c6__
+  ✓ Finished Section: extra:
+  🔍 Checking placeholder: '__IMG_c30f698d__'
+  ✅ Found Special Node: __IMG_c30f698d__
+  🔍 Checking placeholder: '__TBL_52f7cd53__'
+  ✅ Found Special Node: __TBL_52f7cd53__
+  🔍 Checking placeholder: '__IMG_b0e70633__'
+  ✅ Found Special Node: __IMG_b0e70633__
+  🔍 Checking placeholder: '__IMG_6ba28cdd__'
+  ✅ Found Special Node: __IMG_6ba28cdd__
+  🔍 Checking placeholder: '__IMG_426711bc__'
+  ✅ Found Special Node: __IMG_426711bc__
+  🔍 Checking placeholder: '__TBL_b7860eb9__'
+  ✅ Found Special Node: __TBL_b7860eb9__
+  🔍 Checking placeholder: '__IMG_8a8c47a4__'
+  ✅ Found Special Node: __IMG_8a8c47a4__
+  🔍 Checking placeholder: '__TBL_66e5355a__'
+  ✅ Found Special Node: __TBL_66e5355a__
+  🔍 Checking placeholder: '__IMG_02aed715__'
+  ✅ Found Special Node: __IMG_02aed715__
+  🔍 Checking placeholder: '__IMG_de8a45af__'
+  ✅ Found Special Node: __IMG_de8a45af__
+  ✓ Finished Section: RESULTS AND DISCUSSION
+  ✓ Re-indexed 395 structural nodes.
+  ✓ Mapped 409 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 68 text nodes and 10 image nodes.
+
+[Stage 2] Extracting from 68 relevant nodes...
+  [1/68] ○ Reference (30)... (0 data points)
+  [2/68] ○ Effect of Cation Size on Structural Properties... (0 data points)
+  [3/68] ○ Figure 1: Crystal Structure Description... (0 data points)
+  [4/68] ○ Reference (29)... (0 data points)
+  [5/68] ○ Reference (11)... (0 data points)
+  [6/68] ○ Reference (10)... (0 data points)
+  [7/68] ○ Publication Information... (0 data points)
+  [8/68] ○ Consequences for Ionic Transport... (0 data points)
+  [9/68] ○ Hypothesized Mechanism of Ionic Transport... (0 data points)
+  [10/68] ○ Detailed Supporting Data... (0 data points)
+  [11/68] ○ Reference (12)... (0 data points)
+  [12/68] ○ Reference (31)... (0 data points)
+  [13/68] ○ Reference (32)... (0 data points)
+  [14/68] ○ Reference (13)... (0 data points)
+  [15/68] ○ Reference (35)... (0 data points)
+  [16/68] ○ Synthesis... (0 data points)
+  [17/68] ○ Access Information... (0 data points)
+  [18/68] ○ Reference (36)... (0 data points)
+  [19/68] ○ Reference (14)... (0 data points)
+  [20/68] ○ Physical Characterization... (0 data points)
+  [21/68] ○ Corresponding Author... (0 data points)
+  [22/68] ○ Declaration of Interest... (0 data points)
+  [23/68] ○ Electrical Characterization... (0 data points)
+  [24/68] ○ Reference (15)... (0 data points)
+  [25/68] ○ Reference (37)... (0 data points)
+  [26/68] ○ Structural Characterization Methods and Initial Mo... (0 data points)
+  [27/68] ○ Reference (16)... (0 data points)
+  [28/68] ○ Individual Funding and Fellowships... (0 data points)
+  [29/68] ○ Figure 2: Representative Diffraction Data... (0 data points)
+  [30/68] ○ Reference (17)... (0 data points)
+  [31/68] ○ Technical Assistance... (0 data points)
+  [32/68] ○ Reference (18)... (0 data points)
+  [33/68] ○ Structural Model Refinement for Li Distribution... (0 data points)
+  [34/68] ○ Facility and Institutional Support... (0 data points)
+  [35/68] ○ Reference (19)... (0 data points)
+  [36/68] ○ Reference (20)... (0 data points)
+  [37/68] ○ Refined Structural Parameters from Neutron Data (T... (0 data points)
+  [38/68] ○ Reference (1)... (0 data points)
+  [39/68] ○ Lithium Content and Synchrotron Diffraction Asymme... (0 data points)
+  [40/68] ○ Reference (2)... (0 data points)
+  [41/68] ○ Trends in Lattice Parameters and Polyhedral Volume... (0 data points)
+  [42/68] ○ Reference (3)... (0 data points)
+  [43/68] ○ Reference (21)... (0 data points)
+  [44/68] ○ Authors... (0 data points)
+  [45/68] ○ Reference (22)... (0 data points)
+  [46/68] ○ Reference (4)... (0 data points)
+  [47/68] ○ Reference (23)... (0 data points)
+  [48/68] ○ Abstract... (0 data points)
+  [49/68] ○ Reference (5)... (0 data points)
+  [50/68] ○ Keywords... (0 data points)
+  [51/68] ○ Reference (24)... (0 data points)
+  [52/68] ○ Reference (6)... (0 data points)
+  [53/68] ○ Challenges with Current Electrolytes and Ideal Req... (0 data points)
+  [54/68] ✓ Introduction... (3 data points)
+  [55/68] ○ Reference (25)... (0 data points)
+  [56/68] ○ Reference (7)... (0 data points)
+  [57/68] ✓ Transport Properties Introduction and Impedance Sp... (2 data points)
+  [58/68] ○ Reference (26)... (0 data points)
+  [59/68] ○ Summary of Research Focus... (0 data points)
+  [60/68] ○ Strategies for Enhancing Garnet Conductivity... (0 data points)
+  [61/68] ✓ Detailed Impedance Spectra Interpretation and Cond... (3 data points)
+  [62/68] ✓ Activation Energies, Temperature Instability, and ... (1 data points)
+  [63/68] ✓ Introduction to Garnet Solid-State Electrolytes... (1 data points)
+  [64/68] ○ Reference (9)... (0 data points)
+  [65/68] ○ Reference (28)... (0 data points)
+  [66/68] ✓ Reference (8)... (1 data points)
+  [67/68] ○ Current Study: Objectives and Initial Methodology... (0 data points)
+  [68/68] ✓ Ionic Conductivity and Diffusion Coefficients (Tab... (6 data points)
+  → 17 total data points extracted
+
+[Stage 2b] Processing 10 images directly...
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_5.jpeg
+    Warning: Skipping missing image _page_2_Figure_6.jpeg
+    Warning: Skipping missing image _page_5_Figure_7.jpeg
+    Warning: Skipping missing image _page_0_Picture_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_0_Figure_9.jpeg
+    Warning: Skipping missing image _page_4_Figure_4.jpeg
+    Warning: Skipping missing image _page_1_Figure_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_7.jpeg
+
+Merging: 17 text-based + 0 image-based points.
+  → Running physical heuristic checks on 17 points...
+  → Running LLM semantic verification on 17 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 17 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Ba-doped garnet"
+- "Ca-doped garnet"
+- "Li10GeP2S12"
+- "Li6BaLa2Ta2O12"
+- "Li6MLa2Ta2O12 (M = Ba)"
+- "Li6MLa2Ta2O12 (M = Ca)"
+- "Li6MLa2Ta2O12 (M = Ca, Sr, Ba)"
+- "Li6MLa2Ta2O12 (M = Sr)"
+- "Li6PS5Cl"
+- "Li7La3Zr2O12"
+- "Li9.54Si1.74P1.44S11.7Cl0.3"
+- "LixM2M'3O12"
+- "Sr-doped garnet"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li10GeP2S12', canonical_name='Lithium Germanium Phosphorus Sulfide', abbreviation='LGPS', variant_names=['Li10GeP2S12']), CanonicalMaterialName(canonical_formula='Li6BaLa2Ta2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Ba-doped garnet', 'Li6BaLa2Ta2O12', 'Li6MLa2Ta2O12 (M = Ba)']), CanonicalMaterialName(canonical_formula='Li6CaLa2Ta2O12', canonical_name='Lithium Calcium Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Ca-doped garnet', 'Li6MLa2Ta2O12 (M = Ca)']), CanonicalMaterialName(canonical_formula='Li6SrLa2Ta2O12', canonical_name='Lithium Strontium Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Sr-doped garnet', 'Li6MLa2Ta2O12 (M = Sr)']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='Li7La3Zr2O12', canonical_name='Lithium Lanthanum Zirconium Oxide', abbreviation='LLZO', variant_names=['Li7La3Zr2O12']), CanonicalMaterialName(canonical_formula='Li9.54Si1.74P1.44S11.7Cl0.3', canonical_name='Lithium Silicon Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li9.54Si1.74P1.44S11.7Cl0.3']), CanonicalMaterialName(canonical_formula="LixM2M'3O12", canonical_name='Lithium Metal Metal Oxide', abbreviation=None, variant_names=["LixM2M'3O12"]), CanonicalMaterialName(canonical_formula='Li6MLa2Ta2O12 (M = Ca, Sr, Ba)', canonical_name='Lithium Metal Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Li6MLa2Ta2O12 (M = Ca, Sr, Ba)'])]
+  → Created 9 canonical material(s)
+  → Updated 17/17 material names
+  → Normalizing 17 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='4.0 x 10^-5 S/cm', Temp='18 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 4e-05, 'temp_value': 18, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.5 × 10⁻² S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.025, 'cond_unit': 'S cm-1', 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='2.3 x 10^-3 S/cm', Temp='373 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0023, 'temp_value': 373, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻² S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'temp_value': 25, 'cond_value': 0.012, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.2 × 10⁻⁶ S cm⁻¹', Temp='27 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 27, 'cond_unit': 'S cm^-1', 'cond_value': 2.2e-06}
+    [DEBUG Norm] Input: Cond='7.0 × 10⁻⁶ S cm⁻¹', Temp='22 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 22, 'cond_value': 7e-06, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.18 × 10⁻⁶ S cm⁻¹', Temp='291 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 291, 'cond_value': 1.18e-06, 'temp_unit': 'K', 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='7.7 × 10⁻⁴ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.00077, 'cond_unit': 'S cm⁻¹'}
+    [DEBUG Norm] Input: Cond='10⁻³ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.001, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='10^-6 to 10^-5 S cm^-1', Temp='18 to 100 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm^-1', 'cond_value': 1e-06}
+    [DEBUG Norm] Input: Cond='10^-6 to 10^-5 S cm^-1', Temp='18 to 100 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-05, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='1.74 × 10⁻⁶ S cm⁻¹', Temp='291 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'K', 'cond_value': 1.74e-06, 'temp_value': 291}
+    [DEBUG Norm] Input: Cond='~ 1 x 10^-4 S cm^-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.3 × 10⁻⁵ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 1.3e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.51 × 10⁻⁵ S cm⁻¹', Temp='373 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1.51e-05, 'temp_value': 373, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='2.14 × 10⁻⁵ S cm⁻¹', Temp='373 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'temp_unit': 'K', 'temp_value': 373, 'cond_value': 2.14e-05}
+    [DEBUG Norm] Input: Cond='4.47 × 10⁻⁵ S cm⁻¹', Temp='373 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 4.47e-05, 'temp_value': 373}
+    [DEBUG Norm] Input: Cond='4.02 × 10⁻⁶ S cm⁻¹', Temp='291 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 4.02e-06}
+
+[Stage 3] Deduplicating 17 data points...
+  → Merged 0 duplicates, 17 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Imputed general method for 5 missing items.
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         19
+Total Input:         105,524 tokens
+Total Output:        6,240 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0715
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 19 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure_materials.json
+Time elapsed (s)  80.25768399238586
+
+Statistics:
+  Nodes analyzed: 78
+  Raw data points: 17
+  After dedup: 17
+  Valid: 17, Invalid: 0
+
+By Confidence:
+  high: 8
+  medium: 8
+  low: 1
+
+By Data Source:
+  primary: 9
+  cited: 0
+  inferred: 5
+
+Sample data points:
+  ✓ Li6BaLa2Ta2O12: 4.0 x 10^-5 S/cm @ 18 °C [high]
+  ✓ Li6BaLa2Ta2O12: 2.3 x 10^-3 S/cm @ 373 K [high]
+  ✓ Li6CaLa2Ta2O12: 1.18 × 10⁻⁶ S cm⁻¹ @ 291 K [high]
+  ✓ Li6SrLa2Ta2O12: 1.74 × 10⁻⁶ S cm⁻¹ @ 291 K [high]
+  ✓ Li6CaLa2Ta2O12: 1.51 × 10⁻⁵ S cm⁻¹ @ 373 K [high]
+  ... and 12 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/am4060194
+                           Composition  Ionic conductivity (S cm-1)
+531  Li48.0Ba4.0Sr4.0La16.0Ta16.0O96.0                     0.000007
+532       Li48.0Sr8.0La16.0Ta16.0O96.0                     0.000005
+533       Li48.0Ba8.0La16.0Ta16.0O96.0                     0.000015
+534       Li48.0Ca8.0La16.0Ta16.0O96.0                     0.000002
+Starting Evaluation on 4 Ground Truth Points...
+
+Evaluation Complete: 3/4 Matched (75.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12
+[0;34m[INFO][0m DOI: 10.1021/am4060194
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/dependence_of_the_li-ion_conductivity_and_activation_energies_on_the_crystal_structure_and_ionic_radii_in_li_6_mla_2_ta_2_o_12_pipeline_20260114_160640.log
+

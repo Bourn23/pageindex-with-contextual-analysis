@@ -1,0 +1,29 @@
+material_name,material_class,measurement_temperature,ionic_conductivity,material_description,processing_method
+Li6PS5Cl,Ceramic,25°C,1.1 x 10^-3 S/cm,Argyrodite-type solid electrolyte,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.
+Li6PS5-xSexBr,Ceramic,room temperature,10^-3 to 10^-2 S/cm,Argyrodite-type solid electrolyte with Se substitution for S.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5Cl,Ceramic,50°C,2.5 x 10^-3 S/cm,Argyrodite-type solid electrolyte,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.
+Li6PS5Cl,Ceramic,75°C,5.0 x 10^-3 S/cm,Argyrodite-type solid electrolyte,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.
+Li6PS5Cl,Ceramic,100°C,8.0 x 10^-3 S/cm,Argyrodite-type solid electrolyte,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.
+Li6PS5Br,Ceramic,room temperature,2.8e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.9Se0.1Br,Ceramic,room temperature,3.2e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.1 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,not specified,3.9 mS·cm⁻¹,N/A (Cited Work),Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^5.6 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5Br,Ceramic,300 K,1.3e-3 S cm^-1,Lithium thiophosphate argyrodite,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.5Se0.5Br,Ceramic,300 K,1.2e-3 S cm^-1,Selenium-substituted lithium thiophosphate argyrodite,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4SeBr,Ceramic,300 K,1.6e-3 S cm^-1,Selenium-substituted lithium thiophosphate argyrodite,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.8Se0.2Br,Ceramic,room temperature,3.9e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.2 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.7Se0.3Br,Ceramic,room temperature,3.6e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.3 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.6Se0.4Br,Ceramic,room temperature,3.65e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.4 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.5Se0.5Br,Ceramic,room temperature,2.7e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.5 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.4Se0.6Br,Ceramic,room temperature,2.8e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.6 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.3Se0.7Br,Ceramic,room temperature,3.0e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.7 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.2Se0.8Br,Ceramic,room temperature,3.45e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.8 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4.1Se0.9Br,Ceramic,room temperature,3.8e-3 S cm^-1,Argyrodite-type solid electrolyte with x=0.9 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS4SeBr,Ceramic,room temperature,3.6e-3 S cm^-1,Argyrodite-type solid electrolyte with x=1.0 selenium substitution.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^4.6 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^5.3 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^6.2 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^6.7 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^7.4 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^5.1 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]
+Li6PS5X,Ceramic,N/A,10^5.8 K S cm⁻¹ (log sigma_0 product),Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.,Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]

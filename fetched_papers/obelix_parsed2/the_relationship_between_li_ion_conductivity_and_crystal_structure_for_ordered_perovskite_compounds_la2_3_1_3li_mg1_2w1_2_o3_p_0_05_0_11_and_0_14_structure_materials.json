@@ -1,0 +1,619 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 91756,
+    "total_output_tokens": 11408,
+    "total_cost_usd": 0.080102,
+    "call_counts": {
+      "gemini-3-flash-preview": 27
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure.json",
+  "extraction_stats": {
+    "total_nodes": 55,
+    "raw_extracted": 25,
+    "after_dedup": 18,
+    "time_elapsed": 113.40670084953308,
+    "valid_count": 18,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 14,
+      "medium": 4,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 7,
+      "cited": 0,
+      "inferred": 11
+    },
+    "from_text_nodes": 25,
+    "from_image_nodes": 0,
+    "final_count": 18
+  },
+  "material_count": 18,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.33La0.56TiO3",
+        "acronym": null,
+        "proportion": "x=0.33"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Table 2 which lists the bulk ionic conductivity for the perovskite LLTO sample with x=0.33.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Perovskite-type lithium lanthanum titanate with lattice parameters a=3.871, b=3.875, c=7.738 Angstroms.",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0074",
+        "title": "Lattice Parameters and Perovskite Parameters (Table 2)",
+        "section": "2. Experimental"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.33La0.56TiO3",
+      "_original_name": "Li0.33La0.56TiO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.50La0.50TiO3",
+        "acronym": null,
+        "proportion": "x=0.50"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Table 2 which lists the bulk ionic conductivity for the perovskite LLTO sample with x=0.50.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Perovskite-type lithium lanthanum titanate with lattice parameters a=3.875, b=3.875, c=7.742 Angstroms.",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0074",
+        "title": "Lattice Parameters and Perovskite Parameters (Table 2)",
+        "section": "2. Experimental"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.50La0.50TiO3",
+      "_original_name": "Li0.50La0.50TiO3",
+      "_norm_cond": 2.5e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0084, 0080",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.65Li0.05Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.05"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Fig. 3 for LLMWq with p=0.05 at room temperature (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLMWq ceramic electrolyte ; LLMW ceramic electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Arrhenius Plot of LLMWq (Fig. 3)",
+        "section": "2. Experimental"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.65Li0.05Mg0.5W0.5O3",
+      "_original_name": "LLMWq",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0084, 0080",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.63Li0.11Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Fig. 3 for LLMWq with p=0.11 at room temperature (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLMWq ceramic electrolyte ; LLMW ceramic electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Arrhenius Plot of LLMWq (Fig. 3)",
+        "section": "2. Experimental"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.63Li0.11Mg0.5W0.5O3",
+      "_original_name": "LLMWq",
+      "_norm_cond": 0.00015,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0084, 0080",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.62Li0.14Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.14"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Fig. 3 for LLMWq with p=0.14 at room temperature (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLMWq ceramic electrolyte ; LLMW ceramic electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Arrhenius Plot of LLMWq (Fig. 3)",
+        "section": "2. Experimental"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.62Li0.14Mg0.5W0.5O3",
+      "_original_name": "LLMWq",
+      "_norm_cond": 0.0002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0125",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.62Li0.14Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.14"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁵ S/cm",
+      "measurement_temperature": "300 K",
+      "reason": "The text explicitly states the highest ionic conductivity value for the specific composition p = 0.14 of LLMWq at 300 K (referenced from Table 3 in sentence 0124).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Perovskite-type Li ion conductor",
+      "processing_method": "Quenched (implied by 'q' in LLMWq) | Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled.",
+      "source_node": {
+        "node_id": "0119",
+        "title": "Ionic Conductivity Measurements",
+        "section": "3. Results and discussion"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.62Li0.14Mg0.5W0.5O3",
+      "_original_name": "LLMWq",
+      "_norm_cond": 1.2e-05,
+      "_norm_temp": 26.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in IMG_08f052e7, where the data point for Li6PS5Cl at 1000/T ≈ 3.35 K⁻¹ corresponds to approximately 1.1 mS/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Header Images",
+        "section": "Available online at www.sciencedirect.com"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.8 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in IMG_08f052e7, where the data point for Li6PS5Br at 1000/T ≈ 3.35 K⁻¹ corresponds to approximately 0.68 mS/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Header Images",
+        "section": "Available online at www.sciencedirect.com"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.1 x 10^-7 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in IMG_08f052e7, where the data point for Li6PS5I at 1000/T ≈ 3.35 K⁻¹ corresponds to approximately 7.1 x 10^-7 S/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Header Images",
+        "section": "Available online at www.sciencedirect.com"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 7.1e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_0e6ed89f) for the Li6PS5Cl sample at 1000/T ≈ 2.68 K⁻¹.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Header Image",
+        "section": "Available online at www.sciencedirect.com"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "-40°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_0e6ed89f) for the Li6PS5Cl sample at 1000/T ≈ 4.29 K⁻¹.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Header Image",
+        "section": "Available online at www.sciencedirect.com"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -40,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0067",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.65Li0.05Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.05"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S/cm",
+      "measurement_temperature": "500 K",
+      "reason": "Extracted from the Arrhenius plot in Fig. 2 for LLMW with p = 0.05 at approximately 1000/T = 2.0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "La2O3 (4 N), Li2CO3 (3 N), WO3 (4 N) and MgO (3 N) starting materials.",
+      "processing_method": "Solid-state reaction: calcined at 1373 K for 12 h (twice), sintered at 1423 K for 6 h, furnace cooled. | Synthesized via conventional solid-state reaction using La2O3, Li2CO3, WO3, and MgO (calcined twice at 1373 K for 12 h and sintered at 1423 K for 6 h). The resulting sintered samples were then reheated at 1373 K for 30 min and quenched in liquid nitrogen to obtain the LLMWq phase.",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Sample Synthesis and Preparation",
+        "section": "2. Experimental"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.65Li0.05Mg0.5W0.5O3",
+      "_original_name": "(La2/3-1/3pLip)(Mg1/2W1/2)O3",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 226.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0067",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.63Li0.11Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "500 K",
+      "reason": "Extracted from the Arrhenius plot in Fig. 2 for LLMW with p = 0.11 at approximately 1000/T = 2.0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "La2O3 (4 N), Li2CO3 (3 N), WO3 (4 N) and MgO (3 N) starting materials.",
+      "processing_method": "Solid-state reaction: calcined at 1373 K for 12 h (twice), sintered at 1423 K for 6 h, furnace cooled. | Synthesized via conventional solid-state reaction using La2O3, Li2CO3, WO3, and MgO (calcined twice at 1373 K for 12 h and sintered at 1423 K for 6 h). The resulting sintered samples were then reheated at 1373 K for 30 min and quenched in liquid nitrogen to obtain the LLMWq phase.",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Sample Synthesis and Preparation",
+        "section": "2. Experimental"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.63Li0.11Mg0.5W0.5O3",
+      "_original_name": "(La2/3-1/3pLip)(Mg1/2W1/2)O3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 226.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0067",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.62Li0.14Mg0.5W0.5O3",
+        "acronym": "LLMW",
+        "proportion": "p = 0.14"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-4 S/cm",
+      "measurement_temperature": "500 K",
+      "reason": "Extracted from the Arrhenius plot in Fig. 2 for LLMW with p = 0.14 at approximately 1000/T = 2.0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "La2O3 (4 N), Li2CO3 (3 N), WO3 (4 N) and MgO (3 N) starting materials.",
+      "processing_method": "Solid-state reaction: calcined at 1373 K for 12 h (twice), sintered at 1423 K for 6 h, furnace cooled. | Synthesized via conventional solid-state reaction using La2O3, Li2CO3, WO3, and MgO (calcined twice at 1373 K for 12 h and sintered at 1423 K for 6 h). The resulting sintered samples were then reheated at 1373 K for 30 min and quenched in liquid nitrogen to obtain the LLMWq phase.",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Sample Synthesis and Preparation",
+        "section": "2. Experimental"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.62Li0.14Mg0.5W0.5O3",
+      "_original_name": "(La2/3-1/3pLip)(Mg1/2W1/2)O3",
+      "_norm_cond": 0.0002,
+      "_norm_temp": 226.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0105",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ln0.5Li0.5TiO3",
+        "acronym": null,
+        "proportion": "Ln=La, Pr, Nd and Sm"
+      },
+      "ionic_conductivity_S_per_cm": "10^-3 S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from Figure 4 (referenced in sentence 0105) which plots activation energy vs perovskite parameter for various lithium-ion conductors. LLTO (Ln0.5Li0.5TiO3) is a well-known reference material in this context with typical room temperature conductivity around 10^-3 S/cm.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0100",
+        "title": "X-ray Diffraction and Initial Structural Characterization",
+        "section": "3. Results and discussion"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ln0.5Li0.5TiO3",
+      "_original_name": "Ln0.5Li0.5TiO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0105",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "0.5CaTiO3-0.5LiTaO3",
+        "acronym": null,
+        "proportion": "0.5:0.5"
+      },
+      "ionic_conductivity_S_per_cm": "10^-5 S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the comparative data mentioned in sentence 0105 and Figure 4. This specific solid solution is a known lithium-ion conductor cited for structural comparison.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0100",
+        "title": "X-ray Diffraction and Initial Structural Characterization",
+        "section": "3. Results and discussion"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "0.5CaTiO3-0.5LiTaO3",
+      "_original_name": "0.5CaTiO3-0.5LiTaO3",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0105",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.25Na0.20Li0.05TaO3",
+        "acronym": null,
+        "proportion": "x=0.25, y=0.20"
+      },
+      "ionic_conductivity_S_per_cm": "10^-6 S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the comparative data mentioned in sentence 0105 and Figure 4. This specific composition is used as a reference point for the relationship between activation energy and perovskite parameters.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0100",
+        "title": "X-ray Diffraction and Initial Structural Characterization",
+        "section": "3. Results and discussion"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.25Na0.20Li0.05TaO3",
+      "_original_name": "La0.25Na0.20Li0.05TaO3",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0026",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.55Li0.35TiO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for La0.55Li0.35TiO3 from the text which explicitly states the value and temperature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via conventional solid-state reaction using La2O3 (4N), Li2CO3 (3N), WO3 (4N), and MgO (3N) as starting materials. Stoichiometric mixtures were ground, pelletized, and calcined at 1373 K for 12 h. The pellets were then reground, pelletized, and calcined again at 1373 K for 12 h. After further regrinding and pressing into 7 mm diameter pellets, they were sintered at 1423 K for 6 h and furnace-cooled. [Inferred]",
+      "source_node": {
+        "node_id": "0024",
+        "title": "Introduction to Perovskite-Type Li-ion Conductors",
+        "section": "1. Introduction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.55Li0.35TiO3",
+      "_original_name": "La0.55Li0.35TiO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    }
+  ]
+}

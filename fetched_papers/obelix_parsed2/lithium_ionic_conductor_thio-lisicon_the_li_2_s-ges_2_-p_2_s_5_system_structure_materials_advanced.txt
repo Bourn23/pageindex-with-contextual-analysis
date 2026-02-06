@@ -1,0 +1,19 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-13    | None     | 1.78e-06   | None       | N/A        | ❌ MISSING
+GT-14    | None     | 0.000175   | None       | N/A        | ❌ MISSING
+GT-15    | None     | 0.000654   | None       | N/A        | ❌ MISSING
+GT-16    | None     | 0.00154    | None       | N/A        | ❌ MISSING
+GT-17    | None     | 0.00174    | None       | N/A        | ❌ MISSING
+GT-18    | EX-4     | 0.0022     | 0.0022     | 0.0000     | ✅ Accurate
+GT-19    | None     | 0.000555   | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      14.29%
+Precision:   6.25%
+F1 Score:    8.70
+Numeric Accuracy: 100.00%
+Avg Log10 Error: 0.0000 (Lower is better)
+================================================================================

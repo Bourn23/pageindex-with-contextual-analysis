@@ -1,0 +1,114 @@
+{
+  "title": "ln(\u03c3T) vs 1000/T for different compositions (x)",
+  "xAxis": {
+    "label": "1000T\u207b\u00b9",
+    "unit": "K\u207b\u00b9"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T)",
+    "unit": "S cm\u207b\u00b9 K\u207b\u00b9"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.67,
+      "yValue": 1.8
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.86,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.06,
+      "yValue": -0.1
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.36,
+      "yValue": -1.3
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.67,
+      "yValue": 1.55
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.86,
+      "yValue": 0.6
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.06,
+      "yValue": -0.35
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.36,
+      "yValue": -1.55
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.67,
+      "yValue": 1.35
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.86,
+      "yValue": 0.4
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.06,
+      "yValue": -0.55
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.36,
+      "yValue": -1.7
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.67,
+      "yValue": 1.1
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.86,
+      "yValue": 0.2
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.06,
+      "yValue": -0.75
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.36,
+      "yValue": -1.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.67,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.86,
+      "yValue": 0.05
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.06,
+      "yValue": -0.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.36,
+      "yValue": -1.95
+    }
+  ],
+  "summary": "The figure displays the natural logarithm of the product of conductivity (\u03c3) and temperature (T) as a function of the inverse of temperature (1000/T) for five different compositions, denoted by 'x' values ranging from 0 to 0.30. All data series exhibit a linear decreasing trend, characteristic of Arrhenius-type behavior for electrical conductivity. Higher values of 'x' generally correspond to lower ln(\u03c3T) values across the entire temperature range, indicating a decrease in conductivity with increasing 'x'. The approximately parallel nature of the lines suggests similar activation energies for conduction across these different compositions."
+}

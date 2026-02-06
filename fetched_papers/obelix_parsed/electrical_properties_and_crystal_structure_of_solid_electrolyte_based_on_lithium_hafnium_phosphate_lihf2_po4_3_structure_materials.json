@@ -1,0 +1,1080 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 110601,
+    "total_output_tokens": 14926,
+    "total_cost_usd": 0.10007849999999996,
+    "call_counts": {
+      "gemini-3-flash-preview": 49
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_structure.json",
+  "extraction_stats": {
+    "total_nodes": 69,
+    "raw_extracted": 35,
+    "after_dedup": 33,
+    "time_elapsed": 522.3287250995636,
+    "valid_count": 33,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 12,
+      "medium": 21,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 32,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 13,
+    "from_image_nodes": 22,
+    "final_count": 33
+  },
+  "material_count": 33,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_df88af7f) for the Li6PS5Cl sample at 25°C (approx. 3.35 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction/Image only)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_df88af7f) for the Li6PS5Cl sample at 100°C (approx. 2.68 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction/Image only)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "-25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_df88af7f) for the Li6PS5Cl sample at -25°C (approx. 4.03 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction/Image only)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Image",
+        "section": "Introduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -25
+    },
+    {
+      "source_sentence_id": "0167",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 6 caption and data points for y=0 at the optimal sintering temperature (~1000°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with Li2O additive.",
+      "processing_method": "Sintered at various temperatures (800-1100°C). | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder (particle size < 1 µm) was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air at temperatures up to 1593 K.",
+      "source_node": {
+        "node_id": "0164",
+        "title": "Caption for Figure 6",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "LiHf2(PO4)3 + yLi2O",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0167",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 + 0.1Li2O",
+        "acronym": null,
+        "proportion": "y=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 6 caption and data points for y=0.1 at the optimal sintering temperature (~900°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with Li2O additive.",
+      "processing_method": "Sintered at various temperatures (800-1100°C). | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and added Li2O were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air (porosity decreased at 1173 K; maximum conductivity for y=0.1 obtained at 1298 K).",
+      "source_node": {
+        "node_id": "0164",
+        "title": "Caption for Figure 6",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 + 0.1Li2O",
+      "_original_name": "LiHf2(PO4)3 + yLi2O",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0167",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 + 0.2Li2O",
+        "acronym": null,
+        "proportion": "y=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 6 caption and data points for y=0.2 at the optimal sintering temperature (~850°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with Li2O additive.",
+      "processing_method": "Sintered at various temperatures (800-1100°C). | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and added Li2O were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air (porosity decreased at 1173 K; maximum conductivity obtained at ca. 1298 K).",
+      "source_node": {
+        "node_id": "0164",
+        "title": "Caption for Figure 6",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 + 0.2Li2O",
+      "_original_name": "LiHf2(PO4)3 + yLi2O",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0167",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 + 0.3Li2O",
+        "acronym": null,
+        "proportion": "y=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-4 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 6 caption and data points for y=0.3 at the optimal sintering temperature (~850°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with Li2O additive.",
+      "processing_method": "Sintered at various temperatures (800-1100°C). | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and added Li2O were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air (porosity decreased at 1173 K; maximum conductivity obtained at ca. 1298 K).",
+      "source_node": {
+        "node_id": "0164",
+        "title": "Caption for Figure 6",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 + 0.3Li2O",
+      "_original_name": "LiHf2(PO4)3 + yLi2O",
+      "_norm_cond": 0.00012,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0167",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 + 0.4Li2O",
+        "acronym": null,
+        "proportion": "y=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Figure 6 caption and data points for y=0.4 at the optimal sintering temperature (~850°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with Li2O additive.",
+      "processing_method": "Sintered at various temperatures (800-1100°C). | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and added Li2O were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air (porosity decreased at 1173 K; maximum conductivity obtained at ca. 1298 K).",
+      "source_node": {
+        "node_id": "0164",
+        "title": "Caption for Figure 6",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 + 0.4Li2O",
+      "_original_name": "LiHf2(PO4)3 + yLi2O",
+      "_norm_cond": 0.0001,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 (M3+ substituted)",
+        "acronym": null,
+        "proportion": "M3+ substituted"
+      },
+      "ionic_conductivity_S_per_cm": "1.7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted maximum conductivity value for the LiHf2(PO4)3 system described in the study.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ceramic electrolyte based on LiHf2(PO4)3 with partial substitution of Hf4+ site by M3+ ion (M=Cr, Fe, Sc, In, Lu, or Y).",
+      "processing_method": "Addition of lithium compound and partial substitution of Hf4+ site by M3+ ion followed by heating above 1173 K. | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 (M=Cr, Fe, Sc, In, Lu, or Y) were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air at temperatures above 1293 K (typically 1393 K for densification).",
+      "source_node": {
+        "node_id": "0237",
+        "title": "Summary of Findings and Application Prospects",
+        "section": "*3.3. Li~+xMxHf2\\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 (M3+ substituted)",
+      "_original_name": "LiHf2(PO4)3",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0144",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3 + 0.1Li2O",
+        "acronym": null,
+        "proportion": "0.1Li2O"
+      },
+      "ionic_conductivity_S_per_cm": "1.1 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted the maximum conductivity value for the LiHf2(PO4)3+0.1Li2O system from sentence 0144, which specifies the value and the sintering temperature. The measurement temperature is derived from the section title (Sentence 0134).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type phase",
+      "processing_method": "sintered at 1298 K | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and added Li2O were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA solution, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air (maximum conductivity for y=0.1 obtained at 1298 K).",
+      "source_node": {
+        "node_id": "0133",
+        "title": "298K Total Conductivity and Enhancing Factors",
+        "section": "*3.2. LiHf2(P04)3 + yLi20 system*"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3 + 0.1Li2O",
+      "_original_name": "LiHf2(PO4)3+0.1Li2O",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0215",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Fe0.2Hf1.8(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.7 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "The text explicitly states the maximum conductivity value for the specific composition Li1.2Fe0.2Hf1.8(PO4)3 at 298 K.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium hafnium phosphate with iron substitution.",
+      "processing_method": "Sintered pellet (implied by context of porosity and sinterability discussion). | Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and Fe2O3 were mixed and reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was mixed with 3 wt% PVA, pressed into pellets at 1 x 10^8 Pa, and sintered for 2h in air at temperatures above 1293 K to achieve maximum conductivity.",
+      "source_node": {
+        "node_id": "0212",
+        "title": "Electrical Conductivity Measurements and Analysis",
+        "section": "*3.3. Li~+xMxHf2\\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "_original_name": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.3e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted baseline value for x=0 from the log scale plot at 298 K.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Unsubstituted lithium hafnium phosphate",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "LiHf2(PO4)3",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.32e-4 S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Estimated from the 1293 K series at 25°C (1000/T ≈ 3.35) where log(σT) ≈ -1.9.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1293 K",
+      "processing_method": "Sintered at 1293 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1293 K",
+      "_norm_cond": 0.000132,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.72e-5 S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Estimated from the 1393 K series at 25°C (1000/T ≈ 3.35) where log(σT) ≈ -2.2.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1393 K",
+      "processing_method": "Sintered at 1393 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1393 K",
+      "_norm_cond": 6.72e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.34e-7 S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Estimated from the 1173 K series at 25°C (1000/T ≈ 3.35) where log(σT) ≈ -4.1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1173 K",
+      "processing_method": "Sintered at 1173 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1173 K",
+      "_norm_cond": 8.34e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.66e-7 S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Estimated from the 1073 K series at 25°C (1000/T ≈ 3.35) where log(σT) ≈ -4.8.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1073 K",
+      "processing_method": "Sintered at 1073 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1073 K",
+      "_norm_cond": 1.66e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.3e-3 S cm⁻¹",
+      "measurement_temperature": "300 °C",
+      "reason": "Estimated from the 1293 K series at 300°C (1000/T ≈ 1.74) where log(σT) ≈ 0.48.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1293 K",
+      "processing_method": "Sintered at 1293 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1293 K",
+      "_norm_cond": 0.0053,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Na4Zr2Si3O12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.4e-3 S cm⁻¹",
+      "measurement_temperature": "300 °C",
+      "reason": "Estimated from the 1073 K series at 300°C (1000/T ≈ 1.74) where log(σT) ≈ 0.4.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON ceramic electrolyte sintered at 1073 K",
+      "processing_method": "Sintered at 1073 K | Synthesized according to Ref [1, 2] (details not in text).",
+      "source_node": {
+        "node_id": "0152",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Na4Zr2Si3O12",
+      "_original_name": "Na4Zr2Si3O12 sintered at 1073 K",
+      "_norm_cond": 0.0044,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "3.16e-9 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1175 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1175 K | Sintered at 1300 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 3.16e-09,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.00e-9 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1400 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1400 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 2e-09,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "1.58e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1450 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1450 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 1.58e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.24e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1500 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1500 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 2.24e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "3.55e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1550 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1550 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 3.55e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": "LHP",
+        "proportion": "y = 0"
+      },
+      "ionic_conductivity_S_per_cm": "7.94e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated from the y=0 series at sintering temperature approximately 1600 K.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition labeled as y=0 in the plot.",
+      "processing_method": "Sintered at 1600 K | Solid-state reaction: Starting materials Li2CO3, HfO2, and (NH4)2HPO4 were reacted in a platinum crucible at 1173 K for 2h in air. The resulting material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. The powder was pressed into pellets with 3 wt% PVA at 1 x 10^8 Pa and sintered for 2h in air.",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "y = 0",
+      "_norm_cond": 7.94e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Hf1.8Cr0.2(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted point for Cr substitution at x=0.2 from the lower data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chromium substituted lithium hafnium phosphate (Cr label)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and Cr2O3 were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets pressed with 3 wt% PVA were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Hf1.8Cr0.2(PO4)3",
+      "_original_name": "Li1+xHf2-xCrx(PO4)3",
+      "_norm_cond": 2.5e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Hf1.7Cr0.3(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-7 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted point for Cr substitution at x=0.3 from the lower data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chromium substituted lithium hafnium phosphate (Cr label)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and Cr2O3 were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets pressed with 3 wt% PVA were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Hf1.7Cr0.3(PO4)3",
+      "_original_name": "Li1+xHf2-xCrx(PO4)3",
+      "_norm_cond": 5e-07,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Hf1.9M0.1(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated highest value at x=0.1 from the cluster of dopant points.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Substituted lithium hafnium phosphate (upper cluster)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 (M=Cr, Fe, Sc, In, Lu, or Y) were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Hf1.9M0.1(PO4)3",
+      "_original_name": "Li1+xHf2-xMx(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Hf1.7M0.3(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated highest value at x=0.3 from the upper data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Substituted lithium hafnium phosphate (upper cluster)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 (M=Cr, Fe, Sc, In, Lu, or Y) were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Hf1.7M0.3(PO4)3",
+      "_original_name": "Li1+xHf2-xMx(PO4)3",
+      "_norm_cond": 0.00014,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.4Hf1.6M0.4(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated highest value at x=0.4 from the upper data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Substituted lithium hafnium phosphate (upper cluster)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 (M=Cr, Fe, Sc, In, Lu, or Y) were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.4Hf1.6M0.4(PO4)3",
+      "_original_name": "Li1+xHf2-xMx(PO4)3",
+      "_norm_cond": 0.00014,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Hf1.5M0.5(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted upper-bound point at x=0.5 showing significant conductivity drop.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Substituted lithium hafnium phosphate at solubility limit",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 (M=Cr, Fe, Sc, In, Lu, or Y) were reacted in a platinum crucible at 1173 K for 2h in air. The material was wet ball-milled in methanol for 6h, reacted again at 1173 K for 2h in air, and reground. Pellets were sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Hf1.5M0.5(PO4)3",
+      "_original_name": "Li1+xHf2-xMx(PO4)3",
+      "_norm_cond": 1.3e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted cited conductivity value for the LiTi2(PO4)3 system used as a comparison.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [15] (details not in text).",
+      "source_node": {
+        "node_id": "0237",
+        "title": "Summary of Findings and Application Prospects",
+        "section": "*3.3. Li~+xMxHf2\\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Sintered series (Upward Triangle)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.12e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Peak conductivity for the upward triangle series at ~1280 K sintering temperature.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Upward triangle series (highest conductivity group)",
+      "processing_method": "Sintered at 1280 K | Solid-state reaction: This series (y=0.1) was prepared using Li2CO3, HfO2, and (NH4)2HPO4. Process involved two 1173 K reactions for 2h each, separated by 6h wet ball-milling in methanol. Pellets were sintered for 2h in air; data for this series corresponds to samples sintered at various temperatures (max conductivity reached at 1298 K).",
+      "source_node": {
+        "node_id": "0165",
+        "title": "_page_4_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Hf1.8M0.2(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Estimated highest value at x=0.2 from the upper data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Substituted lithium hafnium phosphate (upper cluster)",
+      "processing_method": "Solid-state reaction: Starting materials Li2CO3, HfO2, (NH4)2HPO4, and M2O3 were reacted in a platinum crucible at 1173 K for 2h in air, followed by 6h wet ball-milling in methanol. The process was repeated (1173 K for 2h), and pellets were pressed with PVA and sintered for 2h in air at temperatures above 1293 K.",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Hf1.8M0.2(PO4)3",
+      "_original_name": "Li1+xHf2-xMx(PO4)3",
+      "_enriched": true
+    }
+  ]
+}

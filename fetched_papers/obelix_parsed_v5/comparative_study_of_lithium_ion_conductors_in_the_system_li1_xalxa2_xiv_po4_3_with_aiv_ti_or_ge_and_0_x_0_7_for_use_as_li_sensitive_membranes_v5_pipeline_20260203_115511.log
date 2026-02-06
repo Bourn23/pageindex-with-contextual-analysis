@@ -1,0 +1,152 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes_v5_pipeline_20260203_115511.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 6 tables from Markdown text...
+       - Replaced 'Table 1' in section '3.1 Experimental'
+       - Replaced 'Table 2' in section '3.2.1 Morphological properties'
+       - Replaced 'Table 3' in section '3.2.2 Structural properties'
+       - Replaced 'Table 4' in section '3.2.2 Structural properties'
+       - Replaced 'Table 5' in section '3.2.2 Structural properties'
+       - Replaced 'Table 8' in section '4 Ionic Selectivity Properties'
+   --- Document: Comparative Study of Lithium Ion Conductors in the System $\text{Li}_{1+x}\text{Al}_x\text{A}_{2-x}^{\text{IV}}$ (PO<sub>4</sub>)<sub>3</sub> with $\text{A}^{\text{IV}} = \text{Ti}$ or Ge and $0 \le x \le 0.7$ for Use as $\text{Li}^+$ Sensitive Membranes
+   --- Found: 15 Sections
+   --- Found: 11 Figures, 6 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section '2.1 Sol–gel powders' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '2.3 Ceramic fabrication' contains:
+       - 1 Images: ['Fig 1']
+       - 2 Tables: ['Table 2', 'Table 1']
+
+   >>> Section '3.1 Experimental' contains:
+       - 1 Tables: ['Table 1']
+
+   >>> Section '3.2.1 Morphological properties' contains:
+       - 3 Images: ['Fig 4', 'Fig 3', 'Fig 2']
+       - 1 Tables: ['Table 2']
+
+   >>> Section '3.2.2 Structural properties' contains:
+       - 6 Images: ['Fig 4', 'Fig 6', 'Fig 3', 'Fig 5', 'Fig 7', 'Fig 3']
+       - 3 Tables: ['Table 3', 'Table 5', 'Table 4']
+
+   >>> Section '3.2.3 Electrical properties' contains:
+       - 4 Images: ['Fig 9', 'Fig 10', 'Fig 7', 'Fig 8']
+
+   >>> Section '4 Ionic Selectivity Properties' contains:
+       - 1 Images: ['Fig 6']
+       - 1 Tables: ['Table 8']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: Acknowledgements
+   [91m[Warning][0m Skipping section: References
+   ... Processing 30 items (Text + Images) simultaneously ...
+   🔍 page_1_figure_16.jpeg (Fig 1): Detecting subplot...
+   🔍 page_3_figure_13.jpeg (Fig 4): Detecting subplot...
+   🔍 page_3_picture_10.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_3_figure_13.jpeg (Fig 4): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_2.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_1_figure_16.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_picture_9.jpeg (Fig 3): Detecting subplot...
+   🔍 page_4_figure_14.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_3_picture_10.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_7.jpeg (Fig 5): Detecting subplot...
+   ✂️ page_4_figure_14.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_14.jpeg (Fig 6): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_14.jpeg (Fig 6): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_5_figure_12.jpeg (Fig 8): Detecting subplot...
+   ✂️ page_3_picture_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 2): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_picture_2.jpeg (Fig 2): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_5_figure_7.jpeg (Fig 7): Detecting subplot...
+   ✂️ page_4_figure_7.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_7.jpeg (Fig 5): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_7.jpeg (Fig 5): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_6_figure_15.jpeg (Fig 10): Detecting subplot...
+   [93m[Skip][0m page_3_picture_9.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_8.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_5_figure_7.jpeg (Fig 7): No ionic conductivity measurements detected by SciFigureParser.
+   [93m[Skip][0m page_6_figure_8.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   📊 page_5_figure_12.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_6_figure_15.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ Table 8: , one can observe a slight increase of  $K_{\text{Li,Na}}^{\text{Pot}}$  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.: Found 12 points
+   ✓ page_5_figure_12.jpeg (Fig 8): Found 15 points total via SciFigureParser
+   ✓ page_6_figure_15.jpeg (Fig 10): Found 18 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 56 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 60 measurements
+      - Skipped (no data): 24 images
+      - Failed: 0 items
+
+Done! Extracted 60 points.
+Saved to: fetched_papers/obelix_md2/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         19
+Total Input:         17,053 tokens
+Total Output:        25,623 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0692
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 19 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0955-2219(99)00055-2
+GT-337: Li6.6Al0.6Ge11.4P18.0O72.0 | 2.9e-06 S/cm
+GT-338: Li7.8Al1.8Ge10.2P18.0O72.0 | 3.9e-05 S/cm
+GT-339: Li9.0Al3.0Ge9.0P18.0O72.0 | 0.00028 S/cm
+GT-340: Li9.6Al3.6Ge8.4P18.0O72.0 | 0.00014 S/cm
+GT-341: Li6.6Al0.6Ti11.4P18.0O72.0 | 3e-05 S/cm
+GT-343: Li9.6Al3.6Ti8.4P18.0O72.0 | 2.3e-05 S/cm
+--- Starting Validation ---
+Comparing 6 GT items vs 1085 Extracted items...
+
+============================================================
+VALIDATION SCORE: 16.7%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-337     | ❌ MISSING/BAD   | No extracted entry found with matching composition (Li1.1Al0.1Ge1.9(PO4)3) and conductivity (2.9e-06 S/cm) at room temperature.
+GT-338     | ❌ MISSING/BAD   | Extracted entries with matching composition (Li1.3Al0.3Ge1.7(PO4)3) have significantly different conductivity values (5.6e-05 S/cm and 0.00016 S/cm) compared to the ground truth (3.9e-05 S/cm) at room temperature.
+GT-339     | ❌ MISSING/BAD   | No extracted entry found with matching composition (Li1.5Al0.5Ge1.5(PO4)3).
+GT-340     | ❌ MISSING/BAD   | No extracted entry found with matching composition (Li1.6Al0.6Ge1.4(PO4)3).
+GT-341     | ✅ MATCH         | Composition (Li1.1Al0.1Ti1.9(PO4)3) and conductivity (3e-05 S/cm) are an exact match at room temperature (25.0C).
+GT-343     | ❌ MISSING/BAD   | Extracted entry with matching composition (Li1.6Al0.6Ti1.4(PO4)3) has a significantly different conductivity value (0.001 S/cm) compared to the ground truth (2.3e-05 S/cm) at room temperature.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes
+[0;34m[INFO][0m DOI: 10.1016/s0955-2219(99)00055-2
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes_v5_pipeline_20260203_115511.log
+

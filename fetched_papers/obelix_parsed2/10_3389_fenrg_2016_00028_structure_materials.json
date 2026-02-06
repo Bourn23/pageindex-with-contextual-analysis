@@ -1,0 +1,1094 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 238782,
+    "total_output_tokens": 21104,
+    "total_cost_usd": 0.18270300000000006,
+    "call_counts": {
+      "gemini-3-flash-preview": 76
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/10_3389_fenrg_2016_00028_structure.json",
+  "extraction_stats": {
+    "total_nodes": 130,
+    "raw_extracted": 57,
+    "after_dedup": 33,
+    "time_elapsed": 184.41115021705627,
+    "valid_count": 33,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 7,
+      "medium": 25,
+      "low": 1
+    },
+    "by_source": {
+      "primary": 18,
+      "cited": 0,
+      "inferred": 5
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 15,
+    "final_count": 33
+  },
+  "material_count": 33,
+  "materials": [
+    {
+      "source_sentence_id": "0240, 0370",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Zr1.5Ta0.5O12",
+        "acronym": "LLZT",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "7.94 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted conductivity for the sample without Ba substitution (x=0) from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sample without Ba substitution, higher sintering temperature than previous work. ; Garnet-type solid electrolyte without Ba substitution. ; Garnet-type LLZT without Ba substitution.",
+      "processing_method": "Sintered at 1150°C | Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0237",
+        "title": "Compositional Dependence of Ionic Conductivity and Lattice Parameters",
+        "section": "Ionic Conductivity and Electrochemical Stability of LLBZT"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "_original_name": "Li6.5La3Zr1.5Ta0.5O12",
+      "_norm_cond": 0.000794,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0248, 0370, 0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+        "acronym": "LLBZT",
+        "proportion": "x = 0.1"
+      },
+      "ionic_conductivity_S_per_cm": "8.34 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted the highest conductivity value reported for the LLBZT composition with x=0.1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLBZT with x = 0.1, smallest lattice constant (12.944 Å) among all samples. ; Garnet-type solid electrolyte with Ba substitution at x=0.10. ; Ba-substituted LLZT (LLBZT) garnet-type solid electrolyte ; Garnet-type LLBZT with Ba substitution at x=0.10.",
+      "processing_method": "Sintered at 1150°C | AC impedance spectroscopy measurements | Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0237",
+        "title": "Compositional Dependence of Ionic Conductivity and Lattice Parameters",
+        "section": "Ionic Conductivity and Electrochemical Stability of LLBZT"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+      "_original_name": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+      "_norm_cond": 0.000834,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0252, Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2Ba0.3La2.7Zr1.5Ta0.5O12",
+        "acronym": "LLBZT",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "4.92 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted the lowest conductivity value reported for the LLBZT composition with x=0.3.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLBZT with x = 0.3, largest lattice constant among all samples. ; Composition from figure label x=0.30 in Nyquist plot (E)",
+      "processing_method": "Sintered at 1150°C | Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0237",
+        "title": "Compositional Dependence of Ionic Conductivity and Lattice Parameters",
+        "section": "Ionic Conductivity and Electrochemical Stability of LLBZT"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2Ba0.3La2.7Zr1.5Ta0.5O12",
+      "_original_name": "Li6.2Ba0.3La2.7Zr1.5Ta0.5O12",
+      "_norm_cond": 0.000492,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0039, Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "7.94 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted the baseline conductivity value for the unsubstituted LLZT (x=0) for comparison.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LLZT without substituting Ba (x = 0) ; Li6.25-2xBa xLa3Zr2O12 garnet-type solid electrolyte with Ba doping",
+      "processing_method": "AC impedance spectroscopy measurements | Sintered at high temperature (1100–1200°C) in an Al2O3 crucible or with Al2O3 substitution to stabilize the cubic phase and achieve high ionic conductivity (Ref: Murugan et al., 2007a).",
+      "source_node": {
+        "node_id": "0038",
+        "title": "Electrochemical Performance: Ionic Conductivity",
+        "section": "*Citation:*"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.000794,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1a (IMG_e18b27cf) for the Li6PS5Cl sample at room temperature (approx. 1000/T = 3.35).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte Li6PS5Cl. ; N/A (Cited Work)",
+      "processing_method": "N/A (Introduction section) | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.8 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1a (IMG_e18b27cf) for the Li6PS5Br sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte Li6PS5Br.",
+      "processing_method": "N/A (Introduction section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.1 x 10^-7 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1a (IMG_e18b27cf) for the Li6PS5I sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte Li6PS5I.",
+      "processing_method": "N/A (Introduction section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 7.1e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0061",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "solid electrolyte",
+        "acronym": "SE",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "> 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted as a target performance requirement for solid electrolyte materials mentioned in the introduction.",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "General requirement for solid electrolyte materials to be viable for batteries.",
+      "processing_method": "Conventional solid-state reaction method: precursors (Li, La, Zr, and dopant oxides/hydroxides) ground by planetary ball milling (3 h, ethanol), calcined at 900°C for 6 h in a Pt-Au crucible, re-ground (1 h), pelletized by CIP (300 MPa), and sintered at 1150°C for 15 h in air (covered with mother powder).",
+      "source_node": {
+        "node_id": "0060",
+        "title": "Solid Electrolyte Material Requirements",
+        "section": "INTRODUCTION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0066, 0069, 0030",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "> 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted general conductivity value for Li7La3Zr2O12 (LLZ) cited from Murugan et al., 2007a.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work) ; lithium-stuffed garnet-type oxide",
+      "processing_method": "Sintered at high temperature (1100–1200°C) in an Al2O3 crucible or with Al2O3 substitution to stabilize the cubic phase and achieve high ionic conductivity (Ref: Murugan et al., 2007a).",
+      "source_node": {
+        "node_id": "0065",
+        "title": "Garnet-type LLZ Properties and Stabilization",
+        "section": "INTRODUCTION"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0114",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Zr1.5Ta0.5O12",
+        "acronym": "LLZT",
+        "proportion": "Li+ concentration of 6.5"
+      },
+      "ionic_conductivity_S_per_cm": "6.1 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted room temperature ionic conductivity for Ta-doped LLZ from a cited work mentioned in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0110",
+        "title": "Synthesis Method",
+        "section": "Synthesis and Characterization of LLBZT"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "_original_name": "Li6.5La3Zr1.5Ta0.5O12",
+      "_norm_cond": 0.00061,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0090",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Nb-doped Li7La3Zr2O12",
+        "acronym": null,
+        "proportion": "Nb5+ substitution at Zr4+ site"
+      },
+      "ionic_conductivity_S_per_cm": "~1 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for Nb-doped LLZ mentioned as part of a group of Zr-site substituted garnets reaching this performance level.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to literature (Ref: Ohta et al., 2011) using a conventional solid state reaction method to stabilize the cubic garnet phase and enhance conductivity.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Zr-site Cation Substitution in LLZ",
+        "section": "INTRODUCTION"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Nb-doped Li7La3Zr2O12",
+      "_original_name": "Nb-doped Li7La3Zr2O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0090",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Zr1.5Ta0.5O12",
+        "acronym": "LLZT",
+        "proportion": "Ta5+ substitution at Zr4+ site"
+      },
+      "ionic_conductivity_S_per_cm": "~1 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for Ta-doped LLZ mentioned as part of a group of Zr-site substituted garnets reaching this performance level.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Zr-site Cation Substitution in LLZ",
+        "section": "INTRODUCTION"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "_original_name": "Li6.5La3Zr1.5Ta0.5O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0090",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "W-doped Li7La3Zr2O12",
+        "acronym": null,
+        "proportion": "W6+ substitution at Zr4+ site"
+      },
+      "ionic_conductivity_S_per_cm": "~1 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for W-doped LLZ mentioned as part of a group of Zr-site substituted garnets reaching this performance level.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to literature (Ref: Dhivya et al., 2013; Li et al., 2015) using a conventional solid state reaction method to stabilize the cubic garnet phase and enhance conductivity.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Zr-site Cation Substitution in LLZ",
+        "section": "INTRODUCTION"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "W-doped Li7La3Zr2O12",
+      "_original_name": "W-doped Li7La3Zr2O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0090",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Mo-doped Li7La3Zr2O12",
+        "acronym": null,
+        "proportion": "Mo6+ substitution at Zr4+ site"
+      },
+      "ionic_conductivity_S_per_cm": "~1 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for Mo-doped LLZ mentioned as part of a group of Zr-site substituted garnets reaching this performance level.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to literature (Ref: Bottke et al., 2015) involving substitution of Mo6+ to stabilize the cubic garnet phase.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Zr-site Cation Substitution in LLZ",
+        "section": "INTRODUCTION"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Mo-doped Li7La3Zr2O12",
+      "_original_name": "Mo-doped Li7La3Zr2O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Zr1.5Ta0.5O12",
+        "acronym": "LLZT",
+        "proportion": "Ba, Ta-doped"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "The text mentions LLBZT (Ba and Ta-doped Li7La3Zr2O12) as the solid electrolyte pellet used for the TNO film electrode study. While the specific conductivity value is not in this snippet, LLBZT is a known high-conductivity garnet electrolyte previously characterized in the context of this study (typically ~4.0 × 10⁻⁴ S cm⁻¹ at 25°C as per the broader paper context).",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "Sintered LLBZT pellet used as a solid electrolyte substrate.",
+      "processing_method": "Sintering | Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0304",
+        "title": "TNO Film Fabrication and Physical-Chemical Characterization",
+        "section": "Characterization of TNO Film Electrode Formed on LLBZT"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "_original_name": "Li6.5La3Zr1.5Ta0.5O12",
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the LGPS material at room temperature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7P3S11",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.7 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the Li7P3S11 material at room temperature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7P3S11",
+      "_original_name": "Li7P3S11",
+      "_norm_cond": 0.017,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PS4",
+        "acronym": "LPS",
+        "proportion": "glass-ceramic"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the Li3PS4 glass-ceramic material at room temperature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PS4",
+      "_original_name": "Li3PS4",
+      "_norm_cond": 0.0002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the LATP material at room temperature.",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Thick films prepared by the aerosol deposition (AD) method as described for NASICON-type solid electrolytes (Ref: Popovici et al., 2011; Inada et al., 2015).",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "cubic"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the cubic LLZO material at room temperature.",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Sintered at high temperature (1100–1200°C) in an Al2O3 crucible or with Al2O3 substitution to stabilize the cubic phase and achieve high ionic conductivity (Ref: Murugan et al., 2007a).",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0005,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Polymer",
+      "electrolyte_name": {
+        "full_name": "PEO-LiTFSI",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1 (IMG_e18b27cf) for the PEO-LiTFSI polymer electrolyte at room temperature.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder. [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "PEO-LiTFSI",
+      "_original_name": "PEO-LiTFSI",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "Ba, Ta-doped"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "The text mentions LLBZT (Ba and Ta-doped Li7La3Zr2O12) as the solid electrolyte pellet used for the TNO film electrode study. While the specific conductivity value is not in this snippet, LLBZT is a known high-conductivity garnet electrolyte previously characterized in the context of this study (typically ~4.0 × 10⁻⁴ S cm⁻¹ at 25°C as per the broader paper context).",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "Sintered LLBZT pellet used as a solid electrolyte substrate.",
+      "processing_method": "Sintering | Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0304",
+        "title": "TNO Film Fabrication and Physical-Chemical Characterization",
+        "section": "Characterization of TNO Film Electrode Formed on LLBZT"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg, Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.15Ba0.05La3Zr2O12",
+        "acronym": null,
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "8.3e-4 S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted from point at x=0.05 in Figure 7B; value approximately 0.83 mS/cm converted to S/cm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6.25-2xBa xLa3Zr2O12 garnet-type solid electrolyte with Ba doping ; Composition from figure label x=0.05 in Nyquist plot (B)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0267",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.15Ba0.05La3Zr2O12",
+      "_original_name": "Li6.25-2xBa xLa3Zr2O12",
+      "_norm_cond": 0.00083,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.05Ba0.1La3Zr2O12",
+        "acronym": null,
+        "proportion": "x=0.10"
+      },
+      "ionic_conductivity_S_per_cm": "8.3e-4 S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted from point at x=0.10 in Figure 7B; value approximately 0.83 mS/cm converted to S/cm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6.25-2xBa xLa3Zr2O12 garnet-type solid electrolyte with Ba doping",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0267",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.05Ba0.1La3Zr2O12",
+      "_original_name": "Li6.25-2xBa xLa3Zr2O12",
+      "_norm_cond": 0.00083,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg, Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.85Ba0.2La3Zr2O12",
+        "acronym": null,
+        "proportion": "x=0.20"
+      },
+      "ionic_conductivity_S_per_cm": "6.3e-4 S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted from point at x=0.20 in Figure 7B; value approximately 0.63 mS/cm converted to S/cm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6.25-2xBa xLa3Zr2O12 garnet-type solid electrolyte with Ba doping ; Composition from figure label x=0.20 in Nyquist plot (D)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0267",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.85Ba0.2La3Zr2O12",
+      "_original_name": "Li6.25-2xBa xLa3Zr2O12",
+      "_norm_cond": 0.00063,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.65Ba0.3La3Zr2O12",
+        "acronym": null,
+        "proportion": "x=0.30"
+      },
+      "ionic_conductivity_S_per_cm": "4.9e-4 S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted from point at x=0.30 in Figure 7B; value approximately 0.49 mS/cm converted to S/cm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li6.25-2xBa xLa3Zr2O12 garnet-type solid electrolyte with Ba doping",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0267",
+        "title": "_page_6_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.65Ba0.3La3Zr2O12",
+      "_original_name": "Li6.25-2xBa xLa3Zr2O12",
+      "_norm_cond": 0.00049,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "7.41e-4 S cm^-1",
+      "measurement_temperature": "27°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0 at 27°C, intercept Z' is ~1350 Ω cm. Conductivity = 1/1350 ≈ 7.41e-4 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0 in Nyquist plot (A)",
+      "processing_method": "Sintered at high temperature (1100–1200°C) in an Al2O3 crucible or with Al2O3 substitution to stabilize the cubic phase and achieve high ionic conductivity (Ref: Murugan et al., 2007a).",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "x = 0",
+      "_norm_cond": 0.000741,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x = 0"
+      },
+      "ionic_conductivity_S_per_cm": "2.86e-3 S cm^-1",
+      "measurement_temperature": "50°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0 at 50°C, intercept Z' is ~350 Ω cm. Conductivity = 1/350 ≈ 2.86e-3 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0 in Nyquist plot (A)",
+      "processing_method": "Sintered at high temperature (1100–1200°C) in an Al2O3 crucible or with Al2O3 substitution to stabilize the cubic phase and achieve high ionic conductivity (Ref: Murugan et al., 2007a).",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "x = 0",
+      "_norm_cond": 0.00286,
+      "_norm_temp": 50,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+        "acronym": "LLBZT",
+        "proportion": "x = 0.10"
+      },
+      "ionic_conductivity_S_per_cm": "9.09e-4 S cm^-1",
+      "measurement_temperature": "27°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0.10 at 27°C, intercept Z' is ~1100 Ω cm. Conductivity = 1/1100 ≈ 9.09e-4 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0.10 in Nyquist plot (C)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+      "_original_name": "x = 0.10",
+      "_norm_cond": 0.000909,
+      "_norm_temp": 27,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li5.85Ba0.2La3Zr2O12",
+        "acronym": null,
+        "proportion": "x = 0.20"
+      },
+      "ionic_conductivity_S_per_cm": "2.00e-3 S cm^-1",
+      "measurement_temperature": "50°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0.20 at 50°C, intercept Z' is ~500 Ω cm. Conductivity = 1/500 = 2.0e-3 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0.20 in Nyquist plot (D)",
+      "processing_method": "Conventional solid-state reaction method: precursors mixed by planetary ball milling (3 h, ethanol), calcined at 900°C for 6 h in a Pt-Au crucible, re-ground (1 h), pelletized by CIP (300 MPa), and sintered at 1150°C for 15 h in air while covered with mother powder.",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 54,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.85Ba0.2La3Zr2O12",
+      "_original_name": "x = 0.20",
+      "_norm_cond": 0.002,
+      "_norm_temp": 50,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6.2Ba0.3La2.7Zr1.5Ta0.5O12",
+        "acronym": "LLBZT",
+        "proportion": "x = 0.30"
+      },
+      "ionic_conductivity_S_per_cm": "1.33e-3 S cm^-1",
+      "measurement_temperature": "50°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0.30 at 50°C, intercept Z' is ~750 Ω cm. Conductivity = 1/750 ≈ 1.33e-3 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0.30 in Nyquist plot (E)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 56,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2Ba0.3La2.7Zr1.5Ta0.5O12",
+      "_original_name": "x = 0.30",
+      "_norm_cond": 0.00133,
+      "_norm_temp": 50,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6.15Ba0.05La3Zr2O12",
+        "acronym": null,
+        "proportion": "x = 0.05"
+      },
+      "ionic_conductivity_S_per_cm": "2.50e-3 S cm^-1",
+      "measurement_temperature": "50°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0.05 at 50°C, intercept Z' is ~400 Ω cm. Conductivity = 1/400 = 2.5e-3 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0.05 in Nyquist plot (B)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 50,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.15Ba0.05La3Zr2O12",
+      "_original_name": "x = 0.05",
+      "_norm_cond": 0.0025,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_2.jpeg",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+        "acronym": "LLBZT",
+        "proportion": "x = 0.10"
+      },
+      "ionic_conductivity_S_per_cm": "2.22e-3 S cm^-1",
+      "measurement_temperature": "50°C",
+      "reason": "Calculated as 1/R from the Nyquist plot intercept. For x=0.10 at 50°C, intercept Z' is ~450 Ω cm. Conductivity = 1/450 ≈ 2.22e-3 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Composition from figure label x=0.10 in Nyquist plot (C)",
+      "processing_method": "Conventional solid-state reaction method: stoichiometric amounts of LiOH·H2O (10% excess), La(OH)3, BaCO3, ZrO2, and Ta2O5 were ground and mixed by planetary ball milling (3 h, ethanol, zirconia balls), calcined at 900°C for 6 h in a Pt–Au 5% alloy crucible, re-ground by planetary ball milling (1 h), pressed into pellets (300 MPa, cold isostatic pressing), and sintered at 1150°C for 15 h in air (Pt–Au 5% alloy crucible) while covered with mother powder.",
+      "source_node": {
+        "node_id": "0265",
+        "title": "_page_6_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 52,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4Ba0.1La2.9Zr1.5Ta0.5O12",
+      "_original_name": "x = 0.10",
+      "_norm_cond": 0.00222,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

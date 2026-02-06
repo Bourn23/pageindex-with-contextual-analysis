@@ -1,0 +1,341 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_pipeline_20260114_145803.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Available online at www.sciencedirect.com
+  -> Started Section: Abstract / Introduction
+  -> Started Section: 1. Introduction
+  -> Started Section: 2. Experimental
+  -> Started Section: 3. Results and discussion
+  -> Started Section: 4. Conclusion
+  -> Started Section: Acknowledgements
+  -> Started Section: References
+  🔍 Checking placeholder: '__IMG_08f052e7__'
+  ✅ Found Special Node: __IMG_08f052e7__
+  🔍 Checking placeholder: '__IMG_8a82fb05__'
+  ✅ Found Special Node: __IMG_8a82fb05__
+  🔍 Checking placeholder: '__IMG_0e6ed89f__'
+  ✅ Found Special Node: __IMG_0e6ed89f__
+  ✓ Finished Section: Acknowledgements
+  ✓ Finished Section: Available online at www.sciencedirect.com
+  ✓ Finished Section: 4. Conclusion
+  ✓ Finished Section: Abstract / Introduction
+  🔍 Checking placeholder: '__TBL_19f7148c__'
+  ✅ Found Special Node: __TBL_19f7148c__
+  🔍 Checking placeholder: '__TBL_a1e7cf41__'
+  ✅ Found Special Node: __TBL_a1e7cf41__
+  🔍 Checking placeholder: '__IMG_701dfb31__'
+  ✅ Found Special Node: __IMG_701dfb31__
+  ✓ Finished Section: 1. Introduction
+  🔍 Checking placeholder: '__IMG_049b387d__'
+  ✅ Found Special Node: __IMG_049b387d__
+  🔍 Checking placeholder: '__IMG_4b10ed69__'
+  ✅ Found Special Node: __IMG_4b10ed69__
+  🔍 Checking placeholder: '__TBL_444a4d3a__'
+  ✅ Found Special Node: __TBL_444a4d3a__
+  🔍 Checking placeholder: '__TBL_19f7148c__'
+  ✅ Found Special Node: __TBL_19f7148c__
+  🔍 Checking placeholder: '__IMG_049b387d__'
+  ✅ Found Special Node: __IMG_049b387d__
+  ✓ Finished Section: 2. Experimental
+  ✓ Finished Section: References
+  🔍 Checking placeholder: '__IMG_3072480d__'
+  ✅ Found Special Node: __IMG_3072480d__
+  🔍 Checking placeholder: '__IMG_5d42a3cf__'
+  ✅ Found Special Node: __IMG_5d42a3cf__
+  🔍 Checking placeholder: '__IMG_56ea564b__'
+  ✅ Found Special Node: __IMG_56ea564b__
+  🔍 Checking placeholder: '__IMG_125e1af4__'
+  ✅ Found Special Node: __IMG_125e1af4__
+  🔍 Checking placeholder: '__IMG_dbbc2792__'
+  ✅ Found Special Node: __IMG_dbbc2792__
+  🔍 Checking placeholder: '__TBL_a8a304b9__'
+  ✅ Found Special Node: __TBL_a8a304b9__
+  🔍 Checking placeholder: '__TBL_7f7b5dbd__'
+  ✅ Found Special Node: __TBL_7f7b5dbd__
+  🔍 Checking placeholder: '__TBL_7336f2e8__'
+  ✅ Found Special Node: __TBL_7336f2e8__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__TBL_a075fdc7__'
+  ✅ Found Special Node: __TBL_a075fdc7__
+  🔍 Checking placeholder: '__IMG_51a17378__'
+  ✅ Found Special Node: __IMG_51a17378__
+  🔍 Checking placeholder: '__TBL_0f736a84__'
+  ✅ Found Special Node: __TBL_0f736a84__
+  ✓ Finished Section: 3. Results and discussion
+  ✓ Re-indexed 270 structural nodes.
+  ✓ Mapped 267 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 42 text nodes and 13 image nodes.
+
+[Stage 2] Extracting from 42 relevant nodes...
+  [1/42] ○ Reference 9... (0 data points)
+  [2/42] ○ Reference 11... (0 data points)
+  [3/42] ○ Reference 10... (0 data points)
+  [4/42] ○ X-ray Diffraction Characterization... (0 data points)
+  [5/42] ○ Reference 12... (0 data points)
+  [6/42] ○ Reference 13... (0 data points)
+  [7/42] ✓ Li Ion Conductivity and Activation Energy (Table 3... (2 data points)
+  [8/42] ○ Ionic Conductivity Measurement... (0 data points)
+  [9/42] ○ Reference 14... (0 data points)
+  [10/42] ○ Journal Publication Information... (0 data points)
+  [11/42] ✓ Lattice Parameters and Perovskite Parameters (Tabl... (2 data points)
+  [12/42] ○ Reference 15a... (0 data points)
+  [13/42] ✓ Arrhenius Plot of LLMW (Fig. 2)... (3 data points)
+  [14/42] ✓ Arrhenius Plot of LLMWq (Fig. 3)... (3 data points)
+  [15/42] ○ Reference 15b... (0 data points)
+  [16/42] ○ Analysis of Activation Energy and Ordering... (0 data points)
+  [17/42] ○ Reference 16... (0 data points)
+  [18/42] ✓ Ionic Conductivity Measurements... (1 data points)
+  [19/42] ✓ Header Images... (3 data points)
+  [20/42] ○ Rietveld Analysis and Detailed Structural Properti... (0 data points)
+  [21/42] ○ Reference 17... (0 data points)
+  [22/42] ✓ Article Title... (1 data points)
+  [23/42] ○ Research Objective and Synthesis... (0 data points)
+  [24/42] ○ Key Findings and Explanations... (0 data points)
+  [25/42] ○ Structural Factors Influencing Li-ion Conduction... (0 data points)
+  [26/42] ○ Publication Metadata... (0 data points)
+  [27/42] ✓ X-ray Diffraction and Initial Structural Character... (3 data points)
+  [28/42] ○ Introduction and General Findings... (0 data points)
+  [29/42] ○ LLMW Specific Findings... (0 data points)
+  [30/42] ✓ Header Image... (3 data points)
+  [31/42] ○ LLMWq Specific Findings... (0 data points)
+  [32/42] ○ Funding Support... (0 data points)
+  [33/42] ○ Previous Studies on B-site Complex Perovskites: Ac... (0 data points)
+  [34/42] ○ Previous Studies on B-site Complex Perovskites: Io... (0 data points)
+  [35/42] ○ Reference 1... (0 data points)
+  [36/42] ○ Unexplained Phenomenon in Li-ion Conduction... (0 data points)
+  [37/42] ○ Reference 2... (0 data points)
+  [38/42] ✓ Introduction to Perovskite-Type Li-ion Conductors... (1 data points)
+  [39/42] ○ Reference 3... (0 data points)
+  [40/42] ○ Authors' Preliminary Work and Research Objective... (0 data points)
+  [41/42] ○ Reference 4... (0 data points)
+  [42/42] ✓ Sample Synthesis and Preparation... (3 data points)
+  → 25 total data points extracted
+
+[Stage 2b] Processing 13 images directly...
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_0_Picture_2.jpeg
+    Warning: Skipping missing image _page_2_Figure_5.jpeg
+    Warning: Skipping missing image _page_0_Picture_1.jpeg
+    Warning: Skipping missing image _page_4_Figure_8.jpeg
+    Warning: Skipping missing image _page_0_Picture_4.jpeg
+    Warning: Skipping missing image _page_2_Figure_13.jpeg
+    Warning: Skipping missing image _page_6_Picture_8.jpeg
+    Warning: Skipping missing image _page_1_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+
+Merging: 25 text-based + 0 image-based points.
+  → Running physical heuristic checks on 25 points...
+  → Running LLM semantic verification on 25 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 16 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Available online at www.sciencedirect.com
+
+Material Names Found (with proportions where applicable):
+- "(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.05)"
+- "(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.11)"
+- "(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.14)"
+- "(La_{2/3-1/3p}Li_p)(Mg_{1/2}W_{1/2})O_3 (p=0.05)"
+- "0.5CaTiO3-0.5LiTaO3 (0.5:0.5)"
+- "LLMW"
+- "LLMW (p = 0.05)"
+- "LLMW (p = 0.11)"
+- "LLMW (p = 0.14)"
+- "LLMWa"
+- "LLMWq (p = 0.05)"
+- "LLMWq (p = 0.11)"
+- "LLMWq (p = 0.14)"
+- "La0.25Na0.20Li0.05TaO3 (x=0.25, y=0.20)"
+- "La0.55Li0.35TiO3"
+- "Li0.33La0.56TiO3 (x=0.33)"
+- "Li0.50La0.50TiO3 (x=0.50)"
+- "Li6PS5Br"
+- "Li6PS5Cl"
+- "Li6PS5I"
+- "Ln0.5Li0.5TiO3 (Ln=La, Pr, Nd and Sm)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='La0.65Li0.05Mg0.5W0.5O3', canonical_name='Lanthanum Lithium Magnesium Tungsten Oxide (p=0.05)', abbreviation='LLMW', variant_names=['(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.05)', '(La_{2/3-1/3p}Li_p)(Mg_{1/2}W_{1/2})O_3 (p=0.05)', 'LLMW (p = 0.05)', 'LLMWq (p = 0.05)']), CanonicalMaterialName(canonical_formula='La0.63Li0.11Mg0.5W0.5O3', canonical_name='Lanthanum Lithium Magnesium Tungsten Oxide (p=0.11)', abbreviation='LLMW', variant_names=['(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.11)', 'LLMW (p = 0.11)', 'LLMWq (p = 0.11)']), CanonicalMaterialName(canonical_formula='La0.62Li0.14Mg0.5W0.5O3', canonical_name='Lanthanum Lithium Magnesium Tungsten Oxide (p=0.14)', abbreviation='LLMW', variant_names=['(La2/3-1/3pLip)(Mg1/2W1/2)O3 (p = 0.14)', 'LLMW (p = 0.14)', 'LLMWq (p = 0.14)']), CanonicalMaterialName(canonical_formula='(La2/3-1/3pLip)(Mg1/2W1/2)O3', canonical_name='Lanthanum Lithium Magnesium Tungsten Oxide', abbreviation='LLMW', variant_names=['LLMW', 'LLMWa']), CanonicalMaterialName(canonical_formula='0.5CaTiO3-0.5LiTaO3', canonical_name='Calcium Titanium Oxide - Lithium Tantalum Oxide', abbreviation=None, variant_names=['0.5CaTiO3-0.5LiTaO3 (0.5:0.5)']), CanonicalMaterialName(canonical_formula='La0.25Na0.20Li0.05TaO3', canonical_name='Lanthanum Sodium Lithium Tantalum Oxide', abbreviation=None, variant_names=['La0.25Na0.20Li0.05TaO3 (x=0.25, y=0.20)']), CanonicalMaterialName(canonical_formula='La0.55Li0.35TiO3', canonical_name='Lanthanum Lithium Titanium Oxide', abbreviation=None, variant_names=['La0.55Li0.35TiO3']), CanonicalMaterialName(canonical_formula='Li0.33La0.56TiO3', canonical_name='Lithium Lanthanum Titanium Oxide (x=0.33)', abbreviation=None, variant_names=['Li0.33La0.56TiO3 (x=0.33)']), CanonicalMaterialName(canonical_formula='Li0.50La0.50TiO3', canonical_name='Lithium Lanthanum Titanium Oxide (x=0.50)', abbreviation=None, variant_names=['Li0.50La0.50TiO3 (x=0.50)']), CanonicalMaterialName(canonical_formula='Li6PS5Br', canonical_name='Lithium Phosphorus Sulfide Bromide', abbreviation=None, variant_names=['Li6PS5Br']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='Li6PS5I', canonical_name='Lithium Phosphorus Sulfide Iodide', abbreviation=None, variant_names=['Li6PS5I']), CanonicalMaterialName(canonical_formula='Ln0.5Li0.5TiO3', canonical_name='Lanthanide Lithium Titanium Oxide', abbreviation=None, variant_names=['Ln0.5Li0.5TiO3 (Ln=La, Pr, Nd and Sm)'])]
+  → Created 13 canonical material(s)
+  → Updated 25/25 material names
+  → Normalizing 25 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='2.5 x 10^-5 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 2.5e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.5 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00015, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': None, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='2.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.0002}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.5 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.00015, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='2.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0002, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.0011, 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻⁵ S/cm', Temp='300 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.2e-05, 'temp_value': 300, 'cond_unit': 'S/cm', 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='6.8 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0.00068}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='7.1 x 10^-7 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 7.1e-07, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 100, 'cond_value': 0.01, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.0011, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10^-3 S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='10^-6 S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 1e-06, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='10^-5 S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-05, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm', Temp='500 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 500, 'temp_unit': 'K', 'cond_value': 1e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻³ S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='500 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 500, 'temp_unit': 'K', 'cond_value': 0.0001}
+    [DEBUG Norm] Input: Cond='2.0 x 10^-4 S/cm', Temp='500 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0002, 'temp_unit': 'K', 'temp_value': 500, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='-40°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_unit': 'C', 'temp_value': -40}
+
+[Stage 3] Deduplicating 25 data points...
+  → Merged 5 duplicates, 20 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Imputed general method for 11 missing items.
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         27
+Total Input:         91,756 tokens
+Total Output:        11,408 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0801
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 27 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure_materials.json
+Time elapsed (s)  113.40670084953308
+
+Statistics:
+  Nodes analyzed: 55
+  Raw data points: 25
+  After dedup: 18
+  Valid: 18, Invalid: 0
+
+By Confidence:
+  high: 14
+  medium: 4
+  low: 0
+
+By Data Source:
+  primary: 7
+  cited: 0
+  inferred: 11
+
+Sample data points:
+  ✓ Li0.33La0.56TiO3: 1.0 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li0.50La0.50TiO3: 2.5 x 10^-5 S/cm @ 25°C [high]
+  ✓ LLMW: 1.0 x 10^-4 S/cm @ 25°C [high]
+  ✓ LLMW: 1.5 x 10^-4 S/cm @ 25°C [high]
+  ✓ LLMW: 2.0 x 10^-4 S/cm @ 25°C [high]
+  ... and 13 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.ssi.2004.05.010
+                    Composition  Ionic conductivity (S cm-1)
+170    La2.6Li0.2Mg2.0W2.0O12.0                 1.800000e-07
+171  La2.52Li0.44Mg2.0W2.0O12.0                 6.800000e-06
+172  La2.48Li0.56Mg2.0W2.0O12.0                 1.200000e-05
+Starting Evaluation on 3 Ground Truth Points...
+
+Evaluation Complete: 1/3 Matched (33.3%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14
+[0;34m[INFO][0m DOI: 10.1016/j.ssi.2004.05.010
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/the_relationship_between_li_ion_conductivity_and_crystal_structure_for_ordered_perovskite_compounds_la2_3_1_3li_mg1_2w1_2_o3_p_0_05_0_11_and_0_14_pipeline_20260114_145803.log
+

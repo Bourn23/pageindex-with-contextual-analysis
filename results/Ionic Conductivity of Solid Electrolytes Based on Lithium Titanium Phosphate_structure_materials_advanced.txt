@@ -1,0 +1,32 @@
+FINAL SCORE: 26.7%
+
+GT-235     | ✅ MATCH         | The ground truth formula Li6.0Ti12.0P18.0O72.0 normalizes to LiTi2(PO4)3, and the conductivity 2e-06 S/cm perfectly matches 2.0e-6 S cm^-1.
+GT-242     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.2Ti2.0Si0.2P2.8O12.0 and the conductivity 8.6e-05 S/cm.
+GT-243     | ✅ MATCH         | The ground truth formula Li7.8Ti12.0Si1.8P16.2O72.0 normalizes to Li1.3Ti2.0Si0.3P2.7O12.0 (which is Li1+xTi2SixP3-xO12 with x=0.3), and the conductivity 0.00032 S/cm perfectly matches the extracted value.
+GT-244     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.2Al0.2Ti1.8(PO4)3 (x=0.2 for Al-doped LATP) and the conductivity 0.000595 S/cm.
+GT-245     | ✅ MATCH         | The ground truth formula Li7.8Al1.8Ti10.2P18.0O72.0 normalizes to Li1.3Al0.3Ti1.7(PO4)3 (which is Li1+xAlxTi2-x(PO4)3 with x=0.3), and the conductivity 0.000722 S/cm is approximately 0.0007 S/cm.
+GT-246     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.4Al0.4Ti1.6(PO4)3 (x=0.4 for Al-doped LATP) and the conductivity 0.000388 S/cm.
+GT-247     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.5Al0.5Ti1.5(PO4)3 (x=0.5 for Al-doped LATP) and the conductivity 0.000248 S/cm.
+GT-248     | ❌ MISSING/BAD   | Although EX-30 covers the formula Li1.2Cr0.2Ti1.8(PO4)3 (x=0.2 for Cr-doped LATP), its conductivity (~7.9e-4 S/cm) is significantly different from the ground truth (1.82e-05 S/cm).
+GT-249     | ❌ MISSING/BAD   | Although EX-30 covers the formula Li1.3Cr0.3Ti1.7(PO4)3 (x=0.3 for Cr-doped LATP), its conductivity (~7.9e-4 S/cm) is significantly different from the ground truth (3.51e-05 S/cm).
+GT-250     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.4Cr0.4Ti1.6(PO4)3 (x=0.4 for Cr-doped LATP) and the conductivity 0.000149 S/cm.
+GT-251     | ✅ MATCH         | The ground truth formula Li9.0Cr3.0Ti9.0P18.0O72.0 normalizes to Li1.5Cr0.5Ti1.5(PO4)3 (x=0.5, M=Cr), which matches the extracted formula. The conductivity 0.000386 S/cm is approximately 0.0004 S/cm, and the temperature 25C matches.
+GT-252     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.2Ga0.2Ti1.8(PO4)3 (x=0.2, M=Ga) and conductivity 0.000162 S/cm at room temperature.
+GT-253     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.3Ga0.3Ti1.7(PO4)3 (x=0.3, M=Ga) and conductivity 0.000261 S/cm at room temperature.
+GT-254     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.4Ga0.4Ti1.6(PO4)3 (x=0.4, M=Ga) and conductivity 0.000128 S/cm at room temperature.
+GT-255     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.5Ga0.5Ti1.5(PO4)3 (x=0.5, M=Ga) and conductivity 0.000122 S/cm at room temperature.
+GT-256     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.2Fe0.2Ti1.8(PO4)3 (x=0.2, M=Fe) and conductivity 0.00018 S/cm at room temperature.
+GT-257     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.3Fe0.3Ti1.7(PO4)3 (x=0.3, M=Fe) and conductivity 0.000246 S/cm at room temperature.
+GT-258     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.4Fe0.4Ti1.6(PO4)3 (x=0.4, M=Fe) and conductivity 0.000392 S/cm at room temperature.
+GT-259     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.5Fe0.5Ti1.5(PO4)3 (x=0.5, M=Fe) and conductivity 0.000174 S/cm at room temperature.
+GT-260     | ❌ MISSING/BAD   | No extracted entry matches the normalized formula Li1.2Sc0.2Ti1.8(PO4)3 (x=0.2, M=Sc) and conductivity 0.00069 S/cm at room temperature.
+GT-261     | ✅ MATCH         | The chemical formula Li7.8Sc1.8Ti10.2P18.0O72.0 normalizes to Li1.3Sc0.3Ti1.7(PO4)3, and the conductivity 0.0007 S/cm is an approximate match for 0.000703 S/cm.
+GT-262     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.4Sc0.4Ti1.6(PO4)3 and its corresponding conductivity.
+GT-263     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.2In0.2Ti1.8(PO4)3 and its corresponding conductivity.
+GT-264     | ✅ MATCH         | The chemical formula Li7.8In1.8Ti10.2P18.0O72.0 normalizes to Li1.3In0.3Ti1.7(PO4)3, and the conductivity 3.5 × 10⁻⁴ S/cm (0.00035 S/cm) is an approximate match for 0.000393 S/cm.
+GT-265     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.4In0.4Ti1.6(PO4)3 and its corresponding conductivity.
+GT-266     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.5In0.5Ti1.5(PO4)3 and its corresponding conductivity.
+GT-267     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.2La0.2Ti1.8(PO4)3 and its corresponding conductivity.
+GT-268     | ✅ MATCH         | The chemical formula Li7.8La1.8Ti10.2P18.0O72.0 normalizes to Li1.3La0.3Ti1.7(PO4)3, and the conductivity 0.0005 S/cm is an approximate match for 0.000523 S/cm.
+GT-269     | ✅ MATCH         | The chemical formula Li8.4La2.4Ti9.6P18.0O72.0 normalizes to Li1.4La0.4Ti1.6(PO4)3, and the conductivity 0.0005 S/cm is an approximate match for 0.000498 S/cm.
+GT-270     | ❌ MISSING/BAD   | No extracted data entry matches the specific chemical formula Li1.5La0.5Ti1.5(PO4)3 and its corresponding conductivity.

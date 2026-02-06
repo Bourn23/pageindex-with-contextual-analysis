@@ -1,0 +1,364 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_pipeline_20260114_144331.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: **ARTICLE IN PRESS** +Model
+  -> Started Section: Abstract / Introduction
+  -> Started Section: **Abstract**
+  -> Started Section: **1. Introduction**
+  -> Started Section: 2. Material and methods
+  -> Started Section: 3. Results
+  -> Started Section: 4. Discussion
+  -> Started Section: **5. Conclusions**
+  -> Started Section: **ARTICLE IN PRESS** +Model
+  -> Started Section: **Acknowledgments**
+  -> Started Section: **References**
+⚠️ Warning: LLM dropped sentences [8] in '**5. Conclusions**'. Auto-recovering...
+  ✓ Finished Section: **ARTICLE IN PRESS** +Model
+  🔍 Checking placeholder: '__IMG_bafe23ca__'
+  ✅ Found Special Node: __IMG_bafe23ca__
+  ✓ Finished Section: **Acknowledgments**
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: **ARTICLE IN PRESS** +Model
+  ✓ Finished Section: **References**
+  ✓ Finished Section: **5. Conclusions**
+⚠️ Warning: LLM dropped sentences [19, 20, 21] in '2. Material and methods'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_ae8641f5__'
+  ✅ Found Special Node: __IMG_ae8641f5__
+  🔍 Checking placeholder: '__IMG_21427180__'
+  ✅ Found Special Node: __IMG_21427180__
+  🔍 Checking placeholder: '__IMG_91a0abce__'
+  ✅ Found Special Node: __IMG_91a0abce__
+  🔍 Checking placeholder: '__IMG_39f9d4ea__'
+  ✅ Found Special Node: __IMG_39f9d4ea__
+  ✓ Finished Section: 2. Material and methods
+  ✓ Finished Section: 4. Discussion
+  ✓ Finished Section: **1. Introduction**
+  🔍 Checking placeholder: '__TBL_c4ac4f65__'
+  ✅ Found Special Node: __TBL_c4ac4f65__
+  🔍 Checking placeholder: '__IMG_c2643659__'
+  ✅ Found Special Node: __IMG_c2643659__
+  🔍 Checking placeholder: '__IMG_efbfe51b__'
+  ✅ Found Special Node: __IMG_efbfe51b__
+  🔍 Checking placeholder: '__IMG_883955f5__'
+  ✅ Found Special Node: __IMG_883955f5__
+  🔍 Checking placeholder: '__TBL_259d48f7__'
+  ✅ Found Special Node: __TBL_259d48f7__
+  🔍 Checking placeholder: '__IMG_db39ec5d__'
+  ✅ Found Special Node: __IMG_db39ec5d__
+  🔍 Checking placeholder: '__IMG_8a1bd000__'
+  ✅ Found Special Node: __IMG_8a1bd000__
+  🔍 Checking placeholder: '__IMG_6aec1d0a__'
+  ✅ Found Special Node: __IMG_6aec1d0a__
+Error in group 'Article Citation Note': 1 validation error for BatchKeywordExtraction
+results.Table 1.[key]
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='Table 1', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_parsing
+  🔍 Checking placeholder: '__IMG_8831d4f5__'
+  ✅ Found Special Node: __IMG_8831d4f5__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: 3. Results
+  ✓ Finished Section: **Abstract**
+  ✓ Re-indexed 1028 structural nodes.
+  ✓ Mapped 397 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 95 text nodes and 12 image nodes.
+
+[Stage 2] Extracting from 95 relevant nodes...
+  [1/95] ○ Figure 3: 27Al MAS-NMR Spectra... (0 data points)
+  [2/95] ○ SEM Analysis of Fracture Surface and Density... (0 data points)
+  [3/95] ○ Figure 4: 31P MAS-NMR Spectra... (0 data points)
+  [4/95] ○ 31P MAS-NMR Analysis and Al/M Ratio Derivation... (0 data points)
+  [5/95] ○ Table 2: Experimental Al Content from NMR... (0 data points)
+  [6/95] ○ 27Al MAS-NMR Interpretation... (0 data points)
+  [7/95] ○ 27Al MAS-NMR Initial Findings... (0 data points)
+  [8/95] ○ Quantitative Analysis of Al Content from NMR... (0 data points)
+  [9/95] ○ 7Li MAS-NMR Introduction... (0 data points)
+  [10/95] ○ Figure 5: 7Li MAS-NMR Spectra... (0 data points)
+  [11/95] ○ 7Li MAS-NMR Detailed Findings... (0 data points)
+  [12/95] ○ Electrical Conductivity Introduction and Resolutio... (0 data points)
+  [13/95] ○ Grain Boundary Electrical Conductivity Introductio... (0 data points)
+  [14/95] ○ Article Citation Snippet... (0 data points)
+  [15/95] ○ Total Electrical Conductivity Summary... (0 data points)
+  [16/95] ○ Initial characterization and compositional analysi... (0 data points)
+  [17/95] ○ MAS-NMR analysis of Lithium site occupation... (0 data points)
+  [18/95] ○ Detailed conductivity analysis using derivative cr... (0 data points)
+  [19/95] ✓ Bulk Electrical Conductivity and Activation Energy... (2 data points)
+  [20/95] ✓ Grain Boundary Electrical Conductivity Detailed Fi... (2 data points)
+  [21/95] ○ Specific observations for LATP-04 and LAGP-02 samp... (0 data points)
+  [22/95] ✓ Figure 6: Real Conductivity vs. Frequency... (2 data points)
+  [23/95] ○ Impact of Al segregation and depletion... (0 data points)
+  [24/95] ○ Explanation using the core-shell model... (0 data points)
+  [25/95] ✓ Lithium conductivity and activation energy... (2 data points)
+  [26/95] ○ Future work... (0 data points)
+  [27/95] ○ Effect of Li content on conductivity and mobility... (0 data points)
+  [28/95] ○ Core-shell model implications and homogeneity... (0 data points)
+  [29/95] ○ Compositional heterogeneity and its impact... (0 data points)
+  [30/95] ✓ Origin and characteristics of two "bulk" conductiv... (1 data points)
+  [31/95] ○ Recovered Content... (0 data points)
+  [32/95] ○ Research Context... (0 data points)
+  [33/95] ○ Reference 1... (0 data points)
+  [34/95] ○ Acknowledgments... (0 data points)
+  [35/95] ○ Reference 3... (0 data points)
+  [36/95] ○ Reference 4... (0 data points)
+  [37/95] ○ Reference 2... (0 data points)
+  [38/95] ○ Reference 7... (0 data points)
+  [39/95] ○ Reference 6... (0 data points)
+  [40/95] ✓ Figure 7: Bulk and Grain Boundary DC-Conductivitie... (4 data points)
+  [41/95] ○ Reference 5... (0 data points)
+  [42/95] ○ Reference 9... (0 data points)
+  [43/95] ○ Reference 8... (0 data points)
+  [44/95] ○ Online Availability and Publisher Branding... (0 data points)
+  [45/95] ○ Reference 10... (0 data points)
+  [46/95] ○ Journal Title and Publication Details... (0 data points)
+  [47/95] ○ Authors and Affiliation... (0 data points)
+  [48/95] ○ Reference 11... (0 data points)
+  [49/95] ○ Reference 12... (0 data points)
+  [50/95] ○ Introduction and Experimental Methods... (0 data points)
+  [51/95] ○ Structural Characterization... (0 data points)
+  [52/95] ○ Reference 14... (0 data points)
+  [53/95] ○ Spectroscopic Analysis and Findings... (0 data points)
+  [54/95] ○ Reference 13... (0 data points)
+  [55/95] ○ Reference 15... (0 data points)
+  [56/95] ○ Reference 17... (0 data points)
+  [57/95] ○ Copyright and Keywords... (0 data points)
+  [58/95] ○ Reference 16... (0 data points)
+  [59/95] ○ Motivation and Introduction to Lithium Batteries... (0 data points)
+  [60/95] ○ Publication and Author Contact Information... (0 data points)
+  [61/95] ○ Reference 18... (0 data points)
+  [62/95] ○ Reference 19... (0 data points)
+  [63/95] ○ Introduction to Alternative LAGP Materials... (0 data points)
+  [64/95] ○ Reference 20... (0 data points)
+  [65/95] ○ Reference 21... (0 data points)
+  [66/95] ○ Corresponding Author Contact Information... (0 data points)
+  [67/95] ✓ Electrical Conductivity Results... (2 data points)
+  [68/95] ○ Reference 22... (0 data points)
+  [69/95] ○ Journal and Page Information... (0 data points)
+  [70/95] ○ Applications of LATP and LAGP Materials... (0 data points)
+  [71/95] ○ Reference 23... (0 data points)
+  [72/95] ○ Reference 24... (0 data points)
+  [73/95] ✓ Lithium-ion Batteries and NASICON Conductors... (1 data points)
+  [74/95] ○ Objectives and Methods of the Current Research... (0 data points)
+  [75/95] ○ Reference 25... (0 data points)
+  [76/95] ○ Initial Sample Preparation and Reagents... (0 data points)
+  [77/95] ○ Reference 26... (0 data points)
+  [78/95] ○ X-ray Diffraction (XRD) Analysis... (0 data points)
+  [79/95] ○ Reference 27... (0 data points)
+  [80/95] ○ Nuclear Magnetic Resonance (NMR) Spectroscopy Deta... (0 data points)
+  [81/95] ○ Reference 29... (0 data points)
+  [82/95] ○ Reference 28... (0 data points)
+  [83/95] ○ Electrical Characterization Experimental Setup and... (0 data points)
+  [84/95] ○ Pellet Preparation for Electrical Measurements... (0 data points)
+  [85/95] ○ Recovered Content... (0 data points)
+  [86/95] ○ Reference 30... (0 data points)
+  [87/95] ○ Reference 31... (0 data points)
+  [88/95] ○ Electrode Preparation for Electrical Measurements... (0 data points)
+  [89/95] ○ General Measurement Conditions... (0 data points)
+  [90/95] ○ Impedance Data Analysis... (0 data points)
+  [91/95] ○ Reference 32... (0 data points)
+  [92/95] ○ Article Citation Note... (0 data points)
+  [93/95] ○ XRD Analysis and Lattice Parameter Shifts... (0 data points)
+  [94/95] ○ Figure 2: SEM Micrographs... (0 data points)
+  [95/95] ○ Table 1: Unit Cell Parameters... (0 data points)
+  → 16 total data points extracted
+
+[Stage 2b] Processing 12 images directly...
+    Warning: Skipping missing image _page_3_Figure_11.jpeg
+    Warning: Skipping missing image _page_2_Figure_10.jpeg
+    Warning: Skipping missing image _page_4_Figure_4.jpeg
+    Warning: Skipping missing image _page_2_Figure_11.jpeg
+    Warning: Skipping missing image _page_5_Figure_3.jpeg
+    Warning: Skipping missing image _page_0_Picture_3.jpeg
+    Warning: Skipping missing image _page_3_Figure_3.jpeg
+    Warning: Skipping missing image _page_5_Figure_10.jpeg
+    Warning: Skipping missing image _page_1_Figure_9.jpeg
+    Warning: Skipping missing image _page_3_Figure_10.jpeg
+    Warning: Skipping missing image _page_6_Figure_9.jpeg
+    Warning: Skipping missing image _page_2_Picture_6.jpeg
+
+Merging: 16 text-based + 0 image-based points.
+  → Running physical heuristic checks on 16 points...
+  → Running LLM semantic verification on 16 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 13 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: **ARTICLE IN PRESS** +Model
+
+Material Names Found (with proportions where applicable):
+- "LGAP-05 (larger Al content)"
+- "LTAP-04 (larger Al content)"
+- "Li1+xAlxGe2-x(PO4)3 (x=0.2)"
+- "Li1+xAlxGe2-x(PO4)3 (x=0.5)"
+- "Li1+xAlxTi2-x(PO4)3 (x=0.2)"
+- "Li1+xAlxTi2-x(PO4)3 (x=0.4)"
+- "Li1.3Al0.3Ti1.7(PO4)3"
+- "Li1.5Al0.5Ge1.5(PO4)3"
+- "organic electrolytes"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li1.2Al0.2Ge1.8(PO4)3', canonical_name='Lithium Aluminum Germanium Phosphate', abbreviation='LAGP', variant_names=['Li1+xAlxGe2-x(PO4)3 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li1.5Al0.5Ge1.5(PO4)3', canonical_name='Lithium Aluminum Germanium Phosphate', abbreviation='LAGP', variant_names=['LGAP-05 (larger Al content)', 'Li1+xAlxGe2-x(PO4)3 (x=0.5)', 'Li1.5Al0.5Ge1.5(PO4)3']), CanonicalMaterialName(canonical_formula='Li1.2Al0.2Ti1.8(PO4)3', canonical_name='Lithium Aluminum Titanium Phosphate', abbreviation='LATP', variant_names=['Li1+xAlxTi2-x(PO4)3 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li1.4Al0.4Ti1.6(PO4)3', canonical_name='Lithium Aluminum Titanium Phosphate', abbreviation='LATP', variant_names=['LTAP-04 (larger Al content)', 'Li1+xAlxTi2-x(PO4)3 (x=0.4)']), CanonicalMaterialName(canonical_formula='Li1.3Al0.3Ti1.7(PO4)3', canonical_name='Lithium Aluminum Titanium Phosphate', abbreviation='LATP', variant_names=['Li1.3Al0.3Ti1.7(PO4)3']), CanonicalMaterialName(canonical_formula='N/A', canonical_name='Organic Electrolytes', abbreviation=None, variant_names=['organic electrolytes'])]
+  → Created 6 canonical material(s)
+  → Updated 16/16 material names
+  → Normalizing 16 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='10^-4.1 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 300, 'cond_unit': 'S cm^-1', 'cond_value': 7.94328234724282e-05}
+    [DEBUG Norm] Input: Cond='10^-2.47 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.003388441567, 'temp_unit': 'K', 'temp_value': 300, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='120 to 482 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 120, 'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='120 to 482 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 482, 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='10^-4.91 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'K', 'cond_value': 1.23026877081238e-05, 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='not specified', Temp='120 to 482 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm', 'temp_value': 120, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='120 to 482 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 482, 'cond_unit': 'S/cm', 'temp_unit': 'K', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='10^-5.05 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_value': 8.9125e-06, 'temp_value': 300, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-2.47 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00338844156, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-4 S cm^-1', Temp='175 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm^-1', 'cond_value': 0.0001, 'temp_value': 175, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='10^-4.1 S cm^-1', Temp='300K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 300, 'cond_value': 7.94328234724282e-05, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='10^-4 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_unit': 'K', 'cond_unit': 'S/cm', 'temp_value': 298}
+    [DEBUG Norm] Input: Cond='10^-4.5 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 3.162277e-05, 'temp_value': 298, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='10^-3.5 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.000316227766016838, 'cond_unit': 'S/cm', 'temp_value': 298, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='10⁻² S cm⁻¹', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.01}
+    [DEBUG Norm] Input: Cond='10^-3 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='3.4 × 10⁻³ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.0034, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='~10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+
+[Stage 3] Deduplicating 16 data points...
+  → Merged 3 duplicates, 13 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         18
+Total Input:         221,453 tokens
+Total Output:        6,171 tokens
+--------------------------------------------------
+TOTAL COST:          $0.1292
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 18 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure_materials.json
+Time elapsed (s)  74.48736572265625
+
+Statistics:
+  Nodes analyzed: 107
+  Raw data points: 16
+  After dedup: 11
+  Valid: 11, Invalid: 0
+
+By Confidence:
+  high: 9
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 10
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ LATP: 10^-2.47 S cm^-1 @ 300K [high]
+  ✓ LAGP: 10^-4.1 S cm^-1 @ 300K [high]
+  ✓ LATP: 10^-5.05 S cm^-1 @ 300K [high]
+  ✓ LAGP: 10^-4.91 S cm^-1 @ 300K [high]
+  ✓ LATP: 10^-3 S/cm @ 298 K [high]
+  ... and 6 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.jeurceramsoc.2014.11.023
+                    Composition  Ionic conductivity (S cm-1)
+297   Li8.4Al2.4Ti9.6P18.0O72.0                     0.003380
+298  Li7.2Al1.2Ge10.8P18.0O72.0                     0.000079
+299   Li9.0Al3.0Ge9.0P18.0O72.0                     0.000190
+300  Li7.2Al1.2Ti10.8P18.0O72.0                     0.003380
+Starting Evaluation on 4 Ground Truth Points...
+
+Evaluation Complete: 2/4 Matched (50.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5
+[0;34m[INFO][0m DOI: 10.1016/j.jeurceramsoc.2014.11.023
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_pipeline_20260114_144331.log
+

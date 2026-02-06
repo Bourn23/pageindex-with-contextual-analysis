@@ -1,0 +1,309 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_pipeline_20260114_160955.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Abstract / Introduction
+  -> Started Section: the lithium superionic conductor $\text{Li}_{10+\delta} \text{Ge}_{1+\delta} \text{P}_{2-\delta} \text{S}_{12} ^{\dagger}$
+  -> Started Section: 1. Introduction
+  -> Started Section: 2. **Experimental**
+  -> Started Section: Synthesis of the solid solution
+  -> Started Section: 3.2. Ionic conductivity
+  -> Started Section: 3.3. Structural analysis using neutron diffraction data
+  -> Started Section: 3.4. Ionic conduction mechanism
+  -> Started Section: Conclusions 4.
+  -> Started Section: Acknowledgements
+  -> Started Section: Notes and references
+⚠️ Warning: LLM dropped sentences [25, 26, 27, 28, 29, 30, 31, 32, 33, 34] in 'Notes and references'. Auto-recovering...
+  ✓ Finished Section: Notes and references
+  🔍 Checking placeholder: '__IMG_9d3b69b7__'
+  ✅ Found Special Node: __IMG_9d3b69b7__
+  🔍 Checking placeholder: '__IMG_a06bf9a7__'
+  ✅ Found Special Node: __IMG_a06bf9a7__
+  ✓ Finished Section: Acknowledgements
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: Conclusions 4.
+  ✓ Finished Section: the lithium superionic conductor $\text{Li}_{10+\delta} \text{Ge}_{1+\delta} \text{P}_{2-\delta} \text{S}_{12} ^{\dagger}$
+⚠️ Warning: LLM dropped sentences [8, 24] in '3.2. Ionic conductivity'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_88948941__'
+  ✅ Found Special Node: __IMG_88948941__
+  🔍 Checking placeholder: '__IMG_e242e84f__'
+  ✅ Found Special Node: __IMG_e242e84f__
+  ✓ Finished Section: 1. Introduction
+  ✓ Finished Section: Synthesis of the solid solution
+  🔍 Checking placeholder: '__TBL_bad8f4b5__'
+  ✅ Found Special Node: __TBL_bad8f4b5__
+  ✓ Finished Section: 3.3. Structural analysis using neutron diffraction data
+  ✓ Finished Section: 2. **Experimental**
+  🔍 Checking placeholder: '__IMG_c2dbdd94__'
+  ✅ Found Special Node: __IMG_c2dbdd94__
+  ✓ Finished Section: 3.2. Ionic conductivity
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__IMG_e33b3718__'
+  ✅ Found Special Node: __IMG_e33b3718__
+  🔍 Checking placeholder: '__TBL_6b7658a7__'
+  ✅ Found Special Node: __TBL_6b7658a7__
+  🔍 Checking placeholder: '__IMG_716854c2__'
+  ✅ Found Special Node: __IMG_716854c2__
+  🔍 Checking placeholder: '__IMG_b5df6a0b__'
+  ✅ Found Special Node: __IMG_b5df6a0b__
+  🔍 Checking placeholder: '__IMG_50a71da7__'
+  ✅ Found Special Node: __IMG_50a71da7__
+  🔍 Checking placeholder: '__IMG_6d9b86c5__'
+  ✅ Found Special Node: __IMG_6d9b86c5__
+  🔍 Checking placeholder: '__IMG_e0ce9e2d__'
+  ✅ Found Special Node: __IMG_e0ce9e2d__
+  🔍 Checking placeholder: '__IMG_a1bb31d0__'
+  ✅ Found Special Node: __IMG_a1bb31d0__
+  🔍 Checking placeholder: '__IMG_e11e63ee__'
+  ✅ Found Special Node: __IMG_e11e63ee__
+  ✓ Finished Section: 3.4. Ionic conduction mechanism
+  ✓ Re-indexed 267 structural nodes.
+  ✓ Mapped 312 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 47 text nodes and 13 image nodes.
+
+[Stage 2] Extracting from 47 relevant nodes...
+  [1/47] ○ Structural Characterization (XRD)... (0 data points)
+  [2/47] ○ NEDO Support... (0 data points)
+  [3/47] ○ Citation Information... (0 data points)
+  [4/47] ○ Data Acquisition and Facilities... (0 data points)
+  [5/47] ○ Structural Analysis and Conduction Mechanism... (0 data points)
+  [6/47] ○ References 1-12... (0 data points)
+  [7/47] ○ Publication Details... (0 data points)
+  [8/47] ✓ Synthesis and Ionic Conductivity... (1 data points)
+  [9/47] ✓ Ionic Conductivity of Pressed Powder Samples... (1 data points)
+  [10/47] ○ References 13-17... (0 data points)
+  [11/47] ○ References 18-19... (0 data points)
+  [12/47] ○ Figure Captions for Pressed Powder Data... (0 data points)
+  [13/47] ✓ Recovered Content... (2 data points)
+  [14/47] ○ Structural and Conduction Mechanism of LGPS... (0 data points)
+  [15/47] ○ References 20-24... (0 data points)
+  [16/47] ✓ Introduction to All-Solid-State Batteries and LGPS... (1 data points)
+  [17/47] ○ Introduction and Experimental Validation of Li4 Si... (0 data points)
+  [18/47] ○ Recovered Content... (0 data points)
+  [19/47] ✓ Figure Captions for Sintered Pellet Data... (2 data points)
+  [20/47] ○ Presentation of Results and Visualizations... (0 data points)
+  [21/47] ○ Material Synthesis... (0 data points)
+  [22/47] ○ General Structural Framework and Site Occupations... (0 data points)
+  [23/47] ○ Ionic Conductivity Measurement... (0 data points)
+  [24/47] ○ Detailed Characterization of the Li4 Site... (0 data points)
+  [25/47] ○ Lab X-ray Diffraction... (0 data points)
+  [26/47] ○ Ionic Conduction Mechanism and Compositional Influ... (0 data points)
+  [27/47] ○ Synchrotron X-ray Diffraction... (0 data points)
+  [28/47] ✓ Research Objectives and Methodology... (1 data points)
+  [29/47] ○ Lattice Parameter Temperature Dependencies and Str... (0 data points)
+  [30/47] ○ Neutron Diffraction... (0 data points)
+  [31/47] ○ Consistency with MD and Isotropic Displacement Par... (0 data points)
+  [32/47] ○ Temperature Effects on Li Site Occupation and Stru... (0 data points)
+  [33/47] ○ Introduction to LGPS Solid Solution Synthesis... (0 data points)
+  [34/47] ○ Diffraction Data Analysis and Visualization... (0 data points)
+  [35/47] ○ Atomic Distances and Evolution of Conduction Pathw... (0 data points)
+  [36/47] ✓ Recovered Content... (4 data points)
+  [37/47] ○ XRD Characterization and Evidence for Solid Soluti... (0 data points)
+  [38/47] ○ MEM Analysis, High-Temperature 3D Conduction, and ... (0 data points)
+  [39/47] ○ Determination of Solid Solution Range and Impurity... (0 data points)
+  [40/47] ○ Journal Navigation... (0 data points)
+  [41/47] ○ Ionic Conduction Mechanism and Temperature Depende... (0 data points)
+  [42/47] ○ Potential for All-Solid-State Batteries... (0 data points)
+  [43/47] ✓ Material Synthesis and Initial Conductivity... (1 data points)
+  [44/47] ✓ Visual Element... (2 data points)
+  [45/47] ✓ Ionic Conductivity of Sintered Pellets... (2 data points)
+  [46/47] ✓ Visual Element... (3 data points)
+  [47/47] ○ Attribution of Lattice Parameter Changes... (0 data points)
+  → 20 total data points extracted
+
+[Stage 2b] Processing 13 images directly...
+    Warning: Skipping missing image _page_2_Figure_11.jpeg
+    Warning: Skipping missing image _page_5_Figure_11.jpeg
+    Warning: Skipping missing image _page_0_Picture_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_13.jpeg
+    Warning: Skipping missing image _page_5_Figure_13.jpeg
+    Warning: Skipping missing image _page_0_Picture_5.jpeg
+    Warning: Skipping missing image _page_4_Figure_10.jpeg
+    Warning: Skipping missing image _page_6_Figure_4.jpeg
+    Warning: Skipping missing image _page_2_Figure_4.jpeg
+    Warning: Skipping missing image _page_5_Figure_4.jpeg
+    Warning: Skipping missing image _page_6_Figure_9.jpeg
+    Warning: Skipping missing image _page_2_Figure_8.jpeg
+    Warning: Skipping missing image _page_5_Figure_7.jpeg
+
+Merging: 20 text-based + 0 image-based points.
+  → Running physical heuristic checks on 20 points...
+  → Running LLM semantic verification on 20 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 14 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Abstract / Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li10+δGe1+δP2-δS12 (δ = 0.35)"
+- "Li10+δGe1+δP2-δS12 (δ)"
+- "Li10+δGe1+δP2-δS12 (δ=0.05)"
+- "Li10+δGe1+δP2-δS12 (δ=0.35)"
+- "Li10GeP2S12"
+- "Li5.5PS4.5Cl1.5"
+- "Li5.5PS4.5Cl1.5 (Cl-rich)"
+- "Li6PS5Br"
+- "Li6PS5Cl"
+- "Li6PS5I"
+- "Solid solution"
+- "Solid solution (δ = 0.35) (δ = 0.35)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li10.35Ge1.35P1.65S12', canonical_name='Lithium Germanium Phosphorus Sulfide (delta=0.35)', abbreviation=None, variant_names=['Li10+δGe1+δP2-δS12 (δ = 0.35)', 'Li10+δGe1+δP2-δS12 (δ=0.35)', 'Solid solution (δ = 0.35) (δ = 0.35)']), CanonicalMaterialName(canonical_formula='Li10+δGe1+δP2-δS12', canonical_name='Lithium Germanium Phosphorus Sulfide Solid Solution', abbreviation=None, variant_names=['Li10+δGe1+δP2-δS12 (δ)', 'Solid solution']), CanonicalMaterialName(canonical_formula='Li10.05Ge1.05P1.95S12', canonical_name='Lithium Germanium Phosphorus Sulfide (delta=0.05)', abbreviation=None, variant_names=['Li10+δGe1+δP2-δS12 (δ=0.05)']), CanonicalMaterialName(canonical_formula='Li10GeP2S12', canonical_name='Lithium Germanium Phosphorus Sulfide', abbreviation='LGPS', variant_names=['Li10GeP2S12']), CanonicalMaterialName(canonical_formula='Li5.5PS4.5Cl1.5', canonical_name='Chlorine-rich Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li5.5PS4.5Cl1.5', 'Li5.5PS4.5Cl1.5 (Cl-rich)']), CanonicalMaterialName(canonical_formula='Li6PS5Br', canonical_name='Lithium Phosphorus Sulfide Bromide', abbreviation=None, variant_names=['Li6PS5Br']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='Li6PS5I', canonical_name='Lithium Phosphorus Sulfide Iodide', abbreviation=None, variant_names=['Li6PS5I'])]
+  → Created 8 canonical material(s)
+  → Updated 20/20 material names
+  → Normalizing 20 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='1.1 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.011, 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='1.2 x 10^-2 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.012, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.09 × 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00609, 'temp_unit': 'C', 'cond_unit': 'S cm-1', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.42 x 10^-2 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.0142, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0011, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.4 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0024, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10^-2 S cm^-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0.01, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 100, 'cond_value': 0.01, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.42 × 10⁻² S cm⁻¹', Temp='300 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0142, 'cond_unit': 'S/cm', 'temp_unit': 'K', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='3.2 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0032, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='2.5 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 100, 'cond_value': 0.025, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0011, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='9.4 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0094, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.42 × 10⁻² S cm⁻¹', Temp='300 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0142, 'cond_unit': 'S/cm', 'temp_unit': 'K', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.0011}
+    [DEBUG Norm] Input: Cond='1.42 × 10⁻² S cm⁻¹', Temp='300 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0142, 'temp_unit': 'K', 'cond_unit': 'S cm-1', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='1.3 x 10^-6 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 1.3e-06, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.20 × 10⁻² S cm⁻¹', Temp='300 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.012, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='6.8 x 10^-4 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.00068}
+
+[Stage 3] Deduplicating 20 data points...
+  → Merged 5 duplicates, 15 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Imputed general method for 1 missing items.
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         22
+Total Input:         104,213 tokens
+Total Output:        9,331 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0801
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 22 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_structure_materials.json
+Time elapsed (s)  99.63111591339111
+
+Statistics:
+  Nodes analyzed: 60
+  Raw data points: 20
+  After dedup: 14
+  Valid: 14, Invalid: 0
+
+By Confidence:
+  high: 12
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 11
+  cited: 0
+  inferred: 1
+
+Sample data points:
+  ✓ Li10.35Ge1.35P1.65S12: 1.42 × 10⁻² S cm⁻¹ @ 300 K [high]
+  ✓ Li10.35Ge1.35P1.65S12: 6.09 × 10⁻³ S cm⁻¹ @ room temperature [high]
+  ✓ Li6PS5Cl: 2.4 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li6PS5Cl: 1.1 x 10^-2 S/cm @ 100°C [high]
+  ✓ Li10.05Ge1.05P1.95S12: 1.2 x 10^-2 S/cm @ 25°C [high]
+  ... and 9 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/synthesis_structure_and_conduction_mechanism_of_the_lithium_superionic_conductor_li_10_ge_1_p_2_s_12_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1039/c4ta05231e
+              Composition  Ionic conductivity (S cm-1)
+175  Li20.1Ge2.1P3.9S24.0                       0.0122
+176  Li20.4Ge2.4P3.6S24.0                       0.0132
+177  Li21.0Ge3.0P3.0S24.0                       0.0110
+179  Li20.7Ge2.7P3.3S24.0                       0.0144
+Starting Evaluation on 4 Ground Truth Points...
+LLM Call Failed: 
+
+Evaluation Complete: 2/4 Matched (50.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;31m[ERROR][0m Evaluation failed

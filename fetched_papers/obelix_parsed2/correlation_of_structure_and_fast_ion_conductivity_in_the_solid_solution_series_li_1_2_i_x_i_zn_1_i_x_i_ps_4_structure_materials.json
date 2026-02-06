@@ -1,0 +1,725 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 124798,
+    "total_output_tokens": 8064,
+    "total_cost_usd": 0.086591,
+    "call_counts": {
+      "gemini-3-flash-preview": 40
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/correlation_of_structure_and_fast_ion_conductivity_in_the_solid_solution_series_li_1_2_i_x_i_zn_1_i_x_i_ps_4_structure.json",
+  "extraction_stats": {
+    "total_nodes": 72,
+    "raw_extracted": 38,
+    "after_dedup": 22,
+    "time_elapsed": 122.40766215324402,
+    "valid_count": 22,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 10,
+      "medium": 12,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 10,
+      "cited": 0,
+      "inferred": 1
+    },
+    "from_text_nodes": 38,
+    "from_image_nodes": 0,
+    "final_count": 22
+  },
+  "material_count": 22,
+  "materials": [
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1+2xZn1-xPS4",
+        "acronym": null,
+        "proportion": "x not specified"
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ S·cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the maximum ionic conductivity value reported for the LZPS solid solution series from the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Thiophosphate solid solution series Li1+2xZn1-xPS4 (LZPS).",
+      "processing_method": "Not specified in the abstract (likely solid-state synthesis based on material class).",
+      "source_node": {
+        "node_id": "0029",
+        "title": "Authors and Abstract",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1+2xZn1-xPS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 0.0008,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0064",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.7Zn0.65PS4",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "> 10-4 S·cm-1",
+      "measurement_temperature": "25˚C",
+      "reason": "Extracted conductivity value for the most highly conductive phases (specifically the x=0.35 member mentioned as the solubility limit) from the experimental results section.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Non-stoichiometric solid solution with interstitial Li in the 2a site and partial occupancy of Li.",
+      "processing_method": "Solid-state synthesis consisting of ballmilling and annealing.",
+      "source_node": {
+        "node_id": "0057",
+        "title": "Synthesis and Initial Structural Observations",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.7Zn0.65PS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 mS/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the Table of Contents artwork image showing the ionic conductivity of the Li6PS5Cl argyrodite electrolyte.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction Image)",
+      "source_node": {
+        "node_id": "0521",
+        "title": "Table of Contents artwork",
+        "section": "Insert Table of Contents artwork here"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0163, 0250",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZnPS4",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "5.40 × 10-8 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted room temperature conductivity for the x=0 composition of the solid solution series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LiZnPS4 phase, body-centered tetragonal cell (space group I-4). ; Parent phase of the solid solution series.",
+      "processing_method": "Solid-state synthesis consisting of ballmilling and annealing.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZnPS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 5.4e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0163, 0250",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2.5Zn0.25PS4",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "8.4 × 10-4 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted room temperature conductivity for the x=0.75 composition, noted as the highest experimental value in the series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Likely a glass-ceramic matrix effect rather than inherent crystalline structure; contains significant Li3PS4 impurities. ; Glass-ceramic matrix phase, poorly crystallized.",
+      "processing_method": "Solid-state synthesis consisting of ballmilling and annealing. | Glassy precursor heated at lower temperatures (230˚C).",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2.5Zn0.25PS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 0.00084,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0164, 0362, 0251",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.7Zn0.65PS4",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "1.30 × 10-4 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity for the refined phase Li1.7Zn0.65PS4 (targeted as x=0.5).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Refined composition Li1.7Zn0.65PS4; exists in an amorphous Li-rich thiophosphate matrix (69% crystallinity). ; A phase close to the targeted Li2.0Zn0.5PS4 synthesized in the Li1+2xZn1-xPS4 solid solution series. ; Refined phase from targeted Li2Zn0.5PS4; exists in an amorphous Li-rich thiophosphate matrix with 69% crystallinity.",
+      "processing_method": "Solid-state synthesis consisting of ballmilling and annealing. | Synthesized via low-temperature routes to access metastable phases, though kinetics and thermodynamics limited purity.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.7Zn0.65PS4",
+      "_original_name": "Li1.7Zn0.65PS4",
+      "_norm_cond": 0.00013,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0168, 0362, 0255",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Zn0.9PS4",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "1.65 × 10-5 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted room temperature conductivity for the refined phase Li1.2Zn0.9PS4 (targeted as x=0.25).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Refined composition Li1.2Zn0.9PS4; 70% degree of crystallinity. ; A phase close to the targeted Li1.5Zn0.75PS4 synthesized in the Li1+2xZn1-xPS4 solid solution series. ; Refined phase from targeted Li1.5Zn0.75PS4; 70% degree of crystallinity.",
+      "processing_method": "Solid-state synthesis consisting of ballmilling and annealing. | Synthesized via low-temperature routes to access metastable phases, though kinetics and thermodynamics limited purity.",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Zn0.9PS4",
+      "_original_name": "Li1.2Zn0.9PS4",
+      "_norm_cond": 1.65e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "Al-doped"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in image IMG_c1d78092, where the data point for Al-doped LLZO at room temperature corresponds to approximately 0.5 mS/cm.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte",
+      "processing_method": "N/A (Introduction Image)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction Images",
+        "section": "Introduction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0005,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in image IMG_c1d78092, where the data point for LATP at room temperature corresponds to approximately 0.7 mS/cm.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A (Introduction Image)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction Images",
+        "section": "Introduction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0258",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2.5Zn0.25PS4",
+        "acronym": null,
+        "proportion": "x = 0.75"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 x 10-4 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted as the conductivity for the x = 0.75 sample when heated above 230°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Phase separated LZPS solid solution and γ-Li3PS4.",
+      "processing_method": "Heated above 230°C.",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Role of Glass-Ceramic Matrix in High Ionic Conductivity",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2.5Zn0.25PS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 0.00024,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0056",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZnPS4",
+        "acronym": null,
+        "proportion": "stoichiometric"
+      },
+      "ionic_conductivity_S_per_cm": "1.81 x 10^-12 S·cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted theoretical conductivity for the stoichiometric parent phase LiZnPS4 mentioned in sentence 0056.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Theoretical Predictions for Li1+2xZn1-xPS4 System",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZnPS4",
+      "_original_name": "LiZnPS4",
+      "_norm_cond": 1.81e-12,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0056",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2.0Zn0.5PS4",
+        "acronym": null,
+        "proportion": "x = 0.5"
+      },
+      "ionic_conductivity_S_per_cm": "> 5 x 10^-2 S·cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted predicted conductivity for the nonstoichiometric phase with interstitial lithium defects at the solubility limit x=0.5.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0046",
+        "title": "Theoretical Predictions for Li1+2xZn1-xPS4 System",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2.0Zn0.5PS4",
+      "_original_name": "Li1+2xZn1-xPS4",
+      "_norm_cond": 0.05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0045",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "12 mS·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted room temperature ionic conductivity for LGPS from a cited reference in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0037",
+        "title": "Introduction to All-Solid-State Batteries and Sulfide Electrolytes",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0045, 0458",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7P3S11",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "17 mS·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted room temperature ionic conductivity for Li7P3S11 from a cited reference in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0037",
+        "title": "Introduction to All-Solid-State Batteries and Sulfide Electrolytes",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7P3S11",
+      "_original_name": "Li7P3S11",
+      "_norm_cond": 0.017,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0045",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "25 mS·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the highest reported room temperature ionic conductivity for the LGPS-type Si-derivative from a cited reference.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0037",
+        "title": "Introduction to All-Solid-State Batteries and Sulfide Electrolytes",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_original_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_norm_cond": 0.025,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0164, 0251",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2.0Zn0.5PS4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "5.38 × 10-2 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted predicted conductivity value cited from reference 18 for comparison.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2.0Zn0.5PS4",
+      "_original_name": "Li2.0Zn0.5PS4",
+      "_norm_cond": 0.0538,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0164, 0251",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Zn0.75PS4",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "2.77 × 10-2 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted predicted conductivity value cited from reference 18 for comparison.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Zn0.75PS4",
+      "_original_name": "Li1.5Zn0.75PS4",
+      "_norm_cond": 0.0277,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0167, 0254",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10-4 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted cited conductivity for the amorphous Li3PS4 phase mentioned as a possible impurity/matrix component.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PS4",
+      "_original_name": "a-Li3PS4",
+      "_norm_cond": 0.00028,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0168, 0255",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.25Zn0.875PS4",
+        "acronym": null,
+        "proportion": "x=0.125"
+      },
+      "ionic_conductivity_S_per_cm": "3.44 × 10-3 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted predicted conductivity value cited from reference 18 for comparison.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.25Zn0.875PS4",
+      "_original_name": "Li1.25Zn0.875PS4",
+      "_norm_cond": 0.00344,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0126, 0213, 0309, 0328",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2.5Zn0.25PS4",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "1.14 × 10-1 S·cm-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted theoretical conductivity value projected by theory (ref 17).",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0081",
+        "title": "Ionic Conductivity Measurements and Correlation with Structure",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2.5Zn0.25PS4",
+      "_original_name": "Li2.5Zn0.25PS4",
+      "_norm_cond": 0.114,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0363",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZnPS4",
+        "acronym": null,
+        "proportion": "parent phase"
+      },
+      "ionic_conductivity_S_per_cm": "~10^-9 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Inferred from sentence 0363 which states the new phases are 'more than four orders of magnitude higher' than the parent LiZnPS4 phase (1.30e-4 / 10^4 = ~10^-8 to 10^-9).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "The parent phase of the Li1+2xZn1-xPS4 solid solution series.",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0354",
+        "title": "Conclusion and Future Outlook",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZnPS4",
+      "_original_name": "LiZnPS4",
+      "_norm_cond": 1e-09,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0266",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "0.7Li2S-0.3P2S5",
+        "acronym": null,
+        "proportion": "70:30"
+      },
+      "ionic_conductivity_S_per_cm": "> 10-4 S·cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted as a cited conductivity value for the amorphous precursor of Li7P3S11 from reference 25.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Role of Glass-Ceramic Matrix in High Ionic Conductivity",
+        "section": "Correlation of structure and fast ion conductivity in the solid solution series $\\text{Li}_{1+2x}\\text{Zn}_{1-x}\\text{PS}_{4}$"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "0.7Li2S-0.3P2S5",
+      "_original_name": "70:30 Li2S-P2S5 glass",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    }
+  ]
+}

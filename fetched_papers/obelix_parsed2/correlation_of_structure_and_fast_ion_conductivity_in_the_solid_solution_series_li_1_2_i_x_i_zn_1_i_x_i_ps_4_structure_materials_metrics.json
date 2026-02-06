@@ -1,0 +1,39 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-140",
+      "extracted_id": "EX-4",
+      "reason": "The chemical formula Li5.0Zn0.5P2.0S8.0 normalizes to Li2.5Zn0.25PS4, which perfectly matches EX-4. The conductivity values (0.00084 S/cm) are also identical.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-141",
+      "extracted_id": "EX-3",
+      "reason": "The chemical formula Li2.0Zn2.0P2.0S8.0 normalizes to LiZnPS4, which perfectly matches EX-3. The conductivity values (5.4e-08 S/cm) are also identical.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-142",
+      "extracted_id": null,
+      "reason": "The ground truth formula Li4.0Zn1.0P2.0S8.0 normalizes to Li2.0Zn0.5PS4. While EX-5 has an identical conductivity of 0.00013 S/cm, its formula Li1.7Zn0.65PS4 is stoichiometrically different from the ground truth, indicating a different material.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-143",
+      "extracted_id": null,
+      "reason": "The ground truth formula Li3.0Zn1.5P2.0S8.0 normalizes to Li1.5Zn0.75PS4. While EX-6 has an identical conductivity of 1.65e-05 S/cm, its formula Li1.2Zn0.9PS4 is stoichiometrically different from the ground truth, indicating a different material.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Two out of four ground truth entries were perfectly matched with extracted data based on normalized chemical formula and conductivity. The remaining two ground truth entries had extracted data with identical conductivity values but different chemical compositions, leading to mismatches.",
+  "metrics": {
+    "recall": 50.0,
+    "precision": 9.090909090909092,
+    "f1": 15.384615384615385,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 4,
+    "total_ex": 22
+  }
+}

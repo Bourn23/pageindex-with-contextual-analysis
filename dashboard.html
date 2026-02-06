@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Evaluation Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --success: #2ea44f;
+            --warning: #d29922;
+            --danger: #f85149;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #58a6ff, #bc8cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card .value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: var(--accent);
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #21262d;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        tr:hover {
+            background-color: #2b313a;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .badge-high {
+            background-color: rgba(46, 164, 79, 0.2);
+            color: var(--success);
+        }
+
+        .badge-mid {
+            background-color: rgba(210, 153, 34, 0.2);
+            color: var(--warning);
+        }
+
+        .badge-low {
+            background-color: rgba(248, 81, 73, 0.2);
+            color: var(--danger);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced Extraction Benchmarks</h1>
+            <p style="color: var(--text-secondary)">Performance metrics aggregated across scientific paper corpora.</p>
+        </header>
+
+        <div class="summary-cards" id="summary-cards">
+            <!-- Dynamic Injection -->
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-box">
+                <canvas id="recallChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <canvas id="precisionChart"></canvas>
+            </div>
+        </div>
+
+        <input type="text" class="search-bar" id="paperSearch" placeholder="Search papers by title...">
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Paper Title</th>
+                    <th>Recall</th>
+                    <th>Precision</th>
+                    <th>F1 Score</th>
+                    <th>Numeric Accuracy</th>
+                    <th>GT / EX</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Dynamic Injection -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                // In a real environment, we'd fetch the file. 
+                // For this demonstration, I'll assume the JSON is available or embed it.
+                // Since I can't easily fetch local files from the browser tool without a server,
+                // I will use the data I just generated.
+                const response = await fetch('results_aggregated.json');
+                const data = await response.json();
+                renderDashboard(data);
+            } catch (e) {
+                console.error("Error loading data:", e);
+                // Fallback / Manual injection if needed
+            }
+        }
+
+        function renderDashboard(data) {
+            const summaryDiv = document.getElementById('summary-cards');
+            summaryDiv.innerHTML = `
+                <div class="card">
+                    <h3>Total Papers</h3>
+                    <div class="value">${data.total_papers}</div>
+                </div>
+                <div class="card">
+                    <h3>Avg Recall</h3>
+                    <div class="value">${data.avg_recall.toFixed(2)}%</div>
+                </div>
+                <div class="card">
+                    <h3>Avg Precision</h3>
+                    <div class="value">${data.avg_precision.toFixed(2)}%</div>
+                </div>
+                <div class="card">
+                    <h3>Avg F1 Score</h3>
+                    <div class="value">${data.avg_f1.toFixed(2)}</div>
+                </div>
+            `;
+
+            const ctxRecall = document.getElementById('recallChart').getContext('2d');
+            new Chart(ctxRecall, {
+                type: 'bar',
+                data: {
+                    labels: data.papers.map(p => p.title.substring(0, 20) + '...'),
+                    datasets: [{
+                        label: 'Recall (%)',
+                        data: data.papers.map(p => p.recall),
+                        backgroundColor: '#58a6ff',
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Recall per Paper', color: '#8b949e' } },
+                    scales: { y: { beginAtZero: true, grid: { color: '#30363d' }, ticks: { color: '#8b949e' } }, x: { ticks: { display: false } } }
+                }
+            });
+
+            const ctxPrecision = document.getElementById('precisionChart').getContext('2d');
+            new Chart(ctxPrecision, {
+                type: 'line',
+                data: {
+                    labels: data.papers.map(p => p.title.substring(0, 20) + '...'),
+                    datasets: [{
+                        label: 'Precision (%)',
+                        data: data.papers.map(p => p.precision),
+                        borderColor: '#bc8cff',
+                        tension: 0.1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Precision Trend', color: '#8b949e' } },
+                    scales: { y: { beginAtZero: true, grid: { color: '#30363d' }, ticks: { color: '#8b949e' } }, x: { ticks: { display: false } } }
+                }
+            });
+
+            const tableBody = document.getElementById('tableBody');
+            const renderTable = (papers) => {
+                tableBody.innerHTML = papers.map(p => `
+                    <tr>
+                        <td title="${p.title}">${p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title}</td>
+                        <td><span class="status-badge ${p.recall > 70 ? 'badge-high' : p.recall > 30 ? 'badge-mid' : 'badge-low'}">${p.recall.toFixed(1)}%</span></td>
+                        <td><span class="status-badge ${p.precision > 70 ? 'badge-high' : p.precision > 30 ? 'badge-mid' : 'badge-low'}">${p.precision.toFixed(1)}%</span></td>
+                        <td>${p.f1.toFixed(1)}</td>
+                        <td>${p.numeric_accuracy.toFixed(1)}%</td>
+                        <td style="color: var(--text-secondary)">${p.total_gt} GT / ${p.total_ex} EX</td>
+                    </tr>
+                `).join('');
+            };
+
+            renderTable(data.papers);
+
+            document.getElementById('paperSearch').addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                const filtered = data.papers.filter(p => p.title.toLowerCase().includes(term));
+                renderTable(filtered);
+            });
+        }
+
+        loadData();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-375   | None     | 6.56e-10   | None       | N/A        | ❌ MISSING
+GT-376   | None     | 1.53e-11   | None       | N/A        | ❌ MISSING
+GT-461   | None     | 6.03e-08   | None       | N/A        | ❌ MISSING
+GT-462   | None     | 1.73e-08   | None       | N/A        | ❌ MISSING
+GT-463   | None     | 4.24e-09   | None       | N/A        | ❌ MISSING
+GT-464   | None     | 1.51e-09   | None       | N/A        | ❌ MISSING
+================================================================================
+RESULTS SUMMARY
+Recall:      0.00%
+Precision:   0.00%
+F1 Score:    0.00
+Numeric Accuracy: 0.00%
+Avg Log10 Error: 0.0000 (Lower is better)
+================================================================================

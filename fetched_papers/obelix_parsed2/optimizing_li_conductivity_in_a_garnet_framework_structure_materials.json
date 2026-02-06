@@ -1,0 +1,523 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 85653,
+    "total_output_tokens": 10065,
+    "total_cost_usd": 0.0730215,
+    "call_counts": {
+      "gemini-3-flash-preview": 25
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure.json",
+  "extraction_stats": {
+    "total_nodes": 57,
+    "raw_extracted": 23,
+    "after_dedup": 15,
+    "time_elapsed": 108.60919404029846,
+    "valid_count": 15,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 10,
+      "medium": 5,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 10,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 0,
+    "final_count": 15
+  },
+  "material_count": 15,
+  "materials": [
+    {
+      "source_sentence_id": "0124",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.75La3Zr1.75Ta0.25O12",
+        "acronym": "LLZTO",
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "5.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "The ionic conductivity value was extracted from the impedance plot in Figure 4 for the Ta-doped LLZO (Li7-xLa3Zr2-xTaxO12) sample at 25 °C, where the intercept of the semicircle with the real axis (Z') indicates the total resistance used to calculate conductivity.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ta-doped LLZO garnet-type solid electrolyte",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed (likely at 1140 °C for 16 h based on proximity to the x=0.2-0.6 range) in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0122",
+        "title": "Impedance Plot Visuals (Initial)",
+        "section": "Results and discussion"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.75La3Zr1.75Ta0.25O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00052,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0112, 0135",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Zr1.5Ta0.5O12",
+        "acronym": "LLZTO",
+        "proportion": "x=6.5"
+      },
+      "ionic_conductivity_S_per_cm": "9.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted conductivity value for x=6.5 in the Li_x B3 C2 O12 series (identified as Li6.5La3Zr1.5Ta0.5O12 in sentence 0111) from sentence 0112.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "38.8% Li occupancy of the tetrahedral site ; Tan color, suggestive of color centers at oxygen vacancies; garnet electrolyte.",
+      "processing_method": "as synthesized | Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1140 °C for 16 h (as part of the x=0.4, 0.5, 0.6 range) in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Li-ion Conductivity and Site Occupancy Correlation",
+        "section": "Results and discussion"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "_original_name": "Li6.5La3Zr1.5Ta0.5O12",
+      "_norm_cond": 0.00092,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0112",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x=7"
+      },
+      "ionic_conductivity_S_per_cm": "1.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted conductivity value for x=7 in the Li_x B3 C2 O12 series (identified as Li7La3Zr2O12 in sentence 0111) from sentence 0112.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "36.3% Li occupancy of the tetrahedral site",
+      "processing_method": "as synthesized | Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h) and ZrO2 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1230 °C for 36 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Li-ion Conductivity and Site Occupancy Correlation",
+        "section": "Results and discussion"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.00014,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0033, 0019",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7-xLa3Zr2-xTaxO12",
+        "acronym": "LLZTO",
+        "proportion": "nominal Li7-xLa3Zr2-xTaxO12"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "This is the primary finding reported in the paper for the optimized solid oxide Li-ion electrolyte.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Solid oxide Li-ion electrolyte with garnet framework; Ta(v) chosen as dopant. ; Li-ion solid electrolytes stable on contact with a lithium anode and water of variable pH or an alternative liquid.",
+      "processing_method": "Study of nominal Li7-xLa3Zr2-xTaxO12 | N/A (Cited Work) | Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, reground, pelletized, and annealed in air (temps ranging from 1120 °C to 1230 °C for 8 to 36 h depending on x) within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Investigation of Ta-Doped Garnets and Key Finding",
+        "section": "Introduction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7-xLa3Zr2-xTaxO12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0145, 0140, 0142, 0135, 0156, 0014",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.4La3Zr1.4Ta0.6O12",
+        "acronym": "LLZTO",
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the maximum ionic conductivity value for the specific composition x=0.6 from the text describing Figure 5(b).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ta-substituted Li7La3Zr2O12 garnet-type solid electrolyte. ; Tantalum-substituted lithium lanthanum zirconate garnet-type solid electrolyte. ; Li6.4La3Zr1.4Ta0.6O12 garnet electrolyte. ; Tan color, suggestive of color centers at oxygen vacancies; garnet electrolyte. ; Li-ion garnets Li7-xLa3Zr2-xTaxO12, optimized composition at x=0.6. ; Li-ion solid electrolyte in a garnet framework with an activation energy of 0.35 eV",
+      "processing_method": "sintered sample | fired at 1140 °C in an alumina crucible | Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1140 °C for 16 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0144",
+        "title": "Comprehensive Conductivity Analysis and Electrochemical Stability",
+        "section": "Results and discussion"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4La3Zr1.4Ta0.6O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0135",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La3Zr1.6Ta0.4O12",
+        "acronym": "LLZTO",
+        "proportion": "x = 0.4"
+      },
+      "ionic_conductivity_S_per_cm": "7.3 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted ionic conductivity for the specific composition x=0.4 from the text describing room-temperature impedance results.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Tan color, suggestive of color centers at oxygen vacancies; garnet electrolyte.",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1140 °C for 16 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0133",
+        "title": "Further Impedance Spectroscopy and Electronic Conductivity",
+        "section": "Results and discussion"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La3Zr1.6Ta0.4O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00073,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0132 which explicitly lists the total ionic conductivity for the composition where x=0 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte where lithium ions occupy 24d tetrahedral and distorted octahedral sites.",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h) and ZrO2 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1230 °C for 36 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0125",
+        "title": "Initial Impedance Spectroscopy Results",
+        "section": "Results and discussion"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00012,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8La3Zr1.8Ta0.2O12",
+        "acronym": "LLZTO",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0132 which explicitly lists the total ionic conductivity for the composition where x=0.2 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte where lithium ions occupy 24d tetrahedral and distorted octahedral sites.",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1140 °C for 16 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0125",
+        "title": "Initial Impedance Spectroscopy Results",
+        "section": "Results and discussion"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8La3Zr1.8Ta0.2O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00028,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2La3Zr1.2Ta0.8O12",
+        "acronym": "LLZTO",
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0132 which explicitly lists the total ionic conductivity for the composition where x=0.8 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte where lithium ions occupy 24d tetrahedral and distorted octahedral sites.",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1120 °C for 8 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0125",
+        "title": "Initial Impedance Spectroscopy Results",
+        "section": "Results and discussion"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2La3Zr1.2Ta0.8O12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00032,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0132",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La3ZrTaO12",
+        "acronym": "LLZTO",
+        "proportion": "x=1"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0132 which explicitly lists the total ionic conductivity for the composition where x=1 at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte where lithium ions occupy 24d tetrahedral and distorted octahedral sites.",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1120 °C for 8 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0125",
+        "title": "Initial Impedance Spectroscopy Results",
+        "section": "Results and discussion"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La3ZrTaO12",
+      "_original_name": "Li7-xLa3Zr2-xTaxO12",
+      "_norm_cond": 0.00016,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0112",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "x=6"
+      },
+      "ionic_conductivity_S_per_cm": "4 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted conductivity value for x=6 in the Li_x B3 C2 O12 series (referencing LLZO garnet type) from sentence 0112.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [8, 13] (details not in text).",
+      "source_node": {
+        "node_id": "0108",
+        "title": "Li-ion Conductivity and Site Occupancy Correlation",
+        "section": "Results and discussion"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La3Zr2O12",
+      "_original_name": "Li6La3Zr2O12",
+      "_norm_cond": 4e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0022",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "> 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted from the text mentioning the observation of Li-ion conductivity in Li7La3Zr2O12 at 25 °C.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h) and ZrO2 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1230 °C for 36 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0021",
+        "title": "Prior Research on Garnet-Type Li-ion Conductors",
+        "section": "Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0026",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.75La3Zr1.75Nb0.25O12",
+        "acronym": "LLZNO",
+        "proportion": "Nb=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted from the text describing the highest conductivity obtained in the Nb-substituted garnet by Shingo Ohta et al.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized according to Ref [9] (details not in text).",
+      "source_node": {
+        "node_id": "0021",
+        "title": "Prior Research on Garnet-Type Li-ion Conductors",
+        "section": "Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.75La3Zr1.75Nb0.25O12",
+      "_original_name": "Li6.75La3Zr1.75Nb0.25O12",
+      "_norm_cond": 0.0008,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0028",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6La3ZrTaO12",
+        "acronym": "LLZTO",
+        "proportion": "Ta-doped"
+      },
+      "ionic_conductivity_S_per_cm": "> 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted from the introduction where the authors cite their previous work (ref. 11) regarding Ta-doped garnet conductivity.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed at 1120 °C for 8 h in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Investigation of Ta-Doped Garnets and Key Finding",
+        "section": "Introduction"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6La3ZrTaO12",
+      "_original_name": "Li6La3ZrTaO12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0031",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.75La3Zr1.75Ta0.25O12",
+        "acronym": "LLZTO",
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "≈ 1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted from MD simulation results mentioned in the introduction for a specific Ta-doped garnet composition.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "MD simulations | Conventional solid-state reaction of stoichiometric Li2CO3, La2O3 (pre-heated at 900 °C for 12 h), ZrO2 and Ta2O5 with 10 wt% excess Li2CO3. Powders were ground and heated to 900 °C, then reground, pressed into a pellet, and annealed (likely at 1140 °C for 16 h based on proximity to the x=0.2-0.6 range) in air within an alumina crucible, covered with the same mother powder.",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Investigation of Ta-Doped Garnets and Key Finding",
+        "section": "Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.75La3Zr1.75Ta0.25O12",
+      "_original_name": "Li6.75La3Zr1.75Ta0.25O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": null,
+      "_enriched": true
+    }
+  ]
+}

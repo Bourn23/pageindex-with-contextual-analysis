@@ -1,0 +1,85 @@
+{
+  "doc_name": "a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy",
+  "timestamp": "2026-01-23 08:20:20",
+  "execution_time_seconds": 60.07,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 12834,
+    "total_output_tokens": 8884,
+    "total_cost_usd": 0.0261,
+    "call_counts": {
+      "gemini-flash-latest": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 3,
+    "skipped_images": 11,
+    "failed_items": 1,
+    "total_sections_processed": 15,
+    "total_images_processed": 13
+  },
+  "material_count": 3,
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "A systematic study of Li(1+x)M(x)Ti(2-x)(PO4)3 with M=Al, Cr and Fe and 0 \nT x \nT 1 has been carried out.",
+        "The base compound is LiTi2(PO4)3, and the materials were studied using X-ray and neutron powder diffraction and impedance spectroscopy.",
+        "The addition of trivalent metals leads to the occupation of M1 and a new M2' site by lithium atoms, increasing delocalization.",
+        "The bulk and grain boundary ionic conductivity show thermally activated behavior and increase with substituent content up to x = 0.2\n-0.3."
+      ],
+      "raw_conductivity": "6.2e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0062,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "The samples are NASICON-type solid solutions Li1+xMxTi2-x(PO4)3, where M=Al, Cr, or Fe, derived from LiTi2(PO4)3.",
+        "Electrical conductivity was measured using complex impedance spectroscopy to distinguish bulk dc (\r{ho}b) and grain boundary (\r{ho}gb) contributions.",
+        "Maximum conductivity values were found for x=0.3 in Al and Fe substituted samples and x=0.2 in Cr samples.",
+        "Grain boundary conductivity is typically two to three orders of magnitude lower than bulk conductivity.",
+        "The variation of activation energy is mainly attributed to the displacement of Li+ ions to M2' sites upon substitution, increasing disorder and pre-exponential factor."
+      ],
+      "raw_conductivity": "6.2e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0062,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "The samples are NASICON-type solid solutions Li1+xMxTi2-x(PO4)3, where M=Al, Cr, or Fe, derived from LiTi2(PO4)3.",
+        "Electrical conductivity was measured using complex impedance spectroscopy to distinguish bulk dc (\r{ho}b) and grain boundary (\r{ho}gb) contributions.",
+        "Maximum conductivity values were found for x=0.3 in Al and Fe substituted samples and x=0.2 in Cr samples.",
+        "Grain boundary conductivity is typically two to three orders of magnitude lower than bulk conductivity.",
+        "The variation of activation energy is mainly attributed to the displacement of Li+ ions to M2' sites upon substitution, increasing disorder and pre-exponential factor."
+      ],
+      "raw_conductivity": "7.3e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 7.3e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

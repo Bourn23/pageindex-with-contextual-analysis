@@ -1,0 +1,320 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: optimizing_li_conductivity_in_a_garnet_framework
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/optimizing_li_conductivity_in_a_garnet_framework/optimizing_li_conductivity_in_a_garnet_framework.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/optimizing_li_conductivity_in_a_garnet_framework
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_pipeline_20260114_153704.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/optimizing_li_conductivity_in_a_garnet_framework/optimizing_li_conductivity_in_a_garnet_framework.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Abstract / Introduction
+  -> Started Section: Optimizing Li<sup>+</sup> conductivity in a garnet framework
+  -> Started Section: Introduction
+  -> Started Section: Methods
+  -> Started Section: Results and discussion
+  -> Started Section: Conclusion
+  -> Started Section: Acknowledgements
+  -> Started Section: References
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: Conclusion
+⚠️ Warning: LLM dropped sentences [1, 2, 3, 4, 5] in 'Methods'. Auto-recovering...
+  ✓ Finished Section: Acknowledgements
+  🔍 Checking placeholder: '__IMG_5019ad1f__'
+  ✅ Found Special Node: __IMG_5019ad1f__
+  🔍 Checking placeholder: '__IMG_b6387021__'
+  ✅ Found Special Node: __IMG_b6387021__
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: Methods
+  🔍 Checking placeholder: '__IMG_7306e7d8__'
+  ✅ Found Special Node: __IMG_7306e7d8__
+  🔍 Checking placeholder: '__IMG_64977ae3__'
+  ✅ Found Special Node: __IMG_64977ae3__
+  🔍 Checking placeholder: '__IMG_2449d619__'
+  ✅ Found Special Node: __IMG_2449d619__
+  🔍 Checking placeholder: '__IMG_5e09ead9__'
+  ✅ Found Special Node: __IMG_5e09ead9__
+  🔍 Checking placeholder: '__IMG_c499867f__'
+  ✅ Found Special Node: __IMG_c499867f__
+  🔍 Checking placeholder: '__TBL_a5f1c06f__'
+  ✅ Found Special Node: __TBL_a5f1c06f__
+  🔍 Checking placeholder: '__TBL_a053793c__'
+  ✅ Found Special Node: __TBL_a053793c__
+  🔍 Checking placeholder: '__IMG_fb29a0c2__'
+  ✅ Found Special Node: __IMG_fb29a0c2__
+  ✓ Finished Section: Results and discussion
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: Optimizing Li<sup>+</sup> conductivity in a garnet framework
+  ✓ Finished Section: References
+  ✓ Re-indexed 206 structural nodes.
+  ✓ Mapped 285 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 49 text nodes and 8 image nodes.
+
+[Stage 2] Extracting from 49 relevant nodes...
+  [1/49] ○ Visual and Tabular Data for Structural Characteriz... (0 data points)
+  [2/49] ○ Reference 3... (0 data points)
+  [3/49] ○ Results and Optimization... (0 data points)
+  [4/49] ○ Reference 2... (0 data points)
+  [5/49] ○ Detailed Li-ion Structural Sites and Stability... (0 data points)
+  [6/49] ○ Reference 4... (0 data points)
+  [7/49] ○ Reference 5... (0 data points)
+  [8/49] ○ Neutron Diffraction Pattern Visuals... (0 data points)
+  [9/49] ✓ Introduction and Motivation for Solid Electrolytes... (1 data points)
+  [10/49] ✓ Performance and Application... (1 data points)
+  [11/49] ○ Reference 6... (0 data points)
+  [12/49] ○ Material Synthesis and Processing... (0 data points)
+  [13/49] ○ Reference 7... (0 data points)
+  [14/49] ○ Recovered Content... (0 data points)
+  [15/49] ○ Reference 8... (0 data points)
+  [16/49] ✓ Prior Research on Garnet-Type Li-ion Conductors... (2 data points)
+  [17/49] ✓ Impedance Plot Visuals (Initial)... (1 data points)
+  [18/49] ○ Material Synthesis and Processing... (0 data points)
+  [19/49] ○ Reference 9... (0 data points)
+  [20/49] ✓ Li-ion Conductivity and Site Occupancy Correlation... (3 data points)
+  [21/49] ○ Powder X-ray Diffraction (XRD)... (0 data points)
+  [22/49] ○ Reference 10... (0 data points)
+  [23/49] ✓ Investigation of Ta-Doped Garnets and Key Finding... (3 data points)
+  [24/49] ○ Scanning Electron Microscopy (SEM)... (0 data points)
+  [25/49] ○ Material Structure and Characterization... (0 data points)
+  [26/49] ○ Elemental Composition Analysis... (0 data points)
+  [27/49] ✓ Comprehensive Conductivity Analysis and Electroche... (1 data points)
+  [28/49] ○ Neutron Diffraction... (0 data points)
+  [29/49] ✓ Visuals for Conductivity Data... (2 data points)
+  [30/49] ✓ Further Impedance Spectroscopy and Electronic Cond... (3 data points)
+  [31/49] ○ Electrolyte Stability Considerations... (0 data points)
+  [32/49] ○ Ionic Conductivity Measurement... (0 data points)
+  [33/49] ✓ Initial Impedance Spectroscopy Results... (4 data points)
+  [34/49] ○ Role of Aluminum in Sintering... (0 data points)
+  [35/49] ✓ Optimized Ionic Conductivity and Battery Applicati... (1 data points)
+  [36/49] ○ China Scholarship Council... (0 data points)
+  [37/49] ○ XRD and Lattice Parameter Analysis... (0 data points)
+  [38/49] ○ DOE BATT Program Support... (0 data points)
+  [39/49] ○ Cyclic Voltammetry (Electrochemical Window)... (0 data points)
+  [40/49] ○ Electronic Resistivity Measurement... (0 data points)
+  [41/49] ○ Citation Information... (0 data points)
+  [42/49] ○ DOE Basic Energy Sciences Support... (0 data points)
+  [43/49] ○ Robert A. Welch Foundation Support... (0 data points)
+  [44/49] ○ Impact of Alumina Crucible Contamination... (0 data points)
+  [45/49] ○ Materials and Methods... (0 data points)
+  [46/49] ○ Neutron Diffraction and Li-ion Site Occupancy Back... (0 data points)
+  [47/49] ○ Reference 1... (0 data points)
+  [48/49] ○ Neutron Diffraction Refinement Methodology... (0 data points)
+  [49/49] ✓ Authors and Publication Details... (1 data points)
+  → 23 total data points extracted
+
+[Stage 2b] Processing 8 images directly...
+    Warning: Skipping missing image _page_2_Figure_11.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_1_Figure_14.jpeg
+    Warning: Skipping missing image _page_3_Figure_7.jpeg
+    Warning: Skipping missing image _page_1_Figure_13.jpeg
+    Warning: Skipping missing image _page_2_Picture_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+    Warning: Skipping missing image _page_2_Figure_10.jpeg
+
+Merging: 23 text-based + 0 image-based points.
+  → Running physical heuristic checks on 23 points...
+  → Running LLM semantic verification on 23 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 14 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Abstract / Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li-ion solid electrolyte garnet framework (x = 0.6)"
+- "Li-ion solid electrolytes"
+- "Li6.4La3Zr1.4Ta0.6O12 (x=0.6)"
+- "Li6.5La3Zr1.5Ta0.5O12 (x=6.5)"
+- "Li6.75La3Zr1.75Nb0.25O12 (Nb=0.25)"
+- "Li6.75La3Zr1.75Ta0.25O12 (x=0.25)"
+- "Li6La3Zr2O12 (x=6)"
+- "Li6La3ZrTaO12 (Ta-doped)"
+- "Li7-xLa3Zr2-xTaxO12 (0 <= x <= 1)"
+- "Li7-xLa3Zr2-xTaxO12 (nominal Li7-xLa3Zr2-xTaxO12)"
+- "Li7-xLa3Zr2-xTaxO12 (x = 0.4)"
+- "Li7-xLa3Zr2-xTaxO12 (x = 0.5)"
+- "Li7-xLa3Zr2-xTaxO12 (x = 0.6)"
+- "Li7-xLa3Zr2-xTaxO12 (x=0)"
+- "Li7-xLa3Zr2-xTaxO12 (x=0.2)"
+- "Li7-xLa3Zr2-xTaxO12 (x=0.25)"
+- "Li7-xLa3Zr2-xTaxO12 (x=0.6)"
+- "Li7-xLa3Zr2-xTaxO12 (x=0.8)"
+- "Li7-xLa3Zr2-xTaxO12 (x=1)"
+- "Li7La3Zr2O12"
+- "Li7La3Zr2O12 (x=7)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li7La3Zr2O12', canonical_name='Lithium Lanthanum Zirconium Oxide', abbreviation='LLZO', variant_names=['Li7-xLa3Zr2-xTaxO12 (x=0)', 'Li7La3Zr2O12', 'Li7La3Zr2O12 (x=7)']), CanonicalMaterialName(canonical_formula='Li6.8La3Zr1.8Ta0.2O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.2)', abbreviation='LLZTO', variant_names=['Li7-xLa3Zr2-xTaxO12 (x=0.2)']), CanonicalMaterialName(canonical_formula='Li6.75La3Zr1.75Ta0.25O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.25)', abbreviation='LLZTO', variant_names=['Li6.75La3Zr1.75Ta0.25O12 (x=0.25)', 'Li7-xLa3Zr2-xTaxO12 (x=0.25)']), CanonicalMaterialName(canonical_formula='Li6.75La3Zr1.75Nb0.25O12', canonical_name='Lithium Lanthanum Zirconium Niobium Oxide (Nb=0.25)', abbreviation='LLZNO', variant_names=['Li6.75La3Zr1.75Nb0.25O12 (Nb=0.25)']), CanonicalMaterialName(canonical_formula='Li6.6La3Zr1.6Ta0.4O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.4)', abbreviation='LLZTO', variant_names=['Li7-xLa3Zr2-xTaxO12 (x = 0.4)']), CanonicalMaterialName(canonical_formula='Li6.5La3Zr1.5Ta0.5O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.5)', abbreviation='LLZTO', variant_names=['Li6.5La3Zr1.5Ta0.5O12 (x=6.5)', 'Li7-xLa3Zr2-xTaxO12 (x = 0.5)']), CanonicalMaterialName(canonical_formula='Li6.4La3Zr1.4Ta0.6O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.6)', abbreviation='LLZTO', variant_names=['Li-ion solid electrolyte garnet framework (x = 0.6)', 'Li6.4La3Zr1.4Ta0.6O12 (x=0.6)', 'Li7-xLa3Zr2-xTaxO12 (x = 0.6)', 'Li7-xLa3Zr2-xTaxO12 (x=0.6)']), CanonicalMaterialName(canonical_formula='Li6.2La3Zr1.2Ta0.8O12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=0.8)', abbreviation='LLZTO', variant_names=['Li7-xLa3Zr2-xTaxO12 (x=0.8)']), CanonicalMaterialName(canonical_formula='Li6La3ZrTaO12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (x=1)', abbreviation='LLZTO', variant_names=['Li6La3ZrTaO12 (Ta-doped)', 'Li7-xLa3Zr2-xTaxO12 (x=1)']), CanonicalMaterialName(canonical_formula='Li6La3Zr2O12', canonical_name='Lithium Lanthanum Zirconium Oxide (x=6)', abbreviation='LLZO', variant_names=['Li6La3Zr2O12 (x=6)']), CanonicalMaterialName(canonical_formula='Li7-xLa3Zr2-xTaxO12', canonical_name='Lithium Lanthanum Zirconium Tantalum Oxide (General)', abbreviation='LLZTO', variant_names=['Li-ion solid electrolytes', 'Li7-xLa3Zr2-xTaxO12 (0 <= x <= 1)', 'Li7-xLa3Zr2-xTaxO12 (nominal Li7-xLa3Zr2-xTaxO12)'])]
+  → Created 11 canonical material(s)
+  → Updated 23/23 material names
+  → Normalizing 23 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='> 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'temp_unit': 'C', 'temp_value': 25, 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='9.2 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.00092, 'temp_unit': 'C', 'cond_unit': 'S cm-1'}
+    [DEBUG Norm] Input: Cond='8 × 10⁻⁴ S cm⁻¹', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0008, 'cond_unit': 'S cm⁻¹'}
+    [DEBUG Norm] Input: Cond='5.2 × 10⁻⁴ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.00052}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻³ S cm⁻¹', Temp='room-temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='> 10⁻⁴ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.0001}
+    [DEBUG Norm] Input: Cond='> 10⁻⁴ S cm⁻¹', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'cond_value': 0.0001}
+    [DEBUG Norm] Input: Cond='1.4 × 10⁻⁴ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00014, 'temp_value': 25, 'cond_unit': 'S cm-1', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='≈ 1.0 × 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S cm^-1', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='≈ 1.0 × 10⁻³ S cm⁻¹', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='4 × 10⁻⁵ S cm⁻¹', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_value': 4e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.001, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00012, 'cond_unit': 'S cm-1', 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='2.8 × 10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00028, 'cond_unit': 'S cm-1', 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='9.2 × 10⁻⁴ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.00092}
+    [DEBUG Norm] Input: Cond='7.3 × 10⁻⁴ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00073, 'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻³ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.001, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.2 × 10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S cm-1', 'cond_value': 0.00032}
+    [DEBUG Norm] Input: Cond='1.6 × 10⁻⁴ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S cm⁻¹', 'temp_value': 25, 'cond_value': 0.00016}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻³ S cm⁻¹', Temp='room-temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.001, 'temp_unit': 'C'}
+
+[Stage 3] Deduplicating 23 data points...
+  → Merged 7 duplicates, 16 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         25
+Total Input:         85,653 tokens
+Total Output:        10,065 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0730
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 25 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure_materials.json
+Time elapsed (s)  108.60919404029846
+
+Statistics:
+  Nodes analyzed: 57
+  Raw data points: 23
+  After dedup: 15
+  Valid: 15, Invalid: 0
+
+By Confidence:
+  high: 10
+  medium: 5
+  low: 0
+
+By Data Source:
+  primary: 10
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ LLZTO: 5.2 × 10⁻⁴ S cm⁻¹ @ 25 °C [high]
+  ✓ LLZTO: 9.2 × 10⁻⁴ S cm⁻¹ @ RT [high]
+  ✓ LLZO: 1.4 × 10⁻⁴ S cm⁻¹ @ RT [high]
+  ✓ LLZTO: ≈ 1.0 × 10⁻³ S cm⁻¹ @ room temperature [high]
+  ✓ LLZTO: 1.0 × 10⁻³ S cm⁻¹ @ room temperature [high]
+  ... and 10 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1039/c2jm31413d
+                      Composition  Ionic conductivity (S cm-1)
+476       Li56.0La24.0Zr16.0O96.0                      0.00012
+490  Li51.2La24.0Zr11.2Ta4.8O96.0                      0.00100
+491   Li49.6La24.0Zr9.6Ta6.4O96.0                      0.00032
+572  Li52.0La24.0Zr12.0Ta4.0O96.0                      0.00092
+573  Li52.8La24.0Zr12.8Ta3.2O96.0                      0.00073
+574  Li54.4La24.0Zr14.4Ta1.6O96.0                      0.00028
+575   Li48.0La24.0Zr8.0Ta8.0O96.0                      0.00016
+Starting Evaluation on 7 Ground Truth Points...
+
+Evaluation Complete: 7/7 Matched (100.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: optimizing_li_conductivity_in_a_garnet_framework
+[0;34m[INFO][0m DOI: 10.1039/c2jm31413d
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/optimizing_li_conductivity_in_a_garnet_framework_pipeline_20260114_153704.log
+

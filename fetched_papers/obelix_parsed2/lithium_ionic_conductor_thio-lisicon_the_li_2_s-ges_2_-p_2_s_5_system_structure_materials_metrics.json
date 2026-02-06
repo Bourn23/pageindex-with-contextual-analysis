@@ -1,0 +1,57 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-13",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.8Ge0.8P0.2S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-14",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.6Ge0.6P0.4S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-15",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.4Ge0.4P0.6S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-16",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.35Ge0.35P0.65S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-17",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.3Ge0.3P0.7S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-18",
+      "extracted_id": "EX-4",
+      "reason": "The ground truth compound Li78.0Ge6.0P18.0S96.0 normalizes to Li3.25Ge0.25P0.75S4, which perfectly matches EX-4 (Li3.25Ge0.25P0.75S4). The conductivity values are also an exact match (0.0022 S/cm) at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-19",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li3.2Ge0.2P0.8S4 does not have a corresponding entry in the extracted data.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Only one ground truth entry (GT-18) found a direct match in the extracted data (EX-4) based on normalized chemical formula and conductivity. The other ground truth entries, while belonging to the same general Li-Ge-P-S system, have specific stoichiometries that were not present in the extracted data.",
+  "metrics": {
+    "recall": 14.285714285714285,
+    "precision": 6.25,
+    "f1": 8.695652173913043,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 7,
+    "total_ex": 16
+  }
+}

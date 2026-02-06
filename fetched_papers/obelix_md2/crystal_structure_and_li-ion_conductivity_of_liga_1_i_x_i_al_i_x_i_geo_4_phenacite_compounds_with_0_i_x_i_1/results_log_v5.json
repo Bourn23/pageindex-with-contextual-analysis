@@ -1,0 +1,829 @@
+
+
+--- [Document] crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1.md ---
+
+
+[DEBUG] Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=134
+)] cached_content_token_count=134 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=246
+)] thoughts_token_count=127 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=383 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Experimental**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=438
+)] cached_content_token_count=438 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1212 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1212
+)] thoughts_token_count=673 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1895 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 966 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=527
+)] cached_content_token_count=527 candidates_token_count=322 candidates_tokens_details=None prompt_token_count=1722 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1722
+)] thoughts_token_count=652 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2696 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "x=0 sample",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "Compounds of LiGa(1-x)Al(x)GeO4 with 0 \nle x \nle 1 were synthesized and examined.",
+        "The x=0 and 0.25 samples were found to exhibit a phenacite structure with R3 space group.",
+        "The x>=0.5 samples were found to exhibit an ordered phenacite structure with R3 space group due to the 1:1 cation order between Ga3+/Al3+ and Ge4+ ions.",
+        "The LGAGO and related compounds are usually prepared below 1000\ncelsius."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.81e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}
+
+
+[DEBUG] Acknowledgments:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=312
+)] cached_content_token_count=312 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=467 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=467
+)] thoughts_token_count=227 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=704 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Results:
+- Response length: 2136 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=832
+)] cached_content_token_count=832 candidates_token_count=685 candidates_tokens_details=None prompt_token_count=4629 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=4629
+)] thoughts_token_count=1116 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6430 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "The study investigates the LiGa1-xAlxGeO4 (LGAGO) solid solution series with 0 \"\r\n\r\n\r\n  \"<=\" x \"<=\" 1. The samples show decreased secondary particle size and bulk density with increasing x. The x=0 sample possesses the phenacite structure (R\r\n\r\n\r\n  \"<=\" 3 space group) along with minor impurities (LiGa5O8 and Li2GeO3). For x \">=\" 0.5, the materials adopt an ordered phenacite structure (R3 space group), exhibiting cation order between Ga3+/Al3+ and Ge4+ ions. Electrical conductivity was measured using EIS across a range of temperatures."
+      ],
+      "raw_conductivity": "1.15e-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.15e-7,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "The study investigates the LiGa1-xAlxGeO4 (LGAGO) solid solution series with 0 \"<=\" x \"<=\" 1. The samples show decreased secondary particle size and bulk density with increasing x. The x=0 sample possesses the phenacite structure (R\r\n\r\n\r\n  \"<=\" 3 space group) along with minor impurities (LiGa5O8 and Li2GeO3). For x \">=\" 0.5, the materials adopt an ordered phenacite structure (R3 space group), exhibiting cation order between Ga3+/Al3+ and Ge4+ ions. Electrical conductivity was measured using EIS across a range of temperatures."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.81e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}
+
+
+[DEBUG] Conclusions:
+- Response length: 6337 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=2050 candidates_tokens_details=None prompt_token_count=1277 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1277
+)] thoughts_token_count=1505 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4832 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "1.15e-7",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 1.15e-7,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.81e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0 (intrinsic)",
+      "canonical_formula": "LiGaGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "4.51e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 4.51e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents the intrinsic conductivity (\r{Li}int) calculated using the bulk density/XRD density ratio, not the directly observed value."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.25 (intrinsic)",
+      "canonical_formula": "LiGa0.75Al0.25GeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.5e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "This conductivity value is an approximation (~2.5e-5 S*cm-1) applied across the range 0.25 \r\f\r\f x \r\f\r\f 0.75.",
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.75 (intrinsic)",
+      "canonical_formula": "LiGa0.25Al0.75GeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.5e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "This conductivity value is an approximation (~2.5e-5 S*cm-1) applied across the range 0.25 \r\f\r\f x \r\f\r\f 0.75.",
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    },
+    {
+      "raw_composition": "x = 1 (intrinsic)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 4.77e-5,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_1_figure_9.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u0338 / degree",
+        "unit": "degree",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        48,
+        41,
+        333,
+        918
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u0338 / degree",
+        "unit": "degree",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        336,
+        41,
+        618,
+        918
+      ],
+      "label": "b"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u0338 / degree",
+        "unit": "degree",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        622,
+        41,
+        965,
+        918
+      ],
+      "label": "c"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[DEBUG] Discussion:
+- Response length: 3955 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1347 candidates_tokens_details=None prompt_token_count=5523 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=5523
+)] thoughts_token_count=3495 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10365 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "x = 0.75 ($\\sigma_{\\text{Li}}^{\\text{app}}$)",
+      "canonical_formula": "LiGa0.25Al0.75GeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "1.84e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 1 (Apparent conductivity)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 1 (Intrinsic conductivity)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "The extracted intrinsic conductivity value (4.77e-5 S/cm) for x=1 appears to be identical to the apparent conductivity value stated earlier, contradicting the preceding text which claims the intrinsic value is about 2 times larger."
+      ]
+    },
+    {
+      "raw_composition": "LTO (Intrinsic conductivity, cited)",
+      "canonical_formula": "Li4Ti5O12",
+      "material_definitions": [
+        "LTO (Li[Li(1/3)Ti(5/3)]O4) is a solid electrolyte with a spinel structure (Fd(3-bar)m space group).",
+        "Li+ ions occupy both tetrahedral 8a and octahedral 16d sites.",
+        "The data is cited from previous work (Ref. 26)."
+      ],
+      "raw_conductivity": "7.4e-3",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li4GeO4 (cited)",
+      "canonical_formula": "Li4GeO4",
+      "material_definitions": [
+        "The data is cited from previous work (Ref. 28)."
+      ],
+      "raw_conductivity": "8.7e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li2.5Ga0.5GeO4 or Li(4-3y)Al(y)GeO4 (cited)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "This value refers to substituted Li4GeO4 solid solution compounds such as Li(2.5)Ga(0.5)GeO4 or Li(4-3y)Al(y)GeO4.",
+        "The substitution of Li+ ions for Ga3+ (or Al3+) ions significantly increases conductivity due to partial occupation of Li+ ions at the Ga3+ (or Al3+) ions' site.",
+        "The data is cited from previous works (Ref. 12, 13)."
+      ],
+      "raw_conductivity": "1.0e-1",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "source": "text",
+      "confidence": "low"
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_2_figure_6.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "ah / \u0085",
+        "unit": "\u0085",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        58,
+        141,
+        466,
+        968
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "ch / \u0085",
+        "unit": "\u0085",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        484,
+        141,
+        959,
+        968
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_1_picture_2.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "none",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "none",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        40,
+        965,
+        503
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "none",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "none",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        503,
+        965,
+        965
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_3_figure_7.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "dLi-O / \u00c5",
+        "unit": "\u00c5",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        47,
+        107,
+        462,
+        960
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "dM-O / \u00c5",
+        "unit": "\u00c5",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        471,
+        107,
+        960,
+        960
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {
+  "measurements": []
+}
+
+
+[SCI-FIGURE DEBUG] page_4_figure_14.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        41,
+        62,
+        489,
+        932
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        520,
+        62,
+        959,
+        932
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_3_figure_2.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Z' / \u0391\u00b7cm",
+        "unit": "\u0391\u00b7cm",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Z'' / \u0391\u00b7cm",
+        "unit": "\u0391\u00b7cm",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        52,
+        488,
+        888
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Z' / \u0391\u00b7cm",
+        "unit": "\u0391\u00b7cm",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Z'' / \u0391\u00b7cm",
+        "unit": "\u0391\u00b7cm",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        488,
+        52,
+        975,
+        942
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_3_figure_5.jpeg:
+- Detection Result: {
+  "is_multi_panel": false,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000T\u207b\u00b9 / K\u207b\u00b9",
+        "unit": "K\u207b\u00b9",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "log (\u03c3Li / S\u00b7cm\u207b\u00b9)",
+        "unit": "S\u00b7cm\u207b\u00b9",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        55,
+        969,
+        963
+      ],
+      "label": "main"
+    }
+  ]
+}
+- Combined Measurements: 20
+
+
+[SCI-FIGURE DEBUG] page_4_figure_2.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "sigma_Li \u0015 10^-6 / S.cm^-1",
+        "unit": "S.cm^-1",
+        "quantity_type": "conductivity",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        58,
+        41,
+        473,
+        940
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x in LiGa1-xAlxGeO4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "E_a / eV",
+        "unit": "eV",
+        "quantity_type": "activation_energy",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        473,
+        41,
+        942,
+        940
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 10

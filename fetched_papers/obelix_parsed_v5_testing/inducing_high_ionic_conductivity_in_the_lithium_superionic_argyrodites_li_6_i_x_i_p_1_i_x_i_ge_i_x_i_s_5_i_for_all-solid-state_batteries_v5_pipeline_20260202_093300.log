@@ -1,0 +1,41 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260202_093300.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP 1-xGe<sup>x</sup> S I for all-solid-state batteries**
+   --- Found: 15 Sections
+   --- Found: 14 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**1. Introduction**' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**3. Results**' contains:
+       - 9 Images: ['Fig 2', 'Fig 4', 'Fig 9', 'Fig 8', 'Fig 3', 'Fig 7', 'Fig 6', 'Fig 5', 'Fig 2']
+
+   >>> Section '**For table of contents only**' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **Acknowledgements**
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 1 items (Text + Images) simultaneously ...
+   🔍 page_14_figure_5.jpeg (Fig 5): Detecting subplot...
+[0;31m[ERROR][0m Failed during extraction step

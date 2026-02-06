@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 55.9226770401001,
+    "images_attached": 12,
+    "input_token_count": 30534,
+    "output_token_count": 1321
+  },
+  "data": [
+    {
+      "composition": "Li3PO4",
+      "ionic_conductivity_value": "2.0e-10",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "100 C",
+      "source": "main text page 7"
+    },
+    {
+      "composition": "Li4GeO4",
+      "ionic_conductivity_value": "2.0e-09",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "100 C",
+      "source": "main text page 7"
+    },
+    {
+      "composition": "Li3VO4",
+      "ionic_conductivity_value": "1.5e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3P0.2V0.8O4",
+      "ionic_conductivity_value": "1.5e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3P0.4V0.6O4",
+      "ionic_conductivity_value": "6.0e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3P0.6V0.4O4",
+      "ionic_conductivity_value": "3.0e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3P0.8V0.2O4",
+      "ionic_conductivity_value": "3.0e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3PO4",
+      "ionic_conductivity_value": "3.0e-13",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li4GeO4",
+      "ionic_conductivity_value": "1.5e-12",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.2Ge0.2V0.8O4",
+      "ionic_conductivity_value": "2.5e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.4Ge0.4V0.6O4",
+      "ionic_conductivity_value": "6.0e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.6Ge0.6V0.4O4",
+      "ionic_conductivity_value": "4.0e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.8Ge0.8V0.2O4",
+      "ionic_conductivity_value": "1.2e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.2Ge0.2P0.8O4",
+      "ionic_conductivity_value": "1.0e-06",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.4Ge0.4P0.6O4",
+      "ionic_conductivity_value": "4.5e-06",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.6Ge0.6P0.4O4",
+      "ionic_conductivity_value": "1.0e-06",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    },
+    {
+      "composition": "Li3.8Ge0.8P0.2O4",
+      "ionic_conductivity_value": "2.5e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "30 C",
+      "source": "Figure 4b"
+    }
+  ]
+}

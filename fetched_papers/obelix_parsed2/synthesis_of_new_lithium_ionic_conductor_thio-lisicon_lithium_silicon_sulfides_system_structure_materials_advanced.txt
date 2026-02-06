@@ -1,0 +1,21 @@
+
+================================================================================
+GT ID    | EX ID    | GT Val     | EX Val     | Log10 Err  | Status
+--------------------------------------------------------------------------------
+GT-20    | EX-9     | 1.59e-08   | 1e-07      | 0.7986     | ❌ Inaccurate
+GT-21    | None     | 8.11e-07   | None       | N/A        | ❌ MISSING
+GT-22    | None     | 7.19e-05   | None       | N/A        | ❌ MISSING
+GT-23    | EX-1     | 0.000662   | 0.00064    | 0.0147     | ✅ Accurate
+GT-24    | None     | 3.2e-06    | None       | N/A        | ❌ MISSING
+GT-29    | None     | 2.4e-08    | None       | N/A        | ❌ MISSING
+GT-30    | None     | 3.05e-08   | None       | N/A        | ❌ MISSING
+GT-31    | None     | 1.46e-08   | None       | N/A        | ❌ MISSING
+GT-32    | EX-0     | 2.29e-07   | 2.3e-07    | 0.0019     | ✅ Accurate
+================================================================================
+RESULTS SUMMARY
+Recall:      33.33%
+Precision:   14.29%
+F1 Score:    20.00
+Numeric Accuracy: 66.67%
+Avg Log10 Error: 0.2717 (Lower is better)
+================================================================================

@@ -1,0 +1,1847 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 227035,
+    "total_output_tokens": 24830,
+    "total_cost_usd": 0.18800750000000008,
+    "call_counts": {
+      "gemini-3-flash-preview": 98
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_structure.json",
+  "extraction_stats": {
+    "total_nodes": 124,
+    "raw_extracted": 82,
+    "after_dedup": 57,
+    "time_elapsed": 766.9747519493103,
+    "valid_count": 57,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 20,
+      "medium": 37,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 27,
+      "cited": 0,
+      "inferred": 29
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 19,
+    "final_count": 57
+  },
+  "material_count": 57,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_a003f856) for the Li6PS5Cl sample at 1000/T = 3.35 (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [30] (details not in text).",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Visual Element",
+        "section": "**Just Accepted**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_a003f856) for the Li6PS5Cl sample at 1000/T = 2.68 (approx. 100°C).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [30] (details not in text).",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Visual Element",
+        "section": "**Just Accepted**"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0043, 0073, 0225",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xGexS5I",
+        "acronym": null,
+        "proportion": "Ge-doped"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted ionic conductivity for a Ge-doped lithium argyrodite in a cold-pressed state as reported in the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "lithium argyrodite with anion site disorder induced by Ge content ; Ge-substituted lithium argyrodite with increased site disorder between S2– and I– positions. ; Germanium-substituted lithium argyrodite with increasing Ge4+ and Li+ concentration.",
+      "processing_method": "cold-pressed state | impedance spectroscopy | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0042",
+        "title": "Achieved high ionic conductivity and battery performance",
+        "section": "**Abstract**"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.0054,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xGexS5I",
+        "acronym": null,
+        "proportion": "Ge-doped"
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted ionic conductivity for a Ge-doped lithium argyrodite after sintering as reported in the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "lithium argyrodite with anion site disorder induced by Ge content ; Lithium argyrodite with increased Ge content and anion site disorder.",
+      "processing_method": "sintering | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0042",
+        "title": "Achieved high ionic conductivity and battery performance",
+        "section": "**Abstract**"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.0184,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0073",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Ge0.8S5I",
+        "acronym": null,
+        "proportion": "highest Ge-fraction"
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for the sintered Ge-substituted lithium argyrodite mentioned as the highest reported in the study.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-substituted lithium argyrodite with increased site disorder between S2– and I– positions.",
+      "processing_method": "sintering | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0068",
+        "title": "Current Study: Ge4+ Substitution in Li6PS5I and Enhanced Conductivity",
+        "section": "**1. Introduction**"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.0184,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0217, 0317",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted maximum conductivity for the Ge-substituted argyrodite composition Li6.6P0.4Ge0.6S5I as stated in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-substituted argyrodite with increased fraction of Ge4+ and Li+ ; Argyrodite structure with high Ge content and I–/S2– site disorder.",
+      "processing_method": "cold pressed pellets | sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0215",
+        "title": "Ionic Conductivity and Activation Barrier",
+        "section": "**3. Results**"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "_original_name": "Li6.6P0.4Ge0.6S5I",
+      "_norm_cond": 0.0054,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0220, 0317",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the increased conductivity value for the same composition after a specific sintering process mentioned in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-substituted argyrodite with better grain contact due to sintering ; Argyrodite structure with high Ge content and I–/S2– site disorder.",
+      "processing_method": "Sintering of the cold pressed pellets at 823 K for ten minutes | sintering of the pellets | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0215",
+        "title": "Ionic Conductivity and Activation Barrier",
+        "section": "**3. Results**"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "_original_name": "Li6.6P0.4Ge0.6S5I",
+      "_norm_cond": 0.0184,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0256",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.6·10-5 S cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "The text explicitly states an estimated conductivity value for Li6PS5I at room temperature based on diffusion equations.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li6PS5I argyrodite-type solid electrolyte",
+      "processing_method": "Estimated from diffusion equations using Rietveld refinement of neutron diffraction data | Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0253",
+        "title": "Conductivity Estimation from Diffusion Equations",
+        "section": "**3. Results**"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 2.6e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 x 10^-3 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Arrhenius plot in Figure 5b for the base material (x=0) at 298 K (room temperature).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanium-substituted lithium argyrodite solid solution series.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figure 5 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_enriched": true,
+      "_norm_cond": 0.0054,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Ge0.2S5I",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Arrhenius plot in Figure 5b for the x=0.2 composition at 298 K.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanium-substituted lithium argyrodite solid solution series.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figure 5 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Ge0.2S5I",
+      "_original_name": "Li6.2P0.8Ge0.2S5I",
+      "_enriched": true,
+      "_norm_cond": 0.01,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Ge0.8S5I",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 x 10^-2 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Arrhenius plot in Figure 5b for the x=0.8 composition at 298 K.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanium-substituted lithium argyrodite solid solution series.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figure 5 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "_original_name": "Li6.8P0.2Ge0.8S5I",
+      "_enriched": true,
+      "_norm_cond": 0.024,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0225, 0073",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Ge0.8S5I",
+        "acronym": null,
+        "proportion": "maximum Ge content"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the maximum ionic conductivity value mentioned for the Li6+xP1-xGexS5I series as described in the text and Figure 6 caption.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with Ge substitution for P and additional Li. ; Ge-substituted lithium argyrodite with increased site disorder between S2– and I– positions.",
+      "processing_method": "impedance spectroscopy | cold-pressed | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0222",
+        "title": "Figure 6 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.0054,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0203",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xGexS5I",
+        "acronym": null,
+        "proportion": "x"
+      },
+      "ionic_conductivity_S_per_cm": "See Figure 5 / Table S1-S16",
+      "measurement_temperature": "Temperature-dependent",
+      "reason": "The text identifies Li6+xP1-xGexS5I as the material series being characterized for ionic conductivity via Arrhenius plots and impedance spectroscopy, though specific numerical values for each 'x' are deferred to the Supporting Information and Figure 5.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Li+ conducting argyrodites with Ge substitution",
+      "processing_method": "sintering [Inferred] | Temperature-dependent impedance spectroscopy | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0200",
+        "title": "Ionic Transport Characterization Methods",
+        "section": "**3. Results**"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_enriched": true,
+      "_norm_cond": 0.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0262",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.25P0.75Ge0.25S5I",
+        "acronym": null,
+        "proportion": "x = 0.25"
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS cm-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted conductivity value for the Ge-doped argyrodite sample with x=0.25 as estimated from NMR data.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Ge-doped argyrodite sample with x=0.25",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0257",
+        "title": "Motional Processes in Ge-Doped Samples and Conductivity Correlation",
+        "section": "**3. Results**"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
+      "_original_name": "Li6.25P0.75Ge0.25S5I",
+      "_enriched": true,
+      "_norm_cond": 0.0039,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0262",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "7.5 mS cm-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted conductivity value for the Ge-doped argyrodite sample with x=0.6 as estimated from NMR data.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Ge-doped argyrodite sample with x=0.6",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0257",
+        "title": "Motional Processes in Ge-Doped Samples and Conductivity Correlation",
+        "section": "**3. Results**"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "_original_name": "Li6.6P0.4Ge0.6S5I",
+      "_enriched": true,
+      "_norm_cond": 0.0075,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Ge0.5S5I",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.8 x 10^-2 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Arrhenius plot in Figure 5b for the x=0.5 composition at 298 K.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanium-substituted lithium argyrodite solid solution series.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figure 5 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Ge0.5S5I",
+      "_original_name": "Li6.5P0.5Ge0.5S5I",
+      "_enriched": true,
+      "_norm_cond": 0.018,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0217",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted maximum conductivity value for the Ge-substituted argyrodite composition Li6.6P0.4Ge0.6S5I from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-substituted argyrodite with increased fraction of Ge4+ and Li+",
+      "processing_method": "impedance spectroscopy measurement of cold pressed pellets | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0215",
+        "title": "Ionic Conductivity and Activation Barrier",
+        "section": "**3. Results**"
+      },
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "_original_name": "Li6.6P0.4Ge0.6S5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Ge0.6S5I",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "18.4 ± 2.7 mS cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the increased conductivity value for the same composition after a specific sintering process.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-substituted argyrodite Li6+xP1-xGexS5I",
+      "processing_method": "Sintering of the cold pressed pellets at 823 K for ten minutes | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0215",
+        "title": "Ionic Conductivity and Activation Barrier",
+        "section": "**3. Results**"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "_original_name": "Li6.6P0.4Ge0.6S5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0214",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Ge0.8S5I",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 x 10^-2 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Arrhenius plot in Figure 5b for the x=0.8 composition at 298 K.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Germanium-substituted lithium argyrodite solid solution series.",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figure 5 Description",
+        "section": "**3. Results**"
+      },
+      "_index": 53,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xGexS5I",
+        "acronym": null,
+        "proportion": "Ge-doped"
+      },
+      "ionic_conductivity_S_per_cm": "5.4 ± 0.8 mS cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted ionic conductivity for a Ge-doped lithium argyrodite in a cold-pressed state as reported in the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite with increased Ge content and anion site disorder.",
+      "processing_method": "cold-pressed state | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0042",
+        "title": "Achieved high ionic conductivity and battery performance",
+        "section": "**Abstract**"
+      },
+      "_index": 58,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6+xP1-xGexS5I",
+      "_original_name": "Lithium argyrodite",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3·10-6 S cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0065 which explicitly states the ionic conductivity of iodine containing argyrodites (Li6PS5I) as reported by Kraft et al.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0063",
+        "title": "Limitations of Li6PS5I and Previous Doping Attempts",
+        "section": "**1. Introduction**"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.3e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "x=0.00"
+      },
+      "ionic_conductivity_S_per_cm": "1.12e-6 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.00 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.00",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_enriched": true,
+      "_norm_cond": 1.12e-06,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.1P0.9Si0.1S5Br",
+        "acronym": null,
+        "proportion": "x=0.10"
+      },
+      "ionic_conductivity_S_per_cm": "4.93e-6 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.10 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.10",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "_original_name": "Li6.1P0.9Si0.1S5Br",
+      "_enriched": true,
+      "_norm_cond": 4.93e-06,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Si0.2S5Br",
+        "acronym": null,
+        "proportion": "x=0.20"
+      },
+      "ionic_conductivity_S_per_cm": "1.43e-5 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.20 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.20",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "_original_name": "Li6.2P0.8Si0.2S5Br",
+      "_enriched": true,
+      "_norm_cond": 1.43e-05,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.3P0.7Si0.3S5Br",
+        "acronym": null,
+        "proportion": "x=0.30"
+      },
+      "ionic_conductivity_S_per_cm": "3.47e-4 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.30 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.30",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.3P0.7Si0.3S5Br",
+      "_original_name": "Li6.3P0.7Si0.3S5Br",
+      "_enriched": true,
+      "_norm_cond": 0.000347,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.4P0.6Si0.4S5Br",
+        "acronym": null,
+        "proportion": "x=0.40"
+      },
+      "ionic_conductivity_S_per_cm": "8.15e-4 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.40 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.40",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4P0.6Si0.4S5Br",
+      "_original_name": "Li6.4P0.6Si0.4S5Br",
+      "_enriched": true,
+      "_norm_cond": 0.000815,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Si0.6S5Br",
+        "acronym": null,
+        "proportion": "x=0.60"
+      },
+      "ionic_conductivity_S_per_cm": "1.31e-3 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.60 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.60",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Si0.6S5Br",
+      "_original_name": "Li6.6P0.4Si0.6S5Br",
+      "_enriched": true,
+      "_norm_cond": 0.00131,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.7P0.3Si0.7S5Br",
+        "acronym": null,
+        "proportion": "x=0.70"
+      },
+      "ionic_conductivity_S_per_cm": "2.18e-3 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.70 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.70",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.7P0.3Si0.7S5Br",
+      "_original_name": "Li6.7P0.3Si0.7S5Br",
+      "_enriched": true,
+      "_norm_cond": 0.00218,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Si0.8S5Br",
+        "acronym": null,
+        "proportion": "x=0.80"
+      },
+      "ionic_conductivity_S_per_cm": "5.87e-4 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.80 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.80",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Si0.8S5Br",
+      "_original_name": "Li6.8P0.2Si0.8S5Br",
+      "_enriched": true,
+      "_norm_cond": 0.000587,
+      "_norm_temp": 20
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.08P0.92Ge0.08S5I",
+        "acronym": null,
+        "proportion": "x=0.08"
+      },
+      "ionic_conductivity_S_per_cm": "9.5e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.08 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.08P0.92Ge0.08S5I",
+      "_original_name": "Li6.08P0.92Ge0.08S5I",
+      "_enriched": true,
+      "_norm_cond": 9.5e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.15P0.85Ge0.15S5I",
+        "acronym": null,
+        "proportion": "x=0.15"
+      },
+      "ionic_conductivity_S_per_cm": "3.8e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.15 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.15P0.85Ge0.15S5I",
+      "_original_name": "Li6.15P0.85Ge0.15S5I",
+      "_enriched": true,
+      "_norm_cond": 3.8e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.24P0.76Ge0.24S5I",
+        "acronym": null,
+        "proportion": "x=0.24"
+      },
+      "ionic_conductivity_S_per_cm": "3.1e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.24 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.24P0.76Ge0.24S5I",
+      "_original_name": "Li6.24P0.76Ge0.24S5I",
+      "_enriched": true,
+      "_norm_cond": 3.1e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.26P0.74Ge0.26S5I",
+        "acronym": null,
+        "proportion": "x=0.26"
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-4 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.26 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.26P0.74Ge0.26S5I",
+      "_original_name": "Li6.26P0.74Ge0.26S5I",
+      "_enriched": true,
+      "_norm_cond": 0.00013,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.36P0.64Ge0.36S5I",
+        "acronym": null,
+        "proportion": "x=0.36"
+      },
+      "ionic_conductivity_S_per_cm": "5.7e-4 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.36 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I. ; Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.36P0.64Ge0.36S5I",
+      "_original_name": "Li6.36P0.64Ge0.36S5I",
+      "_enriched": true,
+      "_norm_cond": 0.00057,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.47P0.53Ge0.47S5I",
+        "acronym": null,
+        "proportion": "x=0.47"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.47 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I. ; Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.47P0.53Ge0.47S5I",
+      "_original_name": "Li6.47P0.53Ge0.47S5I",
+      "_enriched": true,
+      "_norm_cond": 0.0015,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.52P0.48Ge0.52S5I",
+        "acronym": null,
+        "proportion": "x=0.52"
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.52 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I. ; Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.52P0.48Ge0.52S5I",
+      "_original_name": "Li6.52P0.48Ge0.52S5I",
+      "_enriched": true,
+      "_norm_cond": 0.0018,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "x=0.00"
+      },
+      "ionic_conductivity_S_per_cm": "2.55e-5 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.00 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.00)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 63,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 2.55e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.1P0.9Si0.1S5Br",
+        "acronym": null,
+        "proportion": "x=0.10"
+      },
+      "ionic_conductivity_S_per_cm": "1.37e-4 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.10 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.10)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 64,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.000137,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Si0.2S5Br",
+        "acronym": null,
+        "proportion": "x=0.20"
+      },
+      "ionic_conductivity_S_per_cm": "3.35e-4 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.20 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.20)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 65,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.000335,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.3P0.7Si0.3S5Br",
+        "acronym": null,
+        "proportion": "x=0.30"
+      },
+      "ionic_conductivity_S_per_cm": "3.01e-3 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.30 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.30)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 66,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.3P0.7Si0.3S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00301,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.4P0.6Si0.4S5Br",
+        "acronym": null,
+        "proportion": "x=0.40"
+      },
+      "ionic_conductivity_S_per_cm": "1.12e-2 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.40 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.40)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 67,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.4P0.6Si0.4S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0112,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Si0.5S5Br",
+        "acronym": null,
+        "proportion": "x=0.50"
+      },
+      "ionic_conductivity_S_per_cm": "1.83e-2 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.50 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.50)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 68,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0183,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6P0.4Si0.6S5Br",
+        "acronym": null,
+        "proportion": "x=0.60"
+      },
+      "ionic_conductivity_S_per_cm": "2.21e-2 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.60 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.60)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 69,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6P0.4Si0.6S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0221,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.7P0.3Si0.7S5Br",
+        "acronym": null,
+        "proportion": "x=0.70"
+      },
+      "ionic_conductivity_S_per_cm": "2.48e-2 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.70 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.70)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 70,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.7P0.3Si0.7S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0248,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.8P0.2Si0.8S5Br",
+        "acronym": null,
+        "proportion": "x=0.80"
+      },
+      "ionic_conductivity_S_per_cm": "1.15e-2 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Arrhenius plot (b) at 1000/T ≈ 3.35 K^-1 (25°C) for x=0.80 series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte (x=0.80)",
+      "processing_method": "Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 71,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.8P0.2Si0.8S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0115,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the orange circle data point at x_R = 0.0 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 72,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 1.1e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.15P0.85Ge0.15S5I",
+        "acronym": null,
+        "proportion": "x=0.15"
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the orange circle data point at x_R ≈ 0.15 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 74,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.15P0.85Ge0.15S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 3.5e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.25P0.75Ge0.25S5I",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the lower orange circle data point at x_R ≈ 0.25 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 75,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 3e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.26P0.74Ge0.26S5I",
+        "acronym": null,
+        "proportion": "x=0.26"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the upper orange circle data point at x_R ≈ 0.26 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 76,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.26P0.74Ge0.26S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.00015,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.69P0.31Ge0.69S5I",
+        "acronym": null,
+        "proportion": "x=0.69"
+      },
+      "ionic_conductivity_S_per_cm": "5.5e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the orange circle data point at x_R ≈ 0.69 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 80,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.69P0.31Ge0.69S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.0055,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.79P0.21Ge0.79S5I",
+        "acronym": null,
+        "proportion": "x=0.79"
+      },
+      "ionic_conductivity_S_per_cm": "6.0e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the orange circle data point at x_R ≈ 0.79 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 81,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.79P0.21Ge0.79S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_norm_cond": 0.006,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_14_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Si0.5S5Br",
+        "acronym": null,
+        "proportion": "x=0.50"
+      },
+      "ionic_conductivity_S_per_cm": "1.02e-3 S cm^-1",
+      "measurement_temperature": "20 °C",
+      "reason": "Extracted from Arrhenius plot (b) for x=0.50 series at 20 °C (1000/T ≈ 3.41).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Sulfuric argyrodite solid electrolyte with x=0.50",
+      "processing_method": "sintering [Inferred] | Synthesized according to Ref [31] (details not in text).",
+      "source_node": {
+        "node_id": "0210",
+        "title": "_page_14_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "_original_name": "Li6.5P0.5Si0.5S5Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.0 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.69P0.31Ge0.69S5I",
+        "acronym": null,
+        "proportion": "x=0.69"
+      },
+      "ionic_conductivity_S_per_cm": "5.1e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.69 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.69P0.31Ge0.69S5I",
+      "_original_name": "Li6.69P0.31Ge0.69S5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.79P0.21Ge0.79S5I",
+        "acronym": null,
+        "proportion": "x=0.79"
+      },
+      "ionic_conductivity_S_per_cm": "5.4e-3 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from the orange circle data series at x_R = 0.79 on the logarithmic right y-axis.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Li-ion conductivity (σ_RT) as a function of Ge substitution (x_R) in Li6+xP1-xGexS5I.",
+      "processing_method": "sintering [Inferred] | Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.79P0.21Ge0.79S5I",
+      "_original_name": "Li6.79P0.21Ge0.79S5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3·10-6 S cm-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted ionic conductivity value for iodine-containing argyrodite (Li6PS5I) from a cited study by Kraft et al.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0063",
+        "title": "Limitations of Li6PS5I and Previous Doping Attempts",
+        "section": "**1. Introduction**"
+      },
+      "_index": 60,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.08P0.92Ge0.08S5I",
+        "acronym": null,
+        "proportion": "x=0.08"
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the orange circle data point at x_R ≈ 0.08 on the right logarithmic y-axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite solid electrolyte with germanium substitution",
+      "processing_method": "Stoichiometric amounts of dried precursors (Li2S, P2S5, GeS, S, LiI) were hand-ground in an agate mortar, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. Following preheating at 800 °C under dynamic vacuum, the mixtures were reacted at 550 °C for two weeks, ground, and isostatically pressed; some pellets were further sintered at 823 K for 10 minutes.",
+      "source_node": {
+        "node_id": "0223",
+        "title": "_page_15_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 73,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.08P0.92Ge0.08S5I",
+      "_original_name": "Li6+xP1-xGexS5I",
+      "_enriched": true
+    }
+  ]
+}

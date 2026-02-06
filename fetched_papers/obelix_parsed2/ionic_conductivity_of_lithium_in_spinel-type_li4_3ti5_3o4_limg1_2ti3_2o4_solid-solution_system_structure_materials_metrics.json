@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-375",
+      "extracted_id": null,
+      "reason": "The ground truth material is a Lithium Magnesium Titanate with a conductivity of 6.56e-10 S/cm at assumed room temperature. No extracted data entry for Lithium Magnesium Titanates has a conductivity value that is roughly similar; most are 3-4 orders of magnitude higher (10^-6 to 10^-5 S/cm), and one (EX-9) is 3 orders of magnitude lower (10^-13 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-376",
+      "extracted_id": null,
+      "reason": "The ground truth material is a Lithium Magnesium Titanate with a conductivity of 1.53e-11 S/cm at assumed room temperature. No extracted data entry for Lithium Magnesium Titanates has a conductivity value that is roughly similar; most are 4-5 orders of magnitude higher (10^-6 to 10^-5 S/cm), and one (EX-9) is 2 orders of magnitude lower (10^-13 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-461",
+      "extracted_id": null,
+      "reason": "The ground truth material (Li10.72Ti13.28O32.0) normalizes to Li1.34Ti1.66O4, which is compositionally very close to Li4Ti5O12 (Li1.333Ti1.667O4) found in EX-3, EX-9, and EX-10. All are at room temperature. However, the ground truth conductivity (6.03e-08 S/cm) is significantly different from the extracted values: EX-3 (1e-06 S/cm, ~16x higher), EX-9 (1e-13 S/cm, ~600,000x lower), and EX-10 (1.2e-05 S/cm, ~200x higher). These differences are too large to be considered a match in physical context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-462",
+      "extracted_id": null,
+      "reason": "The ground truth material is a Lithium Magnesium Titanate with a conductivity of 1.73e-08 S/cm at assumed room temperature. No extracted data entry for Lithium Magnesium Titanates has a conductivity value that is roughly similar; most are 2-3 orders of magnitude higher (10^-6 to 10^-5 S/cm), and one (EX-9) is 5 orders of magnitude lower (10^-13 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-463",
+      "extracted_id": null,
+      "reason": "The ground truth material is a Lithium Magnesium Titanate with a conductivity of 4.24e-09 S/cm at assumed room temperature. No extracted data entry for Lithium Magnesium Titanates has a conductivity value that is roughly similar; most are 3-4 orders of magnitude higher (10^-6 to 10^-5 S/cm), and one (EX-9) is 4 orders of magnitude lower (10^-13 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-464",
+      "extracted_id": null,
+      "reason": "The ground truth material is a Lithium Magnesium Titanate with a conductivity of 1.51e-09 S/cm at assumed room temperature. No extracted data entry for Lithium Magnesium Titanates has a conductivity value that is roughly similar; most are 3-4 orders of magnitude higher (10^-6 to 10^-5 S/cm), and one (EX-9) is 4 orders of magnitude lower (10^-13 S/cm).",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "No matches were found between the Ground Truth and Extracted Data. While some extracted entries share the same general material class (Lithium Magnesium Titanates) and similar temperature context (room temperature), their reported conductivities consistently differ by several orders of magnitude from the ground truth values. This significant discrepancy in a key physical property indicates a mismatch.",
+  "metrics": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 6,
+    "total_ex": 12
+  }
+}

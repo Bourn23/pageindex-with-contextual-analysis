@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 62.76171803474426,
+    "images_attached": 14,
+    "input_token_count": 30530,
+    "output_token_count": 1199
+  },
+  "data": [
+    {
+      "composition": "Li6PS5I",
+      "ionic_conductivity_value": "1.3e-06",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Introduction section"
+    },
+    {
+      "composition": "Li6.1P0.9Ge0.1S5I",
+      "ionic_conductivity_value": "9.0e-06",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.15P0.85Ge0.15S5I",
+      "ionic_conductivity_value": "3.0e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.2P0.8Ge0.2S5I",
+      "ionic_conductivity_value": "1.0e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.25P0.75Ge0.25S5I",
+      "ionic_conductivity_value": "2.0e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.3P0.7Ge0.3S5I",
+      "ionic_conductivity_value": "6.0e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.4P0.6Ge0.4S5I",
+      "ionic_conductivity_value": "1.5e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.5P0.5Ge0.5S5I",
+      "ionic_conductivity_value": "2.2e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.6P0.4Ge0.6S5I",
+      "ionic_conductivity_value": "5.4e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Results section - Ionic Transport"
+    },
+    {
+      "composition": "Li6.6P0.4Ge0.6S5I",
+      "ionic_conductivity_value": "1.84e-02",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Results section - Ionic Transport (sintered pellet)"
+    },
+    {
+      "composition": "Li6.7P0.3Ge0.7S5I",
+      "ionic_conductivity_value": "6.0e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6.8P0.2Ge0.8S5I",
+      "ionic_conductivity_value": "6.0e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "Li6PS5I",
+      "ionic_conductivity_value": "2.6e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Results section - Nuclear magnetic resonance (NMR calculation)"
+    },
+    {
+      "composition": "Li6.25P0.75Ge0.25S5I",
+      "ionic_conductivity_value": "3.9e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Results section - Nuclear magnetic resonance (NMR calculation)"
+    },
+    {
+      "composition": "Li6.6P0.4Ge0.6S5I",
+      "ionic_conductivity_value": "7.5e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "RT",
+      "source": "Results section - Nuclear magnetic resonance (NMR calculation)"
+    }
+  ]
+}

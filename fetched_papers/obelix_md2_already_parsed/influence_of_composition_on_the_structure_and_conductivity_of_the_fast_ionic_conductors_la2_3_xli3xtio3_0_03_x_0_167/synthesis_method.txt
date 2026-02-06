@@ -1,0 +1,15 @@
+**Method Name:** Solid State Reaction
+
+**Procedure Summary:**
+The La$_{2/3-x}$Li$_{3x}$TiO$_3$ perovskite materials were synthesized using a conventional solid-state reaction method. Initially, lanthanum oxide (La$_2$O$_3$) was pre-heated. Stoichiometric amounts of lithium carbonate (Li$_2$CO$_3$), the pre-heated La$_2$O$_3$, and titanium dioxide (TiO$_2$) were thoroughly ground together in an agate mortar. This mixture was then calcined to decompose the carbonate and eliminate carbon dioxide. The resulting product was reground, followed by an intermediate calcination step. Subsequently, the powder was cold-pressed into cylindrical pellets. These pellets then underwent a final high-temperature sintering step. For most samples, slow cooling was employed, but for specific compositions (e.g., x=0.167), quenching into liquid nitrogen from the final sintering temperature was also performed for comparative studies.
+
+**Key Conditions:**
+*   **Precursors:** Li$_2$CO$_3$ (Merck), La$_2$O$_3$ (Aldrich 99.99%), TiO$_2$ (Aldrich 99%).
+*   **La$_2$O$_3$ Pre-treatment:** Heated at 700°C prior to weighing.
+*   **First Calcination (Powder):** 800°C for 4 hours.
+*   **Intermediate Calcination (Powder):** 1150°C for 12 hours.
+*   **Pressing:** Cold-pressed at 150 MPa into cylindrical pellets.
+*   **Final Sintering (Pellets):** 1350°C for 6 hours.
+*   **Heating Rate:** 1°C/min for all heating treatments.
+*   **Atmosphere:** Not explicitly stated for synthesis; typically air for such oxide solid-state reactions. (A dry N$_2$ flow was used for electrical conductivity measurements, not synthesis).
+*   **Cooling:** Slow cooling was generally used. For specific samples (e.g., La$_{1.0}$Li$_{1.0}$Ti$_{2.0}$O$_{6.0}$ which corresponds to x=0.167), quenching from 1350°C into liquid nitrogen was also performed.

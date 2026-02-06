@@ -1,0 +1,63 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-97",
+      "extracted_id": null,
+      "reason": "The material Li2CrTiP3O12 matches, but the ground truth conductivity (4.41e-07 S/cm) is significantly lower than the extracted value (3.26e-06 S/cm) at a much lower temperature (111K). This inconsistency in conductivity relative to temperature indicates a mismatch in physical context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-98",
+      "extracted_id": null,
+      "reason": "The material Li2CrZrP3O12 matches, but the ground truth conductivity (5.91e-07 S/cm) is significantly lower than the extracted value (4.11e-06 S/cm) at a much lower temperature (111K). This inconsistency in conductivity relative to temperature indicates a mismatch in physical context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-99",
+      "extracted_id": null,
+      "reason": "The material Li2CrHfP3O12 matches, but the ground truth conductivity (4.2e-08 S/cm) is significantly lower than the extracted value (1.29e-06 S/cm) at a much lower temperature (111K). This inconsistency in conductivity relative to temperature indicates a mismatch in physical context.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-100",
+      "extracted_id": null,
+      "reason": "The material Li2FeTiP3O12 matches, but the ground truth conductivity (3.34e-07 S/cm) is lower than all extracted values for this material, even those measured at the lowest temperatures (e.g., 1e-06 S/cm at 100K). This indicates a mismatch in physical context or measurement conditions.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-101",
+      "extracted_id": null,
+      "reason": "No extracted data entry for the material Li2FeZrP3O12 was found.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-102",
+      "extracted_id": "EX-13",
+      "reason": "The material Li2InHfP3O12 and conductivity (GT: 2.74e-08 S/cm, EX: 3.33e-08 S/cm) are in excellent agreement. The extracted data is at 77K, and the close conductivity values suggest a similar low-temperature physical context for the ground truth measurement.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-103",
+      "extracted_id": null,
+      "reason": "The material Li2InTiP3O12 matches, but the ground truth conductivity (8.3e-06 S/cm) is lower than all extracted values for this material, even those measured at the lowest temperatures (e.g., 1.5e-05 S/cm at 100K). This indicates a mismatch in physical context or measurement conditions.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-104",
+      "extracted_id": null,
+      "reason": "The material Li2InZrP3O12 matches, but the ground truth conductivity (8.22e-08 S/cm) is significantly lower than the extracted value (3.01e-07 S/cm) at a much lower temperature (97K). This inconsistency in conductivity relative to temperature indicates a mismatch in physical context.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Out of 8 ground truth entries, only 1 was identified as a match. The primary reasons for mismatches were inconsistencies in conductivity values, especially when considering the provided temperature context in the extracted data. For several entries, the ground truth conductivity was lower than extracted values even at significantly lower temperatures, which is counter to typical Arrhenius behavior for solid electrolytes. One entry had no material match in the extracted data.",
+  "metrics": {
+    "recall": 12.5,
+    "precision": 4.545454545454546,
+    "f1": 6.666666666666666,
+    "avg_log10_error": 0.08469367068593225,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 8,
+    "total_ex": 22
+  }
+}

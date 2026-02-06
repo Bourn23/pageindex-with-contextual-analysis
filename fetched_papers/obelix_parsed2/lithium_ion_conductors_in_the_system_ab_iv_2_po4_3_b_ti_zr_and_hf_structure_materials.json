@@ -1,0 +1,539 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 78142,
+    "total_output_tokens": 8828,
+    "total_cost_usd": 0.065555,
+    "call_counts": {
+      "gemini-3-flash-preview": 25
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/lithium_ion_conductors_in_the_system_ab_iv_2_po4_3_b_ti_zr_and_hf_structure.json",
+  "extraction_stats": {
+    "total_nodes": 50,
+    "raw_extracted": 23,
+    "after_dedup": 16,
+    "time_elapsed": 107.11997604370117,
+    "valid_count": 16,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 11,
+      "medium": 5,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 14,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 0,
+    "final_count": 16
+  },
+  "material_count": 16,
+  "materials": [
+    {
+      "source_sentence_id": "0187",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Sc0.2Ti1.6Zr0.2(PO4)3",
+        "acronym": null,
+        "proportion": "Sc=0.2, Ti=1.6, Zr=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-3 S/cm",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Figure 4 (Arrhenius plot) for sample (a) Li1.2Sc0.2Ti1.6Zr0.2(PO4)3 at approximately 1000/T = 1.75.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Titanium substituted NASICON-type phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Titanium Substitution and its Structural Effects",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Sc0.2Ti1.6Zr0.2(PO4)3",
+      "_original_name": "Li1.2Sc0.2Ti1.6Zr0.2(PO4)3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0187",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Sc0.2Ti0.2Zr1.6(PO4)3",
+        "acronym": null,
+        "proportion": "Sc=0.2, Ti=0.2, Zr=1.6"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Figure 4 (Arrhenius plot) for sample (b) Li1.2Sc0.2Ti0.2Zr1.6(PO4)3 at approximately 1000/T = 1.75.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Titanium substituted NASICON-type phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Titanium Substitution and its Structural Effects",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Sc0.2Ti0.2Zr1.6(PO4)3",
+      "_original_name": "Li1.2Sc0.2Ti0.2Zr1.6(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0187",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZr2(PO4)3",
+        "acronym": "LZP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-7 S/cm",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Figure 4 (Arrhenius plot) for sample (c) LiZr2(PO4)3 at approximately 1000/T = 1.75.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Base zirconium phosphate material",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Titanium Substitution and its Structural Effects",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZr2(PO4)3",
+      "_original_name": "LiZr2(PO4)3",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZr2(PO4)3",
+        "acronym": "LZP",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-8 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Table 1 for the composition x=0 in the LiZr2-xTix(PO4)3 series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Highly distorted from rhombohedral, possibly triclinic cell.",
+      "processing_method": "Prepared at 1050-1100°C.",
+      "source_node": {
+        "node_id": "0061",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZr2(PO4)3",
+      "_original_name": "LiZr2(PO4)3",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZr1.75Ti0.25(PO4)3",
+        "acronym": "LZTP",
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-7 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Table 1 for the composition x=0.25 in the LiZr2-xTix(PO4)3 series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Rhombohedral solid solution.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0061",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZr1.75Ti0.25(PO4)3",
+      "_original_name": "LiZr1.75Ti0.25(PO4)3",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZr1.5Ti0.5(PO4)3",
+        "acronym": "LZTP",
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Table 1 for the composition x=0.5 in the LiZr2-xTix(PO4)3 series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Rhombohedral solid solution.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0061",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZr1.5Ti0.5(PO4)3",
+      "_original_name": "LiZr1.5Ti0.5(PO4)3",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiZr0.25Ti1.75(PO4)3",
+        "acronym": "LZTP",
+        "proportion": "x=1.75"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Table 1 for the composition x=1.75 in the LiZr2-xTix(PO4)3 series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Rhombohedral solid solution.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0061",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiZr0.25Ti1.75(PO4)3",
+      "_original_name": "LiZr0.25Ti1.75(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0065",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": "x=2.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-4 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from Table 1 for the composition x=2.0 in the LiZr2-xTix(PO4)3 series.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Rhombohedral solid solution.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0061",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_norm_cond": 0.0002,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "0162",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Figure 3 Arrhenius plot for the base material (x=0) at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0160",
+        "title": "Illustrative Data (Figures and Tables)",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "Li1+xScxTi2-x(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0162",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Sc0.3Ti1.7(PO4)3",
+        "acronym": "LSTP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from Figure 3 Arrhenius plot for the Sc-substituted material (x=0.3) at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Scandium-substituted NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0160",
+        "title": "Illustrative Data (Figures and Tables)",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "_original_name": "Li1+xScxTi2-x(PO4)3",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0198",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3In0.3Hf1.7(PO4)3",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "lower conductivity (see Tables 2, 3 and 4)",
+      "measurement_temperature": "not specified",
+      "reason": "The text explicitly compares the conductivity of Li1.3In0.3Hf1.7(PO4)3 to Li1.3Sc0.3Ti1.7(PO4)3, referencing Tables 2, 3, and 4 for the specific values.",
+      "confidence": "high",
+      "data_source": "internal-citation",
+      "material_description": "NASICON-type structure based on LiM2(PO4)3",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0195",
+        "title": "Hf-Based Conductors and Bottleneck Significance",
+        "section": "4. DISCUSSION"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "_original_name": "Li1.3In0.3Hf1.7(PO4)3",
+      "_norm_cond": 0.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0209",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2In0.2Hf1.8(PO4)3",
+        "acronym": null,
+        "proportion": "x = 0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-4 S/cm",
+      "measurement_temperature": "200°C",
+      "reason": "Estimated from the Arrhenius plot in Figure 5 for x = 0.2 at 1000/T ≈ 2.1 (approx. 200°C).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li1+xInxHf2-x(PO4)3 compounds",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0207",
+        "title": "Figure 5 and Caption",
+        "section": "ACKNOWLEDGEMENT"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2In0.2Hf1.8(PO4)3",
+      "_original_name": "Li1+xInxHf2-x(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 200
+    },
+    {
+      "source_sentence_id": "0209",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiHf2(PO4)3",
+        "acronym": null,
+        "proportion": "x = 0.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S/cm",
+      "measurement_temperature": "200°C",
+      "reason": "Estimated from the Arrhenius plot in Figure 5 for x = 0.0 at 1000/T ≈ 2.1 (approx. 200°C).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li1+xInxHf2-x(PO4)3 compounds",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0207",
+        "title": "Figure 5 and Caption",
+        "section": "ACKNOWLEDGEMENT"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiHf2(PO4)3",
+      "_original_name": "Li1+xInxHf2-x(PO4)3",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 200
+    },
+    {
+      "source_sentence_id": "0083",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "approximately 10^-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "The text states LiTi2(PO4)3 has a conductivity two orders of magnitude greater than the zirconium compound (LiZr2(PO4)3), which is typically ~10^-8 S/cm in this context, and refers to Table 1 for measured conductivities.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "rhombohedral phase",
+      "processing_method": "sintered compacts",
+      "source_node": {
+        "node_id": "0077",
+        "title": "Sc 3+ Substitution: Introduction and Structural Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0019",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3Zr2Si2PO12",
+        "acronym": "NASICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "three orders of magnitude lower than Na3Zr2Si2PO12",
+      "measurement_temperature": "not specified",
+      "reason": "The text compares the conductivity of Li3Zr2Si2PO12 to its sodium analogue, stating it is three orders of magnitude lower. While a specific absolute value is not given in this sentence, it provides a relative measurement for the material.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "ion exchange from the corresponding sodium analogue",
+      "source_node": {
+        "node_id": "0014",
+        "title": "Background and Strategy for Fast Lithium Conductors",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3Zr2Si2PO12",
+      "_original_name": "Li3Zr2Si2PO12",
+      "_norm_cond": 1e-06,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0117",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LTP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "about two orders of magnitude greater than LiZr2(PO4)3",
+      "measurement_temperature": "not specified",
+      "reason": "The text compares the conductivity of LiTi2(PO4)3 to the zirconium compound, indicating it is approximately 100 times higher, though specific numerical values are referenced in Table i rather than the sentence itself.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "End member of the solid solution",
+      "processing_method": "Sintered powders",
+      "source_node": {
+        "node_id": "0114",
+        "title": "LiTi2(PO4)3-LiZr2(PO4)3 Solid Solutions: Conductivity Analysis",
+        "section": "3. RESULTS"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_norm_cond": 1e-05,
+      "_norm_temp": null
+    }
+  ]
+}

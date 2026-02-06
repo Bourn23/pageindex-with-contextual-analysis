@@ -1,0 +1,7 @@
+{
+  "name": "SciFigure AI Parser",
+  "description": "A professional tool for extracting structured data from scientific figures using Gemini 3 and 2.5 series models with optional grid-based visual grounding.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

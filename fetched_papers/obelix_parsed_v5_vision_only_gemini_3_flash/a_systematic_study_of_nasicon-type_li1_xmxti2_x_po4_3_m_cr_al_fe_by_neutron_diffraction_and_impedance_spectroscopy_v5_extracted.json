@@ -1,0 +1,196 @@
+{
+  "doc_name": "a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy",
+  "timestamp": "2026-01-23 09:55:24",
+  "execution_time_seconds": 57.53,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 21699,
+    "total_output_tokens": 23008,
+    "total_cost_usd": 0.0799,
+    "call_counts": {
+      "gemini-3-flash-preview": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 9,
+    "skipped_images": 11,
+    "failed_items": 0,
+    "total_sections_processed": 15,
+    "total_images_processed": 13
+  },
+  "material_count": 9,
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The sample Li1.3Fe0.3Ti1.7(PO4)3 belongs to the NASICON-type phosphate family.",
+        "It is a part of the solid solution series Li(1+x)FexTi(2-x)(PO4)3.",
+        "In this material, Fe3+ is substituted for Ti4+ to increase Li+ content.",
+        "The crystal structure typically retains the R-3c space group of LiTi2(PO4)3.",
+        "The specific composition analyzed here corresponds to x = 0.3."
+      ],
+      "raw_conductivity": "8e-8",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 8e-08,
+      "raw_temperature": "303",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 29.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The sample Li1.3Fe0.3Ti1.7(PO4)3 belongs to the NASICON-type phosphate family.",
+        "It is a part of the solid solution series Li(1+x)FexTi(2-x)(PO4)3.",
+        "In this material, Fe3+ is substituted for Ti4+ to increase Li+ content.",
+        "The crystal structure typically retains the R-3c space group of LiTi2(PO4)3.",
+        "The specific composition analyzed here corresponds to x = 0.3."
+      ],
+      "raw_conductivity": "1e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1e-06,
+      "raw_temperature": "343",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 69.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The sample Li1.3Fe0.3Ti1.7(PO4)3 belongs to the NASICON-type phosphate family.",
+        "It is a part of the solid solution series Li(1+x)FexTi(2-x)(PO4)3.",
+        "In this material, Fe3+ is substituted for Ti4+ to increase Li+ content.",
+        "The crystal structure typically retains the R-3c space group of LiTi2(PO4)3.",
+        "The specific composition analyzed here corresponds to x = 0.3."
+      ],
+      "raw_conductivity": "5e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5e-06,
+      "raw_temperature": "383",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 109.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The sample Li1.3Fe0.3Ti1.7(PO4)3 belongs to the NASICON-type phosphate family.",
+        "It is a part of the solid solution series Li(1+x)FexTi(2-x)(PO4)3.",
+        "In this material, Fe3+ is substituted for Ti4+ to increase Li+ content.",
+        "The crystal structure typically retains the R-3c space group of LiTi2(PO4)3.",
+        "The specific composition analyzed here corresponds to x = 0.3."
+      ],
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.5e-05,
+      "raw_temperature": "423",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 149.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The sample Li1.3Fe0.3Ti1.7(PO4)3 belongs to the NASICON-type phosphate family.",
+        "It is a part of the solid solution series Li(1+x)FexTi(2-x)(PO4)3.",
+        "In this material, Fe3+ is substituted for Ti4+ to increase Li+ content.",
+        "The crystal structure typically retains the R-3c space group of LiTi2(PO4)3.",
+        "The specific composition analyzed here corresponds to x = 0.3."
+      ],
+      "raw_conductivity": "4e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 4e-05,
+      "raw_temperature": "443",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 169.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "LFTP03 (Bulk)",
+      "material_definitions": [
+        "Arrhenius fitting of bulk and grain boundary regions for sample series LATP, LFTP, and LCTP.",
+        "LATP, LFTP, and LCTP likely correspond to lithium aluminum titanium phosphate, lithium iron titanium phosphate, and lithium chromium titanium phosphate ceramics.",
+        "Bulk contributions are represented by solid lines, while grain boundary (GB) contributions are shown with dashed lines.",
+        "The plot displays the product of conductivity and temperature (sigma T) against inverse temperature (1000/T)."
+      ],
+      "raw_conductivity": "5.0e-2",
+      "raw_conductivity_unit": "S K cm-1",
+      "normalized_conductivity": 0.05,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "LFTP03 (GB)",
+      "material_definitions": [
+        "Arrhenius fitting of bulk and grain boundary regions for sample series LATP, LFTP, and LCTP.",
+        "LATP, LFTP, and LCTP likely correspond to lithium aluminum titanium phosphate, lithium iron titanium phosphate, and lithium chromium titanium phosphate ceramics.",
+        "Bulk contributions are represented by solid lines, while grain boundary (GB) contributions are shown with dashed lines.",
+        "The plot displays the product of conductivity and temperature (sigma T) against inverse temperature (1000/T)."
+      ],
+      "raw_conductivity": "2.5e-3",
+      "raw_conductivity_unit": "S K cm-1",
+      "normalized_conductivity": 0.0025,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "LATP03 (Bulk)",
+      "material_definitions": [
+        "Arrhenius fitting of bulk and grain boundary regions for sample series LATP, LFTP, and LCTP.",
+        "LATP, LFTP, and LCTP likely correspond to lithium aluminum titanium phosphate, lithium iron titanium phosphate, and lithium chromium titanium phosphate ceramics.",
+        "Bulk contributions are represented by solid lines, while grain boundary (GB) contributions are shown with dashed lines.",
+        "The plot displays the product of conductivity and temperature (sigma T) against inverse temperature (1000/T)."
+      ],
+      "raw_conductivity": "4.0e-3",
+      "raw_conductivity_unit": "S K cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "5.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": -73.15,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "LATP03 (GB)",
+      "material_definitions": [
+        "Arrhenius fitting of bulk and grain boundary regions for sample series LATP, LFTP, and LCTP.",
+        "LATP, LFTP, and LCTP likely correspond to lithium aluminum titanium phosphate, lithium iron titanium phosphate, and lithium chromium titanium phosphate ceramics.",
+        "Bulk contributions are represented by solid lines, while grain boundary (GB) contributions are shown with dashed lines.",
+        "The plot displays the product of conductivity and temperature (sigma T) against inverse temperature (1000/T)."
+      ],
+      "raw_conductivity": "1.6e-3",
+      "raw_conductivity_unit": "S K cm-1",
+      "normalized_conductivity": 0.0016,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

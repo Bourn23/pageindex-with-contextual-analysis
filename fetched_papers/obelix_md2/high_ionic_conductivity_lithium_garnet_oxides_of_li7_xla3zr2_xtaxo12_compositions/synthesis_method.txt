@@ -1,0 +1,25 @@
+**Method Name:** Solid State Reaction
+
+**Procedure Summary:**
+Polycrystalline powders of Li7-xLa3Zr2-xTaxO12 were synthesized using a two-step solid-state method. Stoichiometric amounts of LiOH·H2O (with 10 wt% excess to compensate for evaporation), La2O3, ZrO2, and Ta2O5 precursors were initially ball-milled in 2-propanol for 24 hours using zirconia balls. The resulting mixture was dried and then calcined in air at 900°C for 10 hours in alumina crucibles. This ball-milling and calcination process was repeated once to enhance purity. The calcined powders were then mixed with approximately 0.5 atomic % of NaHCO3 and α-Al2O3 as sintering aids. These mixtures were cold-pressed into 1/2 inch diameter pellets at 5 tons. For Zr-rich compositions (x=0.2-0.5), Li5La3Ta2O12 (LLZT2) buffer pellets were placed below the samples, and all pellets were covered with powders of the same composition to minimize Al contamination from the crucibles and prevent evaporation during sintering. Finally, the pellets were sintered in air in alumina crucibles.
+
+**Key Conditions:**
+*   **Precursors:** LiOH·H2O (99.995%), La2O3 (99.9%), ZrO2 (99.7%), Ta2O5 (99.85%). 10 wt% excess LiOH·H2O.
+*   **Mixing:** Ball-milled in 2-propanol for 24 hours with zirconia balls.
+*   **Calcination:**
+    *   Temperature: 900°C
+    *   Dwell Time: 10 hours
+    *   Atmosphere: Air
+    *   Heating Rate: 3°C/min
+    *   Repetitions: Performed twice (ball-milling and calcination cycle repeated once).
+*   **Sintering:**
+    *   Sintering Aids: ~0.5 atomic % NaHCO3 and α-Al2O3.
+    *   Pressing: Cold-pressed at 5 tons.
+    *   Atmosphere: Air
+    *   Dwell Time: 36 hours
+    *   Heating Rates: 3°C/min up to 900°C, then 1°C/min to the final sintering temperature.
+    *   Cooling Rate: 4°C/min.
+    *   Specific Sintering Temperatures (by 'x' value in Li7-xLa3Zr2-xTaxO12):
+        *   x=0.2, 0.25, 0.35, 0.4, 0.45, 0.5: 1130°C
+        *   x=0.3, 1: 1100°C
+        *   x=2: 1230°C

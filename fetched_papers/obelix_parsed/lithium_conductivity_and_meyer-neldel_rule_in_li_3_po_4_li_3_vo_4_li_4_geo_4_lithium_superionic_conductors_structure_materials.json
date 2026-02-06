@@ -1,0 +1,1373 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 96181,
+    "total_output_tokens": 14912,
+    "total_cost_usd": 0.09282650000000006,
+    "call_counts": {
+      "gemini-3-flash-preview": 64
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_structure.json",
+  "extraction_stats": {
+    "total_nodes": 133,
+    "raw_extracted": 52,
+    "after_dedup": 42,
+    "time_elapsed": 603.1235258579254,
+    "valid_count": 42,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 22,
+      "medium": 20,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 6,
+      "cited": 0,
+      "inferred": 36
+    },
+    "from_text_nodes": 16,
+    "from_image_nodes": 36,
+    "final_count": 42
+  },
+  "material_count": 42,
+  "materials": [
+    {
+      "source_sentence_id": "0176",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "~ 2x10^-10 S/cm",
+      "measurement_temperature": "100 °C",
+      "reason": "Extracted ionic conductivity value for Li3PO4 at 100 °C as explicitly stated in sentence 0176.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "LISICONs without partial lithium occupancy",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0171",
+        "title": "Experimental Impedance Spectroscopy Methodology and Initial Findings",
+        "section": "3. RESULTS"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4",
+      "_original_name": "Li3PO4",
+      "_norm_cond": 2e-10,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0176",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~2x10^-9 S/cm",
+      "measurement_temperature": "100 °C",
+      "reason": "Extracted ionic conductivity value for Li4GeO4 at 100 °C as explicitly stated in sentence 0176.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "LISICONs without partial lithium occupancy",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0171",
+        "title": "Experimental Impedance Spectroscopy Methodology and Initial Findings",
+        "section": "3. RESULTS"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeO4",
+      "_original_name": "Li4GeO4",
+      "_norm_cond": 2e-09,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in image dbc7eb19, where the data point for Li6PS5Cl at 1000/T ≈ 3.35 K⁻¹ (25°C) corresponds to approximately 1.1 mS/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte ; Baseline argyrodite solid electrolyte.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0503",
+        "title": "Images",
+        "section": "REFERENCES"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in image dbc7eb19, where the data point for Li6PS5Cl at 1000/T ≈ 2.68 K⁻¹ (100°C) corresponds to approximately 10^-2 S/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0503",
+        "title": "Images",
+        "section": "REFERENCES"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "9.4 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in image dbc7eb19, where the data point for Li5.5PS4.5Cl1.5 at 1000/T ≈ 3.35 K⁻¹ (25°C) corresponds to approximately 9.4 mS/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Chlorine-rich argyrodite solid electrolyte ; Cl-rich argyrodite solid electrolyte with high ionic conductivity.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0503",
+        "title": "Images",
+        "section": "REFERENCES"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.0094,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "4.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in image dbc7eb19, where the data point for Li5.5PS4.5Cl1.5 at 1000/T ≈ 2.68 K⁻¹ (100°C) corresponds to approximately 4 x 10^-2 S/cm.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Chlorine-rich argyrodite solid electrolyte",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0503",
+        "title": "Images",
+        "section": "REFERENCES"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.04,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0140",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3+xV1-xGexO4",
+        "acronym": null,
+        "proportion": "x=0, 0.2, 0.4, 0.6, 0.8, 1"
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Figure 4b",
+      "measurement_temperature": "30 °C",
+      "reason": "The text explicitly mentions conductivity at 30 °C for the Li3+xV1-xGexO4 series in Figure 4b, though specific numerical values are represented graphically in the figure.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Compounds with partial Li occupancy (bulk conductivity) or extrapolated from high-temperature measurements.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations",
+      "source_node": {
+        "node_id": "0134",
+        "title": "Figure 4 Description",
+        "section": "2.2 Classical Molecular Dynamics (MD) simulations"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3+xV1-xGexO4",
+      "_original_name": "Li3+xV1-xGexO4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 30
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2V0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "Data represents Diffusivity (cm^2/s), not Ionic Conductivity (S/cm)",
+      "measurement_temperature": "Arrhenius plot from 1000/T = 0.8 to 1.3 K⁻¹ (~500°C to ~500 K)",
+      "reason": "The plot in Figure 3a displays lithium-ion diffusivity (cm^2/s) rather than ionic conductivity (S/cm).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Diffusivity for Li3.2Ge0.2V0.8O4 (x=0.2)",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0164",
+        "title": "_page_7_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "_original_name": "Li3.2Ge0.2V0.8O4",
+      "_norm_cond": 1.0,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_3.jpeg, Derived from Plot _page_12_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Ge0.6V0.4O4",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "Data represents Diffusivity (cm^2/s), not Ionic Conductivity (S/cm)",
+      "measurement_temperature": "Arrhenius plot from 1000/T = 0.8 to 1.3 K⁻¹ (~500°C to ~500 K)",
+      "reason": "The plot in Figure 3a displays lithium-ion diffusivity (cm^2/s) rather than ionic conductivity (S/cm).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Diffusivity for Li3.6Ge0.6V0.4O4 (x=0.6) ; Germanium-vanadium doped lithium oxide ceramic",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0164",
+        "title": "_page_7_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Ge0.6V0.4O4",
+      "_original_name": "Li3.6Ge0.6V0.4O4",
+      "_norm_cond": 0.0,
+      "_norm_temp": 500,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Ge0.4V0.6O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "Data represents Diffusivity (cm^2/s), not Ionic Conductivity (S/cm)",
+      "measurement_temperature": "Arrhenius plot from 1000/T = 0.8 to 1.3 K⁻¹ (~500°C to ~500 K)",
+      "reason": "The plot in Figure 3a displays lithium-ion diffusivity (cm^2/s) rather than ionic conductivity (S/cm).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Diffusivity for Li3.4Ge0.4V0.6O4 (x=0.4)",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0164",
+        "title": "_page_7_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Ge0.4V0.6O4",
+      "_original_name": "Li3.4Ge0.4V0.6O4",
+      "_norm_cond": 0.0,
+      "_norm_temp": 226.85000000000002,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3VO4",
+        "acronym": null,
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid green circle at x=0.0.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Vanadate-based solid electrolyte",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3VO4",
+      "_original_name": "Li3VO4",
+      "_norm_cond": 1.3e-13,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3P0.2V0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid green circle at x=0.2.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Phosphate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3P0.2V0.8O4",
+      "_original_name": "Li3P0.2V0.8O4",
+      "_norm_cond": 1.5e-13,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeO4",
+        "acronym": null,
+        "proportion": "x=1.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-12 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid blue circle at x=1.0.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Lithium germanate",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeO4",
+      "_original_name": "Li4GeO4",
+      "_norm_cond": 1.5e-12,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2V0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1e-6 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open orange circle at x=0.2.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 44,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "_original_name": "Li3.2Ge0.2V0.8O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Ge0.8V0.2O4",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "1e-4 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open green circle at x=0.8.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Ge0.8V0.2O4",
+      "_original_name": "Li3.8Ge0.8V0.2O4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Ge0.6P0.4O4",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "1e-6 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open blue circle at x=0.6.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Germanate-phosphate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 50,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Ge0.6P0.4O4",
+      "_original_name": "Li3.6Ge0.6P0.4O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0192",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2P0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2 (20% Ge substitution)"
+      },
+      "ionic_conductivity_S_per_cm": "4-5 orders of magnitude higher than Li3PO4",
+      "measurement_temperature": "not specified",
+      "reason": "The text states that 20% Ge substitution in Li3PO4 leads to a 4-5 order of magnitude increase in conductivity relative to the base material, as shown in Figure 4b. While a specific absolute value is not given in the text, this relative measurement is a primary finding.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Aliovalent substitution of P5+ by Ge4+ in Li3PO4 resulting in partial lithium occupancy.",
+      "processing_method": "Aliovalent substitution",
+      "source_node": {
+        "node_id": "0190",
+        "title": "Detailed Trends in Conductivity and Activation Energy with Ge Substitution",
+        "section": "3. RESULTS"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "_original_name": "Li3+xP1-xGexO4",
+      "_norm_cond": 0.001,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0192",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2V0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2 (20% Ge substitution)"
+      },
+      "ionic_conductivity_S_per_cm": "4-5 orders of magnitude higher than Li3VO4",
+      "measurement_temperature": "not specified",
+      "reason": "The text states that 20% Ge substitution in Li3VO4 leads to a 4-5 order of magnitude increase in conductivity relative to the base material, as shown in Figure 4b.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Aliovalent substitution of V5+ by Ge4+ in Li3VO4 resulting in partial lithium occupancy.",
+      "processing_method": "Aliovalent substitution",
+      "source_node": {
+        "node_id": "0190",
+        "title": "Detailed Trends in Conductivity and Activation Energy with Ge Substitution",
+        "section": "3. RESULTS"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "_original_name": "Li3+xV1-xGexO4",
+      "_norm_cond": 4.5,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeO4",
+        "acronym": null,
+        "proportion": "x=1.0"
+      },
+      "ionic_conductivity_S_per_cm": "Data represents Diffusivity (cm^2/s), not Ionic Conductivity (S/cm)",
+      "measurement_temperature": "Arrhenius plot from 1000/T = 0.6 to 1.2 K⁻¹ (~1400°C to ~560°C)",
+      "reason": "The plot in Figure 3a displays lithium-ion diffusivity (cm^2/s) rather than ionic conductivity (S/cm).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Diffusivity for Li4GeO4 (x=1.0)",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0164",
+        "title": "_page_7_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeO4",
+      "_original_name": "Li4GeO4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0140",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3P1-xVxO4",
+        "acronym": null,
+        "proportion": "x=0, 0.2, 0.4, 0.6, 0.8, 1"
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Figure 4b",
+      "measurement_temperature": "30 °C",
+      "reason": "The text explicitly mentions conductivity at 30 °C for the Li3P1-xVxO4 series in Figure 4b, though specific numerical values are represented graphically in the figure.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Compounds with partial Li occupancy (bulk conductivity) or extrapolated from high-temperature measurements.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations",
+      "source_node": {
+        "node_id": "0134",
+        "title": "Figure 4 Description",
+        "section": "2.2 Classical Molecular Dynamics (MD) simulations"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3P1-xVxO4",
+      "_original_name": "Li3P1-xVxO4"
+    },
+    {
+      "source_sentence_id": "0140",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3+xP1-xGexO4",
+        "acronym": null,
+        "proportion": "x=0, 0.2, 0.4, 0.6, 0.8, 1"
+      },
+      "ionic_conductivity_S_per_cm": "Value to be extracted from Figure 4b",
+      "measurement_temperature": "30 °C",
+      "reason": "The text explicitly mentions conductivity at 30 °C for the Li3+xP1-xGexO4 series in Figure 4b, though specific numerical values are represented graphically in the figure.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Compounds with partial Li occupancy (bulk conductivity) or extrapolated from high-temperature measurements.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations",
+      "source_node": {
+        "node_id": "0134",
+        "title": "Figure 4 Description",
+        "section": "2.2 Classical Molecular Dynamics (MD) simulations"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3+xP1-xGexO4",
+      "_original_name": "Li3+xP1-xGexO4"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_7_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Ge0.8V0.2O4",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "Data represents Diffusivity (cm^2/s), not Ionic Conductivity (S/cm)",
+      "measurement_temperature": "Arrhenius plot from 1000/T = 0.8 to 1.3 K⁻¹ (~500°C to ~500 K)",
+      "reason": "The plot in Figure 3a displays lithium-ion diffusivity (cm^2/s) rather than ionic conductivity (S/cm).",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Diffusivity for Li3.8Ge0.8V0.2O4 (x=0.8)",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0164",
+        "title": "_page_7_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Ge0.8V0.2O4",
+      "_original_name": "Li3.8Ge0.8V0.2O4",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4-Li3VO4-Li4GeO4",
+        "acronym": null,
+        "proportion": "Ge-doped"
+      },
+      "ionic_conductivity_S_per_cm": "~7 order of magnitude increase",
+      "measurement_temperature": "room-temperature",
+      "reason": "The text describes a relative increase in conductivity for the Ge-doped Li3PO4-Li3VO4-Li4GeO4 system compared to the base materials, though specific absolute numerical values are not provided in this summary sentence.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Ge-doped Li3PO4 or Li3VO4 with partial lithium occupancy",
+      "processing_method": "Doping Li3PO4 or Li3VO4 with Ge",
+      "source_node": {
+        "node_id": "0242",
+        "title": "Study Objective and Key Findings",
+        "section": "CONCLUSIONS"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4-Li3VO4-Li4GeO4",
+      "_original_name": "Li3PO4-Li3VO4-Li4GeO4 system",
+      "_norm_cond": 10000000.0,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.7e-10 S cm⁻¹",
+      "measurement_temperature": "105 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 1.3 GΩ cm in Figure 3a. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3PO4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4",
+      "_original_name": "Li3PO4",
+      "_norm_cond": 7.7e-10,
+      "_norm_temp": 105,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.9e-9 S cm⁻¹",
+      "measurement_temperature": "120 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 0.35 GΩ cm in Figure 3a. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3PO4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4",
+      "_original_name": "Li3PO4",
+      "_norm_cond": 2.9e-09,
+      "_norm_temp": 120,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-9 S cm⁻¹",
+      "measurement_temperature": "90 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 0.73 GΩ cm in Figure 3b. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li4GeO4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeO4",
+      "_original_name": "Li4GeO4",
+      "_norm_cond": 1.4e-09,
+      "_norm_temp": 90,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.2e-9 S cm⁻¹",
+      "measurement_temperature": "105 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 0.24 GΩ cm in Figure 3b. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li4GeO4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeO4",
+      "_original_name": "Li4GeO4",
+      "_norm_cond": 4.2e-09,
+      "_norm_temp": 105,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2V0.8O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.7e-5 S cm⁻¹",
+      "measurement_temperature": "90 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 27 kΩ cm in Figure 3c. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3.2Ge0.2V0.8O4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "_original_name": "Li3.2Ge0.2V0.8O4",
+      "_norm_cond": 3.7e-05,
+      "_norm_temp": 90,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2V0.8O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-4 S cm⁻¹",
+      "measurement_temperature": "105 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 9 kΩ cm in Figure 3c. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3.2Ge0.2V0.8O4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "_original_name": "Li3.2Ge0.2V0.8O4",
+      "_norm_cond": 0.00011,
+      "_norm_temp": 105,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2P0.8O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.1e-9 S cm⁻¹",
+      "measurement_temperature": "-30 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 110 MΩ cm in Figure 3d. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3.2Ge0.2P0.8O4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "_original_name": "Li3.2Ge0.2P0.8O4",
+      "_norm_cond": 9.1e-09,
+      "_norm_temp": -30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2P0.8O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-7 S cm⁻¹",
+      "measurement_temperature": "0 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 10 MΩ cm in Figure 3d. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3.2Ge0.2P0.8O4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "_original_name": "Li3.2Ge0.2P0.8O4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 0,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2P0.8O4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-6 S cm⁻¹",
+      "measurement_temperature": "30 °C",
+      "reason": "Calculated from Nyquist plot intercept (total resistance) R ≈ 1.0 MΩ cm in Figure 3d inset. Conductivity σ = 1/R.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Solid electrolyte Li3.2Ge0.2P0.8O4 impedance spectroscopy.",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0111",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "_original_name": "Li3.2Ge0.2P0.8O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3P0.4V0.6O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "5e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid green circle at x=0.4.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Phosphate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 39,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3P0.4V0.6O4",
+      "_original_name": "Li3P0.4V0.6O4",
+      "_norm_cond": 5e-13,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3P0.6V0.4O4",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "3e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid green circle at x=0.6.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Phosphate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 40,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3P0.6V0.4O4",
+      "_original_name": "Li3P0.6V0.4O4",
+      "_norm_cond": 3e-13,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4",
+        "acronym": null,
+        "proportion": "x=1.0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid orange circle at x=1.0.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Lithium phosphate",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4",
+      "_original_name": "Li3PO4",
+      "_norm_cond": 2.8e-13,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Ge0.4V0.6O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "5e-7 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open green circle at x=0.4.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Germanate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 45,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Ge0.4V0.6O4",
+      "_original_name": "Li3.4Ge0.4V0.6O4",
+      "_norm_cond": 5e-07,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Ge0.6V0.4O4",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "3e-5 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open green circle at x=0.6.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Germanate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Ge0.6V0.4O4",
+      "_original_name": "Li3.6Ge0.6V0.4O4",
+      "_norm_cond": 3e-05,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.2Ge0.2P0.8O4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "2e-5 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open green circle at x=0.2.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Germanate-phosphate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "_original_name": "Li3.2Ge0.2P0.8O4",
+      "_norm_cond": 2e-05,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Ge0.4P0.6O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "4e-6 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open orange circle at x=0.4.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Germanate-phosphate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Ge0.4P0.6O4",
+      "_original_name": "Li3.4Ge0.4P0.6O4",
+      "_norm_cond": 4e-06,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Ge0.8P0.2O4",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-6 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, open blue circle at x=0.8.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Germanate-phosphate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Ge0.8P0.2O4",
+      "_original_name": "Li3.8Ge0.8P0.2O4",
+      "_norm_cond": 1.5e-06,
+      "_norm_temp": 30,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0070",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PO4",
+        "acronym": null,
+        "proportion": "cation and anion substitution"
+      },
+      "ionic_conductivity_S_per_cm": "~15 orders of magnitude",
+      "measurement_temperature": "not specified",
+      "reason": "The text mentions the vast tunability of ionic conductivity in LISICON materials based on Li3PO4, spanning approximately 15 orders of magnitude due to substitution effects.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0069",
+        "title": "Investigating LISICONs: Substitution Effects and Correlation of Conductivity Factors",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PO4",
+      "_original_name": "Li3PO4",
+      "_norm_cond": 15.0,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3P0.8V0.2O4",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-13 S cm^-1",
+      "measurement_temperature": "30 °C",
+      "reason": "Extracted from Figure 3b, solid orange circle at x=0.8.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Phosphate-vanadate solid solution",
+      "processing_method": "Classical Molecular Dynamics (MD) simulations [Inferred]",
+      "source_node": {
+        "node_id": "0135",
+        "title": "_page_6_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3P0.8V0.2O4",
+      "_original_name": "Li3P0.8V0.2O4",
+      "_enriched": true
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_pipeline_20260203_110450.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 2' in section '3.3. Impedance spectroscopy'
+       - Replaced 'Table 2' in section '4. Conclusions'
+   --- Document: A systematic study of Nasicon-type $\text{Li}_{1+x}\text{M}_x\text{Ti}_{2-x}(\text{PO}_4)_3$ (M: Cr, Al, Fe) by neutron diffraction and impedance spectroscopy
+   --- Found: 15 Sections
+   --- Found: 13 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Solid State Ionics' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '3.1. X-ray diffraction at room temperature' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '3.2. Neutron diffraction as a function of temperature' contains:
+       - 7 Images: ['Fig 4', 'Fig 3', 'Fig 5', 'Fig 1', 'Fig 2', 'Fig 1', 'Fig 1']
+
+   >>> Section '3.3. Impedance spectroscopy' contains:
+       - 8 Images: ['Fig 4', 'Fig 3', 'Fig 5', 'Fig 8', 'Fig 7', 'Fig 6', 'Fig 9', 'Fig 2']
+       - 2 Tables: ['Table 2', 'Table 2']
+
+   >>> Section '4. Conclusions' contains:
+       - 1 Images: ['Fig 8']
+       - 1 Tables: ['Table 2']
+
+   >>> Section 'Acknowledgments' contains:
+       - 1 Images: ['Fig 9']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: References
+   ... Processing 29 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_5.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_7.jpeg (Unknown): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 1): Detecting subplot...
+   🔍 page_2_figure_3.jpeg (Fig 1): Detecting subplot...
+   [93m[Skip][0m page_0_picture_5.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_2_figure_4.jpeg (Fig 1): Detecting subplot...
+   [93m[Skip][0m page_0_picture_7.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_2.jpeg (Fig 2): Detecting subplot...
+   ✂️ page_2_figure_2.jpeg: Multi-plot detected (1 panels). Processing each in parallel...
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 1): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_figure_2.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_2_figure_3.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_5.jpeg (Fig 4): Detecting subplot...
+   🔍 page_5_figure_11.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_4_figure_2.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_5_figure_8.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_2_figure_4.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_15.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_4_figure_5.jpeg (Fig 4): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_2.jpeg (Fig 7): Detecting subplot...
+   ✂️ page_5_figure_11.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+Passing box coords  [21, 72, 483, 952]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/scifig_debug/page_5_figure_11_cropped_a.jpeg
+   [93m[Skip][0m page_5_figure_11.jpeg (Fig 6): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_5_figure_8.jpeg (Fig 5): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_7.jpeg (Fig 8): Detecting subplot...
+   ✂️ page_3_figure_2.jpeg: Multi-plot detected (11 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LTP 77K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LTP 296K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LTP 423K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LTP 540K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP005 296K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP01 296K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP03 77K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP03 296K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP03 423K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP03 540K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 2): LATP04 296K - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   📊 page_6_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 7): No ionic conductivity measurements detected by SciFigureParser.
+   ✓ page_6_figure_7.jpeg (Fig 8): Found 82 points total via SciFigureParser
+   ✓ page_5_figure_11.jpeg (Fig 6): Found 30 points total via SciFigureParser
+   ✓ Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.: Found 30 points
+   ⏱️  page_6_figure_15.jpeg: Timeout
+   ... Canonicalizing Materials...
+   ... Resolving 142 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 145 measurements
+      - Skipped (no data): 23 images
+      - Failed: 1 items
+
+Done! Extracted 145 points.
+Saved to: fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         16
+Total Input:         15,318 tokens
+Total Output:        20,570 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0560
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 16 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.ssi.2014.07.018
+GT-282: Li6.0Ti12.0P18.0O72.0 | 6e-05 S/cm
+GT-283: Li6.3Al0.3Ti11.7P18.0O72.0 | 0.0011 S/cm
+GT-284: Li6.6Al0.6Ti11.4P18.0O72.0 | 0.00067 S/cm
+GT-285: Li7.8Al1.8Ti10.2P18.0O72.0 | 0.0062 S/cm
+GT-286: Li8.4Al2.4Ti9.6P18.0O72.0 | 0.0033 S/cm
+GT-287: Li6.3Cr0.3Ti11.7P18.0O72.0 | 0.00018 S/cm
+GT-288: Li6.6Cr0.6Ti11.4P18.0O72.0 | 0.00026 S/cm
+GT-289: Li7.2Cr1.2Ti10.8P18.0O72.0 | 0.00043 S/cm
+GT-290: Li7.8Cr1.8Ti10.2P18.0O72.0 | 0.00029 S/cm
+GT-291: Li6.3Fe0.3Ti11.7P18.0O72.0 | 0.00013 S/cm
+GT-292: Li6.6Fe0.6Ti11.4P18.0O72.0 | 0.00063 S/cm
+GT-293: Li7.2Fe1.2Ti10.8P18.0O72.0 | 0.0014 S/cm
+GT-294: Li7.8Fe1.8Ti10.2P18.0O72.0 | 0.0023 S/cm
+--- Starting Validation ---
+Comparing 13 GT items vs 2432 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-282     | ✅ MATCH         | The normalized chemical formula LiTi2P3O12 (LTP) and conductivity 6.0e-05 S/cm match exactly.
+GT-283     | ✅ MATCH         | The normalized chemical formula Li1.05Al0.05Ti1.95P3O12 (LATP005) and conductivity 0.0011 S/cm match exactly.
+GT-284     | ✅ MATCH         | The normalized chemical formula Li1.1Al0.1Ti1.9P3O12 (LATP01) and conductivity 0.00067 S/cm match exactly.
+GT-285     | ✅ MATCH         | The normalized chemical formula Li1.3Al0.3Ti1.7P3O12 (LATP03) and conductivity 0.0062 S/cm match exactly.
+GT-286     | ✅ MATCH         | The normalized chemical formula Li1.4Al0.4Ti1.6P3O12 (LATP04) and conductivity 0.0033 S/cm match exactly.
+GT-287     | ✅ MATCH         | The normalized chemical formula Li1.05Cr0.05Ti1.95P3O12 (LCTP005) and conductivity 0.00018 S/cm match exactly.
+GT-288     | ✅ MATCH         | The normalized chemical formula Li1.1Cr0.1Ti1.9P3O12 (LCTP01) and conductivity 0.00026 S/cm match exactly.
+GT-289     | ✅ MATCH         | The normalized chemical formula Li1.2Cr0.2Ti1.8P3O12 (LCTP02) and conductivity 0.00043 S/cm match exactly.
+GT-290     | ✅ MATCH         | The normalized chemical formula Li1.3Cr0.3Ti1.7P3O12 (LCTP03) and conductivity 0.00029 S/cm match exactly.
+GT-291     | ✅ MATCH         | The normalized chemical formula Li1.05Fe0.05Ti1.95P3O12 (LFTP005) and conductivity 0.00013 S/cm match exactly.
+GT-292     | ✅ MATCH         | The normalized chemical formula Li1.1Fe0.1Ti1.9P3O12 (LFTP01) and conductivity 0.00063 S/cm match exactly.
+GT-293     | ✅ MATCH         | The normalized chemical formula Li1.2Fe0.2Ti1.8P3O12 (LFTP02) and conductivity 0.0014 S/cm match exactly.
+GT-294     | ✅ MATCH         | The normalized chemical formula Li1.3Fe0.3Ti1.7P3O12 (LFTP03) and conductivity 0.0023 S/cm match exactly.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m DOI: 10.1016/j.ssi.2014.07.018
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_pipeline_20260203_110450.log
+

@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-403",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions like Li6PS5Br."
+    },
+    {
+      "ground_truth_id": "GT-404",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-405",
+      "extracted_match": "Li6PS(5-x)SexBr series (maximum) | 0.0039 S/cm",
+      "is_match": true,
+      "reason": "The extracted data correctly identifies the maximum conductivity of the series, and the value 0.0039 S/cm is an approximate match for 0.00392 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-406",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-407",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-408",
+      "extracted_match": "Li6PS(5-x)SexBr series (minimum) | 0.0027 S/cm",
+      "is_match": true,
+      "reason": "The extracted data correctly identifies the minimum conductivity of the series, and the value 0.0027 S/cm is an approximate match for 0.00268 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-409",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-410",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-411",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-412",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    },
+    {
+      "ground_truth_id": "GT-413",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data only provides general series information and extreme conductivity values, not specific compositions."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 2
+}

@@ -1,0 +1,11 @@
+GT-417     | ✅ MATCH         | Li24.0P4.0S20.0I4.0 simplifies to Li6PS5I, and 1.26e-06 S/cm is approximately 1.3e-06 S/cm (3.17% difference).
+GT-418     | ✅ MATCH         | Li24.4P3.6Ge0.4S20.0I4.0 simplifies to Li6.1P0.9Ge0.1S5I, and 8.86e-06 S/cm is approximately 9.0e-06 S/cm (1.58% difference).
+GT-419     | ❌ MISSING/BAD   | No extracted entry matches the normalized chemical formula and conductivity within a 15% tolerance.
+GT-420     | ❌ MISSING/BAD   | No extracted entry matches the normalized chemical formula and conductivity within a 15% tolerance.
+GT-421     | ❌ MISSING/BAD   | No extracted entry matches the normalized chemical formula and conductivity within a 15% tolerance.
+GT-422     | ✅ MATCH         | Li25.2P2.8Ge1.2S20.0I4.0 simplifies to Li6.3P0.7Ge0.3S5I, and 0.00065 S/cm is approximately 6.0e-04 S/cm (7.69% difference).
+GT-423     | ✅ MATCH         | Li25.6P2.4Ge1.6S20.0I4.0 simplifies to Li6.4P0.6Ge0.4S5I, and 0.0015 S/cm is approximately 1.5e-03 S/cm (0% difference).
+GT-424     | ❌ MISSING/BAD   | No extracted entry matches the normalized chemical formula and conductivity within a 15% tolerance.
+GT-425     | ✅ MATCH         | Li26.4P1.6Ge2.4S20.0I4.0 simplifies to Li6.6P0.4Ge0.6S5I, and 0.00521 S/cm is approximately 5.4e-03 S/cm (3.64% difference).
+GT-426     | ✅ MATCH         | Li26.8P1.2Ge2.8S20.0I4.0 simplifies to Li6.7P0.3Ge0.7S5I, and 0.00554 S/cm is approximately 6.0e-03 S/cm (8.3% difference).
+GT-427     | ❌ MISSING/BAD   | No extracted entry matches the normalized chemical formula and conductivity within a 15% tolerance.

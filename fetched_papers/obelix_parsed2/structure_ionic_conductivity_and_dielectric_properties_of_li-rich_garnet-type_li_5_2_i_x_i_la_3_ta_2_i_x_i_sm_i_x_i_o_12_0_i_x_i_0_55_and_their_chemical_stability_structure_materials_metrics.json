@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-541",
+      "extracted_id": "EX-1",
+      "reason": "After normalizing the stoichiometry of GT-541 (Li40.0La24.0Ta16.0O96.0) by dividing all subscripts by 8, the formula becomes Li5La3Ta2O12, which perfectly matches the composition of EX-1 (Li5La3Ta2O12). Both entries are assumed to be at room temperature (25\u00b0C for EX-1). The conductivity values are in the same order of magnitude.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-542",
+      "extracted_id": null,
+      "reason": "After normalizing the stoichiometry of GT-542 (Li42.4La24.0Ta14.8Sm1.2O96.0) by dividing all subscripts by 8, the formula becomes Li5.3La3Ta1.85Sm0.15O12. This composition does not match any of the extracted data entries.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-543",
+      "extracted_id": null,
+      "reason": "After normalizing the stoichiometry of GT-543 (Li44.0La24.0Ta14.0Sm2.0O96.0) by dividing all subscripts by 8, the formula becomes Li5.5La3Ta1.75Sm0.25O12. This composition does not match any of the extracted data entries.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-544",
+      "extracted_id": "EX-0",
+      "reason": "After normalizing the stoichiometry of GT-544 (Li45.6La24.0Ta13.2Sm2.8O96.0) by dividing all subscripts by 8, the formula becomes Li5.7La3Ta1.65Sm0.35O12, which perfectly matches the composition of EX-0 (Li5.7La3Ta1.65Sm0.35O12). Both entries are at 25\u00b0C and have very similar conductivity values (2.15e-05 S/cm vs 2.25e-05 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-545",
+      "extracted_id": null,
+      "reason": "After normalizing the stoichiometry of GT-545 (Li47.2La24.0Ta12.4Sm3.6O96.0) by dividing all subscripts by 8, the formula becomes Li5.9La3Ta1.55Sm0.45O12. This composition does not match any of the extracted data entries.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-546",
+      "extracted_id": null,
+      "reason": "After normalizing the stoichiometry of GT-546 (Li48.8La24.0Ta11.6Sm4.4O96.0) by dividing all subscripts by 8, the formula becomes Li6.1La3Ta1.45Sm0.55O12. This composition does not match any of the extracted data entries.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted two of the six ground truth entries. The primary challenge was normalizing the stoichiometry of the ground truth formulas to match the format of the extracted data. Once normalized, two exact matches were found based on composition and similar physical context (temperature and conductivity magnitude). The remaining four ground truth entries did not have corresponding matches in the extracted data.",
+  "metrics": {
+    "recall": 33.33333333333333,
+    "precision": 50.0,
+    "f1": 40.0,
+    "avg_log10_error": 0.7047057704509025,
+    "numeric_accuracy_pct": 50.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 6,
+    "total_ex": 4
+  }
+}

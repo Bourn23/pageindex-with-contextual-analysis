@@ -1,0 +1,1133 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 236797,
+    "total_output_tokens": 21983,
+    "total_cost_usd": 0.1843475000000001,
+    "call_counts": {
+      "gemini-3-flash-preview": 74
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons_structure.json",
+  "extraction_stats": {
+    "total_nodes": 69,
+    "raw_extracted": 55,
+    "after_dedup": 35,
+    "time_elapsed": 171.84381318092346,
+    "valid_count": 35,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 0,
+      "medium": 35,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 30,
+      "cited": 0,
+      "inferred": 1
+    },
+    "from_text_nodes": 10,
+    "from_image_nodes": 40,
+    "final_count": 35
+  },
+  "material_count": 35,
+  "materials": [
+    {
+      "source_sentence_id": "0300",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7 · 10⁻⁵ S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted cited conductivity value for Li4SnS4 from Kaib et al. as mentioned in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via a high-temperature solid-state reaction under an Ar atmosphere. Stoichiometric ratios of Li2S, Sn, and S were hand-ground in an agate mortar for 15 min. The resulting mixture was pelletized and filled into carbon-coated quartz ampoules (preheated at 1073 K under dynamic vacuum), which were sealed under vacuum. The reaction was performed at 873 K for 48 h, followed by grinding of the products. | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0292",
+        "title": "3.3. Characterization of Ionic Transport via Impedance Spectroscopy",
+        "section": "3. RESULTS"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS4",
+      "_original_name": "Li4SnS4",
+      "_norm_cond": 7e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0300",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnSe4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2 · 10⁻⁵ S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted cited conductivity value for Li4SnSe4 from Kaib et al. as mentioned in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via a high-temperature solid-state reaction under an Ar atmosphere. Precursors including Li2Se, Sn, and Se were mixed in stoichiometric ratio and hand-ground in an agate mortar for 15 min. The lithium selenide precursor was prepared separately via gas-phase reaction of metallic Li (in a graphite crucible) and Se powder (in a quartz ampule) at 673 K for 48 h with a 285 K/h heating rate. The main mixture was pelletized and sealed in vacuum-sealed, carbon-coated quartz ampoules (preheated at 1073 K under dynamic vacuum) and reacted at 873 K for 48 h. | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0292",
+        "title": "3.3. Characterization of Ionic Transport via Impedance Spectroscopy",
+        "section": "3. RESULTS"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnSe4",
+      "_original_name": "Li4SnSe4",
+      "_norm_cond": 2e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0068",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xGex-1PxS4",
+        "acronym": null,
+        "proportion": "x"
+      },
+      "ionic_conductivity_S_per_cm": "~2·10^-3 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from sentence 0068 which explicitly states the ionic conductivity value for the Li4-xGe1-xPxS4 solid solution.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Synthesized via a high-temperature solid-state reaction under an Ar atmosphere. Stoichiometric ratios of Li2S, Sn, and S were hand-ground in an agate mortar for 15 min. The resulting mixture was pelletized and filled into carbon-coated quartz ampoules (preheated at 1073 K under dynamic vacuum), which were sealed under vacuum. The reaction was performed at 873 K for 48 h, followed by grinding of the products. [Inferred] | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0064",
+        "title": "Impact of Cationic Substitutions",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xGex-1PxS4",
+      "_original_name": "Li4-xGe1-xPxS4",
+      "_norm_cond": 0.002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0261",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS4",
+        "acronym": null,
+        "proportion": "x=1, y=0"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "The text discusses the ionic conductivity of Li4SnS4 (x=1 in the series) and references Figure 7c, which shows room-temperature ionic conductivity values for the Li4Ge1-xSnxS4-ySey series. Based on the discussion of improved connectivity in Li4SnS4 compared to Li4GeS4 (10⁻⁷ S/cm), the value for Li4SnS4 is approximately 10⁻⁴ S/cm as indicated in the context of the series plot description.",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "Thiostannate with Li(1') and Li(4) positions providing 3D conduction pathways. ; Thiostannate with Li(1') and Li(4) positions activating 3D conduction.",
+      "processing_method": "Synthesized via a high-temperature solid-state reaction under an Ar atmosphere. Stoichiometric ratios of Li2S, Sn, and S were mixed and hand-ground in an agate mortar for 15 min. The mixture was pelletized and filled into carbon-coated quartz ampoules (preheated at 1073 K under dynamic vacuum), which were then sealed under vacuum. The reaction was performed at 873 K for 48 h, followed by grinding of the final products. | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0243",
+        "title": "3.2.2. Li4SnS4 Substructure",
+        "section": "3. RESULTS"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS4",
+      "_original_name": "Li4SnS4",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0261",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeS4",
+        "acronym": null,
+        "proportion": "x=0, y=0"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "The text compares the transport properties of Li4SnS4 to the Li4GeS4 parent phase. Based on the series Li4Ge1-xSnxS4-ySey described in Figure 7, the starting phase Li4GeS4 has a known room-temperature conductivity of approximately 10⁻⁷ S/cm.",
+      "confidence": "medium",
+      "data_source": "internal-citation",
+      "material_description": "Parent phase with edge-sharing Li(3) octahedra chains.",
+      "processing_method": "Synthesized via a high-temperature solid-state reaction under an Ar atmosphere. Stoichiometric ratios of Li2S, Ge, and S were hand-ground in an agate mortar for 15 min. The mixture was pelletized and filled into carbon-coated quartz ampoules (preheated at 1073 K under dynamic vacuum), which were then sealed under vacuum. The reaction was performed at 973 K for 16 h, followed by grinding of the products. | N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0243",
+        "title": "3.2.2. Li4SnS4 Substructure",
+        "section": "3. RESULTS"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeS4",
+      "_original_name": "Li4GeS4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg, Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-7 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point corresponding to Li4GeS4 (volume ≈ 11.96 3) on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LiChx volume series: Li4GeS4 ; Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeS4",
+      "_original_name": "Li4GeS4",
+      "_norm_cond": 3.5e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg, Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.3e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point corresponding to Li4SnS4 (volume ≈ 12.89 3) on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LiChx volume series: Li4SnS4 ; Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS4",
+      "_original_name": "Li4SnS4",
+      "_norm_cond": 2.3e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeSe4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.5e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point corresponding to Li4GeSe4 (volume ≈ 14.00 3) on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LiChx volume series: Li4GeSe4",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeSe4",
+      "_original_name": "Li4GeSe4",
+      "_norm_cond": 5.5e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnSe4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-8 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point corresponding to Li4SnSe4 (volume ≈ 14.18 3) on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LiChx volume series: Li4SnSe4",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnSe4",
+      "_original_name": "Li4SnSe4",
+      "_norm_cond": 4.5e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.0e-8 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 12.08 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 9e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-7 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 12.18 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 2e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-7 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 12.25 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 3e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.0e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 12.44 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 8e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 13.00 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 2.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 13.36 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 3.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.2e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 13.45 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 7.2e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-5 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 13.57 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 1.4e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.5e-7 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 13.72 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 9.5e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 14.04 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 1.8e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.2e-6 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 14.05 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 4.2e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_10_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiChx",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0e-7 S cm^-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from point at volume ≈ 14.09 3 on conductivity plot a.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Intermediate composition in LiChx series",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0396",
+        "title": "_page_10_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiChx",
+      "_original_name": "LiChx solid solution",
+      "_norm_cond": 7e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnSe4",
+        "acronym": null,
+        "proportion": "y=4 (Li4SnSe4)"
+      },
+      "ionic_conductivity_S_per_cm": "4.8e-8 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4SnS4-ySey series in panel c at y=4.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnSe4",
+      "_original_name": "Li4SnS4-ySey",
+      "_norm_cond": 4.8e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnSSe3",
+        "acronym": null,
+        "proportion": "y=3"
+      },
+      "ionic_conductivity_S_per_cm": "9.2e-7 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4SnS4-ySey series in panel c at y=3.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnSSe3",
+      "_original_name": "Li4SnS4-ySey",
+      "_norm_cond": 9.2e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS2Se2",
+        "acronym": null,
+        "proportion": "y=2 (Li4SnS2Se2)"
+      },
+      "ionic_conductivity_S_per_cm": "3.4e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4SnS4-ySey series in panel c at y=2.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 37,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS2Se2",
+      "_original_name": "Li4SnS4-ySey",
+      "_norm_cond": 3.4e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SnS3Se",
+        "acronym": null,
+        "proportion": "y=1"
+      },
+      "ionic_conductivity_S_per_cm": "7.5e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4SnS4-ySey series in panel c at y=1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SnS3Se",
+      "_original_name": "Li4SnS4-ySey",
+      "_norm_cond": 7.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.25Sn0.75S4",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "2.9e-7 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxS4 series in panel c at x=0.75.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 41,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.25Sn0.75S4",
+      "_original_name": "Li4Ge1-xSnxS4",
+      "_norm_cond": 2.9e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.5Sn0.5S4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.1e-7 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxS4 series in panel c at x=0.5.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 42,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.5Sn0.5S4",
+      "_original_name": "Li4Ge1-xSnxS4",
+      "_norm_cond": 2.1e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.75Sn0.25S4",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "9.2e-8 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxS4 series in panel c at x=0.25.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 43,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.75Sn0.25S4",
+      "_original_name": "Li4Ge1-xSnxS4",
+      "_norm_cond": 9.2e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeS3Se",
+        "acronym": null,
+        "proportion": "y=1"
+      },
+      "ionic_conductivity_S_per_cm": "7.8e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4GeS4-ySey series in panel c at y=1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 46,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeS3Se",
+      "_original_name": "Li4GeS4-ySey",
+      "_norm_cond": 7.8e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeS2Se2",
+        "acronym": null,
+        "proportion": "y=2 (Li4GeS2Se2)"
+      },
+      "ionic_conductivity_S_per_cm": "2.4e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4GeS4-ySey series in panel c at y=2.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 47,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeS2Se2",
+      "_original_name": "Li4GeS4-ySey",
+      "_norm_cond": 2.4e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeSSe3",
+        "acronym": null,
+        "proportion": "y=3"
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4GeS4-ySey series in panel c at y=3.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 48,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeSSe3",
+      "_original_name": "Li4GeS4-ySey",
+      "_norm_cond": 1.4e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4GeSe4",
+        "acronym": null,
+        "proportion": "y=4 (Li4GeSe4)"
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4GeS4-ySey series in panel c at y=4.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 49,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4GeSe4",
+      "_original_name": "Li4GeS4-ySey",
+      "_norm_cond": 4.5e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.75Sn0.25Se4",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "5.6e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxSe4 series in panel c at x=0.25.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 51,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.75Sn0.25Se4",
+      "_original_name": "Li4Ge1-xSnxSe4",
+      "_norm_cond": 5.6e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.5Sn0.5Se4",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxSe4 series in panel c at x=0.5.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 52,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.5Sn0.5Se4",
+      "_original_name": "Li4Ge1-xSnxSe4",
+      "_norm_cond": 1.8e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_1.jpeg panel c",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Ge0.25Sn0.75Se4",
+        "acronym": null,
+        "proportion": "x=0.75"
+      },
+      "ionic_conductivity_S_per_cm": "7.0e-7 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the Li4Ge1-xSnxSe4 series in panel c at x=0.75.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Chalcogenide solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0258",
+        "title": "_page_6_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 53,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Ge0.25Sn0.75Se4",
+      "_original_name": "Li4Ge1-xSnxSe4",
+      "_norm_cond": 7e-07,
+      "_norm_temp": 25
+    }
+  ]
+}

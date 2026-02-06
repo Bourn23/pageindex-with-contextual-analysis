@@ -1,0 +1,225 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 54922,
+    "total_output_tokens": 4904,
+    "total_cost_usd": 0.042173,
+    "call_counts": {
+      "gemini-3-flash-preview": 14
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure.json",
+  "extraction_stats": {
+    "total_nodes": 51,
+    "raw_extracted": 12,
+    "after_dedup": 6,
+    "time_elapsed": 60.5508017539978,
+    "valid_count": 6,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 4,
+      "medium": 2,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 4,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 12,
+    "from_image_nodes": 0,
+    "final_count": 6
+  },
+  "material_count": 6,
+  "materials": [
+    {
+      "source_sentence_id": "0105",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3xLa0.67-xTi1-yAlyO3-yFy",
+        "acronym": "LLTO-Al-F",
+        "proportion": "x=0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-3 S cm^-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Fig. 3) for the Al-substituted LLTO material (x=0.11) at room temperature (approx. 1000/T = 3.35).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Al-substituted lithium lanthanum titanate oxyfluoride",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0102",
+        "title": "Reference to Arrhenius Plot",
+        "section": "Electrical properties"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0100, 0011, 0168",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.33La0.56Ti0.98Al0.02O2.98F0.02",
+        "acronym": null,
+        "proportion": "x=0.11, y=0.02"
+      },
+      "ionic_conductivity_S_per_cm": "1.06 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted the highest ionic conductivity value reported for the specific composition y=0.02 at room temperature from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sample with initial composition of y=0.02, involving substitution of Ti and O by Al and F. ; Pure perovskite-structured phase with space group of P4mm(99) in the composition range of 0 < y ≤ 0.10. ; Al,F-doped perovskite lithium ion conductor",
+      "processing_method": "Synthesized (specific method not detailed in conclusion)",
+      "source_node": {
+        "node_id": "0091",
+        "title": "Bulk Conductivity and Arrhenius Analysis",
+        "section": "Electrical properties"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.33La0.56Ti0.98Al0.02O2.98F0.02",
+      "_original_name": "Li3xLa2/3-xcl/3-2xTi1-yAlyO3-yFy",
+      "_norm_cond": 0.00106,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0109",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.31La0.56TiO2.98F0.02",
+        "acronym": null,
+        "proportion": "x=0.11"
+      },
+      "ionic_conductivity_S_per_cm": "3.17 × 10⁻⁴ S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted the specific bulk ionic conductivity value for the F-doped solid solution with x=0.11 at room temperature as stated in sentence 0109.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "F-doped solid solution, Li3x-0.02La0.67-xTiO2.98F0.02",
+      "processing_method": "Synthesized by the same method (referencing previous sections of the paper).",
+      "source_node": {
+        "node_id": "0107",
+        "title": "Effect of Fluorine Doping on Conductivity and Stability",
+        "section": "Electrical properties"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.31La0.56TiO2.98F0.02",
+      "_original_name": "Li3x-0.02La0.67-xTiO2.98F0.02",
+      "_norm_cond": 0.000317,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0109",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3x-0.02La0.67-xTiO2.98F0.02",
+        "acronym": "F-doped solid solution",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S/cm",
+      "measurement_temperature": "RT",
+      "reason": "Extracted the general order of magnitude for the bulk ionic conductivity of the F-doped solid solution series at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "F-doped solid solution, Li3x-0.02La0.67-xTiO2.98F0.02",
+      "processing_method": "Synthesized by the same method (referencing previous sections of the paper).",
+      "source_node": {
+        "node_id": "0107",
+        "title": "Effect of Fluorine Doping on Conductivity and Stability",
+        "section": "Electrical properties"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0100",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.34La0.51TiO2.94",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.06 × 10⁻³ S/cm",
+      "measurement_temperature": "RT",
+      "reason": "The text compares the primary sample's conductivity to this well-known material, implying a comparable value.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0091",
+        "title": "Bulk Conductivity and Arrhenius Analysis",
+        "section": "Electrical properties"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.34La0.51TiO2.94",
+      "_original_name": "Li0.34La0.51TiO2.94",
+      "_norm_cond": 0.00106,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0019",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li0.3La0.566TiO3",
+        "acronym": "LLTO",
+        "proportion": "x≈0.10"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 !7 10⁻³ S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for LLT from the introduction section, which cites a specific value for a given composition at room temperature.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0017",
+        "title": "Introduction to LLT",
+        "section": "Introduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li0.3La0.566TiO3",
+      "_original_name": "Li3xLa2/3-x┱1/3-2xTiO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    }
+  ]
+}

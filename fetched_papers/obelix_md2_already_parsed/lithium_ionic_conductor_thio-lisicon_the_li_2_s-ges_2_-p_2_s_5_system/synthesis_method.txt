@@ -1,0 +1,23 @@
+The provided paper details the synthesis method for materials belonging to the **Li(4-x)Ge(1-x)P(x)S4** system, which is referred to as the "thio-LISICON" family. This includes the end members Li4GeS4 (x=0) and Li3PS4 (x=1), and solid solutions with varying 'x' values (e.g., x=0.5, x=0.75).
+
+From your list, the following materials are stoichiometrically equivalent to compositions within the Li(4-x)Ge(1-x)P(x)S4 system and thus their synthesis method is described:
+*   **Li16.0Ge4.0S16.0** (equivalent to Li4GeS4)
+*   **Li14.0Ge2.0P2.0S16.0** (equivalent to Li3.5Ge0.5P0.5S4)
+*   **Li12.0P4.0S16.0** (equivalent to Li3PS4)
+
+For the vast majority of other materials in your list, their specific processing/synthesis method is not detailed in this paper, as they fall outside the Li2S-GeS2-P2S5 system (e.g., containing different elements like Bi, Sb, V, F, B, Na, Cu, Hf, Si, Al, In, Cl, Mo, W, Y, Br, Ga, C, N, O, La, Sr, Mg, Ti, Nd, Sm, K, Zn, Gd, Ta, Er, I, Mn, Cd, Ba, Ca, Te, Se, etc., or having different stoichiometries).
+
+---
+
+**Method Name:** Solid State Reaction
+
+**Procedure Summary:**
+High-purity starting materials, specifically lithium sulfide (Li2S), germanium disulfide (GeS2), and phosphorus pentasulfide (P2S5), are accurately weighed according to the desired molar ratios to achieve the target Li(4-x)Ge(1-x)P(x)S4 composition. These precursors are then thoroughly mixed in an inert atmosphere, specifically an argon-filled glove box, to prevent any undesirable reactions with air or moisture. The mixed powder is subsequently sealed within a carbon-coated quartz tube. This sealed tube is then heated to a high reaction temperature to facilitate the solid-state reaction and formation of the desired compound. Following the high-temperature treatment, the tube is slowly cooled to room temperature, allowing for the crystallization of the thio-LISICON material.
+
+**Key Conditions:**
+*   **Precursors:** Li2S, GeS2, P2S5 (all >99.9% purity)
+*   **Mixing Atmosphere:** Argon-filled glove box
+*   **Container:** Carbon-coated quartz tube
+*   **Reaction Temperature:** 700°C
+*   **Dwell Time:** 8 hours
+*   **Cooling:** Slowly cooled to room temperature

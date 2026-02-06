@@ -1,0 +1,882 @@
+{
+  "doc_name": "crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1",
+  "timestamp": "2026-02-03 12:09:11",
+  "execution_time_seconds": 65.56,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 17970,
+    "total_output_tokens": 12425,
+    "total_cost_usd": 0.0365,
+    "call_counts": {
+      "gemini-flash-latest": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 45,
+    "skipped_images": 12,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 10
+  },
+  "material_count": 45,
+  "measurements": [
+    {
+      "raw_composition": "x=0 sample",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Compounds of LiGa(1-x)Al(x)GeO4 with 0 \nle x \nle 1 were synthesized and examined.",
+        "The x=0 and 0.25 samples were found to exhibit a phenacite structure with R3 space group.",
+        "The x>=0.5 samples were found to exhibit an ordered phenacite structure with R3 space group due to the 1:1 cation order between Ga3+/Al3+ and Ge4+ ions.",
+        "The LGAGO and related compounds are usually prepared below 1000\ncelsius."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.81e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The study investigates the LiGa1-xAlxGeO4 (LGAGO) solid solution series with 0 \"\r\n\r\n\r\n  \"<=\" x \"<=\" 1. The samples show decreased secondary particle size and bulk density with increasing x. The x=0 sample possesses the phenacite structure (R\r\n\r\n\r\n  \"<=\" 3 space group) along with minor impurities (LiGa5O8 and Li2GeO3). For x \">=\" 0.5, the materials adopt an ordered phenacite structure (R3 space group), exhibiting cation order between Ga3+/Al3+ and Ge4+ ions. Electrical conductivity was measured using EIS across a range of temperatures."
+      ],
+      "raw_conductivity": "1.15e-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.15e-07,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The study investigates the LiGa1-xAlxGeO4 (LGAGO) solid solution series with 0 \"<=\" x \"<=\" 1. The samples show decreased secondary particle size and bulk density with increasing x. The x=0 sample possesses the phenacite structure (R\r\n\r\n\r\n  \"<=\" 3 space group) along with minor impurities (LiGa5O8 and Li2GeO3). For x \">=\" 0.5, the materials adopt an ordered phenacite structure (R3 space group), exhibiting cation order between Ga3+/Al3+ and Ge4+ ions. Electrical conductivity was measured using EIS across a range of temperatures."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.81e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0.75 ($\\sigma_{\\text{Li}}^{\\text{app}}$)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "1.84e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 1.84e-05,
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 649.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 1 (Apparent conductivity)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 4.77e-05,
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 649.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 1 (Intrinsic conductivity)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "Solid solutions LiGa(1-x)Al(x)GeO4 with 0 \\u2264 x \\u2264 1 are studied.",
+        "The compounds crystallize in the phenacite structure with R(3-bar) space group.",
+        "The samples exhibited low d_bulk/d_XRD values (lower than ~0.7) due to high sintering-resistance."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 4.77e-05,
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 649.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "The extracted intrinsic conductivity value (4.77e-5 S/cm) for x=1 appears to be identical to the apparent conductivity value stated earlier, contradicting the preceding text which claims the intrinsic value is about 2 times larger."
+      ]
+    },
+    {
+      "raw_composition": "LTO (Intrinsic conductivity, cited)",
+      "canonical_formula": "Li4Ti5O12",
+      "material_definitions": [
+        "LTO (Li[Li(1/3)Ti(5/3)]O4) is a solid electrolyte with a spinel structure (Fd(3-bar)m space group).",
+        "Li+ ions occupy both tetrahedral 8a and octahedral 16d sites.",
+        "The data is cited from previous work (Ref. 26)."
+      ],
+      "raw_conductivity": "7.4e-3",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 0.0074,
+      "raw_temperature": "923",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 649.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li4GeO4 (cited)",
+      "canonical_formula": "Li4GeO4",
+      "material_definitions": [
+        "The data is cited from previous work (Ref. 28)."
+      ],
+      "raw_conductivity": "8.7e-5",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 8.7e-05,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2.5Ga0.5GeO4 or Li(4-3y)Al(y)GeO4 (cited)",
+      "canonical_formula": "Li2.5Ga0.5GeO4 or Li(4-3y)Al(y)GeO4 (cited)",
+      "material_definitions": [
+        "This value refers to substituted Li4GeO4 solid solution compounds such as Li(2.5)Ga(0.5)GeO4 or Li(4-3y)Al(y)GeO4.",
+        "The substitution of Li+ ions for Ga3+ (or Al3+) ions significantly increases conductivity due to partial occupation of Li+ ions at the Ga3+ (or Al3+) ions' site.",
+        "The data is cited from previous works (Ref. 12, 13)."
+      ],
+      "raw_conductivity": "1.0e-1",
+      "raw_conductivity_unit": "S\\u00b7cm-1",
+      "normalized_conductivity": 0.1,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "1.15e-7",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 1.15e-07,
+      "raw_temperature": "673",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 399.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.81e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.81e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0 (intrinsic)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "4.51e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 4.51e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents the intrinsic conductivity (\r{Li}int) calculated using the bulk density/XRD density ratio, not the directly observed value."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.25 (intrinsic)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.5e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "This conductivity value is an approximation (~2.5e-5 S*cm-1) applied across the range 0.25 \r\f\r\f x \r\f\r\f 0.75.",
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.75 (intrinsic)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 2.5e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "This conductivity value is an approximation (~2.5e-5 S*cm-1) applied across the range 0.25 \r\f\r\f x \r\f\r\f 0.75.",
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    },
+    {
+      "raw_composition": "x = 1 (intrinsic)",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [
+        "The LiGa1-xAlxGeO4 (LGAGO) samples with x = 0, 0.25, 0.5, 0.75, 1 were prepared by a solid-state reaction technique.",
+        "The x=0 sample showed a phenacite structure with R\b{3} space group.",
+        "The crystal structure for the x > 0.5 samples was assigned as an ordered phenacite structure with R3 space group.",
+        "Li+-ion conductivity was examined for the LGAGO samples by electrochemical impedance measurements."
+      ],
+      "raw_conductivity": "4.77e-5",
+      "raw_conductivity_unit": "S*cm-1",
+      "normalized_conductivity": 4.77e-05,
+      "raw_temperature": "973",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 699.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents intrinsic conductivity (\r{Li}int)."
+      ]
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-4.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.55,
+      "raw_temperature": "1.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.03,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.55e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.18",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.18,
+      "raw_temperature": "1.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.15,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.18e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.05",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.05,
+      "raw_temperature": "1.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.05e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.95",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.95,
+      "raw_temperature": "1.48",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.48,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.95e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.25",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-4.78",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.78,
+      "raw_temperature": "1.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.03,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.25] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.78e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.25",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.4",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.4,
+      "raw_temperature": "1.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.15,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.25] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.40e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.25",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.15,
+      "raw_temperature": "1.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.25] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.25",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-7.13",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.13,
+      "raw_temperature": "1.48",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.48,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.25] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.13e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-4.86",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.86,
+      "raw_temperature": "1.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.03,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.5] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.86e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.5,
+      "raw_temperature": "1.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.15,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.5] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.23",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.23,
+      "raw_temperature": "1.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.5] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.23e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-7.19",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.19,
+      "raw_temperature": "1.48",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.48,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.5] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.19e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.75",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.01",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.01,
+      "raw_temperature": "1.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.03,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.75] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.01e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.75",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.64",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.64,
+      "raw_temperature": "1.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.15,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.75] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.64e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.75",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.38",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.38,
+      "raw_temperature": "1.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.75] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.38e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.75",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-7.34",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.34,
+      "raw_temperature": "1.48",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.48,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=0.75] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.34e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=1",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-4.6",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.6,
+      "raw_temperature": "1.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.03,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.60e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=1",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.15,
+      "raw_temperature": "1.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.15,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=1",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-5.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.88,
+      "raw_temperature": "1.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.88e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=1",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "-6.75",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.75,
+      "raw_temperature": "1.48",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.48,
+      "source_figure_id": "Fig 6",
+      "source_caption": "**Figure 6.** Temperature dependence of Li-ion conductivity  $(\\sigma_{Li})$  for the LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> samples with  $0 \\le x \\le 1$ . [Series: x=1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.75e+00)"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_app",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "28.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 28.0,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_app] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (28.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_app",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "15.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 15.0,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_app] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (15.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_app",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "13.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 13.0,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_app] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (13.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_app",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "10.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 10.0,
+      "raw_temperature": "0.8",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.8,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_app] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (10.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_app",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "24.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 24.0,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_app] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (24.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_int",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "45.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 45.0,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_int] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (45.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_int",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "27.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 27.0,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_int] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (27.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_int",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "25.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 25.0,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_int] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (25.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_int",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "19.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 19.0,
+      "raw_temperature": "0.8",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.8,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_int] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (19.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "sigma_Li_int",
+      "canonical_formula": "LiAlGeO4",
+      "material_definitions": [],
+      "raw_conductivity": "48.0",
+      "raw_conductivity_unit": "sigma_Li \u0015 10^-6 / S.cm^-1",
+      "normalized_conductivity": 48.0,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "**Figure 8.** (a) Apparent Li-ion conductivity  $(\\sigma_{L,i}^{app})$  and intrinsic Li-ion conductivity  $(\\sigma_{Li}^{int})$  and (b) activation energy  $(E_a)$  for Li-ion conduction as a function of x in  $LiGa_{1-x}Al_xGeO_4$ . [Series: sigma_Li_int] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (48.0000 S/cm) for solid state"
+      ]
+    }
+  ],
+  "material_definitions": []
+}

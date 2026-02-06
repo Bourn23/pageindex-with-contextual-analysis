@@ -1,0 +1,29 @@
+**Method Name:** Solid-State Reaction
+
+**Procedure Summary:**
+The Li-Ge-P-S solid solution materials were synthesized through a multi-step solid-state reaction process. First, the precursor powders (P₂S₅, Li₂S, and GeS₂) were precisely weighed according to the desired stoichiometry and thoroughly ground in a vibrating mill for 30 minutes. This mixed powder was then pressed into pellets under high pressure. These pellets were sealed in a silica tube under reduced pressure and subjected to an initial heat treatment. After cooling, the resulting products were reground and remixed, then repelletized under the same high pressure. A second heat treatment was performed on these pellets. Finally, for ionic conductivity measurements, samples were pelletized again under slightly lower pressure and subjected to a third, higher temperature sintering step.
+
+**Key Conditions:**
+*   **Precursors:** P₂S₅ (99% purity), Li₂S (>99.9% purity), GeS₂ (>99.99% purity).
+*   **Initial Grinding:** Vibrating mill for 30 minutes.
+*   **First Pelletization:** 220 MPa.
+*   **First Heat Treatment:**
+    *   Atmosphere: Sealed in a silica tube at 30 Pa (vacuum).
+    *   Temperature: 673 K.
+    *   Dwell Time: 8 hours.
+    *   Heating Rate: 2.2 K min⁻¹.
+    *   Cooling Rate: 0.60 K min⁻¹.
+*   **Second Pelletization:** 220 MPa.
+*   **Second Heat Treatment:**
+    *   Atmosphere: Sealed in a silica tube (implied vacuum/inert atmosphere).
+    *   Temperature: 823 K.
+    *   Dwell Time: 8 hours.
+    *   Heating Rate: 3.0 K min⁻¹.
+    *   Cooling Rate: 0.76 K min⁻¹.
+*   **Final Sintering (for conductivity samples):**
+    *   Pelletization Pressure: 165 MPa.
+    *   Atmosphere: Sealed in a silica tube (implied vacuum/inert atmosphere).
+    *   Temperature: 873 K.
+    *   Dwell Time: 8 hours.
+    *   Heating Rate: 3.3 K min⁻¹.
+    *   Cooling Rate: 0.83 K min⁻¹.

@@ -1,0 +1,287 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_pipeline_20260114_154852.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Katsuyoshi Mizumoto , Shinsuke Hayashi \*
+  -> Started Section: **Abstract**
+  -> Started Section: 2. Experimental
+  -> Started Section: 3.1. Crystal structure
+  -> Started Section: 3.2. Ionic conductivity and activation energy for lithium ion conduction
+  -> Started Section: 4. Conclusions
+  -> Started Section: Acknowledgements
+  -> Started Section: References
+  ✓ Finished Section: Acknowledgements
+  🔍 Checking placeholder: '__IMG_25a44930__'
+  ✅ Found Special Node: __IMG_25a44930__
+  🔍 Checking placeholder: '__IMG_c2f3390a__'
+  ✅ Found Special Node: __IMG_c2f3390a__
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: Katsuyoshi Mizumoto , Shinsuke Hayashi \*
+  ✓ Finished Section: 2. Experimental
+  ✓ Finished Section: 4. Conclusions
+  🔍 Checking placeholder: '__IMG_e50431ef__'
+  ✅ Found Special Node: __IMG_e50431ef__
+  🔍 Checking placeholder: '__IMG_cb5ec470__'
+  ✅ Found Special Node: __IMG_cb5ec470__
+  🔍 Checking placeholder: '__IMG_2db9d289__'
+  ✅ Found Special Node: __IMG_2db9d289__
+  🔍 Checking placeholder: '__IMG_cb5ec470__'
+  ✅ Found Special Node: __IMG_cb5ec470__
+  ✓ Finished Section: 3.2. Ionic conductivity and activation energy for lithium ion conduction
+  🔍 Checking placeholder: '__TBL_448e7453__'
+  ✅ Found Special Node: __TBL_448e7453__
+  🔍 Checking placeholder: '__TBL_06d19733__'
+  ✅ Found Special Node: __TBL_06d19733__
+  🔍 Checking placeholder: '__TBL_ef04a30a__'
+  ✅ Found Special Node: __TBL_ef04a30a__
+  🔍 Checking placeholder: '__TBL_44817a9b__'
+  ✅ Found Special Node: __TBL_44817a9b__
+  ✓ Finished Section: References
+  🔍 Checking placeholder: '__IMG_25578e61__'
+  ✅ Found Special Node: __IMG_25578e61__
+  🔍 Checking placeholder: '__IMG_dbd2e3fa__'
+  ✅ Found Special Node: __IMG_dbd2e3fa__
+  ✓ Finished Section: 3.1. Crystal structure
+  ✓ Finished Section: **Abstract**
+  ✓ Re-indexed 221 structural nodes.
+  ✓ Mapped 206 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 52 text nodes and 8 image nodes.
+
+[Stage 2] Extracting from 52 relevant nodes...
+  [1/52] ○ Reference fragment... (0 data points)
+  [2/52] ○ Material Characterization... (0 data points)
+  [3/52] ○ Reference 15... (0 data points)
+  [4/52] ○ Starting Materials... (0 data points)
+  [5/52] ○ Introduction to Conclusions... (0 data points)
+  [6/52] ○ Sample Preparation... (0 data points)
+  [7/52] ○ Structural Characteristics and Substitution Effect... (0 data points)
+  [8/52] ○ Influence of Subcell Volume on Lithium Ion Conduct... (0 data points)
+  [9/52] ○ Reference 19... (0 data points)
+  [10/52] ○ Reference 20... (0 data points)
+  [11/52] ○ Sample Preparation and Initial Characterization... (0 data points)
+  [12/52] ○ Electrical Conductivity Measurement... (0 data points)
+  [13/52] ○ Acknowledgements... (0 data points)
+  [14/52] ○ Reference 1... (0 data points)
+  [15/52] ○ Reference 2... (0 data points)
+  [16/52] ○ Reference 3... (0 data points)
+  [17/52] ○ LaLT Crystal Structure and XRD Details... (0 data points)
+  [18/52] ○ NdLT Crystal Structure and XRD Details... (0 data points)
+  [19/52] ○ General XRD Data Presentation and Initial Observat... (0 data points)
+  [20/52] ○ Reference 4... (0 data points)
+  [21/52] ○ Introduction... (0 data points)
+  [22/52] ○ Reference 5... (0 data points)
+  [23/52] ○ Explanation of Superstructure Lines... (0 data points)
+  [24/52] ○ Affiliation and Publication Dates... (0 data points)
+  [25/52] ○ Reference 6... (0 data points)
+  [26/52] ○ SmLT Crystal Structure and XRD Details... (0 data points)
+  [27/52] ○ Random A-site Distribution and Overall Symmetry Ch... (0 data points)
+  [28/52] ○ Synthesis and Initial Structural Characterization... (0 data points)
+  [29/52] ○ YLT Crystal Structure and General A-site Observati... (0 data points)
+  [30/52] ○ Reference 7... (0 data points)
+  [31/52] ○ Key Factors Influencing Conduction (Abstract Concl... (0 data points)
+  [32/52] ○ Reference 8... (0 data points)
+  [33/52] ○ Tolerance Factors and Structural Distortion Ration... (0 data points)
+  [34/52] ○ Abstract Publication Details... (0 data points)
+  [35/52] ○ Reference 9... (0 data points)
+  [36/52] ○ Implications for Lithium Ion Transport... (0 data points)
+  [37/52] ○ Abstract Keywords... (0 data points)
+  [38/52] ○ Reference 10... (0 data points)
+  [39/52] ○ Subcell Volume and Ionic Radius Relationship... (0 data points)
+  [40/52] ○ Background on Perovskite Lithium Ion Conductors an... (0 data points)
+  [41/52] ○ Advantages of Tantalate-based Perovskites... (0 data points)
+  [42/52] ○ Reference 11... (0 data points)
+  [43/52] ○ Reference 12... (0 data points)
+  [44/52] ✓ Correlation between Structure and Ionic Conductivi... (2 data points)
+  [45/52] ○ Reference 13... (0 data points)
+  [46/52] ○ Objective of the Present Study... (0 data points)
+  [47/52] ○ Reference 14... (0 data points)
+  [48/52] ✓ Previous Work by the Authors on Related Tantalates... (1 data points)
+  [49/52] ○ Factors Affecting Lithium Ion Transport... (0 data points)
+  [50/52] ✓ Lithium Ion Conductivity and Activation Energy as ... (2 data points)
+  [51/52] ✓ Temperature Dependence of Conductivity and Non-Arr... (2 data points)
+  [52/52] ✓ Summary of Activation Energy and Mobility with Sub... (2 data points)
+  → 9 total data points extracted
+
+[Stage 2b] Processing 8 images directly...
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_10.jpeg
+    Warning: Skipping missing image _page_4_Figure_8.jpeg
+    Warning: Skipping missing image _page_4_Figure_8.jpeg
+    Warning: Skipping missing image _page_0_Picture_0.jpeg
+    Warning: Skipping missing image _page_0_Picture_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_8.jpeg
+    Warning: Skipping missing image _page_5_Figure_2.jpeg
+
+Merging: 9 text-based + 0 image-based points.
+  → Running physical heuristic checks on 9 points...
+  → Running LLM semantic verification on 9 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 11 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "La1/3-xLi3xTaO3 (x <= 1/6)"
+- "La1/3-xLi3xTaO3 (x = 0.06)"
+- "La1/3-xLi3xTaO3 (x variable)"
+- "La1/4Li1/4TaO3"
+- "La2/3Li1/3TaO3"
+- "R1/4Li1/4TaO3 (R = La, Pr, Nd, Sm)"
+- "R1/4Li1/4TaO3 (R=La, Nd and Sm)"
+- "Y1/4Li1/4TaO3"
+- "Y2/3Li1/3TaO3"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='La1/3-xLi3xTaO3', canonical_name='Lanthanum Lithium Tantalate', abbreviation=None, variant_names=['La1/3-xLi3xTaO3 (x <= 1/6)', 'La1/3-xLi3xTaO3 (x variable)']), CanonicalMaterialName(canonical_formula='La0.273Li0.18TaO3', canonical_name='Lanthanum Lithium Tantalate (x=0.06)', abbreviation=None, variant_names=['La1/3-xLi3xTaO3 (x = 0.06)']), CanonicalMaterialName(canonical_formula='La1/4Li1/4TaO3', canonical_name='Lanthanum Lithium Tantalate', abbreviation=None, variant_names=['La1/4Li1/4TaO3']), CanonicalMaterialName(canonical_formula='La2/3Li1/3TaO3', canonical_name='Lanthanum Lithium Tantalate', abbreviation=None, variant_names=['La2/3Li1/3TaO3']), CanonicalMaterialName(canonical_formula='R1/4Li1/4TaO3 (R = La, Pr, Nd, Sm)', canonical_name='Rare-earth Lithium Tantalate', abbreviation=None, variant_names=['R1/4Li1/4TaO3 (R = La, Pr, Nd, Sm)', 'R1/4Li1/4TaO3 (R=La, Nd and Sm)']), CanonicalMaterialName(canonical_formula='Y1/4Li1/4TaO3', canonical_name='Yttrium Lithium Tantalate', abbreviation=None, variant_names=['Y1/4Li1/4TaO3']), CanonicalMaterialName(canonical_formula='Y2/3Li1/3TaO3', canonical_name='Yttrium Lithium Tantalate', abbreviation=None, variant_names=['Y2/3Li1/3TaO3'])]
+  → Created 7 canonical material(s)
+  → Updated 9/9 material names
+  → Normalizing 9 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='5.0 x 10^-7 S m^-1', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 5e-07, 'temp_value': 400, 'cond_unit': 'S m^-1', 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='1.4 x 10^-3 S m^-1', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 400, 'cond_value': 0.0014, 'cond_unit': 'S m^-1'}
+    [DEBUG Norm] Input: Cond='5.0 × 10⁻⁹ S cm⁻¹', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'K', 'temp_value': 400, 'cond_value': 5e-09}
+    [DEBUG Norm] Input: Cond='7 x 10^-5 S cm^-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 7e-05, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.4 × 10⁻³ S cm⁻¹', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 400, 'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 0.0014}
+    [DEBUG Norm] Input: Cond='10^-4 to 10^-3 S/cm', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-4 to 10^-3 S/cm', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='not specified', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='10^-4 to 10^-3 S/cm', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 400, 'cond_value': 0.0001, 'temp_unit': 'K', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-4 to 10^-3 S/cm', Temp='400 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 0.001, 'temp_value': 400}
+
+[Stage 3] Deduplicating 9 data points...
+  → Merged 0 duplicates, 9 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         11
+Total Input:         65,830 tokens
+Total Output:        7,978 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0568
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 11 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure_materials.json
+Time elapsed (s)  83.0852279663086
+
+Statistics:
+  Nodes analyzed: 60
+  Raw data points: 9
+  After dedup: 7
+  Valid: 7, Invalid: 0
+
+By Confidence:
+  high: 4
+  medium: 3
+  low: 0
+
+By Data Source:
+  primary: 6
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ La2/3Li1/3TaO3: 1.4 x 10^-3 S m^-1 @ 400 K [high]
+  ✓ Y2/3Li1/3TaO3: 5.0 x 10^-7 S m^-1 @ 400 K [high]
+  ✓ Y1/4Li1/4TaO3: 5.0 × 10⁻⁹ S cm⁻¹ @ 400 K [high]
+  ✓ La1/4Li1/4TaO3: 1.4 × 10⁻³ S cm⁻¹ @ 400 K [high]
+  ✓ La0.273Li0.18TaO3: 7 x 10^-5 S cm^-1 @ room temperature [medium]
+  ... and 2 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0167-2738(98)00414-7
+               Composition  Ionic conductivity (S cm-1)
+166    Nd0.5Li0.5Ta2.0O6.0                 1.310000e-08
+167    Sm0.5Li0.5Ta2.0O6.0                 4.320000e-10
+456  Li0.25La0.25Ta1.0O3.0                 2.610000e-05
+Starting Evaluation on 3 Ground Truth Points...
+
+Evaluation Complete: 0/3 Matched (0.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y
+[0;34m[INFO][0m DOI: 10.1016/s0167-2738(98)00414-7
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_pipeline_20260114_154852.log
+

@@ -1,0 +1,9 @@
+GT-379     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Cl0.25Br0.75.
+GT-380     | ❌ MISSING/BAD   | The extracted composition Li6PS5Cl matches 'Cl', but the extracted conductivity 0.00238 S/cm at ~30C is not an approximate match for 0.00205 S/cm at 25C (15.9% difference).
+GT-381     | ❌ MISSING/BAD   | The extracted composition Li6PS5Cl0.5Br0.5 matches 'Cl0.5Br0.5', but the extracted conductivity 0.00392 S/cm at ~30C is not an approximate match for 0.00333 S/cm at 25C (17.6% difference).
+GT-382     | ✅ MATCH         | The extracted composition Li6PS5Br matches 'Br' and the extracted conductivity 0.00106 S/cm at ~30C is an approximate match for 0.00115 S/cm at 25C (8.1% difference).
+GT-383     | ✅ MATCH         | The extracted composition Li6PS5Br0.5I0.5 matches 'Br0.5I0.5' and the extracted conductivity 2.37e-05 S/cm at ~30C is an approximate match for 2.62e-05 S/cm at 25C (9.6% difference).
+GT-384     | ❌ MISSING/BAD   | The extracted composition Li6PS5I matches 'I', but the extracted conductivity 1.83e-06 S/cm at ~30C is not an approximate match for 1.3e-06 S/cm at 25C (40.6% difference).
+GT-385     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Cl0.75Br0.25.
+GT-386     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Br0.75I0.25.
+GT-387     | ❌ MISSING/BAD   | No extracted data found for the composition Li6PS5Br0.25I0.75.

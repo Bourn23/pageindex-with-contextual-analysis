@@ -1,0 +1,889 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 120619,
+    "total_output_tokens": 13660,
+    "total_cost_usd": 0.1012895,
+    "call_counts": {
+      "gemini-3-flash-preview": 25
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_structure.json",
+  "extraction_stats": {
+    "total_nodes": 112,
+    "raw_extracted": 32,
+    "after_dedup": 28,
+    "time_elapsed": 858.936201095581,
+    "valid_count": 28,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 5,
+      "medium": 23,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 4,
+      "cited": 0,
+      "inferred": 24
+    },
+    "from_text_nodes": 10,
+    "from_image_nodes": 22,
+    "final_count": 28
+  },
+  "material_count": 28,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 1b) for the Li6PS5Cl (LPSCl) sample at 25°C (approx. 3.35 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.",
+      "source_node": {
+        "node_id": "0016",
+        "title": "Recovered Content",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0219",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5-xSexBr",
+        "acronym": null,
+        "proportion": "x=0 to x=1"
+      },
+      "ionic_conductivity_S_per_cm": "10^-3 to 10^-2 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "The text and figure caption for Figure 6(a) describe room-temperature conductivity for the Li6PS5-xSexBr series as a function of Se content. While specific numerical values are not listed in the text, the plot in Figure 6(a) typically shows values in the mS/cm range (10^-3 to 10^-2 S/cm) for these argyrodite-type electrolytes.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with Se substitution for S.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0217",
+        "title": "Figures 6 & 7: Conductivity and Activation Energy Data",
+        "section": "3. RESULTS"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5-xSexBr",
+      "_original_name": "Li6PS5-xSexBr",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-3 S/cm",
+      "measurement_temperature": "50°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 1b) for the Li6PS5Cl (LPSCl) sample at 50°C (approx. 3.1 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.",
+      "source_node": {
+        "node_id": "0016",
+        "title": "Recovered Content",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-3 S/cm",
+      "measurement_temperature": "75°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 1b) for the Li6PS5Cl (LPSCl) sample at 75°C (approx. 2.87 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.",
+      "source_node": {
+        "node_id": "0016",
+        "title": "Recovered Content",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.0 x 10^-3 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 1b) for the Li6PS5Cl (LPSCl) sample at 100°C (approx. 2.68 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C.",
+      "source_node": {
+        "node_id": "0016",
+        "title": "Recovered Content",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.0028,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.9Se0.1Br",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "3.2e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.1 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.1 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "_original_name": "Li6PS4.9Se0.1Br",
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0278",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.9 mS·cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted the highest reported ionic conductivity value for the argyrodite structure mentioned in the conclusion section.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0277",
+        "title": "Summary and Outlook",
+        "section": "5. CONCLUSION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "lithium thiophosphate argyrodite",
+      "_norm_cond": 0.0039,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^5.6 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point cluster extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.33 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (black markers)",
+      "_norm_cond": 5.6,
+      "_norm_temp": null,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-3 S cm^-1",
+      "measurement_temperature": "300 K",
+      "reason": "Calculated from Arrhenius plot (ln(sigma*T) approx -0.1 at 1000/T = 3.33 K^-1).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Lithium thiophosphate argyrodite",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0200",
+        "title": "_page_4_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.5Se0.5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2e-3 S cm^-1",
+      "measurement_temperature": "300 K",
+      "reason": "Calculated from Arrhenius plot (ln(sigma*T) approx -0.2 at 1000/T = 3.33 K^-1).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Selenium-substituted lithium thiophosphate argyrodite",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0200",
+        "title": "_page_4_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "_original_name": "Li6PS4.5Se0.5Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4SeBr",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-3 S cm^-1",
+      "measurement_temperature": "300 K",
+      "reason": "Calculated from Arrhenius plot (ln(sigma*T) approx 0.1 at 1000/T = 3.33 K^-1).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Selenium-substituted lithium thiophosphate argyrodite",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0200",
+        "title": "_page_4_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4SeBr",
+      "_original_name": "Li6PS4SeBr",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.8Se0.2Br",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "3.9e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.2 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.2 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "_original_name": "Li6PS4.8Se0.2Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.7Se0.3Br",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.6e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.3 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.3 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "_original_name": "Li6PS4.7Se0.3Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.6Se0.4Br",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "3.65e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.4 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.4 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "_original_name": "Li6PS4.6Se0.4Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.5Se0.5Br",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.7e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.5 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.5 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "_original_name": "Li6PS4.5Se0.5Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.4Se0.6Br",
+        "acronym": null,
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "2.8e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.6 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.6 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "_original_name": "Li6PS4.4Se0.6Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.3Se0.7Br",
+        "acronym": null,
+        "proportion": "x=0.7"
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.7 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.7 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "_original_name": "Li6PS4.3Se0.7Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.2Se0.8Br",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "3.45e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.8 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.8 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "_original_name": "Li6PS4.2Se0.8Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4.1Se0.9Br",
+        "acronym": null,
+        "proportion": "x=0.9"
+      },
+      "ionic_conductivity_S_per_cm": "3.8e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=0.9 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=0.9 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "_original_name": "Li6PS4.1Se0.9Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_1.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS4SeBr",
+        "acronym": null,
+        "proportion": "x=1.0"
+      },
+      "ionic_conductivity_S_per_cm": "3.6e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the x=1.0 point on the RT conductivity plot (a).",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Argyrodite-type solid electrolyte with x=1.0 selenium substitution.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0218",
+        "title": "_page_5_Figure_1.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS4SeBr",
+      "_original_name": "Li6PS4Se1.0Br",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^4.6 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.30 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (blue markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^5.3 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.33 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (blue markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^6.2 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.37 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (blue markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^6.7 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.41 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (blue markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^7.4 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.45 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (blue markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^5.1 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.31 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (black markers)",
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5X",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^5.8 K S cm⁻¹ (log sigma_0 product)",
+      "measurement_temperature": "N/A",
+      "reason": "Data point cluster extracted from Meyer-Neldel rule plot (b) at activation energy approx 0.34 eV.",
+      "confidence": "medium",
+      "data_source": "inferred",
+      "material_description": "Pre-exponential factor (sigma_0) versus activation energy (E_A) data series.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. [Inferred]",
+      "source_node": {
+        "node_id": "0221",
+        "title": "_page_5_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5X",
+      "_original_name": "Lithium-conducting solid electrolyte (black markers)",
+      "_enriched": true
+    }
+  ]
+}

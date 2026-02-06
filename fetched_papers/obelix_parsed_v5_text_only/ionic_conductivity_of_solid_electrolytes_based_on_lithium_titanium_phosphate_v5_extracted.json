@@ -1,0 +1,101 @@
+{
+  "doc_name": "ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate",
+  "timestamp": "2026-01-23 08:21:52",
+  "execution_time_seconds": 53.39,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 3398,
+    "total_output_tokens": 5594,
+    "total_cost_usd": 0.015,
+    "call_counts": {
+      "gemini-flash-latest": 6
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 4,
+    "skipped_images": 4,
+    "failed_items": 1,
+    "total_sections_processed": 8,
+    "total_images_processed": 11
+  },
+  "material_count": 4,
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "Solid electrolytes based on lithium titanium phosphate (LiTi2(PO4)3) were prepared.",
+        "The materials belong to the Li(1+x)M(x)Ti(2-x)(PO4)3 system (M3+=Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+).",
+        "The conductivity enhancement is primarily attributed to the increase of the sintered pellet density and the enhancement of the lithium concentration at the grain boundaries.",
+        "The maximum conductivity was achieved by partially replacing Ti4+ in LiTi2(PO4)3 with M3+ (specifically Al3+ and Sc3+) at a composition of x=0.3."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7P3O12",
+      "material_definitions": [
+        "Solid electrolytes based on lithium titanium phosphate (LiTi2(PO4)3) were prepared.",
+        "The materials belong to the Li(1+x)M(x)Ti(2-x)(PO4)3 system (M3+=Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+).",
+        "The conductivity enhancement is primarily attributed to the increase of the sintered pellet density and the enhancement of the lithium concentration at the grain boundaries.",
+        "The maximum conductivity was achieved by partially replacing Ti4+ in LiTi2(PO4)3 with M3+ (specifically Al3+ and Sc3+) at a composition of x=0.3."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The study focuses on lithium titanium phosphate (LiTi2(PO4)3) based solid electrolytes.",
+        "The material series involves partial substitution of P5+ with Si4+ or Ti4+ with M3+ (e.g., Al or Sc) to enhance conductivity.",
+        "Conductivity enhancement also resulted from mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3, primarily leading to better densification.",
+        "These conductors exhibit high lithium ionic conductivity even at room temperature and stability in air."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The study focuses on lithium titanium phosphate (LiTi2(PO4)3) based solid electrolytes.",
+        "The material series involves partial substitution of P5+ with Si4+ or Ti4+ with M3+ (e.g., Al or Sc) to enhance conductivity.",
+        "Conductivity enhancement also resulted from mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3, primarily leading to better densification.",
+        "These conductors exhibit high lithium ionic conductivity even at room temperature and stability in air."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

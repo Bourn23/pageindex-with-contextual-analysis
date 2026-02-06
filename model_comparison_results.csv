@@ -1,0 +1,33 @@
+paper,total_gt,total_ex,matches,recall,precision,accuracy,config
+a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy,13,3,1,7.7,33.33333333333333,33.33333333333333,Text Only (Flash)
+electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3,15,3,0,0.0,0.0,0.0,Text Only (Flash)
+ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate,30,4,2,6.9,50.0,100.0,Text Only (Flash)
+lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions,11,9,3,27.3,33.33333333333333,0.0,Text Only (Flash)
+competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution,11,3,2,18.2,66.66666666666666,0.0,Text Only (Flash)
+inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries,11,8,2,18.2,25.0,0.0,Text Only (Flash)
+lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors,15,2,0,0.0,0.0,0.0,Text Only (Flash)
+effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites,13,3,2,15.4,66.66666666666666,100.0,Text Only (Flash)
+inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries,11,4,1,9.1,25.0,0.0,Vision Only (Flash)
+lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions,11,18,2,18.2,11.11111111111111,0.0,Vision Only (Flash)
+lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors,15,5,0,0.0,0.0,40.0,Vision Only (Flash)
+ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate,30,9,5,16.7,55.55555555555556,0.0,Vision Only (Flash)
+electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3,15,15,3,20.0,20.0,0.0,Vision Only (Flash)
+competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution,11,14,11,100.0,78.57142857142857,0.0,Vision Only (Flash)
+a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy,13,9,0,0.0,0.0,0.0,Vision Only (Flash)
+effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites,13,12,8,61.5,66.66666666666666,100.0,Vision Only (Flash)
+inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries,11,118,0,0.0,0.0,0.0,Vision Only (Scaffolding)
+electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3,15,26,0,0.0,0.0,0.0,Vision Only (Scaffolding)
+lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions,11,45,0,0.0,0.0,0.0,Vision Only (Scaffolding)
+ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate,30,77,16,53.3,20.77922077922078,0.0,Vision Only (Scaffolding)
+a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy,13,125,0,0.0,0.0,0.0,Vision Only (Scaffolding)
+competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution,11,95,11,100.0,11.578947368421053,0.0,Vision Only (Scaffolding)
+effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites,13,50,13,100.0,26.0,0.0,Vision Only (Scaffolding)
+lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors,15,42,15,100.0,35.714285714285715,0.0,Vision Only (Scaffolding)
+effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites,13,53,13,100.0,24.528301886792452,100.0,"Combined (Table, Text, Vision)"
+competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution,11,97,11,100.0,11.34020618556701,0.0,"Combined (Table, Text, Vision)"
+lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions,11,54,2,18.2,3.7037037037037033,0.0,"Combined (Table, Text, Vision)"
+electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3,15,73,0,0.0,0.0,0.0,"Combined (Table, Text, Vision)"
+a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy,13,145,13,100.0,8.96551724137931,0.0,"Combined (Table, Text, Vision)"
+lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors,15,39,12,80.0,30.76923076923077,0.0,"Combined (Table, Text, Vision)"
+ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate,30,105,22,73.3,20.952380952380953,80.0,"Combined (Table, Text, Vision)"
+inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries,11,56,3,27.3,5.357142857142857,33.33333333333333,"Combined (Table, Text, Vision)"

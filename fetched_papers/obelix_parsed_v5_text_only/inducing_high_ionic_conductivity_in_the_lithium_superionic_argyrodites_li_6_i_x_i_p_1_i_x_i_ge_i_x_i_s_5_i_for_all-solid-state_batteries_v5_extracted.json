@@ -1,0 +1,165 @@
+{
+  "doc_name": "inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries",
+  "timestamp": "2026-01-23 08:15:42",
+  "execution_time_seconds": 58.25,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 7585,
+    "total_output_tokens": 10643,
+    "total_cost_usd": 0.0289,
+    "call_counts": {
+      "gemini-flash-latest": 12
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 8,
+    "skipped_images": 8,
+    "failed_items": 1,
+    "total_sections_processed": 15,
+    "total_images_processed": 14
+  },
+  "material_count": 8,
+  "measurements": [
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed state)",
+      "canonical_formula": "Li6+xP1-xGexS5I (cold-pressed state)",
+      "material_definitions": [
+        "The material investigated is the lithium argyrodite Li6+xP1-xGexS5I, where aliovalent substitution of Ge for P is explored.",
+        "Increasing Ge content induces anion site disorder and significantly reduces the activation barrier for ionic motion.",
+        "This composition achieves the fastest lithium argyrodite conductivity so far in a cold-pressed state.",
+        "The resulting high ionic conductivity allows for successful implementation within a thick-electrode solid-state battery."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (upon sintering)",
+      "canonical_formula": "Li6+xP1-xGexS5I (upon sintering)",
+      "material_definitions": [
+        "The material investigated is the lithium argyrodite Li6+xP1-xGexS5I, where aliovalent substitution of Ge for P is explored.",
+        "Increasing Ge content induces anion site disorder and significantly reduces the activation barrier for ionic motion.",
+        "This composition achieves the fastest lithium argyrodite conductivity so far upon sintering.",
+        "The resulting high ionic conductivity allows for successful implementation within a thick-electrode solid-state battery."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.3e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed)",
+      "canonical_formula": "Li6+xP1-xGexS5I (cold-pressed)",
+      "material_definitions": [
+        "Inspired by the possibility of incorporating Ge into a composition possessing a larger unit cell, the effect of Ge4+ substitution in Li6+xP1-xGexS5I on the structure-transport relationships was investigated.",
+        "The study used Rietveld refinements against neutron and X-ray diffraction data to identify structural changes associated with the Li- and anion-substructures, including changes to the site-disorder.",
+        "With increasing Ge-fraction, the diffusion pathways for Li+ expand and site disorder between the S2\u2013 and I\u2013 positions appears.",
+        "The increasing disorder is correlated to a sharp decrease in the activation barrier and an increase in the conductivity over orders of magnitude leading to the highest lithium argyrodites reported so far."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I (sintered)",
+      "canonical_formula": "Li6+xP1-xGexS5I (sintered)",
+      "material_definitions": [
+        "Inspired by the possibility of incorporating Ge into a composition possessing a larger unit cell, the effect of Ge4+ substitution in Li6+xP1-xGexS5I on the structure-transport relationships was investigated.",
+        "The study used Rietveld refinements against neutron and X-ray diffraction data to identify structural changes associated with the Li- and anion-substructures, including changes to the site-disorder.",
+        "With increasing Ge-fraction, the diffusion pathways for Li+ expand and site disorder between the S2\u2013 and I\u2013 positions appears.",
+        "The increasing disorder is correlated to a sharp decrease in the activation barrier and an increase in the conductivity over orders of magnitude leading to the highest lithium argyrodites reported so far."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "In this work, aliovalent substitution in Li6+xP1-xGexS5I was performed and the changes to the structure and transport were investigated.",
+        "Using a combination of X-ray and neutron diffraction, nuclear magnetic resonance and impedance spectroscopy, the lattice variations, Ge solubility and, more specifically, the Li+ occupancies and I\textendash/S2\textendash sitedisorder were monitored.",
+        "With increasing Ge content, a significant change in the activation barrier was observed, which coincides with an increase of the I\textendash/S2\textendash sitedisorder.",
+        "The structural changes and increasing lattice volume lead to an opening of the bottle necks and nuclear magnetic resonance indicates more facile inter-cage jumps."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "In this work, aliovalent substitution in Li6+xP1-xGexS5I was performed and the changes to the structure and transport were investigated.",
+        "Using a combination of X-ray and neutron diffraction, nuclear magnetic resonance and impedance spectroscopy, the lattice variations, Ge solubility and, more specifically, the Li+ occupancies and I\textendash/S2\textendash sitedisorder were monitored.",
+        "With increasing Ge content, a significant change in the activation barrier was observed, which coincides with an increase of the I\textendash/S2\textendash sitedisorder.",
+        "Sintering of the pellets can further increase the ionic conductivity."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "Li1.5Al0.5Ge1.5(PO4)3 glass ceramic",
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3 glass ceramic",
+      "material_definitions": [
+        "The Li-ion conductivity of Li1.5Al0.5Ge1.5(PO4)3 glass ceramic prepared by spark plasma sintering."
+      ],
+      "raw_conductivity": "1.25e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00125,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

@@ -1,0 +1,179 @@
+{
+  "doc_name": "effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites",
+  "timestamp": "2026-01-23 09:05:13",
+  "execution_time_seconds": 90.07,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13657,
+    "total_output_tokens": 15563,
+    "total_cost_usd": 0.2141,
+    "call_counts": {
+      "gemini-3-pro-preview": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 10,
+    "skipped_images": 6,
+    "failed_items": 2,
+    "total_sections_processed": 15,
+    "total_images_processed": 10
+  },
+  "material_count": 10,
+  "measurements": [
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solutions"
+      ],
+      "raw_conductivity": "-1.65",
+      "raw_conductivity_unit": "ln(K S cm-1)",
+      "normalized_conductivity": 0.000652969689310564,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T-1 / K-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.125",
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solutions"
+      ],
+      "raw_conductivity": "-1.45",
+      "raw_conductivity_unit": "ln(K S cm-1)",
+      "normalized_conductivity": 0.000797538979518912,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T-1 / K-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.25",
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solutions"
+      ],
+      "raw_conductivity": "-1.0",
+      "raw_conductivity_unit": "ln(K S cm-1)",
+      "normalized_conductivity": 0.001250790099982904,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T-1 / K-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solutions"
+      ],
+      "raw_conductivity": "-0.6",
+      "raw_conductivity_unit": "ln(K S cm-1)",
+      "normalized_conductivity": 0.0018659595627196898,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T-1 / K-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "0.7",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.1",
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "0.8",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0008,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.2",
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "1.7",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0017,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.3",
+      "canonical_formula": "Li6.3P0.7Si0.3S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "1.65",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.00165,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.35",
+      "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "2.3",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0023,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Li6+xP1-xSixS5Br solid solution series"
+      ],
+      "raw_conductivity": "2.2",
+      "raw_conductivity_unit": "mScm-1",
+      "normalized_conductivity": 0.0022,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

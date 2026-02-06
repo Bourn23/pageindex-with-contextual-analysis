@@ -1,0 +1,406 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2_already_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2_already_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_pipeline_20260118_185154.log
+
+[0;34m[INFO][0m Skipping STEP 1: Using existing structure: ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Loading existing results from: fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure_materials.json
+  → Found 12 existing materials.
+  Indexing figures...
+    Indexed Figure 11 -> page_1_Figure_11.jpeg
+    Indexed Figure 2 -> page_2_Figure_2.jpeg
+    Indexed Figure 9 -> page_2_Figure_9.jpeg
+    Indexed Figure 7 -> page_3_Figure_7.jpeg
+    Indexed Figure 14 -> page_3_Figure_14.jpeg
+    Indexed Figure 15 -> page_3_Figure_15.jpeg
+    Indexed Figure 11 -> page_5_Figure_11.jpeg
+    Indexed Figure 2 -> page_6_Figure_2.jpeg
+    Indexed Figure 5 -> page_6_Figure_5.jpeg
+    Indexed Figure 7 -> page_6_Figure_7.jpeg
+    Indexed Figure 11 -> page_6_Figure_11.jpeg
+    Indexed Figure 2 -> page_7_Figure_2.jpeg
+  Total figures indexed: 12 across 7 distinct figure numbers.
+Found 82 text nodes.
+
+[Stage 2] Extracting from 82 relevant nodes...
+  [1/82] ○ [17]... (0 data points)
+  [2/82] ○ [21]... (0 data points)
+  [3/82] ○ Document Information... (0 data points)
+  [4/82] ○ Publisher Information... (0 data points)
+  [5/82] ○ [20]... (0 data points)
+  [6/82] ○ [19]... (0 data points)
+  [7/82] ○ [18]... (0 data points)
+  [8/82] ○ [22]... (0 data points)
+  [9/82] ○ Authors and Affiliations... (0 data points)
+  [10/82] ○ [26]... (0 data points)
+  [11/82] ○ Article history... (0 data points)
+  [12/82] ○ Recovered Content... (0 data points)
+  [13/82] ○ Introduction to Mg-doped Lithium Titanium Oxides... (0 data points)
+  [14/82] ○ [25]... (0 data points)
+  [15/82] ○ Computational Predictions of Ionic Conductivity... (0 data points)
+  [16/82] ○ Discrepancy Between Computational and Experimental... (0 data points)
+  [17/82] ○ [28]... (0 data points)
+  [18/82] ○ Recovered Content... (0 data points)
+  [19/82] ○ Anomalous Activation Energy and Percolation Theory... (0 data points)
+  [20/82] ○ [27]... (0 data points)
+  [21/82] ○ Copyright... (0 data points)
+  [22/82] ○ Crystal Structure of Li₄/₃Ti₅/₃O₄... (0 data points)
+  [23/82] ○ Introduction to Li-ion Batteries and Li₄/₃Ti₅/₃O₄ ... (0 data points)
+  [24/82] ○ Li-ion Diffusion Pathways in Spinel... (0 data points)
+  [25/82] ○ Author Contact Information... (0 data points)
+  [26/82] ○ Details for Figure 1... (0 data points)
+  [27/82] ○ Objectives and Experimental Approach of Present St... (0 data points)
+  [28/82] ○ Coulombic Calculations for Mg-Doped Li-Ti-O System... (0 data points)
+  [29/82] ○ First-principles DFT Methodology and Analysis for ... (0 data points)
+  [30/82] ✓ Importance of Li-ion Diffusivity and Research Focu... (1 data points)
+  [31/82] ○ Results and Discussion on Mg Doping and Pathway Co... (0 data points)
+  [32/82] ○ Figure Descriptions... (0 data points)
+  [33/82] ○ Structural Characterization by XRD... (0 data points)
+  [34/82] ○ Sample Preparation... (0 data points)
+  [35/82] ○ Ionic Conductivity Characterization... (0 data points)
+  [36/82] ✓ Electronic Conductivity Challenges and Doping Solu... (2 data points)
+  [37/82] ○ Superstructure Formation and Specific Peak Changes... (0 data points)
+  [38/82] ○ Initial XRD Observations and Impurity Phase... (0 data points)
+  [39/82] ○ Rietveld Analysis Results, Phase Transition, and C... (0 data points)
+  [40/82] ○ Summary of Phases and Introduction to Rietveld Ana... (0 data points)
+  [41/82] ○ Figure and Table References for XRD and Rietveld... (0 data points)
+  [42/82] ○ Lattice Parameters and Volume Change Implications... (0 data points)
+  [43/82] ○ Consistency of Arrhenius Plots and Impurity Phase ... (0 data points)
+  [44/82] ✓ Recovered Content... (3 data points)
+  [45/82] ○ DFT Analysis of Phase Transition Influence... (0 data points)
+  [46/82] ○ Unexplained Discrepancies and Dominant Factors... (0 data points)
+  [47/82] ○ Activation Energy Discrepancy... (0 data points)
+  [48/82] ○ Introduction to Defect Mechanism... (0 data points)
+  [49/82] ○ Crystal Structure Analysis (Table 3)... (0 data points)
+  [50/82] ○ Crystal Structure Analysis (Table 4)... (0 data points)
+  [51/82] ○ Defect Formation and Vacancy Energy Calculation... (0 data points)
+  [52/82] ○ Defect Energy Results and LIB Application... (0 data points)
+  [53/82] ○ Ionic Conductivity Decrease and Percolation Introd... (0 data points)
+  [54/82] ○ Figure 7 & 8 Captions... (0 data points)
+  [55/82] ○ Percolation Mechanism Detail... (0 data points)
+  [56/82] ○ Figure 11 & 12 Captions... (0 data points)
+  [57/82] ○ Percolation Theory Application and Calculations... (0 data points)
+  [58/82] ○ Percolation Theory Conclusion... (0 data points)
+  [59/82] ○ Introduction and Initial DFT Findings on Li+ Diffu... (0 data points)
+  [60/82] ○ Impact of Mg Doping and Other Structural Factors o... (0 data points)
+  [61/82] ○ Activation Energy and Future Investigations... (0 data points)
+  [62/82] ✓ Effect of Mg Doping on Ionic Conductivity and Acti... (3 data points)
+  [63/82] ○ Percolation Theory and Conductivity Decrease... (0 data points)
+  [64/82] ○ Software and Tools... (0 data points)
+  [65/82] ✓ AC Impedance Measurements and Bulk Conductivity Ca... (4 data points)
+  [66/82] ○ Funding Acknowledgement... (0 data points)
+  [67/82] ○ [1]... (0 data points)
+  [68/82] ○ [2]... (0 data points)
+  [69/82] ✓ Figure 9 & 10 Captions... (2 data points)
+  [70/82] ○ [4]... (0 data points)
+  [71/82] ○ [5]... (0 data points)
+  [72/82] ○ [6]... (0 data points)
+  [73/82] ○ [3]... (0 data points)
+  [74/82] ○ [7]... (0 data points)
+  [75/82] ○ [9]... (0 data points)
+  [76/82] ○ [12]... (0 data points)
+  [77/82] ○ [10]... (0 data points)
+  [78/82] ○ [13]... (0 data points)
+  [79/82] ○ [11]... (0 data points)
+  [80/82] ○ [14]... (0 data points)
+  [81/82] ○ [15]... (0 data points)
+  [82/82] ○ [16]... (0 data points)
+  → 15 total data points extracted
+Found 18 image nodes.
+
+[Stage 2b] Processing 18 images directly...
+  [16/18] ✓ _page_6_Figure_2.jpeg (3 points)
+  [17/18] ✓ _page_6_Figure_5.jpeg (10 points)
+  [18/18] ✓ _page_6_Figure_7.jpeg (10 points)
+
+Merging: 15 text-based + 23 image-based points.
+  → Running physical heuristic checks on 50 points...
+  → Running LLM semantic verification on 49 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 37 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li(4-2x)MgxTi(5-x)/3O4 (x=0)"
+- "Li(4-2x)MgxTi(5-x)/3O4 (x=0, 0.1, 0.2)"
+- "Li(4-2x)MgxTi(5-x)/3O4 (x=0.3)"
+- "Li(4-2x)MgxTi(5-x)/3O4 (x=0.5)"
+- "Li3.02Mg0.49Ti1.5O4 (x=0.49)"
+- "Li3.04Mg0.48Ti1.51O4 (x=0.48)"
+- "Li3.06Mg0.47Ti1.51O4 (x=0.47)"
+- "Li3.0Mg0.5Ti1.5O4 (x=0.5)"
+- "Li3.1Mg0.45Ti1.52O4 (x=0.45)"
+- "Li3.2Mg0.4Ti1.533O4 (x=0.4)"
+- "Li3.2Mg0.4Ti1.53O4 (x=0.4)"
+- "Li3.4Mg0.3Ti1.567O4 (x=0.3)"
+- "Li3.4Mg0.3Ti1.57O4 (x=0.3)"
+- "Li3.6Mg0.2Ti1.6O4 (x=0.2)"
+- "Li3.8Mg0.1Ti1.633O4 (x=0.1)"
+- "Li3.8Mg0.1Ti1.63O4 (x=0.1)"
+- "Li3Mg0.5Ti1.5O4 (x=0.5)"
+- "Li4-xMgxTi5O12 (Mg ions partially for Li 8a sites)"
+- "Li4/3Ti5/3O4"
+- "Li4Mg0Ti1.67O4 (x=0)"
+- "Li4Ti5O12"
+- "Li4Ti5O12 (x=0)"
+- "Li6+xP1-xSixS5Br (x=0)"
+- "Li6+xP1-xSixS5Br (x=0.1)"
+- "Li6+xP1-xSixS5Br (x=0.2)"
+- "Li6+xP1-xSixS5Br (x=0.3)"
+- "Li6+xP1-xSixS5Br (x=0.4)"
+- "Li6+xP1-xSixS5Br (x=0.5)"
+- "Li6PS5Cl"
+- "LiMn2O4 (Co3+ or Cr3+ doped)"
+- "x=0 composition"
+- "x=0.1 composition"
+- "x=0.2 composition"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li4Ti5O12', canonical_name='Lithium Titanium Oxide', abbreviation='LTO', variant_names=['Li(4-2x)MgxTi(5-x)/3O4 (x=0)', 'Li4/3Ti5/3O4', 'Li4Mg0Ti1.67O4 (x=0)', 'Li4Ti5O12', 'Li4Ti5O12 (x=0)', 'x=0 composition']), CanonicalMaterialName(canonical_formula='Li3.8Mg0.1Ti1.633O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.1)', abbreviation=None, variant_names=['Li3.8Mg0.1Ti1.633O4 (x=0.1)', 'Li3.8Mg0.1Ti1.63O4 (x=0.1)', 'x=0.1 composition']), CanonicalMaterialName(canonical_formula='Li3.6Mg0.2Ti1.6O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.2)', abbreviation=None, variant_names=['Li3.6Mg0.2Ti1.6O4 (x=0.2)', 'x=0.2 composition']), CanonicalMaterialName(canonical_formula='Li3.4Mg0.3Ti1.567O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.3)', abbreviation=None, variant_names=['Li(4-2x)MgxTi(5-x)/3O4 (x=0.3)', 'Li3.4Mg0.3Ti1.567O4 (x=0.3)', 'Li3.4Mg0.3Ti1.57O4 (x=0.3)']), CanonicalMaterialName(canonical_formula='Li3.2Mg0.4Ti1.533O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.4)', abbreviation=None, variant_names=['Li3.2Mg0.4Ti1.533O4 (x=0.4)', 'Li3.2Mg0.4Ti1.53O4 (x=0.4)']), CanonicalMaterialName(canonical_formula='Li3.1Mg0.45Ti1.52O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.45)', abbreviation=None, variant_names=['Li3.1Mg0.45Ti1.52O4 (x=0.45)']), CanonicalMaterialName(canonical_formula='Li3.06Mg0.47Ti1.51O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.47)', abbreviation=None, variant_names=['Li3.06Mg0.47Ti1.51O4 (x=0.47)']), CanonicalMaterialName(canonical_formula='Li3.04Mg0.48Ti1.51O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.48)', abbreviation=None, variant_names=['Li3.04Mg0.48Ti1.51O4 (x=0.48)']), CanonicalMaterialName(canonical_formula='Li3.02Mg0.49Ti1.5O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.49)', abbreviation=None, variant_names=['Li3.02Mg0.49Ti1.5O4 (x=0.49)']), CanonicalMaterialName(canonical_formula='Li3Mg0.5Ti1.5O4', canonical_name='Lithium Magnesium Titanium Oxide (x=0.5)', abbreviation=None, variant_names=['Li(4-2x)MgxTi(5-x)/3O4 (x=0.5)', 'Li3.0Mg0.5Ti1.5O4 (x=0.5)', 'Li3Mg0.5Ti1.5O4 (x=0.5)']), CanonicalMaterialName(canonical_formula='Li6PS5Br', canonical_name='Lithium Phosphorus Sulfur Bromide (x=0)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0)']), CanonicalMaterialName(canonical_formula='Li6.1P0.9Si0.1S5Br', canonical_name='Lithium Phosphorus Silicon Sulfur Bromide (x=0.1)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0.1)']), CanonicalMaterialName(canonical_formula='Li6.2P0.8Si0.2S5Br', canonical_name='Lithium Phosphorus Silicon Sulfur Bromide (x=0.2)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0.2)']), CanonicalMaterialName(canonical_formula='Li6.3P0.7Si0.3S5Br', canonical_name='Lithium Phosphorus Silicon Sulfur Bromide (x=0.3)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0.3)']), CanonicalMaterialName(canonical_formula='Li6.4P0.6Si0.4S5Br', canonical_name='Lithium Phosphorus Silicon Sulfur Bromide (x=0.4)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0.4)']), CanonicalMaterialName(canonical_formula='Li6.5P0.5Si0.5S5Br', canonical_name='Lithium Phosphorus Silicon Sulfur Bromide (x=0.5)', abbreviation=None, variant_names=['Li6+xP1-xSixS5Br (x=0.5)']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfur Chloride', abbreviation=None, variant_names=['Li6PS5Cl']), CanonicalMaterialName(canonical_formula='LiMn2O4', canonical_name='Lithium Manganese Oxide', abbreviation=None, variant_names=['LiMn2O4 (Co3+ or Cr3+ doped)'])]
+  → Created 18 canonical material(s)
+  → Updated 48/50 material names
+  → Normalizing 50 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='4.0 x 10^-3 S/cm', Temp='60°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 60, 'cond_value': 0.004, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.01, 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0011, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 298, 'temp_unit': 'K', 'cond_value': 1e-05}
+    [DEBUG Norm] Input: Cond='2.5 x 10^-6 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 2.5e-06}
+    [DEBUG Norm] Input: Cond='1.3 x 10^-5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 298, 'temp_unit': 'K', 'cond_value': 1.3e-05}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.6 x 10^-5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.6e-05, 'cond_unit': 'S cm^-1', 'temp_value': 298, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='10^-13 S cm^-1', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 1e-13, 'cond_unit': 'S cm^-1', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻⁵ S cm⁻¹', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 1.2e-05}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻⁶ S cm⁻¹', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm-1', 'cond_value': 1e-06}
+    [DEBUG Norm] Input: Cond='5.0 x 10^-6 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'cond_value': 5e-06, 'temp_unit': 'K', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻¹³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S cm⁻¹', 'cond_value': 1e-13, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10⁻² S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm⁻¹', 'cond_value': 0.01, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.0011, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='one order higher diffusion coefficient', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_unit': None, 'cond_value': 0, 'temp_value': None, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 100, 'cond_value': 0.01, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='4.0 x 10^-3 S/cm', Temp='60°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.004, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 60}
+    [DEBUG Norm] Input: Cond='Value to be extracted from Fig. 9', Temp='313 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 313, 'cond_unit': 'S/cm', 'temp_unit': 'K', 'cond_value': 0.0001}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻⁷ S cm⁻¹', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_value': 1e-07, 'cond_unit': 'S cm-1', 'temp_value': 298}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻⁶ S cm⁻¹', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'temp_unit': 'K', 'cond_value': 1.2e-06, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='2.5 × 10⁻⁷ S cm⁻¹', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'cond_unit': 'S/cm', 'temp_unit': 'K', 'cond_value': 2.5e-07}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-06, 'temp_value': 298, 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-4 S/cm', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_unit': 'K', 'temp_value': 298, 'cond_unit': 'S/cm'}
+    Warning: Empty content for {'full_name': 'Li4Ti5O12', 'acronym': 'LTO', 'proportion': None} (Finish Reason: STOP)
+    [DEBUG Norm] Input: Cond='Not directly reported', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 25}
+    Warning: Empty content for {'full_name': 'Li4Ti5O12', 'acronym': 'LTO', 'proportion': None} (Finish Reason: STOP)
+    [DEBUG Norm] Input: Cond='1.58e-7 S cm^-1', Temp='40 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1.58e-07, 'temp_value': 40, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='Not directly reported', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='Not directly reported', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.26e-6 S cm^-1', Temp='100 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 100, 'cond_value': 1.26e-06, 'cond_unit': 'S cm^-1', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='6.31e-5 S cm^-1', Temp='200 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 200, 'temp_unit': 'C', 'cond_unit': 'S cm^-1', 'cond_value': 6.31e-05}
+    [DEBUG Norm] Input: Cond='Value to be extracted from Fig. 9', Temp='373 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_unit': 'K', 'cond_unit': 'S/cm', 'temp_value': 373}
+    [DEBUG Norm] Input: Cond='2.10e-5 S cm^-1', Temp='200 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 2.1e-05, 'cond_unit': 'S cm^-1', 'temp_unit': 'C', 'temp_value': 200}
+    [DEBUG Norm] Input: Cond='1.03e-7 S cm^-1', Temp='50 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1.03e-07, 'temp_value': 50, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='1.84e-5 S cm^-1', Temp='200 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm^-1', 'temp_unit': 'C', 'temp_value': 200, 'cond_value': 1.84e-05}
+    [DEBUG Norm] Input: Cond='4.18e-8 S cm^-1', Temp='60 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 60, 'cond_value': 4.18e-08, 'temp_unit': 'C', 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='3.43e-8 S cm^-1', Temp='70 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 70, 'cond_unit': 'S cm^-1', 'cond_value': 3.43e-08, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.21e-8 S cm^-1', Temp='80 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 2.21e-08, 'cond_unit': 'S cm^-1', 'temp_value': 80, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.41e-8 S cm^-1', Temp='130 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm^-1', 'cond_value': 2.41e-08, 'temp_unit': 'C', 'temp_value': 130}
+    [DEBUG Norm] Input: Cond='1e-10.9 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 1.25892541179417e-11, 'temp_value': 298, 'temp_unit': 'K', 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='1e-10.2 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_value': 6.3095734448e-11, 'temp_value': 298, 'cond_unit': 'S cm^-1'}
+    [DEBUG Norm] Input: Cond='1e-9.1 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 298, 'cond_unit': 'S cm^-1', 'cond_value': 7.94328234724282e-10}
+    [DEBUG Norm] Input: Cond='1e-8.2 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_unit': 'S cm^-1', 'cond_value': 6.30957344480193e-09, 'temp_value': 298}
+    [DEBUG Norm] Input: Cond='1e-8.5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_value': 3.16227766e-09, 'temp_value': 298, 'temp_unit': 'K', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1e-7.8 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_value': 298, 'cond_value': 1.58489319246111e-08, 'cond_unit': 'S cm^-1', 'temp_unit': 'K'}
+    [DEBUG Norm] Input: Cond='1e-7.2 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'temp_value': 298, 'cond_unit': 'S cm^-1', 'cond_value': 6.30957344480193e-08}
+    [DEBUG Norm] Input: Cond='1e-9.5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'K', 'cond_unit': 'S/cm', 'cond_value': 3.16227766e-10, 'temp_value': 298}
+    [DEBUG Norm] Input: Cond='1e-7.9 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1.25892541e-08}
+    [DEBUG Norm] Input: Cond='1e-7.5 S cm^-1', Temp='298 K'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 3.16227766e-08, 'temp_unit': 'K', 'temp_value': 298}
+
+[Stage 3] Deduplicating 50 data points...
+  → Merged 5 duplicates, 45 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+⚠️ LLM Call Timed Out (Attempt 1/3)
+  -> Imputed general method for 13 missing items.
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         70
+Total Input:         184,592 tokens
+Total Output:        20,223 tokens
+--------------------------------------------------
+TOTAL COST:          $0.1530
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 70 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure_materials.json
+Time elapsed (s)  249.642560005188
+
+Statistics:
+  Nodes analyzed: 100
+  Raw data points: 50
+  After dedup: 41
+  Valid: 40, Invalid: 1
+
+By Confidence:
+  high: 17
+  medium: 24
+  low: 0
+
+By Data Source:
+  primary: 26
+  cited: 0
+  inferred: 13
+
+Sample data points:
+  ✓ Li6PS5Cl: 1.1 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li6PS5Cl: 4.0 x 10^-3 S/cm @ 60°C [high]
+  ✓ Li6PS5Cl: 1.0 x 10^-2 S/cm @ 100°C [high]
+  ✓ Li3.4Mg0.3Ti1.567O4: 1.0 x 10^-5 S cm^-1 @ 298 K [high]
+  ✓ Li3.2Mg0.4Ti1.533O4: 1.3 x 10^-5 S cm^-1 @ 298 K [high]
+  ... and 36 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.ssi.2010.06.003
+
+📊 Starting evaluation for 10.1016/j.ssi.2010.06.003
+   Ground truth entries: 6
+   Extracted entries: 41
+
+======================================================================
+EVALUATION RESULTS: 10.1016/j.ssi.2010.06.003
+======================================================================
+Ground Truth Entries:    6
+Extracted Entries:       41
+✓ Correctly Extracted:   0
+✗ Missing:               6
+📈 Accuracy:             0.0%
+
+No matches were found between the ground truth and extracted data. While both datasets pertain to Li-Mg-Ti-O systems from the same DOI, a detailed comparison of elemental ratios (after normalizing to a common oxygen basis) revealed fundamental differences in the Li content for otherwise similar Mg and Ti stoichiometries. This indicates that the ground truth compositions are not compositionally equivalent to any of the extracted entries, even when accounting for scaling factors as per the provided rules.
+======================================================================
+
+💾 Detailed results saved to: evaluation_report.csv
+
+DETAILED MATCHES:
+----------------------------------------------------------------------
+✗ MISS | GT-375: Li8.56Mg3.16Ti12.28O32.0       (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li1.07Mg0.395Ti1.535O4), does not matc
+
+✗ MISS | GT-376: Li7.96Mg4.04Ti12.0O32.0        (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li0.995Mg0.505Ti1.5O4), does not match
+
+✗ MISS | GT-461: Li10.72Ti13.28O32.0            (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li1.34Ti1.66O4), does not match the el
+
+✗ MISS | GT-462: Li10.14Mg0.8Ti13.07O32.0       (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li1.2675Mg0.1Ti1.63375O4), does not ma
+
+✗ MISS | GT-463: Li9.6Mg1.6Ti12.8O32.0          (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li1.2Mg0.2Ti1.6O4), does not match the
+
+✗ MISS | GT-464: Li9.12Mg2.4Ti12.48O32.0        (0.00000)
+       The ground truth composition, when normalized to an O4 basis (Li1.14Mg0.3Ti1.56O4), does not match t
+
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system
+[0;34m[INFO][0m DOI: 10.1016/j.ssi.2010.06.003
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_pipeline_20260118_185154.log
+

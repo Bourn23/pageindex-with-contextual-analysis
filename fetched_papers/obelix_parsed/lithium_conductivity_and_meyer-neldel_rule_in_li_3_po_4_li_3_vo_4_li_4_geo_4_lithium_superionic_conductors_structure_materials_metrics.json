@@ -1,0 +1,105 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-69",
+      "extracted_id": "EX-11",
+      "reason": "The composition Li3P0.2V0.8O4 (normalized from Li6.0P0.4V1.6O8.0) matches EX-11. The conductivity values (1.31e-13 S/cm vs 1.5e-13 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-70",
+      "extracted_id": "EX-10",
+      "reason": "The composition Li3VO4 (normalized from Li6.0V2.0O8.0) matches EX-10. The conductivity values (9.2e-14 S/cm vs 1.3e-13 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-124",
+      "extracted_id": "EX-31",
+      "reason": "The composition Li3.2Ge0.2P0.8O4 (normalized from Li12.8Ge0.8P3.2O16.0) matches EX-31. The conductivity values (1.14e-06 S/cm vs 1e-06 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-125",
+      "extracted_id": null,
+      "reason": "The composition Li3.2Ge0.2V0.8O4 (normalized from Li12.8Ge0.8V3.2O16.0) does not have a suitable match. EX-13 has a conductivity (1e-06 S/cm) that is too low compared to GT (1.9e-05 S/cm). EX-27 has a closer conductivity (3.7e-05 S/cm) but is measured at 90\u00b0C, which is not 'roughly similar' to an assumed room temperature for GT.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-126",
+      "extracted_id": "EX-38",
+      "reason": "The composition Li3.4Ge0.4P0.6O4 (normalized from Li13.6Ge1.6P2.4O16.0) matches EX-38. The conductivity values (4.5e-06 S/cm vs 4e-06 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-127",
+      "extracted_id": "EX-35",
+      "reason": "The composition Li3.4Ge0.4V0.6O4 (normalized from Li13.6Ge1.6V2.4O16.0) matches EX-35. The conductivity values (8.89e-07 S/cm vs 5e-07 S/cm) are in the same order of magnitude, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-128",
+      "extracted_id": null,
+      "reason": "The composition Li3.6Ge0.6P0.4O4 (normalized from Li14.4Ge2.4P1.6O16.0) does not have a suitable match. EX-15 has a conductivity (1e-06 S/cm) that is significantly lower than GT (1.1e-05 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-129",
+      "extracted_id": "EX-36",
+      "reason": "The composition Li3.6Ge0.6V0.4O4 (normalized from Li14.4Ge2.4V1.6O16.0) matches EX-36. The conductivity values (3.19e-05 S/cm vs 3e-05 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-130",
+      "extracted_id": "EX-39",
+      "reason": "The composition Li3.8Ge0.8P0.2O4 (normalized from Li15.2Ge3.2P0.8O16.0) matches EX-39. The conductivity values (1.03e-06 S/cm vs 1.5e-06 S/cm) are in the same order of magnitude, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-131",
+      "extracted_id": null,
+      "reason": "The composition Li3.8Ge0.8V0.2O4 (normalized from Li15.2Ge3.2V0.8O16.0) does not have a suitable match. EX-14 has a conductivity (0.0001 S/cm) that is significantly higher than GT (2.71e-06 S/cm). EX-21 has no conductivity value.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-132",
+      "extracted_id": "EX-32",
+      "reason": "The composition Li3P0.4V0.6O4 (normalized from Li12.0P1.6V2.4O16.0) matches EX-32. The conductivity values (3.55e-13 S/cm vs 5e-13 S/cm) are in the same order of magnitude, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-133",
+      "extracted_id": "EX-33",
+      "reason": "The composition Li3P0.6V0.4O4 (normalized from Li12.0P2.4V1.6O16.0) matches EX-33. The conductivity values (3.2e-13 S/cm vs 3e-13 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-134",
+      "extracted_id": null,
+      "reason": "The composition Li3P0.8V0.2O4 (normalized from Li12.0P3.2V0.8O16.0) does not have a suitable match. EX-41 has no conductivity value.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-135",
+      "extracted_id": "EX-34",
+      "reason": "The composition Li3PO4 (normalized from Li12.0P4.0O16.0) matches EX-34. The conductivity values (1.75e-13 S/cm vs 2.8e-13 S/cm) are in the same order of magnitude, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-136",
+      "extracted_id": "EX-12",
+      "reason": "The composition Li4GeO4 (normalized from Li16.0Ge4.0O16.0) matches EX-12. The conductivity values (1.3e-12 S/cm vs 1.5e-12 S/cm) are very close, and the temperature (30\u00b0C) is consistent with an assumed room temperature for GT.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline performed well in extracting compositions and conductivities for Li-P-V-O and Li-Ge-P-O/V-O systems, especially when temperatures were consistent (around 30\u00b0C). 11 out of 15 Ground Truth entries found a matching Extracted entry. Mismatches primarily occurred due to significant differences in conductivity values or when the extracted data lacked a conductivity value, or when the extracted temperature was not 'roughly similar' to the assumed room temperature for the Ground Truth data.",
+  "metrics": {
+    "recall": 73.33333333333333,
+    "precision": 26.190476190476193,
+    "f1": 38.59649122807018,
+    "avg_log10_error": 0.10908421325029219,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 11,
+    "total_gt": 15,
+    "total_ex": 42
+  }
+}

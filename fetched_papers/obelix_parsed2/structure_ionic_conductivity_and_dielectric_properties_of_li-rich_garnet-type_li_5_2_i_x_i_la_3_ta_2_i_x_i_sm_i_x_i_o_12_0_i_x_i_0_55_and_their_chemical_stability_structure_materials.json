@@ -1,0 +1,167 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 133918,
+    "total_output_tokens": 4329,
+    "total_cost_usd": 0.079946,
+    "call_counts": {
+      "gemini-3-flash-preview": 14
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure.json",
+  "extraction_stats": {
+    "total_nodes": 79,
+    "raw_extracted": 12,
+    "after_dedup": 4,
+    "time_elapsed": 67.45140886306763,
+    "valid_count": 4,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 1,
+      "medium": 3,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 1,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 12,
+    "from_image_nodes": 0,
+    "final_count": 4
+  },
+  "material_count": 4,
+  "materials": [
+    {
+      "source_sentence_id": "0178, 0320, 0328",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.7La3Ta1.65Sm0.35O12",
+        "acronym": null,
+        "proportion": "x = 0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.25 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for the specific composition x = 0.35 mentioned in the context of the peak conductivity and the following sentence.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Stuffed garnet composition with Sm content x = 0.35 ; Sm-doped garnet-type solid electrolyte with increased porosity and decreased density compared to lower Sm concentrations. ; Sm-doped garnet-type lithium lanthanum tantalate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0175",
+        "title": "Bulk Conductivity and Density Correlation",
+        "section": "**4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.7La3Ta1.65Sm0.35O12",
+      "_original_name": "Li5+2xLa3Ta2-xSmxO12",
+      "_norm_cond": 2.25e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0191",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5La3Ta2O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.9 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted the highest ionic conductivity value mentioned for the parent phase Li5La3Ta2O12 from the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "prepared at 1200 °C/24 h",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Ionic Conductivity Values & Arrhenius Behavior",
+        "section": "**4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5La3Ta2O12",
+      "_original_name": "Li5La3Ta2O12",
+      "_norm_cond": 0.00039,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0246",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Nb1.25Y0.75O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.27 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "-22°C",
+      "reason": "Extracted ionic conductivity value for Li6.5La3Nb1.25Y0.75O12 at -22°C as reported in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0242",
+        "title": "SELF/VELF in Other Garnets and Li Content Impact",
+        "section": "**4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Nb1.25Y0.75O12",
+      "_original_name": "Li6.5La3Nb1.25Y0.75O12",
+      "_norm_cond": 1.27e-05,
+      "_norm_temp": -22
+    },
+    {
+      "source_sentence_id": "0246",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5La3Nb1.25Y0.75O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.99 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted ionic conductivity value for Li6.5La3Nb1.25Y0.75O12 at 25°C as reported in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0242",
+        "title": "SELF/VELF in Other Garnets and Li Content Impact",
+        "section": "**4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5La3Nb1.25Y0.75O12",
+      "_original_name": "Li6.5La3Nb1.25Y0.75O12",
+      "_norm_cond": 0.000299,
+      "_norm_temp": null
+    }
+  ]
+}

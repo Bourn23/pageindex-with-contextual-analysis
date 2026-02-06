@@ -1,0 +1,195 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-235",
+      "extracted_id": "EX-14",
+      "reason": "The normalized chemical formula LiTi2(PO4)3 matches exactly. The conductivity values are very close (2e-06 S/cm vs 2.51e-06 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-242",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li12Ti20Si2P28O120 does not match any extracted entry. EX-2 (Li13Ti20Si3P27O120) is a different composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-243",
+      "extracted_id": "EX-2",
+      "reason": "The normalized chemical formula Li13Ti20Si3P27O120 matches exactly. The conductivity values are identical (0.00032 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-244",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2Al0.2Ti1.8(PO4)3 does not match any extracted entry. Extracted entries with Al (EX-0, EX-4, EX-18) have a different stoichiometry (Li1.3Al0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-245",
+      "extracted_id": "EX-0",
+      "reason": "The normalized chemical formula Li1.3Al0.3Ti1.7(PO4)3 matches exactly. The conductivity values are very close (0.000722 S/cm vs 0.0007 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-246",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4Al0.4Ti1.6(PO4)3 does not match any extracted entry.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-247",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.5Al0.5Ti1.5(PO4)3 does not match any extracted entry.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-248",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2Cr0.2Ti1.8(PO4)3 does not match any extracted entry. EX-19 has a different Cr stoichiometry (Li1.5Cr0.5Ti1.5(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-249",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.3Cr0.3Ti1.7(PO4)3 does not match any extracted entry. EX-19 has a different Cr stoichiometry (Li1.5Cr0.5Ti1.5(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-250",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4Cr0.4Ti1.6(PO4)3 does not match any extracted entry. EX-19 has a different Cr stoichiometry (Li1.5Cr0.5Ti1.5(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-251",
+      "extracted_id": "EX-19",
+      "reason": "The normalized chemical formula Li1.5Cr0.5Ti1.5(PO4)3 matches exactly. The conductivity values are very close (0.000386 S/cm vs 0.000398107 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-252",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2Ga0.2Ti1.8(PO4)3 does not match any extracted entry. EX-28 has a different Ga stoichiometry (Li1.3Ga0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-253",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.3Ga0.3Ti1.7(PO4)3 matches EX-28, but EX-28 has no conductivity value ('None S/cm'), so it's not a full match for the data point.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-254",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4Ga0.4Ti1.6(PO4)3 does not match any extracted entry.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-255",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.5Ga0.5Ti1.5(PO4)3 does not match any extracted entry.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-256",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2Fe0.2Ti1.8(PO4)3 does not match any extracted entry. EX-22 has a different Fe stoichiometry (Li1.3Fe0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-257",
+      "extracted_id": "EX-22",
+      "reason": "The normalized chemical formula Li1.3Fe0.3Ti1.7(PO4)3 matches exactly. The conductivity values are very close (0.000246 S/cm vs 0.00025118864315 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-258",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4Fe0.4Ti1.6(PO4)3 does not match any extracted entry. EX-22 has a different Fe stoichiometry (Li1.3Fe0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-259",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.5Fe0.5Ti1.5(PO4)3 does not match any extracted entry. EX-22 has a different Fe stoichiometry (Li1.3Fe0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-260",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2Sc0.2Ti1.8(PO4)3 does not match any extracted entry. Extracted entries with Sc (EX-1, EX-3, EX-5, EX-27) have a different stoichiometry (Li1.3Sc0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-261",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li1.3Sc0.3Ti1.7(PO4)3 matches exactly. The conductivity values are very close (0.000703 S/cm vs 0.0007 S/cm), and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-262",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4Sc0.4Ti1.6(PO4)3 does not match any extracted entry. Extracted entries with Sc (EX-1, EX-3, EX-5, EX-27) have a different stoichiometry (Li1.3Sc0.3Ti1.7(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-263",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2In0.2Ti1.8(PO4)3 does not match any extracted entry. EX-20 has a different In stoichiometry (Li1.4In0.4Ti1.6(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-264",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.3In0.3Ti1.7(PO4)3 does not match any extracted entry. EX-20 has a different In stoichiometry (Li1.4In0.4Ti1.6(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-265",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4In0.4Ti1.6(PO4)3 matches EX-20, but the conductivity values are significantly different (0.000302 S/cm vs 0.000562341325190349 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-266",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.5In0.5Ti1.5(PO4)3 does not match any extracted entry. EX-20 has a different In stoichiometry (Li1.4In0.4Ti1.6(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-267",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.2La0.2Ti1.8(PO4)3 does not match any extracted entry. EX-23 has a different La stoichiometry (Li1.05La0.05Ti1.95(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-268",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.3La0.3Ti1.7(PO4)3 does not match any extracted entry. EX-23 has a different La stoichiometry (Li1.05La0.05Ti1.95(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-269",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.4La0.4Ti1.6(PO4)3 does not match any extracted entry. EX-23 has a different La stoichiometry (Li1.05La0.05Ti1.95(PO4)3).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-270",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li1.5La0.5Ti1.5(PO4)3 does not match any extracted entry. EX-23 has a different La stoichiometry (Li1.05La0.05Ti1.95(PO4)3).",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Out of 30 Ground Truth entries, 6 were successfully matched to Extracted Data entries based on normalized chemical formula, conductivity, and temperature. The primary reasons for mismatches were differences in chemical composition (stoichiometry) or the absence of a conductivity value in the extracted data for a matching composition.",
+  "metrics": {
+    "recall": 20.0,
+    "precision": 20.689655172413794,
+    "f1": 20.338983050847457,
+    "avg_log10_error": 0.022790641510599546,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 6,
+    "total_gt": 30,
+    "total_ex": 29
+  }
+}

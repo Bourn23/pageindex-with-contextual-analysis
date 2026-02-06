@@ -1,0 +1,903 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 124819,
+    "total_output_tokens": 16252,
+    "total_cost_usd": 0.1111655,
+    "call_counts": {
+      "gemini-3-flash-preview": 51
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_structure.json",
+  "extraction_stats": {
+    "total_nodes": 55,
+    "raw_extracted": 39,
+    "after_dedup": 28,
+    "time_elapsed": 323.01400923728943,
+    "valid_count": 28,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 8,
+      "medium": 20,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 22,
+      "cited": 0,
+      "inferred": 2
+    },
+    "from_text_nodes": 11,
+    "from_image_nodes": 19,
+    "final_count": 28
+  },
+  "material_count": 28,
+  "materials": [
+    {
+      "source_sentence_id": "0171, 0000, Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "unsubstituted"
+      },
+      "ionic_conductivity_S_per_cm": "0.7 mS cm-1",
+      "measurement_temperature": "room-temperature",
+      "reason": "Extracted from sentence 0171 which explicitly states the conductivity of the unsubstituted sample (Li6PS5Br) as 0.7 mS cm-1.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "unsubstituted sample ; Argyrodite-type solid electrolyte ; Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "Liquid-phase synthesis using ethanol as a solvent [Inferred]",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Ionic Conductivity Measurements and Initial Observations",
+        "section": "Ionic transport"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_enriched": true,
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 mS/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the table in the image which lists the ionic conductivity of Li6PS5Cl at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol as a solvent | Liquid-phase synthesis using ethanol as a solvent [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Document Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.31 mS/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the table in the image which lists the ionic conductivity of Li6PS5Br at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol as a solvent",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Document Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00031,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.0013 mS/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the table in the image which lists the ionic conductivity of Li6PS5I at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol as a solvent | Liquid-phase synthesis using ethanol as a solvent [Inferred]",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Document Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.3e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0171, Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.35P0.65Si0.35S5Br",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm-1",
+      "measurement_temperature": "room-temperature",
+      "reason": "Extracted from sentence 0171 which explicitly states the conductivity of Li6.35P0.65Si0.35S5Br as 2.4 mS cm-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Si4+ substituted argyrodite ; Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Ionic Conductivity Measurements and Initial Observations",
+        "section": "Ionic transport"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "_original_name": "Li6.35P0.65Si0.35S5Br",
+      "_norm_cond": 0.0024,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.175P0.825Si0.175S5Br",
+        "acronym": null,
+        "proportion": "x=0.175"
+      },
+      "ionic_conductivity_S_per_cm": "1.05e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the specialized Nyquist plot (c) showing the data fit for composition x=0.175 at T=298K.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6+xP1-xSixS5Br with x=0.175",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "_page_4_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.175P0.825Si0.175S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00105,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0060",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6+xP1-xSixS5X",
+        "acronym": null,
+        "proportion": "Si-doped"
+      },
+      "ionic_conductivity_S_per_cm": "> 2 mS cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted from sentence 0060 which explicitly states that the addition of Si4+ increases the conductivity to greater than 2 mS cm-1 for the argyrodite solid solution mentioned in sentence 0057.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li+ conducting argyrodites with substitution of P5+ with Si4+ ; Li+ conducting argyrodites with Si4+ substitution for P5+",
+      "processing_method": "solid solutions synthesis",
+      "source_node": {
+        "node_id": "0056",
+        "title": "Current Study: Approach and Key Findings",
+        "section": "1. Introduction"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6+xP1-xSixS5X",
+      "_original_name": "Li6+xP1-xSixS5X",
+      "_norm_cond": 0.002,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.35P0.65Si0.35S5Br",
+        "acronym": null,
+        "proportion": "x=0.35"
+      },
+      "ionic_conductivity_S_per_cm": "2.4 mS cm-1",
+      "measurement_temperature": "room-temperature",
+      "reason": "Extracted from sentence 0171 which explicitly states the conductivity of Li6.35P0.65Si0.35S5Br as 2.4 mS cm-1.",
+      "confidence": "high",
+      "data_source": "inferred",
+      "material_description": "Si4+ substituted argyrodite",
+      "processing_method": "Liquid-phase synthesis using ethanol as a solvent [Inferred]",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Ionic Conductivity Measurements and Initial Observations",
+        "section": "Ionic transport"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_enriched": true,
+      "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "_original_name": "Li6.35P0.65Si0.35S5Br"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introductory text discussing high-conductivity sulfide electrolytes.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0048",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introductory text discussing high-conductivity sulfide electrolytes.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0048",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_original_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_norm_cond": 0.025,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introductory text discussing argyrodite-type sulfide electrolytes.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0048",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.125P0.875Si0.125S5Br",
+        "acronym": null,
+        "proportion": "x=0.125"
+      },
+      "ionic_conductivity_S_per_cm": "1.23e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Nyquist plot (b) where the intercept on the Re(Z) axis for x=0.125 is approximately 320 Ohm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6+xP1-xSixS5Br with x=0.125",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "_page_4_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00123,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.25P0.75Si0.25S5Br",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "1.92e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Nyquist plot (b) where the intercept on the Re(Z) axis for x=0.25 is approximately 210 Ohm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6+xP1-xSixS5Br with x=0.25",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "_page_4_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00192,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Si0.5S5Br",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.95e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Nyquist plot (b) where the intercept on the Re(Z) axis for x=0.5 is approximately 140 Ohm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6+xP1-xSixS5Br with x=0.5",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "_page_4_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00295,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.025P0.975Si0.025S5Br",
+        "acronym": null,
+        "proportion": "x=0.025"
+      },
+      "ionic_conductivity_S_per_cm": "0.88 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.025.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.025P0.975Si0.025S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00088,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.05P0.95Si0.05S5Br",
+        "acronym": null,
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "0.43 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.05.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.05P0.95Si0.05S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00043,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.075P0.925Si0.075S5Br",
+        "acronym": null,
+        "proportion": "x=0.075"
+      },
+      "ionic_conductivity_S_per_cm": "0.87 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.075.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.075P0.925Si0.075S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00087,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.1P0.9Si0.1S5Br",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "0.8 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0008,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.117P0.883Si0.117S5Br",
+        "acronym": null,
+        "proportion": "x=0.117"
+      },
+      "ionic_conductivity_S_per_cm": "1.15 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x≈0.117.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.117P0.883Si0.117S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00115,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.175P0.825Si0.175S5Br",
+        "acronym": null,
+        "proportion": "x=0.175"
+      },
+      "ionic_conductivity_S_per_cm": "0.94 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.175.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.175P0.825Si0.175S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00094,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.225P0.775Si0.225S5Br",
+        "acronym": null,
+        "proportion": "x=0.225"
+      },
+      "ionic_conductivity_S_per_cm": "1.1 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.225.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.225P0.775Si0.225S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.25P0.75Si0.25S5Br",
+        "acronym": null,
+        "proportion": "x=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "1.42 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.25.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00142,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.3P0.7Si0.3S5Br",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.65 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.3.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.3P0.7Si0.3S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00165,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.5P0.5Si0.5S5Br",
+        "acronym": null,
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.22 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.5.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 38,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br",
+      "_norm_cond": 0.00222,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7P3S11",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.7 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introductory text discussing high-conductivity sulfide electrolytes.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0048",
+        "title": "Recovered Content",
+        "section": "1. Introduction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7P3S11",
+      "_original_name": "Li7P3S11"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.02e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from Nyquist plot (b) where the intercept on the Re(Z) axis for x=0 is approximately 390 Ohm, and assuming cell constant for calculation or directly related to the Arrhenius plot (a) at 1000/T ~ 3.35.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite Li6+xP1-xSixS5Br with x=0",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "_page_4_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6+xP1-xSixS5Br"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.125P0.875Si0.125S5Br",
+        "acronym": null,
+        "proportion": "x=0.125"
+      },
+      "ionic_conductivity_S_per_cm": "0.9 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.125.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_5.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.2P0.8Si0.2S5Br",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.7 mS cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Fig. 5a for x=0.2.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Silicon-doped argyrodite solid electrolyte Li6+xP1-xSixS5Br",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0187",
+        "title": "_page_5_Figure_5.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "_original_name": "Li6+xP1-xSixS5Br"
+    }
+  ]
+}

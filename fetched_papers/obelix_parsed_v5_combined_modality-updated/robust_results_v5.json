@@ -1,0 +1,90 @@
+{
+  "doc_name": "electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted",
+  "timestamp": "2026-01-28 13:54:27",
+  "execution_time_seconds": 23.14,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 17725,
+    "total_output_tokens": 1509,
+    "total_cost_usd": 0.0091,
+    "call_counts": {
+      "gemini-flash-latest": 1
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 3,
+    "skipped_images": 0,
+    "failed_items": 0,
+    "total_sections_processed": 1,
+    "total_images_processed": 0
+  },
+  "material_count": 3,
+  "measurements": [
+    {
+      "raw_composition": "Lil.2Feo.2Hft.s (PO4) 3",
+      "canonical_formula": "Lil.2Feo.2Hft.s (PO4) 3",
+      "material_definitions": [
+        "The electrical properties and the crystal structure were investigated for the ceramic electrolytes based on LiHf2(PO4)3.",
+        "The conductivity enhanced by the Li20 addition with LiHf2 (PO4) 3 system and by the increase of x for Li1+xMxHf2-x (PO4) 3 (M = Cr, Fe, Sc, In, Lu or Y) systems.",
+        "The P21/n monoclinic phase transformed to NASICON-type R3c rhombohedral phase at above 1173 K.",
+        "The activation energy for bulk component was 0.42 eV for the NASICON-type structure."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
+      "canonical_formula": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
+      "material_definitions": [
+        "The material system investigated is LiHf2(PO4)3 + yLi2O where y ranges from 0 to 0.4.",
+        "Li2O acts as a flux, helping to obtain high density pellets and decrease the porosity.",
+        "Sintering at or above 1293 K induces a phase transition from the monoclinic (P21/n) phase to the high-conductivity NASICON-type rhombohedral (R3c) phase.",
+        "The maximum conductivity was achieved for samples sintered around 1298 K."
+      ],
+      "raw_conductivity": "1.1e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00011,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li 1.2Feo.zHfl.8 (PO4) 3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8P3O12",
+      "material_definitions": [
+        "The electrical properties were studied for ceramic electrolytes based on LiHf2(PO4)3.",
+        "The materials are solid solutions of $Li_{1+x}M_xHf_{2-x}(PO_4)_3$ (M=Cr, Fe, Sc, In, Lu, or Y) sintered above 1293 K to achieve maximum conductivity and a NASICON-type structure.",
+        "The high density pellets were generally obtained by increasing x, except for M=Cr.",
+        "The conductivity enhancement is attributed to high densification and the decrease in the activation energy at the grain boundary.",
+        "The specific sample $Li_{1.2}Fe_{0.2}Hf_{1.8}(PO_4)_3$ corresponds to x=0.2 in the $M=Fe$ system and showed maximum conductivity."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

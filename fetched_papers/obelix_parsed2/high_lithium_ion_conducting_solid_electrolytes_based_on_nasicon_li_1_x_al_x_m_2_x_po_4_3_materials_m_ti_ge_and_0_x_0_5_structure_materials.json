@@ -1,0 +1,384 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 221453,
+    "total_output_tokens": 6171,
+    "total_cost_usd": 0.1292395,
+    "call_counts": {
+      "gemini-3-flash-preview": 18
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/high_lithium_ion_conducting_solid_electrolytes_based_on_nasicon_li_1_x_al_x_m_2_x_po_4_3_materials_m_ti_ge_and_0_x_0_5_structure.json",
+  "extraction_stats": {
+    "total_nodes": 107,
+    "raw_extracted": 16,
+    "after_dedup": 11,
+    "time_elapsed": 74.48736572265625,
+    "valid_count": 11,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 9,
+      "medium": 2,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 10,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 16,
+    "from_image_nodes": 0,
+    "final_count": 11
+  },
+  "material_count": 11,
+  "materials": [
+    {
+      "source_sentence_id": "0173, 0021, 0215",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-2.47 S cm^-1",
+      "measurement_temperature": "300K",
+      "reason": "Extracted bulk conductivity value for LATP from the log sigma value provided in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LATP displayed a higher 'bulk' conductivity than LAGP series ; LATP sample ; LATP samples",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0172",
+        "title": "Bulk Electrical Conductivity and Activation Energy",
+        "section": "3. Results"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.003388441567,
+      "_norm_temp": 26.850000000000023
+    },
+    {
+      "source_sentence_id": "0173, 0215",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ge1.5(PO4)3",
+        "acronym": "LAGP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-4.1 S cm^-1",
+      "measurement_temperature": "300K",
+      "reason": "Extracted bulk conductivity value for LAGP from the log sigma value provided in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LAGP samples",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0172",
+        "title": "Bulk Electrical Conductivity and Activation Energy",
+        "section": "3. Results"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_original_name": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_norm_cond": 7.94328234724282e-05,
+      "_norm_temp": 26.850000000000023
+    },
+    {
+      "source_sentence_id": "0186",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.4Al0.4Ti1.6(PO4)3",
+        "acronym": "LATP",
+        "proportion": "larger Al content"
+      },
+      "ionic_conductivity_S_per_cm": "10^-5.05 S cm^-1",
+      "measurement_temperature": "300K",
+      "reason": "Extracted grain boundary conductivity value for LTAP-04 at 300K from the log sigma value provided in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Samples with larger Al content",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Grain Boundary Electrical Conductivity Detailed Findings",
+        "section": "3. Results"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.4Al0.4Ti1.6(PO4)3",
+      "_original_name": "LTAP-04",
+      "_norm_cond": 8.9125e-06,
+      "_norm_temp": 26.850000000000023
+    },
+    {
+      "source_sentence_id": "0186",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ge1.5(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "larger Al content"
+      },
+      "ionic_conductivity_S_per_cm": "10^-4.91 S cm^-1",
+      "measurement_temperature": "300K",
+      "reason": "Extracted grain boundary conductivity value for LGAP-05 at 300K from the log sigma value provided in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Samples with larger Al content",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0184",
+        "title": "Grain Boundary Electrical Conductivity Detailed Findings",
+        "section": "3. Results"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_original_name": "LGAP-05",
+      "_norm_cond": 1.23026877081238e-05,
+      "_norm_temp": 26.850000000000023
+    },
+    {
+      "source_sentence_id": "0189",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Al0.2Ti1.8(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "10^-3 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted bulk conductivity value for LATP-02 from the Arrhenius plot in Figure 7a at approximately 1000/T = 3.35 K^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0188",
+        "title": "Figure 7: Bulk and Grain Boundary DC-Conductivities",
+        "section": "3. Results"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Al0.2Ti1.8(PO4)3",
+      "_original_name": "Li1+xAlxTi2-x(PO4)3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0189",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.4Al0.4Ti1.6(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "10^-3.5 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted bulk conductivity value for LATP-04 from the Arrhenius plot in Figure 7a at approximately 1000/T = 3.35 K^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0188",
+        "title": "Figure 7: Bulk and Grain Boundary DC-Conductivities",
+        "section": "3. Results"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.4Al0.4Ti1.6(PO4)3",
+      "_original_name": "Li1+xAlxTi2-x(PO4)3",
+      "_norm_cond": 0.000316227766016838,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0189",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.2Al0.2Ge1.8(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "10^-4 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted bulk conductivity value for LAGP-02 from the Arrhenius plot in Figure 7a at approximately 1000/T = 3.35 K^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0188",
+        "title": "Figure 7: Bulk and Grain Boundary DC-Conductivities",
+        "section": "3. Results"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.2Al0.2Ge1.8(PO4)3",
+      "_original_name": "Li1+xAlxGe2-x(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0189",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ge1.5(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "10^-4.5 S/cm",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted bulk conductivity value for LAGP-05 from the Arrhenius plot in Figure 7a at approximately 1000/T = 3.35 K^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0188",
+        "title": "Figure 7: Bulk and Grain Boundary DC-Conductivities",
+        "section": "3. Results"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_original_name": "Li1+xAlxGe2-x(PO4)3",
+      "_norm_cond": 3.162277e-05,
+      "_norm_temp": 24.850000000000023
+    },
+    {
+      "source_sentence_id": "0021",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ge1.5(PO4)3",
+        "acronym": "LAGP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted bulk conductivity for LAGP from the abstract text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LAGP sample",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0020",
+        "title": "Electrical Conductivity Results",
+        "section": "**Abstract**"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_original_name": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0247",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-4 S cm^-1",
+      "measurement_temperature": "175 K",
+      "reason": "The text mentions the real part of conductivity measured at 175 K for LATP-02 in Figure 9b. Based on the context of NASICON-type LATP materials at cryogenic temperatures (175 K), the bulk conductivity is typically in the 10^-4 S/cm range as shown in the referenced Arrhenius plots.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type lithium aluminum titanium phosphate with compositional heterogeneities producing zones with different Al content.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0242",
+        "title": "Origin and characteristics of two \"bulk\" conductivity responses",
+        "section": "4. Discussion"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -98.14999999999998
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "N/A",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻² S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted as a benchmark conductivity value for organic electrolytes mentioned in the context of comparing NASICON-type conductors.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0039",
+        "title": "Lithium-ion Batteries and NASICON Conductors",
+        "section": "**1. Introduction**"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "N/A",
+      "_original_name": "organic electrolytes",
+      "_norm_cond": 0.01,
+      "_norm_temp": null
+    }
+  ]
+}

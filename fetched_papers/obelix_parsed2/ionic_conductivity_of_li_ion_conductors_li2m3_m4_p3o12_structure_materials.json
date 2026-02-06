@@ -1,0 +1,729 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 84144,
+    "total_output_tokens": 10422,
+    "total_cost_usd": 0.07333799999999999,
+    "call_counts": {
+      "gemini-3-flash-preview": 39
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_structure.json",
+  "extraction_stats": {
+    "total_nodes": 41,
+    "raw_extracted": 31,
+    "after_dedup": 22,
+    "time_elapsed": 131.00884795188904,
+    "valid_count": 20,
+    "invalid_count": 2,
+    "by_confidence": {
+      "high": 1,
+      "medium": 18,
+      "low": 3
+    },
+    "by_source": {
+      "primary": 20,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 9,
+    "from_image_nodes": 19,
+    "final_count": 22
+  },
+  "material_count": 22,
+  "materials": [
+    {
+      "source_sentence_id": "0013",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.22 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "573 K",
+      "reason": "Extracted ionic conductivity value for Li2InTiP3O12 at 573 K from the abstract text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li2InTiP3O12 compound in a series under study",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0012",
+        "title": "Conductivity Results and Discussion",
+        "section": "Abstract"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 0.00122,
+      "_norm_temp": 299.85
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrTiP3O12",
+        "acronym": null,
+        "proportion": "M = Ti"
+      },
+      "ionic_conductivity_S_per_cm": "N/A (Plot represents hopping frequency log(ωp) vs 1000/T)",
+      "measurement_temperature": "377.4 K to 675.7 K",
+      "reason": "The plot displays the log of hopping frequency (log ωp) instead of ionic conductivity (σ). Values for σ cannot be directly extracted without additional constants.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Lithium chromium titanium phosphate based on formula Li2CrMP3O12",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0101",
+        "title": "_page_3_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrTiP3O12",
+      "_original_name": "Li2CrTiP3O12",
+      "_norm_cond": 0.0,
+      "_norm_temp": 402.55000000000007
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrZrP3O12",
+        "acronym": null,
+        "proportion": "M = Zr"
+      },
+      "ionic_conductivity_S_per_cm": "N/A (Plot represents hopping frequency log(ωp) vs 1000/T)",
+      "measurement_temperature": "377.4 K to 675.7 K",
+      "reason": "The plot displays the log of hopping frequency (log ωp) instead of ionic conductivity (σ). Values for σ cannot be directly extracted without additional constants.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Lithium chromium zirconium phosphate based on formula Li2CrMP3O12",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0101",
+        "title": "_page_3_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrZrP3O12",
+      "_original_name": "Li2CrZrP3O12",
+      "_norm_cond": 0.0,
+      "_norm_temp": 402.55000000000007
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_6.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrHfP3O12",
+        "acronym": null,
+        "proportion": "M = Hf"
+      },
+      "ionic_conductivity_S_per_cm": "N/A (Plot represents hopping frequency log(ωp) vs 1000/T)",
+      "measurement_temperature": "377.4 K to 675.7 K",
+      "reason": "The plot displays the log of hopping frequency (log ωp) instead of ionic conductivity (σ). Values for σ cannot be directly extracted without additional constants.",
+      "confidence": "low",
+      "data_source": "primary",
+      "material_description": "Lithium chromium hafnium phosphate based on formula Li2CrMP3O12",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0101",
+        "title": "_page_3_Figure_6.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrHfP3O12",
+      "_original_name": "Li2CrHfP3O12",
+      "_norm_cond": 0.0,
+      "_norm_temp": 402.55000000000007
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "100 °C",
+      "reason": "Extracted from the low-frequency plateau (DC conductivity region) for the 100 °C data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium indium titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0086",
+        "title": "_page_2_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~2.5 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "200 °C",
+      "reason": "Extracted from the low-frequency plateau (DC conductivity region) for the 200 °C data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium indium titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0086",
+        "title": "_page_2_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 0.00025,
+      "_norm_temp": 200
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.0 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted from the low-frequency plateau (DC conductivity region) for the 300 °C data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium indium titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0086",
+        "title": "_page_2_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 0.001,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~2.3 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "400 °C",
+      "reason": "Extracted from the low-frequency plateau (DC conductivity region) for the 400 °C data series.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium indium titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0086",
+        "title": "_page_2_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 0.0023,
+      "_norm_temp": 400
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrZrP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.11e-6 S cm^-1",
+      "measurement_temperature": "384.62 K",
+      "reason": "Point estimated from Zr series in plot (a) at 1000/T ≈ 2.6 K^-1; Log(σT) ≈ -2.8. σ = 10^-2.8 / 384.62.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Zr, Cr",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrZrP3O12",
+      "_original_name": "Li2CrZrP3O12",
+      "_norm_cond": 4.11e-06,
+      "_norm_temp": 111.47000000000003
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.26e-6 S cm^-1",
+      "measurement_temperature": "384.62 K",
+      "reason": "Point estimated from Ti series in plot (a) at 1000/T ≈ 2.6 K^-1; Log(σT) ≈ -2.9. σ = 10^-2.9 / 384.62.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Ti, Cr",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrTiP3O12",
+      "_original_name": "Li2CrTiP3O12",
+      "_norm_cond": 3.26e-06,
+      "_norm_temp": 111.47000000000003
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2CrHfP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.29e-6 S cm^-1",
+      "measurement_temperature": "384.62 K",
+      "reason": "Point estimated from Hf series in plot (a) at 1000/T ≈ 2.6 K^-1; Log(σT) ≈ -3.3. σ = 10^-3.3 / 384.62.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Hf, Cr",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2CrHfP3O12",
+      "_original_name": "Li2CrHfP3O12",
+      "_norm_cond": 1.29e-06,
+      "_norm_temp": 111.47000000000003
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InZrP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.01e-7 S cm^-1",
+      "measurement_temperature": "370.37 K",
+      "reason": "Point estimated from Zr series in plot (b) at 1000/T ≈ 2.7 K^-1; Log(σT) ≈ -3.95. σ = 10^-3.95 / 370.37.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Zr, In",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InZrP3O12",
+      "_original_name": "Li2InZrP3O12",
+      "_norm_cond": 3.01e-07,
+      "_norm_temp": 97.22000000000003
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.37e-7 S cm^-1",
+      "measurement_temperature": "416.67 K",
+      "reason": "Point estimated from Ti series in plot (b) at 1000/T ≈ 2.4 K^-1; Log(σT) ≈ -4.24. σ = 10^-4.24 / 416.67.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Ti, In",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InTiP3O12",
+      "_original_name": "Li2InTiP3O12",
+      "_norm_cond": 1.37e-07,
+      "_norm_temp": 143.52000000000004
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2InHfP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.33e-8 S cm^-1",
+      "measurement_temperature": "350.88 K",
+      "reason": "Point estimated from Hf series in plot (b) at 1000/T ≈ 2.85 K^-1; Log(σT) ≈ -4.93. σ = 10^-4.93 / 350.88.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type phosphate with M=Hf, In",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0062",
+        "title": "_page_2_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2InHfP3O12",
+      "_original_name": "Li2InHfP3O12",
+      "_norm_cond": 3.33e-08,
+      "_norm_temp": 77.73000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.7e-3 S cm^-1",
+      "measurement_temperature": "400°C",
+      "reason": "Extracted from the low-frequency plateau value for the 400°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 0.0017,
+      "_norm_temp": 400
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-4 S cm^-1",
+      "measurement_temperature": "300°C",
+      "reason": "Extracted from the low-frequency plateau value for the 300°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 0.0004,
+      "_norm_temp": 300
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5e-4 S cm^-1",
+      "measurement_temperature": "250°C",
+      "reason": "Extracted from the low-frequency plateau value for the 250°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 0.00015,
+      "_norm_temp": 250
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-5 S cm^-1",
+      "measurement_temperature": "200°C",
+      "reason": "Extracted from the low-frequency plateau value for the 200°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 3.5e-05,
+      "_norm_temp": 200
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0e-6 S cm^-1",
+      "measurement_temperature": "150°C",
+      "reason": "Extracted from the low-frequency plateau value for the 150°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 7e-06,
+      "_norm_temp": 150
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_2_Figure_8.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2FeTiP3O12",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-6 S cm^-1",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the low-frequency plateau value for the 100°C series in the frequency-dependent conductivity plot.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium iron titanium phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0085",
+        "title": "_page_2_Figure_8.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2FeTiP3O12",
+      "_original_name": "Li2FeTiP3O12",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0103",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "NaAl11O17",
+        "acronym": "Na β-alumina",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5 X 10⁻¹⁴ Ω⁻¹ cm⁻¹ Hz⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted cited conductivity-related constant K for Na beta-alumina from the text comparing it to the studied materials.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0093",
+        "title": "Attempt Frequency and Mobile Ion Concentration",
+        "section": "3.2. *Conductivity measurements*"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.50e-14 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "NaAl11O17",
+      "_original_name": "NaAl11O17",
+      "_norm_cond": 1.5e-14,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0103",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiGaO2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻¹⁴ Ω⁻¹ cm⁻¹ Hz⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted cited conductivity-related constant K for LiGaO2 from the text comparing it to the studied materials.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0093",
+        "title": "Attempt Frequency and Mobile Ion Concentration",
+        "section": "3.2. *Conductivity measurements*"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 1.00e-14 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiGaO2",
+      "_original_name": "LiGaO2",
+      "_norm_cond": 1e-14,
+      "_norm_temp": null
+    }
+  ]
+}

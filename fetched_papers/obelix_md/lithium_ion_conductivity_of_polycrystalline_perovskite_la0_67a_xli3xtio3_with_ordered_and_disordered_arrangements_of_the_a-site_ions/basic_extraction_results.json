@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 39.86685490608215,
+    "images_attached": 8,
+    "input_token_count": 15717,
+    "output_token_count": 1022
+  },
+  "data": [
+    {
+      "composition": "La0.55Li0.36TiO3",
+      "ionic_conductivity_value": "1.53e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Table 1"
+    },
+    {
+      "composition": "La0.55Li0.36TiO3",
+      "ionic_conductivity_value": "6.88e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Table 1"
+    },
+    {
+      "composition": "La0.61Li0.18TiO3",
+      "ionic_conductivity_value": "1.58e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (quenched)"
+    },
+    {
+      "composition": "La0.58Li0.27TiO3",
+      "ionic_conductivity_value": "7.59e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (quenched)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "1.29e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (quenched)"
+    },
+    {
+      "composition": "La0.54Li0.39TiO3",
+      "ionic_conductivity_value": "1.20e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (quenched)"
+    },
+    {
+      "composition": "La0.52Li0.45TiO3",
+      "ionic_conductivity_value": "7.41e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (quenched)"
+    },
+    {
+      "composition": "La0.61Li0.18TiO3",
+      "ionic_conductivity_value": "3.80e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (annealed)"
+    },
+    {
+      "composition": "La0.58Li0.27TiO3",
+      "ionic_conductivity_value": "5.25e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (annealed)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "6.31e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (annealed)"
+    },
+    {
+      "composition": "La0.54Li0.39TiO3",
+      "ionic_conductivity_value": "6.03e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (annealed)"
+    },
+    {
+      "composition": "La0.52Li0.45TiO3",
+      "ionic_conductivity_value": "4.17e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 3 (annealed)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "1.26e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (1st cycle, quenched)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "6.31e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (1st cycle, annealed)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "1.32e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (2nd cycle, quenched)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "6.31e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (2nd cycle, annealed)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "1.32e-03",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (3rd cycle, quenched)"
+    },
+    {
+      "composition": "La0.56Li0.33TiO3",
+      "ionic_conductivity_value": "6.31e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "25 C",
+      "source": "Figure 4 (3rd cycle, annealed)"
+    }
+  ]
+}

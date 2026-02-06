@@ -54,6 +54,9 @@ def fetch_with_pypaperbot(doi, output_dir):
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True)
     
+    # Get initial file count/list to check for new files
+    initial_files = set(output_dir.glob("*.pdf"))
+    
     try:
         # Run PyPaperBot as a subprocess to keep it simple
         cmd = [
@@ -62,8 +65,19 @@ def fetch_with_pypaperbot(doi, output_dir):
             f"--dwn-dir={output_dir}"
         ]
         subprocess.run(cmd, check=True)
-        print(f"[++] PyPaperBot finished processing {doi}")
-        return True
+        
+        # Check if a new PDF was downloaded
+        final_files = set(output_dir.glob("*.pdf"))
+        new_files = final_files - initial_files
+        
+        if new_files:
+            print(f"[++] PyPaperBot downloaded: {[f.name for f in new_files]}")
+            return True
+        else:
+            # Check if it was already there (some tools might skip)
+            # But usually we want to see it specifically for this DOI
+            print(f"[-] PyPaperBot finished but no new PDF found in {output_dir}")
+            return False
     except Exception as e:
         print(f"[!] PyPaperBot error: {e}")
         return False
@@ -72,7 +86,7 @@ def main():
     parser = argparse.ArgumentParser(description="Fetch scientific papers by DOI.")
     parser.add_argument("doi", help="The DOI to fetch")
     parser.add_argument("--email", default="user@example.com", help="Email for unpywall (required)")
-    parser.add_argument("--output", default="fetched_papers", help="Output directory")
+    parser.add_argument("--output", default="fetched_papers/obelix_pdf3", help="Output directory")
     parser.add_argument("--method", choices=["unpywall", "pypaperbot", "both"], default="both", help="Fetch method")
     
     args = parser.parse_args()
@@ -86,8 +100,10 @@ def main():
         
     if success:
         print(f"[***] Search complete for {args.doi}")
+        sys.exit(0)
     else:
         print(f"[!!!] Failed to fetch {args.doi} with available methods.")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

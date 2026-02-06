@@ -1,0 +1,45 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-79",
+      "extracted_id": null,
+      "reason": "The ground truth material (La1.28Li0.16Ti2.0O6.0, equivalent to La(2/3-x)Li(3x)TiO3 with x=0.0266...) does not have a direct stoichiometric match in the extracted data. Extracted entries EX-0 to EX-4 are different chemical compositions (LiPSCl family). Extracted entries EX-5 and EX-6 are La(2/3-x)Li(3x)TiO3 but with x=0.13, which is a different specific composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-80",
+      "extracted_id": null,
+      "reason": "The ground truth material (La1.24Li0.28Ti2.0O6.0, equivalent to La(2/3-x)Li(3x)TiO3 with x=0.0466...) does not have a direct stoichiometric match in the extracted data. Extracted entries EX-0 to EX-4 are different chemical compositions (LiPSCl family). Extracted entries EX-5 and EX-6 are La(2/3-x)Li(3x)TiO3 but with x=0.13, which is a different specific composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-81",
+      "extracted_id": null,
+      "reason": "The ground truth material (La1.19Li0.43Ti2.0O6.0, equivalent to La(2/3-x)Li(3x)TiO3 with x=0.0716...) does not have a direct stoichiometric match in the extracted data. Extracted entries EX-0 to EX-4 are different chemical compositions (LiPSCl family). Extracted entries EX-5 and EX-6 are La(2/3-x)Li(3x)TiO3 but with x=0.13, which is a different specific composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-157",
+      "extracted_id": null,
+      "reason": "The ground truth material (La1.13Li0.61Ti2.0O6.0, equivalent to La(2/3-x)Li(3x)TiO3 with x=0.1016...) does not have a direct stoichiometric match in the extracted data. Extracted entries EX-0 to EX-4 are different chemical compositions (LiPSCl family). Extracted entries EX-5 and EX-6 are La(2/3-x)Li(3x)TiO3 but with x=0.13, which is a different specific composition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-158",
+      "extracted_id": null,
+      "reason": "The ground truth material (La1.0Li1.0Ti2.0O6.0, equivalent to La(2/3-x)Li(3x)TiO3 with x=0.1666...) does not have a direct stoichiometric match in the extracted data. Extracted entries EX-0 to EX-4 are different chemical compositions (LiPSCl family). Extracted entries EX-5 and EX-6 are La(2/3-x)Li(3x)TiO3 but with x=0.13, which is a different specific composition.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "No direct matches were found between the Ground Truth and Extracted Data. The Ground Truth entries are a series of La-Li-Ti-O compounds with varying stoichiometries. The Extracted Data contains LiPSCl compounds (EX-0 to EX-4) which are chemically distinct, and a single La-Li-Ti-O composition (EX-5, EX-6) with x=0.13, which does not exactly match any of the specific x-values present in the Ground Truth series.",
+  "metrics": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "f1": 0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 5,
+    "total_ex": 7
+  }
+}

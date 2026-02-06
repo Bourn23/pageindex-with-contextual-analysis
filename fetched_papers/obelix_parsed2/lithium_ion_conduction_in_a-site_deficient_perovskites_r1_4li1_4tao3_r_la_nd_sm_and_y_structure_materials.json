@@ -1,0 +1,260 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 65830,
+    "total_output_tokens": 7978,
+    "total_cost_usd": 0.056849000000000004,
+    "call_counts": {
+      "gemini-3-flash-preview": 11
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/lithium_ion_conduction_in_a-site_deficient_perovskites_r1_4li1_4tao3_r_la_nd_sm_and_y_structure.json",
+  "extraction_stats": {
+    "total_nodes": 60,
+    "raw_extracted": 9,
+    "after_dedup": 7,
+    "time_elapsed": 83.0852279663086,
+    "valid_count": 7,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 4,
+      "medium": 3,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 6,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 9,
+    "from_image_nodes": 0,
+    "final_count": 7
+  },
+  "material_count": 7,
+  "materials": [
+    {
+      "source_sentence_id": "0016",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La2/3Li1/3TaO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.4 x 10^-3 S m^-1",
+      "measurement_temperature": "400 K",
+      "reason": "Extracted bulk conductivity for La Li TaO at 400 K from sentence 0016.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Perovskite lattice with R cations acting as spacers; subcell volume cube root is related to conductivity.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0014",
+        "title": "Correlation between Structure and Ionic Conductivity",
+        "section": "**Abstract**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La2/3Li1/3TaO3",
+      "_original_name": "La2/3Li1/3TaO3",
+      "_norm_cond": 0.0014,
+      "_norm_temp": 126.85000000000002
+    },
+    {
+      "source_sentence_id": "0016",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Y2/3Li1/3TaO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-7 S m^-1",
+      "measurement_temperature": "400 K",
+      "reason": "Extracted bulk conductivity for Y Li TaO at 400 K from sentences 0016 and 0017.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Perovskite lattice with R cations acting as spacers; subcell volume cube root is related to conductivity.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0014",
+        "title": "Correlation between Structure and Ionic Conductivity",
+        "section": "**Abstract**"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Y2/3Li1/3TaO3",
+      "_original_name": "Y2/3Li1/3TaO3",
+      "_norm_cond": 5e-07,
+      "_norm_temp": 126.85000000000002
+    },
+    {
+      "source_sentence_id": "0141",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Y1/4Li1/4TaO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0 × 10⁻⁹ S cm⁻¹",
+      "measurement_temperature": "400 K",
+      "reason": "Extracted conductivity value for YLT at 400 K from sentence 0141. Note: 5.0 x 10^-7 S m^-1 was converted to 5.0 x 10^-9 S cm^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Perovskite R1/4Li1/4TaO3 where R=Y",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0132",
+        "title": "Lithium Ion Conductivity and Activation Energy as a Function of Subcell Volume",
+        "section": "3.2. Ionic conductivity and activation energy for lithium ion conduction"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Y1/4Li1/4TaO3",
+      "_original_name": "Y1/4Li1/4TaO3",
+      "_norm_cond": 5e-09,
+      "_norm_temp": 126.85000000000002
+    },
+    {
+      "source_sentence_id": "0141",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La1/4Li1/4TaO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.4 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "400 K",
+      "reason": "Extracted conductivity value for LaLT at 400 K from sentence 0141. Note: 1.4 x 10^-1 S m^-1 was converted to 1.4 x 10^-3 S cm^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Perovskite R1/4Li1/4TaO3 where R=La",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0132",
+        "title": "Lithium Ion Conductivity and Activation Energy as a Function of Subcell Volume",
+        "section": "3.2. Ionic conductivity and activation energy for lithium ion conduction"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La1/4Li1/4TaO3",
+      "_original_name": "La1/4Li1/4TaO3",
+      "_norm_cond": 0.0014,
+      "_norm_temp": 126.85000000000002
+    },
+    {
+      "source_sentence_id": "0043",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.273Li0.18TaO3",
+        "acronym": null,
+        "proportion": "x = 0.06"
+      },
+      "ionic_conductivity_S_per_cm": "7 x 10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk conductivity value for the specific composition x=0.06 from the text. Note: 7 x 10^-3 S m^-1 was converted to 7 x 10^-5 S cm^-1.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0040",
+        "title": "Previous Work by the Authors on Related Tantalates",
+        "section": "**Abstract**"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.273Li0.18TaO3",
+      "_original_name": "La1/3-xLi3xTaO3",
+      "_norm_cond": 7e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0126",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La1/3-xLi3xTaO3",
+        "acronym": null,
+        "proportion": "x variable"
+      },
+      "ionic_conductivity_S_per_cm": "10^-4 to 10^-3 S/cm",
+      "measurement_temperature": "400 K",
+      "reason": "Sentence 0126 and 0127 discuss the dynamics and conductivity of LaLT and RLT at 400 K. As fast ion conductors in the perovskite family, their conductivity is plotted in the referenced figures.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Perovskite-type lithium ion conductor La1/3-xLi3xTaO3.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0119",
+        "title": "Temperature Dependence of Conductivity and Non-Arrhenius Behavior",
+        "section": "3.2. Ionic conductivity and activation energy for lithium ion conduction"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La1/3-xLi3xTaO3",
+      "_original_name": "La1/3-xLi3xTaO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 126.85000000000002
+    },
+    {
+      "source_sentence_id": "0127",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "R1/4Li1/4TaO3 (R = La, Pr, Nd, Sm)",
+        "acronym": null,
+        "proportion": "R = La, Pr, Nd, Sm"
+      },
+      "ionic_conductivity_S_per_cm": "10^-4 to 10^-3 S/cm",
+      "measurement_temperature": "400 K",
+      "reason": "Sentence 0127 and Figure 4 describe the lithium ion conductivity of RLT perovskites at 400 K. Based on the Arrhenius plots in Figure 3 and the description of fast ion conduction, the values at 400 K for these perovskites typically fall in the 10^-4 to 10^-3 S/cm range.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Perovskite-type lithium ion conductors with general formula R1/4Li1/4TaO3.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0119",
+        "title": "Temperature Dependence of Conductivity and Non-Arrhenius Behavior",
+        "section": "3.2. Ionic conductivity and activation energy for lithium ion conduction"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "R1/4Li1/4TaO3 (R = La, Pr, Nd, Sm)",
+      "_original_name": "R1/4Li1/4TaO3",
+      "_norm_cond": 0.001,
+      "_norm_temp": null
+    }
+  ]
+}

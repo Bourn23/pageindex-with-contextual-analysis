@@ -1,0 +1,240 @@
+{
+  "doc_name": "ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate",
+  "timestamp": "2026-01-23 11:39:20",
+  "execution_time_seconds": 75.71,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 14902,
+    "total_output_tokens": 14462,
+    "total_cost_usd": 0.048,
+    "call_counts": {
+      "gemini-flash-latest": 6,
+      "gemini-3-flash-preview": 6
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 12,
+    "skipped_images": 8,
+    "failed_items": 6,
+    "total_sections_processed": 8,
+    "total_images_processed": 11
+  },
+  "material_count": 12,
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid electrolytes based on lithium titanium phosphate were prepared.",
+        "The conductivity was increased by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with M3+ (M3+ = Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+) and Si4+ ions, respectively.",
+        "The systems investigated are Li(1+x)Ti2SizP(3-x)O12 and Li(1+x)MxTi(2-x)(PO4)3.",
+        "The conductivity enhancement is attributed to the increase of the sintered pellet density with the enhancement of the lithium concentration at the grain boundaries."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid electrolytes based on lithium titanium phosphate were prepared.",
+        "The conductivity was increased by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with M3+ (M3+ = Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+) and Si4+ ions, respectively.",
+        "The systems investigated are Li(1+x)Ti2SizP(3-x)O12 and Li(1+x)MxTi(2-x)(PO4)3.",
+        "The conductivity enhancement is attributed to the increase of the sintered pellet density with the enhancement of the lithium concentration at the grain boundaries."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3M0.3Ti1.7(PO4)3 (M = Al or Sc)",
+      "canonical_formula": "Li1.3M0.3Ti1.7(PO4)3 (M = Al or Sc)",
+      "material_definitions": [
+        "LiTi2(PO4)3 served as the base material but showed poor ionic conductivity and high porosity in the sintered pellets.",
+        "The partial substitution of the P5+ site with Si4+ or of the Ti4+ site with M3+ in the LiTi2(PO4)3 system was very effective for the enhancement of the conductivity.",
+        "Mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3 is also successful in obtaining a high conductivity lithium ionic conductor.",
+        "The conductivity enhancement by the substitution or the binder addition resulted mainly from the densification of the sintered pellets and the increase of the lithium content at the grain boundaries."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "Solid solutions with the general formula Li1+xMxTi2-x(PO4)3 where M is a trivalent metal ion (Al, Cr, Ga, Fe, Sc, In, Y, La).",
+        "These materials possess a NASICON-type crystal structure.",
+        "The substitution of Ti4+ by M3+ and the introduction of extra Li+ ions influence the ionic conductivity.",
+        "Samples were synthesized and sintered at 1173 K for 2 hours."
+      ],
+      "raw_conductivity": "-5.6",
+      "raw_conductivity_unit": "Log (S cm-1)",
+      "normalized_conductivity": 8.429149099025444e-09,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x=0.3, M=Sc",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions with the general formula Li1+xMxTi2-x(PO4)3 where M is a trivalent metal ion (Al, Cr, Ga, Fe, Sc, In, Y, La).",
+        "These materials possess a NASICON-type crystal structure.",
+        "The substitution of Ti4+ by M3+ and the introduction of extra Li+ ions influence the ionic conductivity.",
+        "Samples were synthesized and sintered at 1173 K for 2 hours."
+      ],
+      "raw_conductivity": "-3.2",
+      "raw_conductivity_unit": "Log (S cm-1)",
+      "normalized_conductivity": 2.1173065251013186e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3, M=Al",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solutions with the general formula Li1+xMxTi2-x(PO4)3 where M is a trivalent metal ion (Al, Cr, Ga, Fe, Sc, In, Y, La).",
+        "These materials possess a NASICON-type crystal structure.",
+        "The substitution of Ti4+ by M3+ and the introduction of extra Li+ ions influence the ionic conductivity.",
+        "Samples were synthesized and sintered at 1173 K for 2 hours."
+      ],
+      "raw_conductivity": "-3.3",
+      "raw_conductivity_unit": "Log (S cm-1)",
+      "normalized_conductivity": 1.6818363544539346e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.5, M=Cr",
+      "canonical_formula": "Li1.5Cr0.5Ti1.5(PO4)3",
+      "material_definitions": [
+        "Solid solutions with the general formula Li1+xMxTi2-x(PO4)3 where M is a trivalent metal ion (Al, Cr, Ga, Fe, Sc, In, Y, La).",
+        "These materials possess a NASICON-type crystal structure.",
+        "The substitution of Ti4+ by M3+ and the introduction of extra Li+ ions influence the ionic conductivity.",
+        "Samples were synthesized and sintered at 1173 K for 2 hours."
+      ],
+      "raw_conductivity": "-3.5",
+      "raw_conductivity_unit": "Log (S cm-1)",
+      "normalized_conductivity": 1.061167000056503e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2, M=La",
+      "canonical_formula": "Li1.2La0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "Solid solutions with the general formula Li1+xMxTi2-x(PO4)3 where M is a trivalent metal ion (Al, Cr, Ga, Fe, Sc, In, Y, La).",
+        "These materials possess a NASICON-type crystal structure.",
+        "The substitution of Ti4+ by M3+ and the introduction of extra Li+ ions influence the ionic conductivity.",
+        "Samples were synthesized and sintered at 1173 K for 2 hours."
+      ],
+      "raw_conductivity": "-4.1",
+      "raw_conductivity_unit": "Log (S cm-1)",
+      "normalized_conductivity": 2.6655309890076584e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li1+xMxTi2-x(PO4)3) at x=0.2",
+      "canonical_formula": "Li1.2M0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "Solid solution series of Li(1+x)MxTi(2-x)(PO4)3 where M is a trivalent metal.",
+        "Sintered pellets of the single-phase lithium titanium phosphate.",
+        "Measurement for composition with x=0.2."
+      ],
+      "raw_conductivity": "10^-3.1",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li1+xMxTi2-x(PO4)3) at x=0.3",
+      "canonical_formula": "Li1.3M0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solution series of Li(1+x)MxTi(2-x)(PO4)3 where M is a trivalent metal.",
+        "Sintered pellets of the single-phase lithium titanium phosphate.",
+        "Measurement for composition with x=0.3."
+      ],
+      "raw_conductivity": "10^-3.2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "mixed phase [LiTi2(PO4)3 + Li3M2(PO4)3]",
+      "canonical_formula": "mixed phase [LiTi2(PO4)3 + Li3M2(PO4)3]",
+      "material_definitions": [
+        "A composite material consisting of a mixed phase of LiTi2(PO4)3 and Li3M2(PO4)3.",
+        "Experimental samples prepared as sintered pellets."
+      ],
+      "raw_conductivity": "10^-3.3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "Base compound lithium titanium phosphate LiTi2(PO4)3.",
+        "Sintered pellet used as a reference material."
+      ],
+      "raw_conductivity": "10^-5.4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

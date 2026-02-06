@@ -1,0 +1,280 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_pipeline_20260114_155517.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: ORIGINAL PAPER
+  -> Started Section: Abstract / Introduction
+  -> Started Section: Introduction
+  -> Started Section: **Experimental description**
+  -> Started Section: **Results and discussion**
+  -> Started Section: Electrical properties
+  -> Started Section: **Conclusion**
+  -> Started Section: References
+  ✓ Finished Section: ORIGINAL PAPER
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: **Conclusion**
+  ✓ Finished Section: **Experimental description**
+  ✓ Finished Section: Introduction
+⚠️ Warning: LLM dropped sentences [71] in 'Electrical properties'. Auto-recovering...
+  ✓ Finished Section: References
+  🔍 Checking placeholder: '__IMG_d54b211c__'
+  ✅ Found Special Node: __IMG_d54b211c__
+  ✓ Finished Section: **Results and discussion**
+  🔍 Checking placeholder: '__TBL_ce79ba0e__'
+  ✅ Found Special Node: __TBL_ce79ba0e__
+  🔍 Checking placeholder: '__IMG_dceaaac4__'
+  ✅ Found Special Node: __IMG_dceaaac4__
+  🔍 Checking placeholder: '__IMG_ccdf40f9__'
+  ✅ Found Special Node: __IMG_ccdf40f9__
+  🔍 Checking placeholder: '__IMG_6540cbd0__'
+  ✅ Found Special Node: __IMG_6540cbd0__
+  🔍 Checking placeholder: '__TBL_dcbd79fc__'
+  ✅ Found Special Node: __TBL_dcbd79fc__
+  🔍 Checking placeholder: '__IMG_872e8e99__'
+  ✅ Found Special Node: __IMG_872e8e99__
+  🔍 Checking placeholder: '__IMG_e470fe63__'
+  ✅ Found Special Node: __IMG_e470fe63__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: Electrical properties
+  ✓ Re-indexed 205 structural nodes.
+  ✓ Mapped 225 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 45 text nodes and 6 image nodes.
+
+[Stage 2] Extracting from 45 relevant nodes...
+  [1/45] ○ Watanabe H, Kuwano J (1997)... (0 data points)
+  [2/45] ○ Authors... (0 data points)
+  [3/45] ○ Orrantia AM et al. (2003)... (0 data points)
+  [4/45] ○ Moreno L et al. (1998)... (0 data points)
+  [5/45] ○ Reference to Unit-cell Parameters and Impedance Di... (0 data points)
+  [6/45] ○ Harada Y et al. (1999)... (0 data points)
+  [7/45] ○ Publication Information... (0 data points)
+  [8/45] ○ Cyclic Voltammetry Analysis and Sample Decompositi... (0 data points)
+  [9/45] ○ Mizumoto K, Hayashi S (1999)... (0 data points)
+  [10/45] ✓ Reference to Arrhenius Plot... (1 data points)
+  [11/45] ○ He LX, Yoo HI (2003)... (0 data points)
+  [12/45] ○ Keywords... (0 data points)
+  [13/45] ○ Morata-Orrantia A et al. (2002)... (0 data points)
+  [14/45] ○ Further Analysis of Cyclic Voltammetry... (0 data points)
+  [15/45] ✓ Bulk Conductivity and Arrhenius Analysis... (2 data points)
+  [16/45] ✓ Abstract Body... (1 data points)
+  [17/45] ○ Stramare S et al. (2003)... (0 data points)
+  [18/45] ○ Prior Research on Conductivity Enhancement... (0 data points)
+  [19/45] ○ Katsumata T et al. (1998)... (0 data points)
+  [20/45] ✓ Effect of Fluorine Doping on Conductivity and Stab... (2 data points)
+  [21/45] ✓ Introduction to LLT... (1 data points)
+  [22/45] ○ Factors Affecting Conductivity: Bottleneck Size... (0 data points)
+  [23/45] ○ Factors Influencing Ionic Conductivity in LLT... (0 data points)
+  [24/45] ○ Belous A et al. (2004)... (0 data points)
+  [25/45] ✓ References to Bulk Conductivity Table and DC Polar... (2 data points)
+  [26/45] ○ Factors Affecting Conductivity: Bond Strength (Al ... (0 data points)
+  [27/45] ○ Bohnke O (2004)... (0 data points)
+  [28/45] ○ Factors Affecting Conductivity: Bond Strength (F S... (0 data points)
+  [29/45] ○ Current Study's Objective and Methods... (0 data points)
+  [30/45] ○ Sample Synthesis and Preparation... (0 data points)
+  [31/45] ○ Summary of Conductivity Fluctuation Factors... (0 data points)
+  [32/45] ○ Crystal Structure Characterization... (0 data points)
+  [33/45] ○ Recovered Content... (0 data points)
+  [34/45] ○ Electrical Conductivity Measurement... (0 data points)
+  [35/45] ✓ Ionic Conductivity Fluctuation with Y Value... (2 data points)
+  [36/45] ○ Decomposing Voltage Measurement... (0 data points)
+  [37/45] ○ Electrochemical Measurement Equipment... (0 data points)
+  [38/45] ○ Inaguma Y et al. (1993)... (0 data points)
+  [39/45] ○ X-ray Diffraction Analysis and Superstructure... (0 data points)
+  [40/45] ○ Itoh M et al. (1994)... (0 data points)
+  [41/45] ○ Skakle JMS et al. (1995)... (0 data points)
+  [42/45] ○ Morales M, West AR (1996)... (0 data points)
+  [43/45] ✓ Conclusion... (1 data points)
+  [44/45] ○ Unit-Cell Parameters and Volume Variation... (0 data points)
+  [45/45] ○ Impedance Measurement and Analysis... (0 data points)
+  → 12 total data points extracted
+
+[Stage 2b] Processing 6 images directly...
+    Warning: Skipping missing image _page_3_Figure_1.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_1_Figure_7.jpeg
+    Warning: Skipping missing image _page_3_Figure_6.jpeg
+    Warning: Skipping missing image _page_2_Figure_1.jpeg
+    Warning: Skipping missing image _page_2_Figure_6.jpeg
+
+Merging: 12 text-based + 0 image-based points.
+  → Running physical heuristic checks on 12 points...
+  → Running LLM semantic verification on 12 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 14 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: ORIGINAL PAPER
+
+Material Names Found (with proportions where applicable):
+- "Li0.34La0.51TiO2.94"
+- "Li3x-0.02La0.67-xTiO2.98F0.02"
+- "Li3x-0.02La0.67-xTiO2.98F0.02 (x=0.11)"
+- "Li3x-0.02La0.67-xTiO2.98F0.02 (x=0.12)"
+- "Li3xLa0.67-xTi1-yAlyO3-yFy (x=0.11)"
+- "Li3xLa2/3-x-1/3-2xTi1-yAlyO3-yFy (x=0.11)"
+- "Li3xLa2/3-x1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.02)"
+- "Li3xLa2/3-xcl/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.02)"
+- "Li3xLa2/3-x┱1/3-2xTiO3 (x≈0.10)"
+- "Li3xLa2/3-x□1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0)"
+- "Li3xLa2/3-x□1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.07)"
+- "Perovskite-structured phase (y=0.02)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li0.34La0.51TiO2.94', canonical_name='Lithium Lanthanum Titanium Oxide', abbreviation=None, variant_names=['Li0.34La0.51TiO2.94']), CanonicalMaterialName(canonical_formula='Li0.31La0.56TiO2.98F0.02', canonical_name='Lithium Lanthanum Titanium Oxide Fluoride', abbreviation=None, variant_names=['Li3x-0.02La0.67-xTiO2.98F0.02 (x=0.11)']), CanonicalMaterialName(canonical_formula='Li0.34La0.55TiO2.98F0.02', canonical_name='Lithium Lanthanum Titanium Oxide Fluoride', abbreviation=None, variant_names=['Li3x-0.02La0.67-xTiO2.98F0.02 (x=0.12)']), CanonicalMaterialName(canonical_formula='Li0.33La0.56Ti0.98Al0.02O2.98F0.02', canonical_name='Lithium Lanthanum Titanium Aluminum Oxide Fluoride', abbreviation=None, variant_names=['Li3xLa2/3-x1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.02)', 'Li3xLa2/3-xcl/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.02)', 'Perovskite-structured phase (y=0.02)']), CanonicalMaterialName(canonical_formula='Li0.33La0.56TiO3', canonical_name='Lithium Lanthanum Titanium Oxide', abbreviation='LLTO', variant_names=['Li3xLa2/3-x□1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0)']), CanonicalMaterialName(canonical_formula='Li0.33La0.56Ti0.93Al0.07O2.93F0.07', canonical_name='Lithium Lanthanum Titanium Aluminum Oxide Fluoride', abbreviation=None, variant_names=['Li3xLa2/3-x□1/3-2xTi1-yAlyO3-yFy (x=0.11, y=0.07)']), CanonicalMaterialName(canonical_formula='Li0.3La0.566TiO3', canonical_name='Lithium Lanthanum Titanium Oxide', abbreviation='LLTO', variant_names=['Li3xLa2/3-x┱1/3-2xTiO3 (x≈0.10)'])]
+  → Created 7 canonical material(s)
+  → Updated 9/12 material names
+  → Normalizing 12 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='1.06 × 10⁻³ S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00106, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.06 × 10⁻³ S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.00106, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.17 × 10⁻⁴ S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.000317, 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻⁴ S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='~1.06 × 10⁻³ S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.00106, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 !7 10⁻³ S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 25, 'cond_value': 0.001, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-3 S cm^-1', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.001}
+    [DEBUG Norm] Input: Cond='1.06 × 10⁻³ S/cm', Temp='RT'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0.00106}
+    [DEBUG Norm] Input: Cond='peak value (numerical value not in text)', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': None, 'cond_value': 0, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': None, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+
+[Stage 3] Deduplicating 12 data points...
+  → Merged 2 duplicates, 10 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         14
+Total Input:         54,922 tokens
+Total Output:        4,904 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0422
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 14 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure_materials.json
+Time elapsed (s)  60.5508017539978
+
+Statistics:
+  Nodes analyzed: 51
+  Raw data points: 12
+  After dedup: 6
+  Valid: 6, Invalid: 0
+
+By Confidence:
+  high: 4
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 4
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ LLTO-Al-F: 1.0 x 10^-3 S cm^-1 @ 25°C [high]
+  ✓ Li0.33La0.56Ti0.98Al0.02O2.98F0.02: 1.06 × 10⁻³ S/cm @ RT [high]
+  ✓ Li0.31La0.56TiO2.98F0.02: 3.17 × 10⁻⁴ S/cm @ RT [high]
+  ✓ F-doped solid solution: 10⁻⁴ S/cm @ RT [high]
+  ✓ Li0.34La0.51TiO2.94: ~1.06 × 10⁻³ S/cm @ RT [medium]
+  ... and 1 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1007/s11581-006-0011-9
+                            Composition  Ionic conductivity (S cm-1)
+148  Li0.66La1.12Ti1.98Al0.02O5.98F0.02                     0.000980
+149  Li0.66La1.12Ti1.96Al0.04O5.96F0.04                     0.001060
+150  Li0.66La1.12Ti1.94Al0.06O5.94F0.06                     0.000928
+151  Li0.66La1.12Ti1.92Al0.08O5.92F0.08                     0.000622
+152      Li0.66La1.12Ti1.9Al0.1O5.9F0.1                     0.000176
+153  Li0.66La1.12Ti1.88Al0.12O5.88F0.12                     0.000106
+154  Li0.66La1.12Ti1.86Al0.14O5.86F0.14                     0.000645
+155  Li0.66La1.12Ti1.84Al0.16O5.84F0.16                     0.000494
+Starting Evaluation on 8 Ground Truth Points...
+
+Evaluation Complete: 1/8 Matched (12.5%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11
+[0;34m[INFO][0m DOI: 10.1007/s11581-006-0011-9
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/al_f-doped_new_perovskite_lithium_fast_ion_conductor_li3x_la2_3_x_1_3_2x_ti1_y_al_y_o3_y_f_y_x_0_11_pipeline_20260114_155517.log
+

@@ -1,0 +1,361 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_pipeline_20260114_155108.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides
+  -> Started Section: Article history:Received 16 June 2015Received in revised form 8 October 2015Accepted 30 October 2015
+  -> Started Section: ABSTRACT
+  -> Started Section: 1. Synthesis
+  -> Started Section: 2.1. X-ray powder diffraction
+  -> Started Section: 2.2. Thermogravimetric analysis
+  -> Started Section: 2.3. Electrochemical testing
+  -> Started Section: 2.4. Ionic conductivity measurements
+  -> Started Section: 3. Results and discussion
+  -> Started Section: 4. Conclusion
+  -> Started Section: Author contributions
+  -> Started Section: Acknowledgment
+  -> Started Section: Appendix A. Supplementary data
+  -> Started Section: References
+  🔍 Checking placeholder: '__IMG_a01e79a8__'
+  ✅ Found Special Node: __IMG_a01e79a8__
+  ✓ Finished Section: Abstract / Introduction
+  🔍 Checking placeholder: '__IMG_abbbd463__'
+  ✅ Found Special Node: __IMG_abbbd463__
+  ✓ Finished Section: Article history:Received 16 June 2015Received in revised form 8 October 2015Accepted 30 October 2015
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: Acknowledgment
+  ✓ Finished Section: Author contributions
+  ✓ Finished Section: Appendix A. Supplementary data
+  ✓ Finished Section: 2.2. Thermogravimetric analysis
+  ✓ Finished Section: Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides
+  ✓ Finished Section: 2.3. Electrochemical testing
+  ✓ Finished Section: 4. Conclusion
+  ✓ Finished Section: 2.4. Ionic conductivity measurements
+  ✓ Finished Section: 2.1. X-ray powder diffraction
+  ✓ Finished Section: 1. Synthesis
+  🔍 Checking placeholder: '__IMG_02e0b8d2__'
+  ✅ Found Special Node: __IMG_02e0b8d2__
+  🔍 Checking placeholder: '__IMG_dc0e0c02__'
+  ✅ Found Special Node: __IMG_dc0e0c02__
+  🔍 Checking placeholder: '__TBL_713da1ee__'
+  ✅ Found Special Node: __TBL_713da1ee__
+  🔍 Checking placeholder: '__IMG_cac8eaad__'
+  ✅ Found Special Node: __IMG_cac8eaad__
+  🔍 Checking placeholder: '__IMG_e957ef7f__'
+  ✅ Found Special Node: __IMG_e957ef7f__
+  🔍 Checking placeholder: '__IMG_750eb6c1__'
+  ✅ Found Special Node: __IMG_750eb6c1__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__IMG_fcefd0d2__'
+  ✅ Found Special Node: __IMG_fcefd0d2__
+  🔍 Checking placeholder: '__IMG_c3619e66__'
+  ✅ Found Special Node: __IMG_c3619e66__
+  🔍 Checking placeholder: '__TBL_2b93673c__'
+  ✅ Found Special Node: __TBL_2b93673c__
+  🔍 Checking placeholder: '__IMG_98d79139__'
+  ✅ Found Special Node: __IMG_98d79139__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: ABSTRACT
+  ✓ Finished Section: 3. Results and discussion
+⚠️ Warning: LLM dropped sentences [43] in 'References'. Auto-recovering...
+  ✓ Finished Section: References
+  ✓ Re-indexed 440 structural nodes.
+  ✓ Mapped 387 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 86 text nodes and 10 image nodes.
+
+[Stage 2] Extracting from 86 relevant nodes...
+  [1/86] ○ Preparation and Electrochemical Activity... (0 data points)
+  [2/86] ○ Table 2 and Figure 8 Descriptions... (0 data points)
+  [3/86] ○ Electrochemical Screening of Li-Sb-O Phases... (0 data points)
+  [4/86] ○ Phase Transformation... (0 data points)
+  [5/86] ○ Results from Bi3+/Bi5+ Redox Transition Studies... (0 data points)
+  [6/86] ○ Author Contributions... (0 data points)
+  [7/86] ○ Acknowledgments... (0 data points)
+  [8/86] ○ Reference 2... (0 data points)
+  [9/86] ○ Reference 1... (0 data points)
+  [10/86] ✓ Ionic Conductivity... (1 data points)
+  [11/86] ○ Supplementary Data Location... (0 data points)
+  [12/86] ○ Reference 4... (0 data points)
+  [13/86] ○ Reference 3... (0 data points)
+  [14/86] ○ Reference 5... (0 data points)
+  [15/86] ○ Reference 6... (0 data points)
+  [16/86] ○ Reference 7... (0 data points)
+  [17/86] ○ Reference 8... (0 data points)
+  [18/86] ✓ Figure 7: Temperature Dependent Ionic Conductivity... (2 data points)
+  [19/86] ○ Reference 9... (0 data points)
+  [20/86] ○ Reference 11... (0 data points)
+  [21/86] ○ Reference 10... (0 data points)
+  [22/86] ○ Reference 12... (0 data points)
+  [23/86] ○ Reference 13... (0 data points)
+  [24/86] ○ Reference 15... (0 data points)
+  [25/86] ○ Reference 14... (0 data points)
+  [26/86] ○ Recovered Content... (0 data points)
+  [27/86] ○ Reference 16... (0 data points)
+  [28/86] ○ Reference 17... (0 data points)
+  [29/86] ○ Reference 19... (0 data points)
+  [30/86] ○ Reference 18... (0 data points)
+  [31/86] ○ Reference 21... (0 data points)
+  [32/86] ○ Reference 20... (0 data points)
+  [33/86] ○ Reference 22... (0 data points)
+  [34/86] ○ Reference 23... (0 data points)
+  [35/86] ○ Source Details... (0 data points)
+  [36/86] ○ Reference 25... (0 data points)
+  [37/86] ○ Reference 24... (0 data points)
+  [38/86] ○ Document Information... (0 data points)
+  [39/86] ○ Reference 26... (0 data points)
+  [40/86] ○ Reference 27... (0 data points)
+  [41/86] ○ Authors and Affiliations... (0 data points)
+  [42/86] ○ Reference 28... (0 data points)
+  [43/86] ○ Keywords... (0 data points)
+  [44/86] ○ Reference 29... (0 data points)
+  [45/86] ○ Reference 30... (0 data points)
+  [46/86] ○ Introduction to Li-ion Battery Challenges and Mate... (0 data points)
+  [47/86] ○ Limitations of Current Cathodes and Search for Alt... (0 data points)
+  [48/86] ○ Reference 31... (0 data points)
+  [49/86] ○ Reference 32... (0 data points)
+  [50/86] ✓ Summary of Findings on Lithium Bismuth Oxides... (1 data points)
+  [51/86] ○ Justification for Exploring Bi-based Materials and... (0 data points)
+  [52/86] ○ Scope and Aims of the Current Study... (0 data points)
+  [53/86] ○ Reference 34... (0 data points)
+  [54/86] ○ Reference 33... (0 data points)
+  [55/86] ○ Ceramic Synthesis of Li-Bi-O Compounds... (0 data points)
+  [56/86] ○ Hydrothermal Synthesis of LiBiO3... (0 data points)
+  [57/86] ○ Reference 36... (0 data points)
+  [58/86] ○ Reference 35... (0 data points)
+  [59/86] ○ X-ray powder diffraction measurements and analysis... (0 data points)
+  [60/86] ○ TGA Methodology... (0 data points)
+  [61/86] ○ Electrode and Cell Preparation... (0 data points)
+  [62/86] ○ Electrochemical Testing Procedure... (0 data points)
+  [63/86] ○ Purpose of Ionic Conductivity Measurement... (0 data points)
+  [64/86] ○ Experimental Procedure and Setup... (0 data points)
+  [65/86] ○ Data Analysis and Conductivity Calculation... (0 data points)
+  [66/86] ○ Synthesis and Initial Characterization of Li-Bi-O ... (0 data points)
+  [67/86] ○ Electrochemical Behavior of LiBiO2 and Li3BiO3... (0 data points)
+  [68/86] ○ In Situ XRD Analysis of LiBiO3 Discharge... (0 data points)
+  [69/86] ○ Figure 1: X-ray Diffraction Patterns... (0 data points)
+  [70/86] ○ Electrochemical Activity of Bi5+ Oxides and Conver... (0 data points)
+  [71/86] ○ Table 1 and Figure 2: Structural Data and Represen... (0 data points)
+  [72/86] ○ BVEL Predictions for Li-Ion Diffusion Pathways... (0 data points)
+  [73/86] ○ Figures 3 and 4: Electrochemical Cycling and Conve... (0 data points)
+  [74/86] ○ Further Analysis of Li7BiO6 Conductivity and Activ... (0 data points)
+  [75/86] ✓ Bond Valence Energy Landscape (BVEL) Method and Pr... (1 data points)
+  [76/86] ○ Figure 5: In Situ XRD of LiBiO3... (0 data points)
+  [77/86] ✓ Image... (6 data points)
+  [78/86] ○ Role of Bi Oxidation State in Li-Ion Mobility... (0 data points)
+  [79/86] ○ Challenges and Factors Influencing Measured Conduc... (0 data points)
+  [80/86] ○ Ionic Conductivity Measurement Methodology: Carbon... (0 data points)
+  [81/86] ○ Figure 6: Bond Valence Energy Landscapes... (0 data points)
+  [82/86] ✓ Room Temperature Conductivity Extrapolation... (1 data points)
+  [83/86] ○ Justification for Negligible Electronic Conductivi... (0 data points)
+  [84/86] ○ Investigating Bi3+/Bi5+ Redox Transitions for 2e- ... (0 data points)
+  [85/86] ✓ Experimental Ionic Conductivity Results and Compar... (6 data points)
+  [86/86] ✓ Comparison of Predicted and Experimental Conductiv... (5 data points)
+  → 23 total data points extracted
+
+[Stage 2b] Processing 10 images directly...
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_6.jpeg
+    Warning: Skipping missing image _page_3_Figure_8.jpeg
+    Warning: Skipping missing image _page_6_Figure_2.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_0_Picture_7.jpeg
+    Warning: Skipping missing image _page_0_Picture_5.jpeg
+    Warning: Skipping missing image _page_4_Figure_6.jpeg
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_2.jpeg
+
+Merging: 23 text-based + 0 image-based points.
+  → Running physical heuristic checks on 23 points...
+  → Running LLM semantic verification on 23 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 6 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li-Bi-O phases"
+- "Li3BiO3"
+- "Li3BiO4"
+- "Li5BiO5"
+- "Li7BiO6"
+- "LiBiO2"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li-Bi-O', canonical_name='Lithium Bismuth Oxide phases', abbreviation=None, variant_names=['Li-Bi-O phases']), CanonicalMaterialName(canonical_formula='Li3BiO3', canonical_name='Lithium Bismuth Oxide', abbreviation=None, variant_names=['Li3BiO3']), CanonicalMaterialName(canonical_formula='Li3BiO4', canonical_name='Lithium Bismuth Oxide', abbreviation=None, variant_names=['Li3BiO4']), CanonicalMaterialName(canonical_formula='Li5BiO5', canonical_name='Lithium Bismuth Oxide', abbreviation=None, variant_names=['Li5BiO5']), CanonicalMaterialName(canonical_formula='Li7BiO6', canonical_name='Lithium Bismuth Oxide', abbreviation=None, variant_names=['Li7BiO6']), CanonicalMaterialName(canonical_formula='LiBiO2', canonical_name='Lithium Bismuth Oxide', abbreviation=None, variant_names=['LiBiO2'])]
+  → Created 6 canonical material(s)
+  → Updated 23/23 material names
+  → Normalizing 23 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='3.8 × 10⁻⁸ S/cm', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 3.8e-08}
+    [DEBUG Norm] Input: Cond='10^-2 S/cm', Temp='500°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 500, 'cond_value': 0.01, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.8 × 10−8 S/cm', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 3.8e-08, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm', Temp='250°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 1e-05, 'temp_value': 250}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-8 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-08, 'temp_value': 100, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-4 S/cm', Temp='300°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0001, 'temp_unit': 'C', 'temp_value': 300, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='5.7 × 10⁻³ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0057, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-10 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1e-10, 'temp_value': 100, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-7 S/cm', Temp='250°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1e-07, 'temp_unit': 'C', 'temp_value': 250}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='250°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S/cm', 'temp_value': 250, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.8 × 10⁻⁸ S/cm', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 3.8e-08, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-9 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 100, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 1e-09}
+    [DEBUG Norm] Input: Cond='2.4 × 10⁻⁷ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 2.4e-07, 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='10⁻⁶ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 1e-06, 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='2.2 × 10⁻⁷ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 300, 'cond_unit': 'S/cm', 'cond_value': 2.2e-07, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='2.4 × 10^-10 S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 2.4e-10, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='3.8 × 10^-8 S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 3.8e-08, 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.7 × 10⁻⁷ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 300, 'temp_unit': 'C', 'cond_value': 3.7e-07}
+    [DEBUG Norm] Input: Cond='5.7 × 10⁻³ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 300, 'temp_unit': 'C', 'cond_value': 0.0057}
+    [DEBUG Norm] Input: Cond='3.9 × 10^-9 S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 3.9e-09, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='4.9 × 10⁻⁴ S/cm', Temp='300 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.00049, 'temp_unit': 'C', 'temp_value': 300}
+    [DEBUG Norm] Input: Cond='4.1 × 10^-10 S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 4.1e-10, 'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.1 × 10^-11 S/cm', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 1.1e-11, 'temp_value': 25, 'temp_unit': 'C'}
+
+[Stage 3] Deduplicating 23 data points...
+  → Merged 4 duplicates, 19 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         25
+Total Input:         109,404 tokens
+Total Output:        10,671 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0867
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 25 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure_materials.json
+Time elapsed (s)  122.66330003738403
+
+Statistics:
+  Nodes analyzed: 96
+  Raw data points: 23
+  After dedup: 19
+  Valid: 19, Invalid: 0
+
+By Confidence:
+  high: 14
+  medium: 5
+  low: 0
+
+By Data Source:
+  primary: 16
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ LiBiO2: 3.8 × 10−8 S/cm @ 25 °C [high]
+  ✓ Li3BiO3: 1.0 x 10^-8 S/cm @ 100°C [high]
+  ✓ Li3BiO3: 1.0 x 10^-5 S/cm @ 250°C [high]
+  ✓ Li5BiO5: 1.0 x 10^-9 S/cm @ 100°C [high]
+  ✓ Li5BiO5: 1.0 x 10^-6 S/cm @ 250°C [high]
+  ... and 14 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/j.ssi.2015.10.016
+          Composition  Ionic conductivity (S cm-1)
+10   Li24.0Bi8.0O24.0                 2.400000e-10
+11   Li10.0Bi2.0O10.0                 3.900000e-09
+139   Li8.0Bi8.0O16.0                 3.800000e-08
+174  Li12.0Bi4.0O16.0                 4.100000e-10
+Starting Evaluation on 4 Ground Truth Points...
+
+Evaluation Complete: 4/4 Matched (100.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides
+[0;34m[INFO][0m DOI: 10.1016/j.ssi.2015.10.016
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_pipeline_20260114_155108.log
+

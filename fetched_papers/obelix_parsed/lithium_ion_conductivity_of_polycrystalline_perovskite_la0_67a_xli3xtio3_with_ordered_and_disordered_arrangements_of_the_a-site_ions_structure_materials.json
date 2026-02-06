@@ -1,0 +1,829 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 88821,
+    "total_output_tokens": 15671,
+    "total_cost_usd": 0.09142350000000002,
+    "call_counts": {
+      "gemini-3-flash-preview": 36
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions_structure.json",
+  "extraction_stats": {
+    "total_nodes": 61,
+    "raw_extracted": 29,
+    "after_dedup": 26,
+    "time_elapsed": 521.4148919582367,
+    "valid_count": 26,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 8,
+      "medium": 18,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 21,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 13,
+    "from_image_nodes": 16,
+    "final_count": 26
+  },
+  "material_count": 26,
+  "materials": [
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.31Li0.36TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12, S ≈ 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "6.88 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted the maximum bulk conductivity for the annealed perovskite sample at x = 0.12 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Annealed perovskite solid solution sample with x = 0.12 and S ≈ 0.6.",
+      "processing_method": "Annealed",
+      "source_node": {
+        "node_id": "0107",
+        "title": "Bulk Conductivity Analysis at 25°C and Maximum Values",
+        "section": "3. Results and discussion"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.31Li0.36TiO3",
+      "_original_name": "Perovskite solid solution",
+      "_norm_cond": 0.000688,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0129",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.34Li0.33TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted the initial quenching data point for the sample with x = 0.11 from Figure 4, which shows ionic conductivity values on a logarithmic scale.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sample with x = 0.11 undergoing quenching-annealing cycles.",
+      "processing_method": "Quenching",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure 4: Ionic Conductivity during Cycles",
+        "section": "3. Results and discussion"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.34Li0.33TiO3",
+      "_original_name": "x = 0.11",
+      "_norm_cond": 0.00012,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0129",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.34Li0.33TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.11"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted the initial annealing data point for the sample with x = 0.11 from Figure 4.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sample with x = 0.11 undergoing quenching-annealing cycles.",
+      "processing_method": "Annealing",
+      "source_node": {
+        "node_id": "0126",
+        "title": "Figure 4: Ionic Conductivity during Cycles",
+        "section": "3. Results and discussion"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.34Li0.33TiO3",
+      "_original_name": "x = 0.11",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0015",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.31Li0.36TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 x 10^-3 S cm^-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted bulk conductivity for the disordered sample with x=0.12 from the abstract text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Disordered simple cubic perovskite with disordered arrangement of A-site ions.",
+      "processing_method": "Quenching from 1350°C into liquid N2.",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Abstract: Experimental Details and Key Findings",
+        "section": "**Abstract**"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.31Li0.36TiO3",
+      "_original_name": "La0.67-xLi3xTiO3",
+      "_norm_cond": 0.00153,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0171",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.67-xLi3xTiO3 (x > 0.08)",
+        "acronym": "LLTO",
+        "proportion": "x > 0.08, S ≈ 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "6.88 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity for the tetragonal form of LLTO with order parameter S ≈ 0.6.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "tetragonal form (S ≈ 0.6) with alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis",
+      "processing_method": "annealed",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Conductivity Comparison and Explanation",
+        "section": "4. Conclusions"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.67-xLi3xTiO3 (x > 0.08)",
+      "_original_name": "La0.67-xLi3xTiO3",
+      "_norm_cond": 0.000688,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0116",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.31Li0.36TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted the maximum bulk conductivity for the quenched perovskite sample at x = 0.12 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Quenched perovskite solid solution sample with x = 0.12.",
+      "processing_method": "Quenched",
+      "source_node": {
+        "node_id": "0107",
+        "title": "Bulk Conductivity Analysis at 25°C and Maximum Values",
+        "section": "3. Results and discussion"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.31Li0.36TiO3",
+      "_original_name": "Perovskite solid solution"
+    },
+    {
+      "source_sentence_id": "0015",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.31Li0.36TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12, S ~ 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "6.88 x 10^-4 S cm^-1",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted bulk conductivity for the ordered sample (S ~ 0.6) with x=0.12 from the abstract text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ordered tetragonal doubled perovskite with alternate arrangement of La-rich and Li-vacancy-rich layers.",
+      "processing_method": "Quenching from 1350°C into liquid N2 followed by annealing at 800°C for 3 days.",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Abstract: Experimental Details and Key Findings",
+        "section": "**Abstract**"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.31Li0.36TiO3",
+      "_original_name": "La0.67-xLi3xTiO3"
+    },
+    {
+      "source_sentence_id": "0170",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.31Li0.36TiO3",
+        "acronym": "LLTO",
+        "proportion": "x = 0.12"
+      },
+      "ionic_conductivity_S_per_cm": "1.53 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted bulk conductivity for the simple cubic form of LLTO with x=0.12 at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "simple cubic form with disordered arrangements of the A-site ions",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0169",
+        "title": "Conductivity Comparison and Explanation",
+        "section": "4. Conclusions"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.31Li0.36TiO3",
+      "_original_name": "La0.67-xLi3xTiO3"
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li-La-Ta-O",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ – 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "The text states 'Similar levels of ionic conductivity' for tantalate-based perovskites, referring back to the 10⁻³ – 10⁻⁴ S cm⁻¹ range mentioned for titanates.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "tantalate-based perovskites",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Introduction: Perovskite-Based High Li-ion Conductors",
+        "section": "**Abstract**"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li-La-Ta-O",
+      "_original_name": "tantalate-based perovskites",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0055",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.59Li0.27TiO3.02",
+        "acronym": "LLTO",
+        "proportion": "single crystal"
+      },
+      "ionic_conductivity_S_per_cm": "6.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "300 K",
+      "reason": "Extracted anisotropic conductivity value perpendicular to the c-axis for a single crystal sample from a cited reference.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0051",
+        "title": "Introduction: Prior High Conductivity, Superstructure, and Anisotropy",
+        "section": "**Abstract**"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "_original_name": "La0.59Li0.27TiO3.02",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 26.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "70Li2S-30P2S5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.26 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the first solid circle point in the 1st cycle on the log scale plot (~ -2.9).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "First cycle, initial conductivity state (solid circle) ; Second cycle, recovered conductivity state (solid circle) ; Third cycle, recovered conductivity state (solid circle)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0127",
+        "title": "_page_3_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "70Li2S-30P2S5",
+      "_original_name": "70Li2S-30P2S5 glass-ceramic",
+      "_norm_cond": 0.00126,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "70Li2S-30P2S5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.61 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the second open circle point in the 2nd cycle on the log scale plot (~ -3.18).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Second cycle, state after cycling/pressure change (open circle) ; Third cycle, state after cycling/pressure change (open circle)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0127",
+        "title": "_page_3_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "70Li2S-30P2S5",
+      "_original_name": "70Li2S-30P2S5 glass-ceramic",
+      "_norm_cond": 0.000661,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.4e-3 S cm^-1",
+      "measurement_temperature": "333.3 K",
+      "reason": "Point at 10^3/T = 3.0 on Arrhenius plot (log(Tσ) ≈ 0.2).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 0.0014,
+      "_norm_temp": 60.150000000000034
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-4 S cm^-1",
+      "measurement_temperature": "285.7 K",
+      "reason": "Point at 10^3/T = 3.5 on Arrhenius plot (log(Tσ) ≈ -0.8).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 0.00045,
+      "_norm_temp": 12.550000000000011
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-4 S cm^-1",
+      "measurement_temperature": "250 K",
+      "reason": "Point at 10^3/T = 4.0 on Arrhenius plot (log(Tσ) ≈ -1.6).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 0.0001,
+      "_norm_temp": -23.149999999999977
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2e-5 S cm^-1",
+      "measurement_temperature": "222.2 K",
+      "reason": "Point at 10^3/T = 4.5 on Arrhenius plot (log(Tσ) ≈ -2.3).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 2.2e-05,
+      "_norm_temp": -50.94999999999999
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-6 S cm^-1",
+      "measurement_temperature": "200 K",
+      "reason": "Point at 10^3/T = 5.0 on Arrhenius plot (log(Tσ) ≈ -3.0).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 5e-06,
+      "_norm_temp": -73.14999999999998
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-6 S cm^-1",
+      "measurement_temperature": "181.8 K",
+      "reason": "Point at 10^3/T = 5.5 on Arrhenius plot (log(Tσ) ≈ -3.7).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "High conductivity phase (solid circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate",
+      "_norm_cond": 1e-06,
+      "_norm_temp": -91.34999999999997
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.3e-4 S cm^-1",
+      "measurement_temperature": "333.3 K",
+      "reason": "Point at 10^3/T = 3.0 on Arrhenius plot (log(Tσ) ≈ -0.25, open circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Low conductivity phase (open circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate (low-conductivity phase)",
+      "_norm_cond": 0.00053,
+      "_norm_temp": 60.150000000000034
+    },
+    {
+      "source_sentence_id": "0030",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La-Li-Ti-O",
+        "acronym": "LLTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ – 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity range for titanate-based perovskite solid solutions mentioned in the introduction/abstract text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "titanate-based solid solutions with perovskite-related structures",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Introduction: Perovskite-Based High Li-ion Conductors",
+        "section": "**Abstract**"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La-Li-Ti-O",
+      "_original_name": "titanate-based solid solutions with perovskite-related structures"
+    },
+    {
+      "source_sentence_id": "0052",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.34Li0.33TiO3",
+        "acronym": "LLTO",
+        "proportion": "x=0.11"
+      },
+      "ionic_conductivity_S_per_cm": "~ 10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted conductivity value for LLTO (x=0.11) from a cited reference mentioned in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0051",
+        "title": "Introduction: Prior High Conductivity, Superstructure, and Anisotropy",
+        "section": "**Abstract**"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.34Li0.33TiO3",
+      "_original_name": "La0.67-xLi3xTiO3"
+    },
+    {
+      "source_sentence_id": "0055",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.59Li0.27TiO3.02",
+        "acronym": "LLTO",
+        "proportion": "single crystal"
+      },
+      "ionic_conductivity_S_per_cm": "5.8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "300 K",
+      "reason": "Extracted anisotropic conductivity value parallel to the c-axis for a single crystal sample from a cited reference.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0051",
+        "title": "Introduction: Prior High Conductivity, Superstructure, and Anisotropy",
+        "section": "**Abstract**"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "_original_name": "La0.59Li0.27TiO3.02"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_3_Figure_9.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "70Li2S-30P2S5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.31 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Estimated from the first open circle point in the 1st cycle on the log scale plot (~ -3.2).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "First cycle, state after cycling/pressure change (open circle)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0127",
+        "title": "_page_3_Figure_9.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "70Li2S-30P2S5",
+      "_original_name": "70Li2S-30P2S5 glass-ceramic"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-4 S cm^-1",
+      "measurement_temperature": "285.7 K",
+      "reason": "Point at 10^3/T = 3.5 on Arrhenius plot (log(Tσ) ≈ -1.45, open circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Low conductivity phase (open circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate (low-conductivity phase)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-5 S cm^-1",
+      "measurement_temperature": "250 K",
+      "reason": "Point at 10^3/T = 4.0 on Arrhenius plot (log(Tσ) ≈ -2.5, open circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Low conductivity phase (open circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate (low-conductivity phase)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_4_Figure_2.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ag3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-6 S cm^-1",
+      "measurement_temperature": "200 K",
+      "reason": "Point at 10^3/T = 5.0 on Arrhenius plot (log(Tσ) ≈ -3.65, open circles).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Low conductivity phase (open circles)",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0131",
+        "title": "_page_4_Figure_2.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Ag3PO4",
+      "_original_name": "Silver orthophosphate (low-conductivity phase)"
+    }
+  ]
+}

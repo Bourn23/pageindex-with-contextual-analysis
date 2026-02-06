@@ -1,0 +1,1002 @@
+{
+  "doc_name": "high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions",
+  "timestamp": "2026-02-03 12:13:53",
+  "execution_time_seconds": 260.28,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 7360,
+    "total_output_tokens": 15678,
+    "total_cost_usd": 0.0414,
+    "call_counts": {
+      "gemini-flash-latest": 6
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 53,
+    "skipped_images": 7,
+    "failed_items": 1,
+    "total_sections_processed": 6,
+    "total_images_processed": 8
+  },
+  "material_count": 53,
+  "measurements": [
+    {
+      "raw_composition": "x=0.3 (Bulk conductivity)",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "Lithium garnet oxides of the composition series Li(7-x)La3Zr(2-x)TaxO12 (x=0-2) were synthesized by the solid state reaction and characterized by the powder X-ray diffraction and the impedance spectroscopy.",
+        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase."
+      ],
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents bulk conductivity."
+      ]
+    },
+    {
+      "raw_composition": "x=0.2 (Total conductivity)",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "Lithium garnet oxides of the composition series Li(7-x)La3Zr(2-x)TaxO12 (x=0-2) were synthesized by the solid state reaction and characterized by the powder X-ray diffraction and the impedance spectroscopy.",
+        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase."
+      ],
+      "raw_conductivity": "6.9e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00069,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "This value represents total conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li5La3Nb2O12",
+      "canonical_formula": "Li5La3Nb2O12",
+      "material_definitions": [],
+      "raw_conductivity": "1e-6",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is generalized ('around 10^-6 S/cm') and cited from Ref 9."
+      ]
+    },
+    {
+      "raw_composition": "Li5La3Ta2O12",
+      "canonical_formula": "Li5La3Ta2O12",
+      "material_definitions": [],
+      "raw_conductivity": "1e-6",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is generalized ('around 10^-6 S/cm') and cited from Ref 9."
+      ]
+    },
+    {
+      "raw_composition": "Li7La3Zr2O12 (cubic, Al-stabilized)",
+      "canonical_formula": "Li7La3Zr2O12",
+      "material_definitions": [],
+      "raw_conductivity": "5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0005,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is approximate (estimated from 'around 5e-4 S/cm') and cited from Ref 10. Phase is cubic due to possible Al contamination."
+      ]
+    },
+    {
+      "raw_composition": "Li7La3Zr2O12 (tetragonal, Al-free)",
+      "canonical_formula": "Li7La3Zr2O12",
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-6",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1.6e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from Ref 12. Phase is tetragonal (Al-free)."
+      ]
+    },
+    {
+      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "material_definitions": [
+        "The LLZTx series is composed of Li(7-x)La3Zr(2-x)Ta(x)O12 solid solutions.",
+        "The powders were calcined at 900\u00b0C.",
+        "The composition Li6.7La3Zr1.7Ta0.3O12 (x=0.3) exhibits a cubic phase (space group Ia-3d).",
+        "The pellets were sintered to achieve relative densities above 91% with optimized sintering temperatures."
+      ],
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Composition dependence of room-temperature grain interior (bulk) and total conductivity of Li(7-x)La3Zr(2-x)Ta(x)O12 series.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x = 0.3",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "Lithium garnet oxides with formulas Li(7-x)La3Zr(2-x)TaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
+        "Single cubic phases were observed in the composition x range between 0.2 and 2.",
+        "The lattice parameters decreased with the addition of Ta.",
+        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
+      ],
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as 25 Celsius (standard room temperature). This conductivity value refers to bulk conductivity."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.3",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "Lithium garnet oxides with formulas Li(7-x)La3Zr(2-x)TaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
+        "Single cubic phases were observed in the composition x range between 0.2 and 2.",
+        "The lattice parameters decreased with the addition of Ta.",
+        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
+      ],
+      "raw_conductivity": "6.9e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00069,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as 25 Celsius (standard room temperature). This conductivity value refers to total conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.32",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.32,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.32e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.07",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.07,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.07e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.03",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.03,
+      "raw_temperature": "0.25",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.25,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.03e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.1,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.10e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.12",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.12,
+      "raw_temperature": "0.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.35,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.12e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.16",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.16,
+      "raw_temperature": "0.45",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.45,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.16e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.27",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.27,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.27e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.35",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.35,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.35e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.81",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.81,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.81e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.53",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.53,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.53e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.13",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.13,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.13e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.18,
+      "raw_temperature": "0.25",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.25,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.18e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.33",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.33,
+      "raw_temperature": "0.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.35,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.33e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.31",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.31,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.31e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.4",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.4,
+      "raw_temperature": "0.45",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.45,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.40e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.5,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.45,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-4.48",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.48,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.0,
+      "source_figure_id": "Fig 3",
+      "source_caption": "**Figure 3.** Composition dependence of room-temperature grain interior (bulk) and total conductivity of  $\\text{Li}_{7-x}\\text{La}_3Z\\text{r}_{2-x}T\\text{a}_xO_{12}$  series. For composition  $\\text{Li}_7\\text{La}_3Z\\text{r}_2O_{12}$ , data reported form the reference 10 was used. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.48e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.26,
+      "raw_temperature": "2.16",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.16,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.56",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.56,
+      "raw_temperature": "2.43",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.43,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.56e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.89",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.89,
+      "raw_temperature": "2.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.89e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-2.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.26,
+      "raw_temperature": "2.88",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.88,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-2.51",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.51,
+      "raw_temperature": "3.02",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.02,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.51e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-2.81",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.81,
+      "raw_temperature": "3.22",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.22,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.81e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.02",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.02,
+      "raw_temperature": "3.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.39,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.02e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Grain interior",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-4.11",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.11,
+      "raw_temperature": "3.86",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.86,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Grain interior] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.11e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.26,
+      "raw_temperature": "2.16",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.16,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.56",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.56,
+      "raw_temperature": "2.43",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.43,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.56e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-1.89",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.89,
+      "raw_temperature": "2.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.67,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.89e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-2.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.26,
+      "raw_temperature": "2.88",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.88,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-2.56",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.56,
+      "raw_temperature": "3.02",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.02,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.56e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.0",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.0,
+      "raw_temperature": "3.22",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.22,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.00e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-3.16",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.16,
+      "raw_temperature": "3.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.39,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.16e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Total",
+      "canonical_formula": "x=2",
+      "material_definitions": [],
+      "raw_conductivity": "-4.34",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.34,
+      "raw_temperature": "3.86",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.86,
+      "source_figure_id": "Fig 5",
+      "source_caption": "**Figure 5.** Arrhenius plot for the grain interior and total conductivity of  $\\text{Li}_{6.7}\\text{La}_3\\text{Zr}_{1.7}\\text{Ta}_{0.3}\\text{O}_{12}$ . The straight lines represent the fitting of Arrhenius relation with conductivity values. [Series: Total] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.34e+00)"
+      ]
+    },
+    {
+      "raw_composition": "x=0.2",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "7.3",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00073,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.25",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "6.3",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00063,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.3",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "6.9",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00069,
+      "raw_temperature": "1100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1100.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.35",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "4.6",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00046,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.4",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "4.7",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00047,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.45",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "4.0",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.0004,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "2.8",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00028,
+      "raw_temperature": "1130",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1130.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=1",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "3.5",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 0.00035,
+      "raw_temperature": "1100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1100.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=2",
+      "canonical_formula": "x=2",
+      "material_definitions": [
+        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
+      ],
+      "raw_conductivity": "0.34",
+      "raw_conductivity_unit": "10^-4 S/cm",
+      "normalized_conductivity": 3.4e-05,
+      "raw_temperature": "1230",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 1230.0,
+      "source_figure_id": "Unknown",
+      "source_caption": "Unknown: No caption found",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    }
+  ],
+  "material_definitions": []
+}

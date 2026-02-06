@@ -1,0 +1,14 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_pipeline_20260114_212902.log
+
+[0;34m[INFO][0m Skipping STEP 1: Using existing structure: ./fetched_papers/obelix_parsed2/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Error: File not found: fetched_papers/obelix_parsed2/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_structure.json
+[0;31m[ERROR][0m Failed to extract material data

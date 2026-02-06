@@ -1,0 +1,81 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-417",
+      "extracted_id": "EX-20",
+      "reason": "The normalized formula Li6PS5I matches exactly. The conductivity values are very close (1.26e-06 S/cm vs 1.3e-06 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-418",
+      "extracted_id": "EX-29",
+      "reason": "The normalized formula Li6.1P0.9Ge0.1S5I is very close to EX-29's Li6.08P0.92Ge0.08S5I. The conductivity values are also very close (8.86e-06 S/cm vs 9.5e-06 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-419",
+      "extracted_id": "EX-30",
+      "reason": "The normalized formula Li6.15P0.85Ge0.15S5I matches exactly. The conductivity values are very close (3.93e-05 S/cm vs 3.8e-05 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-420",
+      "extracted_id": "EX-31",
+      "reason": "The normalized formula Li6.2P0.8Ge0.2S5I is very close to EX-31's Li6.24P0.76Ge0.24S5I. The conductivity values are also very close (3.19e-05 S/cm vs 3.1e-05 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-421",
+      "extracted_id": "EX-32",
+      "reason": "The normalized formula Li6.25P0.75Ge0.25S5I is very close to EX-32's Li6.26P0.74Ge0.26S5I. The conductivity values are also very close (0.00015 S/cm vs 0.00013 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-422",
+      "extracted_id": "EX-33",
+      "reason": "The normalized formula Li6.3P0.7Ge0.3S5I is very close to EX-33's Li6.36P0.64Ge0.36S5I. The conductivity values are also close (0.00065 S/cm vs 0.00057 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-423",
+      "extracted_id": "EX-34",
+      "reason": "The normalized formula Li6.4P0.6Ge0.4S5I is very close to EX-34's Li6.47P0.53Ge0.47S5I. The conductivity values are an excellent match (0.0015 S/cm vs 0.0015 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-424",
+      "extracted_id": "EX-35",
+      "reason": "The normalized formula Li6.5P0.5Ge0.5S5I is very close to EX-35's Li6.52P0.48Ge0.52S5I. The conductivity values are an excellent match (0.00186 S/cm vs 0.0018 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-425",
+      "extracted_id": "EX-5",
+      "reason": "The normalized formula Li6.6P0.4Ge0.6S5I matches exactly. The conductivity values are very close (0.00521 S/cm vs 0.0054 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-426",
+      "extracted_id": "EX-49",
+      "reason": "The normalized formula Li6.7P0.3Ge0.7S5I is very close to EX-49's Li6.69P0.31Ge0.69S5I. The conductivity values are an excellent match (0.00554 S/cm vs 0.0055 S/cm) and both are at 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-427",
+      "extracted_id": null,
+      "reason": "While there are extracted entries with the exact formula Li6.8P0.2Ge0.8S5I (EX-4, EX-10, EX-11, EX-18), none of them have a conductivity value close to 0.00258 S/cm at a similar temperature. The closest conductivity is 0.0054 S/cm (EX-11), which is significantly different.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The AI pipeline performed well in extracting compositions and conductivities for the Li-P-Ge-S-I system. Most Ground Truth entries found excellent matches in the Extracted Data based on normalized chemical formula and very close conductivity values at similar temperatures (25\u00b0C/RT). One Ground Truth entry (GT-427) could not be matched due to a significant discrepancy in conductivity values, despite having matching compositions in the extracted data.",
+  "metrics": {
+    "recall": 90.9090909090909,
+    "precision": 17.543859649122805,
+    "f1": 29.41176470588235,
+    "avg_log10_error": 0.02230305921640454,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 10,
+    "total_gt": 11,
+    "total_ex": 57
+  }
+}

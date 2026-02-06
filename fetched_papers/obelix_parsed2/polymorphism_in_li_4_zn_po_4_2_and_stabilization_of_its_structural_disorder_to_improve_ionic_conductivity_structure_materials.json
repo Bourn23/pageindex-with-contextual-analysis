@@ -1,0 +1,878 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 182634,
+    "total_output_tokens": 7410,
+    "total_cost_usd": 0.113547,
+    "call_counts": {
+      "gemini-3-flash-preview": 38
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/polymorphism_in_li_4_zn_po_4_2_and_stabilization_of_its_structural_disorder_to_improve_ionic_conductivity_structure.json",
+  "extraction_stats": {
+    "total_nodes": 112,
+    "raw_extracted": 36,
+    "after_dedup": 27,
+    "time_elapsed": 115.94527578353882,
+    "valid_count": 27,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 25,
+      "medium": 2,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 25,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 36,
+    "from_image_nodes": 0,
+    "final_count": 27
+  },
+  "material_count": 27,
+  "materials": [
+    {
+      "source_sentence_id": "0370",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xZn1-xGax(PO4)2",
+        "acronym": null,
+        "proportion": "x"
+      },
+      "ionic_conductivity_S_per_cm": "~2-5 x 10-13 S·cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted ionic conductivity range for the beta-phase gallium-doped lithium zinc phosphate from the conclusion section.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "β-phase samples with higher crystal symmetry and disordered structure enabling 3-D conduction.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0369",
+        "title": "Enhanced Ionic Conductivity and Conduction Mechanism",
+        "section": "CONCLUSIONS"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xZn1-xGax(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 3.5e-13,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0370",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "several orders of magnitudes lower than 2-5 x 10-13 S·cm-1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted comparative conductivity information for the alpha-phase lithium zinc phosphate.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "α-phase lithium zinc phosphate used as a comparison point.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0369",
+        "title": "Enhanced Ionic Conductivity and Conduction Mechanism",
+        "section": "CONCLUSIONS"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 5e-13,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-8 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted total ionic conductivity (sigma_tot) for x=0.0 at room temperature (approx. 25°C) from the Arrhenius plot in Figure 10a.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted Zn-based phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0302",
+        "title": "Arrhenius Plot of Ionic Conductivity for Ga-Substituted Samples (Figure 10)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.9Zn0.9Ga0.1(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-7 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted total ionic conductivity (sigma_tot) for x=0.1 at room temperature (approx. 25°C) from the Arrhenius plot in Figure 10a.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted Zn-based phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0302",
+        "title": "Arrhenius Plot of Ionic Conductivity for Ga-Substituted Samples (Figure 10)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.9Zn0.9Ga0.1(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 2.5e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.8Zn0.8Ga0.2(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-6 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted total ionic conductivity (sigma_tot) for x=0.2 at room temperature (approx. 25°C) from the Arrhenius plot in Figure 10a.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted Zn-based phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0302",
+        "title": "Arrhenius Plot of Ionic Conductivity for Ga-Substituted Samples (Figure 10)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.8Zn0.8Ga0.2(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 1.2e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0305",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.7Zn0.7Ga0.3(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-6 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted total ionic conductivity (sigma_tot) for x=0.3 at room temperature (approx. 25°C) from the Arrhenius plot in Figure 10a.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted Zn-based phosphate ceramic",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0302",
+        "title": "Arrhenius Plot of Ionic Conductivity for Ga-Substituted Samples (Figure 10)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.7Zn0.7Ga0.3(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 5e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0292, 0319",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "α-form"
+      },
+      "ionic_conductivity_S_per_cm": "5.5x10-18 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk conductivity (σb) for pristine α-Li4Zn(PO4)2 extrapolated to room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine α-form of Li4Zn(PO4)2 ; alpha-phase lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 5.5e-18,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0292",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "α-form"
+      },
+      "ionic_conductivity_S_per_cm": "3.5x10-19 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted grain boundary conductivity (σgb) for pristine α-Li4Zn(PO4)2 extrapolated to room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine α-form of Li4Zn(PO4)2",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 3.5e-19,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0292",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "α-form"
+      },
+      "ionic_conductivity_S_per_cm": "1.8x10-19 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total conductivity (σtot) for pristine α-Li4Zn(PO4)2 extrapolated to room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine α-form of Li4Zn(PO4)2",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 1.8e-19,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0296",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "β-polymorph"
+      },
+      "ionic_conductivity_S_per_cm": "1.8x10-15 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total conductivity (σtot) for the high temperature β-Li4Zn(PO4)2 polymorph extrapolated to room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "High temperature β-Li4Zn(PO4)2 polymorph",
+      "processing_method": "Thermally induced structural transition (α→β)",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 1.8e-15,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0298",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "β-polymorph"
+      },
+      "ionic_conductivity_S_per_cm": "2.4x10-15 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total conductivity (σtot) for the ball-milled β-Li4Zn(PO4)2 phase extrapolated to room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ball-milled β-Li4Zn(PO4)2 phase",
+      "processing_method": "Ball-milling of the α-Li4Zn(PO4)2 phase",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 2.4e-15,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0299",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "β-polymorph"
+      },
+      "ionic_conductivity_S_per_cm": "1.7 x 10^-14 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted grain conductivity (σg) for the ball-milled β-Li4Zn(PO4)2 phase at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ball-milled β-Li4Zn(PO4)2 phase",
+      "processing_method": "Ball-milling of the α-Li4Zn(PO4)2 phase",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 1.7e-14,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0300",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4Zn(PO4)2",
+        "acronym": null,
+        "proportion": "β-polymorph"
+      },
+      "ionic_conductivity_S_per_cm": "3 x 10^-15 S·cm-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted grain boundary conductivity (σgb) for the ball-milled β-Li4Zn(PO4)2 phase at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ball-milled β-Li4Zn(PO4)2 phase",
+      "processing_method": "Ball-milling of the α-Li4Zn(PO4)2 phase",
+      "source_node": {
+        "node_id": "0288",
+        "title": "Ionic Conductivity of Pristine and Ball-Milled Li4Zn(PO4)2",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4Zn(PO4)2",
+      "_original_name": "Li4Zn(PO4)2",
+      "_norm_cond": 3e-15,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0319",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.9Zn0.9Ga0.1(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.10"
+      },
+      "ionic_conductivity_S_per_cm": "~1– 2 x10⁻¹² S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted grain conductivity (sigma_g) for x=0.10 Ga-substituted sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "alpha-phase Ga-substituted lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.9Zn0.9Ga0.1(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 1.5e-12,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0322",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xZn1-xGax(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.05, 0.10"
+      },
+      "ionic_conductivity_S_per_cm": "~4-8 x10⁻¹⁴ S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted grain boundary conductivity (sigma_gb) for the mentioned Ga-substituted compositions.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xZn1-xGax(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 4e-14,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0322",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xZn1-xGax(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.05, 0.10"
+      },
+      "ionic_conductivity_S_per_cm": "~4-8 x10⁻¹⁴ S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted total conductivity (sigma_tot) for the mentioned Ga-substituted compositions.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ga-substituted lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xZn1-xGax(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 6e-14,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0325",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xZn1-xGax(PO4)2",
+        "acronym": null,
+        "proportion": "x > 0.40"
+      },
+      "ionic_conductivity_S_per_cm": "~2 x10⁻¹² S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted grain conductivity (sigma_g) for high Ga content samples (x > 0.40) in the beta-structure.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "beta-structure Ga-substituted lithium zinc phosphate with high Ga content",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xZn1-xGax(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 2e-12,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_98740221) for the Li6PS5Cl sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte ; Pristine Li6PS5Cl argyrodite solid electrolyte.",
+      "processing_method": "N/A (Introduction section) | Synthesized via ball milling and subsequent annealing.",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.8 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_98740221) for the Li6PS5Br sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.2 x 10^-7 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_98740221) for the Li6PS5I sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A (Introduction section)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 7.2e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.5 x 10^-3 S/cm",
+      "measurement_temperature": "60°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the Li6PS5Cl sample at 60°C (approx. 3.0 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine Li6PS5Cl argyrodite solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing.",
+      "source_node": {
+        "node_id": "0025",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0045,
+      "_norm_temp": 60
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the Li6PS5Cl sample at 100°C (approx. 2.68 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine Li6PS5Cl argyrodite solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing.",
+      "source_node": {
+        "node_id": "0025",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3 x 10^-6 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the image (IMG_dc673156) for the Li6PS5I sample at room temperature (approx. 1000/T = 3.35).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0577",
+        "title": "Image",
+        "section": "**Table of Contents**"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.3e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0319",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.95Zn0.95Ga0.05(PO4)2",
+        "acronym": null,
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "~1– 2 x10⁻¹² S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted grain conductivity (sigma_g) for x=0.05 Ga-substituted sample at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "alpha-phase Ga-substituted lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.95Zn0.95Ga0.05(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 2e-12,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0323",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xZn1-xGax(PO4)2",
+        "acronym": null,
+        "proportion": "beta-phase"
+      },
+      "ionic_conductivity_S_per_cm": "~6 x10⁻¹² S·cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted saturation grain conductivity (sigma_g) for the beta-phase samples.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "beta-phase Ga-substituted lithium zinc phosphate",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "Detailed Analysis of Ionic Conductivities and Activation Energies for Ga-Substituted Samples (Table 5)",
+        "section": "RESULTS AND DISCUSSIONS"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xZn1-xGax(PO4)2",
+      "_original_name": "Li4-xZn1-xGax(PO4)2",
+      "_norm_cond": 6e-12,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0051",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "garnets, perovskites",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10-4-10-6 Scm-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted general conductivity range for garnet and perovskite classes mentioned as recent interesting compounds in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0043",
+        "title": "Background and Motivation for Solid Electrolytes",
+        "section": "INTRODUCTION"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0052",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li11-xM2-xP1+xS12 (M = Si, Ge, Sn)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10-2-10-3 Scm-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted conductivity range for the thio-phosphate family Li11−xM2−xP1+xS12 mentioned as having conductivities comparable to liquids.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0043",
+        "title": "Background and Motivation for Solid Electrolytes",
+        "section": "INTRODUCTION"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li11-xM2-xP1+xS12 (M = Si, Ge, Sn)",
+      "_original_name": "Li11−xM2−xP1+xS12 (M = Si, Ge, Sn)",
+      "_norm_cond": 0.01,
+      "_norm_temp": null
+    }
+  ]
+}

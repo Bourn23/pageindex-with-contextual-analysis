@@ -1,0 +1,11 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12_pipeline_20260114_163550.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+[0;31m[ERROR][0m Failed to convert MD to JSON structure

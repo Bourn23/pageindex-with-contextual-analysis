@@ -1,0 +1,448 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-01-23 11:34:57",
+  "execution_time_seconds": 50.51,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 20207,
+    "total_output_tokens": 25400,
+    "total_cost_usd": 0.0805,
+    "call_counts": {
+      "gemini-flash-latest": 6,
+      "gemini-3-flash-preview": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 24,
+    "skipped_images": 8,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 8
+  },
+  "material_count": 24,
+  "measurements": [
+    {
+      "raw_composition": "disordered sample with x = 0.12",
+      "canonical_formula": "disordered sample with x = 0.12",
+      "material_definitions": [
+        "The material series investigated is La(0.67-x)Li(3x)TiO3 (x = 0.06\b20130.15).",
+        "A simple cubic perovskite structure with a disordered arrangement of A-site ions was prepared by quenching from 1350\b00b0C into liquid N2.",
+        "A tetragonal, doubled perovskite structure with alternate arrangement of La-rich layers and Li-vacancy-rich layers (ordered samples, S \b2248 0.55\b20130.7) was prepared by annealing the quenched pellet at 800\b00b0C for 3 days."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "ordered sample (S \b2248 0.6)",
+      "canonical_formula": "ordered sample (S \b2248 0.6)",
+      "material_definitions": [
+        "The material series investigated is La(0.67-x)Li(3x)TiO3 (x = 0.06\b20130.15).",
+        "A simple cubic perovskite structure with a disordered arrangement of A-site ions was prepared by quenching from 1350\b00b0C into liquid N2.",
+        "A tetragonal, doubled perovskite structure with alternate arrangement of La-rich layers and Li-vacancy-rich layers (ordered samples, S \b2248 0.55\b20130.7) was prepared by annealing the quenched pellet at 800\b00b0C for 3 days."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Cubic, disordered",
+      "canonical_formula": "Cubic, disordered",
+      "material_definitions": [
+        "The study focuses on perovskite solid solutions, specifically investigating the composition x = 0.12.",
+        "The materials exhibit an order-disorder transition depending on preparation method.",
+        "The quenched sample corresponds to a cubic, disordered form.",
+        "The annealed sample corresponds to a tetragonal, ordered form (P4/mmm) with an order parameter S \tapprox 0.6, characterized by alternate La-rich and Li-vacancy-rich layers."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Tetragonal, ordered",
+      "canonical_formula": "Tetragonal, ordered",
+      "material_definitions": [
+        "The study focuses on perovskite solid solutions, specifically investigating the composition x = 0.12.",
+        "The materials exhibit an order-disorder transition depending on preparation method.",
+        "The quenched sample corresponds to a cubic, disordered form.",
+        "The annealed sample corresponds to a tetragonal, ordered form (P4/mmm) with an order parameter S \tapprox 0.6, characterized by alternate La-rich and Li-vacancy-rich layers."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Simple cubic form with x = 0.12 in La(0.67-x)Li(3x)TiO3",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "The materials studied are polycrystalline perovskite solid solutions of La(0.67-x)Li(3x)TiO3 (x > 0.08).",
+        "The simple cubic form is characterized by disordered arrangements of A-site ions.",
+        "The tetragonal form (order parameter S \\approx 0.5-0.7) has an alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.",
+        "The lower conductivity in the tetragonal form is associated with an increase in activation energy due to contraction in the a-axis of the primitive cell."
+      ],
+      "raw_conductivity": "1.53E-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Tetragonal form (S \\approx 0.6) in La(0.67-x)Li(3x)TiO3",
+      "canonical_formula": "Tetragonal form (S \\approx 0.6) in La(0.67-x)Li(3x)TiO3",
+      "material_definitions": [
+        "The materials studied are polycrystalline perovskite solid solutions of La(0.67-x)Li(3x)TiO3 (x > 0.08).",
+        "The simple cubic form is characterized by disordered arrangements of A-site ions.",
+        "The tetragonal form (order parameter S \\approx 0.5-0.7) has an alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.",
+        "The lower conductivity in the tetragonal form is associated with an increase in activation energy due to contraction in the a-axis of the primitive cell."
+      ],
+      "raw_conductivity": "6.88E-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x=0.06 (quenched)",
+      "canonical_formula": "x=0.06 (quenched)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-3.7",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 6.69214259590434e-07,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.09 (quenched)",
+      "canonical_formula": "x=0.09 (quenched)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 2.6641899537960133e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12 (quenched)",
+      "canonical_formula": "x=0.12 (quenched)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-2.75",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 5.964378366724544e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.15 (quenched)",
+      "canonical_formula": "x=0.15 (quenched)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 2.374461795687198e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.06 (annealed)",
+      "canonical_formula": "x=0.06 (annealed)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-3.42",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 1.2751614835504319e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.12 (annealed)",
+      "canonical_formula": "x=0.12 (annealed)",
+      "material_definitions": [
+        "Ordered perovskite samples with composition x between 0.05 and 0.15.",
+        "The samples were either quenched or annealed to observe the impact of thermal history on ionic conductivity."
+      ],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "log(sigma / S cm-1)",
+      "normalized_conductivity": 2.2159766829032225e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (1st cycle, quenching)",
+      "canonical_formula": "x = 0.11 (1st cycle, quenching)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-2.91",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 4.126341676378941e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (1st cycle, annealing)",
+      "canonical_formula": "x = 0.11 (1st cycle, annealing)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-3.19",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.165534895303222e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (2nd cycle, quenching)",
+      "canonical_formula": "x = 0.11 (2nd cycle, quenching)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 4.421454766246545e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (2nd cycle, annealing)",
+      "canonical_formula": "x = 0.11 (2nd cycle, annealing)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-3.17",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.2675934106724198e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (3rd cycle, quenching)",
+      "canonical_formula": "x = 0.11 (3rd cycle, quenching)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 4.421454766246545e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.11 (3rd cycle, annealing)",
+      "canonical_formula": "x = 0.11 (3rd cycle, annealing)",
+      "material_definitions": [
+        "The material studied is a sample with composition x = 0.11.",
+        "The plot illustrates the variation of ionic conductivity during sequential quenching\u2013annealing cycles.",
+        "Quenching is represented by filled circles (solid points).",
+        "Annealing is represented by open circles.",
+        "The data tracks the stability or change in conductivity over three consecutive cycles."
+      ],
+      "raw_conductivity": "-3.17",
+      "raw_conductivity_unit": "log(S cm-1)",
+      "normalized_conductivity": 2.2675934106724198e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "0.1",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 0.003776776235382502,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "-1.3",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 0.00020047489345090887,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (quenched)",
+      "canonical_formula": "x = 0.12 (quenched)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 3.971641173621407e-06,
+      "raw_temperature": "5.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": -73.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "-0.2",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 0.0018928720334405798,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "-1.8",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 6.339572769844454e-05,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": -23.15,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed)",
+      "canonical_formula": "x = 0.12 (annealed)",
+      "material_definitions": [
+        "Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12.",
+        "The samples labeled 'quenched' (solid circles) represent the disordered phase.",
+        "The samples labeled 'annealed' (open circles) represent the ordered phase."
+      ],
+      "raw_conductivity": "-3.5",
+      "raw_conductivity_unit": "log(T sigma / K S cm-1)",
+      "normalized_conductivity": 1.5811388300841896e-06,
+      "raw_temperature": "5.0",
+      "raw_temperature_unit": "10^3 T^-1 / K^-1",
+      "normalized_temperature_c": -73.15,
+      "source": "figure",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

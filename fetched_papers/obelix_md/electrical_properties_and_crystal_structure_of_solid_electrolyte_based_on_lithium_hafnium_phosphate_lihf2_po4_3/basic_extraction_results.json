@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 57.32573103904724,
+    "images_attached": 13,
+    "input_token_count": 20910,
+    "output_token_count": 1832
+  },
+  "data": [
+    {
+      "composition": "LiHf2(PO4)3",
+      "ionic_conductivity_value": "6.31e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.1Fe0.1Hf1.9(PO4)3",
+      "ionic_conductivity_value": "1.00e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "1.70e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Abstract, Section 3.3, Figure 10"
+    },
+    {
+      "composition": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "6.31e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.4Fe0.4Hf1.6(PO4)3",
+      "ionic_conductivity_value": "2.00e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.5Fe0.5Hf1.5(PO4)3",
+      "ionic_conductivity_value": "7.94e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.1Sc0.1Hf1.9(PO4)3",
+      "ionic_conductivity_value": "2.51e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2Sc0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "6.31e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "1.00e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.4Sc0.4Hf1.6(PO4)3",
+      "ionic_conductivity_value": "6.31e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.5Sc0.5Hf1.5(PO4)3",
+      "ionic_conductivity_value": "1.26e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.1In0.1Hf1.9(PO4)3",
+      "ionic_conductivity_value": "6.31e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2In0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "1.00e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.3In0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "1.58e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.4In0.4Hf1.6(PO4)3",
+      "ionic_conductivity_value": "1.58e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.5In0.5Hf1.5(PO4)3",
+      "ionic_conductivity_value": "1.00e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2Cr0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "2.51e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.3Cr0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "5.01e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.5Cr0.5Hf1.5(PO4)3",
+      "ionic_conductivity_value": "1.26e-07",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.1Lu0.1Hf1.9(PO4)3",
+      "ionic_conductivity_value": "5.01e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2Lu0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "7.94e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.3Lu0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "3.16e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.4Lu0.4Hf1.6(PO4)3",
+      "ionic_conductivity_value": "2.00e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.1Y0.1Hf1.9(PO4)3",
+      "ionic_conductivity_value": "7.94e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.2Y0.2Hf1.8(PO4)3",
+      "ionic_conductivity_value": "3.16e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.3Y0.3Hf1.7(PO4)3",
+      "ionic_conductivity_value": "3.98e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "Li1.4Y0.4Hf1.6(PO4)3",
+      "ionic_conductivity_value": "2.51e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 10"
+    },
+    {
+      "composition": "LiHf2(PO4)3 + 0.1Li2O",
+      "ionic_conductivity_value": "1.10e-04",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Section 3.2, Figure 6"
+    },
+    {
+      "composition": "LiHf2(PO4)3 + 0.2Li2O",
+      "ionic_conductivity_value": "3.98e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "LiHf2(PO4)3 + 0.3Li2O",
+      "ionic_conductivity_value": "2.51e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 6"
+    },
+    {
+      "composition": "LiHf2(PO4)3 + 0.4Li2O",
+      "ionic_conductivity_value": "3.98e-05",
+      "ionic_conductivity_unit": "S/cm",
+      "temperature": "298 K",
+      "source": "Figure 6"
+    }
+  ]
+}

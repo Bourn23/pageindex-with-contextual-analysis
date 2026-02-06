@@ -1,0 +1,414 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_pipeline_20260114_153403.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Abstract / Introduction
+  -> Started Section: Introduction
+  -> Started Section: **Experimental**
+  -> Started Section: Electrical characterisation
+  -> Started Section: Powder XRD
+  -> Started Section: AC impedance
+  -> Started Section: Structural description
+  -> Started Section: AC impedance
+  -> Started Section: **Summary**
+  -> Started Section: References
+  ✓ Finished Section: Electrical characterisation
+  ✓ Finished Section: Powder XRD
+⚠️ Warning: LLM dropped sentences [0] in '**Experimental**'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_6d5f883c__'
+  ✅ Found Special Node: __IMG_6d5f883c__
+  🔍 Checking placeholder: '__IMG_9affd923__'
+  ✅ Found Special Node: __IMG_9affd923__
+⚠️ Warning: LLM dropped sentences [5, 6, 7, 8, 9, 25, 26] in 'Structural description'. Auto-recovering...
+  ✓ Finished Section: Abstract / Introduction
+  🔍 Checking placeholder: '__IMG_78a542fb__'
+  ✅ Found Special Node: __IMG_78a542fb__
+  🔍 Checking placeholder: '__IMG_588fcaf5__'
+  ✅ Found Special Node: __IMG_588fcaf5__
+  🔍 Checking placeholder: '__IMG_b4a8bed8__'
+  ✅ Found Special Node: __IMG_b4a8bed8__
+  🔍 Checking placeholder: '__IMG_ba2467e2__'
+  ✅ Found Special Node: __IMG_ba2467e2__
+  🔍 Checking placeholder: '__IMG_f6abaf1f__'
+  ✅ Found Special Node: __IMG_f6abaf1f__
+  🔍 Checking placeholder: '__IMG_00442e43__'
+  ✅ Found Special Node: __IMG_00442e43__
+  ✓ Finished Section: **Summary**
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: **Experimental**
+  🔍 Checking placeholder: '__IMG_fdf7a9f0__'
+  ✅ Found Special Node: __IMG_fdf7a9f0__
+  🔍 Checking placeholder: '__IMG_9081f5aa__'
+  ✅ Found Special Node: __IMG_9081f5aa__
+  🔍 Checking placeholder: '__IMG_756e1d30__'
+  ✅ Found Special Node: __IMG_756e1d30__
+  🔍 Checking placeholder: '__IMG_98735a47__'
+  ✅ Found Special Node: __IMG_98735a47__
+  🔍 Checking placeholder: '__IMG_870be19e__'
+  ✅ Found Special Node: __IMG_870be19e__
+  🔍 Checking placeholder: '__IMG_43ba7893__'
+  ✅ Found Special Node: __IMG_43ba7893__
+  ✓ Finished Section: References
+  ✓ Finished Section: Structural description
+  🔍 Checking placeholder: '__IMG_36a14b55__'
+  ✅ Found Special Node: __IMG_36a14b55__
+  🔍 Checking placeholder: '__IMG_fd7e6174__'
+  ✅ Found Special Node: __IMG_fd7e6174__
+  🔍 Checking placeholder: '__IMG_aedcbbbf__'
+  ✅ Found Special Node: __IMG_aedcbbbf__
+  🔍 Checking placeholder: '__IMG_6d27fec6__'
+  ✅ Found Special Node: __IMG_6d27fec6__
+  🔍 Checking placeholder: '__IMG_5e587eac__'
+  ✅ Found Special Node: __IMG_5e587eac__
+  🔍 Checking placeholder: '__IMG_c48852a2__'
+  ✅ Found Special Node: __IMG_c48852a2__
+  🔍 Checking placeholder: '__IMG_fa43dd9a__'
+  ✅ Found Special Node: __IMG_fa43dd9a__
+  🔍 Checking placeholder: '__IMG_622cc9aa__'
+  ✅ Found Special Node: __IMG_622cc9aa__
+  🔍 Checking placeholder: '__IMG_cc5952dd__'
+  ✅ Found Special Node: __IMG_cc5952dd__
+  ✓ Finished Section: AC impedance
+  🔍 Checking placeholder: '__IMG_6db6a89e__'
+  ✅ Found Special Node: __IMG_6db6a89e__
+  🔍 Checking placeholder: '__IMG_36a14b55__'
+  ✅ Found Special Node: __IMG_36a14b55__
+  🔍 Checking placeholder: '__IMG_fd7e6174__'
+  ✅ Found Special Node: __IMG_fd7e6174__
+  🔍 Checking placeholder: '__IMG_aedcbbbf__'
+  ✅ Found Special Node: __IMG_aedcbbbf__
+  🔍 Checking placeholder: '__IMG_6d27fec6__'
+  ✅ Found Special Node: __IMG_6d27fec6__
+  🔍 Checking placeholder: '__IMG_5e587eac__'
+  ✅ Found Special Node: __IMG_5e587eac__
+  🔍 Checking placeholder: '__IMG_c48852a2__'
+  ✅ Found Special Node: __IMG_c48852a2__
+  🔍 Checking placeholder: '__IMG_fa43dd9a__'
+  ✅ Found Special Node: __IMG_fa43dd9a__
+  🔍 Checking placeholder: '__IMG_622cc9aa__'
+  ✅ Found Special Node: __IMG_622cc9aa__
+  🔍 Checking placeholder: '__IMG_cc5952dd__'
+  ✅ Found Special Node: __IMG_cc5952dd__
+  🔍 Checking placeholder: '__IMG_6db6a89e__'
+  ✅ Found Special Node: __IMG_6db6a89e__
+  🔍 Checking placeholder: '__IMG_36a14b55__'
+  ✅ Found Special Node: __IMG_36a14b55__
+  ✓ Finished Section: AC impedance
+  ✓ Re-indexed 313 structural nodes.
+  ✓ Mapped 272 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 62 text nodes and 35 image nodes.
+
+[Stage 2] Extracting from 62 relevant nodes...
+  [1/62] ○ Reference 12... (0 data points)
+  [2/62] ○ Characterization Techniques... (0 data points)
+  [3/62] ○ Reference 13... (0 data points)
+  [4/62] ○ Compositional Dependence of Resistances (Part 2)... (0 data points)
+  [5/62] ○ Figures and Associated Descriptions... (0 data points)
+  [6/62] ○ Microstructure and its Correlation with Electrical... (0 data points)
+  [7/62] ○ Measurement Procedure... (0 data points)
+  [8/62] ○ Publication Details... (0 data points)
+  [9/62] ○ Reference 14... (0 data points)
+  [10/62] ○ Measurement Setup and Conditions... (0 data points)
+  [11/62] ○ O'Callaghan MP et al. reference... (0 data points)
+  [12/62] ○ Abstract Header... (0 data points)
+  [13/62] ○ Wells AF reference... (0 data points)
+  [14/62] ○ Description of Powder XRD Patterns... (0 data points)
+  [15/62] ○ Introduction and Solid Solution Formation... (0 data points)
+  [16/62] ○ Analysis of Powder XRD Patterns... (0 data points)
+  [17/62] ○ Reference 17... (0 data points)
+  [18/62] ○ Abstract: Study Objective... (0 data points)
+  [19/62] ○ Acknowledgements... (0 data points)
+  [20/62] ✓ Figures and Images... (3 data points)
+  [21/62] ○ Abstract: Structural Properties... (0 data points)
+  [22/62] ○ Introduction to AC Impedance Plots and Figures 2 &... (0 data points)
+  [23/62] ○ Reference 18... (0 data points)
+  [24/62] ✓ Composition and Temperature Dependence of Conducti... (3 data points)
+  [25/62] ○ Note on Related Research... (0 data points)
+  [26/62] ○ Reference 20... (0 data points)
+  [27/62] ○ Reference 1... (0 data points)
+  [28/62] ○ Keywords... (0 data points)
+  [29/62] ✓ Ionic Conductivity and Properties... (2 data points)
+  [30/62] ○ Reference 2... (0 data points)
+  [31/62] ○ Reference 21... (0 data points)
+  [32/62] ○ Introduction to Solid-State Lithium Ion Conductors... (0 data points)
+  [33/62] ○ Reference 3... (0 data points)
+  [34/62] ✓ Abstract: Electrical and Microstructural Propertie... (2 data points)
+  [35/62] ✓ Analysis of Resistance Contributions and Figures 4... (2 data points)
+  [36/62] ✓ Arrhenius Plots in Figure 7 and Activation Energy ... (1 data points)
+  [37/62] ○ Author Affiliations... (0 data points)
+  [38/62] ○ Inaguma Y et al. reference... (0 data points)
+  [39/62] ○ XRD Analysis and Lattice Parameters of Li5+xBa_xLa... (0 data points)
+  [40/62] ○ Birke P et al. reference... (0 data points)
+  [41/62] ✓ Composition Dependence of Total Electrical Conduct... (1 data points)
+  [42/62] ○ Discovery and Mechanism of Garnet-like Lithium Con... (0 data points)
+  [43/62] ✓ Total Conductivity and Arrhenius Plots in Figure 6... (3 data points)
+  [44/62] ○ Reference 6... (0 data points)
+  [45/62] ○ Garnet Structure Background and Conflicting Early ... (0 data points)
+  [46/62] ○ Stramare S et al. reference... (0 data points)
+  [47/62] ○ Advanced Characterization and Proposed Li Ion Occu... (0 data points)
+  [48/62] ✓ Challenges with Existing Inorganic Electrolytes... (2 data points)
+  [49/62] ○ Thangadurai V, Kaack H et al. reference... (0 data points)
+  [50/62] ✓ Chemical Modification and Characterization of Garn... (1 data points)
+  [51/62] ✓ Recovered Content... (2 data points)
+  [52/62] ○ Recovered Content... (0 data points)
+  [53/62] ✓ Image... (4 data points)
+  [54/62] ○ Objective of the Present Work... (0 data points)
+  [55/62] ○ Recovered Content... (0 data points)
+  [56/62] ○ Interpretation of AC Impedance Spectra... (0 data points)
+  [57/62] ○ Reference 10... (0 data points)
+  [58/62] ○ Thangadurai V, Adams S et al. reference... (0 data points)
+  [59/62] ○ Compositional Dependence of Resistances (Part 1)... (0 data points)
+  [60/62] ○ Material Preparation Procedure... (0 data points)
+  [61/62] ✓ Optimized Garnet Conductors and Performance Highli... (1 data points)
+  [62/62] ○ Reference 11... (0 data points)
+  → 27 total data points extracted
+
+[Stage 2b] Processing 35 images directly...
+    Warning: Skipping missing image _page_8_Picture_26.jpeg
+    Warning: Skipping missing image _page_3_Figure_10.jpeg
+    Warning: Skipping missing image _page_3_Picture_12.jpeg
+    Warning: Skipping missing image _page_4_Figure_1.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_1_Picture_10.jpeg
+    Warning: Skipping missing image _page_3_Figure_10.jpeg
+    Warning: Skipping missing image _page_2_Figure_1.jpeg
+    Warning: Skipping missing image _page_3_Picture_12.jpeg
+    Warning: Skipping missing image _page_2_Figure_11.jpeg
+    Warning: Skipping missing image _page_4_Figure_1.jpeg
+    Warning: Skipping missing image _page_2_Figure_12.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+    Warning: Skipping missing image _page_2_Picture_14.jpeg
+    Warning: Skipping missing image _page_4_Figure_11.jpeg
+    Warning: Skipping missing image _page_3_Figure_1.jpeg
+    Warning: Skipping missing image _page_4_Picture_13.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_5_Figure_1.jpeg
+    Warning: Skipping missing image _page_2_Figure_11.jpeg
+    Warning: Skipping missing image _page_5_Picture_4.jpeg
+    Warning: Skipping missing image _page_2_Figure_12.jpeg
+    Warning: Skipping missing image _page_5_Figure_8.jpeg
+    Warning: Skipping missing image _page_2_Picture_14.jpeg
+    Warning: Skipping missing image _page_5_Picture_10.jpeg
+    Warning: Skipping missing image _page_3_Figure_1.jpeg
+    Warning: Skipping missing image _page_0_Picture_20.jpeg
+    Warning: Skipping missing image _page_6_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_2.jpeg
+    Warning: Skipping missing image _page_6_Picture_3.jpeg
+    Warning: Skipping missing image _page_3_Figure_5.jpeg
+    Warning: Skipping missing image _page_7_Figure_1.jpeg
+    Warning: Skipping missing image _page_3_Figure_10.jpeg
+    Warning: Skipping missing image _page_7_Picture_11.jpeg
+    Warning: Skipping missing image _page_3_Figure_5.jpeg
+
+Merging: 27 text-based + 0 image-based points.
+  → Running physical heuristic checks on 27 points...
+  → Running LLM semantic verification on 27 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 8 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Abstract / Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li3Nd3Te2O12"
+- "Li3xLa(2/3)-x□(1/3)-2xTiO3"
+- "Li3xLa(2/3)-x□(1/3)-2xTiO3 (x~0.1)"
+- "Li5+xBaxLa3-xTa2O12 (x=0)"
+- "Li5+xBaxLa3-xTa2O12 (x=1.00)"
+- "Li5+xBaxLa3-xTa2O12 (x=1.25)"
+- "Li5+xBaxLa3-xTa2O12 (x=1.50)"
+- "Li5+xBaxLa3-xTa2O12 (x=2.0)"
+- "Li5+xBaxLa3-xTa2O12 (x=2.00)"
+- "Li6.25Ba1.25La1.75Ta2O12 (x=1.25)"
+- "Li6BaLa2Ta2O12"
+- "Li6PS5Cl"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li3Nd3Te2O12', canonical_name='Lithium Neodymium Tellurium Oxide', abbreviation=None, variant_names=['Li3Nd3Te2O12']), CanonicalMaterialName(canonical_formula='Li0.3La0.567TiO3', canonical_name='Lithium Lanthanum Titanate (x=0.1)', abbreviation='LLTO', variant_names=['Li3xLa(2/3)-x□(1/3)-2xTiO3 (x~0.1)']), CanonicalMaterialName(canonical_formula='Li3xLa(2/3)-x□(1/3)-2xTiO3', canonical_name='Lithium Lanthanum Titanate', abbreviation='LLTO', variant_names=['Li3xLa(2/3)-x□(1/3)-2xTiO3']), CanonicalMaterialName(canonical_formula='Li5La3Ta2O12', canonical_name='Lithium Lanthanum Tantalum Oxide (x=0)', abbreviation=None, variant_names=['Li5+xBaxLa3-xTa2O12 (x=0)']), CanonicalMaterialName(canonical_formula='Li6BaLa2Ta2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide (x=1.00)', abbreviation=None, variant_names=['Li5+xBaxLa3-xTa2O12 (x=1.00)', 'Li6BaLa2Ta2O12']), CanonicalMaterialName(canonical_formula='Li6.25Ba1.25La1.75Ta2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide (x=1.25)', abbreviation=None, variant_names=['Li5+xBaxLa3-xTa2O12 (x=1.25)', 'Li6.25Ba1.25La1.75Ta2O12 (x=1.25)']), CanonicalMaterialName(canonical_formula='Li6.5Ba1.5La1.5Ta2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide (x=1.50)', abbreviation=None, variant_names=['Li5+xBaxLa3-xTa2O12 (x=1.50)']), CanonicalMaterialName(canonical_formula='Li7Ba2LaTa2O12', canonical_name='Lithium Barium Lanthanum Tantalum Oxide (x=2.00)', abbreviation=None, variant_names=['Li5+xBaxLa3-xTa2O12 (x=2.0)', 'Li5+xBaxLa3-xTa2O12 (x=2.00)']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation=None, variant_names=['Li6PS5Cl'])]
+  → Created 9 canonical material(s)
+  → Updated 27/27 material names
+  → Normalizing 27 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='5 × 10⁻⁵ S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 5e-05, 'cond_unit': 'S/cm', 'temp_value': 33, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='1.0 × 10⁻⁵ S cm⁻¹', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 33, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 1e-05}
+    [DEBUG Norm] Input: Cond='7.4 × 10⁻⁵ S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 33, 'temp_unit': 'C', 'cond_value': 7.4e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='2.4 × 10⁻⁵ S/cm', Temp='17 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 17, 'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 2.4e-05}
+    [DEBUG Norm] Input: Cond='1.2 × 10⁻⁶ S cm⁻¹', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 33, 'cond_value': 1.2e-06}
+    [DEBUG Norm] Input: Cond='5 × 10⁻⁵ S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 5e-05, 'temp_value': 33}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 1e-06, 'cond_unit': 'S/cm', 'temp_value': 33, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='7.4 × 10⁻⁵ S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 33, 'cond_value': 7.4e-05}
+    [DEBUG Norm] Input: Cond='4.0 × 10⁻⁵ S cm⁻¹', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 4e-05, 'temp_unit': 'C', 'temp_value': 33, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='7.4×10−5 S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 33, 'temp_unit': 'C', 'cond_value': 7.4e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='5.0×10−5 S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 5e-05, 'temp_value': 33, 'cond_unit': 'S/cm', 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='maximum', Temp='various temperatures'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.0001, 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-5 S/cm', Temp='33°C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 1e-05, 'temp_value': 33, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-6 S/cm', Temp='33°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 33, 'temp_unit': 'C', 'cond_value': 1e-06, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻³ S/cm', Temp='27 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0.001, 'temp_value': 27, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='4.0 x 10^-5 S/cm', Temp='33°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'temp_value': 33, 'cond_value': 4e-05}
+    [DEBUG Norm] Input: Cond='4.0 x 10^-5 S/cm', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'cond_value': 4e-05, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='33 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'temp_value': 33, 'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10^-5 S/cm', Temp='600 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'temp_value': 600, 'cond_value': 1e-05}
+    [DEBUG Norm] Input: Cond='10^-6 S cm^-1', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm^-1', 'cond_value': 1e-06, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_value': 0.0011, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='7 × 10⁻⁵ S/cm', Temp='27 °C'
+    [DEBUG Norm] Tool Args: {'temp_value': 27, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 7e-05}
+    [DEBUG Norm] Input: Cond='2.5 x 10^-3 S/cm', Temp='50°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0025, 'temp_value': 50}
+    [DEBUG Norm] Input: Cond='5.0 x 10^-3 S/cm', Temp='75°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 75, 'cond_value': 0.005, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='10^-4 S cm^-1', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'cond_value': 0.0001, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='4×10⁻⁵ Scm⁻¹', Temp='22 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'Scm-1', 'temp_value': 22, 'temp_unit': 'C', 'cond_value': 4e-05}
+    [DEBUG Norm] Input: Cond='8.0 x 10^-3 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_value': 100, 'cond_value': 0.008, 'temp_unit': 'C'}
+
+[Stage 3] Deduplicating 27 data points...
+  → Merged 6 duplicates, 21 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         29
+Total Input:         104,398 tokens
+Total Output:        6,930 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0730
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 29 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure_materials.json
+Time elapsed (s)  90.91707992553711
+
+Statistics:
+  Nodes analyzed: 97
+  Raw data points: 27
+  After dedup: 19
+  Valid: 19, Invalid: 0
+
+By Confidence:
+  high: 15
+  medium: 4
+  low: 0
+
+By Data Source:
+  primary: 15
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li5La3Ta2O12: 1.2 × 10⁻⁶ S cm⁻¹ @ 33 °C [high]
+  ✓ Li6.25Ba1.25La1.75Ta2O12: 4.0 × 10⁻⁵ S cm⁻¹ @ 33 °C [high]
+  ✓ Li7Ba2LaTa2O12: 1.0 × 10⁻⁵ S cm⁻¹ @ 33 °C [high]
+  ✓ Li6.25Ba1.25La1.75Ta2O12: 2.4 × 10⁻⁵ S/cm @ 17 °C [high]
+  ✓ Li6.25Ba1.25La1.75Ta2O12: 5 × 10⁻⁵ S/cm @ 33 °C [high]
+  ... and 14 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1007/s11581-007-0097-8
+                       Composition  Ionic conductivity (S cm-1)
+479   Li42.0Ba2.0La22.0Ta16.0O96.0                     0.000007
+480   Li44.0Ba4.0La20.0Ta16.0O96.0                     0.000014
+481  Li50.0Ba10.0La14.0Ta16.0O96.0                     0.000050
+482  Li52.0Ba12.0La12.0Ta16.0O96.0                     0.000031
+483  Li54.0Ba14.0La10.0Ta16.0O96.0                     0.000012
+484   Li56.0Ba16.0La8.0Ta16.0O96.0                     0.000003
+485        Li40.0La24.0Ta16.0O96.0                     0.000007
+486   Li48.0Ba8.0La16.0Ta16.0O96.0                     0.000029
+Starting Evaluation on 8 Ground Truth Points...
+
+Evaluation Complete: 2/8 Matched (25.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content
+[0;34m[INFO][0m DOI: 10.1007/s11581-007-0097-8
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/lithium_ion_conductivity_of_li5_x_ba_x_la3_x_ta2o12_x_0_2_with_garnet-related_structure_in_dependence_of_the_barium_content_pipeline_20260114_153403.log
+

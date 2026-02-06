@@ -1,0 +1,39 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-10",
+      "extracted_id": "EX-10",
+      "reason": "The normalized chemical formula Li3BiO3 and conductivity 2.4e-10 S/cm match exactly with EX-10, which is reported at 25C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-11",
+      "extracted_id": "EX-11",
+      "reason": "The normalized chemical formula Li5BiO5 and conductivity 3.9e-09 S/cm match exactly with EX-11, which is reported at 25C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-139",
+      "extracted_id": "EX-0",
+      "reason": "The normalized chemical formula LiBiO2 and conductivity 3.8e-08 S/cm match exactly with EX-0, which is reported at 25C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-174",
+      "extracted_id": "EX-13",
+      "reason": "The normalized chemical formula Li3BiO4 and conductivity 4.1e-10 S/cm match exactly with EX-13, which is reported at 25C.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted all four Li-Bi-O compounds from the ground truth, matching their normalized chemical formulas and conductivity values precisely. All matches were found at a consistent temperature of 25C in the extracted data, which is a reasonable assumption for the ground truth measurements.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 21.052631578947366,
+    "f1": 34.78260869565217,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 4,
+    "total_gt": 4,
+    "total_ex": 19
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "doc_name": "inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries",
+  "timestamp": "2026-01-23 09:03:32",
+  "execution_time_seconds": 188.16,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13143,
+    "total_output_tokens": 3310,
+    "total_cost_usd": 0.066,
+    "call_counts": {
+      "gemini-3-pro-preview": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 0,
+    "skipped_images": 8,
+    "failed_items": 6,
+    "total_sections_processed": 15,
+    "total_images_processed": 14
+  },
+  "material_count": 0,
+  "measurements": [],
+  "material_definitions": []
+}

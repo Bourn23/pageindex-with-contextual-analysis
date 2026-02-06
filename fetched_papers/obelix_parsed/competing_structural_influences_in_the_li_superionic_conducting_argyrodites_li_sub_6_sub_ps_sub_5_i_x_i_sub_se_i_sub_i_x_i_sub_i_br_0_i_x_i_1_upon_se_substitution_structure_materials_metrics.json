@@ -1,0 +1,81 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-403",
+      "extracted_id": "EX-5",
+      "reason": "The normalized chemical formula (Li6PS5Br), conductivity (0.00277 S/cm vs 0.0028 S/cm), and temperature (25\u00b0C) are all in excellent agreement.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-404",
+      "extracted_id": "EX-6",
+      "reason": "The normalized chemical formula (Li6PS4.9Se0.1Br), conductivity (0.0032 S/cm), and temperature (25\u00b0C) are all in perfect agreement.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-405",
+      "extracted_id": "EX-12",
+      "reason": "The normalized chemical formula (Li6PS4.8Se0.2Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-406",
+      "extracted_id": "EX-13",
+      "reason": "The normalized chemical formula (Li6PS4.7Se0.3Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-407",
+      "extracted_id": "EX-14",
+      "reason": "The normalized chemical formula (Li6PS4.6Se0.4Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-408",
+      "extracted_id": "EX-10",
+      "reason": "The normalized chemical formula (Li6PS4.5Se0.5Br) and temperature (300 K, equivalent to room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-409",
+      "extracted_id": "EX-16",
+      "reason": "The normalized chemical formula (Li6PS4.4Se0.6Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-410",
+      "extracted_id": "EX-17",
+      "reason": "The normalized chemical formula (Li6PS4.3Se0.7Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-411",
+      "extracted_id": "EX-18",
+      "reason": "The normalized chemical formula (Li6PS4.2Se0.8Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-412",
+      "extracted_id": "EX-19",
+      "reason": "The normalized chemical formula (Li6PS4.1Se0.9Br) and temperature (room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-413",
+      "extracted_id": "EX-11",
+      "reason": "The normalized chemical formula (Li6PS4SeBr) and temperature (300 K, equivalent to room temperature) match. However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "All Ground Truth entries found a corresponding match in the Extracted Data based on normalized chemical formula and physical context (temperature). For most matches, the extracted conductivity value was missing, but the material and context were consistent with the Ground Truth.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 39.285714285714285,
+    "f1": 56.41025641025641,
+    "avg_log10_error": 0.0023391311388853975,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 11,
+    "total_ex": 28
+  }
+}

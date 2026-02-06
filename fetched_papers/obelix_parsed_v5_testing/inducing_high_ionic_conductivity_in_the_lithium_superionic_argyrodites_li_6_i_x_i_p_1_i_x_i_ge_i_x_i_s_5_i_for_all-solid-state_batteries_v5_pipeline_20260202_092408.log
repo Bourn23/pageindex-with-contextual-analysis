@@ -1,0 +1,54 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260202_092408.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP 1-xGe<sup>x</sup> S I for all-solid-state batteries**
+   --- Found: 15 Sections
+   --- Found: 14 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**1. Introduction**' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**3. Results**' contains:
+       - 9 Images: ['Fig 7', 'Fig 4', 'Fig 6', 'Fig 5', 'Fig 9', 'Fig 8', 'Fig 3', 'Fig 2', 'Fig 2']
+
+   >>> Section '**For table of contents only**' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **Acknowledgements**
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 1 items (Text + Images) simultaneously ...
+   🔍 page_14_figure_5.jpeg (Fig 5): Detecting subplot...
+   🔍 page_14_figure_5.jpeg (Fig 5): Detection result: {'is_multi_panel': True, 'subplots': [{'contains_conductivity_data': False, 'x_axis': {'title': 'Re(Z)·d^-1 / kΩ·cm^-1', 'unit': 'kΩ·cm^-1', 'quantity_type': 'other', 'scale_type': 'linear'}, 'left_y_axis': {'title': '-Im(Z)·d^-1 / kΩ·cm^-1', 'unit': 'kΩ·cm^-1', 'quantity_type': 'other', 'scale_type': 'linear'}, 'right_y_axis': None, 'box_2d': [47, 18, 715, 484], 'label': 'a'}, {'contains_conductivity_data': True, 'x_axis': {'title': '1000·T^-1 / K^-1', 'unit': 'K^-1', 'quantity_type': 'temperature_inverse', 'scale_type': 'reciprocal'}, 'left_y_axis': {'title': 'ln(σ·T / K·S·cm^-1)', 'unit': 'K·S·cm^-1', 'quantity_type': 'conductivity', 'scale_type': 'log'}, 'right_y_axis': None, 'box_2d': [44, 545, 955, 992], 'label': 'b'}]}
+   ✂️ page_14_figure_5.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_14_figure_5.jpeg (Fig 5): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+>> DEBUG : Detection Data in multi plot (after filtering):  {'contains_conductivity_data': True, 'x_axis': {'title': '1000·T^-1 / K^-1', 'unit': 'K^-1', 'quantity_type': 'temperature_inverse', 'scale_type': 'reciprocal'}, 'left_y_axis': {'title': 'ln(σ·T / K·S·cm^-1)', 'unit': 'K·S·cm^-1', 'quantity_type': 'conductivity', 'scale_type': 'log'}, 'right_y_axis': None, 'box_2d': [44, 545, 955, 992], 'label': 'b'}
+Passing box coords  [44, 545, 955, 992]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/scifig_debug/page_14_figure_5_cropped_b.jpeg
+   ⚠️ page_14_figure_5.jpeg: SciFigureParser failed: 2 validation errors for MeasuredPoint
+raw_conductivity
+  Input should be a valid string [type=string_type, input_value=np.float64(0.0030887154082367687), input_type=float64]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+raw_temperature
+  Input should be a valid string [type=string_type, input_value=25.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type. Falling back to standard processing...
+[0;31m[ERROR][0m Failed during extraction step

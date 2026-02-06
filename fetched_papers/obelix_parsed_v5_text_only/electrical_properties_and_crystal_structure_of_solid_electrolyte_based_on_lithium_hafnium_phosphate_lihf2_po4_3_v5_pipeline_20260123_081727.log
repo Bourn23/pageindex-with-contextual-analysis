@@ -1,0 +1,118 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260123_081727.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2 (PO4)3**
+   --- Found: 11 Sections
+   --- Found: 13 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '*3.1. Crystal structure of LiHf2(P04)3*' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '*3.2. LiHf2(P04)3 + yLi20 system*' contains:
+       - 8 Images: ['Fig 6', 'Fig 5', 'Fig 7', 'Fig 5s', 'Fig 2', 'Fig 4', 'Fig 3', 'Fig 3']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*' contains:
+       - 3 Images: ['Fig 9', 'Fig 8', 'Fig 10']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 10 items (Text + Images) simultaneously ...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 3 measurements
+      - Skipped (no data): 7 images
+      - Failed: 0 items
+
+Done! Extracted 3 points.
+Saved to: fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         10
+Total Input:         7,604 tokens
+Total Output:        9,726 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0266
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 10 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/0167-2738(93)90387-i
+GT-318: Li6.0Hf12.0P18.0O72.0 | 6.85e-07 S/cm
+GT-319: Li6.6Fe0.6Hf11.4P18.0O72.0 | 0.000107 S/cm
+GT-320: Li6.6In0.6Hf11.4P18.0O72.0 | 5.13e-05 S/cm
+GT-321: Li6.6Lu0.6Hf11.4P18.0O72.0 | 5.88e-05 S/cm
+GT-322: Li6.6Sc0.6Hf11.4P18.0O72.0 | 2.45e-05 S/cm
+GT-323: Li7.2Lu1.2Hf10.8P18.0O72.0 | 9.79e-05 S/cm
+GT-324: Li7.8Cr1.8Hf10.2P18.0O72.0 | 5.26e-07 S/cm
+GT-325: Li7.8Fe1.8Hf10.2P18.0O72.0 | 5.4e-05 S/cm
+GT-326: Li7.8In1.8Hf10.2P18.0O72.0 | 0.000142 S/cm
+GT-327: Li7.8Lu1.8Hf10.2P18.0O72.0 | 3.56e-05 S/cm
+GT-328: Li7.8Sc1.8Hf10.2P18.0O72.0 | 8.32e-05 S/cm
+GT-329: Li7.8Y1.8Hf10.2P18.0O72.0 | 3.19e-05 S/cm
+GT-330: Li8.4In2.4Hf9.6P18.0O72.0 | 0.000142 S/cm
+GT-331: Li8.4Lu2.4Hf9.6P18.0O72.0 | 2.06e-05 S/cm
+GT-332: Li8.4Y2.4Hf9.6P18.0O72.0 | 2.09e-05 S/cm
+--- Starting Validation ---
+Comparing 15 GT items vs 82 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-318     | ❌ MISSING/BAD   | The ground truth composition Li6.0Hf12.0P18.0O72.0 and conductivity 6.85e-07 S/cm were not found in the extracted data.
+GT-319     | ❌ MISSING/BAD   | The ground truth composition Li6.6Fe0.6Hf11.4P18.0O72.0 was not found in the extracted data. Although the conductivity 0.000107 S/cm is an approximate match for extracted 0.00011 S/cm, the compositions are different.
+GT-320     | ❌ MISSING/BAD   | The ground truth composition Li6.6In0.6Hf11.4P18.0O72.0 and conductivity 5.13e-05 S/cm were not found in the extracted data.
+GT-321     | ❌ MISSING/BAD   | The ground truth composition Li6.6Lu0.6Hf11.4P18.0O72.0 and conductivity 5.88e-05 S/cm were not found in the extracted data.
+GT-322     | ❌ MISSING/BAD   | The ground truth composition Li6.6Sc0.6Hf11.4P18.0O72.0 and conductivity 2.45e-05 S/cm were not found in the extracted data.
+GT-323     | ❌ MISSING/BAD   | The ground truth composition Li7.2Lu1.2Hf10.8P18.0O72.0 was not found in the extracted data. The extracted composition Li1.2Fe0.2Hf1.8(PO4)3 (normalized to Li7.2Fe1.2Hf10.8P18O72) has a different M element (Fe vs Lu).
+GT-324     | ❌ MISSING/BAD   | The ground truth composition Li7.8Cr1.8Hf10.2P18.0O72.0 and conductivity 5.26e-07 S/cm were not found in the extracted data.
+GT-325     | ❌ MISSING/BAD   | The ground truth composition Li7.8Fe1.8Hf10.2P18.0O72.0 and conductivity 5.4e-05 S/cm were not found in the extracted data.
+GT-326     | ❌ MISSING/BAD   | The ground truth composition Li7.8In1.8Hf10.2P18.0O72.0 was not found in the extracted data. Although the conductivity 0.000142 S/cm is somewhat close to extracted 0.00017 S/cm, the compositions are different.
+GT-327     | ❌ MISSING/BAD   | The ground truth composition Li7.8Lu1.8Hf10.2P18.0O72.0 and conductivity 3.56e-05 S/cm were not found in the extracted data.
+GT-328     | ❌ MISSING/BAD   | The ground truth composition Li7.8Sc1.8Hf10.2P18.0O72.0 and conductivity 8.32e-05 S/cm were not found in the extracted data.
+GT-329     | ❌ MISSING/BAD   | The ground truth composition Li7.8Y1.8Hf10.2P18.0O72.0 and conductivity 3.19e-05 S/cm were not found in the extracted data.
+GT-330     | ❌ MISSING/BAD   | The ground truth composition Li8.4In2.4Hf9.6P18.0O72.0 was not found in the extracted data. Although the conductivity 0.000142 S/cm is somewhat close to extracted 0.00017 S/cm, the compositions are different.
+GT-331     | ❌ MISSING/BAD   | The ground truth composition Li8.4Lu2.4Hf9.6P18.0O72.0 and conductivity 2.06e-05 S/cm were not found in the extracted data.
+GT-332     | ❌ MISSING/BAD   | The ground truth composition Li8.4Y2.4Hf9.6P18.0O72.0 and conductivity 2.09e-05 S/cm were not found in the extracted data.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m DOI: 10.1016/0167-2738(93)90387-i
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260123_081727.log
+

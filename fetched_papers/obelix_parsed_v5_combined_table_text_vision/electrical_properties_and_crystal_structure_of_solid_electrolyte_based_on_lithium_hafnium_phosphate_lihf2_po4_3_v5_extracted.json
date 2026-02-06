@@ -1,0 +1,1376 @@
+{
+  "doc_name": "electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3",
+  "timestamp": "2026-02-03 10:56:59",
+  "execution_time_seconds": 254.1,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 8486,
+    "total_output_tokens": 14225,
+    "total_cost_usd": 0.0381,
+    "call_counts": {
+      "gemini-flash-latest": 12
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 73,
+    "skipped_images": 7,
+    "failed_items": 1,
+    "total_sections_processed": 11,
+    "total_images_processed": 3
+  },
+  "material_count": 73,
+  "measurements": [
+    {
+      "raw_composition": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "The electrical properties and the crystal structure were investigated for the ceramic electrolytes based on LiHf2(PO4)3.",
+        "The conductivity enhanced by the Li2O addition with LiHf2(PO4)3 system and by the increase of x for Li(1+x)M(x)Hf(2-x)(PO4)3 (M = Cr, Fe, Sc, In, Lu or Y) systems.",
+        "The P21/n monoclinic phase transformed to NASICON-type R3c rhombohedral phase at above 1173 K."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The material series is LiHf2(PO4)3+yLi2O.",
+        "Li2O addition acts as a flux to achieve high-density samples.",
+        "Sintering above 1293 K induces a phase transition from the monoclinic phase (P21/n) to the highly conductive NASICON-type rhombohedral phase (R3c).",
+        "The conductivity enhancement is attributed to both the phase formation and decreased porosity.",
+        "This specific sample achieved maximum total conductivity when sintered at 1298 K."
+      ],
+      "raw_conductivity": "1.1e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00011,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Fig. 6",
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li 1.2Feo.zHfl.8 (PO4) 3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8P3O12",
+      "material_definitions": [
+        "The materials are ceramic electrolytes based on LiHf2(PO4)3, forming the NASICON-type R3c structure.",
+        "The series is Li(1+x)M(x)Hf(2-x)(PO4)3 where M=Cr, Fe, Sc, In, Lu, or Y.",
+        "Samples were sintered above 1293 K to obtain high density and maximum conductivity.",
+        "The conductivity enhancement is due to high densification and decreased activation energy at the grain boundary."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Fig. 10",
+      "source_caption": "The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e).",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Raw conductivity unit was written as 'S.cm-4' in one instance, but 'S.cm-1' in the summarizing conclusion; S.cm-1 was used as it is chemically plausible."
+      ]
+    },
+    {
+      "raw_composition": "LiTi2(PO4)'3 systems",
+      "canonical_formula": "LiTi2P3O12",
+      "material_definitions": [
+        "This conductivity value serves as a reference point for comparison with LiHf2(PO4)3 systems.",
+        "The activation energy for the bulk component of this system is reported as 0.30 eV."
+      ],
+      "raw_conductivity": "7.0e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is cited from external references [10, 11].",
+        "Temperature (298 K) is inferred based on comparison with the preceding measurement in the text."
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.83",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.83,
+      "raw_temperature": "1.71",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.71,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.8300 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.55,
+      "raw_temperature": "1.9",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.9,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.5500 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.08",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.08,
+      "raw_temperature": "2.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.15,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.25,
+      "raw_temperature": "2.36",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.36,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.50e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.6",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.6,
+      "raw_temperature": "2.56",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.56,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.00e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.0",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.0,
+      "raw_temperature": "2.8",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.8,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.00e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.45,
+      "raw_temperature": "3.06",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.06,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1293 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.92",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.92,
+      "raw_temperature": "3.31",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.31,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1293 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.92e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.41",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.41,
+      "raw_temperature": "1.68",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.68,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.05",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.05,
+      "raw_temperature": "1.88",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.88,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.28",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.28,
+      "raw_temperature": "2.05",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.05,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.80e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.78",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.78,
+      "raw_temperature": "2.36",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.36,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.80e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.22",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.22,
+      "raw_temperature": "2.61",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.61,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.22e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.65",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.65,
+      "raw_temperature": "2.86",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.86,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.65e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.05",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.05,
+      "raw_temperature": "3.1",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.1,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.05e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1393 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.2",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.2,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.2,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1393 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.20e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.8",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.8,
+      "raw_temperature": "1.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.7,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (0.8000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.35",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.35,
+      "raw_temperature": "1.9",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.9,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.15,
+      "raw_temperature": "2.05",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.05,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.50e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.08",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.08,
+      "raw_temperature": "2.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.35,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.08e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.85",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.85,
+      "raw_temperature": "2.59",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.59,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.85e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.55,
+      "raw_temperature": "2.81",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.81,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.55e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.25,
+      "raw_temperature": "3.06",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.06,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.25e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1173 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.08",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.08,
+      "raw_temperature": "3.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.3,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1173 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.08e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.48",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.48,
+      "raw_temperature": "1.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.7,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.12",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.12,
+      "raw_temperature": "1.78",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.78,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.1,
+      "raw_temperature": "1.89",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.89,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.00e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.9",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.9,
+      "raw_temperature": "2.11",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.11,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-9.00e-01)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.82",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.82,
+      "raw_temperature": "2.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.35,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.82e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.55,
+      "raw_temperature": "2.62",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.62,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.55e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.32",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.32,
+      "raw_temperature": "2.88",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.88,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.32e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.1,
+      "raw_temperature": "3.1",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.1,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.10e+00)"
+      ]
+    },
+    {
+      "raw_composition": "1073 K",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.75",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.75,
+      "raw_temperature": "3.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.3,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. The  $\\sigma T - 1/T$  relation for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+0.3Li<sub>2</sub>O samples. [Series: 1073 K] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.75e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-8.52",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -8.52,
+      "raw_temperature": "1175.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 901.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-8.52e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-8.52",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -8.52,
+      "raw_temperature": "1300.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1026.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-8.52e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-8.7",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -8.7,
+      "raw_temperature": "1400.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1126.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-8.70e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.78",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.78,
+      "raw_temperature": "1445.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1171.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.78e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.65",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.65,
+      "raw_temperature": "1495.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1221.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.65e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.42",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.42,
+      "raw_temperature": "1545.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1271.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.42e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.11",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.11,
+      "raw_temperature": "1595.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1321.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.11e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-7.68",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.68,
+      "raw_temperature": "1075.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 801.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.68e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-7.02",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.02,
+      "raw_temperature": "1125.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 851.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.02e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.13",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.13,
+      "raw_temperature": "1175.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 901.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.13e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.94",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.94,
+      "raw_temperature": "1285.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1011.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.94e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.22",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.22,
+      "raw_temperature": "1380.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1106.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.1] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.22e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.94",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.94,
+      "raw_temperature": "1075.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 801.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.94e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.54",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.54,
+      "raw_temperature": "1118.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 844.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.54e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.97",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.97,
+      "raw_temperature": "1175.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 901.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.97e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.45,
+      "raw_temperature": "1235.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 961.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.41",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.41,
+      "raw_temperature": "1285.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1011.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.41e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.94",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.94,
+      "raw_temperature": "1400.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1126.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.94e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-7.28",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -7.28,
+      "raw_temperature": "1075.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 801.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.28e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.5,
+      "raw_temperature": "1175.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 901.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.68",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.68,
+      "raw_temperature": "1235.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 961.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.68e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.54",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.54,
+      "raw_temperature": "1290.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1016.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.54e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.82",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.82,
+      "raw_temperature": "1385.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1111.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.82e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.4",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -6.5,
+      "raw_temperature": "1175.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 901.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.4",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-5.44",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.44,
+      "raw_temperature": "1235.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 961.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.44e+00)"
+      ]
+    },
+    {
+      "raw_composition": "y=0.4",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.44",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.44,
+      "raw_temperature": "1290.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1016.85,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Relationship between the total conductivity at 298 K and the sintered temperature for LiHf<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>+yLi<sub>2</sub>O system: y=0 ( $\\spadesuit$ ); 0.1 ( $\\blacktriangle$ ); 0.2 ( $\\blacktriangledown$ ); 0.3 ( $\\blacksquare$ ); 0.4 ( $\\spadesuit$ ). [Series: y=0.4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.44e+00)"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.43",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "Arrhenius plot",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Bulk conduction"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.56",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "Arrhenius plot",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Grain boundary conduction"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O",
+      "canonical_formula": "Li1.2Hf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.42,
+      "raw_temperature": "223 K to room temperature",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Bulk conduction"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O",
+      "canonical_formula": "Li1.2Hf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.47",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.47,
+      "raw_temperature": "223 K to room temperature",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Grain boundary conduction"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.2Li2O",
+      "canonical_formula": "Li1.4Hf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.42,
+      "raw_temperature": "223 K to room temperature",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Bulk conduction"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.2Li2O",
+      "canonical_formula": "Li1.4Hf2(PO4)3",
+      "material_definitions": [
+        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
+        "These compounds adopt a rhombohedral crystal structure.",
+        "The data extracted represents the activation energy for Li+ conduction."
+      ],
+      "raw_conductivity": "0.48",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.48,
+      "raw_temperature": "223 K to room temperature",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Extracted activation energy (Ea) instead of conductivity",
+        "Value corresponds to Grain boundary conduction"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "N/A",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value extracted is activation energy, not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "N/A",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value extracted is activation energy, not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.2In0.2Hf1.8(PO4)3",
+      "canonical_formula": "Li1.2In0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.41",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "N/A",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value extracted is activation energy, not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3In0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "0.43",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "N/A",
+      "raw_temperature_unit": "N/A",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value extracted is activation energy, not ionic conductivity."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

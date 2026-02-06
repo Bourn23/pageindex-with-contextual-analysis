@@ -1,0 +1,63 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-148",
+      "extracted_id": null,
+      "reason": "After normalizing GT-148 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.99Al0.01O2.99F0.01 with 0.00098 S/cm, no exact match was found in the extracted data. EX-1 has Al0.02F0.02, which is different from Al0.01F0.01.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-149",
+      "extracted_id": "EX-1",
+      "reason": "After normalizing GT-149 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.98Al0.02O2.98F0.02, it perfectly matches the stoichiometry of EX-1. The conductivity values (0.00106 S/cm) also match exactly.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-150",
+      "extracted_id": null,
+      "reason": "After normalizing GT-150 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.97Al0.03O2.97F0.03 with 0.000928 S/cm, no exact match was found in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-151",
+      "extracted_id": null,
+      "reason": "After normalizing GT-151 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.96Al0.04O2.96F0.04 with 0.000622 S/cm, no exact match was found in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-152",
+      "extracted_id": null,
+      "reason": "After normalizing GT-152 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.95Al0.05O2.95F0.05 with 0.000176 S/cm, no exact match was found in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-153",
+      "extracted_id": null,
+      "reason": "After normalizing GT-153 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.94Al0.06O2.94F0.06 with 0.000106 S/cm, no exact match was found in the extracted data. EX-3 is a general formula with F0.02 and no Al, which does not match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-154",
+      "extracted_id": null,
+      "reason": "After normalizing GT-154 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.93Al0.07O2.93F0.07 with 0.000645 S/cm, no exact match was found in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-155",
+      "extracted_id": null,
+      "reason": "After normalizing GT-155 (dividing all stoichiometries by 2) to Li0.33La0.56Ti0.92Al0.08O2.92F0.08 with 0.000494 S/cm, no exact match was found in the extracted data.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Only one exact match (GT-149 to EX-1) was found after normalizing the ground truth stoichiometries by a factor of 2 to align with the scale of the extracted data. The other ground truth entries, while part of a clear compositional series, did not have corresponding specific entries in the extracted data. General formulas in the extracted data were not considered matches for specific ground truth compositions.",
+  "metrics": {
+    "recall": 12.5,
+    "precision": 16.666666666666664,
+    "f1": 14.285714285714285,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 8,
+    "total_ex": 6
+  }
+}

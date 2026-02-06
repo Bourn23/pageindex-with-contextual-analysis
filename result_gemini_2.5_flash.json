@@ -1,0 +1,114 @@
+{
+  "title": "An Arrhenius plot of the ionic conductivity for Li0.5La0.5-xLixTiO3 (x = 0, 0.05, 0.10, 0.20, 0.30)",
+  "xAxis": {
+    "label": "1000T\u207b\u00b9",
+    "unit": "K\u207b\u00b9"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T",
+    "unit": "S cm\u207b\u00b9 K\u207b\u00b9)"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.66,
+      "yValue": 1.75
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.86,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.08,
+      "yValue": -0.05
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.36,
+      "yValue": -1.45
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.66,
+      "yValue": 1.5
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.86,
+      "yValue": 0.55
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.08,
+      "yValue": -0.4
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.36,
+      "yValue": -1.75
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.66,
+      "yValue": 1.3
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.86,
+      "yValue": 0.35
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.08,
+      "yValue": -0.6
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.36,
+      "yValue": -1.9
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.66,
+      "yValue": 1.15
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.86,
+      "yValue": 0.2
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.08,
+      "yValue": -0.85
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.36,
+      "yValue": -2.1
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.66,
+      "yValue": 0.85
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.86,
+      "yValue": 0.05
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.08,
+      "yValue": -1.1
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.36,
+      "yValue": -2.3
+    }
+  ],
+  "summary": "The figure presents Arrhenius plots of the ionic conductivity for Li0.5La0.5-xLixTiO3, showing the natural logarithm of the product of conductivity and temperature (ln(\u03c3T)) against the inverse of temperature (1000T\u207b\u00b9) for different 'x' values (0, 0.05, 0.10, 0.20, 0.30). All series exhibit a linear trend, consistent with Arrhenius behavior. A clear trend shows that as the 'x' value increases, the ionic conductivity generally decreases across the observed temperature range, indicated by the downward shift of the data lines."
+}

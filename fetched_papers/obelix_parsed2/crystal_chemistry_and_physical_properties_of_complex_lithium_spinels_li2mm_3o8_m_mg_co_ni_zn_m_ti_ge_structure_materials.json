@@ -1,0 +1,74 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 88095,
+    "total_output_tokens": 1265,
+    "total_cost_usd": 0.0478425,
+    "call_counts": {
+      "gemini-3-flash-preview": 5
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/crystal_chemistry_and_physical_properties_of_complex_lithium_spinels_li2mm_3o8_m_mg_co_ni_zn_m_ti_ge_structure.json",
+  "extraction_stats": {
+    "total_nodes": 75,
+    "raw_extracted": 3,
+    "after_dedup": 1,
+    "time_elapsed": 30.981409072875977,
+    "valid_count": 1,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 1,
+      "medium": 0,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 1,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 3,
+    "from_image_nodes": 0,
+    "final_count": 1
+  },
+  "material_count": 1,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the abstract image which shows the ionic conductivity of the Li6PS5Cl argyrodite electrolyte at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0004",
+        "title": "Abstract Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25
+    }
+  ]
+}

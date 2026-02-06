@@ -1,0 +1,289 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_pipeline_20260114_145010.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: **Abstract**
+  -> Started Section: 3.2. <sup>7</sup>Li NMR experiments
+  -> Started Section: 3.3. *Electrical conductivity*
+  -> Started Section: Abstract / Introduction
+  -> Started Section: 5. Conclusions
+  -> Started Section: Acknowledgements
+  -> Started Section: References
+  ✓ Finished Section: Acknowledgements
+  🔍 Checking placeholder: '__IMG_a0179e74__'
+  ✅ Found Special Node: __IMG_a0179e74__
+  🔍 Checking placeholder: '__IMG_28aa1b6b__'
+  ✅ Found Special Node: __IMG_28aa1b6b__
+  ✓ Finished Section: 5. Conclusions
+  ✓ Finished Section: Introduction
+  🔍 Checking placeholder: '__IMG_fc343e17__'
+  ✅ Found Special Node: __IMG_fc343e17__
+  🔍 Checking placeholder: '__IMG_4cb0a3b5__'
+  ✅ Found Special Node: __IMG_4cb0a3b5__
+  ✓ Finished Section: 3.2. <sup>7</sup>Li NMR experiments
+  🔍 Checking placeholder: '__TBL_3198e17c__'
+  ✅ Found Special Node: __TBL_3198e17c__
+  🔍 Checking placeholder: '__IMG_86385fbb__'
+  ✅ Found Special Node: __IMG_86385fbb__
+  🔍 Checking placeholder: '__TBL_6086be76__'
+  ✅ Found Special Node: __TBL_6086be76__
+⚠️ Warning: LLM dropped sentences [12] in '3.3. *Electrical conductivity*'. Auto-recovering...
+  🔍 Checking placeholder: '__IMG_61fbcdb4__'
+  ✅ Found Special Node: __IMG_61fbcdb4__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: 3.3. *Electrical conductivity*
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__IMG_347c7c26__'
+  ✅ Found Special Node: __IMG_347c7c26__
+  ✓ Finished Section: Abstract / Introduction
+  ⚠️ Timeout (Attempt 2/3). Retrying in 4s...
+  ⚠️ Timeout (Attempt 2/3). Retrying in 4s...
+  ✓ Finished Section: References
+  ⚠️ Timeout (Attempt 3/3). Retrying in 8s...
+Grouping failed for **Abstract**: Failed to get LLM response after 3 retries.
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ⚠️ Timeout (Attempt 2/3). Retrying in 4s...
+  ⚠️ Timeout (Attempt 3/3). Retrying in 8s...
+Error in group 'General': Failed to get LLM response after 3 retries.
+  🔍 Checking placeholder: '__IMG_65cd4cc3__'
+  ✅ Found Special Node: __IMG_65cd4cc3__
+  ✓ Finished Section: **Abstract**
+  ✓ Re-indexed 334 structural nodes.
+  ✓ Mapped 208 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 52 text nodes and 8 image nodes.
+
+[Stage 2] Extracting from 52 relevant nodes...
+  [1/52] ○ Reference A... (0 data points)
+  [2/52] ○ Reference B... (0 data points)
+  [3/52] ○ NMR Study of Lithium Mobility and Sites... (0 data points)
+  [4/52] ○ Electrical Conductivity Properties... (0 data points)
+  [5/52] ○ [20]... (0 data points)
+  [6/52] ○ General 7Li NMR Spectra Description... (0 data points)
+  [7/52] ○ Detailed 7Li NMR Analysis by Sample Type and Mobil... (0 data points)
+  [8/52] ○ [13]... (0 data points)
+  [9/52] ○ [21]... (0 data points)
+  [10/52] ○ Financial Support... (0 data points)
+  [11/52] ✓ General... (1 data points)
+  [12/52] ○ Reference 1... (0 data points)
+  [13/52] ○ Figure 2: XRD Patterns... (0 data points)
+  [14/52] ○ [22]... (0 data points)
+  [15/52] ○ [4]... (0 data points)
+  [16/52] ○ Lithium Mobility and Spectral Line Shapes... (0 data points)
+  [17/52] ○ [3]... (0 data points)
+  [18/52] ○ Figure 3: 7Li NMR Spectra and Explanations... (0 data points)
+  [19/52] ○ [23]... (0 data points)
+  [20/52] ○ [2]... (0 data points)
+  [21/52] ○ [5]... (0 data points)
+  [22/52] ○ [24]... (0 data points)
+  [23/52] ○ [25]... (0 data points)
+  [24/52] ○ Room Temperature DC-Conductivity Introduction... (0 data points)
+  [25/52] ○ [6]... (0 data points)
+  [26/52] ○ [26]... (0 data points)
+  [27/52] ○ Room Temperature Conductivity Trend Summary... (0 data points)
+  [28/52] ○ [18]... (0 data points)
+  [29/52] ○ [7]... (0 data points)
+  [30/52] ○ [8]... (0 data points)
+  [31/52] ✓ Temperature Dependence Introduction and Specifics... (1 data points)
+  [32/52] ○ [27]... (0 data points)
+  [33/52] ○ Detailed Temperature Dependence Analysis... (0 data points)
+  [34/52] ○ [9]... (0 data points)
+  [35/52] ○ [10]... (0 data points)
+  [36/52] ○ Structural Characterization and Phase Transitions... (0 data points)
+  [37/52] ○ Rietveld Refinement and Atomic Parameters... (0 data points)
+  [38/52] ○ [11]... (0 data points)
+  [39/52] ○ Lithium NMR Spectroscopy... (0 data points)
+  [40/52] ○ [12]... (0 data points)
+  [41/52] ○ [14]... (0 data points)
+  [42/52] ○ Activation Energy and Future Work... (0 data points)
+  [43/52] ○ [16]... (0 data points)
+  [44/52] ○ Journal Information... (0 data points)
+  [45/52] ✓ Ionic Conductivity and Transport Mechanisms... (1 data points)
+  [46/52] ○ Introduction to the Study... (0 data points)
+  [47/52] ○ Structural Characteristics and Vacancy Distributio... (0 data points)
+  [48/52] ✓ Front Matter Image... (1 data points)
+  [49/52] ○ [17]... (0 data points)
+  [50/52] ○ Article Title, Authors, and Affiliations... (0 data points)
+  [51/52] ✓ Recovered Content... (4 data points)
+  [52/52] ✓ Front Matter Image... (2 data points)
+  → 10 total data points extracted
+
+[Stage 2b] Processing 8 images directly...
+    Warning: Skipping missing image _page_4_Figure_9.jpeg
+    Warning: Skipping missing image _page_0_Picture_2.jpeg
+    Warning: Skipping missing image _page_0_Picture_0.jpeg
+    Warning: Skipping missing image _page_5_Figure_5.jpeg
+    Warning: Skipping missing image _page_2_Figure_2.jpeg
+    Warning: Skipping missing image _page_7_Figure_2.jpeg
+    Warning: Skipping missing image _page_3_Figure_9.jpeg
+    Warning: Skipping missing image _page_4_Figure_2.jpeg
+
+Merging: 10 text-based + 0 image-based points.
+  → Running physical heuristic checks on 10 points...
+  → Running LLM semantic verification on 10 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 7 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "La2/3-xLi3xTiO3 (tetragonal phase)"
+- "Li5.5PS4.5Cl1.5 (Cl-rich)"
+- "Li6PS5Cl"
+- "Lithium Lanthanum Titanate (La series)"
+- "Lithium-containing sample (x=0.13)"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='La2/3-xLi3xTiO3 (x=0.13)', canonical_name='Lithium Lanthanum Titanate (x=0.13)', abbreviation='LLTO', variant_names=['La2/3-xLi3xTiO3 (tetragonal phase)', 'Lithium Lanthanum Titanate (La series)', 'Lithium-containing sample (x=0.13)']), CanonicalMaterialName(canonical_formula='Li5.5PS4.5Cl1.5', canonical_name='Lithium Phosphorus Sulfide Chloride (Chlorine-rich)', abbreviation=None, variant_names=['Li5.5PS4.5Cl1.5 (Cl-rich)']), CanonicalMaterialName(canonical_formula='Li6PS5Cl', canonical_name='Lithium Phosphorus Sulfide Chloride', abbreviation='LPSCl', variant_names=['Li6PS5Cl'])]
+  → Created 3 canonical material(s)
+  → Updated 10/10 material names
+  → Normalizing 10 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='enhanced by a factor about 2', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 2, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='10⁻³ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S cm⁻¹', 'cond_value': 0.001, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='3.2 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0032}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'temp_unit': 'C', 'cond_value': 0.0011, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.0011, 'temp_value': 25, 'temp_unit': 'C', 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.01, 'temp_unit': 'C', 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='2.0 x 10^-2 S/cm', Temp='100°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.02, 'temp_value': 100}
+    [DEBUG Norm] Input: Cond='1.1 x 10^-3 S/cm', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0.0011, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.0 x 10^-1 S/cm', Temp='150°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.1, 'cond_unit': 'S/cm', 'temp_value': 150, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='maximum value', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+
+[Stage 3] Deduplicating 10 data points...
+  → Merged 2 duplicates, 8 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Imputed general method for 1 missing items.
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         12
+Total Input:         61,818 tokens
+Total Output:        3,217 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0406
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 12 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure_materials.json
+Time elapsed (s)  46.92259383201599
+
+Statistics:
+  Nodes analyzed: 60
+  Raw data points: 10
+  After dedup: 7
+  Valid: 7, Invalid: 0
+
+By Confidence:
+  high: 5
+  medium: 2
+  low: 0
+
+By Data Source:
+  primary: 4
+  cited: 0
+  inferred: 1
+
+Sample data points:
+  ✓ LPSCl: 1.1 x 10^-3 S/cm @ 25°C [high]
+  ✓ LPSCl: 1.0 x 10^-2 S/cm @ 100°C [high]
+  ✓ Li5.5PS4.5Cl1.5: 3.2 x 10^-3 S/cm @ 25°C [high]
+  ✓ Li5.5PS4.5Cl1.5: 2.0 x 10^-2 S/cm @ 100°C [high]
+  ✓ LPSCl: 1.0 x 10^-1 S/cm @ 150°C [high]
+  ... and 2 more
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/s0167-2738(00)00761-x
+               Composition  Ionic conductivity (S cm-1)
+79   La1.28Li0.16Ti2.0O6.0                     0.000335
+80   La1.24Li0.28Ti2.0O6.0                     0.000442
+81   La1.19Li0.43Ti2.0O6.0                     0.000853
+157  La1.13Li0.61Ti2.0O6.0                     0.000957
+158    La1.0Li1.0Ti2.0O6.0                     0.000925
+Starting Evaluation on 5 Ground Truth Points...
+
+Evaluation Complete: 0/5 Matched (0.0%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167
+[0;34m[INFO][0m DOI: 10.1016/s0167-2738(00)00761-x
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/influence_of_composition_on_the_structure_and_conductivity_of_the_fast_ionic_conductors_la2_3_xli3xtio3_0_03_x_0_167_pipeline_20260114_145010.log
+

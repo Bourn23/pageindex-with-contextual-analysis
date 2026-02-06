@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-443",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.6Sr0.06Li0.06Ti1.0O3.0 is a Sr-doped Lithium Lanthanum Titanate. None of the extracted formulas provide a general or specific match for this composition. EX-1 is undoped LLTO, EX-2 has a fixed La:Li ratio (1:1) not present here, and EX-3 has a fixed Li content (0.3) which does not match (0.06).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-444",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.56Sr0.1Li0.1Ti1.0O3.0 is a Sr-doped Lithium Lanthanum Titanate. None of the extracted formulas provide a general or specific match for this composition. EX-1 is undoped LLTO, EX-2 has a fixed La:Li ratio (1:1) not present here, and EX-3 has a fixed Li content (0.3) which does not match (0.1).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-445",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.51Sr0.15Li0.15Ti1.0O3.0 is a Sr-doped Lithium Lanthanum Titanate. None of the extracted formulas provide a general or specific match for this composition. EX-1 is undoped LLTO, EX-2 has a fixed La:Li ratio (1:1) not present here, and EX-3 has a fixed Li content (0.3) which does not match (0.15).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-446",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.41Sr0.25Li0.25Ti1.0O3.0 is a Sr-doped Lithium Lanthanum Titanate. None of the extracted formulas provide a general or specific match for this composition. EX-1 is undoped LLTO, EX-2 has a fixed La:Li ratio (1:1) not present here, and EX-3 has a fixed Li content (0.3) which does not match (0.25).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-447",
+      "extracted_id": null,
+      "reason": "The ground truth composition La0.39Sr0.28Li0.28Ti1.0O3.0 is a Sr-doped Lithium Lanthanum Titanate. None of the extracted formulas provide a general or specific match for this composition. EX-1 is undoped LLTO, EX-2 has a fixed La:Li ratio (1:1) not present here, and EX-3 has a fixed Li content (0.3) which does not match (0.28).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-448",
+      "extracted_id": "EX-3",
+      "reason": "The ground truth composition La0.36Sr0.3Li0.3Ti1.0O3.0 closely matches the general formula EX-3: La0.57-2x/3SrxLi0.3TiO3. Setting x=0.3 in EX-3 yields La0.37Sr0.3Li0.3TiO3. The Sr and Li stoichiometries are exact, and the La stoichiometry (0.36 vs 0.37) is very close, within acceptable tolerance for formula matching. The physical context (room temperature/300K) also matches.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted one specific composition (GT-448) that closely matched a parameterized formula (EX-3) with consistent temperature context. However, it failed to identify or represent the other five Sr-doped Lithium Lanthanum Titanate compositions from the ground truth, as the other extracted formulas were either too general (EX-0, EX-1) or had specific stoichiometric constraints (EX-2, EX-3 for other Li values) that did not align with the remaining GT entries.",
+  "metrics": {
+    "recall": 16.666666666666664,
+    "precision": 25.0,
+    "f1": 20.0,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 0.0,
+    "num_valid_numeric_matches": 0,
+    "total_gt": 6,
+    "total_ex": 4
+  }
+}

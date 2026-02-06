@@ -1,0 +1,747 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 159142,
+    "total_output_tokens": 9326,
+    "total_cost_usd": 0.10754899999999995,
+    "call_counts": {
+      "gemini-3-flash-preview": 44
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i_structure.json",
+  "extraction_stats": {
+    "total_nodes": 65,
+    "raw_extracted": 31,
+    "after_dedup": 22,
+    "time_elapsed": 99.78897094726562,
+    "valid_count": 22,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 8,
+      "medium": 14,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 22,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 11,
+    "from_image_nodes": 14,
+    "final_count": 22
+  },
+  "material_count": 22,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 mS cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from the graphical abstract image which displays the ionic conductivity of the Li6PS5Cl argyrodite electrolyte.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte ; Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Synthesized via ball-milling and subsequent annealing. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0553",
+        "title": "Table of Contents Image",
+        "section": "**Table of contents entry**"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.68 mS cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1a for the Li6PS5Br sample at 25°C (1000/T ≈ 3.35).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiBr were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00068,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "0.0013 mS cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in Figure 1a for the Li6PS5I sample at 25°C (1000/T ≈ 3.35).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiI were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.3e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-3 S/cm",
+      "measurement_temperature": "50°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the Li6PS5Cl (LPSCl) sample at 50°C (approx. 3.1 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0025,
+      "_norm_temp": 50,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-3 S/cm",
+      "measurement_temperature": "75°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the Li6PS5Cl (LPSCl) sample at 75°C (approx. 2.87 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.005,
+      "_norm_temp": 75,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.5 x 10^-3 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the Li6PS5Cl (LPSCl) sample at 100°C (approx. 2.68 on 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "Liquid-phase synthesis using ethanol solvent followed by heat treatment at 550°C. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were mixed, hand ground in an agate mortar, and pressed into pellets. These pellets were sealed in carbon-coated quartz ampoules under vacuum and reacted at 550 °C for two weeks. All preparations were performed under an argon atmosphere. Final products were ground and isostatically pressed into pellets for characterization. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0085,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": "annealed at 550°C"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the sample annealed at 550°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte annealed at 550°C to improve crystallinity.",
+      "processing_method": "Ball-milling followed by annealing at 550°C. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted/annealed at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 2a) for the pristine sample at 1000/T = 2.68 K^-1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Synthesized via ball-milling and subsequent annealing. | Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0028",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_13_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Cl (blue) series in the Arrhenius plot at 1000/T ≈ 3.35, where ln(σT) is approximately -0.3.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with Cl anion",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0252",
+        "title": "_page_13_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0016,
+      "_norm_temp": 25.0,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_13_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl0.5Br0.5",
+        "acronym": "Cl0.5Br0.5",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.9e-3 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Cl0.5Br0.5 (orange) series in the Arrhenius plot at 1000/T ≈ 3.35, where ln(σT) is approximately 0.1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with mixed Cl/Br anions",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiCl, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0252",
+        "title": "_page_13_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl0.5Br0.5",
+      "_original_name": "Li6PS5Cl0.5Br0.5",
+      "_norm_cond": 0.0019,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_13_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.1e-4 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Br (green) series in the Arrhenius plot at 1000/T ≈ 3.35, where ln(σT) is approximately -1.0.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with Br anion",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0252",
+        "title": "_page_13_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.00081,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_13_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br0.5I0.5",
+        "acronym": "Br0.5I0.5",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2e-5 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the Br0.5I0.5 (red) series in the Arrhenius plot at 1000/T ≈ 3.35, where ln(σT) is approximately -5.0.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with mixed Br/I anions",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiBr, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0252",
+        "title": "_page_13_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br0.5I0.5",
+      "_original_name": "Li6PS5Br0.5I0.5",
+      "_norm_cond": 2.2e-05,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_13_Figure_4.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-6 S cm^-1",
+      "measurement_temperature": "298 K",
+      "reason": "Extracted from the I (black) series in the Arrhenius plot at 1000/T ≈ 3.35, where ln(σT) is approximately -7.5.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte with I anion",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0252",
+        "title": "_page_13_Figure_4.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.8e-06,
+      "_norm_temp": 24.850000000000023,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for X=Cl from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Cl",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiCl were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl0.75Br0.25",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for composition between Cl and Cl0.5Br0.5 from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Cl0.75Br0.25",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiCl, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl0.75Br0.25",
+      "_original_name": "Li6PS5Cl0.75Br0.25",
+      "_norm_cond": 0.0022,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl0.5Br0.5",
+        "acronym": "Cl0.5Br0.5",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.5e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for X=Cl0.5Br0.5 from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Cl0.5Br0.5",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiCl, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl0.5Br0.5",
+      "_original_name": "Li6PS5Cl0.5Br0.5",
+      "_norm_cond": 0.0035,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl0.25Br0.75",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for composition between Cl0.5Br0.5 and Br from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Cl0.25Br0.75",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiCl, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl0.25Br0.75",
+      "_original_name": "Li6PS5Cl0.25Br0.75",
+      "_norm_cond": 0.002,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-3 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for X=Br from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Br",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiBr were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br",
+      "_original_name": "Li6PS5Br",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br0.75I0.25",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for composition between Br and Br0.5I0.5 from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Br0.75I0.25",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiBr, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br0.75I0.25",
+      "_original_name": "Li6PS5Br0.75I0.25",
+      "_norm_cond": 0.00011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br0.5I0.5",
+        "acronym": "Br0.5I0.5",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5e-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for X=Br0.5I0.5 from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Br0.5I0.5",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiBr, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br0.5I0.5",
+      "_original_name": "Li6PS5Br0.5I0.5",
+      "_norm_cond": 2.5e-05,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Br0.25I0.75",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for composition between Br0.5I0.5 and I from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=Br0.25I0.75",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, LiBr, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Br0.25I0.75",
+      "_original_name": "Li6PS5Br0.25I0.75",
+      "_norm_cond": 5e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_15_Figure_3.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5I",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2e-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted measured data point for X=I from plot (c).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Lithium argyrodite Li6PS5X where X=I",
+      "processing_method": "Solid-state synthesis: Stoichiometric ratios of Li2S, P2S5, and LiI were hand ground in an agate mortar under argon, pressed into pellets, and sealed in carbon-coated quartz ampoules under vacuum. The mixtures were reacted at 550 °C for two weeks. The resulting material was ground and isostatically pressed into pellets for characterization.",
+      "source_node": {
+        "node_id": "0275",
+        "title": "_page_15_Figure_3.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5I",
+      "_original_name": "Li6PS5I",
+      "_norm_cond": 1.2e-06,
+      "_norm_temp": 25,
+      "_enriched": true
+    }
+  ]
+}

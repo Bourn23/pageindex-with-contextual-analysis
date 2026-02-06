@@ -1,0 +1,1570 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 230601,
+    "total_output_tokens": 22558,
+    "total_cost_usd": 0.18297449999999998,
+    "call_counts": {
+      "gemini-3-flash-preview": 96
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes_structure.json",
+  "extraction_stats": {
+    "total_nodes": 115,
+    "raw_extracted": 82,
+    "after_dedup": 51,
+    "time_elapsed": 226.9196798801422,
+    "valid_count": 50,
+    "invalid_count": 1,
+    "by_confidence": {
+      "high": 23,
+      "medium": 27,
+      "low": 1
+    },
+    "by_source": {
+      "primary": 49,
+      "cited": 0,
+      "inferred": 1
+    },
+    "from_text_nodes": 30,
+    "from_image_nodes": 26,
+    "final_count": 51
+  },
+  "material_count": 51,
+  "materials": [
+    {
+      "source_sentence_id": "0018, 0325",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted grain conductivity for the specified NASICON-type material from sentence 0018.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "grain conductivity ; Li+-NASICON membrane",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0017",
+        "title": "Specific Conductivity Results",
+        "section": "Abstract"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0019, 0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted total conductivity for the sintered pellets of the material mentioned in the preceding sentence.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "total conductivity of sintered pellets affected by grain boundaries ; Sol-gel material for ISE devices",
+      "processing_method": "sintered pellets | sol-gel process",
+      "source_node": {
+        "node_id": "0017",
+        "title": "Specific Conductivity Results",
+        "section": "Abstract"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 6e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0231",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total ionic conductivity for the coground LATP material at room temperature from sentence 0231.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "coground material",
+      "processing_method": "coground",
+      "source_node": {
+        "node_id": "0228",
+        "title": "Initial Conductivity Measurements and Comparison",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0231",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total ionic conductivity for the sol-gel LATP material at room temperature from sentence 0231.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "sol-gel material",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0228",
+        "title": "Initial Conductivity Measurements and Comparison",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0250",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ge-based sol-gel materials",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "See Table 6",
+      "measurement_temperature": "room temperature",
+      "reason": "Sentence 0250 explicitly mentions that total conductivity values for Ge-based sol-gel materials are provided in Table 6 at room temperature. However, since Table 6 is not provided in the text snippet, the specific numerical values cannot be extracted.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ge-based sol-gel materials",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0248",
+        "title": "Total Conductivity of Sol-gel Materials",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0250",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Ti-based sol-gel materials",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "See Table 6",
+      "measurement_temperature": "room temperature",
+      "reason": "Sentence 0250 explicitly mentions that total conductivity values for Ti-based sol-gel materials are provided in Table 6 at room temperature. However, since Table 6 is not provided in the text snippet, the specific numerical values cannot be extracted.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ti-based sol-gel materials",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0248",
+        "title": "Total Conductivity of Sol-gel Materials",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0284",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ge1.7(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "5.6 x 10^-5 S cm^-1",
+      "measurement_temperature": "26°C",
+      "reason": "Extracted from Table 7 data for Li1+xAlxGe2-x(PO4)3 where x=0.3 at 26°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type compound",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0279",
+        "title": "Figure 10 and Table 7 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_norm_cond": 5.6e-05,
+      "_norm_temp": 26
+    },
+    {
+      "source_sentence_id": "0284",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.7Al0.7Ge1.3(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x = 0.7"
+      },
+      "ionic_conductivity_S_per_cm": "1.6 x 10^-4 S cm^-1",
+      "measurement_temperature": "23°C",
+      "reason": "Extracted from Table 7 data for Li1+xAlxGe2-x(PO4)3 where x=0.7 at 23°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type compound",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0279",
+        "title": "Figure 10 and Table 7 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.7Al0.7Ge1.3(PO4)3",
+      "_original_name": "Li1.7Al0.7Ge1.3(PO4)3",
+      "_norm_cond": 0.00016,
+      "_norm_temp": 23
+    },
+    {
+      "source_sentence_id": "0284",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x = 0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3 x 10^-4 S cm^-1",
+      "measurement_temperature": "24°C",
+      "reason": "Extracted from Table 7 data for Li1+xAlxTi2-x(PO4)3 where x=0.3 at 24°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type compound",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0279",
+        "title": "Figure 10 and Table 7 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0003,
+      "_norm_temp": 24
+    },
+    {
+      "source_sentence_id": "0284",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Al0.1Ti1.9(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x = 0.1"
+      },
+      "ionic_conductivity_S_per_cm": "7 x 10^-4 S cm^-1",
+      "measurement_temperature": "37°C",
+      "reason": "Extracted from Table 7 data for Li1+xAlxTi2-x(PO4)3 where x=0.1 at 37°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type compound",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0279",
+        "title": "Figure 10 and Table 7 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "_original_name": "Li1.1Al0.1Ti1.9(PO4)3",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 37
+    },
+    {
+      "source_sentence_id": "0284",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.6Al0.6Ti1.4(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "10^-3 S cm^-1",
+      "measurement_temperature": "26°C",
+      "reason": "Extracted from Table 7 data for Li1+xAlxTi2-x(PO4)3 where x=0.6 at 26°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "NASICON-type compound",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0279",
+        "title": "Figure 10 and Table 7 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.6Al0.6Ti1.4(PO4)3",
+      "_original_name": "Li1.6Al0.6Ti1.4(PO4)3",
+      "_norm_cond": 0.001,
+      "_norm_temp": 26
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiTi2(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "4.4 x 10^-8 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ti and x = 0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiTi2(PO4)3",
+      "_original_name": "LiTi2(PO4)3",
+      "_norm_cond": 4.4e-08,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Al0.1Ti1.9(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "3 x 10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ti and x = 0.1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "_original_name": "Li1.1Al0.1Ti1.9(PO4)3",
+      "_norm_cond": 3e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ti1.5(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.3 x 10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ti and x = 0.5.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ti1.5(PO4)3",
+      "_original_name": "Li1.5Al0.5Ti1.5(PO4)3",
+      "_norm_cond": 2.3e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.7Al0.7Ti1.3(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.7"
+      },
+      "ionic_conductivity_S_per_cm": "3.7 x 10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ti and x = 0.7.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.7Al0.7Ti1.3(PO4)3",
+      "_original_name": "Li1.7Al0.7Ti1.3(PO4)3",
+      "_norm_cond": 3.7e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiGe2(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "5.9 x 10^-9 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiGe2(PO4)3",
+      "_original_name": "LiGe2(PO4)3",
+      "_norm_cond": 5.9e-09,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Al0.1Ge1.9(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "2.9 x 10^-6 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.1.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Al0.1Ge1.9(PO4)3",
+      "_original_name": "Li1.1Al0.1Ge1.9(PO4)3",
+      "_norm_cond": 2.9e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ge1.7(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "3.9 x 10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.3.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_norm_cond": 3.9e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.5Al0.5Ge1.5(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.8 x 10^-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.5.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_original_name": "Li1.5Al0.5Ge1.5(PO4)3",
+      "_norm_cond": 0.00028,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.7Al0.7Ge1.3(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.7"
+      },
+      "ionic_conductivity_S_per_cm": "1.4 x 10^-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.7.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.7Al0.7Ge1.3(PO4)3",
+      "_original_name": "Li1.7Al0.7Ge1.3(PO4)3",
+      "_norm_cond": 0.00014,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0245",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.6Al0.6Ge1.4(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "x=0.6"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 x 10^-4 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted from Table 6 data for A = Ge and x = 0.6.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sol-gel material for ISE devices",
+      "processing_method": "sol-gel process",
+      "source_node": {
+        "node_id": "0240",
+        "title": "Figure 8 and Table 6 Data Presentation",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.6Al0.6Ge1.4(PO4)3",
+      "_original_name": "Li1.6Al0.6Ge1.4(PO4)3",
+      "_norm_cond": 0.00015,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0224",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.0 x 10^-4 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "The impedance diagram in Fig. 7 shows a total resistance (bulk + grain boundary) of approximately 1400-1500 ohms for the Li1.3Al0.3Ti1.7(PO4)3 pellet. Based on standard pellet dimensions and the intercept on the real axis, the total ionic conductivity is calculated/estimated to be approximately 7.0 x 10^-4 S/cm at 25°C.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "pellet",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0221",
+        "title": "Impedance Diagram",
+        "section": "3.2.2 Structural properties"
+      },
+      "_index": 52,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 0.0007,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0325",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ge1.7(PO4)3",
+        "acronym": "LAGP",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6 x 10^-4 S cm^-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted grain conductivity value for Li1.3Al0.3Ge1.7(PO4)3 from sentence 0325.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li+-NASICON membrane",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0324",
+        "title": "Interplay of Selectivity, Conductivity, and Structure",
+        "section": "4 Ionic Selectivity Properties"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ge1.7(PO4)3",
+      "_norm_cond": 0.00016,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0257",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Al0.1Ge1.9(PO4)3",
+        "acronym": "LAGP",
+        "proportion": "Li1.1Al0.1Ge1.9(PO4)3"
+      },
+      "ionic_conductivity_S_per_cm": "10^-5 S cm^-1",
+      "measurement_temperature": "room temperature",
+      "reason": "The text discusses the relaxation frequency and blocking effects for Li1.1Al0.1Ge1.9(PO4)3. While the specific conductivity value is not explicitly written in the sentence, the context of NASICON phases and the reference to Fig 10 (Arrhenius plots) in the provided text segment indicates the study of its electrical properties. Based on the relaxation frequency (>10^5 Hz) and the typical values for these NASICON phases mentioned in the discussion of blocking effects, the conductivity is inferred to be in the range of 10^-5 S/cm at RT, though the text focuses on activation energies (0.31 and 0.46 eV).",
+      "confidence": "low",
+      "data_source": "inferred",
+      "material_description": "NASICON-type lithium germanium phosphate with aluminum substitution.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0252",
+        "title": "Blocking Effects and Separate Electrical Contributions",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Al0.1Ge1.9(PO4)3",
+      "_original_name": "Li1.1Al0.1Ge1.9(PO4)3",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte (1/RT)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-5 S",
+      "measurement_temperature": "310.6 K",
+      "reason": "Extracted total conductance (1/RT) data point at 1000/T ≈ 3.22 K^-1 from Arrhenius-like plot. Note: Y-axis is Conductance S, not conductivity S/cm.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Total conductance (1/RT) of the sample, with activation energy Ea = 0.44 eV.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 57,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1e-05,
+      "_norm_temp": 37.450000000000045
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte (1/RT)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-5 S",
+      "measurement_temperature": "324.7 K",
+      "reason": "Extracted total conductance (1/RT) data point at 1000/T ≈ 3.08 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Total conductance (1/RT) of the sample, with activation energy Ea = 0.44 eV.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 58,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 2e-05,
+      "_norm_temp": 51.55000000000001
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte (1/RT)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-5 S",
+      "measurement_temperature": "343.6 K",
+      "reason": "Extracted total conductance (1/RT) data point at 1000/T ≈ 2.91 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Total conductance (1/RT) of the sample, with activation energy Ea = 0.44 eV.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 59,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5e-05,
+      "_norm_temp": 70.45000000000005
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte (1/RT)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-4 S",
+      "measurement_temperature": "392.2 K",
+      "reason": "Extracted total conductance (1/RT) data point at 1000/T ≈ 2.55 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Total conductance (1/RT) of the sample, with activation energy Ea = 0.44 eV.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 60,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0003,
+      "_norm_temp": 119.05000000000001
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain (1/Rg)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-4 S",
+      "measurement_temperature": "310.6 K",
+      "reason": "Extracted grain conductance (1/Rg) data point at 1000/T ≈ 3.22 K^-1. Ea (grain) = 0.31 eV.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain conductance (1/Rg) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 61,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0001,
+      "_norm_temp": 37.450000000000045
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain (1/Rg)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0e-4 S",
+      "measurement_temperature": "324.7 K",
+      "reason": "Extracted grain conductance (1/Rg) data point at 1000/T ≈ 3.08 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain conductance (1/Rg) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 62,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0002,
+      "_norm_temp": 51.55000000000001
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain (1/Rg)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-4 S",
+      "measurement_temperature": "343.6 K",
+      "reason": "Extracted grain conductance (1/Rg) data point at 1000/T ≈ 2.91 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain conductance (1/Rg) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 63,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0003,
+      "_norm_temp": 70.45000000000005
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain (1/Rg)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-3 S",
+      "measurement_temperature": "392.2 K",
+      "reason": "Extracted grain conductance (1/Rg) data point at 1000/T ≈ 2.55 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain conductance (1/Rg) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 64,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0011,
+      "_norm_temp": 119.05000000000001
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain Boundary (1/Rgb)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-5 S",
+      "measurement_temperature": "310.6 K",
+      "reason": "Extracted grain boundary conductance (1/Rgb) data point at 1000/T ≈ 3.22 K^-1. Ea (gb) = 0.46 eV.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain boundary conductance (1/Rgb) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 65,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1e-05,
+      "_norm_temp": 37.450000000000045
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Solid Electrolyte Grain Boundary (1/Rgb)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.0e-4 S",
+      "measurement_temperature": "392.2 K",
+      "reason": "Extracted grain boundary conductance (1/Rgb) data point at 1000/T ≈ 2.55 K^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Grain boundary conductance (1/Rgb) component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0280",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 66,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0004,
+      "_norm_temp": 119.05000000000001
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2e-4 S cm^-1",
+      "measurement_temperature": "303 K",
+      "reason": "Estimated from the 'co-grinding' plot at 1000/T ≈ 3.3 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by co-grinding method (Ea = 0.42 eV)",
+      "processing_method": "co-grinding",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 67,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00012,
+      "_norm_temp": 29.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0e-4 S cm^-1",
+      "measurement_temperature": "325 K",
+      "reason": "Estimated from the 'co-grinding' plot at 1000/T ≈ 3.08 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by co-grinding method (Ea = 0.42 eV)",
+      "processing_method": "co-grinding",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 68,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0005,
+      "_norm_temp": 51.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-3 S cm^-1",
+      "measurement_temperature": "353 K",
+      "reason": "Estimated from the 'co-grinding' plot at 1000/T ≈ 2.83 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by co-grinding method (Ea = 0.42 eV)",
+      "processing_method": "co-grinding",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 69,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0013,
+      "_norm_temp": 79.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.0e-3 S cm^-1",
+      "measurement_temperature": "375 K",
+      "reason": "Estimated from the 'co-grinding' plot at 1000/T ≈ 2.67 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by co-grinding method (Ea = 0.42 eV)",
+      "processing_method": "co-grinding",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 70,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.003,
+      "_norm_temp": 101.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.5e-3 S cm^-1",
+      "measurement_temperature": "395 K",
+      "reason": "Estimated from the 'co-grinding' plot at 1000/T ≈ 2.53 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by co-grinding method (Ea = 0.42 eV)",
+      "processing_method": "co-grinding",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 71,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0055,
+      "_norm_temp": 121.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-5 S cm^-1",
+      "measurement_temperature": "295 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 3.39 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 72,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1.1e-05,
+      "_norm_temp": 21.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.5e-5 S cm^-1",
+      "measurement_temperature": "325 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 3.08 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 73,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5.5e-05,
+      "_norm_temp": 51.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "9.0e-5 S cm^-1",
+      "measurement_temperature": "335 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.98 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 74,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 9e-05,
+      "_norm_temp": 61.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.6e-4 S cm^-1",
+      "measurement_temperature": "353 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.83 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 75,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00016,
+      "_norm_temp": 79.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.5e-4 S cm^-1",
+      "measurement_temperature": "375 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.67 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 76,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00045,
+      "_norm_temp": 101.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "7.5e-4 S cm^-1",
+      "measurement_temperature": "395 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.53 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 77,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.00075,
+      "_norm_temp": 121.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1e-3 S cm^-1",
+      "measurement_temperature": "410 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.44 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 78,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0011,
+      "_norm_temp": 136.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8e-3 S cm^-1",
+      "measurement_temperature": "430 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.33 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 79,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0018,
+      "_norm_temp": 156.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2e-3 S cm^-1",
+      "measurement_temperature": "450 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.22 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 80,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0022,
+      "_norm_temp": 176.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_12.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown solid electrolyte",
+        "acronym": "unknown",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4e-3 S cm^-1",
+      "measurement_temperature": "455 K",
+      "reason": "Estimated from the 'sol-gel' plot at 1000/T ≈ 2.20 K^-1",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sample prepared by sol-gel method (Ea = 0.39 eV)",
+      "processing_method": "sol-gel",
+      "source_node": {
+        "node_id": "0241",
+        "title": "_page_5_Figure_12.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 81,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0024,
+      "_norm_temp": 181.85000000000002
+    },
+    {
+      "source_sentence_id": "0293",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "6-fold higher than Ge-based ones",
+      "measurement_temperature": "not specified",
+      "reason": "The text provides a relative comparison of grain conductivity for Ti-based NASICON materials at x=0.3 compared to Ge-based ones, though the absolute value is not explicitly stated in this sentence, it refers to a specific measurement result.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Ti-based NASICON materials",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0287",
+        "title": "Grain Conductivity Analysis and Framework Comparison",
+        "section": "3.2.3 Electrical properties"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": false,
+        "issues": [
+          "Physical Improbability: Conductivity 6.00e+00 S/cm is outside typical bounds. (cond >= 1.0 or cond < 1e-12)"
+        ],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_norm_cond": 6.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0329",
+      "material_class": "Other",
+      "electrolyte_name": {
+        "full_name": "usual potentiometric membranes",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-5 to 10^-12 S cm^-1",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted typical conductivity range for standard potentiometric membranes mentioned as a comparison in sentence 0329.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0324",
+        "title": "Interplay of Selectivity, Conductivity, and Structure",
+        "section": "4 Ionic Selectivity Properties"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1e-12,
+      "_norm_temp": null
+    }
+  ]
+}

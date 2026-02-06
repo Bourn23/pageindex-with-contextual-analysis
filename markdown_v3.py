@@ -811,9 +811,10 @@ async def run_main():
     if args.output:
         output_path = args.output
     else:
+        result_dir = "results_obelix"
         # Default to results/md_filename_structure.json
         basename = os.path.splitext(os.path.basename(args.md_path))[0]
-        output_path = f'./results/{basename}_structure.json'
+        output_path = f'./{result_dir}/{basename}_structure.json'
         
     # Ensure results directory exists
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

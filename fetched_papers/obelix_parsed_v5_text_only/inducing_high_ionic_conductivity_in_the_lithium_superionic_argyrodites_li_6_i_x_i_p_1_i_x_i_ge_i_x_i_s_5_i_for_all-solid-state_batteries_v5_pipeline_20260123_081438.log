@@ -1,0 +1,127 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260123_081438.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP 1-xGe<sup>x</sup> S I for all-solid-state batteries**
+   --- Found: 15 Sections
+   --- Found: 14 Figures, 0 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**1. Introduction**' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**3. Results**' contains:
+       - 9 Images: ['Fig 6', 'Fig 9', 'Fig 3', 'Fig 2', 'Fig 4', 'Fig 8', 'Fig 5', 'Fig 7', 'Fig 2']
+
+   >>> Section '**For table of contents only**' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **Acknowledgements**
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 13 items (Text + Images) simultaneously ...
+   [Retry 1/3] JSON Error for **1. Introduction**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing an object at line 17 colum...
+   [Retry 1/3] JSON Error for **3. Results**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 8 column ...
+   [Retry 1/3] JSON Error for **For table of contents only**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a value at line 47 column ...
+   [Retry 2/3] JSON Error for **3. Results**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 72 column...
+   [Retry 2/3] JSON Error for **1. Introduction**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 46 column...
+   [Retry 3/3] JSON Error for **3. Results**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 73 column...
+   [91m[Text Error][0m **3. Results**: Failed after 3 attempts. Last error: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 73 column 7 [type=json_invalid, input_value='{\n  "measurements": [\n...urce": "text",\n      "', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/json_invalid
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 8 measurements
+      - Skipped (no data): 8 images
+      - Failed: 1 items
+
+Done! Extracted 8 points.
+Saved to: fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         12
+Total Input:         7,585 tokens
+Total Output:        10,643 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0289
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 12 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/jacs.8b10282
+GT-417: Li24.0P4.0S20.0I4.0 | 1.26e-06 S/cm
+GT-418: Li24.4P3.6Ge0.4S20.0I4.0 | 8.86e-06 S/cm
+GT-419: Li24.6P3.4Ge0.6S20.0I4.0 | 3.93e-05 S/cm
+GT-420: Li24.8P3.2Ge0.8S20.0I4.0 | 3.19e-05 S/cm
+GT-421: Li25.0P3.0Ge1.0S20.0I4.0 | 0.00015 S/cm
+GT-422: Li25.2P2.8Ge1.2S20.0I4.0 | 0.00065 S/cm
+GT-423: Li25.6P2.4Ge1.6S20.0I4.0 | 0.0015 S/cm
+GT-424: Li26.0P2.0Ge2.0S20.0I4.0 | 0.00186 S/cm
+GT-425: Li26.4P1.6Ge2.4S20.0I4.0 | 0.00521 S/cm
+GT-426: Li26.8P1.2Ge2.8S20.0I4.0 | 0.00554 S/cm
+GT-427: Li27.2P0.8Ge3.2S20.0I4.0 | 0.00258 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 165 Extracted items...
+
+============================================================
+VALIDATION SCORE: 18.2%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-417     | ✅ MATCH         | Li24.0P4.0S20.0I4.0 simplifies to Li6PS5I, and 1.26e-06 S/cm is approximately 1.3e-06 S/cm (within 5% tolerance).
+GT-418     | ❌ MISSING/BAD   | The ground truth composition Li6.1P0.9Ge0.1S5I (derived from Li24.4P3.6Ge0.4S20.0I4.0) was not found in the extracted data.
+GT-419     | ❌ MISSING/BAD   | The ground truth composition Li6.15P0.85Ge0.15S5I (derived from Li24.6P3.4Ge0.6S20.0I4.0) was not found in the extracted data.
+GT-420     | ❌ MISSING/BAD   | The ground truth composition Li6.2P0.8Ge0.2S5I (derived from Li24.8P3.2Ge0.8S20.0I4.0) was not found in the extracted data.
+GT-421     | ❌ MISSING/BAD   | The ground truth composition Li6.25P0.75Ge0.25S5I (derived from Li25.0P3.0Ge1.0S20.0I4.0) was not found in the extracted data.
+GT-422     | ❌ MISSING/BAD   | The ground truth composition Li6.3P0.7Ge0.3S5I (derived from Li25.2P2.8Ge1.2S20.0I4.0) was not found in the extracted data.
+GT-423     | ❌ MISSING/BAD   | The ground truth composition Li6.4P0.6Ge0.4S5I (derived from Li25.6P2.4Ge1.6S20.0I4.0) was not found in the extracted data.
+GT-424     | ❌ MISSING/BAD   | The ground truth composition Li6.5P0.5Ge0.5S5I (derived from Li26.0P2.0Ge2.0S20.0I4.0) was not found in the extracted data.
+GT-425     | ✅ MATCH         | Li26.4P1.6Ge2.4S20.0I4.0 simplifies to Li6.6P0.4Ge0.6S5I, and 0.00521 S/cm is approximately 0.0054 S/cm (within 5% tolerance).
+GT-426     | ❌ MISSING/BAD   | The ground truth composition Li6.7P0.3Ge0.7S5I (derived from Li26.8P1.2Ge2.8S20.0I4.0) was not found in the extracted data.
+GT-427     | ❌ MISSING/BAD   | The ground truth composition Li6.8P0.2Ge0.8S5I (derived from Li27.2P0.8Ge3.2S20.0I4.0) was not found in the extracted data.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m DOI: 10.1021/jacs.8b10282
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260123_081438.log
+

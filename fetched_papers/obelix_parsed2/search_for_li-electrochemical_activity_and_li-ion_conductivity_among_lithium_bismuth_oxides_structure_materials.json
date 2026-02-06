@@ -1,0 +1,651 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 109404,
+    "total_output_tokens": 10671,
+    "total_cost_usd": 0.086715,
+    "call_counts": {
+      "gemini-3-flash-preview": 25
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/search_for_li-electrochemical_activity_and_li-ion_conductivity_among_lithium_bismuth_oxides_structure.json",
+  "extraction_stats": {
+    "total_nodes": 96,
+    "raw_extracted": 23,
+    "after_dedup": 19,
+    "time_elapsed": 122.66330003738403,
+    "valid_count": 19,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 14,
+      "medium": 5,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 16,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 23,
+    "from_image_nodes": 0,
+    "final_count": 19
+  },
+  "material_count": 19,
+  "materials": [
+    {
+      "source_sentence_id": "0292, 0024, 0197, 0218",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiBiO2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.8 × 10−8 S/cm",
+      "measurement_temperature": "25 °C",
+      "reason": "Extracted the highest ionic conductivity value reported for LiBiO2 from the conclusion section.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LiBiO2 ; Lithium bismuth oxide prepared via ceramic or hydrothermal synthesis methods. ; Li-Bi-O phase ; Bi3+ phase with a layered structure allowing for 2D mobility of Li+ ions.",
+      "processing_method": "ceramic or hydrothermal synthesis | Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 500-525 °C for 24 h.",
+      "source_node": {
+        "node_id": "0291",
+        "title": "Ionic Conductivity",
+        "section": "4. Conclusion"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiBiO2",
+      "_original_name": "LiBiO2",
+      "_norm_cond": 3.8e-08,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3BiO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-8 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li3BiO3 at 1000/T = 2.68 (approx 100°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li3BiO3)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating under Ar flow for 16 h at 450 °C.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3BiO3",
+      "_original_name": "Li3BiO3",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3BiO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S/cm",
+      "measurement_temperature": "250°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li3BiO3 at 1000/T = 1.91 (approx 250°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li3BiO3)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating under Ar flow for 16 h at 450 °C.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3BiO3",
+      "_original_name": "Li3BiO3",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 250,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5BiO5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-9 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li5BiO5 at 1000/T = 2.68 (approx 100°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li5BiO5)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5BiO5",
+      "_original_name": "Li5BiO5",
+      "_norm_cond": 1e-09,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5BiO5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S/cm",
+      "measurement_temperature": "250°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li5BiO5 at 1000/T = 1.91 (approx 250°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li5BiO5)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5BiO5",
+      "_original_name": "Li5BiO5",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 250,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7BiO6",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-10 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li7BiO6 at 1000/T = 2.68 (approx 100°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li7BiO6)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7BiO6",
+      "_original_name": "Li7BiO6",
+      "_norm_cond": 1e-10,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7BiO6",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-7 S/cm",
+      "measurement_temperature": "250°C",
+      "reason": "Extracted from the Arrhenius plot in the image for Li7BiO6 at 1000/T = 1.91 (approx 250°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium bismuth oxide (Li7BiO6)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0009",
+        "title": "Image",
+        "section": "Search for Li-electrochemical activity and Li-ion conductivity among lithium bismuth oxides"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7BiO6",
+      "_original_name": "Li7BiO6",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 250,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0170",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiBiO2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4 × 10⁻⁷ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted primary measurement for LiBiO2 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Layered LiBiO2",
+      "processing_method": "Not specified in the provided text snippet. | Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 500-525 °C for 24 h.",
+      "source_node": {
+        "node_id": "0166",
+        "title": "Experimental Ionic Conductivity Results and Comparison with Literature",
+        "section": "3. Results and discussion"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiBiO2",
+      "_original_name": "LiBiO2",
+      "_norm_cond": 2.4e-07,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5BiO5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.7 × 10⁻⁷ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted primary measurement for Li5BiO5 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li-Bi-O phase",
+      "processing_method": "Not specified in the provided text snippet. | Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0166",
+        "title": "Experimental Ionic Conductivity Results and Comparison with Literature",
+        "section": "3. Results and discussion"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5BiO5",
+      "_original_name": "Li5BiO5",
+      "_norm_cond": 3.7e-07,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0175",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7BiO6",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2 × 10⁻⁷ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted primary measurement for Li7BiO6 from the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li-Bi-O phase",
+      "processing_method": "Not specified in the provided text snippet. | Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0166",
+        "title": "Experimental Ionic Conductivity Results and Comparison with Literature",
+        "section": "3. Results and discussion"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7BiO6",
+      "_original_name": "Li7BiO6",
+      "_norm_cond": 2.2e-07,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0218",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3BiO3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.4 × 10^-10 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted experimental conductivity value for Li3BiO3 from sentence 0218.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Bi3+ phase with a structure allowing for 3D mobility of Li+ ions.",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating under Ar flow for 16 h at 450 °C.",
+      "source_node": {
+        "node_id": "0214",
+        "title": "Comparison of Predicted and Experimental Conductivity Trends",
+        "section": "3. Results and discussion"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3BiO3",
+      "_original_name": "Li3BiO3",
+      "_norm_cond": 2.4e-10,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5BiO5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.9 × 10^-9 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted experimental conductivity value for Li5BiO5 from sentence 0220.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Bi5+ phase with 2D Li+ mobility.",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0214",
+        "title": "Comparison of Predicted and Experimental Conductivity Trends",
+        "section": "3. Results and discussion"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5BiO5",
+      "_original_name": "Li5BiO5",
+      "_norm_cond": 3.9e-09,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7BiO6",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 × 10^-11 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted experimental conductivity value for Li7BiO6 from sentence 0220.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Bi5+ phase with pseudo-2D Li+ mobility.",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0214",
+        "title": "Comparison of Predicted and Experimental Conductivity Trends",
+        "section": "3. Results and discussion"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7BiO6",
+      "_original_name": "Li7BiO6",
+      "_norm_cond": 1.1e-11,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0220",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3BiO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.1 × 10^-10 S/cm",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted experimental conductivity value for Li3BiO4 from sentence 0220.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Bi5+ phase with possible 1D mobility of Li+.",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 500-525 °C for 24 h.",
+      "source_node": {
+        "node_id": "0214",
+        "title": "Comparison of Predicted and Experimental Conductivity Trends",
+        "section": "3. Results and discussion"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3BiO4",
+      "_original_name": "Li3BiO4",
+      "_norm_cond": 4.1e-10,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0257",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li-Bi-O",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-4 S/cm",
+      "measurement_temperature": "300°C",
+      "reason": "Estimated from the Arrhenius plot in Figure 7 for the Li-Bi-O phase at approximately 300°C (1000/T ≈ 1.75).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li-Bi-O phases synthesized for temperature dependent conductivity studies.",
+      "processing_method": "The lithium bismuth oxides in this study (LiBiO2, LiBiO3, Li3BiO3, Li3BiO4, Li5BiO5, and Li7BiO6) were prepared either via ceramic synthesis (ball milling Bi2O3 and Li2O precursors followed by pelletizing and heating between 450 °C and 650 °C in air or Ar) or hydrothermal methods (specifically for LiBiO3, using NaBiO3 and LiOH precursors heated to 120 °C for 48 h).",
+      "source_node": {
+        "node_id": "0254",
+        "title": "Figure 7: Temperature Dependent Ionic Conductivity",
+        "section": "3. Results and discussion"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li-Bi-O",
+      "_original_name": "Li-Bi-O phases",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0257",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li-Bi-O",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-2 S/cm",
+      "measurement_temperature": "500°C",
+      "reason": "Estimated from the Arrhenius plot in Figure 7 for the Li-Bi-O phase at approximately 500°C (1000/T ≈ 1.3).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li-Bi-O phases synthesized for temperature dependent conductivity studies.",
+      "processing_method": "The lithium bismuth oxides in this study (LiBiO2, LiBiO3, Li3BiO3, Li3BiO4, Li5BiO5, and Li7BiO6) were prepared either via ceramic synthesis (ball milling Bi2O3 and Li2O precursors followed by pelletizing and heating between 450 °C and 650 °C in air or Ar) or hydrothermal methods (specifically for LiBiO3, using NaBiO3 and LiOH precursors heated to 120 °C for 48 h).",
+      "source_node": {
+        "node_id": "0254",
+        "title": "Figure 7: Temperature Dependent Ionic Conductivity",
+        "section": "3. Results and discussion"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li-Bi-O",
+      "_original_name": "Li-Bi-O phases",
+      "_norm_cond": 0.01,
+      "_norm_temp": 500,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0154, 0175",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7BiO6",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.7 × 10⁻³ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted ionic conductivity value for Li7BiO6 at 300 °C as reported in the text and cited from reference 26.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0142",
+        "title": "Bond Valence Energy Landscape (BVEL) Method and Predictions",
+        "section": "3. Results and discussion"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7BiO6",
+      "_original_name": "Li7BiO6",
+      "_norm_cond": 0.0057,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0170",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "LiBiO2",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁶ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted cited measurement for LiBiO2 from reference [27].",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 500-525 °C for 24 h.",
+      "source_node": {
+        "node_id": "0166",
+        "title": "Experimental Ionic Conductivity Results and Comparison with Literature",
+        "section": "3. Results and discussion"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "LiBiO2",
+      "_original_name": "LiBiO2",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 300,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0172",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5BiO5",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "4.9 × 10⁻⁴ S/cm",
+      "measurement_temperature": "300 °C",
+      "reason": "Extracted cited measurement for Li5BiO5 from reference [18].",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Ceramic synthesis: Ball milling a mixture of Bi2O3 and Li2O (10 mol% excess) for 30 min (Spex Miller), followed by pressing the mixture into pellets and heating in a quartz crucible in air at 650 °C for 24 h.",
+      "source_node": {
+        "node_id": "0166",
+        "title": "Experimental Ionic Conductivity Results and Comparison with Literature",
+        "section": "3. Results and discussion"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5BiO5",
+      "_original_name": "Li5BiO5",
+      "_norm_cond": 0.00049,
+      "_norm_temp": 300,
+      "_enriched": true
+    }
+  ]
+}

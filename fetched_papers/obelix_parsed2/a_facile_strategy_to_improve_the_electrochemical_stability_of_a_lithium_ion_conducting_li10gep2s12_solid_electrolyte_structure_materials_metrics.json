@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-201",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li10GeP2S12 from GT-201 matches EX-1. The physical context (room temperature) is consistent, although the conductivity values differ.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-202",
+      "extracted_id": null,
+      "reason": "No extracted data entry has the exact normalized chemical formula Li9.8Ba0.1GeP2S12.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-203",
+      "extracted_id": null,
+      "reason": "No extracted data entry has the exact normalized chemical formula Li9.6Ba0.2GeP2S12.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-204",
+      "extracted_id": "EX-6",
+      "reason": "The normalized chemical formula Li9.4Ba0.3GeP2S12 from GT-204 matches EX-6. The physical context (room temperature) is consistent, and the conductivity values are very close.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-205",
+      "extracted_id": null,
+      "reason": "No extracted data entry has the exact normalized chemical formula Li9.2Ba0.4GeP2S12.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-206",
+      "extracted_id": null,
+      "reason": "No extracted data entry has the exact normalized chemical formula Li9.0Ba0.5GeP2S12.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The extraction pipeline successfully identified two of the six ground truth entries based on normalized chemical formulas and consistent physical context. The remaining ground truth entries had slightly different barium doping levels that were not present in the extracted data.",
+  "metrics": {
+    "recall": 33.33333333333333,
+    "precision": 22.22222222222222,
+    "f1": 26.666666666666664,
+    "avg_log10_error": 0.4628459816186753,
+    "numeric_accuracy_pct": 50.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 6,
+    "total_ex": 9
+  }
+}

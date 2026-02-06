@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-548",
+      "extracted_id": "EX-4",
+      "reason": "The normalized chemical formula Li5La3Nb2O12 matches EX-4 (Li5La3Nb2O12). The physical context (temperature) is also similar (assumed room temperature for GT, 25 \u00b0C for EX-4). The conductivity values differ by a factor of approximately 4-5, which could be due to sample variations or measurement specifics not fully captured.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-549",
+      "extracted_id": "EX-2",
+      "reason": "The normalized chemical formula Li5La3Nb1.95Y0.05O12 closely matches EX-2 (Li5La3Nb1.95Y0.05O11.95), with the slight oxygen deviation likely a rounding difference. The conductivity values are an exact match (1.34e-05 S/cm), and the temperature (23 \u00b0C) is consistent with room temperature conditions.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-550",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li5La3Nb1.9Y0.1O12 closely matches EX-1 (Li5La3Nb1.9Y0.1O11.9), with the slight oxygen deviation likely a rounding difference. The conductivity values are an exact match (1.44e-05 S/cm), and the temperature (23 \u00b0C) is consistent with room temperature conditions.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-551",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5La3Nb1.85Y0.15O12 does not have a corresponding match in the extracted data based on the specific Y substitution level.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-552",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5La3Nb1.8Y0.2O12 does not have a corresponding match in the extracted data based on the specific Y substitution level.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-553",
+      "extracted_id": "EX-5",
+      "reason": "The normalized chemical formula Li5La3Nb1.75Y0.25O12 closely matches EX-5 (Li5La3Nb1.75Y0.25O11.75), with the slight oxygen deviation likely a rounding difference. The temperature (25 \u00b0C) is consistent with room temperature conditions. The conductivity values differ by a factor of approximately 1.8, which is acceptable for a match given the material and context.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted specific compositions for four out of six ground truth entries, including two with exact conductivity matches. The formulas were correctly normalized and matched despite minor oxygen stoichiometry differences in the extracted data. However, two intermediate Y-substituted compositions were missed, and some conductivity values showed variability even when the material and temperature matched.",
+  "metrics": {
+    "recall": 66.66666666666666,
+    "precision": 28.57142857142857,
+    "f1": 39.99999999999999,
+    "avg_log10_error": 0.22401990350780165,
+    "numeric_accuracy_pct": 75.0,
+    "num_valid_numeric_matches": 4,
+    "total_gt": 6,
+    "total_ex": 14
+  }
+}

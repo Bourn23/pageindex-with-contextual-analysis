@@ -1,0 +1,13 @@
+GT-388     | ✅ MATCH         | Formulas normalize to Li6PS5Br, and 0.000701 S/cm is approximately 7.2e-04 S/cm.
+GT-389     | ✅ MATCH         | Formulas are identical after normalization, and 0.000878 S/cm is approximately 8.8e-04 S/cm.
+GT-390     | ✅ MATCH         | Formulas are identical after normalization, and 0.000437 S/cm is approximately 4.5e-04 S/cm.
+GT-391     | ✅ MATCH         | Formulas are identical after normalization, and 0.000873 S/cm is approximately 8.9e-04 S/cm.
+GT-392     | ❌ MISSING/BAD   | The normalized ground truth formula Li6.1P0.95Si0.1S5Br does not match the extracted formula Li6.1P0.9Si0.1S5Br due to a difference in the P coefficient.
+GT-393     | ❌ MISSING/BAD   | While the formulas are identical after normalization, the conductivity value 0.000902 S/cm is significantly different from 1.15e-03 S/cm.
+GT-394     | ✅ MATCH         | Formulas are identical after normalization, and 0.000931 S/cm is approximately 9.4e-04 S/cm.
+GT-395     | ✅ MATCH         | Formulas are identical after normalization, and 0.00169 S/cm is approximately 1.7e-03 S/cm.
+GT-396     | ✅ MATCH         | Formulas are identical after normalization, and 0.00108 S/cm is approximately 1.1e-03 S/cm.
+GT-397     | ✅ MATCH         | Formulas are identical after normalization, and 0.00141 S/cm is approximately 1.42e-03 S/cm.
+GT-398     | ✅ MATCH         | Formulas and conductivity values are identical after normalization.
+GT-399     | ✅ MATCH         | Formulas are identical after normalization, and 0.00234 S/cm is approximately 2.4e-03 S/cm.
+GT-400     | ✅ MATCH         | Formulas are identical after normalization, and 0.00219 S/cm is approximately 2.22e-03 S/cm.

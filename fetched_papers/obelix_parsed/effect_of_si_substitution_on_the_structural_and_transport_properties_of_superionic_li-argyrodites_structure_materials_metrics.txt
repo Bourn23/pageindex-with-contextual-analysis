@@ -1,0 +1,17 @@
+Recall: 100.0%
+Precision: 46.4%
+F1: 63.4
+
+GT-388     | EX-0       | ✅ MATCH    | The chemical formula Li6PS5Br and conductivity 0.0007 S/cm from EX-0 are a direct match for GT-388 (normalized Li6PS5Br, 0.000701 S/cm).
+GT-389     | EX-14      | ✅ MATCH    | The chemical formula Li6.025P0.975Si0.025S5Br and conductivity 0.00088 S/cm from EX-14 are a direct match for GT-389 (normalized Li6.025P0.975Si0.025S5Br, 0.000878 S/cm).
+GT-390     | EX-15      | ✅ MATCH    | The chemical formula Li6.05P0.95Si0.05S5Br and conductivity 0.00043 S/cm from EX-15 are a direct match for GT-390 (normalized Li6.05P0.95Si0.05S5Br, 0.000437 S/cm).
+GT-391     | EX-16      | ✅ MATCH    | The chemical formula Li6.075P0.925Si0.075S5Br and conductivity 0.00087 S/cm from EX-16 are a direct match for GT-391 (normalized Li6.075P0.925Si0.075S5Br, 0.000873 S/cm).
+GT-392     | EX-17      | ✅ MATCH    | The chemical formula Li6.1P0.9Si0.1S5Br and conductivity 0.0008 S/cm from EX-17 are a direct match for GT-392 (normalized Li6.1P0.9Si0.1S5Br, 0.000799 S/cm).
+GT-393     | EX-26      | ✅ MATCH    | The chemical formula Li6.125P0.875Si0.125S5Br and conductivity 0.9 mS/cm (0.0009 S/cm) from EX-26 are a direct match for GT-393 (normalized Li6.125P0.875Si0.125S5Br, 0.000902 S/cm).
+GT-394     | EX-19      | ✅ MATCH    | The chemical formula Li6.175P0.825Si0.175S5Br and conductivity 0.00094 S/cm from EX-19 are a direct match for GT-394 (normalized Li6.175P0.825Si0.175S5Br, 0.000931 S/cm).
+GT-395     | EX-27      | ✅ MATCH    | The chemical formula Li6.2P0.8Si0.2S5Br and conductivity 1.7 mS/cm (0.0017 S/cm) from EX-27 are a direct match for GT-395 (normalized Li6.2P0.8Si0.2S5Br, 0.00169 S/cm).
+GT-396     | EX-20      | ✅ MATCH    | The chemical formula Li6.225P0.775Si0.225S5Br and conductivity 0.0011 S/cm from EX-20 are a direct match for GT-396 (normalized Li6.225P0.775Si0.225S5Br, 0.00108 S/cm).
+GT-397     | EX-21      | ✅ MATCH    | The chemical formula Li6.25P0.75Si0.25S5Br and conductivity 0.00142 S/cm from EX-21 are a direct match for GT-397 (normalized Li6.25P0.75Si0.25S5Br, 0.00141 S/cm).
+GT-398     | EX-22      | ✅ MATCH    | The chemical formula Li6.3P0.7Si0.3S5Br and conductivity 0.00165 S/cm from EX-22 are a direct match for GT-398 (normalized Li6.3P0.7Si0.3S5Br, 0.00165 S/cm).
+GT-399     | EX-4       | ✅ MATCH    | The chemical formula Li6.35P0.65Si0.35S5Br and conductivity 0.0024 S/cm from EX-4 are a direct match for GT-399 (normalized Li6.35P0.65Si0.35S5Br, 0.00234 S/cm).
+GT-400     | EX-23      | ✅ MATCH    | The chemical formula Li6.5P0.5Si0.5S5Br and conductivity 0.00222 S/cm from EX-23 are a direct match for GT-400 (normalized Li6.5P0.5Si0.5S5Br, 0.00219 S/cm).

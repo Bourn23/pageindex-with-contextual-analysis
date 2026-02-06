@@ -1,0 +1,111 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-318",
+      "extracted_match": "EX-11: LiHf2(PO4)3 | 6.3e-7 S cm^-1 | 298 K",
+      "reason": "The normalized ground truth formula LiHf2(PO4)3 matches the extracted formula, and the conductivity 6.85e-07 S/cm is approximately 6.3e-7 S/cm (8% difference) at room temperature.",
+      "thinking": "I normalized the ground truth formula Li6.0Hf12.0P18.0O72.0 to LiHf2(PO4)3. I then searched for this formula in the extracted data. EX-11 matched the formula and had a conductivity of 6.3e-7 S/cm, which is very close to the ground truth's 6.85e-07 S/cm, and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-319",
+      "extracted_match": "EX-26: Li1.1Hf1.9M0.1(PO4)3 | 0.0001 | 24.85C",
+      "reason": "The normalized ground truth formula Li1.1Fe0.1Hf1.9(PO4)3 matches the extracted formula Li1.1Hf1.9M0.1(PO4)3 if M is interpreted as Fe, and the conductivity 0.000107 S/cm is approximately 0.0001 S/cm (6.5% difference) at room temperature.",
+      "thinking": "I normalized the ground truth formula to Li1.1Fe0.1Hf1.9(PO4)3. EX-26 has a generic 'M' substitution at the same stoichiometry. Given the close conductivity values (1.07e-4 vs 1e-4 S/cm) and matching temperature, this is considered a match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-320",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.1In0.1Hf1.9(PO4)3 matches EX-26's formula if M=In, but the conductivity values (5.13e-05 S/cm vs 0.0001 S/cm) are significantly different (95% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.1In0.1Hf1.9(PO4)3. While EX-26's formula Li1.1Hf1.9M0.1(PO4)3 could match if M=In, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-321",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.1Lu0.1Hf1.9(PO4)3 matches EX-26's formula if M=Lu, but the conductivity values (5.88e-05 S/cm vs 0.0001 S/cm) are significantly different (70% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.1Lu0.1Hf1.9(PO4)3. While EX-26's formula Li1.1Hf1.9M0.1(PO4)3 could match if M=Lu, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-322",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.1Sc0.1Hf1.9(PO4)3 matches EX-26's formula if M=Sc, but the conductivity values (2.45e-05 S/cm vs 0.0001 S/cm) are significantly different (308% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.1Sc0.1Hf1.9(PO4)3. While EX-26's formula Li1.1Hf1.9M0.1(PO4)3 could match if M=Sc, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-323",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.2Lu0.2Hf1.8(PO4)3 matches EX-32's formula if M=Lu, but the conductivity values (9.79e-05 S/cm vs 1.6e-4 S/cm) are significantly different (63% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.2Lu0.2Hf1.8(PO4)3. While EX-32's formula Li1.2Hf1.8M0.2(PO4)3 could match if M=Lu, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-324",
+      "extracted_match": "EX-25: Li1.3Hf1.7Cr0.3(PO4)3 | 5e-07 | 24.85C",
+      "reason": "The normalized ground truth formula Li1.3Cr0.3Hf1.7(PO4)3 matches the extracted formula, and the conductivity 5.26e-07 S/cm is approximately 5e-07 S/cm (4.9% difference) at room temperature.",
+      "thinking": "I normalized the ground truth formula to Li1.3Cr0.3Hf1.7(PO4)3. EX-25 matched this formula exactly and had a conductivity of 5e-7 S/cm, which is very close to the ground truth's 5.26e-07 S/cm, and both are at room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-325",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.3Fe0.3Hf1.7(PO4)3 matches EX-27's formula if M=Fe, but the conductivity values (5.4e-05 S/cm vs 0.00014 S/cm) are significantly different (159% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.3Fe0.3Hf1.7(PO4)3. While EX-27's formula Li1.3Hf1.7M0.3(PO4)3 could match if M=Fe, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-326",
+      "extracted_match": "EX-27: Li1.3Hf1.7M0.3(PO4)3 | 0.00014 | 24.85C",
+      "reason": "The normalized ground truth formula Li1.3In0.3Hf1.7(PO4)3 matches the extracted formula Li1.3Hf1.7M0.3(PO4)3 if M is interpreted as In, and the conductivity 0.000142 S/cm is approximately 0.00014 S/cm (1.4% difference) at room temperature.",
+      "thinking": "I normalized the ground truth formula to Li1.3In0.3Hf1.7(PO4)3. EX-27 has a generic 'M' substitution at the same stoichiometry. Given the very close conductivity values (1.42e-4 vs 1.4e-4 S/cm) and matching temperature, this is considered a match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-327",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.3Lu0.3Hf1.7(PO4)3 matches EX-27's formula if M=Lu, but the conductivity values (3.56e-05 S/cm vs 0.00014 S/cm) are significantly different (293% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.3Lu0.3Hf1.7(PO4)3. While EX-27's formula Li1.3Hf1.7M0.3(PO4)3 could match if M=Lu, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-328",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.3Sc0.3Hf1.7(PO4)3 matches EX-27's formula if M=Sc, but the conductivity values (8.32e-05 S/cm vs 0.00014 S/cm) are significantly different (68% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.3Sc0.3Hf1.7(PO4)3. While EX-27's formula Li1.3Hf1.7M0.3(PO4)3 could match if M=Sc, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-329",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.3Y0.3Hf1.7(PO4)3 matches EX-27's formula if M=Y, but the conductivity values (3.19e-05 S/cm vs 0.00014 S/cm) are significantly different (338% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.3Y0.3Hf1.7(PO4)3. While EX-27's formula Li1.3Hf1.7M0.3(PO4)3 could match if M=Y, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-330",
+      "extracted_match": "EX-28: Li1.4Hf1.6M0.4(PO4)3 | 0.00014 | 24.85C",
+      "reason": "The normalized ground truth formula Li1.4In0.4Hf1.6(PO4)3 matches the extracted formula Li1.4Hf1.6M0.4(PO4)3 if M is interpreted as In, and the conductivity 0.000142 S/cm is approximately 0.00014 S/cm (1.4% difference) at room temperature.",
+      "thinking": "I normalized the ground truth formula to Li1.4In0.4Hf1.6(PO4)3. EX-28 has a generic 'M' substitution at the same stoichiometry. Given the very close conductivity values (1.42e-4 vs 1.4e-4 S/cm) and matching temperature, this is considered a match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-331",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.4Lu0.4Hf1.6(PO4)3 matches EX-28's formula if M=Lu, but the conductivity values (2.06e-05 S/cm vs 0.00014 S/cm) are significantly different (580% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.4Lu0.4Hf1.6(PO4)3. While EX-28's formula Li1.4Hf1.6M0.4(PO4)3 could match if M=Lu, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-332",
+      "extracted_match": "MISSING",
+      "reason": "The normalized ground truth formula Li1.4Y0.4Hf1.6(PO4)3 matches EX-28's formula if M=Y, but the conductivity values (2.09e-05 S/cm vs 0.00014 S/cm) are significantly different (569% difference).",
+      "thinking": "I normalized the ground truth formula to Li1.4Y0.4Hf1.6(PO4)3. While EX-28's formula Li1.4Hf1.6M0.4(PO4)3 could match if M=Y, the conductivity values are too far apart to be considered an approximate match.",
+      "is_match": false
+    }
+  ],
+  "total_ground_truth": 15,
+  "total_matches": 5
+}

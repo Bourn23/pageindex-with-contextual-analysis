@@ -1,0 +1,195 @@
+{
+  "doc_name": "ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate",
+  "timestamp": "2026-01-23 09:57:04",
+  "execution_time_seconds": 44.89,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13524,
+    "total_output_tokens": 12077,
+    "total_cost_usd": 0.043,
+    "call_counts": {
+      "gemini-3-flash-preview": 7
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 9,
+    "skipped_images": 5,
+    "failed_items": 4,
+    "total_sections_processed": 8,
+    "total_images_processed": 11
+  },
+  "material_count": 9,
+  "measurements": [
+    {
+      "raw_composition": "LiTi2(PO4)3 (x=0)",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "Solid solution series of the form Li(1+x)MxTi(2-x)(PO4)3.",
+        "M represents trivalent metal cations including Al, Cr, Ga, Fe, Sc, In, Y, and La.",
+        "Substitution involves replacing Ti4+ with M3+ and adding Li+ for charge compensation.",
+        "Samples were prepared with binders like Li2CO3 or (NH4)2HPO4 and sintered at 1173 K for 2h."
+      ],
+      "raw_conductivity": "10^-5.7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3, M=Sc",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solution series of the form Li(1+x)MxTi(2-x)(PO4)3.",
+        "M represents trivalent metal cations including Al, Cr, Ga, Fe, Sc, In, Y, and La.",
+        "Substitution involves replacing Ti4+ with M3+ and adding Li+ for charge compensation.",
+        "Samples were prepared with binders like Li2CO3 or (NH4)2HPO4 and sintered at 1173 K for 2h."
+      ],
+      "raw_conductivity": "10^-3.1",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3, M=Al",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Solid solution series of the form Li(1+x)MxTi(2-x)(PO4)3.",
+        "M represents trivalent metal cations including Al, Cr, Ga, Fe, Sc, In, Y, and La.",
+        "Substitution involves replacing Ti4+ with M3+ and adding Li+ for charge compensation.",
+        "Samples were prepared with binders like Li2CO3 or (NH4)2HPO4 and sintered at 1173 K for 2h."
+      ],
+      "raw_conductivity": "10^-3.15",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.5, M=Cr",
+      "canonical_formula": "Li1.5Cr0.5Ti1.5(PO4)3",
+      "material_definitions": [
+        "Solid solution series of the form Li(1+x)MxTi(2-x)(PO4)3.",
+        "M represents trivalent metal cations including Al, Cr, Ga, Fe, Sc, In, Y, and La.",
+        "Substitution involves replacing Ti4+ with M3+ and adding Li+ for charge compensation.",
+        "Samples were prepared with binders like Li2CO3 or (NH4)2HPO4 and sintered at 1173 K for 2h."
+      ],
+      "raw_conductivity": "10^-3.4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2, M=La",
+      "canonical_formula": "Li1.2La0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "Solid solution series of the form Li(1+x)MxTi(2-x)(PO4)3.",
+        "M represents trivalent metal cations including Al, Cr, Ga, Fe, Sc, In, Y, and La.",
+        "Substitution involves replacing Ti4+ with M3+ and adding Li+ for charge compensation.",
+        "Samples were prepared with binders like Li2CO3 or (NH4)2HPO4 and sintered at 1173 K for 2h."
+      ],
+      "raw_conductivity": "10^-4.1",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li1+xMxTi2-x(PO4)3) at x=0.2",
+      "canonical_formula": "Li1.2M0.2Ti1.8(PO4)3",
+      "material_definitions": [
+        "Materials are NASICON-type solid solutions with the formula Li(1+x)MxTi(2-x)(PO4)3.",
+        "Single phase compositions were characterized for x values of 0.2 and 0.3.",
+        "Mixed phase samples composed of LiTi2(PO4)3 and Li3M2(PO4)3 were also evaluated.",
+        "The study investigates the impact of sintered pellet porosity on ionic conductivity.",
+        "Conductivity measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "7.1e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00071,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "single phase (Li1+xMxTi2-x(PO4)3) at x=0.3",
+      "canonical_formula": "Li1.3M0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Materials are NASICON-type solid solutions with the formula Li(1+x)MxTi(2-x)(PO4)3.",
+        "Single phase compositions were characterized for x values of 0.2 and 0.3.",
+        "Mixed phase samples composed of LiTi2(PO4)3 and Li3M2(PO4)3 were also evaluated.",
+        "The study investigates the impact of sintered pellet porosity on ionic conductivity.",
+        "Conductivity measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "7.1e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00071,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "mixed phase [LiTi2(PO4)3 + Li3M2(PO4)3]",
+      "canonical_formula": "mixed phase [LiTi2(PO4)3 + Li3M2(PO4)3]",
+      "material_definitions": [
+        "Materials are NASICON-type solid solutions with the formula Li(1+x)MxTi(2-x)(PO4)3.",
+        "Single phase compositions were characterized for x values of 0.2 and 0.3.",
+        "Mixed phase samples composed of LiTi2(PO4)3 and Li3M2(PO4)3 were also evaluated.",
+        "The study investigates the impact of sintered pellet porosity on ionic conductivity.",
+        "Conductivity measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "6.3e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00063,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "Materials are NASICON-type solid solutions with the formula Li(1+x)MxTi(2-x)(PO4)3.",
+        "Single phase compositions were characterized for x values of 0.2 and 0.3.",
+        "Mixed phase samples composed of LiTi2(PO4)3 and Li3M2(PO4)3 were also evaluated.",
+        "The study investigates the impact of sintered pellet porosity on ionic conductivity.",
+        "Conductivity measurements were performed at a constant temperature of 298 K."
+      ],
+      "raw_conductivity": "2.5e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.5e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

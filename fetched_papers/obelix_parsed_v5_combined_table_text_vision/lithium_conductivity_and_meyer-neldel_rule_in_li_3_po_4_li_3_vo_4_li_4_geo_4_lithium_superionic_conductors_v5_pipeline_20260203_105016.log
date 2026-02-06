@@ -1,0 +1,136 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_v5_pipeline_20260203_105016.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Lithium Conductivity and Meyer-Neldel Rule in Li3PO4- Li3VO4-Li4GeO4 Lithium Superionic Conductors**
+   --- Found: 16 Sections
+   --- Found: 12 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '1. INTRODUCTION' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '2.1 Synthesis and Experimental Characterizations.' contains:
+       - 2 Images: ['Fig 2', 'Fig 3']
+
+   >>> Section '2.2 Classical Molecular Dynamics (MD) simulations' contains:
+       - 1 Images: ['Fig 4']
+
+   >>> Section '3. RESULTS' contains:
+       - 6 Images: ['Fig 2', 'Fig 6', 'Fig 7a', 'Fig 4', 'Fig 5', 'Fig 3']
+
+   >>> Section 'REFERENCES' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 16 items (Text + Images) simultaneously ...
+   🔍 page_6_figure_3.jpeg (Fig 4): Detecting subplot...
+   ✂️ page_6_figure_3.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+Passing box coords  [53, 20, 938, 529]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors/scifig_debug/page_6_figure_3_cropped_a.jpeg
+Passing box coords  [34, 532, 439, 946]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors/scifig_debug/page_6_figure_3_cropped_b.jpeg
+   [93m[Skip][0m page_6_figure_3.jpeg (Fig 4): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_6_figure_3.jpeg (Fig 4): Found 37 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 39 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 39 measurements
+      - Skipped (no data): 14 images
+      - Failed: 0 items
+
+Done! Extracted 39 points.
+Saved to: fetched_papers/obelix_md/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         15
+Total Input:         15,859 tokens
+Total Output:        8,401 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0258
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 15 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.chemmater.8b01504
+GT-69: Li6.0P0.4V1.6O8.0 | 1.31e-13 S/cm
+GT-70: Li6.0V2.0O8.0 | 9.2e-14 S/cm
+GT-124: Li12.8Ge0.8P3.2O16.0 | 1.14e-06 S/cm
+GT-125: Li12.8Ge0.8V3.2O16.0 | 1.9e-05 S/cm
+GT-126: Li13.6Ge1.6P2.4O16.0 | 4.5e-06 S/cm
+GT-127: Li13.6Ge1.6V2.4O16.0 | 8.89e-07 S/cm
+GT-128: Li14.4Ge2.4P1.6O16.0 | 1.1e-05 S/cm
+GT-129: Li14.4Ge2.4V1.6O16.0 | 3.19e-05 S/cm
+GT-130: Li15.2Ge3.2P0.8O16.0 | 1.03e-06 S/cm
+GT-131: Li15.2Ge3.2V0.8O16.0 | 2.71e-06 S/cm
+GT-132: Li12.0P1.6V2.4O16.0 | 3.55e-13 S/cm
+GT-133: Li12.0P2.4V1.6O16.0 | 3.2e-13 S/cm
+GT-134: Li12.0P3.2V0.8O16.0 | 2.05e-13 S/cm
+GT-135: Li12.0P4.0O16.0 | 1.75e-13 S/cm
+GT-136: Li16.0Ge4.0O16.0 | 1.3e-12 S/cm
+--- Starting Validation ---
+Comparing 15 GT items vs 687 Extracted items...
+
+============================================================
+VALIDATION SCORE: 80.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-69      | ✅ MATCH         | Formulas normalize to Li15O20PV4, and conductivities (1.31e-13 S/cm vs 2.80e-13 S/cm) are approximately similar for very low values.
+GT-70      | ✅ MATCH         | Formulas normalize to Li3O4V, and conductivities (9.20e-14 S/cm vs 1.50e-13 S/cm) are approximately similar for very low values.
+GT-124     | ✅ MATCH         | Formulas normalize to GeLi16O20P4, and conductivities (1.14e-06 S/cm vs 1.20e-06 S/cm) are approximately similar.
+GT-125     | ✅ MATCH         | Formulas normalize to GeLi16O20V4, and conductivities (1.90e-05 S/cm vs 1.80e-05 S/cm) are approximately similar.
+GT-126     | ✅ MATCH         | Formulas normalize to Ge2Li17O20P3, and conductivities (4.50e-06 S/cm vs 4.50e-06 S/cm) are an exact match.
+GT-127     | ❌ MISSING/BAD   | No matching extracted data found for formula Li13.6Ge1.6V2.4O16.0 (Ge2Li17O20V3) and conductivity 8.89e-07 S/cm at 30C.
+GT-128     | ✅ MATCH         | Formulas normalize to Ge3Li18O20P2, and conductivities (1.10e-05 S/cm vs 1.20e-05 S/cm) are approximately similar.
+GT-129     | ❌ MISSING/BAD   | No matching extracted data found for formula Li14.4Ge2.4V1.6O16.0 (Ge3Li18O20V2) and conductivity 3.19e-05 S/cm at 30C.
+GT-130     | ❌ MISSING/BAD   | No matching extracted data found for formula Li15.2Ge3.2P0.8O16.0 (Ge4Li19O20P) and conductivity 1.03e-06 S/cm at 30C.
+GT-131     | ✅ MATCH         | Formulas normalize to Ge4Li19O20V, and conductivities (2.71e-06 S/cm vs 2.50e-06 S/cm) are approximately similar.
+GT-132     | ✅ MATCH         | Formulas normalize to Li15O20P2V3, and conductivities (3.55e-13 S/cm vs 3.00e-13 S/cm) are approximately similar for very low values.
+GT-133     | ✅ MATCH         | Formulas normalize to Li15O20P3V2, and conductivities (3.20e-13 S/cm vs 6.00e-13 S/cm) are approximately similar for very low values.
+GT-134     | ✅ MATCH         | Formulas normalize to Li15O20P4V, and conductivities (2.05e-13 S/cm vs 1.50e-13 S/cm) are approximately similar for very low values.
+GT-135     | ✅ MATCH         | Formulas normalize to Li3O4P, and conductivities (1.75e-13 S/cm vs 1.50e-13 S/cm) are approximately similar for very low values.
+GT-136     | ✅ MATCH         | Formulas normalize to GeLi4O4, and conductivities (1.30e-12 S/cm vs 1.50e-12 S/cm) are approximately similar for very low values.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors
+[0;34m[INFO][0m DOI: 10.1021/acs.chemmater.8b01504
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors_v5_pipeline_20260203_105016.log
+

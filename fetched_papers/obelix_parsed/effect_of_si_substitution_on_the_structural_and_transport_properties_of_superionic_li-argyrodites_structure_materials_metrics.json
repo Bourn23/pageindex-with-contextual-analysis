@@ -1,0 +1,93 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-388",
+      "extracted_id": "EX-0",
+      "reason": "The normalized chemical formula Li6.0P1.0S5.0Br1.0 matches EX-0 (Li6PS5Br) and the conductivity values are very close (0.000701 S/cm vs 0.0007 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-389",
+      "extracted_id": "EX-14",
+      "reason": "The normalized chemical formula Li6.025P0.975Si0.025S5.0Br1.0 matches EX-14 (Li6.025P0.975Si0.025S5Br) and the conductivity values are very close (0.000878 S/cm vs 0.00088 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-390",
+      "extracted_id": "EX-15",
+      "reason": "The normalized chemical formula Li6.05P0.95Si0.05S5.0Br1.0 matches EX-15 (Li6.05P0.95Si0.05S5Br) and the conductivity values are very close (0.000437 S/cm vs 0.00043 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-391",
+      "extracted_id": "EX-16",
+      "reason": "The normalized chemical formula Li6.075P0.925Si0.075S5.0Br1.0 matches EX-16 (Li6.075P0.925Si0.075S5Br) and the conductivity values are very close (0.000873 S/cm vs 0.00087 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-392",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li6.1P0.95Si0.1S5.0Br1.0 does not have a direct match in the extracted data. EX-17 (Li6.1P0.9Si0.1S5Br) has a different P stoichiometry (0.9 vs 0.95).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-393",
+      "extracted_id": "EX-26",
+      "reason": "The normalized chemical formula Li6.125P0.875Si0.125S5.0Br1.0 matches EX-26 (Li6.125P0.875Si0.125S5Br). However, the conductivity value is missing in the extracted data. EX-11 has the correct formula but a significantly different conductivity (0.000902 S/cm vs 0.00123 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-394",
+      "extracted_id": "EX-19",
+      "reason": "The normalized chemical formula Li6.175P0.825Si0.175S5.0Br1.0 matches EX-19 (Li6.175P0.825Si0.175S5Br) and the conductivity values are very close (0.000931 S/cm vs 0.00094 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-395",
+      "extracted_id": "EX-27",
+      "reason": "The normalized chemical formula Li6.2P0.8Si0.2S5.0Br1.0 matches EX-27 (Li6.2P0.8Si0.2S5Br). However, the conductivity value is missing in the extracted data.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-396",
+      "extracted_id": "EX-20",
+      "reason": "The normalized chemical formula Li6.225P0.775Si0.225S5.0Br1.0 matches EX-20 (Li6.225P0.775Si0.225S5Br) and the conductivity values are very close (0.00108 S/cm vs 0.0011 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-397",
+      "extracted_id": "EX-21",
+      "reason": "The normalized chemical formula Li6.25P0.75Si0.25S5.0Br1.0 matches EX-21 (Li6.25P0.75Si0.25S5Br) and the conductivity values are very close (0.00141 S/cm vs 0.00142 S/cm). EX-12 had a significantly different conductivity.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-398",
+      "extracted_id": "EX-22",
+      "reason": "The normalized chemical formula Li6.3P0.7Si0.3S5.0Br1.0 matches EX-22 (Li6.3P0.7Si0.3S5Br) and the conductivity values are an exact match (0.00165 S/cm vs 0.00165 S/cm).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-399",
+      "extracted_id": "EX-4",
+      "reason": "The normalized chemical formula Li6.35P0.65Si0.35S5.0Br1.0 matches EX-4 (Li6.35P0.65Si0.35S5Br) and the conductivity values are very close (0.00234 S/cm vs 0.0024 S/cm). EX-7 had missing conductivity.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-400",
+      "extracted_id": "EX-23",
+      "reason": "The normalized chemical formula Li6.5P0.5Si0.5S5.0Br1.0 matches EX-23 (Li6.5P0.5Si0.5S5Br) and the conductivity values are very close (0.00219 S/cm vs 0.00222 S/cm). EX-13 had a significantly different conductivity.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI pipeline performed well in extracting most of the Li-P-Si-S-Br compositions and their corresponding conductivities, showing good agreement with the ground truth after formula normalization. One ground truth entry (GT-392) had no match due to a stoichiometry difference in the extracted data. Two entries (GT-393, GT-395) were matched based on exact formula but lacked conductivity data in the extraction, preventing a full comparison.",
+  "metrics": {
+    "recall": 92.3076923076923,
+    "precision": 42.857142857142854,
+    "f1": 58.53658536585366,
+    "avg_log10_error": 0.004223668460354446,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 10,
+    "total_gt": 13,
+    "total_ex": 28
+  }
+}

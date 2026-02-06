@@ -1,0 +1,89 @@
+{
+  "doc_name": "inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries",
+  "timestamp": "2026-01-23 09:47:29",
+  "execution_time_seconds": 41.56,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 21696,
+    "total_output_tokens": 12688,
+    "total_cost_usd": 0.0489,
+    "call_counts": {
+      "gemini-3-flash-preview": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 4,
+    "skipped_images": 12,
+    "failed_items": 1,
+    "total_sections_processed": 15,
+    "total_images_processed": 14
+  },
+  "material_count": 4,
+  "measurements": [
+    {
+      "raw_composition": "x = 0.00",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "Solid solutions with the general formula Li6+xP1-xGexS5I where x ranges from 0 to 0.8. Substitution of Ge4+ for P5+ increases the total lithium content for charge neutrality. These materials maintain the cubic argyrodite structure. The series exhibits a significant increase in ionic conductivity with increasing germanium substitution x."
+      ],
+      "raw_conductivity": "-5.8",
+      "raw_conductivity_unit": "ln(sigma*T / K*S*cm-1)",
+      "normalized_conductivity": 9.082664236127446e-06,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.00",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "Solid solutions with the general formula Li6+xP1-xGexS5I where x ranges from 0 to 0.8. Substitution of Ge4+ for P5+ increases the total lithium content for charge neutrality. These materials maintain the cubic argyrodite structure. The series exhibits a significant increase in ionic conductivity with increasing germanium substitution x."
+      ],
+      "raw_conductivity": "-7.8",
+      "raw_conductivity_unit": "ln(sigma*T / K*S*cm-1)",
+      "normalized_conductivity": 1.3930989285312751e-06,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.80",
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "material_definitions": [
+        "Solid solutions with the general formula Li6+xP1-xGexS5I where x ranges from 0 to 0.8. Substitution of Ge4+ for P5+ increases the total lithium content for charge neutrality. These materials maintain the cubic argyrodite structure. The series exhibits a significant increase in ionic conductivity with increasing germanium substitution x."
+      ],
+      "raw_conductivity": "1.4",
+      "raw_conductivity_unit": "ln(sigma*T / K*S*cm-1)",
+      "normalized_conductivity": 0.012165599900534025,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.80",
+      "canonical_formula": "Li6.8P0.2Ge0.8S5I",
+      "material_definitions": [
+        "Solid solutions with the general formula Li6+xP1-xGexS5I where x ranges from 0 to 0.8. Substitution of Ge4+ for P5+ increases the total lithium content for charge neutrality. These materials maintain the cubic argyrodite structure. The series exhibits a significant increase in ionic conductivity with increasing germanium substitution x."
+      ],
+      "raw_conductivity": "0.4",
+      "raw_conductivity_unit": "ln(sigma*T / K*S*cm-1)",
+      "normalized_conductivity": 0.005072203971980319,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

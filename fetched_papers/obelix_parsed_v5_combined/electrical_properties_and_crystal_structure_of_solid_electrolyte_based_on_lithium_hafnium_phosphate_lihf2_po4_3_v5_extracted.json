@@ -1,0 +1,354 @@
+{
+  "doc_name": "electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3",
+  "timestamp": "2026-01-23 11:33:08",
+  "execution_time_seconds": 69.82,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 27491,
+    "total_output_tokens": 30233,
+    "total_cost_usd": 0.0982,
+    "call_counts": {
+      "gemini-flash-latest": 10,
+      "gemini-3-flash-preview": 12
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 18,
+    "skipped_images": 16,
+    "failed_items": 1,
+    "total_sections_processed": 11,
+    "total_images_processed": 13
+  },
+  "material_count": 18,
+  "measurements": [
+    {
+      "raw_composition": "Lil.2Feo.2Hft.s (PO4) 3",
+      "canonical_formula": "Lil.2Feo.2Hft.s (PO4) 3",
+      "material_definitions": [
+        "The electrical properties and the crystal structure were investigated for the ceramic electrolytes based on LiHf2(PO4)3.",
+        "The conductivity enhanced by the Li20 addition with LiHf2 (PO4) 3 system and by the increase ofx for Lil +xMxHf2\\_x (PO4) 3 (M = Cr, Fe, Sc, In, Lu or Y) systems.",
+        "The P21/n monoclinic phase transformed to NASICON-type R3c rhombohedral phase at above 1173 K.",
+        "The activation energy for Li \t ion migration was decreased by the phase transition."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
+      "canonical_formula": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
+      "material_definitions": [
+        "The study focuses on the LiHf2(PO4)3 + yLi2O system, where Li2O acts as a flux to achieve high density and promotes the formation of the highly conductive NASICON-type R3c phase upon sintering above 1293 K.",
+        "This phase transition from the monoclinic P21/n phase is the primary driver of conductivity enhancement.",
+        "The maximum total conductivity was obtained for the LiHf2(PO4)3+0.1Li2O sample sintered at ca. 1298 K."
+      ],
+      "raw_conductivity": "1.1e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00011,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "The electrical properties were studied for the ceramic electrolytes based on LiHf2(PO4)3.",
+        "The NASICON system studied here is Li(1+x)M(x)Hf(2-x)(PO4)3, where M=Cr, Fe, Sc, In, Lu, or Y.",
+        "The samples were sintered above 1293 K to obtain maximum conductivity and high density pellets.",
+        "The NASICON-type structure (R3c) was formed for all samples, with a small P21/n monoclinic phase remaining as secondary phase for some.",
+        "The maximum conductivity was obtained for x=0.2 or 0.3 in the Li(1+x)M(x)Hf(2-x)(PO4)3 system."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3 systems",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "7.0e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O (sintered at 1293 K)",
+      "canonical_formula": "Li1.6Hf2P3O12.3",
+      "material_definitions": [
+        "Lithium hafnium phosphate samples with added lithium oxide Li2O.",
+        "The material system investigated is LiHf2(PO4)3 + yLi2O with y=0.3.",
+        "Samples were prepared by sintering at temperatures of 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The figure shows the Arrhenius plot of the ionic conductivity for these samples."
+      ],
+      "raw_conductivity": "-1.4",
+      "raw_conductivity_unit": "log(sigma T / S cm-1 K)",
+      "normalized_conductivity": 0.0001194321511660492,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T / K",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O (sintered at 1393 K)",
+      "canonical_formula": "Li1.6Hf2P3O12.3",
+      "material_definitions": [
+        "Lithium hafnium phosphate samples with added lithium oxide Li2O.",
+        "The material system investigated is LiHf2(PO4)3 + yLi2O with y=0.3.",
+        "Samples were prepared by sintering at temperatures of 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The figure shows the Arrhenius plot of the ionic conductivity for these samples."
+      ],
+      "raw_conductivity": "-2.0",
+      "raw_conductivity_unit": "log(sigma T / S cm-1 K)",
+      "normalized_conductivity": 3e-05,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T / K",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O (sintered at 1173 K)",
+      "canonical_formula": "Li1.6Hf2P3O12.3",
+      "material_definitions": [
+        "Lithium hafnium phosphate samples with added lithium oxide Li2O.",
+        "The material system investigated is LiHf2(PO4)3 + yLi2O with y=0.3.",
+        "Samples were prepared by sintering at temperatures of 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The figure shows the Arrhenius plot of the ionic conductivity for these samples."
+      ],
+      "raw_conductivity": "-3.3",
+      "raw_conductivity_unit": "log(sigma T / S cm-1 K)",
+      "normalized_conductivity": 1.5035617008818177e-06,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T / K",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 + 0.3Li2O (sintered at 1073 K)",
+      "canonical_formula": "Li1.6Hf2P3O12.3",
+      "material_definitions": [
+        "Lithium hafnium phosphate samples with added lithium oxide Li2O.",
+        "The material system investigated is LiHf2(PO4)3 + yLi2O with y=0.3.",
+        "Samples were prepared by sintering at temperatures of 1073 K, 1173 K, 1293 K, and 1393 K.",
+        "The figure shows the Arrhenius plot of the ionic conductivity for these samples."
+      ],
+      "raw_conductivity": "-4.1",
+      "raw_conductivity_unit": "log(sigma T / S cm-1 K)",
+      "normalized_conductivity": 2.3829847041728469e-07,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000/T / K",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "y=0.1",
+      "canonical_formula": "LiHf2(PO4)3+0.1Li2O",
+      "material_definitions": [
+        "LiHf2(PO4)3+yLi2O system where y ranges from 0 to 0.4.",
+        "The total ionic conductivity was measured at 298 K.",
+        "Samples were prepared by adding Li2O to the parent phosphate.",
+        "Conductivity is plotted as a function of the sintering temperature.",
+        "Optimal sintering for y=0.1 occurs at 1300 K."
+      ],
+      "raw_conductivity": "-4.0",
+      "raw_conductivity_unit": "log(S/cm)",
+      "normalized_conductivity": 3.355704697986577e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "y=0.2",
+      "canonical_formula": "LiHf2(PO4)3+0.2Li2O",
+      "material_definitions": [
+        "LiHf2(PO4)3+yLi2O system where y ranges from 0 to 0.4.",
+        "The total ionic conductivity was measured at 298 K.",
+        "Samples were prepared by adding Li2O to the parent phosphate.",
+        "Conductivity is plotted as a function of the sintering temperature.",
+        "Optimal sintering for y=0.2 occurs at approximately 1250 K."
+      ],
+      "raw_conductivity": "-4.5",
+      "raw_conductivity_unit": "log(S/cm)",
+      "normalized_conductivity": 1.0611670000565033e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "y=0.3",
+      "canonical_formula": "LiHf2(PO4)3+0.3Li2O",
+      "material_definitions": [
+        "LiHf2(PO4)3+yLi2O system where y ranges from 0 to 0.4.",
+        "The total ionic conductivity was measured at 298 K.",
+        "Samples were prepared by adding Li2O to the parent phosphate.",
+        "Conductivity is plotted as a function of the sintering temperature.",
+        "Optimal sintering for y=0.3 occurs at approximately 1300 K."
+      ],
+      "raw_conductivity": "-4.6",
+      "raw_conductivity_unit": "log(S/cm)",
+      "normalized_conductivity": 8.429149099025444e-08,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "y=0.4",
+      "canonical_formula": "LiHf2(PO4)3+0.4Li2O",
+      "material_definitions": [
+        "LiHf2(PO4)3+yLi2O system where y ranges from 0 to 0.4.",
+        "The total ionic conductivity was measured at 298 K.",
+        "Samples were prepared by adding Li2O to the parent phosphate.",
+        "Conductivity is plotted as a function of the sintering temperature.",
+        "Optimal sintering for y=0.4 occurs at approximately 1300 K."
+      ],
+      "raw_conductivity": "-4.4",
+      "raw_conductivity_unit": "log(S/cm)",
+      "normalized_conductivity": 1.3359301025285133e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "y=0",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "LiHf2(PO4)3+yLi2O system where y ranges from 0 to 0.4.",
+        "The total ionic conductivity was measured at 298 K.",
+        "Samples were prepared by adding Li2O to the parent phosphate.",
+        "Conductivity is plotted as a function of the sintering temperature.",
+        "The highest conductivity for the pure y=0 phase was observed after sintering at 1600 K."
+      ],
+      "raw_conductivity": "-6.1",
+      "raw_conductivity_unit": "log(S/cm)",
+      "normalized_conductivity": 2.6655309890076584e-09,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 (x=0)",
+      "canonical_formula": "LiHf2P3O12",
+      "material_definitions": [
+        "Lithium ion conductors in the Li1+xMxHf2-x(PO4)3 system, where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y).",
+        "The parent compound is LiHf2(PO4)3.",
+        "The substitution of Hf4+ by M3+ and additional Li+ ions aims to improve conductivity.",
+        "Conductivity measurements were performed at 298 K as a function of substitution level x."
+      ],
+      "raw_conductivity": "10^-6.2",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.2 (M=Fe)",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8P3O12",
+      "material_definitions": [
+        "Lithium ion conductors in the Li1+xMxHf2-x(PO4)3 system, where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y).",
+        "The parent compound is LiHf2(PO4)3.",
+        "The substitution of Hf4+ by M3+ and additional Li+ ions aims to improve conductivity.",
+        "Conductivity measurements were performed at 298 K as a function of substitution level x."
+      ],
+      "raw_conductivity": "10^-3.8",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3 (M=In)",
+      "canonical_formula": "Li1.3In0.3Hf1.7P3O12",
+      "material_definitions": [
+        "Lithium ion conductors in the Li1+xMxHf2-x(PO4)3 system, where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y).",
+        "The parent compound is LiHf2(PO4)3.",
+        "The substitution of Hf4+ by M3+ and additional Li+ ions aims to improve conductivity.",
+        "Conductivity measurements were performed at 298 K as a function of substitution level x."
+      ],
+      "raw_conductivity": "10^-3.8",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.4 (M=In)",
+      "canonical_formula": "Li1.4In0.4Hf1.6P3O12",
+      "material_definitions": [
+        "Lithium ion conductors in the Li1+xMxHf2-x(PO4)3 system, where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y).",
+        "The parent compound is LiHf2(PO4)3.",
+        "The substitution of Hf4+ by M3+ and additional Li+ ions aims to improve conductivity.",
+        "Conductivity measurements were performed at 298 K as a function of substitution level x."
+      ],
+      "raw_conductivity": "10^-3.8",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x=0.3 (M=Sc)",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7P3O12",
+      "material_definitions": [
+        "Lithium ion conductors in the Li1+xMxHf2-x(PO4)3 system, where M is a trivalent cation (Cr, Fe, Sc, In, Lu, or Y).",
+        "The parent compound is LiHf2(PO4)3.",
+        "The substitution of Hf4+ by M3+ and additional Li+ ions aims to improve conductivity.",
+        "Conductivity measurements were performed at 298 K as a function of substitution level x."
+      ],
+      "raw_conductivity": "10^-4.1",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": null,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

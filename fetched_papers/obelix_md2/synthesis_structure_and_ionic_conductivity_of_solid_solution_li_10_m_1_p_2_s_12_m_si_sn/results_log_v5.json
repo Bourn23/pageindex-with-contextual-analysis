@@ -1,0 +1,670 @@
+
+
+--- [Document] synthesis_structure_and_ionic_conductivity_of_solid_solution_li_10_m_1_p_2_s_12_m_si_sn.md ---
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=283 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=283
+)] thoughts_token_count=155 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=448 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Synthesis, structure, and ionic conductivity of solid solution, $\text{Li}_{10+\delta}M_{1+\delta}P_{2-\delta}S_{12}$ (M = Si, Sn):
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=687 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=687
+)] thoughts_token_count=360 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1057 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Materials synthesis:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=389
+)] cached_content_token_count=389 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=653 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=653
+)] thoughts_token_count=652 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1315 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Experimental**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=709
+)] cached_content_token_count=709 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=859 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=859
+)] thoughts_token_count=589 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1458 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Silicon solid-solution system:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=398
+)] cached_content_token_count=398 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=679 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=679
+)] thoughts_token_count=277 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=966 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Tin solid-solution system:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=939 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=939
+)] thoughts_token_count=245 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1194 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Solid solutions of the LGPS-type phases:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=598
+)] cached_content_token_count=598 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1495 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1495
+)] thoughts_token_count=470 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1975 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Conclusion:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=382 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=382
+)] thoughts_token_count=620 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1012 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Silicon system:
+- Response length: 1050 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=342 candidates_tokens_details=None prompt_token_count=1741 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1741
+)] thoughts_token_count=1913 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3996 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li3.4Si0.4P0.6S4",
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "material_definitions": [
+        "A previous material search on the pseudo binary Li4SiS4-Li3PS4 system indicated the existence of the lithium conducting phase, Li3.4Si0.4P0.6S4, which was regarded as a member of the thio-LISICON family.",
+        "The Li3.4Si0.4P0.6S4 phase is composed of a three-dimensional framework structure formed by isolated PS4 tetrahedral units, which is different from the LGPS-type structure."
+      ],
+      "raw_conductivity": "6.4e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00064,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Data cited from external reference (13).",
+        "Temperature inferred as 298 K (room temperature)."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] Introduction:
+- Response length: 2354 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1126
+)] cached_content_token_count=1126 candidates_token_count=730 candidates_tokens_details=None prompt_token_count=1300 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1300
+)] thoughts_token_count=2372 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4402 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li10GeP2S12 (LGPS)",
+      "canonical_formula": "Li10GeP2S12",
+      "material_definitions": [
+        "The material is a lithium containing sulfide with the LGPS structure type, studied as a solid electrolyte for all-solid-state batteries.",
+        "Its structure consists of one-dimensional chains formed by LiS6 octahedra and (Ge0.5/P0.5)S4 tetrahedra, connected via common edges and corners with PS4 tetrahedra.",
+        "The value is cited to demonstrate an extremely high conductivity, almost equaling liquid electrolytes.",
+        "The solid solutions investigated in the present study are LGPS-related phases Li(10+\\u03b4)M(1+\\u03b4)P(2-\\u03b4)S12 (M=Si, Sn), synthesized via a conventional solid-state reaction."
+      ],
+      "raw_conductivity": "1.2e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.012,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from an external source.",
+        "Temperature is inferred as Room Temperature (298 K)."
+      ]
+    },
+    {
+      "raw_composition": "Li10SnP2S12",
+      "canonical_formula": "Li10SnP2S12",
+      "material_definitions": [
+        "The material Li10SnP2S12 is an LGPS-type solid solution formed by substituting Ge4+ with Sn4+.",
+        "The purpose of its investigation is related to finding alternatives to rare and expensive germanium.",
+        "This compound exhibits a lower conductivity compared to the parent Li10GeP2S12 phase.",
+        "The solid solutions investigated in the present study are LGPS-related phases Li(10+\\u03b4)M(1+\\u03b4)P(2-\\u03b4)S12 (M=Si, Sn), synthesized via a conventional solid-state reaction."
+      ],
+      "raw_conductivity": "4.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature is inferred as Room Temperature (298 K)."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] page_0_picture_3.jpeg:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1749 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=669
+), ModalityTokenCount(
+  modality=<MediaModality.IMAGE: 'IMAGE'>,
+  token_count=1080
+)] thoughts_token_count=119 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1874 traffic_type=None
+- chars: {"measurements": []}
+
+
+[SCI-FIGURE DEBUG] page_5_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u03b8/\u00b0 [ CuK\u03b1 ]",
+        "unit": "\u00b0",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        48,
+        28,
+        981,
+        542
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "k in Li4-kSi1-kPkS4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Lattice parameters",
+        "unit": "\u212b",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        48,
+        561,
+        981,
+        970
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_3_figure_6.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u03b8 / \u00b0 [ \u03bb = 0.5 \u00c5 ]",
+        "unit": "\u00b0",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity (x 10^3)",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        31,
+        34,
+        923,
+        529
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "TOF / ms",
+        "unit": "ms",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        31,
+        546,
+        923,
+        972
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[DEBUG] **Electrochemical properties**:
+- Response length: 6079 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=595
+)] cached_content_token_count=595 candidates_token_count=2113 candidates_tokens_details=None prompt_token_count=2250 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2250
+)] thoughts_token_count=5700 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10063 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4 (k = 0.55)",
+      "canonical_formula": "Li3.45Si0.45P0.55S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "6.7e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0067,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LGPS (Ge system)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "1.2e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.012,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited for comparison against the Si system; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "Li3.4Si0.4P0.6S4 (thio-LISICON phase)",
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "6.4e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00064,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited for comparison against the LGPS-type Si system; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "k=0.67 in Li(4-k)Sn(1-k)PkS4 (nominal Li10SnP2S12)",
+      "canonical_formula": "Li3.33Sn0.33P0.67S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "3.7e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0037,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "k=0.67 in Li(4-k)Sn(1-k)PkS4 (nominal Li10SnP2S12)",
+      "canonical_formula": "Li3.33Sn0.33P0.67S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "4.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from previous study; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "k=0.73 in Li(4-k)Sn(1-k)PkS4",
+      "canonical_formula": "Li3.27Sn0.27P0.73S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "5.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.005,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_8_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "k in Li4-kM1-kPkS4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Distances between sulphide atoms at LiS6 / r",
+        "unit": "r",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        20,
+        504,
+        986,
+        990
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[TABLE DEBUG] Table 1: Rietveld refinement results for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> at 298 K<sup>a</sup>:
+- Response: {
+  "measurements": []
+}
+
+
+[SCI-FIGURE DEBUG] page_6_figure_3.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u03b8 / \u00b0 [ \u03bb = 0.6 \u00c5 ]",
+        "unit": "\u00b0",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        55,
+        43,
+        978,
+        540
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "k in Li4-kSn1-kPkS4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Lattice parameters a / \u00c5, c / \u00c5, V / \u00c5\u00b3",
+        "unit": "\u00c5",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        55,
+        564,
+        978,
+        977
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_8_figure_6.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "Voltage V / V (vs. Li/Li+)",
+        "unit": "V",
+        "quantity_type": "voltage",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Current density / mA cm-2",
+        "unit": "mA cm-2",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        116,
+        28,
+        972,
+        513
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "10^3 T^-1 / K^-1",
+        "unit": "K-1",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "log[sigma / S cm-1]",
+        "unit": "S cm-1",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        98,
+        526,
+        975,
+        985
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 6
+
+
+[SCI-FIGURE DEBUG] page_9_figure_5.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "k in Li4-kM1-kPkS4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "\u0303 \u03c3 298 K / S cm-1",
+        "unit": "S cm-1",
+        "quantity_type": "conductivity",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        75,
+        25,
+        805,
+        485
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "k in Li4-kM1-kPkS4",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "\u0303 \u03c3 298 K / S cm-1",
+        "unit": "S cm-1",
+        "quantity_type": "conductivity",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "Lattice volume V / \u00c53",
+        "unit": "\u00c53",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        70,
+        505,
+        965,
+        985
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 35

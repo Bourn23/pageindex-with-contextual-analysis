@@ -1,0 +1,921 @@
+{
+  "doc_name": "synthesis_structure_and_ionic_conductivity_of_solid_solution_li_10_m_1_p_2_s_12_m_si_sn",
+  "timestamp": "2026-02-03 11:51:54",
+  "execution_time_seconds": 263.88,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13897,
+    "total_output_tokens": 17221,
+    "total_cost_usd": 0.0476,
+    "call_counts": {
+      "gemini-flash-latest": 12,
+      "gemini-3-flash-preview": 1
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 50,
+    "skipped_images": 15,
+    "failed_items": 1,
+    "total_sections_processed": 13,
+    "total_images_processed": 9
+  },
+  "material_count": 50,
+  "measurements": [
+    {
+      "raw_composition": "Li10GeP2S12 (LGPS)",
+      "canonical_formula": "Li10GeP2S12",
+      "material_definitions": [
+        "The material is a lithium containing sulfide with the LGPS structure type, studied as a solid electrolyte for all-solid-state batteries.",
+        "Its structure consists of one-dimensional chains formed by LiS6 octahedra and (Ge0.5/P0.5)S4 tetrahedra, connected via common edges and corners with PS4 tetrahedra.",
+        "The value is cited to demonstrate an extremely high conductivity, almost equaling liquid electrolytes.",
+        "The solid solutions investigated in the present study are LGPS-related phases Li(10+\\u03b4)M(1+\\u03b4)P(2-\\u03b4)S12 (M=Si, Sn), synthesized via a conventional solid-state reaction."
+      ],
+      "raw_conductivity": "1.2e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.012,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from an external source.",
+        "Temperature is inferred as Room Temperature (298 K)."
+      ]
+    },
+    {
+      "raw_composition": "Li10SnP2S12",
+      "canonical_formula": "Li10SnP2S12",
+      "material_definitions": [
+        "The material Li10SnP2S12 is an LGPS-type solid solution formed by substituting Ge4+ with Sn4+.",
+        "The purpose of its investigation is related to finding alternatives to rare and expensive germanium.",
+        "This compound exhibits a lower conductivity compared to the parent Li10GeP2S12 phase.",
+        "The solid solutions investigated in the present study are LGPS-related phases Li(10+\\u03b4)M(1+\\u03b4)P(2-\\u03b4)S12 (M=Si, Sn), synthesized via a conventional solid-state reaction."
+      ],
+      "raw_conductivity": "4.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature is inferred as Room Temperature (298 K)."
+      ]
+    },
+    {
+      "raw_composition": "Li3.4Si0.4P0.6S4",
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "material_definitions": [
+        "A previous material search on the pseudo binary Li4SiS4-Li3PS4 system indicated the existence of the lithium conducting phase, Li3.4Si0.4P0.6S4, which was regarded as a member of the thio-LISICON family.",
+        "The Li3.4Si0.4P0.6S4 phase is composed of a three-dimensional framework structure formed by isolated PS4 tetrahedral units, which is different from the LGPS-type structure."
+      ],
+      "raw_conductivity": "6.4e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00064,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Data cited from external reference (13).",
+        "Temperature inferred as 298 K (room temperature)."
+      ]
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4 (k = 0.55)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "6.7e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0067,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LGPS (Ge system)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "1.2e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.012,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited for comparison against the Si system; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "Li3.4Si0.4P0.6S4 (thio-LISICON phase)",
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "6.4e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00064,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited for comparison against the LGPS-type Si system; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "k=0.67 in Li(4-k)Sn(1-k)PkS4 (nominal Li10SnP2S12)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "3.7e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0037,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "k=0.67 in Li(4-k)Sn(1-k)PkS4 (nominal Li10SnP2S12)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "4.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from previous study; implied temperature is room temperature."
+      ]
+    },
+    {
+      "raw_composition": "k=0.73 in Li(4-k)Sn(1-k)PkS4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [
+        "The solid electrolytes synthesized were LGPS-type phases defined by the general formula Li(4-k)M(1-k)PkS4 (M = Si, Ge, Sn).",
+        "Ionic conductivity was measured by the ac impedance method over the temperature range of 253 K to 373 K.",
+        "The Si system showed maximum conductivity at k=0.55 (Li3.45Si0.45P0.55S4) and the Sn system showed maximum conductivity at k=0.73 (Li3.27Sn0.27P0.73S4)."
+      ],
+      "raw_conductivity": "5.0e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.005,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C (room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-1.58",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.026302679918953815,
+      "raw_temperature": "2.68",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.68,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-1.73",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.018620871366628676,
+      "raw_temperature": "2.88",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.88,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-1.9",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.012589254117941675,
+      "raw_temperature": "3.08",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-2.18",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.006606934480075957,
+      "raw_temperature": "3.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.35,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-2.57",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.0026915348039269166,
+      "raw_temperature": "3.66",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.66,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li3.45Si0.45P0.55S4",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "-2.99",
+      "raw_conductivity_unit": "log[sigma / S cm-1]",
+      "normalized_conductivity": 0.0010232929922807535,
+      "raw_temperature": "3.95",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.95,
+      "source_figure_id": "Fig 7a",
+      "source_caption": "Fig. 7 (a) Cyclic voltammograms for LGPS type phases, Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub> (upper) and Li<sub>3.27</sub>Sn<sub>0.27</sub>P<sub>0.73</sub>S<sub>4</sub> (lower). (b) Arrhenius plots and cole-cole plots for Li<sub>3.45</sub>Si<sub>0.45</sub>P<sub>0.55</sub>S<sub>4</sub>. [Series: Li3.45Si0.45P0.55S4] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Si",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0053",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0053,
+      "raw_temperature": "0.525",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.53,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Si",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0067",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0067,
+      "raw_temperature": "0.55",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.55,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Si",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0056",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0056,
+      "raw_temperature": "0.575",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.57,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Si",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0042",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0042,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0111",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0111,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0143",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0143,
+      "raw_temperature": "0.55",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.55,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0138",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0138,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0124",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0124,
+      "raw_temperature": "0.66",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.66,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0121",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0121,
+      "raw_temperature": "0.68",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.68,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0038",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0038,
+      "raw_temperature": "0.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.67,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0043",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0043,
+      "raw_temperature": "0.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.7,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0049",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0049,
+      "raw_temperature": "0.72",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.72,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0052",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0052,
+      "raw_temperature": "0.73",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.73,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0044",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0044,
+      "raw_temperature": "0.74",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.74,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Sn",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "0.0037",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 0.0037,
+      "raw_temperature": "0.75",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.75,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "M = Ge (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "11.2",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 11.2,
+      "raw_temperature": "0.54",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.54,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (11.2000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "13.1",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 13.1,
+      "raw_temperature": "0.58",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.58,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (13.1000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "11.8",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 11.8,
+      "raw_temperature": "0.62",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.62,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (11.8000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "10.4",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 10.4,
+      "raw_temperature": "0.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.67,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (10.4000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "945.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 945.0,
+      "raw_temperature": "0.54",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.54,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (945.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "948.5",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 948.5,
+      "raw_temperature": "0.58",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.58,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (948.5000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "952.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 952.0,
+      "raw_temperature": "0.62",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.62,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (952.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Ge (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "956.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 956.0,
+      "raw_temperature": "0.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.67,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Ge (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (956.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "5.3",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 5.3,
+      "raw_temperature": "0.54",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.54,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (5.3000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "4.8",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 4.8,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (4.8000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 3.9,
+      "raw_temperature": "0.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.65,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (3.9000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "935.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 935.0,
+      "raw_temperature": "0.54",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.54,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (935.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "938.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 938.0,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (938.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Si (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "941.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 941.0,
+      "raw_temperature": "0.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.65,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Si (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (941.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "4.1",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 4.1,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (4.1000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "3.7",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 3.7,
+      "raw_temperature": "0.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.65,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (3.7000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Conductivity)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "3.2",
+      "raw_conductivity_unit": "\u0303 \u03c3 298 K / S cm-1",
+      "normalized_conductivity": 3.2,
+      "raw_temperature": "0.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.7,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Conductivity)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (3.2000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "978.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 978.0,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (978.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "974.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 974.0,
+      "raw_temperature": "0.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.65,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (974.0000 S/cm) for solid state"
+      ]
+    },
+    {
+      "raw_composition": "M = Sn (Lattice volume)",
+      "canonical_formula": "Li_{3.3} Sn_{0.3} P_{0.7} S_4",
+      "material_definitions": [],
+      "raw_conductivity": "970.0",
+      "raw_conductivity_unit": "Lattice volume V / \u00c53",
+      "normalized_conductivity": 970.0,
+      "raw_temperature": "0.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.7,
+      "source_figure_id": "Fig 8a",
+      "source_caption": "Fig. 8 (a) Composition dependence of the ionic conductivity at room temperature in the LGPS-type phase with k in Li<sub>4-k</sub> $M_{1-k}P_kS_4$  (M = Si, Ge, and Sn). (b) The relationships between ionic conductivity, lattice volume and composition parameter in monophasic LGPS-type phases. For germanium related systems (M = Ge; M = Ge, Si; M = Ge, Sn), the values are cited from previous studies. 12,16 [Series: M = Sn (Lattice volume)] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (970.0000 S/cm) for solid state"
+      ]
+    }
+  ],
+  "material_definitions": []
+}

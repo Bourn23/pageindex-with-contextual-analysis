@@ -1,0 +1,37 @@
+{
+  "gemini-2.0-flash": {
+    "status": "success",
+    "elapsed_time": 7.2983832359313965,
+    "data_points_count": 20,
+    "title": "Arrhenius plot of the conductivity",
+    "output_file": "result_gemini_2.0_flash.json"
+  },
+  "gemini-2.5-flash": {
+    "status": "success",
+    "elapsed_time": 20.510265827178955,
+    "data_points_count": 20,
+    "title": "An Arrhenius plot of the ionic conductivity for Li0.5La0.5-xLixTiO3 (x = 0, 0.05, 0.10, 0.20, 0.30)",
+    "output_file": "result_gemini_2.5_flash.json"
+  },
+  "gemini-2.5-pro": {
+    "status": "success",
+    "elapsed_time": 36.15586876869202,
+    "data_points_count": 20,
+    "title": "Arrhenius plot of the conductivity \u03c3 for LLBZT",
+    "output_file": "result_gemini_2.5_pro.json"
+  },
+  "gemini-3-flash-preview": {
+    "status": "success",
+    "elapsed_time": 20.827214002609253,
+    "data_points_count": 20,
+    "title": "Arrhenius plot of the conductivity \u03c3 for LLBZT",
+    "output_file": "result_gemini_3_flash_preview.json"
+  },
+  "gemini-3-pro-preview": {
+    "status": "success",
+    "elapsed_time": 116.67880487442017,
+    "data_points_count": 20,
+    "title": "Arrhenius plot of the conductivity \u03c3 for LLBZT",
+    "output_file": "result_gemini_3_pro_preview.json"
+  }
+}

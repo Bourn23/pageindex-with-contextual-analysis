@@ -1,0 +1,338 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_pipeline_20260114_151642.log
+
+[0;32m[STEP 1/3][0m Converting MD file to JSON structure...
+
+
+--- Starting Async Semantic Parser ---
+
+--- Starting Async Semantic Parser ---
+Processing: ./fetched_papers/obelix_md2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability.md
+🚀 Starting Async Semantic Parser...
+  -> Started Section: Introduction
+  -> Started Section: Abstract / Introduction
+  -> Started Section: 1. INTRODUCTION
+  -> Started Section: 2. THEORETICAL CONSIDERATIONS
+  -> Started Section: 3. EXPERIMENTAL ASPECTS
+  -> Started Section: **4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in
+  -> Started Section: 5. CONCLUSION
+  -> Started Section: **S** Supporting Information
+  -> Started Section: **Corresponding Authors**
+  -> Started Section: **Author Contributions**
+  -> Started Section: Notes
+  -> Started Section: ACKNOWLEDGMENTS
+  -> Started Section: REFERENCES
+  ✓ Finished Section: Notes
+  🔍 Checking placeholder: '__IMG_a776a579__'
+  ✅ Found Special Node: __IMG_a776a579__
+  ✓ Finished Section: Introduction
+  ✓ Finished Section: Abstract / Introduction
+  ✓ Finished Section: ACKNOWLEDGMENTS
+  🔍 Checking placeholder: '__TBL_2584e98b__'
+  ✅ Found Special Node: __TBL_2584e98b__
+  ✓ Finished Section: **Author Contributions**
+  ✓ Finished Section: **Corresponding Authors**
+  ✓ Finished Section: 3. EXPERIMENTAL ASPECTS
+  🔍 Checking placeholder: '__IMG_28fd1dd6__'
+  ✅ Found Special Node: __IMG_28fd1dd6__
+  🔍 Checking placeholder: '__IMG_f596e979__'
+  ✅ Found Special Node: __IMG_f596e979__
+  🔍 Checking placeholder: '__IMG_1c7f9898__'
+  ✅ Found Special Node: __IMG_1c7f9898__
+  🔍 Checking placeholder: '__IMG_28fd1dd6__'
+  ✅ Found Special Node: __IMG_28fd1dd6__
+  🔍 Checking placeholder: '__IMG_f596e979__'
+  ✅ Found Special Node: __IMG_f596e979__
+  🔍 Checking placeholder: '__IMG_058aca58__'
+  ✅ Found Special Node: __IMG_058aca58__
+  ✓ Finished Section: **S** Supporting Information
+  ✓ Finished Section: 1. INTRODUCTION
+  🔍 Checking placeholder: '__TBL_e6c8634e__'
+  ✅ Found Special Node: __TBL_e6c8634e__
+  🔍 Checking placeholder: '__TBL_238bb1e8__'
+  ✅ Found Special Node: __TBL_238bb1e8__
+  ✓ Finished Section: 2. THEORETICAL CONSIDERATIONS
+  🔍 Checking placeholder: '__IMG_f596e979__'
+  ✅ Found Special Node: __IMG_f596e979__
+  🔍 Checking placeholder: '__IMG_ea3de249__'
+  ✅ Found Special Node: __IMG_ea3de249__
+  🔍 Checking placeholder: '__IMG_f0462bd2__'
+  ✅ Found Special Node: __IMG_f0462bd2__
+  🔍 Checking placeholder: '__IMG_6563a7d6__'
+  ✅ Found Special Node: __IMG_6563a7d6__
+  🔍 Checking placeholder: '__IMG_407b923f__'
+  ✅ Found Special Node: __IMG_407b923f__
+  🔍 Checking placeholder: '__IMG_ba37e954__'
+  ✅ Found Special Node: __IMG_ba37e954__
+  🔍 Checking placeholder: '__IMG_6bad4ba6__'
+  ✅ Found Special Node: __IMG_6bad4ba6__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  🔍 Checking placeholder: '__IMG_93634ded__'
+  ✅ Found Special Node: __IMG_93634ded__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: 5. CONCLUSION
+  🔍 Checking placeholder: '__IMG_1773ad89__'
+  ✅ Found Special Node: __IMG_1773ad89__
+  ⚠️ Timeout (Attempt 1/3). Retrying in 2s...
+  ✓ Finished Section: **4.1. Structural Analysis and Microstructure Studies.** Rietveld refinement results of six stuffed garnet compositions in
+  ⚠️ Timeout (Attempt 2/3). Retrying in 4s...
+  ⚠️ Timeout (Attempt 3/3). Retrying in 8s...
+Grouping failed for REFERENCES: Failed to get LLM response after 3 retries.
+  ✓ Finished Section: REFERENCES
+  ✓ Re-indexed 604 structural nodes.
+  ✓ Mapped 419 unique keywords.
+
+--- Final Structured Output ---
+✓ Saved to: ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure.json
+[0;34m[INFO][0m ✓ Structure saved to: ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Loading structure from: fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure.json
+Document: parsed_doc
+======================================================================
+MODELS USED
+SCIENTIFIC_NORMALIZER_MODEL: gemini-2.5-pro
+DATA_VALIDATOR_MODEL: gemini-3-flash-preview
+MATERIAL_NAME_NORMALIZER_MODEL: gemini-3-flash-preview
+EXTRACTOR_TEXT_MODEL: gemini-3-flash-preview
+EXTRACTOR_VISION_MODEL: gemini-3-flash-preview
+Found 63 text nodes and 16 image nodes.
+
+[Stage 2] Extracting from 63 relevant nodes...
+  [1/63] ○ Solid-state synthesis method for Li-stuffed garnet... (0 data points)
+  [2/63] ○ Background on solid electrolytes and garnet materi... (0 data points)
+  [3/63] ○ Institutional Collaboration... (0 data points)
+  [4/63] ○ Section 4.4 Intro & Structural Stability: Etching ... (0 data points)
+  [5/63] ○ Physical Properties Discussion Continuation... (0 data points)
+  [6/63] ○ Etching Treatments Impact on Structure... (0 data points)
+  [7/63] ○ Publication and affiliation details... (0 data points)
+  [8/63] ○ SEM Study: Surface Morphology and Porosity... (0 data points)
+  [9/63] ○ Rietveld refinement results for garnet-type struct... (0 data points)
+  [10/63] ○ Experimental precaution for carbonate formation... (0 data points)
+  [11/63] ○ TGA Analysis of Aged Samples... (0 data points)
+  [12/63] ○ PXRD Analysis of Aged Samples and Secondary Phases... (0 data points)
+  [13/63] ○ SEM Discussion Continuation: Pores and Particle Co... (0 data points)
+  [14/63] ✓ Figure 6: Arrhenius Plots & Ionic Conductivity Com... (1 data points)
+  [15/63] ○ Section 4.2 Intro & EIS Nyquist Plot Analysis... (0 data points)
+  [16/63] ○ Structural and Volumetric Properties... (0 data points)
+  [17/63] ○ Study motivation and expected applications... (0 data points)
+  [18/63] ○ Density and Its Related Parameters... (0 data points)
+  [19/63] ✓ Figure 10: SELF and Ionic Conductivity Variations... (3 data points)
+  [20/63] ○ Density and Compactness Trends... (0 data points)
+  [21/63] ○ Figure 7: Permittivity Plots... (0 data points)
+  [22/63] ○ Permittivity and Its Related Parameters... (0 data points)
+  [23/63] ✓ Bulk Conductivity and Density Correlation... (1 data points)
+  [24/63] ○ Sample Synthesis... (0 data points)
+  [25/63] ○ Section 4.3 Intro & Dielectric Permittivity Analys... (0 data points)
+  [26/63] ○ PXRD and Rietveld Refinement... (0 data points)
+  [27/63] ○ General... (0 data points)
+  [28/63] ✓ Microstructural Analysis (SEM)... (1 data points)
+  [29/63] ✓ Ionic Conductivity Values & Arrhenius Behavior... (1 data points)
+  [30/63] ○ Dielectric Properties Study... (0 data points)
+  [31/63] ○ Dielectric Loss Tangent & Relaxation Peaks... (0 data points)
+  [32/63] ○ Density Measurement... (0 data points)
+  [33/63] ✓ Phase Identification and Air Stability... (1 data points)
+  [34/63] ○ Thermal Stability Analysis (TGA)... (0 data points)
+  [35/63] ○ SEM Analysis... (0 data points)
+  [36/63] ○ Figure 8: Dielectric Loss Plots... (0 data points)
+  [37/63] ○ Supporting Information... (0 data points)
+  [38/63] ○ Reference URL... (0 data points)
+  [39/63] ○ Dielectric Loss Peak Characteristics... (0 data points)
+  [40/63] ○ Corresponding Authors' Contact Information... (0 data points)
+  [41/63] ○ Energy Loss Functions (SELF/VELF) Introduction and... (0 data points)
+  [42/63] ○ Thermogravimetric Analysis (TGA)... (0 data points)
+  [43/63] ○ Introduction to Li-garnet electrolytes... (0 data points)
+  [44/63] ○ SELF/VELF Correlation with Conductivity and Grain ... (0 data points)
+  [45/63] ○ Electrochemical Impedance Spectroscopy (EIS)... (0 data points)
+  [46/63] ○ Author Contributions... (0 data points)
+  [47/63] ○ LiCoO2 Pellet Preparation for AC Measurements... (0 data points)
+  [48/63] ○ Structural and morphological characterization... (0 data points)
+  [49/63] ○ Table 3: Powder X-ray Rietveld Refinement Result... (0 data points)
+  [50/63] ○ Section 4.1 Intro & Figures 2, 3, 4 Overview... (0 data points)
+  [51/63] ○ Li-ion transport and dielectric properties investi... (0 data points)
+  [52/63] ○ Temperature Dependence of SELF/VELF and Material I... (0 data points)
+  [53/63] ○ Author Contributions... (0 data points)
+  [54/63] ○ Conflict of Interest... (0 data points)
+  [55/63] ○ Long-term chemical stability assessment... (0 data points)
+  [56/63] ○ Crystal Structure and Doping Effects... (0 data points)
+  [57/63] ○ Figure 9: SELF and VELF Plots... (0 data points)
+  [58/63] ○ Introduction to Li-ion battery safety issues and d... (0 data points)
+  [59/63] ○ SELF/VELF General Trends and Conductivity Relation... (0 data points)
+  [60/63] ○ Funding Information... (0 data points)
+  [61/63] ✓ Physical Properties: Density, Molar Volume, Compac... (1 data points)
+  [62/63] ✓ SELF/VELF in Other Garnets and Li Content Impact... (2 data points)
+  [63/63] ✓ Figure 5: Nyquist Plots... (1 data points)
+  → 12 total data points extracted
+
+[Stage 2b] Processing 16 images directly...
+    Warning: Skipping missing image _page_5_Figure_1.jpeg
+    Warning: Skipping missing image _page_3_Figure_18.jpeg
+    Warning: Skipping missing image _page_4_Figure_1.jpeg
+    Warning: Skipping missing image _page_7_Figure_1.jpeg
+    Warning: Skipping missing image _page_9_Figure_3.jpeg
+    Warning: Skipping missing image _page_9_Figure_3.jpeg
+    Warning: Skipping missing image _page_1_Figure_1.jpeg
+    Warning: Skipping missing image _page_8_Figure_5.jpeg
+    Warning: Skipping missing image _page_0_Figure_8.jpeg
+    Warning: Skipping missing image _page_0_Figure_15.jpeg
+    Warning: Skipping missing image _page_5_Figure_5.jpeg
+    Warning: Skipping missing image _page_6_Figure_1.jpeg
+    Warning: Skipping missing image _page_8_Figure_1.jpeg
+    Warning: Skipping missing image _page_9_Figure_1.jpeg
+    Warning: Skipping missing image _page_9_Figure_3.jpeg
+    Warning: Skipping missing image _page_9_Figure_1.jpeg
+
+Merging: 12 text-based + 0 image-based points.
+  → Running physical heuristic checks on 12 points...
+  → Running LLM semantic verification on 12 points...
+    ! Warning: LLM verification failed: '_norm_cond'
+
+[Stage 2.5] Normalizing material names across document...
+  → Found 12 unique name variants
+ >>>> CANNONICAL PROMPT >>>> Analyze these material names from a scientific paper and create canonical mappings.
+
+Paper Title: Introduction
+
+Material Names Found (with proportions where applicable):
+- "Li-stuffed garnets"
+- "Li5+2xLa3Ta2-xSmxO12 (0 <= x <= 0.55)"
+- "Li5+2xLa3Ta2-xSmxO12 (x = 0.35)"
+- "Li5.1La3Nb1.95Gd0.05O12 (Gd-doped)"
+- "Li5.7La3Ta1.65Sm0.35O12 (Sm-doped)"
+- "Li5.7La3Ta1.65Sm0.35O12 (Sm=0.35)"
+- "Li5La3Ta2O12"
+- "Li5La3Ta2O12 (parent phase)"
+- "Li6.4Ga0.2La3Zr2O12 (Ga-doped)"
+- "Li6.5La3Nb1.25Y0.75O12"
+
+Task:
+1. Group names that refer to the SAME EXACT material (same composition AND same proportion)
+2. For each group, determine:
+   - canonical_formula: The chemical formula (e.g., Li6PS5I, Li7La3Zr2O12)
+   - canonical_name: Systematic name (e.g., Lithium Phosphorus Sulfide Iodide)
+   - abbreviation: Standard abbreviation if any (e.g., LLZO, LATP)
+   - variant_names: List of ALL names from the input that refer to this material
+
+CRITICAL Guidelines:
+- Prioritize chemical formulas over generic names
+- "Li6PS5I" and "lithium argyrodite" likely refer to the same material → GROUP THEM
+- "Li7La3Zr2O12" and "LLZO" refer to the same material → GROUP THEM
+- Different stoichiometries (e.g., Li6PS5Br vs Li6PS5I) are DIFFERENT materials → DO NOT GROUP
+- Different proportions (e.g., x=0.1 vs x=0.35) are DIFFERENT materials → DO NOT GROUP
+- "Li6PS5Br (x=0.1)" and "Li6PS5Br (x=0.35)" are DIFFERENT → DO NOT GROUP
+- Only group if the name is just a synonym (e.g., formula vs generic name) for the SAME composition
+
+Respond with JSON only.
+ >>>> CANNONICAL RESPONSE >>>> materials=[CanonicalMaterialName(canonical_formula='Li5+2xLa3Ta2-xSmxO12', canonical_name='Lithium Lanthanum Tantalum Samarium Oxide', abbreviation='Li-stuffed garnets', variant_names=['Li-stuffed garnets', 'Li5+2xLa3Ta2-xSmxO12 (0 <= x <= 0.55)']), CanonicalMaterialName(canonical_formula='Li5.7La3Ta1.65Sm0.35O12', canonical_name='Lithium Lanthanum Tantalum Samarium Oxide (x=0.35)', abbreviation=None, variant_names=['Li5+2xLa3Ta2-xSmxO12 (x = 0.35)', 'Li5.7La3Ta1.65Sm0.35O12 (Sm-doped)', 'Li5.7La3Ta1.65Sm0.35O12 (Sm=0.35)']), CanonicalMaterialName(canonical_formula='Li5.1La3Nb1.95Gd0.05O12', canonical_name='Lithium Lanthanum Niobium Gadolinium Oxide', abbreviation=None, variant_names=['Li5.1La3Nb1.95Gd0.05O12 (Gd-doped)']), CanonicalMaterialName(canonical_formula='Li5La3Ta2O12', canonical_name='Lithium Lanthanum Tantalum Oxide', abbreviation=None, variant_names=['Li5La3Ta2O12', 'Li5La3Ta2O12 (parent phase)']), CanonicalMaterialName(canonical_formula='Li6.4Ga0.2La3Zr2O12', canonical_name='Lithium Gallium Lanthanum Zirconium Oxide', abbreviation=None, variant_names=['Li6.4Ga0.2La3Zr2O12 (Ga-doped)']), CanonicalMaterialName(canonical_formula='Li6.5La3Nb1.25Y0.75O12', canonical_name='Lithium Lanthanum Niobium Yttrium Oxide', abbreviation=None, variant_names=['Li6.5La3Nb1.25Y0.75O12'])]
+  → Created 6 canonical material(s)
+  → Updated 12/12 material names
+  → Normalizing 12 data points [CONCURRENT, MAX 7]...
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_value': 0, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='2.25 × 10⁻⁵ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 2.25e-05, 'temp_unit': 'C', 'temp_value': 25, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0, 'temp_value': None}
+    [DEBUG Norm] Input: Cond='2.25 × 10⁻⁵ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'cond_value': 2.25e-05, 'cond_unit': 'S/cm', 'temp_value': 25, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='3.9 × 10⁻⁴ S cm⁻¹', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0.00039, 'temp_unit': 'C', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='not specified', Temp='25 °C'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_value': 0, 'cond_unit': 'S/cm', 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='1.27 × 10⁻⁵ S cm⁻¹', Temp='-22°C'
+    [DEBUG Norm] Tool Args: {'temp_value': -22, 'cond_unit': 'S/cm', 'cond_value': 1.27e-05, 'temp_unit': 'C'}
+    [DEBUG Norm] Input: Cond='high', Temp='not specified'
+    [DEBUG Norm] Tool Args: {'cond_unit': 'S/cm', 'cond_value': 0}
+    [DEBUG Norm] Input: Cond='2.25 × 10⁻⁵ S cm⁻¹', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_unit': 'C', 'cond_unit': 'S/cm', 'cond_value': 2.25e-05, 'temp_value': 25}
+    [DEBUG Norm] Input: Cond='2.99 × 10⁻⁴ S cm⁻¹', Temp='25°C'
+    [DEBUG Norm] Tool Args: {'cond_value': 0.000299, 'cond_unit': 'S/cm'}
+    [DEBUG Norm] Input: Cond='not specified', Temp='room temperature'
+    [DEBUG Norm] Tool Args: {'temp_value': 25, 'cond_unit': 'S/cm', 'temp_unit': 'C', 'cond_value': 0}
+
+[Stage 3] Deduplicating 12 data points...
+  → Merged 3 duplicates, 9 unique points remain.
+
+[Stage 5] Enriching processing methods (High-Recall Mode)...
+  -> Warning: Global enrichment failed: 'list' object has no attribute 'items'
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         14
+Total Input:         133,918 tokens
+Total Output:        4,329 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0799
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-3-flash-preview        : 14 calls
+==================================================
+
+
+======================================================================
+EXTRACTION COMPLETE
+======================================================================
+✓ Saved to: fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure_materials.json
+Time elapsed (s)  67.45140886306763
+
+Statistics:
+  Nodes analyzed: 79
+  Raw data points: 12
+  After dedup: 4
+  Valid: 4, Invalid: 0
+
+By Confidence:
+  high: 1
+  medium: 3
+  low: 0
+
+By Data Source:
+  primary: 1
+  cited: 0
+  inferred: 0
+
+Sample data points:
+  ✓ Li5.7La3Ta1.65Sm0.35O12: 2.25 × 10⁻⁵ S cm⁻¹ @ room temperature [high]
+  ✓ Li5La3Ta2O12: 3.9 × 10⁻⁴ S cm⁻¹ @ 25 °C [medium]
+  ✓ Li6.5La3Nb1.25Y0.75O12: 1.27 × 10⁻⁵ S cm⁻¹ @ -22°C [medium]
+  ✓ Li6.5La3Nb1.25Y0.75O12: 2.99 × 10⁻⁴ S cm⁻¹ @ 25°C [medium]
+[0;34m[INFO][0m ✓ Materials extracted to: ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure_materials.json
+
+[0;32m[STEP 3/3][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.inorgchem.7b00816
+                      Composition  Ionic conductivity (S cm-1)
+541       Li40.0La24.0Ta16.0O96.0                     0.000016
+542  Li42.4La24.0Ta14.8Sm1.2O96.0                     0.000007
+543  Li44.0La24.0Ta14.0Sm2.0O96.0                     0.000005
+544  Li45.6La24.0Ta13.2Sm2.8O96.0                     0.000022
+545  Li47.2La24.0Ta12.4Sm3.6O96.0                     0.000012
+546  Li48.8La24.0Ta11.6Sm4.4O96.0                     0.000014
+Starting Evaluation on 6 Ground Truth Points...
+
+Evaluation Complete: 1/6 Matched (16.7%)
+Detailed report saved to llm_evaluation_report.csv
+[0;34m[INFO][0m ✓ Evaluation complete
+[0;34m[INFO][0m ✓ Report saved to: llm_evaluation_report.csv
+
+[0;34m========================================[0m
+[0;34mPIPELINE COMPLETED SUCCESSFULLY[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability
+[0;34m[INFO][0m DOI: 10.1021/acs.inorgchem.7b00816
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Structure JSON:    ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure.json
+[0;34m[INFO][0m   2. Materials JSON:    ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_structure_materials.json
+[0;34m[INFO][0m   3. Evaluation Report: llm_evaluation_report.csv
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed2/structure_ionic_conductivity_and_dielectric_properties_of_li-rich_garnet-type_li_5_2_i_x_i_la_3_ta_2_i_x_i_sm_i_x_i_o_12_0_i_x_i_0_55_and_their_chemical_stability_pipeline_20260114_151642.log
+

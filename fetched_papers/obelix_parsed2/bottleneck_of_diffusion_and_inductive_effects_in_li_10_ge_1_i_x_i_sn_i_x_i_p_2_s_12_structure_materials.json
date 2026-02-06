@@ -1,0 +1,203 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 94118,
+    "total_output_tokens": 5345,
+    "total_cost_usd": 0.063094,
+    "call_counts": {
+      "gemini-3-flash-preview": 17
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/bottleneck_of_diffusion_and_inductive_effects_in_li_10_ge_1_i_x_i_sn_i_x_i_p_2_s_12_structure.json",
+  "extraction_stats": {
+    "total_nodes": 106,
+    "raw_extracted": 15,
+    "after_dedup": 5,
+    "time_elapsed": 89.1027581691742,
+    "valid_count": 5,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 4,
+      "medium": 1,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 4,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 15,
+    "from_image_nodes": 0,
+    "final_count": 5
+  },
+  "material_count": 5,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 5a) for the pristine Li6PS5Cl sample at 1000/T = 3.35 K^-1 (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing. | Synthesized according to Ref [4] (details not in text).",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.0011,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "3.2 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 5a) for the Cl-rich Li5.5PS4.5Cl1.5 sample at 1000/T = 3.35 K^-1 (approx. 25°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Chlorine-rich argyrodite-type solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing. | Synthesized according to Ref [4] (details not in text).",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.0032,
+      "_norm_temp": 25,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 5a) for the pristine Li6PS5Cl sample at 1000/T = 2.68 K^-1 (approx. 100°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Pristine argyrodite-type solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing. | Synthesized according to Ref [4] (details not in text).",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.01,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li5.5PS4.5Cl1.5",
+        "acronym": null,
+        "proportion": "Cl-rich"
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot (Figure 5a) for the Cl-rich Li5.5PS4.5Cl1.5 sample at 1000/T = 2.68 K^-1 (approx. 100°C).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Chlorine-rich argyrodite-type solid electrolyte.",
+      "processing_method": "Synthesized via ball milling and subsequent annealing. | Synthesized according to Ref [4] (details not in text).",
+      "source_node": {
+        "node_id": "0027",
+        "title": "Recovered Content",
+        "section": "**Just Accepted**"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li5.5PS4.5Cl1.5",
+      "_original_name": "Li5.5PS4.5Cl1.5",
+      "_norm_cond": 0.025,
+      "_norm_temp": 100,
+      "_enriched": true
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "12 mS·cm−1",
+      "measurement_temperature": "RT",
+      "reason": "Extracted the reported ionic conductivity value for the well-known lithium ion conductor LGPS mentioned in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "Solid-state synthesis under argon atmosphere (O2 < 1 ppm, H2O < 5 ppm): starting materials Li2S, P2S5, S8, and GeS were mixed in stoichiometric ratio with a 3 wt% sulfur excess. The mixture was ball milled at 400 rpm for 48 h using a ZrO2 milling set (80 mL bowl, 90 g of 3 mm balls) with intermediate cooling times (15 min cooling per 10 min milling). The resulting precursor was pressed into pellets, sealed under vacuum in 10 mm inner-diameter quartz ampoules, heated in a tube furnace to 773 K (27 K/h ramp rate), and annealed for 20 h.",
+      "source_node": {
+        "node_id": "0035",
+        "title": "Introduction and Problem Statement",
+        "section": "**Abstract**"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25,
+      "_enriched": true
+    }
+  ]
+}

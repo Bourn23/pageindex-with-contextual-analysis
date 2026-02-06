@@ -1,0 +1,63 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-310",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.2Sc0.2Ti1.8(PO4)3 does not have a direct compositional match in the extracted data. EX-0 has a similar Li and Sc content but includes Zr and a different Ti stoichiometry.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-311",
+      "extracted_id": "EX-9",
+      "reason": "The normalized ground truth formula Li1.3Sc0.3Ti1.7(PO4)3 exactly matches the extracted formula Li1.3Sc0.3Ti1.7(PO4)3. The conductivity values (0.000407 S/cm vs 0.0007 S/cm) are similar, and both are measured at room temperature (implied for GT, 25C for EX-9).",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-312",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.1Sc0.1Ti1.9(PO4)3 does not have a direct compositional match in the extracted data.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-313",
+      "extracted_id": "EX-10",
+      "reason": "The normalized ground truth formula Li1.3In0.3Hf1.7(PO4)3 exactly matches the extracted formula Li1.3In0.3Hf1.7(PO4)3. The ground truth conductivity is 1e-05 S/cm, while the extracted is 0.0 S/cm, which can be interpreted as below detection limit or very low, consistent with the GT value. Both are at unspecified/room temperature.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-314",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.0Ti0.2Zr1.8(PO4)3 is compositionally very similar to EX-4 (LiZr1.75Ti0.25(PO4)3). However, the ground truth is at an implied room temperature, while EX-4 is at 300C, which is not a 'roughly similar' temperature condition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-315",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.0Ti1.8Zr0.2(PO4)3 is compositionally very similar to EX-6 (LiZr0.25Ti1.75(PO4)3). However, the ground truth is at an implied room temperature, while EX-6 is at 300C, which is not a 'roughly similar' temperature condition. Additionally, the conductivity values differ by several orders of magnitude (8.5e-08 S/cm vs 0.0001 S/cm).",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-316",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.0Ti0.1Zr1.9(PO4)3 is compositionally very similar to EX-2 and EX-3 (LiZr2(PO4)3). However, the ground truth is at an implied room temperature, while EX-2 and EX-3 are at 300C, which is not a 'roughly similar' temperature condition.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-317",
+      "extracted_id": null,
+      "reason": "The normalized ground truth formula Li1.2In0.2Hf1.8(PO4)3 exactly matches the extracted formula EX-11 (Li1.2In0.2Hf1.8(PO4)3). However, the ground truth is at an implied room temperature, while EX-11 is at 200C, which is not a 'roughly similar' temperature condition.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "The AI pipeline successfully extracted two exact compositional matches (GT-311 and GT-313) that also aligned with temperature and conductivity expectations. Several other entries had close compositional matches but were rejected due to significant temperature discrepancies (300C or 200C in extracted data vs. implied room temperature in ground truth), adhering strictly to the 'roughly similar temperature' rule. No other compositional matches were found.",
+  "metrics": {
+    "recall": 25.0,
+    "precision": 12.5,
+    "f1": 16.666666666666668,
+    "avg_log10_error": 0.23550363078903702,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 1,
+    "total_gt": 8,
+    "total_ex": 16
+  }
+}

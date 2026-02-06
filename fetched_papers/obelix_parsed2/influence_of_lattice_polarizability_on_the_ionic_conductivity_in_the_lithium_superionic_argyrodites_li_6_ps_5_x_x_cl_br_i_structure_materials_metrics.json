@@ -1,0 +1,69 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-379",
+      "extracted_id": "EX-16",
+      "reason": "The normalized formula Li6PS5Cl0.25Br0.75 matches EX-16. The conductivity values are very close (0.00186 S/cm vs 0.002 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-380",
+      "extracted_id": "EX-13",
+      "reason": "The normalized formula Li6PS5Cl matches EX-13. The conductivity values are very close (0.00205 S/cm vs 0.002 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-381",
+      "extracted_id": "EX-15",
+      "reason": "The normalized formula Li6PS5Cl0.5Br0.5 matches EX-15. The conductivity values are very close (0.00333 S/cm vs 0.0035 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-382",
+      "extracted_id": "EX-17",
+      "reason": "The normalized formula Li6PS5Br matches EX-17. The conductivity values are very close (0.00115 S/cm vs 0.0011 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-383",
+      "extracted_id": "EX-19",
+      "reason": "The normalized formula Li6PS5Br0.5I0.5 matches EX-19. The conductivity values are very close (2.62e-05 S/cm vs 2.5e-05 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-384",
+      "extracted_id": "EX-2",
+      "reason": "The normalized formula Li6PS5I matches EX-2. The conductivity values are an exact match (1.3e-06 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-385",
+      "extracted_id": "EX-14",
+      "reason": "The normalized formula Li6PS5Cl0.75Br0.25 matches EX-14. The conductivity values are very close (0.00226 S/cm vs 0.0022 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-386",
+      "extracted_id": "EX-18",
+      "reason": "The normalized formula Li6PS5Br0.75I0.25 matches EX-18. The conductivity values are very close (0.000112 S/cm vs 0.00011 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-387",
+      "extracted_id": "EX-20",
+      "reason": "The normalized formula Li6PS5Br0.25I0.75 matches EX-20. The conductivity values are very close (4.72e-06 S/cm vs 5e-06 S/cm) and both are at approximately 25\u00b0C.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "All Ground Truth entries were successfully matched to Extracted Data entries. The chemical formulas normalized correctly, and conductivity values were consistently very close, all within the assumed room temperature context (~25\u00b0C).",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 40.909090909090914,
+    "f1": 58.06451612903226,
+    "avg_log10_error": 0.016452251895996788,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 9,
+    "total_gt": 9,
+    "total_ex": 22
+  }
+}

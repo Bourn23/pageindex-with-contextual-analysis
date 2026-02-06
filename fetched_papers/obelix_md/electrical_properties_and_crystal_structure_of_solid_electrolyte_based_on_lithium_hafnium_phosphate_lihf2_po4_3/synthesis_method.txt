@@ -1,0 +1,19 @@
+**1. Method Name:**
+Solid State Reaction (or Conventional Ceramic Method)
+
+**2. Procedure Summary:**
+The materials were synthesized via a multi-step solid-state reaction method. Stoichiometric amounts of lithium carbonate (Li2CO3), hafnium oxide (HfO2), ammonium dihydrogen phosphate ((NH4)2HPO4), and the respective metal oxide (M2O3 for M = Cr, Fe, Sc, In, Lu, or Y) were used as starting materials. These precursors were thoroughly mixed and then subjected to an initial calcination step in a platinum crucible. The resulting material was ground into a fine powder using wet ball-milling with methanol. This powder underwent a second calcination, followed by another wet ball-milling step to achieve a particle size smaller than 1 µm. The finely milled powder was then mixed with a 3 wt% polyvinyl alcohol (PVA) binder solution, pressed into pellets, and finally sintered at high temperatures to obtain dense ceramic electrolytes with the desired NASICON-type structure.
+
+**3. Key Conditions:**
+*   **Precursors:** Li2CO3 (99.99%), HfO2 (99.9%), (NH4)2HPO4 (extra pure grade), and M2O3 (99.9% or 99.99%).
+*   **Initial Calcination:** 1173 K (900 °C) for 2 hours in air.
+*   **Intermediate Grinding:** Wet ball-milling in methanol for 6 hours.
+*   **Second Calcination:** 1173 K (900 °C) for 2 hours in air.
+*   **Final Grinding:** Wet ball-milling in methanol to achieve particle size < 1 µm.
+*   **Pellet Pressing:** 1 × 10^8 Pa (100 MPa) after mixing with 3 wt% PVA solution.
+*   **Final Sintering:**
+    *   **Atmosphere:** Air.
+    *   **Dwell Time:** 2 hours.
+    *   **Temperature:**
+        *   For Li6.0Hf12.0P18.0O72.0 (undoped LiHf2(PO4)3): 1493 K (1220 °C) to ensure the NASICON-type R3c structure.
+        *   For M-substituted compounds (all other listed compounds): Sintered at temperatures above 1293 K (1020 °C), with temperatures above 1393 K (1120 °C) being necessary for high density. The specific sintering temperature for each composition was optimized to achieve maximum conductivity.

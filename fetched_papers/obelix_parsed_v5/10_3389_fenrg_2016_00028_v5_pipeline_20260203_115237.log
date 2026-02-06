@@ -1,0 +1,168 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: 10_3389_fenrg_2016_00028
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/10_3389_fenrg_2016_00028/10_3389_fenrg_2016_00028.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/10_3389_fenrg_2016_00028
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/10_3389_fenrg_2016_00028_v5_pipeline_20260203_115237.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section 'Characterization of LLBZT with Different Ba Contents'
+       - Replaced 'Table 2' in section 'Ionic Conductivity and Electrochemical Stability of LLBZT'
+   --- Document: [Development of Lithium-Stuffed](http://www.frontiersin.org/Journal/10.3389/fenrg.2016.00028/abstract) [Garnet-Type Oxide Solid Electrolytes](http://www.frontiersin.org/Journal/10.3389/fenrg.2016.00028/abstract) [with High Ionic Conductivity for](http://www.frontiersin.org/Journal/10.3389/fenrg.2016.00028/abstract) [Application to All-Solid-State](http://www.frontiersin.org/Journal/10.3389/fenrg.2016.00028/abstract) [Batteries](http://www.frontiersin.org/Journal/10.3389/fenrg.2016.00028/abstract)
+   --- Found: 17 Sections
+   --- Found: 15 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section 'Characterization of LLBZT with Different Ba Contents' contains:
+       - 5 Images: ['Fig 5', 'Fig 3', 'Fig 4', 'Table 1', 'Table 1']
+       - 1 Tables: ['Table 1']
+
+   >>> Section 'Ionic Conductivity and Electrochemical Stability of LLBZT' contains:
+       - 6 Images: ['Fig 8', 'Fig 5', 'Fig 9', 'Fig 6', 'Fig 4', 'Table 2']
+       - 1 Tables: ['Table 2']
+
+   >>> Section 'Characterization of TNO Film Electrode Formed on LLBZT' contains:
+       - 3 Images: ['Fig 10', 'Fig 11', 'Fig 11']
+
+   >>> Section 'CONCLUSION' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 33 items (Text + Images) simultaneously ...
+   🔍 page_0_picture_1.jpeg (Unknown): Detecting subplot...
+   🔍 page_0_picture_2.jpeg (Unknown): Detecting subplot...
+   🔍 page_3_figure_11.jpeg (Table 1): Detecting subplot...
+   🔍 page_3_figure_7.jpeg (Table 1): Detecting subplot...
+   [93m[Skip][0m page_0_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_3.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_0_picture_1.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_figure_9.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_3_figure_11.jpeg (Table 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_5_figure_2.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_4_figure_3.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_2.jpeg (Fig 6): Detecting subplot...
+   [93m[Skip][0m page_3_figure_7.jpeg (Table 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_6_figure_4.jpeg (Fig 8): Detecting subplot...
+   ✂️ page_5_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_5_figure_2.jpeg (Fig 5): A - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_5_figure_2.jpeg (Fig 5): B - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_7_figure_2.jpeg (Table 2): Detecting subplot...
+   ✂️ page_4_figure_9.jpeg: Multi-plot detected (5 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 4): A - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 4): B - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 4): C - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 4): D - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 4): E - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_7_figure_8.jpeg (Fig 9): Detecting subplot...
+   [Retry 1/3] JSON Error for CONCLUSION: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 27 column...
+   [93m[Skip][0m page_7_figure_8.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_8_figure_2.jpeg (Fig 10): Detecting subplot...
+   📊 page_7_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✂️ page_6_figure_2.jpeg: Multi-plot detected (5 panels). Processing each in parallel...
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 6): A - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 6): B - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 6): C - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 6): D - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_6_figure_2.jpeg (Fig 6): E - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_8_figure_4.jpeg (Fig 11): Detecting subplot...
+   🔍 page_9_figure_2.jpeg (Fig 11): Detecting subplot...
+   ✓ page_7_figure_2.jpeg (Table 2): Found 20 points total via SciFigureParser
+   🔍 page_9_figure_6.jpeg (Unknown): Detecting subplot...
+   ✂️ page_8_figure_2.jpeg: Multi-plot detected (4 panels). Processing each in parallel...
+   [93m[Skip][0m page_8_figure_2.jpeg (Fig 10): A - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_2.jpeg (Fig 10): B - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_2.jpeg (Fig 10): C - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_2.jpeg (Fig 10): D - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_9_figure_2.jpeg (Fig 11): No ionic conductivity measurements detected by SciFigureParser.
+   ✂️ page_6_figure_4.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+   [93m[Skip][0m page_6_figure_4.jpeg (Fig 8): A - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+Passing box coords  [344, 190, 562, 868]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/10_3389_fenrg_2016_00028/scifig_debug/page_6_figure_4_cropped_B.jpeg
+   [93m[Skip][0m page_6_figure_4.jpeg (Fig 8): C - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_9_figure_6.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   ✂️ page_8_figure_4.jpeg: Multi-plot detected (6 panels). Processing each in parallel...
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Film surface - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Ti surface - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Nb surface - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Film cross section - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Ti cross section - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_8_figure_4.jpeg (Fig 11): Nb cross section - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_6_figure_4.jpeg (Fig 8): Found 5 points total via SciFigureParser
+   ✓ Table 2: | Total conductivity **σ** at different measurement temperature and activation energy *E*a for LLBZT with different Ba contents *x* **=** 0–0.30.: Found 20 points
+   ... Canonicalizing Materials...
+   ... Resolving 52 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 53 measurements
+      - Skipped (no data): 26 images
+      - Failed: 0 items
+
+Done! Extracted 53 points.
+Saved to: fetched_papers/obelix_md2/10_3389_fenrg_2016_00028/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         18
+Total Input:         16,640 tokens
+Total Output:        21,979 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0599
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 18 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/10_3389_fenrg_2016_00028_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.3389/fenrg.2016.00028
+GT-578: Li52.0La24.0Zr12.0Ta4.0O96.0 | 0.000794 S/cm
+GT-579: Li52.0La23.6Ba0.4Zr11.6Ta4.4O96.0 | 0.000832 S/cm
+GT-580: Li52.0La23.2Ba0.8Zr11.2Ta4.8O96.0 | 0.000834 S/cm
+GT-581: Li52.0La22.4Ba1.6Zr10.4Ta5.6O96.0 | 0.000631 S/cm
+GT-582: Li52.0La21.6Ba2.4Zr9.6Ta6.4O96.0 | 0.000492 S/cm
+--- Starting Validation ---
+Comparing 5 GT items vs 996 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-578     | ✅ MATCH         | The material identified by x=0 from the raw composition matches the ground truth formula (Li6.5La3.0Zr1.5Ta0.5O12), and the conductivity (0.000794 S/cm) and temperature (27.0 C) are exact matches. The canonical_formula field in the extracted data is incorrect.
+GT-579     | ✅ MATCH         | The material identified by x=0.05 from the raw composition matches the ground truth formula (Li6.5La2.95Ba0.05Zr1.45Ta0.55O12), and the conductivity (0.000832 S/cm) and temperature (27.0 C) are exact matches. The canonical_formula field in the extracted data is incorrect.
+GT-580     | ✅ MATCH         | The material identified by x=0.10 from the raw composition matches the ground truth formula (Li6.5La2.9Ba0.1Zr1.4Ta0.6O12), and the conductivity (0.000834 S/cm) and temperature (27.0 C) are exact matches. The canonical_formula field in the extracted data is incorrect.
+GT-581     | ✅ MATCH         | The material identified by x=0.20 from the raw composition matches the ground truth formula (Li6.5La2.8Ba0.2Zr1.3Ta0.7O12), and the conductivity (0.000631 S/cm) and temperature (27.0 C) are exact matches. The canonical_formula field in the extracted data is incorrect.
+GT-582     | ✅ MATCH         | The material identified by x=0.30 from the raw composition matches the ground truth formula (Li6.5La2.7Ba0.3Zr1.2Ta0.8O12), and the conductivity (0.000492 S/cm) and temperature (27.0 C) are exact matches. The canonical_formula field in the extracted data is incorrect.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: 10_3389_fenrg_2016_00028
+[0;34m[INFO][0m DOI: 10.3389/fenrg.2016.00028
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/10_3389_fenrg_2016_00028_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_10_3389_fenrg_2016_00028.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_10_3389_fenrg_2016_00028.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/10_3389_fenrg_2016_00028_v5_pipeline_20260203_115237.log
+

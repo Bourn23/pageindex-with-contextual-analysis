@@ -1,0 +1,415 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 183701,
+    "total_output_tokens": 9874,
+    "total_cost_usd": 0.12147250000000001,
+    "call_counts": {
+      "gemini-3-flash-preview": 30
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/effect_of_simultaneous_substitution_of_y_and_ta_on_the_stabilization_of_cubic_phase_microstructure_and_li_conductivity_of_li_7_la_3_zr_2_o_12_lithium_garnet_structure.json",
+  "extraction_stats": {
+    "total_nodes": 107,
+    "raw_extracted": 28,
+    "after_dedup": 12,
+    "time_elapsed": 121.83354711532593,
+    "valid_count": 12,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 8,
+      "medium": 4,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 8,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 28,
+    "from_image_nodes": 0,
+    "final_count": 12
+  },
+  "material_count": 12,
+  "materials": [
+    {
+      "source_sentence_id": "0248, 0272, 0239, 0021",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.75Y0.25Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "Y=0.25"
+      },
+      "ionic_conductivity_S_per_cm": "4.36 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27 °C",
+      "reason": "Extracted the maximum total Li+ conductivity value and its corresponding material composition and temperature from sentence 0248.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium garnet structured electrolyte with dense microstructure. ; lithium garnet, relatively dense microstructure ; Yttrium-doped garnet-type solid electrolyte with negligible grain boundary resistance ; Y-substituted Li7La3Zr2O12 garnet-type solid electrolyte with improved ceramic density.",
+      "processing_method": "sintered at 1200 °C",
+      "source_node": {
+        "node_id": "0242",
+        "title": "Arrhenius Plots and Ionic Conductivity Dependence on Y Doping",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.75Y0.25Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.75Y0.25Zr1.6Ta0.4O12",
+      "_norm_cond": 0.000436,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0229",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La3.2Zr1.6Ta0.4O12",
+        "acronym": "LLZTO",
+        "proportion": "sintered at 750 °C"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ to 10⁻⁸ S cm⁻¹",
+      "measurement_temperature": "27 °C",
+      "reason": "Extracted conductivity range for the sample sintered at 750 °C as mentioned in the text and referenced to Table S2.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium garnet pellet sintered at 750 °C",
+      "processing_method": "Sintered at 750 °C",
+      "source_node": {
+        "node_id": "0220",
+        "title": "3.4. Electrical Properties and AC Impedance Overview",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La3.2Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La3.2Zr1.6Ta0.4O12",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0229",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "sintered at 750 °C"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ to 10⁻⁸ S cm⁻¹",
+      "measurement_temperature": "27 °C",
+      "reason": "Extracted conductivity range for the sample sintered at 750 °C as mentioned in the text and referenced to Table S2.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium garnet pellet sintered at 750 °C",
+      "processing_method": "Sintered at 750 °C",
+      "source_node": {
+        "node_id": "0220",
+        "title": "3.4. Electrical Properties and AC Impedance Overview",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+      "_norm_cond": 1e-08,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0229",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "sintered at 750 °C"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ to 10⁻⁸ S cm⁻¹",
+      "measurement_temperature": "27 °C",
+      "reason": "Extracted conductivity range for the sample sintered at 750 °C as mentioned in the text and referenced to Table S2.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Lithium garnet pellet sintered at 750 °C",
+      "processing_method": "Sintered at 750 °C",
+      "source_node": {
+        "node_id": "0220",
+        "title": "3.4. Electrical Properties and AC Impedance Overview",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0236",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La3Zr1.6Ta0.4O12",
+        "acronym": "LLZTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.13 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk Li+ conductivity for Li6.6La3Zr1.6Ta0.4O12 from sentence 0236.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Garnet-type solid electrolyte",
+      "processing_method": "Sintered at 1200 °C",
+      "source_node": {
+        "node_id": "0234",
+        "title": "AC Impedance Analysis and Conductivity at 1200 \bC",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La3Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La3Zr1.6Ta0.4O12",
+      "_norm_cond": 0.000313,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0239",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "Y=0.125"
+      },
+      "ionic_conductivity_S_per_cm": "3.17 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total Li+ conductivity for Y-doped garnet Li6.6La2.875Y0.125Zr1.6Ta0.4O12 from sentence 0239.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Yttrium-doped garnet-type solid electrolyte with negligible grain boundary resistance",
+      "processing_method": "Sintered at 1200 °C",
+      "source_node": {
+        "node_id": "0234",
+        "title": "AC Impedance Analysis and Conductivity at 1200 \bC",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.875Y0.125Zr1.6Ta0.4O12",
+      "_norm_cond": 0.000317,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0241",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "Y=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "3 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk Li+ conductivity for Li6.6La2.5Y0.5Zr1.6Ta0.4O12 from sentence 0241.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Yttrium-doped garnet-type solid electrolyte",
+      "processing_method": "Sintered at 1200 °C",
+      "source_node": {
+        "node_id": "0234",
+        "title": "AC Impedance Analysis and Conductivity at 1200 \bC",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_norm_cond": 0.0003,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0241",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+        "acronym": "LLYZTO",
+        "proportion": "Y=0.5"
+      },
+      "ionic_conductivity_S_per_cm": "2.26 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted total (bulk + grain boundary) Li+ conductivity for Li6.6La2.5Y0.5Zr1.6Ta0.4O12 from sentence 0241.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Yttrium-doped garnet-type solid electrolyte",
+      "processing_method": "Sintered at 1200 °C",
+      "source_node": {
+        "node_id": "0234",
+        "title": "AC Impedance Analysis and Conductivity at 1200 \bC",
+        "section": "3. RESULTS AND DISCUSSION"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_original_name": "Li6.6La2.5Y0.5Zr1.6Ta0.4O12",
+      "_norm_cond": 0.000226,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li10GeP2S12",
+        "acronym": "LGPS",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.2 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introduction text which cites the ionic conductivity of the LGPS superionic conductor.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li10GeP2S12",
+      "_original_name": "Li10GeP2S12",
+      "_norm_cond": 0.012,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-2 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introduction text which cites the ionic conductivity of the Li9.54Si1.74P1.44S11.7Cl0.3 superionic conductor.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_original_name": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "_norm_cond": 0.025,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the introduction text which cites the ionic conductivity of the argyrodite-type Li6PS5Cl.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0002",
+        "title": "Introduction",
+        "section": "Introduction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0036",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li7La3Zr2O12",
+        "acronym": "LLZO",
+        "proportion": "nominal formula"
+      },
+      "ionic_conductivity_S_per_cm": "> 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted ionic conductivity value for Li7La3Zr2O12 (LLZ) from a cited work mentioned in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0033",
+        "title": "Discovery and Properties of Garnet-Like LLZ Electrolytes",
+        "section": "1. INTRODUCTION"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li7La3Zr2O12",
+      "_original_name": "Li7La3Zr2O12",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    }
+  ]
+}

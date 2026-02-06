@@ -1,0 +1,173 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_pipeline_20260203_100605.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 4 tables from Markdown text...
+       - Replaced 'Unknown' in section '**Results and Discussion**'
+       - Replaced 'Unknown' in section '**Results and Discussion**'
+       - Replaced 'Unknown' in section '**Results and Discussion**'
+       - Replaced 'Unknown' in section '**Results and Discussion**'
+   --- Document: Ionic Conductivity of Solid Electrolytes Based on Lithium Titanium Phosphate
+   --- Found: 8 Sections
+   --- Found: 11 Figures, 4 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section '**Results and Discussion**' contains:
+       - 11 Images: ['Fig 5', 'Fig 7', 'Fig 3', 'Fig 4', 'Fig 9', 'Fig 6', 'Fig 1', 'Fig 2', 'Fig 8', 'Unknown', 'Fig 9']
+       - 4 Tables: ['Unknown', 'Unknown', 'Unknown', 'Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 11 items (Text + Images) simultaneously ...
+   🔍 page_1_figure_7.jpeg (Fig 1): Detecting subplot...
+   🔍 page_1_figure_9.jpeg (Fig 2): Detecting subplot...
+   🔍 page_2_figure_11.jpeg (Fig 6): Detecting subplot...
+   🔍 page_2_figure_2.jpeg (Fig 3): Detecting subplot...
+   🔍 page_2_figure_5.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_2_figure_5.jpeg (Fig 4): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_2_figure_7.jpeg (Fig 5): Detecting subplot...
+   📊 page_2_figure_11.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_1_figure_9.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_2.jpeg (Fig 7): Detecting subplot...
+   ✂️ page_1_figure_7.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_1_figure_7.jpeg (Fig 1): top - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_1_figure_7.jpeg (Fig 1): bottom - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_3_figure_7.jpeg (Fig 8): Detecting subplot...
+   [93m[Skip][0m page_2_figure_7.jpeg (Fig 5): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_picture_2.jpeg (Unknown): Detecting subplot...
+   ✂️ page_2_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 3): top - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_2_figure_2.jpeg (Fig 3): bottom - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_picture_3.jpeg (Fig 9): Detecting subplot...
+   📊 page_3_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_4_picture_3.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_4_picture_4.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_4_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   [93m[Skip][0m page_4_picture_4.jpeg (Fig 9): No ionic conductivity measurements detected by SciFigureParser.
+   📊 page_3_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_3_figure_2.jpeg (Fig 7): Found 26 points total via SciFigureParser
+   ✓ page_2_figure_11.jpeg (Fig 6): Found 35 points total via SciFigureParser
+   ✓ page_3_figure_7.jpeg (Fig 8): Found 16 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 77 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 77 measurements
+      - Skipped (no data): 8 images
+      - Failed: 0 items
+
+Done! Extracted 77 points.
+Saved to: fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         0
+Total Input:         0 tokens
+Total Output:        0 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0000
+--------------------------------------------------
+Breakdown by Model:
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1149/1.2086597
+GT-235: Li6.0Ti12.0P18.0O72.0 | 2e-06 S/cm
+GT-242: Li7.2Ti12.0Si1.2P16.8O72.0 | 8.6e-05 S/cm
+GT-243: Li7.8Ti12.0Si1.8P16.2O72.0 | 0.00032 S/cm
+GT-244: Li7.2Al1.2Ti10.8P18.0O72.0 | 0.000595 S/cm
+GT-245: Li7.8Al1.8Ti10.2P18.0O72.0 | 0.000722 S/cm
+GT-246: Li8.4Al2.4Ti9.6P18.0O72.0 | 0.000388 S/cm
+GT-247: Li9.0Al3.0Ti9.0P18.0O72.0 | 0.000248 S/cm
+GT-248: Li7.2Cr1.2Ti10.8P18.0O72.0 | 1.82e-05 S/cm
+GT-249: Li7.8Cr1.8Ti10.2P18.0O72.0 | 3.51e-05 S/cm
+GT-250: Li8.4Cr2.4Ti9.6P18.0O72.0 | 0.000149 S/cm
+GT-251: Li9.0Cr3.0Ti9.0P18.0O72.0 | 0.000386 S/cm
+GT-252: Li7.2Ga1.2Ti10.8P18.0O72.0 | 0.000162 S/cm
+GT-253: Li7.8Ga1.8Ti10.2P18.0O72.0 | 0.000261 S/cm
+GT-254: Li8.4Ga2.4Ti9.6P18.0O72.0 | 0.000128 S/cm
+GT-255: Li9.0Ga3.0Ti9.0P18.0O72.0 | 0.000122 S/cm
+GT-256: Li7.2Fe1.2Ti10.8P18.0O72.0 | 0.00018 S/cm
+GT-257: Li7.8Fe1.8Ti10.2P18.0O72.0 | 0.000246 S/cm
+GT-258: Li8.4Fe2.4Ti9.6P18.0O72.0 | 0.000392 S/cm
+GT-259: Li9.0Fe3.0Ti9.0P18.0O72.0 | 0.000174 S/cm
+GT-260: Li7.2Sc1.2Ti10.8P18.0O72.0 | 0.00069 S/cm
+GT-261: Li7.8Sc1.8Ti10.2P18.0O72.0 | 0.000703 S/cm
+GT-262: Li8.4Sc2.4Ti9.6P18.0O72.0 | 0.000515 S/cm
+GT-263: Li7.2In1.2Ti10.8P18.0O72.0 | 0.00039 S/cm
+GT-264: Li7.8In1.8Ti10.2P18.0O72.0 | 0.000393 S/cm
+GT-265: Li8.4In2.4Ti9.6P18.0O72.0 | 0.000302 S/cm
+GT-266: Li9.0In3.0Ti9.0P18.0O72.0 | 0.000204 S/cm
+GT-267: Li7.2La1.2Ti10.8P18.0O72.0 | 8e-05 S/cm
+GT-268: Li7.8La1.8Ti10.2P18.0O72.0 | 0.000523 S/cm
+GT-269: Li8.4La2.4Ti9.6P18.0O72.0 | 0.000498 S/cm
+GT-270: Li9.0La3.0Ti9.0P18.0O72.0 | 0.000281 S/cm
+--- Starting Validation ---
+Comparing 30 GT items vs 1413 Extracted items...
+
+============================================================
+VALIDATION SCORE: 53.3%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-235     | ✅ MATCH         | Li6.0Ti12.0P18.0O72.0 simplifies to LiTi2(PO4)3 (x=0) and log10(2e-06 S/cm) is approx -5.65 log10(S/cm).
+GT-242     | ❌ MISSING/BAD   | The ground truth composition Li7.2Ti12.0Si1.2P16.8O72.0 contains Si and a non-standard phosphate stoichiometry, which is not found in the extracted data.
+GT-243     | ❌ MISSING/BAD   | The ground truth composition Li7.8Ti12.0Si1.8P16.2O72.0 contains Si and a non-standard phosphate stoichiometry, which is not found in the extracted data.
+GT-244     | ✅ MATCH         | Li7.2Al1.2Ti10.8P18.0O72.0 simplifies to Li1.2Al0.2Ti1.8(PO4)3 (M=Al, x=0.2), which matches extracted Al (x=0.19), and log10(0.000595 S/cm) is approx -3.25 log10(S/cm).
+GT-245     | ✅ MATCH         | Li7.8Al1.8Ti10.2P18.0O72.0 simplifies to Li1.3Al0.3Ti1.7(PO4)3 (M=Al, x=0.3), which matches extracted Al (x=0.29), and log10(0.000722 S/cm) is approx -3.15 log10(S/cm).
+GT-246     | ✅ MATCH         | Li8.4Al2.4Ti9.6P18.0O72.0 simplifies to Li1.4Al0.4Ti1.6(PO4)3 (M=Al, x=0.4), which matches extracted Al (x=0.4), and log10(0.000388 S/cm) is approx -3.42 log10(S/cm).
+GT-247     | ❌ MISSING/BAD   | Li9.0Al3.0Ti9.0P18.0O72.0 simplifies to Li1.5Al0.5Ti1.5(PO4)3 (M=Al, x=0.5), but the extracted conductivity (-3.55) differs significantly from log10(0.000248 S/cm) (-3.6055).
+GT-248     | ❌ MISSING/BAD   | Li7.2Cr1.2Ti10.8P18.0O72.0 simplifies to Li1.2Cr0.2Ti1.8(PO4)3 (M=Cr, x=0.2), but the extracted conductivity (-4.6) differs significantly from log10(1.82e-05 S/cm) (-4.7399).
+GT-249     | ❌ MISSING/BAD   | Li7.8Cr1.8Ti10.2P18.0O72.0 simplifies to Li1.3Cr0.3Ti1.7(PO4)3 (M=Cr, x=0.3), but the extracted conductivity (-4.4) differs significantly from log10(3.51e-05 S/cm) (-4.4548).
+GT-250     | ✅ MATCH         | Li8.4Cr2.4Ti9.6P18.0O72.0 simplifies to Li1.4Cr0.4Ti1.6(PO4)3 (M=Cr, x=0.4), which matches extracted Cr (x=0.39), and log10(0.000149 S/cm) is approx -3.82 log10(S/cm).
+GT-251     | ✅ MATCH         | Li9.0Cr3.0Ti9.0P18.0O72.0 simplifies to Li1.5Cr0.5Ti1.5(PO4)3 (M=Cr, x=0.5), which matches extracted Cr (x=0.5), and log10(0.000386 S/cm) is approx -3.43 log10(S/cm).
+GT-252     | ❌ MISSING/BAD   | Li7.2Ga1.2Ti10.8P18.0O72.0 simplifies to Li1.2Ga0.2Ti1.8(PO4)3 (M=Ga, x=0.2), but the extracted conductivity (-3.91) differs significantly from log10(0.000162 S/cm) (-3.7905).
+GT-253     | ✅ MATCH         | Li7.8Ga1.8Ti10.2P18.0O72.0 simplifies to Li1.3Ga0.3Ti1.7(PO4)3 (M=Ga, x=0.3), which matches extracted Ga (x=0.3), and log10(0.000261 S/cm) is approx -3.59 log10(S/cm).
+GT-254     | ✅ MATCH         | Li8.4Ga2.4Ti9.6P18.0O72.0 simplifies to Li1.4Ga0.4Ti1.6(PO4)3 (M=Ga, x=0.4), which matches extracted Ga (x=0.4), and log10(0.000128 S/cm) is approx -3.89 log10(S/cm).
+GT-255     | ❌ MISSING/BAD   | Li9.0Ga3.0Ti9.0P18.0O72.0 simplifies to Li1.5Ga0.5Ti1.5(PO4)3 (M=Ga, x=0.5), but the extracted conductivity (-3.97) differs significantly from log10(0.000122 S/cm) (-3.9136).
+GT-256     | ✅ MATCH         | Li7.2Fe1.2Ti10.8P18.0O72.0 simplifies to Li1.2Fe0.2Ti1.8(PO4)3 (M=Fe, x=0.2), which matches extracted Fe (x=0.2), and log10(0.00018 S/cm) is approx -3.76 log10(S/cm).
+GT-257     | ❌ MISSING/BAD   | Li7.8Fe1.8Ti10.2P18.0O72.0 simplifies to Li1.3Fe0.3Ti1.7(PO4)3 (M=Fe, x=0.3), but the extracted conductivity (-3.54) differs significantly from log10(0.000246 S/cm) (-3.6090).
+GT-258     | ❌ MISSING/BAD   | Li8.4Fe2.4Ti9.6P18.0O72.0 simplifies to Li1.4Fe0.4Ti1.6(PO4)3 (M=Fe, x=0.4), but the extracted conductivity (-3.46) differs significantly from log10(0.000392 S/cm) (-3.4066).
+GT-259     | ❌ MISSING/BAD   | Li9.0Fe3.0Ti9.0P18.0O72.0 simplifies to Li1.5Fe0.5Ti1.5(PO4)3 (M=Fe, x=0.5), but the extracted conductivity (-3.88) differs significantly from log10(0.000174 S/cm) (-3.7593).
+GT-260     | ✅ MATCH         | Li7.2Sc1.2Ti10.8P18.0O72.0 simplifies to Li1.2Sc0.2Ti1.8(PO4)3 (M=Sc, x=0.2), which matches extracted Sc (x=0.19), and log10(0.00069 S/cm) is approx -3.16 log10(S/cm).
+GT-261     | ✅ MATCH         | Li7.8Sc1.8Ti10.2P18.0O72.0 simplifies to Li1.3Sc0.3Ti1.7(PO4)3 (M=Sc, x=0.3), which matches extracted Sc (x=0.29), and log10(0.000703 S/cm) is approx -3.13 log10(S/cm).
+GT-262     | ✅ MATCH         | Li8.4Sc2.4Ti9.6P18.0O72.0 simplifies to Li1.4Sc0.4Ti1.6(PO4)3 (M=Sc, x=0.4), which matches extracted Sc (x=0.39), and log10(0.000515 S/cm) is approx -3.29 log10(S/cm).
+GT-263     | ✅ MATCH         | Li7.2In1.2Ti10.8P18.0O72.0 simplifies to Li1.2In0.2Ti1.8(PO4)3 (M=In, x=0.2), which matches extracted In (x=0.19), and log10(0.00039 S/cm) is approx -3.43 log10(S/cm).
+GT-264     | ❌ MISSING/BAD   | Li7.8In1.8Ti10.2P18.0O72.0 simplifies to Li1.3In0.3Ti1.7(PO4)3 (M=In, x=0.3), but the extracted conductivity (-3.25) differs significantly from log10(0.000393 S/cm) (-3.4056).
+GT-265     | ❌ MISSING/BAD   | Li8.4In2.4Ti9.6P18.0O72.0 simplifies to Li1.4In0.4Ti1.6(PO4)3 (M=In, x=0.4), but the extracted conductivity (-3.2) differs significantly from log10(0.000302 S/cm) (-3.5200).
+GT-266     | ❌ MISSING/BAD   | Li9.0In3.0Ti9.0P18.0O72.0 simplifies to Li1.5In0.5Ti1.5(PO4)3 (M=In, x=0.5), but the extracted conductivity (-4.26) differs significantly from log10(0.000204 S/cm) (-3.6903).
+GT-267     | ✅ MATCH         | Li7.2La1.2Ti10.8P18.0O72.0 simplifies to Li1.2La0.2Ti1.8(PO4)3 (M=La, x=0.2), which matches extracted La (x=0.2), and log10(8e-05 S/cm) is approx -4.08 log10(S/cm).
+GT-268     | ✅ MATCH         | Li7.8La1.8Ti10.2P18.0O72.0 simplifies to Li1.3La0.3Ti1.7(PO4)3 (M=La, x=0.3), which matches extracted La (x=0.3), and log10(0.000523 S/cm) is approx -3.32 log10(S/cm).
+GT-269     | ✅ MATCH         | Li8.4La2.4Ti9.6P18.0O72.0 simplifies to Li1.4La0.4Ti1.6(PO4)3 (M=La, x=0.4), which matches extracted La (x=0.4), and log10(0.000498 S/cm) is approx -3.33 log10(S/cm).
+GT-270     | ❌ MISSING/BAD   | Li9.0La3.0Ti9.0P18.0O72.0 simplifies to Li1.5La0.5Ti1.5(PO4)3 (M=La, x=0.5), but the extracted conductivity (-3.62) differs significantly from log10(0.000281 S/cm) (-3.5511).
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m DOI: 10.1149/1.2086597
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_pipeline_20260203_100605.log
+

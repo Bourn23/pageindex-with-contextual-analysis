@@ -1,0 +1,51 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-527",
+      "extracted_id": "EX-5",
+      "reason": "The normalized chemical formula Li6.0La3.0Nb1.5Y0.5O12 from GT-527 exactly matches EX-5 (Li6La3Nb1.5Y0.5O12). The conductivity values (1.88e-04 S/cm vs 1.0e-04 S/cm) are in the same order of magnitude, and both are at room temperature conditions.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-528",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5.2La3.0Nb1.9Y0.1O12 from GT-528 does not have an exact match in the Extracted Data. While some entries are Li-La-Nb-Y-O, their stoichiometries are different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-529",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5.4La3.0Nb1.8Y0.2O12 from GT-529 does not have an exact match in the Extracted Data. While some entries are Li-La-Nb-Y-O, their stoichiometries are different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-530",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5.5La3.0Nb1.75Y0.25O12 from GT-530 does not have an exact match in the Extracted Data. While some entries are Li-La-Nb-Y-O, their stoichiometries are different.",
+      "is_match": false
+    },
+    {
+      "ground_truth_id": "GT-571",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li6.5La3.0Nb1.25Y0.75O12 from GT-571 exactly matches EX-1 (Li6.5La3Nb1.25Y0.75O12). The conductivity values (0.00027 S/cm vs 0.00027 S/cm) are an exact match, and both are at room temperature conditions.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-576",
+      "extracted_id": null,
+      "reason": "The normalized chemical formula Li5.4La3.0Nb1.8Y0.75O12 from GT-576 does not have an exact match in the Extracted Data. While some entries are Li-La-Nb-Y-O, their stoichiometries are different.",
+      "is_match": false
+    }
+  ],
+  "summary_thought": "Two out of six Ground Truth entries were successfully matched to Extracted Data. The matches were based on exact chemical formula stoichiometry after normalization and consistent conductivity values at room temperature. The remaining Ground Truth entries did not have corresponding exact chemical formula matches in the Extracted Data.",
+  "metrics": {
+    "recall": 33.33333333333333,
+    "precision": 13.333333333333334,
+    "f1": 19.047619047619047,
+    "avg_log10_error": 0.13707892463184002,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 2,
+    "total_gt": 6,
+    "total_ex": 15
+  }
+}

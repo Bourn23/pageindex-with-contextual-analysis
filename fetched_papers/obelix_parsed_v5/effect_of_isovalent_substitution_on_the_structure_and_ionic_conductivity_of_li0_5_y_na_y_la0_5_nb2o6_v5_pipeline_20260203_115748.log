@@ -1,0 +1,119 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6_v5_pipeline_20260203_115748.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 1 tables from Markdown text...
+       - Replaced 'Unknown' in section '**RESULTS AND DISCUSSION**'
+   --- Document: Effect of Isovalent Substitution on the Structure and Ionic Conductivity of Li<sub>0.5 − v</sub>Na <sub>v</sub>La<sub>0.5</sub>□Nb<sub>2</sub>O<sub>6</sub>
+   --- Found: 6 Sections
+   --- Found: 7 Figures, 1 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section '**INTRODUCTION**' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**EXPERIMENTAL**' contains:
+       - 1 Images: ['Fig 2']
+
+   >>> Section '**RESULTS AND DISCUSSION**' contains:
+       - 7 Images: ['Fig 4', 'Fig 1', 'Fig 2', 'Fig 5', 'Fig 3', 'Fig 5', 'Fig 5']
+       - 1 Tables: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 13 items (Text + Images) simultaneously ...
+   🔍 page_0_figure_17.jpeg (Fig 1): Detecting subplot...
+   🔍 page_1_figure_9.jpeg (Fig 2): Detecting subplot...
+   🔍 page_2_figure_5.jpeg (Fig 3): Detecting subplot...
+   🔍 page_2_figure_7.jpeg (Fig 4): Detecting subplot...
+   [93m[Skip][0m page_1_figure_9.jpeg (Fig 2): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_2.jpeg (Fig 5): Detecting subplot...
+   🔍 page_3_figure_3.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_0_figure_17.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_3_figure_4.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_2_figure_5.jpeg (Fig 3): No ionic conductivity measurements detected by SciFigureParser.
+   [93m[Skip][0m page_3_figure_4.jpeg (Fig 5): No ionic conductivity measurements detected by SciFigureParser.
+   📊 page_2_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   [93m[Skip][0m page_3_figure_3.jpeg (Fig 5): No ionic conductivity measurements detected by SciFigureParser.
+   ✂️ page_3_figure_2.jpeg: Multi-plot detected (1 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 5): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_2_figure_7.jpeg (Fig 4): Found 16 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 18 ambiguous material names...
+   [Canonicalizer Error]: Invalid \escape: line 3 column 30 (char 47)
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 20 measurements
+      - Skipped (no data): 10 images
+      - Failed: 0 items
+
+Done! Extracted 20 points.
+Saved to: fetched_papers/obelix_md2/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         6
+Total Input:         6,571 tokens
+Total Output:        6,244 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0176
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 6 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1134/s002016851103006x
+GT-82: Li0.4Na0.1La0.5Nb2.0O6.0 | 9.92e-06 S/cm
+GT-83: Li0.3Na0.2La0.5Nb2.0O6.0 | 1.11e-05 S/cm
+GT-84: Li0.2Na0.3La0.5Nb2.0O6.0 | 1.18e-05 S/cm
+GT-85: Li0.1Na0.4La0.5Nb2.0O6.0 | 1.21e-05 S/cm
+GT-86: Li0.07Na0.43La0.5Nb2.0O6.0 | 1.23e-05 S/cm
+GT-87: Li0.04Na0.46La0.5Nb2.0O6.0 | 5.91e-06 S/cm
+GT-88: Li0.02Na0.48La0.5Nb2.0O6.0 | 3.99e-06 S/cm
+--- Starting Validation ---
+Comparing 7 GT items vs 398 Extracted items...
+
+============================================================
+VALIDATION SCORE: 28.6%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-82      | ❌ MISSING/BAD   | Extracted conductivity (1.23e-05 S/cm) for Li0.4Na0.1La0.5Nb2O6 differs significantly from ground truth (9.92e-06 S/cm) with a 24% difference.
+GT-83      | ❌ MISSING/BAD   | Extracted conductivity (1.20e-05 S/cm) for Li0.3Na0.2La0.5Nb2O6 differs from ground truth (1.11e-05 S/cm) with an 8.1% difference, exceeding typical rounding tolerance.
+GT-84      | ✅ MATCH         | Extracted conductivity (1.15e-05 S/cm) is an approximate match to ground truth (1.18e-05 S/cm) for Li0.2Na0.3La0.5Nb2O6 with a 2.7% difference.
+GT-85      | ❌ MISSING/BAD   | Extracted conductivity (1.0e-05 S/cm) for Li0.1Na0.4La0.5Nb2O6 differs significantly from ground truth (1.21e-05 S/cm) with a 17.3% difference.
+GT-86      | ✅ MATCH         | Extracted conductivity (1.28e-05 S/cm) is an approximate match to ground truth (1.23e-05 S/cm) for Li0.07Na0.43La0.5Nb2O6 with a 4.1% difference.
+GT-87      | ❌ MISSING/BAD   | No corresponding extracted data found for Li0.04Na0.46La0.5Nb2O6.
+GT-88      | ❌ MISSING/BAD   | No corresponding extracted data found for Li0.02Na0.48La0.5Nb2O6.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6
+[0;34m[INFO][0m DOI: 10.1134/s002016851103006x
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/effect_of_isovalent_substitution_on_the_structure_and_ionic_conductivity_of_li0_5_y_na_y_la0_5_nb2o6_v5_pipeline_20260203_115748.log
+

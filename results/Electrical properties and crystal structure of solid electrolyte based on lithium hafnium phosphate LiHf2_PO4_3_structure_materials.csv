@@ -1,0 +1,47 @@
+material_name,material_class,measurement_temperature,ionic_conductivity,material_description,processing_method
+Lithium Hafnium Phosphate,Ceramic,1298 K,1.1 × 10⁻⁴ S.cm⁻¹,maximum conductivity,sintered at 1298 K
+Lithium Iron Hafnium Phosphate,Ceramic,298 K,1.7× 10⁻⁴ S.cm⁻¹,Sample of Lil.2Feo.2Hft.s (PO4) 3,N/A (Cited Work)
+LiHf2 (PO4) 3,Ceramic,298 K,1.7× 10⁻⁴ S.cm⁻¹,LiHf2 (PO4) 3 systems,N/A (Cited Work)
+Lithium Hafnium Phosphate,Ceramic,298 K,6.3 × 10⁻⁷ S/cm,"Pure LiHf2(PO4)3 (y=0), characterized by a phase transition temperature of about 1423 K from monoclinic to rhombohedral phase.",Sintered at high temperature (above 1400 K for rhombohedral phase).
+Lithium Hafnium Phosphate with Lithium Oxide addition,Ceramic,298 K,4.2 × 10⁻⁵ S/cm,"Sample with 0.3Li2O addition, sintered at 1293 K to form a NASICON-type structure (R3c phase).","Calcined at 1173 K, then sintered at 1293 K."
+Lithium Hafnium Phosphate with Lithium Oxide addition,Ceramic,298 K,2.1 × 10⁻⁵ S/cm,"Sample with 0.3Li2O addition, sintered at 1393 K to form a NASICON-type structure (R3c phase).","Calcined at 1173 K, then sintered at 1393 K."
+Lithium Hafnium Phosphate with Lithium Oxide addition,Ceramic,298 K,1.7 × 10⁻⁶ S/cm,"Sample with 0.3Li2O addition, sintered at 1173 K, retaining the monoclinic (P21/n) phase.","Calcined at 1173 K, then sintered at 1173 K."
+Lithium Hafnium Phosphate with Lithium Oxide addition,Ceramic,298 K,6.7 × 10⁻⁹ S/cm,"Sample with 0.3Li2O addition, sintered at 1073 K, exhibiting monoclinic phase (P21/n).","Calcined at 1173 K, then sintered at 1073 K."
+Lithium Hafnium Phosphate with Lithium Oxide addition,Ceramic,300°C,1.1 × 10⁻² S/cm,Total conductivity (bulk plus grain boundary) for LiHf2(PO4)3+0.3Li2O sample sintered at 1293 K.,"Calcined at 1173 K, sintered at 1293 K."
+Lithium Hafnium Phosphate,Ceramic,298 K,6.3 × 10⁻⁷ S/cm,"NASICON-type lithium ion conductor, LiHf2(PO4)3 system without Li2O addition.",Sintered at temperatures up to 1600 K.
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.0 × 10⁻⁴ S/cm,LiHf2(PO4)3 + yLi2O system samples.,Sintered (various temperatures indicated by plot data points).
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.6 × 10⁻⁴ S/cm,LiHf2(PO4)3 + yLi2O system samples.,Sintered (various temperatures indicated by plot data points).
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.6 × 10⁻⁴ S/cm,LiHf2(PO4)3 + yLi2O system samples showing optimal conductivity near y=0.3.,"Sintered at temperatures including 1173 K, 1293 K, and 1393 K."
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.3 × 10⁻⁴ S/cm,LiHf2(PO4)3 + yLi2O system samples.,Sintered (various temperatures indicated by plot data points).
+Lithium Hafnium Phosphate,Ceramic,298 K,7.9 × 10⁻⁷ S cm⁻¹,NASICON-type solid electrolyte system LiHf2(PO4)3 + yLi2O,Sintered at 1600 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.0 × 10⁻⁴ S cm⁻¹,NASICON-type solid electrolyte system LiHf2(PO4)3 + yLi2O,Sintered at 1300 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,3.2 × 10⁻⁵ S cm⁻¹,NASICON-type solid electrolyte system LiHf2(PO4)3 + yLi2O,Sintered at 1250 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,2.5 × 10⁻⁵ S cm⁻¹,NASICON-type solid electrolyte system LiHf2(PO4)3 + yLi2O,Sintered at 1300 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,3.2 × 10⁻⁵ S cm⁻¹,NASICON-type solid electrolyte system LiHf2(PO4)3 + yLi2O,Sintered at 1300 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,25°C,1.1 × 10⁻⁴ S cm⁻¹,"NASICON-type ceramic with 0.3 mol Li2O additive, sintered at 1293 K, showing closely contacted grains and smooth surface.",Ball-milled powder sintered at 1293 K; added Li2O forms a glassy lithium phosphate phase at grain boundaries during heating.
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,25°C,2.1 × 10⁻⁵ S cm⁻¹,"NASICON-type ceramic with 0.3 mol Li2O additive, sintered at 1393 K.",Ball-milled powder sintered at 1393 K; glassy lithium phosphate phase present at grain boundaries.
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,25°C,2.7 × 10⁻⁷ S cm⁻¹,"NASICON-type ceramic with 0.3 mol Li2O additive, sintered at 1173 K.",Ball-milled powder sintered at 1173 K; grains are closely contacted with one another.
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,25°C,5.3 × 10⁻⁸ S cm⁻¹,"NASICON-type ceramic with 0.3 mol Li2O additive, sintered at 1073 K.",Ball-milled powder sintered at 1073 K; added Li2O forms glassy phase at boundaries.
+Lithium Iron Hafnium Phosphate,Ceramic,298 K,1.7 × 10⁻⁴ S cm⁻¹,A sample belonging to the Li1+xMxHf2-x(PO4)3 system where M=Fe and x=0.2.,Sintering (implied by the discussion of sinterability in the system)
+Lithium Iron Hafnium Phosphate,Ceramic,298 K,1.7 × 10⁻⁴ S·cm⁻⁴,NASICON-type structure within the Li1+xMxHf2-x(PO4)3 system (where M=Fe) exhibiting maximum conductivity at x=0.2.,Sintering
+Lithium Hafnium Phosphate,Ceramic,298 K,~7.9 × 10⁻⁷ S/cm,LiHf2(PO4)3 + yLi2O system (y=0),Sintered at 1600 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.0 × 10⁻⁴ S/cm,LiHf2(PO4)3 + yLi2O system (y=0.1),Sintered at 1273 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,~2.5 × 10⁻⁵ S/cm,LiHf2(PO4)3 + yLi2O system (y=0.3),Sintered at 1300 K
+Lithium Hafnium Phosphate,Ceramic,298K,7.9 × 10⁻⁷ S/cm,NASICON-type ceramic electrolyte,Sintered at 1600K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298K,1.0 × 10⁻⁴ S/cm,NASICON-type ceramic electrolyte with Li2O addition,Sintered at 1280K
+Lithium Hafnium Phosphate,Ceramic,298 K,7.94 &#215; 10⁻⁷ S/cm,NASICON-type lithium hafnium phosphate ceramic,Sintered at 1600 K
+Lithium Hafnium Phosphate with Lithium Oxide,Ceramic,298 K,1.12 &#215; 10⁻⁴ S/cm,NASICON-type lithium hafnium phosphate ceramic with Li2O addition,Sintered at 1290 K
+Lithium Hafnium Phosphate,Ceramic,298 K,6.3 × 10⁻⁷ S/cm,Parent phosphate material without Li2O addition.,Sintered at temperatures ranging from 1000 K to 1600 K.
+Lithium Hafnium Phosphate + Lithium Oxide,Ceramic,298 K,6.3 × 10⁻⁵ S/cm,Lithium oxide added system (y=0.1).,Sintered sample.
+Lithium Hafnium Phosphate + Lithium Oxide,Ceramic,298 K,7.9 × 10⁻⁵ S/cm,Lithium oxide added system (y=0.2).,Sintered sample.
+Lithium Hafnium Phosphate + Lithium Oxide,Ceramic,298 K,5.0 × 10⁻⁵ S/cm,Lithium oxide added system (y=0.4).,Sintered sample.
+LiTi2(PO4)'3,Ceramic,298 K,7.0× 10⁻⁴ S.cm⁻¹,N/A (Cited Work),N/A (Cited Work)
+Lithium Tin Zirconate Phosphate,Ceramic,room temperature,lower conductivity,rhombohedral structure was distorted to monoclinic one,N/A (Cited Work)
+Lithium Zirconate Phosphate,Ceramic,room temperature,lower conductivity,rhombohedral structure was distorted to monoclinic one,N/A (Cited Work)
+Lithium Hafnium Phosphate derivative,Ceramic,298 K,1.6e-4 S cm^-1,NASICON-type phosphate with substitution M (peak conductivity region),N/A
+Chromium-substituted Lithium Hafnium Phosphate,Ceramic,298 K,5.0e-7 S cm^-1,NASICON-type phosphate with Cr substitution,N/A
+Lithium-ion conductor (y=0),Ceramic,298 K,7.9e-7 S cm^-1,"Sintered ceramic, composition y=0",Sintering at 1600 K
+Lithium-ion conductor (upward triangle series),Ceramic,298 K,1.0e-4 S cm^-1,"Sintered ceramic, peak conductivity composition",Sintering at ~1280 K
+Lithium-ion conductor (downward triangle series),Ceramic,298 K,3.2e-5 S cm^-1,Sintered ceramic,Sintering at ~1230 K
+Lithium-ion conductor (square series),Ceramic,298 K,2.5e-5 S cm^-1,Sintered ceramic,Sintering at 1300 K
+Lithium-ion conductor (diamond series),Ceramic,298 K,3.2e-5 S cm^-1,Sintered ceramic,Sintering at 1300 K

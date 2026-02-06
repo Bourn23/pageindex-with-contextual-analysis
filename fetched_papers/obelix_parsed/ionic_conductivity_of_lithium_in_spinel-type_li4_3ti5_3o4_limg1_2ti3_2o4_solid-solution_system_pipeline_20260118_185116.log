@@ -1,0 +1,14 @@
+[0;34m========================================[0m
+[0;34mUNIFIED DATA EXTRACTION PIPELINE[0m
+[0;34m========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2_already_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2_already_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_pipeline_20260118_185116.log
+
+[0;34m[INFO][0m Skipping STEP 1: Using existing structure: ./fetched_papers/obelix_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json
+
+[0;32m[STEP 2/3][0m Extracting material data from structure...
+
+Error: File not found: fetched_papers/obelix_parsed/ionic_conductivity_of_lithium_in_spinel-type_li4_3ti5_3o4_limg1_2ti3_2o4_solid-solution_system_structure.json
+[0;31m[ERROR][0m Failed to extract material data

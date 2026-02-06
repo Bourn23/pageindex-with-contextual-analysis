@@ -1,0 +1,694 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 105060,
+    "total_output_tokens": 7515,
+    "total_cost_usd": 0.075075,
+    "call_counts": {
+      "gemini-3-flash-preview": 31
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed2/synthesis_of_new_lithium_ionic_conductor_thio-lisicon_lithium_silicon_sulfides_system_structure.json",
+  "extraction_stats": {
+    "total_nodes": 91,
+    "raw_extracted": 29,
+    "after_dedup": 21,
+    "time_elapsed": 102.17673921585083,
+    "valid_count": 21,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 4,
+      "medium": 17,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 8,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 29,
+    "from_image_nodes": 0,
+    "final_count": 21
+  },
+  "material_count": 21,
+  "materials": [
+    {
+      "source_sentence_id": "0184",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4.8Si0.2Al0.8S4",
+        "acronym": null,
+        "proportion": "x=0.8"
+      },
+      "ionic_conductivity_S_per_cm": "2.3 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the highest conductivity value for the Li4+xSi1-xAlxS4 system at the specific composition x=0.8 as stated in the text.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Ternary Li2S–SiS2–Al2S3 system, thio-LISICON structure",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Conductivity and Activation Energy Results",
+        "section": "The Ternary $Li_2S$ – $SiS_2$ – $Al_2S_3$ System"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4.8Si0.2Al0.8S4",
+      "_original_name": "Li4+xSi1-xAlxS4",
+      "_norm_cond": 2.3e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0009, 0212, 0157, 0167, 0270",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.4Si0.4P0.6S4",
+        "acronym": null,
+        "proportion": "x = 0.6"
+      },
+      "ionic_conductivity_S_per_cm": "6.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted from sentence 0009 which explicitly states the conductivity value for the solid solution member x = 0.6 in the Li4-xSi1-xPxS4 system.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "thio-LISICON solid solution member with negligible electronic conductivity and high electrochemical stability up to ~5 V vs Li. ; Li4-xSi1-xPxS4 solid solution with x=0.6 ; P-substituted Li4SiS4 solid solution ; Material with composition x = 0.6 and activation energy of 0.29 eV. ; thio-LISICON compounds based on lithium silicon sulfides",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0005",
+        "title": "Abstract",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.4Si0.4P0.6S4",
+      "_original_name": "Li4-xSi1-xPxS4",
+      "_norm_cond": 0.00064,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0212",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Si0.6P0.4O4",
+        "acronym": null,
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "2.1 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "25°C",
+      "reason": "The complex impedance plot for x=0.4 (Fig. 7a) shows a total resistance from which the conductivity is calculated as 2.1 x 10^-4 S/cm at room temperature.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Li4-xSi1-xPxS4 solid solution with x=0.4",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0209",
+        "title": "Figures on Impedance and Conductivity of Li4-xSi1-xPxS4",
+        "section": "Electrochemical Properties"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Si0.6P0.4O4",
+      "_original_name": "Li4-xSi1-xPxS4",
+      "_norm_cond": 0.00021,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0199",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xGe1-xPxS4",
+        "acronym": "thio-LISICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "27°C",
+      "reason": "Extracted as the primary material of the study mentioned in the comparison section.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "New thio-LISICON material",
+      "processing_method": "Not specified in this section",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xGe1-xPxS4",
+      "_original_name": "thio-LISICON",
+      "_norm_cond": 0.00064,
+      "_norm_temp": 27
+    },
+    {
+      "source_sentence_id": "0185",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4.275Ge0.61Ga0.25S4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for a cited germanium-based thio-LISICON material used for comparison.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0181",
+        "title": "Conductivity and Activation Energy Results",
+        "section": "The Ternary $Li_2S$ – $SiS_2$ – $Al_2S_3$ System"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4.275Ge0.61Ga0.25S4",
+      "_original_name": "Li4.275Ge0.61Ga0.25S4",
+      "_norm_cond": 6.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0203",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xGe1-xPxS4",
+        "acronym": "thio-LISICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity value for the thio-LISICON compound Li4-xGe1-xPxS4 mentioned as a comparison point in the text.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0202",
+        "title": "Comparison of Conductivity within Thio-LISICON Compounds",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xGe1-xPxS4",
+      "_original_name": "Li4-xGe1-xPxS4",
+      "_norm_cond": 0.0022,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0029",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3.6Si0.6P0.4O4",
+        "acronym": null,
+        "proportion": "Si/P=0.6/0.4"
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted room temperature ionic conductivity for the LISICON-type material Li3.6Si0.6P0.4O4 mentioned as an example in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0024",
+        "title": "Review of Oxide-Based LISICON System",
+        "section": "INTRODUCTION"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3.6Si0.6P0.4O4",
+      "_original_name": "Li3.6Si0.6P0.4O4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0042",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4-xGe1-xPxS4",
+        "acronym": "thio-LISICON",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁵ – 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for the thio-LISICON system based on lithium germanium sulfides as mentioned in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0040",
+        "title": "Recent Thio-LISICON Discoveries and Scope of Present Work",
+        "section": "INTRODUCTION"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4-xGe1-xPxS4",
+      "_original_name": "thio-LISICON based on lithium germanium sulfides",
+      "_norm_cond": 0.001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3PS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ – 10⁻⁹ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for Li3PS4 from the introduction section citing previous work.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Advantages of Sulfides and Past Crystalline Sulfide Research",
+        "section": "INTRODUCTION"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3PS4",
+      "_original_name": "Li3PS4",
+      "_norm_cond": 1e-09,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SiS4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ – 10⁻⁹ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for Li4SiS4 from the introduction section citing previous work.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Advantages of Sulfides and Past Crystalline Sulfide Research",
+        "section": "INTRODUCTION"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SiS4",
+      "_original_name": "Li4SiS4",
+      "_norm_cond": 1e-07,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0039",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2SiS3",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "10⁻⁷ – 10⁻⁹ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted conductivity range for Li2SiS3 from the introduction section citing previous work.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0030",
+        "title": "Advantages of Sulfides and Past Crystalline Sulfide Research",
+        "section": "INTRODUCTION"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2SiS3",
+      "_original_name": "Li2SiS3",
+      "_norm_cond": 1e-09,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0200",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3N",
+        "acronym": null,
+        "proportion": "intrinsic"
+      },
+      "ionic_conductivity_S_per_cm": "2-4 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from a comparison with previous ceramic lithium superionic conductors.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3N",
+      "_original_name": "Li3N",
+      "_norm_cond": 0.0004,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0200",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3N",
+        "acronym": null,
+        "proportion": "H-doped"
+      },
+      "ionic_conductivity_S_per_cm": "6 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from a comparison with previous ceramic lithium superionic conductors.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3N",
+      "_original_name": "Li3N",
+      "_norm_cond": 0.006,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0200",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "La0.62Li0.16TiO3",
+        "acronym": "LLTO",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from a comparison with previous ceramic lithium superionic conductors.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "La0.62Li0.16TiO3",
+      "_original_name": "La0.62Li0.16TiO3",
+      "_norm_cond": 0.0001,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0200",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-LiI",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.8 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from a comparison with modified sulfide glasses.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-LiI",
+      "_original_name": "Li2S-SiS2-LiI",
+      "_norm_cond": 0.0018,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0200",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li2S-SiS2-Li3PO4",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.9 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "RT",
+      "reason": "Extracted from a comparison with modified sulfide glasses.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0198",
+        "title": "Comparison of Conductivity with Other Ionic Conductors",
+        "section": "Comparison with Other Ionic Conductors"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li2S-SiS2-Li3PO4",
+      "_original_name": "Li2S–SiS2–Li3PO4",
+      "_norm_cond": 0.00069,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0243",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4SiS4",
+        "acronym": null,
+        "proportion": "x=0"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-6 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "The conductivity value for the base material (x=0) was estimated from the composition dependence plot (Figure 11b) at room temperature.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li4+xSi1-xAlxS4 solid solution",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Figure 11: Conductivities of Li4+xSi1-xAlxS4",
+        "section": "Electrochemical Properties"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4SiS4",
+      "_original_name": "Li4+xSi1-xAlxS4",
+      "_norm_cond": 1e-06,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4.1Si0.9Al0.1S4",
+        "acronym": null,
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "2.3 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "The conductivity value for x=0.1 was estimated from the composition dependence plot (Figure 11b) at room temperature.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li4+xSi1-xAlxS4 solid solution",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Figure 11: Conductivities of Li4+xSi1-xAlxS4",
+        "section": "Electrochemical Properties"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4.1Si0.9Al0.1S4",
+      "_original_name": "Li4+xSi1-xAlxS4",
+      "_norm_cond": 2.3e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4.2Si0.8Al0.2S4",
+        "acronym": null,
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "The conductivity value for x=0.2 was estimated from the composition dependence plot (Figure 11b) at room temperature.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li4+xSi1-xAlxS4 solid solution",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Figure 11: Conductivities of Li4+xSi1-xAlxS4",
+        "section": "Electrochemical Properties"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4.2Si0.8Al0.2S4",
+      "_original_name": "Li4+xSi1-xAlxS4",
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0244",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li4.3Si0.7Al0.3S4",
+        "acronym": null,
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-5 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "The conductivity value for x=0.3 was estimated from the composition dependence plot (Figure 11b) at room temperature.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Li4+xSi1-xAlxS4 solid solution",
+      "processing_method": "synthesized at 700°C",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Figure 11: Conductivities of Li4+xSi1-xAlxS4",
+        "section": "Electrochemical Properties"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li4.3Si0.7Al0.3S4",
+      "_original_name": "Li4+xSi1-xAlxS4",
+      "_norm_cond": 1e-05,
+      "_norm_temp": 25
+    },
+    {
+      "source_sentence_id": "0021",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li3N",
+        "acronym": null,
+        "proportion": "H-doped"
+      },
+      "ionic_conductivity_S_per_cm": "10⁻³ S cm⁻¹",
+      "measurement_temperature": "not specified",
+      "reason": "Extracted ionic conductivity value for H-doped Li3N mentioned as a previously reported high-conductivity material in the introduction.",
+      "confidence": "medium",
+      "data_source": "external-citation",
+      "material_description": "N/A (Cited Work)",
+      "processing_method": "N/A (Cited Work)",
+      "source_node": {
+        "node_id": "0016",
+        "title": "Introduction to Solid Electrolytes and Early Challenges",
+        "section": "INTRODUCTION"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li3N",
+      "_original_name": "H-doped Li3N",
+      "_norm_cond": 0.001,
+      "_norm_temp": null
+    }
+  ]
+}

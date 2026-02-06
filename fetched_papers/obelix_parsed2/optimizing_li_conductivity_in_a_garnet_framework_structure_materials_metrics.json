@@ -1,0 +1,57 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-476",
+      "extracted_id": "EX-6",
+      "reason": "The chemical formula Li7La3Zr2O12 and conductivity 0.00012 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-490",
+      "extracted_id": "EX-4",
+      "reason": "The normalized chemical formula Li6.4La3Zr1.4Ta0.6O12 and conductivity 0.001 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-491",
+      "extracted_id": "EX-8",
+      "reason": "The normalized chemical formula Li6.2La3Zr1.2Ta0.8O12 and conductivity 0.00032 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-572",
+      "extracted_id": "EX-1",
+      "reason": "The normalized chemical formula Li6.5La3Zr1.5Ta0.5O12 and conductivity 0.00092 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-573",
+      "extracted_id": "EX-5",
+      "reason": "The normalized chemical formula Li6.6La3Zr1.6Ta0.4O12 and conductivity 0.00073 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-574",
+      "extracted_id": "EX-7",
+      "reason": "The normalized chemical formula Li6.8La3Zr1.8Ta0.2O12 and conductivity 0.00028 S/cm are an exact match.",
+      "is_match": true
+    },
+    {
+      "ground_truth_id": "GT-575",
+      "extracted_id": "EX-9",
+      "reason": "The normalized chemical formula Li6La3ZrTaO12 and conductivity 0.00016 S/cm are an exact match.",
+      "is_match": true
+    }
+  ],
+  "summary_thought": "The AI-pipeline demonstrated excellent performance, successfully matching all Ground Truth entries to Extracted Data with exact matches in both normalized chemical formulas and conductivity values.",
+  "metrics": {
+    "recall": 100.0,
+    "precision": 46.666666666666664,
+    "f1": 63.63636363636363,
+    "avg_log10_error": 0.0,
+    "numeric_accuracy_pct": 100.0,
+    "num_valid_numeric_matches": 7,
+    "total_gt": 7,
+    "total_ex": 15
+  }
+}

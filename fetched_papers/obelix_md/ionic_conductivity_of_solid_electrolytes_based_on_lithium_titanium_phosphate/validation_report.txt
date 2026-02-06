@@ -1,0 +1,30 @@
+GT-235     | ✅ MATCH         | The chemical formula Li6.0Ti12.0P18.0O72.0 normalizes to LiTi2(PO4)3, and the conductivity values are identical.
+GT-242     | ✅ MATCH         | The chemical formula Li7.2Ti12.0Si1.2P16.8O72.0 normalizes to Li1.2Ti2Si0.2P2.8O12, and the conductivity values are identical.
+GT-243     | ✅ MATCH         | The chemical formula Li7.8Ti12.0Si1.8P16.2O72.0 normalizes to Li1.3Ti2Si0.3P2.7O12, and the conductivity values are identical.
+GT-244     | ❌ MISSING/BAD   | The chemical formula Li7.2Al1.2Ti10.8P18.0O72.0 normalizes to Li1.2Al0.2Ti1.8(PO4)3, but the extracted conductivity (5.0e-04 S/cm) is significantly different from the ground truth (5.95e-04 S/cm).
+GT-245     | ✅ MATCH         | The chemical formula Li7.8Al1.8Ti10.2P18.0O72.0 normalizes to Li1.3Al0.3Ti1.7(PO4)3, and the extracted conductivity (7.0e-04 S/cm) is an acceptable rounding of the ground truth (7.22e-04 S/cm).
+GT-246     | ❌ MISSING/BAD   | The chemical formula Li8.4Al2.4Ti9.6P18.0O72.0 normalizes to Li1.4Al0.4Ti1.6(PO4)3, but the extracted conductivity (5.0e-04 S/cm) is significantly different from the ground truth (3.88e-04 S/cm).
+GT-247     | ❌ MISSING/BAD   | The chemical formula Li9.0Al3.0Ti9.0P18.0O72.0 normalizes to Li1.5Al0.5Ti1.5(PO4)3, but the extracted conductivity (3.0e-04 S/cm) is significantly different from the ground truth (2.48e-04 S/cm).
+GT-248     | ✅ MATCH         | The chemical formula Li7.2Cr1.2Ti10.8P18.0O72.0 normalizes to Li1.2Cr0.2Ti1.8(PO4)3, and the extracted conductivity (2.0e-05 S/cm) is an acceptable rounding of the ground truth (1.82e-05 S/cm).
+GT-249     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.8Cr1.8Ti10.2P18.0O72.0 (normalized to Li1.3Cr0.3Ti1.7(PO4)3).
+GT-250     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li8.4Cr2.4Ti9.6P18.0O72.0 (normalized to Li1.4Cr0.4Ti1.6(PO4)3).
+GT-251     | ✅ MATCH         | The chemical formula Li9.0Cr3.0Ti9.0P18.0O72.0 normalizes to Li1.5Cr0.5Ti1.5(PO4)3, and the extracted conductivity (4.0e-04 S/cm) is an acceptable rounding of the ground truth (3.86e-04 S/cm).
+GT-252     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.2Ga1.2Ti10.8P18.0O72.0 (normalized to Li1.2Ga0.2Ti1.8(PO4)3).
+GT-253     | ❌ MISSING/BAD   | The chemical formula Li7.8Ga1.8Ti10.2P18.0O72.0 normalizes to Li1.3Ga0.3Ti1.7(PO4)3, but the extracted conductivity (4.0e-04 S/cm) is significantly different from the ground truth (2.61e-04 S/cm).
+GT-254     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li8.4Ga2.4Ti9.6P18.0O72.0 (normalized to Li1.4Ga0.4Ti1.6(PO4)3).
+GT-255     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li9.0Ga3.0Ti9.0P18.0O72.0 (normalized to Li1.5Ga0.5Ti1.5(PO4)3).
+GT-256     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.2Fe1.2Ti10.8P18.0O72.0 (normalized to Li1.2Fe0.2Ti1.8(PO4)3).
+GT-257     | ❌ MISSING/BAD   | The chemical formula Li7.8Fe1.8Ti10.2P18.0O72.0 normalizes to Li1.3Fe0.3Ti1.7(PO4)3, but the extracted conductivity (4.5e-04 S/cm) is significantly different from the ground truth (2.46e-04 S/cm).
+GT-258     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li8.4Fe2.4Ti9.6P18.0O72.0 (normalized to Li1.4Fe0.4Ti1.6(PO4)3).
+GT-259     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li9.0Fe3.0Ti9.0P18.0O72.0 (normalized to Li1.5Fe0.5Ti1.5(PO4)3).
+GT-260     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.2Sc1.2Ti10.8P18.0O72.0 (normalized to Li1.2Sc0.2Ti1.8(PO4)3).
+GT-261     | ✅ MATCH         | The chemical formula Li7.8Sc1.8Ti10.2P18.0O72.0 normalizes to Li1.3Sc0.3Ti1.7(PO4)3, and the extracted conductivity (7.0e-04 S/cm) is an acceptable rounding of the ground truth (7.03e-04 S/cm).
+GT-262     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li8.4Sc2.4Ti9.6P18.0O72.0 (normalized to Li1.4Sc0.4Ti1.6(PO4)3).
+GT-263     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.2In1.2Ti10.8P18.0O72.0 (normalized to Li1.2In0.2Ti1.8(PO4)3).
+GT-264     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.8In1.8Ti10.2P18.0O72.0 (normalized to Li1.3In0.3Ti1.7(PO4)3).
+GT-265     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li8.4In2.4Ti9.6P18.0O72.0 (normalized to Li1.4In0.4Ti1.6(PO4)3).
+GT-266     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li9.0In3.0Ti9.0P18.0O72.0 (normalized to Li1.5In0.5Ti1.5(PO4)3).
+GT-267     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li7.2La1.2Ti10.8P18.0O72.0 (normalized to Li1.2La0.2Ti1.8(PO4)3).
+GT-268     | ❌ MISSING/BAD   | The chemical formula Li7.8La1.8Ti10.2P18.0O72.0 normalizes to Li1.3La0.3Ti1.7(PO4)3, but the extracted conductivity (1.2e-02 S/cm) and temperature (673 K) are significantly different from the ground truth (5.23e-04 S/cm at room temperature).
+GT-269     | ❌ MISSING/BAD   | The chemical formula Li8.4La2.4Ti9.6P18.0O72.0 normalizes to Li1.4La0.4Ti1.6(PO4)3, but the extracted conductivity (6.0e-04 S/cm) is significantly different from the ground truth (4.98e-04 S/cm).
+GT-270     | ❌ MISSING/BAD   | No matching chemical formula was found in the extracted data for Li9.0La3.0Ti9.0P18.0O72.0 (normalized to Li1.5La0.5Ti1.5(PO4)3).

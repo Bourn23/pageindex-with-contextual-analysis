@@ -1,0 +1,538 @@
+
+
+--- [Document] ionic_conductivity_of_li_ion_conductors_li2m3_m4_p3o12.md ---
+
+
+[DEBUG] M. Sugantha, U.V. Varadaraju:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=287 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=287
+)] thoughts_token_count=182 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=479 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 2. Experimental:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=451 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=451
+)] thoughts_token_count=317 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=778 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Introduction:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=214
+)] cached_content_token_count=214 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=282 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=282
+)] thoughts_token_count=475 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=763 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] **3.1.** *Phase identification*:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=469 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=469
+)] thoughts_token_count=277 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=756 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 1. Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=417
+)] cached_content_token_count=417 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=732 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=732
+)] thoughts_token_count=683 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1425 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Abstract:
+- Response length: 718 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=263 candidates_tokens_details=None prompt_token_count=418 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=418
+)] thoughts_token_count=612 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1293 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li2InTiP3O12",
+      "canonical_formula": "Li2InTiP3O12",
+      "material_definitions": [
+        "Lithium ion conductors based on Li2M3+M4+P3O12 (M3+=Cr, Fe, In; M4+=Ti, Zr and Hf) have been synthesized.",
+        "The Li2InTiP3O12 material belongs to this series of compounds."
+      ],
+      "raw_conductivity": "1.22e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00122,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}
+
+
+[DEBUG] 4. **Conclusions**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=361 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=361
+)] thoughts_token_count=399 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=770 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 3.2. *Conductivity measurements*:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=525
+)] cached_content_token_count=525 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1712 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1712
+)] thoughts_token_count=1041 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2763 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 1: Lattice parameten of Li,M'+M4+P,0,,:
+- Response: {
+  "measurements": []
+}
+
+
+[SCI-FIGURE DEBUG] page_2_figure_2.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000 / T K^-1",
+        "unit": "K^-1",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "Log (\u03c3_T) S cm^-1 K",
+        "unit": "S cm^-1 K",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        48,
+        56,
+        513,
+        951
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000 / T K^-1",
+        "unit": "K^-1",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "Log (\u03c3_T) S cm^-1 K",
+        "unit": "S cm^-1 K",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        538,
+        56,
+        994,
+        951
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 45
+
+
+[SCI-FIGURE DEBUG] page_2_figure_9.jpeg:
+- Detection Result: {
+  "is_multi_panel": false,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "Log f (Hz)",
+        "unit": "Hz",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "\u03c3 (Scm^-1)",
+        "unit": "Scm^-1",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        44,
+        18,
+        960,
+        975
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 57
+
+
+[SCI-FIGURE DEBUG] page_2_figure_8.jpeg:
+- Detection Result: {
+  "is_multi_panel": false,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "Log f (Hz)",
+        "unit": "Hz",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "sigma (S cm-1)",
+        "unit": "S cm-1",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        64,
+        48,
+        965,
+        970
+      ],
+      "label": "a"
+    }
+  ]
+}
+- Combined Measurements: 37
+
+
+[TABLE DEBUG] Table 2: The maximum dispersion in the *E,* values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of *log(aT) vs. 1000/T* for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The *E,* value of Li,InTiP,O,, compares well:
+- Response: {
+  "measurements": [
+    {
+      "raw_composition": "Li2CrTiP3O12",
+      "canonical_formula": "Li2CrTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "4.41 \t\t 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 4.41e-7,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2CrTiP3O12",
+      "canonical_formula": "Li2CrTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "5.56 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5.56e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2CrZrP3O12",
+      "canonical_formula": "Li2CrZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "5.91 \t\t 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5.91e-7,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2CrZrP3O12",
+      "canonical_formula": "Li2CrZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "5.92 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5.92e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2CrHfP3O12",
+      "canonical_formula": "Li2CrHfP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "4.20 \t\t 10-8",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 4.2e-8,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2CrHfP3O12",
+      "canonical_formula": "Li2CrHfP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "2.74 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.74e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2FeTiP3O12",
+      "canonical_formula": "Li2FeTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "3.34 \t\t 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.34e-7,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2FeTiP3O12",
+      "canonical_formula": "Li2FeTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "5.43 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5.43e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2FeZrP3O12",
+      "canonical_formula": "Li2FeZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "1.44 \t\t 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.44e-7,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2FeZrP3O12",
+      "canonical_formula": "Li2FeZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "3.82 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.82e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InTiP3O12",
+      "canonical_formula": "Li2InTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "8.30 \t\t 10-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 8.3e-6,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InTiP3O12",
+      "canonical_formula": "Li2InTiP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "1.22 \t\t 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00122,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InZrP3O12",
+      "canonical_formula": "Li2InZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "8.22 \t\t 10-8",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 8.22e-8,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InZrP3O12",
+      "canonical_formula": "Li2InZrP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "1.44 \t\t 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.44e-4,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InHfP3O12",
+      "canonical_formula": "Li2InHfP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "2.74 \t\t 10-8",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.74e-8,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li2InHfP3O12",
+      "canonical_formula": "Li2InHfP3O12",
+      "material_definitions": [
+        "These materials are NASICON-type solid electrolytes with the general formula Li2M(III)M(IV)P3O12, where M(III) is Cr, Fe, or In, and M(IV) is Ti, Zr, or Hf. They are synthesized to investigate the effect of substituting M(III) and M(IV) cations on ionic conductivity and activation energy. Li2InTiP3O12 and Li2InZrP3O12 show two distinct activation energy regions."
+      ],
+      "raw_conductivity": "2.52 \t\t 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.52e-5,
+      "raw_temperature": "573",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 299.85,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: The maximum dispersion in the E, values obtained from measurements on different pellets of a given composition is 1 to 1.5 kJ/mol. Fig. 1 illustrates the linear plots of log(aT) vs. 1000/T for the Cr and In analogues. The Li,InTiP,O,, and Li,InZrP,O,, compounds show that the Arrhenius plots have two straight lines with differing slopes. The low temperature region has a slope of 34 kJ/mol and 58 kJ/mol and at the high temperature region 21 and 48 kJ/mol for the Ti and Zr analogues respectively. The E, value of Li,InTiP,O,, compares well",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}

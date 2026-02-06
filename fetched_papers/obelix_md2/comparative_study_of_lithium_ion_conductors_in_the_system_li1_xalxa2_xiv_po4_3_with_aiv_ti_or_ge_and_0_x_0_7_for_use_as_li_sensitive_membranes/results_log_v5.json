@@ -1,0 +1,938 @@
+
+
+--- [Document] comparative_study_of_lithium_ion_conductors_in_the_system_li1_xalxa2_xiv_po4_3_with_aiv_ti_or_ge_and_0_x_0_7_for_use_as_li_sensitive_membranes.md ---
+
+
+[DEBUG] M. Cretin and P. Fabry\*:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=177
+)] cached_content_token_count=177 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=339 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=339
+)] thoughts_token_count=51 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=400 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 2 Powder Synthesis and Ceramic Elaborations:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=385 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=385
+)] thoughts_token_count=307 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=702 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 1 Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1228 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1228
+)] thoughts_token_count=283 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1521 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 2.2 Co-grinding powders:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=280
+)] cached_content_token_count=280 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=401 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=401
+)] thoughts_token_count=253 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=664 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 2.1 Sol–gel powders:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=377
+)] cached_content_token_count=377 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=622 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=622
+)] thoughts_token_count=433 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1065 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 2.3 Ceramic fabrication:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=350
+)] cached_content_token_count=350 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=553 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=553
+)] thoughts_token_count=287 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=846 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] 3.1 Experimental:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=377
+)] cached_content_token_count=377 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=621 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=621
+)] thoughts_token_count=489 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1116 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] 3.2.1 Morphological properties:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=360
+)] cached_content_token_count=360 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=880 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=880
+)] thoughts_token_count=383 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1273 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 3.2.2 Structural properties:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2486 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2486
+)] thoughts_token_count=662 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3158 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 5 Conclusion:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=431
+)] cached_content_token_count=431 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=775 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=775
+)] thoughts_token_count=772 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1557 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Abstract:
+- Response length: 2087 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=376
+)] cached_content_token_count=376 candidates_token_count=734 candidates_tokens_details=None prompt_token_count=619 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=619
+)] thoughts_token_count=1547 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2900 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Preparations and physico-chemical characterizations of NASICON-type compounds in the system $Li_{1+x}Al_xA_{2-x}^{IV}(PO_4)_3$ ($A^{IV}=Ti$ or Ge) are described.",
+        "Ceramics have been fabricated by sol-gel and cogrinding processes for use as ionosensitive membrane for Li+ selective electrodes.",
+        "Solid solutions are obtained with Al/Ti and Al/Ge substitutions in the range $0 \\le x \\le 0.6$."
+      ],
+      "raw_conductivity": "10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nC",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "Preparations and physico-chemical characterizations of NASICON-type compounds in the system $Li_{1+x}Al_xA_{2-x}^{IV}(PO_4)_3$ ($A^{IV}=Ti$ or Ge) are described.",
+        "Ceramics have been fabricated by sol-gel and cogrinding processes for use as ionosensitive membrane for Li+ selective electrodes.",
+        "Solid solutions are obtained with Al/Ti and Al/Ge substitutions in the range $0 \\le x \\le 0.6$."
+      ],
+      "raw_conductivity": "6e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 6e-05,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nC",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Material composition (Li1.3Al0.3Ti1.7(PO4)3) and temperature (25C) are inferred based on preceding sentence context."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] 4 Ionic Selectivity Properties:
+- Response length: 2152 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=617
+)] cached_content_token_count=617 candidates_token_count=647 candidates_tokens_details=None prompt_token_count=1616 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1616
+)] thoughts_token_count=2086 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4349 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3 Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The grain conductivity (\nA\n g) values were measured for Li+-NASICON membranes with composition Li1.3Al0.3A1.7(PO4)3 where A=Ti or Ge.",
+        "These materials are used as selective membranes in potentiometric sensors.",
+        "The Ti/Ge substitution leads to a decrease in the crystallographic cell volume.",
+        "The contraction has a positive effect on selectivity and a negative effect on conductivity."
+      ],
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature is not explicitly stated in the text and is inferred to be 25 Celsius (Room Temperature)."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ge1.7 (PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ge1.7(PO4)3",
+      "material_definitions": [
+        "The grain conductivity (\nA\n g) values were measured for Li+-NASICON membranes with composition Li1.3Al0.3A1.7(PO4)3 where A=Ti or Ge.",
+        "These materials are used as selective membranes in potentiometric sensors.",
+        "The Ti/Ge substitution leads to a decrease in the crystallographic cell volume.",
+        "The contraction has a positive effect on selectivity and a negative effect on conductivity."
+      ],
+      "raw_conductivity": "1.6e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00016,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature is not explicitly stated in the text and is inferred to be 25 Celsius (Room Temperature)."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_4_figure_14.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "a (\u0000)",
+        "unit": "\u0000",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "c (\u0000)",
+        "unit": "\u0000",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        18,
+        17,
+        447,
+        959
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "x",
+        "unit": null,
+        "quantity_type": "stoichiometry",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "a (\u0000)",
+        "unit": "\u0000",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": {
+        "title": "c (\u0000)",
+        "unit": "\u0000",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "box_2d": [
+        504,
+        17,
+        924,
+        959
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_3_picture_2.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        12,
+        57,
+        488,
+        953
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "N/A",
+        "unit": null,
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        502,
+        57,
+        963,
+        953
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[SCI-FIGURE DEBUG] page_4_figure_7.jpeg:
+- Detection Result: {
+  "is_multi_panel": true,
+  "subplots": [
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u03b8 (\u00b0)",
+        "unit": "\u00b0",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity (a.u.)",
+        "unit": "a.u.",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        56,
+        59,
+        482,
+        972
+      ],
+      "label": "a"
+    },
+    {
+      "contains_conductivity_data": false,
+      "x_axis": {
+        "title": "2\u03b8 (\u00b0)",
+        "unit": "\u00b0",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "left_y_axis": {
+        "title": "Intensity (a.u.)",
+        "unit": "a.u.",
+        "quantity_type": "other",
+        "scale_type": "linear"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        492,
+        59,
+        970,
+        972
+      ],
+      "label": "b"
+    }
+  ]
+}
+- Combined Measurements: 0
+
+
+[DEBUG] 3.2.3 Electrical properties:
+- Response length: 7683 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=2773 candidates_tokens_details=None prompt_token_count=2756 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2756
+)] thoughts_token_count=4942 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10471 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (coground)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using two different processes: co-grinding and sol-gel."
+      ],
+      "raw_conductivity": "10e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0001,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (sol-gel)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using two different processes: co-grinding and sol-gel.",
+        "For Li(1+x)AlxTi(2-x)(PO4)3 materials prepared by the sol-gel process, the conductivity is affected by intergranular precipitation of LiTiOPO4."
+      ],
+      "raw_conductivity": "1.5e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.5e-5,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3 (x=0, A=Ti, sol-gel)",
+      "canonical_formula": "LiTi2(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using the sol-gel process."
+      ],
+      "raw_conductivity": "4.4e-8",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 4.4e-8,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "table",
+      "confidence": "low",
+      "warnings": [
+        "Value marked as extrapolated (*)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.1Al0.1Ti1.9(PO4)3 (x=0.1, A=Ti, sol-gel)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using the sol-gel process."
+      ],
+      "raw_conductivity": "3e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.0e-5,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.5Al0.5Ti1.5(PO4)3 (x=0.5, A=Ti, sol-gel)",
+      "canonical_formula": "Li1.5Al0.5Ti1.5(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using the sol-gel process."
+      ],
+      "raw_conductivity": "2.3e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.3e-5,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.7Al0.7Ti1.3(PO4)3 (x=0.7, A=Ti, sol-gel)",
+      "canonical_formula": "Li1.7Al0.7Ti1.3(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "Samples were elaborated using the sol-gel process."
+      ],
+      "raw_conductivity": "3.7e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.7e-5,
+      "raw_temperature": "Room temperature",
+      "raw_temperature_unit": "textual context",
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ge1.7(PO4)3 (x=0.3)",
+      "canonical_formula": "Li1.3Al0.3Ge1.7(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "The measurement refers to the grain conductivity (sigma_g) of the NASICON phase, calculated from Rg values."
+      ],
+      "raw_conductivity": "5.6e-5",
+      "raw_conductivity_unit": "S cm-1 (sigma_g)",
+      "normalized_conductivity": 5.6e-5,
+      "raw_temperature": "26",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 26.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.7Al0.7Ge1.3(PO4)3 (x=0.7)",
+      "canonical_formula": "Li1.7Al0.7Ge1.3(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "The measurement refers to the grain conductivity (sigma_g) of the NASICON phase, calculated from Rg values."
+      ],
+      "raw_conductivity": "1.6e-4",
+      "raw_conductivity_unit": "S cm-1 (sigma_g)",
+      "normalized_conductivity": 0.00016,
+      "raw_temperature": "23",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 23.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (x=0.3)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "The measurement refers to the grain conductivity (sigma_g) of the NASICON phase, calculated from Rg values."
+      ],
+      "raw_conductivity": "3e-4",
+      "raw_conductivity_unit": "S cm-1 (sigma_g)",
+      "normalized_conductivity": 0.0003,
+      "raw_temperature": "24",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 24.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.1Al0.1Ti1.9(PO4)3 (x=0.1)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "The measurement refers to the grain conductivity (sigma_g) of the NASICON phase, calculated from Rg values."
+      ],
+      "raw_conductivity": "7e-4",
+      "raw_conductivity_unit": "S cm-1 (sigma_g)",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "37",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 37.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li1.6Al0.6Ti1.4(PO4)3 (x=0.6)",
+      "canonical_formula": "Li1.6Al0.6Ti1.4(PO4)3",
+      "material_definitions": [
+        "The materials studied are Li-based NASICON-type solid solutions, specifically Li(1+x)AlxTi(2-x)(PO4)3 and Li(1+x)AlxGe(2-x)(PO4)3.",
+        "The measurement refers to the grain conductivity (sigma_g) of the NASICON phase, calculated from Rg values."
+      ],
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "S cm-1 (sigma_g)",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "26",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 26.0,
+      "source": "table",
+      "confidence": "high"
+    }
+  ]
+}
+
+
+[TABLE DEBUG] Table 1: ** Synthesis processes and sintering parameters of the compounds:
+- Response: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 2: ** Elementary analysis of (a)  $\text{Li}_{1+x}\text{Al}_x\text{Ti}_{2-x}(\text{PO}_4)_3$  and (b)  $\text{Li}_{1+x}\text{Al}_x\text{Ge}_{2-x}(\text{PO}_4)_3$  % error in comparison with stoichiometric values (x):
+- Response: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 4: ** Cell parameters (hexagonal unit) of  $\text{Li}_{1+x}$ . Al<sub>x</sub>Ti<sub>2-x</sub>(PO<sub>4</sub>)<sub>3</sub> as a function of the composition and the synthesis process (the absolute errors are quoted in parentheses):
+- Response: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 5: ** Ionic radius in octahedrical position<sup>25</sup>:
+- Response: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 3: ** Crystallization temperature of sol–gel materials, DTA, heating rate 10°C min<sup>-1</sup>:
+- Response: {
+  "measurements": []
+}
+
+
+[TABLE DEBUG] Table 8: , one can observe a slight increase of  $K_{\text{Li,Na}}^{\text{Pot}}$  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.:
+- Response: {
+  "measurements": [
+    {
+      "raw_composition": "Li(1+x)Al(x)Ti(2-x)(PO4)3, x=0.3",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "0.65",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ti(2-x)(PO4)3, x=0.3",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "8e-3",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,K)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,K), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ti(2-x)(PO4)3, x=0.5",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "0.45",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.1",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "8e-2",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.3",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-2",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.3",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "5e-3",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,K)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,K), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.5",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "1.8e-2",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.5",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "3.2e-3",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,K)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,K), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.6",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "2.3e-2",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.6",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "2.3e-3",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,K)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,K), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.7",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "3.1e-2",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,Na)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,Na), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    },
+    {
+      "raw_composition": "Li(1+x)Al(x)Ge(2-x)(PO4)3, x=0.7",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "3e-3",
+      "raw_conductivity_unit": "dimensionless (K^Pot_Li,K)",
+      "normalized_conductivity": null,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 8",
+      "source_caption": "Table 8: , one can observe a slight increase of  K_Li,Na^Pot  versus the c parameter (excepted for the singular point x=0.1). The variations of the a parameter are not significant and no obvious effect is observed.",
+      "source": "table",
+      "confidence": "medium",
+      "warnings": [
+        "The extracted value is a potentiometric selectivity coefficient (K^Pot_Li,K), not ionic conductivity.",
+        "Temperature is assumed to be room temperature as it is not specified."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_5_figure_12.jpeg:
+- Detection Result: {
+  "is_multi_panel": false,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000/T (K\u207b\u00b9)",
+        "unit": "K\u207b\u00b9",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "\u03c3 (S.cm\u207b\u00b9)",
+        "unit": "S.cm\u207b\u00b9",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        35,
+        16,
+        966,
+        988
+      ],
+      "label": "main"
+    }
+  ]
+}
+- Combined Measurements: 15
+
+
+[SCI-FIGURE DEBUG] page_6_figure_15.jpeg:
+- Detection Result: {
+  "is_multi_panel": false,
+  "subplots": [
+    {
+      "contains_conductivity_data": true,
+      "x_axis": {
+        "title": "1000/T (K\u207b\u00b9)",
+        "unit": "K\u207b\u00b9",
+        "quantity_type": "temperature_inverse",
+        "scale_type": "reciprocal"
+      },
+      "left_y_axis": {
+        "title": "Conductance S (\u03a9\u207b\u00b9)",
+        "unit": "\u03a9\u207b\u00b9",
+        "quantity_type": "conductivity",
+        "scale_type": "log"
+      },
+      "right_y_axis": null,
+      "box_2d": [
+        53,
+        80,
+        960,
+        938
+      ],
+      "label": "main"
+    }
+  ]
+}
+- Combined Measurements: 18

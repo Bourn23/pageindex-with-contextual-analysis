@@ -1,0 +1,111 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_v5_pipeline_20260123_114017.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Competing Structural Influences in the Li Superionic Conducting Argyrodites $Li_6PS_{5-x}Se_xBr$ (0 $\leq x \leq$ 1) upon Se Substitution
+   --- Found: 12 Sections
+   --- Found: 9 Figures, 0 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '1. INTRODUCTION' contains:
+       - 2 Images: ['Fig 1', 'Unknown']
+
+   >>> Section '3. RESULTS' contains:
+       - 7 Images: ['Fig 3', 'Fig 7', 'Fig 6', 'Fig 5', 'Fig 4', 'Fig 1', 'Fig 2']
+
+   >>> Section '4. DISCUSSION' contains:
+       - 2 Images: ['Fig 4', 'Fig 7']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: REFERENCES
+   ... Processing 20 items (Text + Images) simultaneously ...
+   ✓ page_5_figure_1.jpeg (Fig 6): Found 11 points
+   ✓ page_4_figure_3.jpeg (Fig 5): Found 6 points
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 19 measurements
+      - Skipped (no data): 16 images
+      - Failed: 0 items
+
+Done! Extracted 19 points.
+Saved to: fetched_papers/obelix_md/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         20
+Total Input:         28,191 tokens
+Total Output:        24,668 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0816
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 11 calls
+  - gemini-3-flash-preview        : 9 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/acs.inorgchem.8b02443
+GT-403: Li24.0P4.0S20.0Br4.0 | 0.00277 S/cm
+GT-404: Li24.0P4.0S19.6Se0.4Br4.0 | 0.0032 S/cm
+GT-405: Li24.0P4.0S19.2Se0.8Br4.0 | 0.00392 S/cm
+GT-406: Li24.0P4.0S18.8Se1.2Br4.0 | 0.00362 S/cm
+GT-407: Li24.0P4.0S18.4Se1.6Br4.0 | 0.00364 S/cm
+GT-408: Li24.0P4.0S18.0Se2.0Br4.0 | 0.00268 S/cm
+GT-409: Li24.0P4.0S17.6Se2.4Br4.0 | 0.00278 S/cm
+GT-410: Li24.0P4.0S17.2Se2.8Br4.0 | 0.00301 S/cm
+GT-411: Li24.0P4.0S16.8Se3.2Br4.0 | 0.00348 S/cm
+GT-412: Li24.0P4.0S16.4Se3.6Br4.0 | 0.00382 S/cm
+GT-413: Li24.0P4.0S16.0Se4.0Br4.0 | 0.00361 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 338 Extracted items...
+
+============================================================
+VALIDATION SCORE: 100.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-403     | ✅ MATCH         | Li24.0P4.0S20.0Br4.0 simplifies to Li6PS5Br and 0.00277 S/cm is approximately 0.0028 S/cm.
+GT-404     | ✅ MATCH         | Li24.0P4.0S19.6Se0.4Br4.0 simplifies to Li6PS4.9Se0.1Br and conductivity values are an exact match.
+GT-405     | ✅ MATCH         | Li24.0P4.0S19.2Se0.8Br4.0 simplifies to Li6PS4.8Se0.2Br and 0.00392 S/cm is approximately 0.0039 S/cm.
+GT-406     | ✅ MATCH         | Li24.0P4.0S18.8Se1.2Br4.0 simplifies to Li6PS4.7Se0.3Br and 0.00362 S/cm is approximately 0.0036 S/cm.
+GT-407     | ✅ MATCH         | Li24.0P4.0S18.4Se1.6Br4.0 simplifies to Li6PS4.6Se0.4Br and 0.00364 S/cm is approximately 0.0037 S/cm.
+GT-408     | ✅ MATCH         | Li24.0P4.0S18.0Se2.0Br4.0 simplifies to Li6PS4.5Se0.5Br and 0.00268 S/cm is approximately 0.0027 S/cm.
+GT-409     | ✅ MATCH         | Li24.0P4.0S17.6Se2.4Br4.0 simplifies to Li6PS4.4Se0.6Br and 0.00278 S/cm is approximately 0.0028 S/cm.
+GT-410     | ✅ MATCH         | Li24.0P4.0S17.2Se2.8Br4.0 simplifies to Li6PS4.3Se0.7Br and 0.00301 S/cm is approximately 0.003 S/cm.
+GT-411     | ✅ MATCH         | Li24.0P4.0S16.8Se3.2Br4.0 simplifies to Li6PS4.2Se0.8Br and 0.00348 S/cm is approximately 0.0035 S/cm.
+GT-412     | ✅ MATCH         | Li24.0P4.0S16.4Se3.6Br4.0 simplifies to Li6PS4.1Se0.9Br and 0.00382 S/cm is approximately 0.0038 S/cm.
+GT-413     | ✅ MATCH         | Li24.0P4.0S16.0Se4.0Br4.0 simplifies to Li6PS4Se1Br and 0.00361 S/cm is approximately 0.0036 S/cm.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution
+[0;34m[INFO][0m DOI: 10.1021/acs.inorgchem.8b02443
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution_v5_pipeline_20260123_114017.log
+

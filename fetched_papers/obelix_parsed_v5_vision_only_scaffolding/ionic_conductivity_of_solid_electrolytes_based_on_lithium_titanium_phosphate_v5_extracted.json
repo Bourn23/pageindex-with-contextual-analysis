@@ -1,0 +1,1413 @@
+{
+  "doc_name": "ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate",
+  "timestamp": "2026-02-03 10:07:03",
+  "execution_time_seconds": 56.12,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "total_cost_usd": 0.0,
+    "call_counts": {}
+  },
+  "extraction_stats": {
+    "extracted_count": 77,
+    "skipped_images": 8,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 11
+  },
+  "material_count": 77,
+  "measurements": [
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-5.65",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.65,
+      "raw_temperature": "0.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.0,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: LiTi2(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.65e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Sc",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.16",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.16,
+      "raw_temperature": "0.19",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.19,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Sc] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.16e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Sc",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.13",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.13,
+      "raw_temperature": "0.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Sc] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.13e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Sc",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.29",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.29,
+      "raw_temperature": "0.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.39,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Sc] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.29e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Sc",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.61",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.61,
+      "raw_temperature": "0.51",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.51,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Sc] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.61e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Al",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.25,
+      "raw_temperature": "0.19",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.19,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Al] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.25e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Al",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "0.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Al] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Al",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.42",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.42,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Al] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.42e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Al",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.55,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Al] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.55e+00)"
+      ]
+    },
+    {
+      "raw_composition": "In",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.43",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.43,
+      "raw_temperature": "0.19",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.19,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: In] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.43e+00)"
+      ]
+    },
+    {
+      "raw_composition": "In",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.25,
+      "raw_temperature": "0.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: In] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.25e+00)"
+      ]
+    },
+    {
+      "raw_composition": "In",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.2",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.2,
+      "raw_temperature": "0.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.39,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: In] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.20e+00)"
+      ]
+    },
+    {
+      "raw_composition": "In",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.26,
+      "raw_temperature": "0.49",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.49,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: In] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Y",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.47",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.47,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Y] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.47e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Y",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.46",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.46,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Y] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.46e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Y",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.62",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.62,
+      "raw_temperature": "0.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.39,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Y] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.62e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Y",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.84",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.84,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Y] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.84e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Fe",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.76",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.76,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Fe] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.76e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Fe",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.54",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.54,
+      "raw_temperature": "0.29",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.29,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Fe] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.54e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Fe",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.46",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.46,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Fe] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.46e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Fe",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.88,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Fe] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.88e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Ga",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.91",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.91,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Ga] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.91e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Ga",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.59",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.59,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Ga] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.59e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Ga",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.89",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.89,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Ga] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.89e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Ga",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.97",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.97,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Ga] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.97e+00)"
+      ]
+    },
+    {
+      "raw_composition": "La",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.08",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.08,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: La] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.08e+00)"
+      ]
+    },
+    {
+      "raw_composition": "La",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.32",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.32,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: La] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.32e+00)"
+      ]
+    },
+    {
+      "raw_composition": "La",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.33",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.33,
+      "raw_temperature": "0.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.4,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: La] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.33e+00)"
+      ]
+    },
+    {
+      "raw_composition": "La",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.62",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.62,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: La] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.62e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.6",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.6,
+      "raw_temperature": "0.19",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.19,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.60e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.4",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.4,
+      "raw_temperature": "0.3",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.3,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.40e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.82",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.82,
+      "raw_temperature": "0.39",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.39,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.82e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.43",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.43,
+      "raw_temperature": "0.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.5,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.43e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.87",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.87,
+      "raw_temperature": "0.6",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.6,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.87e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Cr",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-5.08",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.08,
+      "raw_temperature": "0.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.7,
+      "source_figure_id": "Fig 6",
+      "source_caption": "Fig. 6. Variation of the conductivity for the  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$  systems at 298 K.  $\\text{Li}_{1+x}M_x\\text{Ti}_{2-x}(PO_4)_3$ : (lacktriangle) M = AI, (lacktriangle)Cr, (lacktriangle)Ga, (lacktriangle)Fe, (lacktriangle)Sc, (lacktriangle)In, (lacktriangle)Ua; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriangle)La; (lacktriang [Series: Cr] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.08e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.74",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.74,
+      "raw_temperature": "1.24",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.24,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.40e-01)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.89",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.89,
+      "raw_temperature": "1.41",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.41,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-8.90e-01)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-0.93",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.93,
+      "raw_temperature": "1.57",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.57,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-9.30e-01)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.04",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.04,
+      "raw_temperature": "1.76",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.76,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.04e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.17",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.17,
+      "raw_temperature": "1.95",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.95,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.17e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.37",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.37,
+      "raw_temperature": "2.13",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.13,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.37e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.66",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.66,
+      "raw_temperature": "2.41",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.41,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.66e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.93",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.93,
+      "raw_temperature": "2.61",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.61,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.93e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.28",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.28,
+      "raw_temperature": "2.84",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.84,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.28e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.53",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.53,
+      "raw_temperature": "2.97",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.97,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.53e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.93",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.93,
+      "raw_temperature": "3.23",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.23,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.93e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.04",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.04,
+      "raw_temperature": "3.26",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.26,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3Al0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.04e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.02",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.02,
+      "raw_temperature": "1.26",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.26,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.02e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.06",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.06,
+      "raw_temperature": "1.35",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.35,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.06e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.12",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.12,
+      "raw_temperature": "1.46",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.46,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.12e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.15,
+      "raw_temperature": "1.57",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.57,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.21",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.21,
+      "raw_temperature": "1.67",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.67,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.21e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.3",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.3,
+      "raw_temperature": "1.78",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.78,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.30e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.44",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.44,
+      "raw_temperature": "1.96",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.96,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.44e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.62",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.62,
+      "raw_temperature": "2.16",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.16,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.62e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-1.84",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.84,
+      "raw_temperature": "2.4",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.4,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.84e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.16",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.16,
+      "raw_temperature": "2.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.65,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.16e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.4",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.4,
+      "raw_temperature": "2.84",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.84,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.40e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-2.73",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.73,
+      "raw_temperature": "3.03",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.03,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.73e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.11",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.11,
+      "raw_temperature": "3.26",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.26,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.11e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Li1.3La0.3Ti1.7(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.46",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.46,
+      "raw_temperature": "3.46",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.46,
+      "source_figure_id": "Fig 7",
+      "source_caption": "Fig. 7. The  $\\sigma$  -1/T relation for the sample of Li<sub>1.3</sub>Al<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ) and Li<sub>1.3</sub>La<sub>0.3</sub>Ti<sub>1.7</sub>(PO<sub>4</sub>)<sub>3</sub> ( $\\blacksquare$ ). [Series: Li1.3La0.3Ti1.7(PO4)3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.46e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "2.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.45,
+      "raw_temperature": "3.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.3",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.3,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.30e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.7",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.7,
+      "raw_temperature": "11.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 11.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.70e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.8",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.8,
+      "raw_temperature": "14.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 14.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.80e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.2",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.7",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.7,
+      "raw_temperature": "26.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 26.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.2] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.70e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "3.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.6",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.6,
+      "raw_temperature": "4.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.60e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.75",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.75,
+      "raw_temperature": "9.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 9.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.75e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.45",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.45,
+      "raw_temperature": "27.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 27.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.45e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Single phase, x=0.3",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-5.3",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.3,
+      "raw_temperature": "33.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 33.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Single phase, x=0.3] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.30e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Mixed phase",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.25,
+      "raw_temperature": "0.2",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.2,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Mixed phase] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.25e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Mixed phase",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.25",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.25,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Mixed phase] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.25e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Mixed phase",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.35",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.35,
+      "raw_temperature": "1.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Mixed phase] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.35e+00)"
+      ]
+    },
+    {
+      "raw_composition": "Mixed phase",
+      "canonical_formula": "LiTi2(PO4)3 + Li3M2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.5,
+      "raw_temperature": "2.5",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.5,
+      "source_figure_id": "Fig 8",
+      "source_caption": "Fig. 8. The relation between the conductivity at 298 K and the porosity of the sintered pellets. The sample of the single phase  $(Li_{1+x}M_xTi_{2-x}(PO_4)_3)$  at x=0.2 ( $\\triangle$ ) and x=0.3 ( $\\bigcirc$ ). The sample of the mixed phase  $[LiTi_2(PO_4)_3 + Li_3M_2(PO_4)_3]$  (X). [Series: Mixed phase] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.50e+00)"
+      ]
+    }
+  ],
+  "material_definitions": []
+}

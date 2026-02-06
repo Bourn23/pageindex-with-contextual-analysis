@@ -1,0 +1,383 @@
+{
+  "doc_name": "effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites",
+  "timestamp": "2026-01-23 11:29:35",
+  "execution_time_seconds": 50.44,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 26399,
+    "total_output_tokens": 24734,
+    "total_cost_usd": 0.0816,
+    "call_counts": {
+      "gemini-flash-latest": 13,
+      "gemini-3-flash-preview": 10
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 20,
+    "skipped_images": 19,
+    "failed_items": 0,
+    "total_sections_processed": 15,
+    "total_images_processed": 10
+  },
+  "material_count": 20,
+  "measurements": [
+    {
+      "raw_composition": "Li6+xP1-xSixS5X",
+      "canonical_formula": "Li6+xP1-xSixS5X",
+      "material_definitions": [
+        "In order to better understand the effect of aliovalent doping in Li+ conducting argyrodites, the substitution of P5+ with Si4+ was performed in the solid solutions Li(6+x)P(1-x)SixS5X.",
+        "By combining structural characterizations, i.e. X-ray and neutron diffraction with electrochemical impedance spectroscopy, we show the effect of increasing the Si4+ content on the ionic conductivity."
+      ],
+      "raw_conductivity": "2",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.002,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "unsubstituted sample (x=0)",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "The study investigates aliovalent substituted argyrodite superionic conductors with the general formula Li(6+x)P(1-x)SixS5Br, where increasing x corresponds to higher Si4+ and Li+ content.",
+        "Ionic conductivity was assessed via temperature-dependent impedance spectroscopy.",
+        "The room-temperature ionic conductivity of the unsubstituted sample (x=0) was 0.7 mS cm-1.",
+        "The highest conductivity was observed for x = 0.35, reaching 2.4 mS cm-1."
+      ],
+      "raw_conductivity": "0.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li6.35P0.65Si0.35S5Br",
+      "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "material_definitions": [
+        "The study investigates aliovalent substituted argyrodite superionic conductors with the general formula Li(6+x)P(1-x)SixS5Br, where increasing x corresponds to higher Si4+ and Li+ content.",
+        "Ionic conductivity was assessed via temperature-dependent impedance spectroscopy.",
+        "The room-temperature ionic conductivity of the unsubstituted sample (x=0) was 0.7 mS cm-1.",
+        "The highest conductivity was observed for x = 0.35, reaching 2.4 mS cm-1."
+      ],
+      "raw_conductivity": "2.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0024,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-0.75",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.0014170996582230442,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-1.15",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.0010132376620129704,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 39.35,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-1.65",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.000652969689310564,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.125",
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-0.55",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.00173084943114146,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.125",
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-0.9",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.001301022911169917,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 39.35,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.125",
+      "canonical_formula": "Li6.125P0.875Si0.125S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-1.45",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.000797538979518912,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.25",
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "0.05",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.0031538132891280727,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.25",
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-0.45",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.0020404100851896746,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 39.35,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.25",
+      "canonical_formula": "Li6.25P0.75Si0.25S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-1.0",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.001250790099982904,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "0.7",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.00604125812241143,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 60.18,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "0.1",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.003536546937842073,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 39.35,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Lithium-rich argyrodite-type solid electrolytes Li(6+x)P(1-x)SixS5Br.",
+        "Solid solution series where phosphorus is partially replaced by silicon.",
+        "Synthesized to study the effect of composition x on ionic conductivity.",
+        "Composition range investigated is x = 0 to 0.5."
+      ],
+      "raw_conductivity": "-0.6",
+      "raw_conductivity_unit": "ln(sigma T) / ln(K Scm-1)",
+      "normalized_conductivity": 0.0018659595627196898,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "1000 T^-1 / K^-1",
+      "normalized_temperature_c": 20.97,
+      "source": "figure",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "Solid solution series of Li6+xP1-xSixS5Br argyrodites.",
+        "Substitution of Si4+ for P5+ to increase lithium content and conductivity.",
+        "Room temperature conductivity study of the Li6+xP1-xSixS5Br system."
+      ],
+      "raw_conductivity": "0.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.1",
+      "canonical_formula": "Li6.1P0.9Si0.1S5Br",
+      "material_definitions": [
+        "Solid solution series of Li6+xP1-xSixS5Br argyrodites.",
+        "Substitution of Si4+ for P5+ to increase lithium content and conductivity.",
+        "Room temperature conductivity study of the Li6+xP1-xSixS5Br system."
+      ],
+      "raw_conductivity": "0.8",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0008,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.2",
+      "canonical_formula": "Li6.2P0.8Si0.2S5Br",
+      "material_definitions": [
+        "Solid solution series of Li6+xP1-xSixS5Br argyrodites.",
+        "Substitution of Si4+ for P5+ to increase lithium content and conductivity.",
+        "Room temperature conductivity study of the Li6+xP1-xSixS5Br system."
+      ],
+      "raw_conductivity": "1.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0017,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.35",
+      "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "material_definitions": [
+        "Solid solution series of Li6+xP1-xSixS5Br argyrodites.",
+        "Substitution of Si4+ for P5+ to increase lithium content and conductivity.",
+        "Room temperature conductivity study of the Li6+xP1-xSixS5Br system."
+      ],
+      "raw_conductivity": "2.35",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.00235,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "x = 0.5",
+      "canonical_formula": "Li6.5P0.5Si0.5S5Br",
+      "material_definitions": [
+        "Solid solution series of Li6+xP1-xSixS5Br argyrodites.",
+        "Substitution of Si4+ for P5+ to increase lithium content and conductivity.",
+        "Room temperature conductivity study of the Li6+xP1-xSixS5Br system."
+      ],
+      "raw_conductivity": "2.2",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0022,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius (Room temperature)",
+      "normalized_temperature_c": 25.0,
+      "source": "figure",
+      "confidence": "medium"
+    }
+  ],
+  "material_definitions": []
+}

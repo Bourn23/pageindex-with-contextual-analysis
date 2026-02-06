@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-417",
+      "extracted_match": "Li6PS5I | 1.3e-06 S/cm",
+      "is_match": true,
+      "reason": "Li24.0P4.0S20.0I4.0 normalizes to Li6PS5I, and 1.26e-06 S/cm is approximately 1.3e-06 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-418",
+      "extracted_match": "Li6.1P0.9Ge0.1S5I | 0.008915 S/cm",
+      "is_match": true,
+      "reason": "Li24.4P3.6Ge0.4S20.0I4.0 normalizes to Li6.1P0.9Ge0.1S5I, and 8.86e-06 S/cm is approximately 8.915e-06 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-419",
+      "extracted_match": "Ionic conductivity sigma_RT | 3.5e-05 S/cm",
+      "is_match": true,
+      "reason": "Li24.6P3.4Ge0.6S20.0I4.0 normalizes to Li6.15P0.85Ge0.15S5I, and its conductivity of 3.93e-05 S/cm is approximately 3.5e-05 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-420",
+      "extracted_match": "Ionic conductivity sigma_RT | 2.8e-05 S/cm",
+      "is_match": true,
+      "reason": "Li24.8P3.2Ge0.8S20.0I4.0 normalizes to Li6.2P0.8Ge0.2S5I, and its conductivity of 3.19e-05 S/cm is approximately 2.8e-05 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-421",
+      "extracted_match": "Ionic conductivity sigma_RT | 0.00013 S/cm",
+      "is_match": true,
+      "reason": "Li25.0P3.0Ge1.0S20.0I4.0 normalizes to Li6.25P0.75Ge0.25S5I, and its conductivity of 0.00015 S/cm is approximately 0.00013 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-422",
+      "extracted_match": "Ionic conductivity sigma_RT | 0.0006 S/cm",
+      "is_match": true,
+      "reason": "Li25.2P2.8Ge1.2S20.0I4.0 normalizes to Li6.3P0.7Ge0.3S5I, and its conductivity of 0.00065 S/cm is approximately 0.0006 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-423",
+      "extracted_match": "Ionic conductivity sigma_RT | 0.0016 S/cm",
+      "is_match": true,
+      "reason": "Li25.6P2.4Ge1.6S20.0I4.0 normalizes to Li6.4P0.6Ge0.4S5I, and its conductivity of 0.0015 S/cm is approximately 0.0016 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-424",
+      "extracted_match": "Ionic conductivity sigma_RT | 0.002 S/cm",
+      "is_match": true,
+      "reason": "Li26.0P2.0Ge2.0S20.0I4.0 normalizes to Li6.5P0.5Ge0.5S5I, and its conductivity of 0.00186 S/cm is approximately 0.002 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-425",
+      "extracted_match": "Li6.6P0.4Ge0.6S5I | 0.0054 S/cm",
+      "is_match": true,
+      "reason": "Li26.4P1.6Ge2.4S20.0I4.0 normalizes to Li6.6P0.4Ge0.6S5I, and 0.00521 S/cm is approximately 0.0054 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-426",
+      "extracted_match": "Ionic conductivity sigma_RT | 0.0054 S/cm",
+      "is_match": true,
+      "reason": "Li26.8P1.2Ge2.8S20.0I4.0 normalizes to Li6.7P0.3Ge0.7S5I, and its conductivity of 0.00554 S/cm is approximately 0.0054 S/cm from the extracted ionic conductivity series."
+    },
+    {
+      "ground_truth_id": "GT-427",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for Li27.2P0.8Ge3.2S20.0I4.0 (normalized to Li6.8P0.2Ge0.8S5I) with a conductivity of approximately 0.00258 S/cm."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 10
+}

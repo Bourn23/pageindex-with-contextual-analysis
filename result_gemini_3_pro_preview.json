@@ -1,0 +1,114 @@
+{
+  "title": "Arrhenius plot of the conductivity \u03c3 for LLBZT",
+  "xAxis": {
+    "label": "1000T^-1 / K^-1",
+    "unit": "K^-1"
+  },
+  "yAxis": {
+    "label": "ln (\u03c3T / S cm^-1 K^-1)",
+    "unit": "ln(S cm^-1 K^-1)"
+  },
+  "dataPoints": [
+    {
+      "label": "x = 0",
+      "xValue": 2.7,
+      "yValue": 1.8
+    },
+    {
+      "label": "x = 0",
+      "xValue": 2.9,
+      "yValue": 0.95
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.1,
+      "yValue": -0.15
+    },
+    {
+      "label": "x = 0",
+      "xValue": 3.33,
+      "yValue": -1.4
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.7,
+      "yValue": 1.65
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 2.9,
+      "yValue": 0.8
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.1,
+      "yValue": -0.25
+    },
+    {
+      "label": "x = 0.05",
+      "xValue": 3.33,
+      "yValue": -1.5
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.7,
+      "yValue": 1.5
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 2.9,
+      "yValue": 0.6
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.1,
+      "yValue": -0.4
+    },
+    {
+      "label": "x = 0.10",
+      "xValue": 3.33,
+      "yValue": -1.6
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.7,
+      "yValue": 1.25
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 2.9,
+      "yValue": 0.4
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.1,
+      "yValue": -0.6
+    },
+    {
+      "label": "x = 0.20",
+      "xValue": 3.33,
+      "yValue": -1.7
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.7,
+      "yValue": 0.9
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 2.9,
+      "yValue": 0.2
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.1,
+      "yValue": -0.75
+    },
+    {
+      "label": "x = 0.30",
+      "xValue": 3.33,
+      "yValue": -1.8
+    }
+  ],
+  "summary": "The figure is an Arrhenius plot showing the temperature dependence of conductivity (\u03c3T) for LLBZT with varying doping levels (x = 0 to 0.30). The linear relationship indicates Arrhenius behavior. The undoped sample (x = 0, red squares) exhibits the highest conductivity across the measured temperature range (approx 300K to 370K), while the x = 0.30 sample (navy diamonds) shows the lowest. The slopes of the lines, indicative of activation energy, appear to slightly decrease (become less negative) with increasing x, suggesting a lower activation energy for higher doping levels despite the lower overall conductivity."
+}

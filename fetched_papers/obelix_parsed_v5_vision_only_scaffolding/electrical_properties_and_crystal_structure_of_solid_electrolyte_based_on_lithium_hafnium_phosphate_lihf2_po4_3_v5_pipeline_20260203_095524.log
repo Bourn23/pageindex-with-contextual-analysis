@@ -1,0 +1,131 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260203_095524.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 1' in section '*3.2. LiHf2(P04)3 + yLi20 system*'
+       - Replaced 'Table 2' in section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*'
+   --- Document: **Electrical properties and crystal structure of solid electrolyte based on lithium hafnium phosphate LiHf2 (PO4)3**
+   --- Found: 11 Sections
+   --- Found: 13 Figures, 2 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '*3.1. Crystal structure of LiHf2(P04)3*' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '*3.2. LiHf2(P04)3 + yLi20 system*' contains:
+       - 8 Images: ['Fig 6', 'Fig 4', 'Fig 5s', 'Fig 7', 'Fig 3', 'Fig 2', 'Fig 5', 'Fig 3']
+       - 1 Tables: ['Table 1']
+
+   >>> Section '*3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*' contains:
+       - 3 Images: ['Fig 9', 'Fig 10', 'Fig 8']
+       - 1 Tables: ['Table 2']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 3 items (Text + Images) simultaneously ...
+   🔍 page_4_figure_2.jpeg (Fig 4): Detecting subplot...
+   🔍 page_4_figure_7.jpeg (Fig 6): Detecting subplot...
+   🔍 page_6_figure_4.jpeg (Fig 10): Detecting subplot...
+   📊 page_4_figure_7.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   📊 page_4_figure_2.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✓ page_4_figure_7.jpeg (Fig 6): Found 26 points total via SciFigureParser
+   ⏱️  page_4_figure_2.jpeg: Timeout
+   ⏱️  page_6_figure_4.jpeg: Timeout
+   ... Canonicalizing Materials...
+   ... Resolving 26 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 26 measurements
+      - Skipped (no data): 0 images
+      - Failed: 2 items
+
+Done! Extracted 26 points.
+Saved to: fetched_papers/obelix_md/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         0
+Total Input:         0 tokens
+Total Output:        0 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0000
+--------------------------------------------------
+Breakdown by Model:
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1016/0167-2738(93)90387-i
+GT-318: Li6.0Hf12.0P18.0O72.0 | 6.85e-07 S/cm
+GT-319: Li6.6Fe0.6Hf11.4P18.0O72.0 | 0.000107 S/cm
+GT-320: Li6.6In0.6Hf11.4P18.0O72.0 | 5.13e-05 S/cm
+GT-321: Li6.6Lu0.6Hf11.4P18.0O72.0 | 5.88e-05 S/cm
+GT-322: Li6.6Sc0.6Hf11.4P18.0O72.0 | 2.45e-05 S/cm
+GT-323: Li7.2Lu1.2Hf10.8P18.0O72.0 | 9.79e-05 S/cm
+GT-324: Li7.8Cr1.8Hf10.2P18.0O72.0 | 5.26e-07 S/cm
+GT-325: Li7.8Fe1.8Hf10.2P18.0O72.0 | 5.4e-05 S/cm
+GT-326: Li7.8In1.8Hf10.2P18.0O72.0 | 0.000142 S/cm
+GT-327: Li7.8Lu1.8Hf10.2P18.0O72.0 | 3.56e-05 S/cm
+GT-328: Li7.8Sc1.8Hf10.2P18.0O72.0 | 8.32e-05 S/cm
+GT-329: Li7.8Y1.8Hf10.2P18.0O72.0 | 3.19e-05 S/cm
+GT-330: Li8.4In2.4Hf9.6P18.0O72.0 | 0.000142 S/cm
+GT-331: Li8.4Lu2.4Hf9.6P18.0O72.0 | 2.06e-05 S/cm
+GT-332: Li8.4Y2.4Hf9.6P18.0O72.0 | 2.09e-05 S/cm
+--- Starting Validation ---
+Comparing 15 GT items vs 495 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-318     | ❌ MISSING/BAD   | The ground truth formula Li6.0Hf12.0P18.0O72.0 (LiHf2P3O12) does not match the extracted canonical formula Li1.8Hf2P3O12.4, and the extracted conductivity values are reported at high temperatures (sintering temperatures) not room temperature.
+GT-319     | ❌ MISSING/BAD   | The ground truth formula Li6.6Fe0.6Hf11.4P18.0O72.0 contains Fe, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-320     | ❌ MISSING/BAD   | The ground truth formula Li6.6In0.6Hf11.4P18.0O72.0 contains In, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-321     | ❌ MISSING/BAD   | The ground truth formula Li6.6Lu0.6Hf11.4P18.0O72.0 contains Lu, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-322     | ❌ MISSING/BAD   | The ground truth formula Li6.6Sc0.6Hf11.4P18.0O72.0 contains Sc, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-323     | ❌ MISSING/BAD   | The ground truth formula Li7.2Lu1.2Hf10.8P18.0O72.0 contains Lu, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-324     | ❌ MISSING/BAD   | The ground truth formula Li7.8Cr1.8Hf10.2P18.0O72.0 contains Cr, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-325     | ❌ MISSING/BAD   | The ground truth formula Li7.8Fe1.8Hf10.2P18.0O72.0 contains Fe, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-326     | ❌ MISSING/BAD   | The ground truth formula Li7.8In1.8Hf10.2P18.0O72.0 contains In, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-327     | ❌ MISSING/BAD   | The ground truth formula Li7.8Lu1.8Hf10.2P18.0O72.0 contains Lu, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-328     | ❌ MISSING/BAD   | The ground truth formula Li7.8Sc1.8Hf10.2P18.0O72.0 contains Sc, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-329     | ❌ MISSING/BAD   | The ground truth formula Li7.8Y1.8Hf10.2P18.0O72.0 contains Y, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-330     | ❌ MISSING/BAD   | The ground truth formula Li8.4In2.4Hf9.6P18.0O72.0 contains In, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-331     | ❌ MISSING/BAD   | The ground truth formula Li8.4Lu2.4Hf9.6P18.0O72.0 contains Lu, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+GT-332     | ❌ MISSING/BAD   | The ground truth formula Li8.4Y2.4Hf9.6P18.0O72.0 contains Y, which is not present in the extracted material system LiHf2(PO4)3+yLi2O, and the extracted conductivity values are reported at high temperatures, not room temperature.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3
+[0;34m[INFO][0m DOI: 10.1016/0167-2738(93)90387-i
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3_v5_pipeline_20260203_095524.log
+

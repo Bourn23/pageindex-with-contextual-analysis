@@ -1,0 +1,1110 @@
+{
+  "doc_name": "parsed_doc",
+  "models_used": {
+    "SCIENTIFIC_NORMALIZER_MODEL": "gemini-2.5-pro",
+    "DATA_VALIDATOR_MODEL": "gemini-3-flash-preview",
+    "MATERIAL_NAME_NORMALIZER_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_TEXT_MODEL": "gemini-3-flash-preview",
+    "EXTRACTOR_VISION_MODEL": "gemini-3-flash-preview"
+  },
+  "cost_summary": {
+    "total_input_tokens": 144359,
+    "total_output_tokens": 15441,
+    "total_cost_usd": 0.11850249999999998,
+    "call_counts": {
+      "gemini-3-flash-preview": 41
+    }
+  },
+  "source_file": "fetched_papers/obelix_parsed/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_structure.json",
+  "extraction_stats": {
+    "total_nodes": 69,
+    "raw_extracted": 37,
+    "after_dedup": 37,
+    "time_elapsed": 719.7510960102081,
+    "valid_count": 37,
+    "invalid_count": 0,
+    "by_confidence": {
+      "high": 10,
+      "medium": 27,
+      "low": 0
+    },
+    "by_source": {
+      "primary": 37,
+      "cited": 0,
+      "inferred": 0
+    },
+    "from_text_nodes": 11,
+    "from_image_nodes": 26,
+    "final_count": 37
+  },
+  "material_count": 37,
+  "materials": [
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the image for the Li6PS5Cl (LPSCl) sample at 25°C (approx. 3.35 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Solid State Ionics"
+      },
+      "_index": 0,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.5 x 10^-3 S/cm",
+      "measurement_temperature": "50°C",
+      "reason": "Extracted from the Arrhenius plot in the image for the Li6PS5Cl (LPSCl) sample at 50°C (approx. 3.1 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Solid State Ionics"
+      },
+      "_index": 1,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "5.0 x 10^-3 S/cm",
+      "measurement_temperature": "75°C",
+      "reason": "Extracted from the Arrhenius plot in the image for the Li6PS5Cl (LPSCl) sample at 75°C (approx. 2.87 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Solid State Ionics"
+      },
+      "_index": 2,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "8.0 x 10^-3 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the image for the Li6PS5Cl (LPSCl) sample at 100°C (approx. 2.68 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0007",
+        "title": "Image",
+        "section": "Solid State Ionics"
+      },
+      "_index": 3,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0243",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "6.2 × 10⁻³ S cm⁻¹ (bulk)",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted bulk conductivity value for the specific composition Li1.3Al0.3Ti1.7(PO4)3 mentioned as the maximum conductivity sample in the study.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LiTi2(PO4)3 derivative, aluminum substituted sample",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Effects of Substituent Concentration on Conductivity",
+        "section": "3.3. Impedance spectroscopy"
+      },
+      "_index": 4,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3"
+    },
+    {
+      "source_sentence_id": "0243",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "7.3 × 10⁻⁵ S cm⁻¹ (grain boundary)",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted grain boundary conductivity value for the specific composition Li1.3Al0.3Ti1.7(PO4)3 mentioned as the maximum conductivity sample in the study.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "LiTi2(PO4)3 derivative, aluminum substituted sample",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0238",
+        "title": "Effects of Substituent Concentration on Conductivity",
+        "section": "3.3. Impedance spectroscopy"
+      },
+      "_index": 5,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3"
+    },
+    {
+      "source_sentence_id": "0031",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "6.2 × 10⁻³ S cm⁻¹",
+      "measurement_temperature": "room temperature",
+      "reason": "Extracted the highest conductivity value reported for the specific chemical formula Li1.3Al0.3Ti1.7(PO4)3 mentioned in the abstract.",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Sample with the highest conductivity, showing a correlation between the pre-exponential factor and the degree of disorder of lithium atoms.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0026",
+        "title": "Electrical Properties and Ionic Conductivity",
+        "section": "ABSTRACT"
+      },
+      "_index": 6,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Al0.3Ti1.7(PO4)3"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.1 x 10^-3 S/cm",
+      "measurement_temperature": "25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60e89d96) for the Li6PS5Cl sample at 25°C (approx. 3.35 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 8,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0 x 10^-2 S/cm",
+      "measurement_temperature": "100°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60e89d96) for the Li6PS5Cl sample at 100°C (approx. 2.68 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 9,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "0000",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li6PS5Cl",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "2.0 x 10^-4 S/cm",
+      "measurement_temperature": "-25°C",
+      "reason": "Extracted from the Arrhenius plot in the provided image (IMG_60e89d96) for the Li6PS5Cl sample at -25°C (approx. 4.03 on the 1000/T axis).",
+      "confidence": "high",
+      "data_source": "primary",
+      "material_description": "Argyrodite-type solid electrolyte",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0010",
+        "title": "Image",
+        "section": "Abstract / Introduction"
+      },
+      "_index": 10,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li6PS5Cl",
+      "_original_name": "Li6PS5Cl"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻³ S cm⁻¹",
+      "measurement_temperature": "443 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 443 K (top square series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 29,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.001,
+      "_norm_temp": 169.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~8 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "423 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 423 K (solid square series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 30,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0008,
+      "_norm_temp": 149.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~2 × 10⁻⁴ S cm⁻¹",
+      "measurement_temperature": "383 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 383 K (open triangle series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 31,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 0.0002,
+      "_norm_temp": 109.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "343 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 343 K (solid triangle series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 32,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5e-05,
+      "_norm_temp": 69.85000000000002
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~1.5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "303 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 303 K (open diamond series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 33,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1.5e-05,
+      "_norm_temp": 29.850000000000023
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~5 × 10⁻⁶ S cm⁻¹",
+      "measurement_temperature": "263 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 263 K (solid diamond series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 34,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5e-06,
+      "_norm_temp": -10.149999999999977
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~5 × 10⁻⁷ S cm⁻¹",
+      "measurement_temperature": "223 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 223 K (open circle series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 35,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 5e-07,
+      "_norm_temp": -50.14999999999998
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_5_Figure_11.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "unknown ionic conductor (Figure 11a conductivity spectra)",
+        "acronym": null,
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "~10⁻⁸ S cm⁻¹",
+      "measurement_temperature": "183 K",
+      "reason": "Estimated DC plateau value from frequency-dependent conductivity plot at 183 K (solid circle series).",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Conductivity spectra as a function of frequency at various temperatures.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0276",
+        "title": "_page_5_Figure_11.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 36,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 1e-08,
+      "_norm_temp": -90.14999999999998
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.05",
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "5.5e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.05 at (M1-M2')/(M1+M2') approx 0.3 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 18,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 55000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.1",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "9.5e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.1 at (M1-M2')/(M1+M2') approx 0.17 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 20,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 95000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.1",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "1.8e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.1 at (M1-M2')/(M1+M2') approx 0.22 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 21,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 18000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.1",
+        "proportion": "x=0.1"
+      },
+      "ionic_conductivity_S_per_cm": "4.8e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.1 at (M1-M2')/(M1+M2') approx 0.27 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 22,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 48000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.2",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "2.8e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.2 at (M1-M2')/(M1+M2') approx 0.40 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 24,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 28000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.3",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.7e5 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.3 at (M1-M2')/(M1+M2') approx 0.02 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 25,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 170000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.3",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.1e5 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.3 at (M1-M2')/(M1+M2') approx 0.08 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 26,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 110000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.3",
+        "proportion": "x=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "2.0e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.3 at (M1-M2')/(M1+M2') approx 0.33 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 27,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 20000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.4",
+        "proportion": "x=0.4"
+      },
+      "ionic_conductivity_S_per_cm": "7.5e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.4 at (M1-M2')/(M1+M2') approx 0.44 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 28,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "_norm_cond": 75000.0,
+      "_norm_temp": null
+    },
+    {
+      "source_sentence_id": "0277",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Fe0.3Ti1.7(PO4)3",
+        "acronym": "LFTP03",
+        "proportion": "Fe=0.3"
+      },
+      "ionic_conductivity_S_per_cm": "1.5 × 10⁻⁵ S cm⁻¹",
+      "measurement_temperature": "163 K",
+      "reason": "Extracted from the figure caption (Fig. 6) which describes the Nyquist plot and conductivity versus frequency for the specific sample Li1.3Fe0.3Ti1.7(PO4)3 at 163 K. The value is estimated from the context of the impedance spectroscopy discussion and the provided sentence 0272 which mentions a value of 1.5 x 10^-5.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "NASICON-type solid electrolyte with iron substitution",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0264",
+        "title": "Pre-exponential Factor, Configurational Entropy, and Structural Disorder",
+        "section": "3.3. Impedance spectroscopy"
+      },
+      "_index": 7,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "_original_name": "Li1.3Fe0.3Ti1.7(PO4)3"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "6.7e-5 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Bulk Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.02 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LATP03 bulk conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 11,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "LATP03 (Bulk)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Al0.1Ti1.9(PO4)3",
+        "acronym": "LATP01",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-5 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Bulk Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.004 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LATP01 bulk conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 12,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "_original_name": "LATP01 (Bulk)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Fe0.3Ti1.7(PO4)3",
+        "acronym": "LFTP03",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-5 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Bulk Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.003 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LFTP03 bulk conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 13,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "_original_name": "LFTP03 (Bulk)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Fe0.1Ti1.9(PO4)3",
+        "acronym": "LFTP01",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.3e-6 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Bulk Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.0004 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LFTP01 bulk conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 14,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "_original_name": "LFTP01 (Bulk)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.1Cr0.1Ti1.9(PO4)3",
+        "acronym": "LCTP01",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "1.0e-7 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Bulk Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.00003 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LCTP01 bulk conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 15,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "_original_name": "LCTP01 (Bulk)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_7.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Li1.3Al0.3Ti1.7(PO4)3",
+        "acronym": "LATP03",
+        "proportion": null
+      },
+      "ionic_conductivity_S_per_cm": "3.3e-7 S cm^-1",
+      "measurement_temperature": "25 °C",
+      "reason": "Calculated from Grain Boundary (GB) Arrhenius plot at 1000/T ≈ 3.35 (300K) where σT ≈ 0.0001 S K cm^-1.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "LATP03 grain boundary conductivity component.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0294",
+        "title": "_page_6_Figure_7.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 16,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      },
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "_original_name": "LATP03 (Grain Boundary)"
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.05",
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "1.7e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.05 at (M1-M2')/(M1+M2') approx 0.05 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 17,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.05",
+        "proportion": "x=0.05"
+      },
+      "ionic_conductivity_S_per_cm": "1.8e4 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.05 at (M1-M2')/(M1+M2') approx 0.43 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 19,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    },
+    {
+      "source_sentence_id": "Derived from Plot _page_6_Figure_15.jpeg",
+      "material_class": "Ceramic",
+      "electrolyte_name": {
+        "full_name": "Pre-exponential factor (sigma_0) vs (M1-M2')/(M1+M2')",
+        "acronym": "x = 0.2",
+        "proportion": "x=0.2"
+      },
+      "ionic_conductivity_S_per_cm": "1.0e5 S/cm",
+      "measurement_temperature": "N/A",
+      "reason": "Point estimated for x=0.2 at (M1-M2')/(M1+M2') approx 0.18 on the sigma_0 axis.",
+      "confidence": "medium",
+      "data_source": "primary",
+      "material_description": "Sigma_0 value representing pre-exponential conductivity factor.",
+      "processing_method": "N/A",
+      "source_node": {
+        "node_id": "0313",
+        "title": "_page_6_Figure_15.jpeg",
+        "section": "Image-Only Extraction"
+      },
+      "_index": 23,
+      "_validation": {
+        "is_valid": true,
+        "issues": [],
+        "audited_by_llm": false
+      }
+    }
+  ]
+}

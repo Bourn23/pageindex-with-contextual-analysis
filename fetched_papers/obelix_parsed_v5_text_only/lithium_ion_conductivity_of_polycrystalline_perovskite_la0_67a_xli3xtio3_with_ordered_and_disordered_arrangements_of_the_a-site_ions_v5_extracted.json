@@ -1,0 +1,168 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-01-23 08:18:41",
+  "execution_time_seconds": 11.67,
+  "config": {
+    "vision_model": "gemini-3-pro-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 6580,
+    "total_output_tokens": 8214,
+    "total_cost_usd": 0.0225,
+    "call_counts": {
+      "gemini-flash-latest": 6
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 9,
+    "skipped_images": 3,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 8
+  },
+  "material_count": 9,
+  "measurements": [
+    {
+      "raw_composition": "disordered sample with x = 0.12",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li(3x)TiO3 (where x = 0.06\b200.15) with disordered arrangement of the A-site ions was prepared by quenching from 1350\b000C into liquid N2.",
+        "The tetragonal, doubled perovskite form (a = ap, c \b224 2ap) features alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.",
+        "The ordered form was created by annealing the quenched pellet at 800\b000C for 3 days.",
+        "The study compares the conductivity of these disordered and ordered polymorphs."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "ordered sample (S \b224 0.6)",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [],
+      "raw_conductivity": "6.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00068,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "La(0.67-x)Li(3x)TiO3 (x=0.11)",
+      "canonical_formula": "La0.56Li0.33TiO3",
+      "material_definitions": [],
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (parallel to c-axis)",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [],
+      "raw_conductivity": "5.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00058,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (perpendicular to c-axis)",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [],
+      "raw_conductivity": "6.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00068,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source": "text",
+      "confidence": "low"
+    },
+    {
+      "raw_composition": "x = 0.12 (Cubic, disordered)",
+      "canonical_formula": "x = 0.12 (Cubic, disordered)",
+      "material_definitions": [
+        "The materials studied are lithium ion conducting perovskite solid solutions, focusing on compositions around x=0.12.",
+        "The samples exist in two main phases: a cubic, disordered form (achieved by quenching) and a tetragonal, ordered form (achieved by annealing).",
+        "The cubic form has a simple perovskite unit cell (S.G: Pm \tbar{3} m) where La ions, Li ions, and vacancies are randomly distributed over the A-sites.",
+        "The ordered form adopts a tetragonal, doubled cell (P4/mmm) characterized by alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.",
+        "The study found the maximum conductivity at x = 0.12 for both forms."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "x = 0.12 (Tetragonal, ordered)",
+      "canonical_formula": "x = 0.12 (Tetragonal, ordered)",
+      "material_definitions": [
+        "The materials studied are lithium ion conducting perovskite solid solutions, focusing on compositions around x=0.12.",
+        "The samples exist in two main phases: a cubic, disordered form (achieved by quenching) and a tetragonal, ordered form (achieved by annealing).",
+        "The cubic form has a simple perovskite unit cell (S.G: Pm \tbar{3} m) where La ions, Li ions, and vacancies are randomly distributed over the A-sites.",
+        "The ordered form adopts a tetragonal, doubled cell (P4/mmm) characterized by alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.",
+        "The study found the maximum conductivity at x = 0.12 for both forms."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source": "table",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "simple cubic form with x = 0.12",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "The material series discussed is polycrystalline La(0.67-x)Li(3x)TiO3 (where x > 0.08).",
+        "The study compares the ionic conductivity of the tetragonal form (order parameter S \u2248 0.5-0.7) and the simple cubic form.",
+        "The simple cubic form with x = 0.12 showed a maximum bulk conductivity for the known perovskite solid solutions.",
+        "The lower conductivity in the tetragonal form is attributed to an increase in activation energy associated with contraction in the a-axis."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "tetragonal form (S \u2248 0.6)",
+      "canonical_formula": "tetragonal form (S \u2248 0.6)",
+      "material_definitions": [],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high"
+    }
+  ],
+  "material_definitions": []
+}

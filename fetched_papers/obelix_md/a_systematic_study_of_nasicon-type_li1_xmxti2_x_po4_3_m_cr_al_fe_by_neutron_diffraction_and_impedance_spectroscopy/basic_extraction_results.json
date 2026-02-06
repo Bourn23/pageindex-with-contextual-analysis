@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "model": "gemini-3-flash-preview",
+    "time_elapsed_seconds": 31.608524799346924,
+    "images_attached": 13,
+    "input_token_count": 31243,
+    "output_token_count": 635
+  },
+  "data": [
+    {
+      "composition": "LiTi2(PO4)3",
+      "ionic_conductivity": "6.0e-05",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.05Al0.05Ti1.95(PO4)3",
+      "ionic_conductivity": "1.1e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.1Al0.1Ti1.9(PO4)3",
+      "ionic_conductivity": "6.7e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.2Al0.2Ti1.8(PO4)3",
+      "ionic_conductivity": "4.0e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "ionic_conductivity": "6.2e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.4Al0.4Ti1.6(PO4)3",
+      "ionic_conductivity": "3.3e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.05Cr0.05Ti1.95(PO4)3",
+      "ionic_conductivity": "1.8e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "ionic_conductivity": "2.6e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.2Cr0.2Ti1.8(PO4)3",
+      "ionic_conductivity": "4.3e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "ionic_conductivity": "2.9e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.05Fe0.05Ti1.95(PO4)3",
+      "ionic_conductivity": "1.3e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "ionic_conductivity": "6.3e-04",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.2Fe0.2Ti1.8(PO4)3",
+      "ionic_conductivity": "1.4e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "ionic_conductivity": "2.3e-03",
+      "temperature": "RT"
+    },
+    {
+      "composition": "Li1.5Fe0.5Ti1.5(PO4)3",
+      "ionic_conductivity": "2.7e-04",
+      "temperature": "RT"
+    }
+  ]
+}

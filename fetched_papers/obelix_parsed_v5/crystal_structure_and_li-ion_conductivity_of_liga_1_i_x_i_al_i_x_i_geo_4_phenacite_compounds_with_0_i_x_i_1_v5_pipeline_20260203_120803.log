@@ -1,0 +1,138 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md2/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md2/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1_v5_pipeline_20260203_120803.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 1 tables from Markdown text...
+       - Replaced 'Unknown' in section 'Results'
+   --- Document: Crystal Structure and Li-Ion Conductivity of LiGa<sub>1-x</sub>Al<sub>x</sub>GeO<sub>4</sub> Phenacite Compounds with $0 \le x \le 1$
+   --- Found: 8 Sections
+   --- Found: 10 Figures, 1 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**Experimental**' contains:
+       - 2 Images: ['Fig 2', 'Fig 1']
+
+   >>> Section 'Results' contains:
+       - 6 Images: ['Fig 3', 'Fig 5', 'Fig 2', 'Fig 7', 'Fig 4', 'Fig 6']
+       - 1 Tables: ['Unknown']
+
+   >>> Section 'Discussion' contains:
+       - 3 Images: ['Fig 9', 'Fig 8', 'Fig 7']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: References
+   ... Processing 18 items (Text + Images) simultaneously ...
+   🔍 page_0_figure_18.jpeg (Fig 1): Detecting subplot...
+   🔍 page_0_picture_2.jpeg (Unknown): Detecting subplot...
+   🔍 page_1_figure_9.jpeg (Fig 3): Detecting subplot...
+   [93m[Skip][0m page_0_picture_2.jpeg (Unknown): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_1_picture_2.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_0_figure_18.jpeg (Fig 1): No ionic conductivity measurements detected by SciFigureParser.
+   🔍 page_2_figure_6.jpeg (Fig 4): Detecting subplot...
+   🔍 page_3_figure_2.jpeg (Fig 5): Detecting subplot...
+   ✂️ page_1_figure_9.jpeg: Multi-plot detected (3 panels). Processing each in parallel...
+   [93m[Skip][0m page_1_figure_9.jpeg (Fig 3): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_1_figure_9.jpeg (Fig 3): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_1_figure_9.jpeg (Fig 3): c - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_3_figure_5.jpeg (Fig 6): Detecting subplot...
+   🔍 page_3_figure_7.jpeg (Fig 7): Detecting subplot...
+   ✂️ page_2_figure_6.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 4): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 4): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_figure_14.jpeg (Fig 9): Detecting subplot...
+   📊 page_3_figure_5.jpeg: Single plot detected (or no specific subplots). Extracting directly...
+   ✂️ page_1_picture_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_1_picture_2.jpeg (Fig 2): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_1_picture_2.jpeg (Fig 2): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   🔍 page_4_figure_2.jpeg (Fig 8): Detecting subplot...
+   ✂️ page_3_figure_7.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_7.jpeg (Fig 7): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_7.jpeg (Fig 7): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_4_figure_14.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_4_figure_14.jpeg (Fig 9): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_4_figure_14.jpeg (Fig 9): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_3_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 5): a - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   [93m[Skip][0m page_3_figure_2.jpeg (Fig 5): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✂️ page_4_figure_2.jpeg: Multi-plot detected (2 panels). Processing each in parallel...
+Passing box coords  [58, 41, 473, 940]
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md2/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1/scifig_debug/page_4_figure_2_cropped_a.jpeg
+   [93m[Skip][0m page_4_figure_2.jpeg (Fig 8): b - No ionic conductivity measurements detected in this subplot by SciFigureParser.
+   ✓ page_3_figure_5.jpeg (Fig 6): Found 20 points total via SciFigureParser
+   ✓ page_4_figure_2.jpeg (Fig 8): Found 10 points total via SciFigureParser
+   ... Canonicalizing Materials...
+   ... Resolving 42 ambiguous material names...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 45 measurements
+      - Skipped (no data): 12 images
+      - Failed: 0 items
+
+Done! Extracted 45 points.
+Saved to: fetched_papers/obelix_md2/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         8
+Total Input:         17,970 tokens
+Total Output:        12,425 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0365
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 8 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1149/2.1111610jes
+GT-218: Li18.0Ga9.0Al9.0Ge18.0O72.0 | 1e-15 S/cm
+GT-219: Li18.0Al18.0Ge18.0O72.0 | 1e-15 S/cm
+GT-220: Li18.0Ga18.0Ge18.0O72.0 | 1e-15 S/cm
+--- Starting Validation ---
+Comparing 3 GT items vs 882 Extracted items...
+
+============================================================
+VALIDATION SCORE: 0.0%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-218     | ❌ MISSING/BAD   | The ground truth formula Li18.0Ga9.0Al9.0Ge18.0O72.0 normalizes to LiGa0.5Al0.5GeO4. While the extracted data contains entries for LiGa(1-x)Al(x)GeO4 with x=0.5, none of the extracted conductivity values (ranging from 10^-5 to 10^-8 S/cm) match the ground truth value of 1e-15 S/cm.
+GT-219     | ❌ MISSING/BAD   | The ground truth formula Li18.0Al18.0Ge18.0O72.0 normalizes to LiAlGeO4 (x=1). While the extracted data contains entries for LiAlGeO4, none of the extracted conductivity values (ranging from 10^-5 to 10^-7 S/cm) match the ground truth value of 1e-15 S/cm.
+GT-220     | ❌ MISSING/BAD   | The ground truth formula Li18.0Ga18.0Ge18.0O72.0 normalizes to LiGaGeO4 (x=0). While the extracted data contains entries for LiGaGeO4, none of the extracted conductivity values (ranging from 10^-5 to 10^-7 S/cm) match the ground truth value of 1e-15 S/cm.
+
+Full report saved to fetched_papers/obelix_parsed_v5/validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1
+[0;34m[INFO][0m DOI: 10.1149/2.1111610jes
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/crystal_structure_and_li-ion_conductivity_of_liga_1_i_x_i_al_i_x_i_geo_4_phenacite_compounds_with_0_i_x_i_1_v5_pipeline_20260203_120803.log
+
