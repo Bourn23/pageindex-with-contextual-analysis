@@ -710,17 +710,137 @@ def calculate_standard_units(cond_val: str, cond_unit: str, temp_val: str, temp_
 # ==============================================================================
 # 4. Canonicalizer (Solves Problem 3: Useless Names)
 # ==============================================================================
+
+def validate_formula_stoichiometry(formula: str) -> bool:
+    """
+    Validate that a chemical formula has physically plausible stoichiometry.
+    
+    Checks:
+    1. Sum of all element coefficients is reasonable
+    2. Individual element coefficients are in realistic ranges
+    
+    Returns True if plausible, False otherwise.
+    """
+    if not formula or formula == "null":
+        return False
+    
+    # Extract all element-coefficient pairs
+    # Pattern: Element (uppercase + optional lowercase) followed by optional number
+    pattern = r'([A-Z][a-z]?)(\d*\.?\d*)'
+    matches = re.findall(pattern, formula)
+    
+    if not matches:
+        return False
+    
+    total_atoms = 0
+    element_counts = {}
+    
+    for element, coeff_str in matches:
+        coeff = float(coeff_str) if coeff_str else 1.0
+        element_counts[element] = element_counts.get(element, 0) + coeff
+        total_atoms += coeff
+    
+    # Physical plausibility checks
+    # 1. Total atoms should be reasonable (typically 5-150 for solid electrolytes)
+    if total_atoms < 3 or total_atoms > 200:
+        return False
+    
+    # 2. Individual element checks
+    for element, count in element_counts.items():
+        # Li: typically 3-30
+        if element == 'Li' and (count < 0.5 or count > 50):
+            return False
+        # O: typically 10-100
+        if element == 'O' and (count < 1 or count > 150):
+            return False
+        # Other elements: typically 0.1-20
+        if element not in ['Li', 'O'] and (count < 0.05 or count > 30):
+            return False
+    
+    return True
+
+
+def deduplicate_text_measurements(measurements: List[MeasuredPoint]) -> List[MeasuredPoint]:
+    """
+    Remove duplicate text extractions based on conductivity + temperature (primary),
+    then composition (secondary filter if needed).
+    Keep the most specific/confident extraction.
+    
+    Groups by (conductivity, temperature) first since these are more reliable than formulas.
+    Within each group, keeps the most specific/confident measurement.
+    """
+    from collections import defaultdict
+    
+    # Group by (conductivity, temperature) - rounded to avoid floating point issues
+    groups = defaultdict(list)
+    non_text = []
+    
+    for idx, m in enumerate(measurements):
+        # Only deduplicate text extractions
+        if m.source != 'text':
+            non_text.append(m)
+            continue
+            
+        cond = m.normalized_conductivity
+        temp = m.normalized_temperature_c
+        
+        if cond is None or temp is None:
+            non_text.append(m)
+            continue
+        
+        # Round to 6 decimal places for conductivity, 1 for temperature
+        key = (round(cond, 6), round(temp, 1))
+        groups[key].append((idx, m))
+    
+    # Process each group
+    deduplicated = []
+    
+    for key, group in groups.items():
+        if len(group) == 1:
+            deduplicated.append(group[0][1])
+            continue
+        
+        # Sort by preference:
+        # 1. Has canonical_formula (not null)
+        # 2. Higher confidence
+        # 3. More specific composition (longer canonical_formula)
+        # 4. Earlier in document (lower index)
+        def sort_key(item):
+            idx, m = item
+            has_canon = 1 if m.canonical_formula else 0
+            conf_score = {'high': 3, 'medium': 2, 'low': 1}.get(m.confidence or 'low', 0)
+            canon_len = len(m.canonical_formula) if m.canonical_formula else 0
+            return (-has_canon, -conf_score, -canon_len, idx)
+        
+        sorted_group = sorted(group, key=sort_key)
+        
+        # Keep the first (best) one
+        best = sorted_group[0][1]
+        deduplicated.append(best)
+        
+        # Log what we removed
+        for idx, m in sorted_group[1:]:
+            print(f"   [Dedup] Removed duplicate: {m.raw_composition[:50]} (σ={m.normalized_conductivity:.2e}, T={m.normalized_temperature_c:.1f}°C)")
+    
+    # Combine with non-text measurements
+    return non_text + deduplicated
+
+
 async def canonicalize_materials(client, measurements: List[MeasuredPoint], definitions: List[str], model_name: str = None):
     """
     Uses Gemini to resolve "x=0.1" -> "Li3.8Mg0.1..." using the extracted text definitions.
+    Enhanced to handle series formulas like "Li6+xP1-xGexS5I" and validate physical plausibility.
     """
     if not measurements: return measurements
     
-    # Filter points that need resolution (short names or variable 'x')
+    # Filter points that need resolution
     to_resolve = []
     for i, m in enumerate(measurements):
         is_variable_axis = "x" in m.raw_temperature_unit.lower() or "=" in m.raw_temperature_unit
-        if len(m.raw_composition) < 10 or "=" in m.raw_composition or is_variable_axis:
+        is_series_formula = bool(re.search(r'[a-z]\s*[+\-]\s*x|Li\d+\+x|state|pressed|sintered', m.raw_composition, re.I))
+        
+        # Resolve if: short name, has "=", variable axis, or is a series formula
+        if len(m.raw_composition) < 10 or "=" in m.raw_composition or is_variable_axis or is_series_formula:
             to_resolve.append(i)
     
     if not to_resolve: return measurements
@@ -730,16 +850,17 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     # Build Context
     context_str = "\n".join([f"- {d}" for d in definitions])
     items_str = "\n".join([
-        f"ID {i}: Label='{m.raw_composition}', "
-        f"X-Value='{m.raw_temperature}', "
-        f"X-Axis Info='{m.raw_temperature_unit}', "
-        f"Context='{m.source_caption}'" 
+        f"ID {i}: Label='{measurements[i].raw_composition}', "
+        f"Conductivity='{measurements[i].raw_conductivity} {measurements[i].raw_conductivity_unit}', "
+        f"Temperature='{measurements[i].raw_temperature} {measurements[i].raw_temperature_unit}', "
+        f"Context='{(measurements[i].source_caption or '')[:200]}'" 
         for i in to_resolve
     ])
+    
     prompt = f"""
-    You are a Chemical Context Resolver.
-    I have a list of abbreviated material names extracted from figures (e.g., "x=0.1", "Square", "Series 1").
-    I have a list of Material Definitions found in the paper text.
+    You are a Chemical Context Resolver for solid-state ionic conductors.
+    I have a list of abbreviated/generic material names extracted from scientific papers.
+    I have Material Definitions found in the paper text.
 
     Your Task: Map the abbreviated names to their Full Canonical Chemical Formulas.
 
@@ -750,14 +871,32 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     {items_str}
 
     Logic:
-    1. **Formula Calculation**: If text says "series Li(4-2x)MgxTi(5-x)/3O4" and item is "x=0.1", calculate the formula:
-       Li(4-0.2)Mg(0.1)Ti(1.63)O4 -> Li3.8Mg0.1Ti1.63O4.
-    2. **Legend/Symbol Mapping**: 
-       - If item is "Square", "Triangle", etc., LOOK for text in the Source Caption or Definitions like "Squares represent In-doped samples".
-       - Example: "Squares" -> In -> Li...In...
-    3. **General Fallback**: If exact calculation isn't possible, return the General Formula with the specific variable.
+    1. **Series Formula Resolution**: 
+       - If you see "Li6+xP1-xGexS5I" with context mentioning "x=0.25", calculate:
+         Li(6+0.25)P(1-0.25)Ge(0.25)S5I → Li6.25P0.75Ge0.25S5I
+       - If you see "Li6+xP1-xGexS5I (cold-pressed)" without specific x, try to find x from conductivity value
+       - Look for phrases like "maximum conductivity", "x=0.6", "optimized composition"
+    
+    2. **Measurement Type Disambiguation**:
+       - Distinguish between "bulk" vs "grain boundary" conductivity
+       - Distinguish between "NMR-derived" vs "impedance" measurements
+       - If context mentions "NMR", mark it clearly in the formula or return null
+    
+    3. **Legend/Symbol Mapping**: 
+       - If item is "Square", "Triangle", etc., look in Context for mappings
+       - Example: "Squares represent In-doped samples" → resolve to specific In composition
+    
+    4. **Validation**:
+       - Only return formulas that are chemically plausible
+       - If you cannot determine a specific formula with confidence, return null
+       - Do NOT guess - better to return null than an incorrect formula
 
-    Return JSON: {{ "mappings": {{ "ID": "Canonical Formula" }} }}
+    Return JSON: {{ "mappings": {{ "ID": "Canonical Formula or null" }} }}
+    
+    Examples:
+    - "Li6+xP1-xGexS5I (x=0.25)" → "Li6.25P0.75Ge0.25S5I"
+    - "Li6+xP1-xGexS5I (cold-pressed)" with no x value → null (too generic)
+    - "x=0.1" with series "Li(4-2x)MgxTi(5-x)/3O4" → "Li3.8Mg0.1Ti1.63O4"
     """
     
     try:
@@ -768,7 +907,7 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
         )
         mapping = json.loads(response.text).get("mappings", {})
         
-        # Apply updates
+        # Apply updates with physical validation
         for i_str, formula in mapping.items():
             # Extract just the digits from keys like "ID 2" or "2"
             digits = re.search(r'\d+', str(i_str))
@@ -776,7 +915,17 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
                 idx = int(digits.group())
                 # Ensure index is safe
                 if 0 <= idx < len(measurements):
-                    measurements[idx].canonical_formula = formula
+                    # Validate physical plausibility
+                    if formula and formula.lower() != "null":
+                        if validate_formula_stoichiometry(formula):
+                            measurements[idx].canonical_formula = formula
+                            print(f"   [Canon] Resolved: {measurements[idx].raw_composition[:40]} → {formula}")
+                        else:
+                            print(f"   [Canon] Rejected (invalid stoichiometry): {formula} for {measurements[idx].raw_composition[:40]}")
+                            measurements[idx].confidence = "low"
+                    else:
+                        # LLM returned null - keep original but mark as low confidence
+                        measurements[idx].confidence = "low"
             
     except Exception as e:
         print(f"   [Canonicalizer Error]: {e}")
@@ -1618,6 +1767,10 @@ async def run_pipeline(markdown_file, asset_dir, model):
         print("   ... Canonicalizing Materials...")
         # print(">> DEBUG: all_measurements: ", all_measurements)
         all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL)
+        
+        # 4.5 De-duplicate Text Measurements (Solves Problem 4: Duplicate Extractions)
+        print("   ... De-duplicating Text Measurements...")
+        all_measurements = deduplicate_text_measurements(all_measurements)
 
         # # 5. Normalize Values (Solves Problem 2)
         print("   ... Normalizing Units & Temperatures...")
