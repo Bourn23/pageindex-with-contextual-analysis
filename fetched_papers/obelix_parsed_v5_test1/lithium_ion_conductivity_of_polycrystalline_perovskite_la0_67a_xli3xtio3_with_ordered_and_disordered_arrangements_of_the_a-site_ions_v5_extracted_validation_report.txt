@@ -1,0 +1,11 @@
+GT-159     | ❌ MISSING/BAD   | No extracted data matches the normalized formula La0.61Li0.18TiO3.0 and conductivity 0.000412 S/cm.
+GT-160     | ✅ MATCH         | The extracted material with x=0.12 (annealed) has the same normalized formula La0.55Li0.36TiO3 and identical conductivity 0.000688 S/cm.
+GT-161     | ❌ MISSING/BAD   | No extracted data matches the normalized formula La0.54Li0.39TiO3.0 and conductivity 0.000651 S/cm.
+GT-162     | ❌ MISSING/BAD   | No extracted data matches the normalized formula La0.52Li0.45TiO3.0 and conductivity 0.000501 S/cm.
+GT-163     | ✅ MATCH         | The extracted formula La0.59Li0.27TiO3.02 is very similar to the normalized ground truth La0.58Li0.27TiO3.0, and the conductivities 0.000599 S/cm and 0.00058 S/cm are approximately equal (3.17% difference).
+GT-164     | ❌ MISSING/BAD   | Although the normalized formula La0.56Li0.33TiO3 matches, the extracted conductivity (0.001 S/cm) is not an approximate match for the ground truth conductivity (0.000668 S/cm, 49.7% difference).
+GT-449     | ❌ MISSING/BAD   | Although the extracted formula La0.59Li0.27TiO3.02 is very similar to the ground truth La0.58Li0.27TiO3.0, the extracted conductivity (0.00058 S/cm) is not an approximate match for the ground truth conductivity (0.000832 S/cm, 30.2% difference).
+GT-450     | ❌ MISSING/BAD   | Although the formula La0.56Li0.33TiO3 matches, the extracted conductivity (0.001 S/cm) is not an approximate match for the ground truth conductivity (0.0013 S/cm, 23% difference).
+GT-451     | ✅ MATCH         | The extracted material with x=0.12 (disordered) has the same formula La0.55Li0.36TiO3 and approximately the same conductivity (0.00153 S/cm vs 0.00154 S/cm, 0.65% difference).
+GT-452     | ❌ MISSING/BAD   | No extracted data matches the formula La0.54Li0.39TiO3.0 and conductivity 0.00125 S/cm.
+GT-453     | ❌ MISSING/BAD   | No extracted data matches the formula La0.52Li0.45TiO3.0 and conductivity 0.000785 S/cm.

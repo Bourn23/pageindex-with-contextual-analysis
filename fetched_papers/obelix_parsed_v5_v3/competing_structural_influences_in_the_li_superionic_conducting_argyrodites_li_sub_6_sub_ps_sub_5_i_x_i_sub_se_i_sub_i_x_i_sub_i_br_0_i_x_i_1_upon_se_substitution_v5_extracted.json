@@ -1,0 +1,730 @@
+{
+  "doc_name": "competing_structural_influences_in_the_li_superionic_conducting_argyrodites_li_sub_6_sub_ps_sub_5_i_x_i_sub_se_i_sub_i_x_i_sub_i_br_0_i_x_i_1_upon_se_substitution",
+  "timestamp": "2026-02-10 17:00:25",
+  "execution_time_seconds": 153.53,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 12472,
+    "total_output_tokens": 31703,
+    "total_cost_usd": 0.083,
+    "call_counts": {
+      "gemini-flash-latest": 11
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 36,
+    "skipped_images": 17,
+    "failed_items": 0,
+    "total_sections_processed": 12,
+    "total_images_processed": 9
+  },
+  "material_count": 36,
+  "measurements": [
+    {
+      "raw_composition": "Li6PS4.5Se0.5Br",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5-xSexBr (0 <= x <= 1) were synthesized to study the effect of increased anion polarizability on ionic transport.",
+        "Rietveld refinements of XRD and neutron PDF data confirmed a cubic F-43m argyrodite structure with unit cell expansion obeying Vegard\u2019s law.",
+        "Minor impurity phases of LiBr and Li3OBr were detected at less than 5 wt%, with negligible impact on transport properties.",
+        "Se substitution occurs on both the 4d (free chalcogenide) and 16e (PCh4 tetrahedra) sites, leading to decreased Br-/Ch2- site disorder.",
+        "The broadening of Li+ diffusion pathways and increased Li+ occupancy on the 48h site were observed with increasing Se content."
+      ],
+      "raw_conductivity": "3.2",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0032,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "(a) Room-temperature conductivity and (b) activation energy EA and Arrhenius prefactor sigma0 for Li6PS5-xSexBr as a function of the Se content.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Conductivity value visually estimated from Figure 6a.",
+        "Temperature extracted as 25C from 'Room-temperature' description."
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.0)",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [],
+      "raw_conductivity": "2.78",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 2.78,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (2.7800e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.1)",
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.19",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.19,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.1900e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.2)",
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.93",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.93,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.9300e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.3)",
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.6,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.6000e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.4)",
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.65",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.65,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.6500e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.5)",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [],
+      "raw_conductivity": "2.68",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 2.68,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (2.6800e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.6)",
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "material_definitions": [],
+      "raw_conductivity": "2.81",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 2.81,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (2.8100e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.7)",
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.04",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.04,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.0400e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.8)",
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.48",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.48,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.4800e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=0.9)",
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "material_definitions": [],
+      "raw_conductivity": "3.81",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.81,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.8100e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_RT (x=1.0)",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [],
+      "raw_conductivity": "3.6",
+      "raw_conductivity_unit": "sigma_RT / mScm^-1",
+      "normalized_conductivity": 3.6,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-a",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_RT] [X: x in Li6PS5-xSexBr] [Y: sigma_RT / mScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (3.6000e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.0)",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.31",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.31,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.1)",
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.333",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.333,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.2)",
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.345",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.345,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.3)",
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.332",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.332,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.4)",
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.328",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.328,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.5)",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.338",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.338,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.6)",
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.342",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.342,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.7)",
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.346",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.346,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.8)",
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.345",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.345,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=0.9)",
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "material_definitions": [],
+      "raw_conductivity": "0.34",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.34,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "E_A (x=1.0)",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [],
+      "raw_conductivity": "0.343",
+      "raw_conductivity_unit": "E_A / eV",
+      "normalized_conductivity": 0.343,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: E_A] [X: x in Li6PS5-xSexBr] [Y: E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.0)",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [],
+      "raw_conductivity": "120000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 120000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (1.2000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.1)",
+      "canonical_formula": "Li6PS4.9Se0.1Br",
+      "material_definitions": [],
+      "raw_conductivity": "350000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 350000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (3.5000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.2)",
+      "canonical_formula": "Li6PS4.8Se0.2Br",
+      "material_definitions": [],
+      "raw_conductivity": "650000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 650000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (6.5000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.3)",
+      "canonical_formula": "Li6PS4.7Se0.3Br",
+      "material_definitions": [],
+      "raw_conductivity": "420000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 420000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (4.2000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.4)",
+      "canonical_formula": "Li6PS4.6Se0.4Br",
+      "material_definitions": [],
+      "raw_conductivity": "350000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 350000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (3.5000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.5)",
+      "canonical_formula": "Li6PS4.5Se0.5Br",
+      "material_definitions": [],
+      "raw_conductivity": "370000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 370000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (3.7000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.6)",
+      "canonical_formula": "Li6PS4.4Se0.6Br",
+      "material_definitions": [],
+      "raw_conductivity": "480000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 480000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (4.8000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.7)",
+      "canonical_formula": "Li6PS4.3Se0.7Br",
+      "material_definitions": [],
+      "raw_conductivity": "600000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 600000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (6.0000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.8)",
+      "canonical_formula": "Li6PS4.2Se0.8Br",
+      "material_definitions": [],
+      "raw_conductivity": "650000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 650000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (6.5000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=0.9)",
+      "canonical_formula": "Li6PS4.1Se0.9Br",
+      "material_definitions": [],
+      "raw_conductivity": "520000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 520000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (5.2000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "sigma_0 (x=1.0)",
+      "canonical_formula": "Li6PS4SeBr",
+      "material_definitions": [],
+      "raw_conductivity": "600000.0",
+      "raw_conductivity_unit": "sigma_0 / KScm^-1",
+      "normalized_conductivity": 600000.0,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-b",
+      "source_caption": "Figure 6. (a) Room-temperature conductivity and (b) activation energy  $E_A$  and Arrhenius prefactor  $\\sigma_0$  for  $\\text{Li}_6\\text{PS}_{5-x}\\text{Se}_x\\text{Br}$  as a function of the Se content. Errors not shown are smaller than the symbol. [Series: sigma_0] [X: x in Li6PS5-xSexBr] [Y: sigma_0 / KScm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Conductivity normalization failed: (34, 'Result too large')",
+        "Suspiciously high conductivity (6.0000e+05 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5Br",
+      "canonical_formula": "Li6PS5Br",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5-xSexBr (0 <= x <= 1) were synthesized to study the effect of increased anion polarizability on ionic transport.",
+        "Rietveld refinements of XRD and neutron PDF data confirmed a cubic F-43m argyrodite structure with unit cell expansion obeying Vegard\u2019s law.",
+        "Minor impurity phases of LiBr and Li3OBr were detected at less than 5 wt%, with negligible impact on transport properties.",
+        "Se substitution occurs on both the 4d (free chalcogenide) and 16e (PCh4 tetrahedra) sites, leading to decreased Br-/Ch2- site disorder.",
+        "The broadening of Li+ diffusion pathways and increased Li+ occupancy on the 48h site were observed with increasing Se content."
+      ],
+      "raw_conductivity": "2.7",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "(a) Room-temperature conductivity and (b) activation energy EA and Arrhenius prefactor sigma0 for Li6PS5-xSexBr as a function of the Se content.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature extracted as 25C from 'Room-temperature' description."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5-xSexBr (0 \u2264 x \u2264 1)",
+      "canonical_formula": "Li6PS5-xSexBr",
+      "material_definitions": [
+        "Se2- substitution within Li6PS5-xSexBr (0 \u2264 x \u2264 1) was performed to study the effect of lattice polarizability and Br-/Ch2- exchange on lithium transport.",
+        "Structural characterization was performed using X-ray diffraction, neutron pair distribution function analysis, and electrochemical impedance spectroscopy.",
+        "Increasing Se substitution leads to an increase in lattice parameters and the formation of PS3Se3- polyhedra via 16e Wyckoff position occupancy.",
+        "Structural changes induce a rearrangement of Li+ from the 24g to the 48h site and a widening of the diffusion pathways.",
+        "The study highlights that vanishing site disorder with Se substitution can counteract the beneficial effects of Li+ sublattice broadening on ionic transport."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS\u00b7cm",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature not explicitly stated in text; room temperature (25 \u00b0C) inferred for reported ionic conductivity.",
+        "The unit 'mS\u00b7cm' in the text is treated as a typo for 'mS/cm'."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

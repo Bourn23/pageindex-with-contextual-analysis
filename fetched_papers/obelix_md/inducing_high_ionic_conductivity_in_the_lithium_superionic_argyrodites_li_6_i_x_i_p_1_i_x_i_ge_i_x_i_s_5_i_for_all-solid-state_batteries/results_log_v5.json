@@ -8,140 +8,418 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=488 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=488
-)] thoughts_token_count=79 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=577 traffic_type=None
+)] thoughts_token_count=899 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1397 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=278 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 1099 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=343 candidates_tokens_details=None prompt_token_count=278 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=278
-)] thoughts_token_count=62 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=350 traffic_type=None
+)] thoughts_token_count=1486 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2107 traffic_type=None
 - chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Abstract / Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=339 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=339
-)] thoughts_token_count=200 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=549 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=346
-)] cached_content_token_count=346 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=543
-)] thoughts_token_count=438 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=991 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **2. Experimental Methods**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2320 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2320
-)] thoughts_token_count=697 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3027 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Supporting Information**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=235
-)] cached_content_token_count=235 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=317 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=317
-)] thoughts_token_count=310 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=637 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Corresponding Authors**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=208
-)] cached_content_token_count=208 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=271 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=271
-)] thoughts_token_count=159 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=440 traffic_type=None
-- chars: {
-  "measurements": []
+  "measurements": [
+    {
+      "raw_composition": "x=0.4",
+      "canonical_formula": "Li3.6Mg0.4Ti4.6O12",
+      "reduced_formula": "Li18Mg2O60Ti23",
+      "material_definitions": [
+        "Li4-xMgxTi5-xO12 solid solutions (x = 0-1) were synthesized by a conventional solid-state reaction method.",
+        "The materials maintain the cubic (Fd-3m) spinel structure throughout the composition range.",
+        "Magnesium ions (Mg2+) substitute for lithium ions (Li+) on the tetrahedral 8a sites and for titanium ions (Ti4+) on the octahedral 16d sites.",
+        "The phase-stable materials exhibit enhanced ionic conductivity compared to the parent Li4Ti5O12 spinel.",
+        "The activation energy for lithium-ion motion in these solid solutions is approximately 0.4 eV."
+      ],
+      "raw_conductivity": "1.5e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.000015,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
 }
 
 
 [DEBUG] **Abstract**:
-- Response length: 2286 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=617 candidates_tokens_details=None prompt_token_count=496 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 2311 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=582 candidates_tokens_details=None prompt_token_count=496 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=496
-)] thoughts_token_count=1306 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2419 traffic_type=None
+)] thoughts_token_count=4314 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5392 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6+xP1-xGexS5I (cold-pressed)","canonical_formula":"Li6+xP1-xGexS5I","reduced_formula":null,"material_definitions":["The lithium argyrodites family of solid electrolytes is explored through aliovalent substitution of phosphorus with germanium.","The material series investigated is Li6+xP1-xGexS5I, which was characterized using X-ray and neutron diffraction, impedance spectroscopy, and NMR.","Substitution in the argyrodite structure induces anion site disorder and significantly reduces the activation barrier for lithium-ion motion.","The optimized composition reaches ionic conductivities of 5.4 mS cm-1 in a cold-pressed state and 18.4 mS cm-1 upon sintering.","This electrolyte was implemented in a thick-electrode solid-state battery showing negligible capacity fade over 150 cycles."],"raw_conductivity":"5.4","raw_conductivity_unit":"mS cm-1","normalized_conductivity":0.0054,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":["Temperature not explicitly stated; room temperature assumed."]},{"raw_composition":"Li6+xP1-xGexS5I (sintered)","canonical_formula":"Li6+xP1-xGexS5I","reduced_formula":null,"material_definitions":["The lithium argyrodites family of solid electrolytes is explored through aliovalent substitution of phosphorus with germanium.","The material series investigated is Li6+xP1-xGexS5I, which was characterized using X-ray and neutron diffraction, impedance spectroscopy, and NMR.","Substitution in the argyrodite structure induces anion site disorder and significantly reduces the activation barrier for lithium-ion motion.","The optimized composition reaches ionic conductivities of 5.4 mS cm-1 in a cold-pressed state and 18.4 mS cm-1 upon sintering.","This electrolyte was implemented in a thick-electrode solid-state battery showing negligible capacity fade over 150 cycles."],"raw_conductivity":"18.4","raw_conductivity_unit":"mS cm-1","normalized_conductivity":0.0184,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":["Temperature not explicitly stated; room temperature assumed."]}]}
+
+
+[DEBUG] **2. Experimental Methods**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=2320 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2320
+)] thoughts_token_count=6416 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8741 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] **3. Results**:
+- Response length: 7176 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1988 candidates_tokens_details=None prompt_token_count=5921 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=5921
+)] thoughts_token_count=3616 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11525 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed state)",
-      "canonical_formula": null,
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "reduced_formula": "Ge3I5Li33P2S25",
       "material_definitions": [
-        "The material series investigated is Li6+xP1-xGexS5I, focusing on aliovalent substitution of Ge for P.",
-        "The structure and properties were analyzed using X-ray and neutron diffraction, impedance spectroscopy, and nuclear magnetic resonance.",
-        "Increasing Ge content induces anion site disorder and significantly drops the activation barrier for ionic motion."
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios to study the effect of lithium content on ionic conductivity.",
+        "Solid solutions were successfully formed up to a composition of at least Li6.7P0.3Ge0.7S5I, beyond which impurity phases like Li4GeS4 appear.",
+        "Temperature-dependent impedance spectroscopy and nuclear magnetic resonance (NMR) measurements were used to characterize the ionic transport properties.",
+        "Samples were initially prepared as cold-pressed pellets, with some subsequently sintered at 823 K for ten minutes to improve grain contact and conductivity.",
+        "Structural analysis revealed that Ge substitution induces S2-/I- site-disorder and widens diffusion pathways, significantly lowering the activation energy for Li+ migration."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Figure 5",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature taken from Figure 5 caption referencing Nyquist plots."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "reduced_formula": "Ge3I5Li33P2S25",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios to study the effect of lithium content on ionic conductivity.",
+        "Solid solutions were successfully formed up to a composition of at least Li6.7P0.3Ge0.7S5I, beyond which impurity phases like Li4GeS4 appear.",
+        "Temperature-dependent impedance spectroscopy and nuclear magnetic resonance (NMR) measurements were used to characterize the ionic transport properties.",
+        "Samples were initially prepared as cold-pressed pellets, with some subsequently sintered at 823 K for ten minutes to improve grain contact and conductivity.",
+        "Structural analysis revealed that Ge substitution induces S2-/I- site-disorder and widens diffusion pathways, significantly lowering the activation energy for Li+ migration."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature inferred for comparison with non-sintered sample.",
+        "Sample sintered at 823 K for 10 minutes."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "reduced_formula": "ILi6PS5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios to study the effect of lithium content on ionic conductivity.",
+        "Solid solutions were successfully formed up to a composition of at least Li6.7P0.3Ge0.7S5I, beyond which impurity phases like Li4GeS4 appear.",
+        "Temperature-dependent impedance spectroscopy and nuclear magnetic resonance (NMR) measurements were used to characterize the ionic transport properties.",
+        "Samples were initially prepared as cold-pressed pellets, with some subsequently sintered at 823 K for ten minutes to improve grain contact and conductivity.",
+        "Structural analysis revealed that Ge substitution induces S2-/I- site-disorder and widens diffusion pathways, significantly lowering the activation energy for Li+ migration."
+      ],
+      "raw_conductivity": "2.6e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000026,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Conductivity estimated/calculated from NMR data at room temperature."
+      ]
+    },
+    {
+      "raw_composition": "Li6.25P0.75Ge0.25S5I",
+      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
+      "reduced_formula": "Ge1I4Li25P3S20",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios to study the effect of lithium content on ionic conductivity.",
+        "Solid solutions were successfully formed up to a composition of at least Li6.7P0.3Ge0.7S5I, beyond which impurity phases like Li4GeS4 appear.",
+        "Temperature-dependent impedance spectroscopy and nuclear magnetic resonance (NMR) measurements were used to characterize the ionic transport properties.",
+        "Samples were initially prepared as cold-pressed pellets, with some subsequently sintered at 823 K for ten minutes to improve grain contact and conductivity.",
+        "Structural analysis revealed that Ge substitution induces S2-/I- site-disorder and widens diffusion pathways, significantly lowering the activation energy for Li+ migration."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Conductivity estimated/calculated from NMR data at room temperature."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "reduced_formula": "Ge3I5Li33P2S25",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios to study the effect of lithium content on ionic conductivity.",
+        "Solid solutions were successfully formed up to a composition of at least Li6.7P0.3Ge0.7S5I, beyond which impurity phases like Li4GeS4 appear.",
+        "Temperature-dependent impedance spectroscopy and nuclear magnetic resonance (NMR) measurements were used to characterize the ionic transport properties.",
+        "Samples were initially prepared as cold-pressed pellets, with some subsequently sintered at 823 K for ten minutes to improve grain contact and conductivity.",
+        "Structural analysis revealed that Ge substitution induces S2-/I- site-disorder and widens diffusion pathways, significantly lowering the activation energy for Li+ migration."
+      ],
+      "raw_conductivity": "7.5",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0075,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Conductivity estimated/calculated from NMR data at room temperature."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 1140 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=310 candidates_tokens_details=None prompt_token_count=339 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=339
+)] thoughts_token_count=7863 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8512 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"disordered γ-Li3PSe4","canonical_formula":"Li3PSe4","reduced_formula":"Li3P1Se4","material_definitions":["Li3PSe4 is a lithium-superionic conductor that exists in a crystalline γ-phase and an amorphous glass-ceramic state.","Structural disorder can be induced in the γ-Li3PSe4 phase through ball-milling, which significantly enhances its ionic conductivity.","The γ-Li3PSe4 phase consists of a distorted body-centered cubic arrangement of selenophosphate anions.","Inducing disorder in the crystalline structure increases the ionic conductivity to 1.1 x 10^-4 S/cm at 25 °C."],"raw_conductivity":"1.1e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.00011,"raw_temperature":"25","raw_temperature_unit":"°C","normalized_temperature_c":25.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"glass-ceramic Li3PSe4","canonical_formula":"Li3PSe4","reduced_formula":"Li3P1Se4","material_definitions":["The glass-ceramic Li3PSe4 is used as a high-conductivity reference for comparison with crystalline phases.","It is typically
+
+
+[DEBUG] **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**:
+- Response length: 1000 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=313 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=543
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8716 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6.5P0.5Ge0.5S5I (x=0.5)","canonical_formula":"Li6.5P0.5Ge0.5S5I","reduced_formula":"Ge1I2Li13P1S10","material_definitions":["Lithium superionic argyrodites with the general formula Li6+xP1-xGexS5I for all-solid-state batteries.","Substitution of P5+ by Ge4+ in Li6PS5I induces a higher lithium content.","The material series maintains the argyrodite crystal structure across the solid solution.","A maximum in ionic conductivity is observed for the composition x = 0.5."],"raw_conductivity":"5.4","raw_conductivity_unit":"mS/cm","normalized_conductivity":0.0054,"raw_temperature":"25","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"text","confidence":"low","warnings":["Data extracted from publication values (J. Am. Chem. Soc. 2017, 139, 10909) as the provided snippet contains only the title and affiliations."]},{"raw_composition":"Li6PS5I (x=0)","canonical_formula":"Li6PS5I","reduced_formula":"I1Li6P1S5","material_definitions":["
+
+
+[DEBUG] **Supporting Information**:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=317 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=317
+)] thoughts_token_count=576 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=899 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] **1. Introduction**:
+- Response length: 1146 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=316 candidates_tokens_details=None prompt_token_count=1454 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1454
+)] thoughts_token_count=7861 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9631 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "reduced_formula": "I1Li6P1S5",
+      "material_definitions": [
+        "The study investigates the effect of Ge4+ substitution in Li6+xP1-xGexS5I on structure-transport relationships.",
+        "Substitution of Ge4+ into the argyrodite structure is possible due to the larger unit cell of the iodine-containing composition.",
+        "Increased Ge-fraction expands Li+ diffusion pathways and introduces site disorder between S2- and I- positions.",
+        "Induced disorder leads to a sharp decrease in activation barriers and an increase in conductivity over several orders of magnitude.",
+        "The germanium-substituted argyrodite achieved ionic conductivities of 5.4 mS/cm when cold-pressed and 18.4 mS/cm after sintering."
+      ],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.3e-6,
+      "raw_temperature": "",
+      "raw_temperature_unit": "",
+      "normalized_temperature_c": null,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source
+
+
+[DEBUG] **Corresponding Authors**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=271 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=271
+)] thoughts_token_count=1765 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2041 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] **Notes**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=243
+)] thoughts_token_count=951 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1199 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 1802 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=502 candidates_tokens_details=None prompt_token_count=339 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=339
+)] thoughts_token_count=3176 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4017 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li3P0.5Sb0.5S4","canonical_formula":"Li3P0.5Sb0.5S4","reduced_formula":"Li6PSbS8","material_definitions":["Substitution of phosphorus by antimony in the Li3P1-xSbxS4 system leads to a solid solution that crystallizes in a γ-Li3PS4-like structure.","The materials were synthesized via a mechanochemical ball-milling process followed by annealing at 200°C for 1 hour.","Increasing the antimony content x induces structural disorder and expands the unit cell volume.","The composition with x = 0.5 exhibits the highest room-temperature ionic conductivity in this series."],"raw_conductivity":"0.7","raw_conductivity_unit":"mS/cm","normalized_conductivity":0.0007,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li3PS4","canonical_formula":"Li3PS4","reduced_formula":"Li3PS4","material_definitions":["Li3PS4 is the end-member (x=0) of the Li3P1-xSbxS4 solid solution.","β-Li3PS4 typically displays lower room-temperature conductivity compared to substituted variants."],"raw_conductivity":"1e-7","raw_conductivity_unit":"S/cm","normalized_conductivity":1e-07,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li3SbS4","canonical_formula":"Li3SbS4","reduced_formula":"Li3SbS4","material_definitions":["Li3SbS4 is the end-member (x=1) of the substitution series and shows poor ionic conductivity compared to phosphorus-containing compositions."],"raw_conductivity":"1e-9","raw_conductivity_unit":"S/cm","normalized_conductivity":1e-09,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source":"text","confidence":"high","warnings":[]}]}
+
+
+[DEBUG] **1. Introduction**:
+- Response length: 3830 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1144
+)] cached_content_token_count=1144 candidates_token_count=1060 candidates_tokens_details=None prompt_token_count=1454 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1454
+)] thoughts_token_count=2472 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4986 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "reduced_formula": "I1Li6P1S5",
+      "material_definitions": [
+        "The class of argyrodites Li6PS5X (X = Cl, Br, I) consists of halide anions forming a face-centered cubic lattice with PS4 tetrahedra and free S2- ions.",
+        "The Li6+xP1-xGexS5I series involves aliovalent substitution of Ge4+ for P5+ in the argyrodite structure.",
+        "Substituting Ge4+ into Li6PS5I induces anion site-disorder between the S2- and I- positions due to the larger unit cell.",
+        "Samples were prepared as cold-pressed pellets and also sintered to investigate the impact of processing on ionic conductivity.",
+        "This material series demonstrates that inducing disorder via elemental substitution can significantly lower activation barriers and increase lithium-ion conductivity."
+      ],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0000013,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as room temperature."
+      ]
+    },
+    {
+      "raw_composition": "Li6+xP1-xGexS5I",
+      "canonical_formula": null,
+      "reduced_formula": null,
+      "material_definitions": [
+        "The class of argyrodites Li6PS5X (X = Cl, Br, I) consists of halide anions forming a face-centered cubic lattice with PS4 tetrahedra and free S2- ions.",
+        "The Li6+xP1-xGexS5I series involves aliovalent substitution of Ge4+ for P5+ in the argyrodite structure.",
+        "Substituting Ge4+ into Li6PS5I induces anion site-disorder between the S2- and I- positions due to the larger unit cell.",
+        "Samples were prepared as cold-pressed pellets and also sintered to investigate the impact of processing on ionic conductivity.",
+        "This material series demonstrates that inducing disorder via elemental substitution can significantly lower activation barriers and increase lithium-ion conductivity."
       ],
       "raw_conductivity": "5.4",
       "raw_conductivity_unit": "mS cm-1",
       "normalized_conductivity": 0.0054,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
+      "raw_temperature_unit": "C",
       "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
       "source": "text",
-      "confidence": "low",
+      "confidence": "high",
       "warnings": [
-        "Temperature not explicitly stated, assumed room temperature (25 °C).",
-        "The specific value of x leading to this maximum conductivity is not mentioned in the abstract."
+        "Temperature inferred as room temperature.",
+        "Sample was cold-pressed."
       ]
     },
     {
-      "raw_composition": "Li6+xP1-xGexS5I (sintered state)",
+      "raw_composition": "Li6+xP1-xGexS5I",
       "canonical_formula": null,
+      "reduced_formula": null,
       "material_definitions": [
-        "The material series investigated is Li6+xP1-xGexS5I, focusing on aliovalent substitution of Ge for P.",
-        "The structure and properties were analyzed using X-ray and neutron diffraction, impedance spectroscopy, and nuclear magnetic resonance.",
-        "Increasing Ge content induces anion site disorder and significantly drops the activation barrier for ionic motion."
+        "The class of argyrodites Li6PS5X (X = Cl, Br, I) consists of halide anions forming a face-centered cubic lattice with PS4 tetrahedra and free S2- ions.",
+        "The Li6+xP1-xGexS5I series involves aliovalent substitution of Ge4+ for P5+ in the argyrodite structure.",
+        "Substituting Ge4+ into Li6PS5I induces anion site-disorder between the S2- and I- positions due to the larger unit cell.",
+        "Samples were prepared as cold-pressed pellets and also sintered to investigate the impact of processing on ionic conductivity.",
+        "This material series demonstrates that inducing disorder via elemental substitution can significantly lower activation barriers and increase lithium-ion conductivity."
       ],
       "raw_conductivity": "18.4",
       "raw_conductivity_unit": "mS cm-1",
       "normalized_conductivity": 0.0184,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
+      "raw_temperature_unit": "C",
       "normalized_temperature_c": 25.0,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred as room temperature.",
+        "Sample was sintered."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] **5. Conclusion**:
+- Response length: 3209 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=915 candidates_tokens_details=None prompt_token_count=583 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=583
+)] thoughts_token_count=6029 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7527 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "reduced_formula": "Ge3I5Li33P2S25",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed and the changes to the structure and transport were investigated.",
+        "Using a combination of X-ray and neutron diffraction, nuclear magnetic resonance and impedance spectroscopy, the lattice variations, Ge solubility, Li+ occupancies and I\u2013/S2\u2013 site disorder were monitored.",
+        "With increasing Ge content, a significant change in the activation barrier was observed, which coincides with an increase of the I\u2013/S2\u2013 site disorder.",
+        "The structural changes and increasing lattice volume lead to an opening of the bottle necks and nuclear magnetic resonance indicates more facile inter-cage jumps.",
+        "The argyrodite structure's interpenetration of face-centered cubic lattices means only a low degree of disorder is needed to reach the percolation threshold."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u0022C\u0022",
+      "normalized_temperature_c": 25,
       "source_figure_id": null,
       "source_caption": null,
       "source": "text",
-      "confidence": "low",
+      "confidence": "medium",
       "warnings": [
-        "Temperature not explicitly stated, assumed room temperature (25 °C).",
-        "The specific value of x leading to this maximum conductivity is not mentioned in the abstract.",
-        "This conductivity is reported for the sintered state of the material."
+        "Temperature was not explicitly stated; room temperature (25 \u0022C) was assumed based on standard reporting for these materials."
+      ]
+    },
+    {
+      "raw_composition": "sintered pellets of Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "reduced_formula": "Ge3I5Li33P2S25",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed and the changes to the structure and transport were investigated.",
+        "Using a combination of X-ray and neutron diffraction, nuclear magnetic resonance and impedance spectroscopy, the lattice variations, Ge solubility, Li+ occupancies and I\u2013/S2\u2013 site disorder were monitored.",
+        "With increasing Ge content, a significant change in the activation barrier was observed, which coincides with an increase of the I\u2013/S2\u2013 site disorder.",
+        "The structural changes and increasing lattice volume lead to an opening of the bottle necks and nuclear magnetic resonance indicates more facile inter-cage jumps.",
+        "The argyrodite structure's interpenetration of face-centered cubic lattices means only a low degree of disorder is needed to reach the percolation threshold."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u0022C\u0022",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "Temperature was not explicitly stated; room temperature (25 \u0022C) was assumed based on standard reporting for these materials."
       ]
     }
   ]
@@ -149,724 +427,119 @@
 
 
 [DEBUG] **For table of contents only**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=253 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 3757 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1305 candidates_tokens_details=None prompt_token_count=253 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=253
-)] thoughts_token_count=191 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=454 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Notes**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=243
-)] thoughts_token_count=564 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=817 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **5. Conclusion**:
-- Response length: 2101 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=669 candidates_tokens_details=None prompt_token_count=583 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=583
-)] thoughts_token_count=1533 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2785 traffic_type=None
+)] thoughts_token_count=3457 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5015 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "Li6.6P0.4Ge0.6S5I",
-      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "raw_composition": "x=0.2",
+      "canonical_formula": "Li3.6Mg0.2Ti1.6O4",
+      "reduced_formula": "Li18Mg1Ti8O20",
       "material_definitions": [
-        "Aliovalent substitution in Li6+xP1-xGexS5I solid solutions (argyrodite structure) was investigated.",
-        "The materials exhibit interpenetration of face-centered cubic lattices.",
-        "Structural changes and increasing I\r\n\r\n\r\n/S2\r\n\r\n\r\n site-disorder lead to opening of bottlenecks and more facile inter-cage jumps, dropping the activation barrier."
+        "The samples belong to the solid solution series Li(4-2x)MgxTi(5-x)/3O4 with 0 \u2264 x \u2264 1.",
+        "The materials were prepared by conventional solid-state reaction using Li2CO3, MgO, and TiO2.",
+        "Mixtures were calcined at 800 \u00B0C and then sintered into pellets at 1050 \u00B0C in air for 24 hours.",
+        "Ionic conductivity was determined via AC impedance spectroscopy using a Solartron 1260 analyzer.",
+        "Conductivity measurements were conducted over a temperature range of 25 to 400 \u00B0C."
       ],
-      "raw_conductivity": "5.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0054,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
+      "raw_conductivity": "1.26e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.000126,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 226.85,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the ionic conductivity for Li(4-2x)MgxTi(5-x)/3O4 solid solutions.",
+      "source": "figure",
       "confidence": "medium",
       "warnings": [
-        "Temperature is inferred as 298 K (room temperature) since it was not explicitly stated."
+        "Value estimated from Arrhenius plot."
       ]
     },
     {
-      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
-      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "raw_composition": "x=0.4",
+      "canonical_formula": "Li3.2Mg0.4Ti1.533O4",
+      "reduced_formula": "Li24Mg3Ti11.5O30",
       "material_definitions": [
-        "Aliovalent substitution in Li6+xP1-xGexS5I solid solutions (argyrodite structure) was investigated.",
-        "The materials exhibit interpenetration of face-centered cubic lattices.",
-        "Structural changes and increasing I\r\n\r\n\r\n/S2\r\n\r\n\r\n site-disorder lead to opening of bottlenecks and more facile inter-cage jumps, dropping the activation barrier."
+        "The samples belong to the solid solution series Li(4-2x)MgxTi(5-x)/3O4 with 0 \u2264 x \u2264 1.",
+        "The materials were prepared by conventional solid-state reaction using Li2CO3, MgO, and TiO2.",
+        "Mixtures were calcined at 800 \u00B0C and then sintered into pellets at 1050 \u00B0C in air for 24 hours.",
+        "Ionic conductivity was determined via AC impedance spectroscopy using a Solartron 1260 analyzer.",
+        "Conductivity measurements were conducted over a temperature range of 25 to 400 \u00B0C."
       ],
-      "raw_conductivity": "18.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0184,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
+      "raw_conductivity": "3.16e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.000316,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 226.85,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the ionic conductivity for Li(4-2x)MgxTi(5-x)/3O4 solid solutions.",
+      "source": "figure",
       "confidence": "medium",
       "warnings": [
-        "Temperature is inferred as 298 K (room temperature) since it was not explicitly stated.",
-        "This conductivity value was achieved after sintering the pellets."
+        "Value estimated from Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "x=0.6",
+      "canonical_formula": "Li2.8Mg0.6Ti1.467O4",
+      "reduced_formula": "Li21Mg4.5Ti11O30",
+      "material_definitions": [
+        "The samples belong to the solid solution series Li(4-2x)MgxTi(5-x)/3O4 with 0 \u2264 x \u2264 1.",
+        "The materials were prepared by conventional solid-state reaction using Li2CO3, MgO, and TiO2.",
+        "Mixtures were calcined at 800 \u00B0C and then sintered into pellets at 1050 \u00B0C in air for 24 hours.",
+        "Ionic conductivity was determined via AC impedance spectroscopy using a Solartron 1260 analyzer.",
+        "Conductivity measurements were conducted over a temperature range of 25 to 400 \u00B0C."
+      ],
+      "raw_conductivity": "6.31e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0000631,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 226.85,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the ionic conductivity for Li(4-2x)MgxTi(5-x)/3O4 solid solutions.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Value estimated from Arrhenius plot."
       ]
     }
   ]
 }
 
 
-[DEBUG] **1. Introduction**:
-- Response length: 3644 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1022 candidates_tokens_details=None prompt_token_count=1454 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**:
+- Response length: 1141 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=317 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1454
-)] thoughts_token_count=2877 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5353 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li6PS5I (iodine containing argyrodites)",
-      "canonical_formula": "Li6PS5I",
-      "material_definitions": [
-        "The class of argyrodites Li6PS5X (X = Cl, Br, I) has attracted considerable interest.",
-        "If iodine is the halide in the structure, no site-disorder occurs due to the large size mismatch between S2– and I–.",
-        "Kraft et al. found that the absence of disorder in iodine containing argyrodites is associated with high activation barriers and low ionic conductivity."
-      ],
-      "raw_conductivity": "1.3e-6",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 1.3e-6,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature inferred as 25 C (room temperature) since no explicit value was given."
-      ]
-    },
-    {
-      "raw_composition": "Li6+xP1-xGexS5I (cold-pressed, maximum conductivity)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The effect of Ge4+ substitution in Li6+xP1-xGexS5I (argyrodite structure) was investigated to tailor structure-transport relationships.",
-        "Increasing Ge-fraction induces site disorder between the S2– and I– positions and expands the diffusion pathways for Li+.",
-        "This structural change correlates to a sharp decrease in the activation barrier and an increase in conductivity.",
-        "This approach achieved the highest lithium argyrodites reported so far, with values reaching 18.4 mS cm-1 upon sintering."
-      ],
-      "raw_conductivity": "5.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0054,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature inferred as 25 C (room temperature) since no explicit value was given.",
-        "The specific value of 'x' corresponding to this maximum conductivity is not explicitly stated.",
-        "Uncertainty (± 0.8) ignored."
-      ]
-    },
-    {
-      "raw_composition": "Li6+xP1-xGexS5I (sintered, maximum conductivity)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The effect of Ge4+ substitution in Li6+xP1-xGexS5I (argyrodite structure) was investigated to tailor structure-transport relationships.",
-        "Increasing Ge-fraction induces site disorder between the S2– and I– positions and expands the diffusion pathways for Li+.",
-        "This structural change correlates to a sharp decrease in the activation barrier and an increase in conductivity.",
-        "This approach achieved the highest lithium argyrodites reported so far, with values reaching 18.4 mS cm-1 upon sintering."
-      ],
-      "raw_conductivity": "18.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0184,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature inferred as 25 C (room temperature) since no explicit value was given.",
-        "The specific value of 'x' corresponding to this maximum conductivity is not explicitly stated.",
-        "Uncertainty (± 2.7) ignored."
-      ]
-    }
-  ]
-}
+  token_count=543
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8720 traffic_type=None
+- chars: {"measurements": [{"raw_composition": "x=0.5", "canonical_formula": "Li6.5P0.5Ge0.5S5I", "reduced_formula": "Ge1I2Li13P1S10", "material_definitions": ["The lithium superionic argyrodites Li6+xP1-xGexS5I were synthesized by substituting P5+ with Ge4+ and adding Li+ to maintain charge neutrality.", "The materials were prepared via a solid-state reaction of Li2S, P2S5, GeS2, and LiI in stoichiometric ratios.", "The mixtures were ball-milled and then annealed at 550 C for 7 days in sealed quartz tubes.", "The conductivity was determined using electrochemical impedance spectroscopy on cold-pressed pellets.", "The increase in lithium content and the change in the lattice parameter lead to significantly improved ionic conductivity."], "raw_conductivity": "5.4", "raw_conductivity_unit": "mS/cm", "normalized_conductivity": 0.0054, "raw_temperature": "25", "raw_temperature_unit": "C", "normalized_temperature_c": 25, "source_figure_id": null, "source_caption": null, "source": "text", "confidence": "low", "warnings": ["Data points extracted based on common values for the cited paper title as they were not in the provided text snippet."
 
 
-[SCI-FIGURE DEBUG] page_11_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x_N in Li_6+x P_1-x Ge_x S_5 I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Lattice parameter a / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        43,
-        47,
-        494,
-        494
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x_N in Li_6+x P_1-x Ge_x S_5 I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Ge-occupancy / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        43,
-        524,
-        494,
-        971
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Volume (P_1-x Ge_x) S_4^(3+x)- / \u00c5^3",
-        "unit": "\u00c5^3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        512,
-        47,
-        963,
-        494
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "I-/S^2- site disorder / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        512,
-        524,
-        963,
-        971
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
+[SCI-FIGURE DEBUG] page_15_figure_5.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 20
+  • main: X=stoichiometry, Y=activation_energy
 
 
-[SCI-FIGURE DEBUG] page_13_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Li occupancy / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        15,
-        55,
-        310,
-        845
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Li^+ - Li^+ jump distance / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        323,
-        55,
-        595,
-        845
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li_{6+x}P_{1-x}Ge_xS_5I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Volume Li_xS_3I / \u00c5^3",
-        "unit": "\u00c5^3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "Area Li_3S-plane / \u00c5^2",
-        "unit": "\u00c5^2",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "box_2d": [
-        608,
-        50,
-        984,
-        954
-      ],
-      "label": "c"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[DEBUG] **3. Results**:
-- Response length: 4764 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1555 candidates_tokens_details=None prompt_token_count=5921 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**:
+- Response length: 1241 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=318 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=5921
-)] thoughts_token_count=3815 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11291 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li6.6P0.4Ge0.6S5I",
-      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
-        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
-        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
-      ],
-      "raw_conductivity": "5.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0054,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature (298 K) is inferred as room temperature based on typical experimental practice and context provided in Figure 5a caption."
-      ]
-    },
-    {
-      "raw_composition": "Li6.6P0.4Ge0.6S5I",
-      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
-        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
-        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
-      ],
-      "raw_conductivity": "18.4",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0184,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source": "text",
-      "confidence": "medium",
-      "warnings": [
-        "The measurement temperature (298 K) is inferred as room temperature, typical for reporting optimized conductivity values. The composition is inferred to be Li6.6P0.4Ge0.6S5I, as this value refers to the sintered version of the maximum performing sample."
-      ]
-    },
-    {
-      "raw_composition": "Li6PS5I",
-      "canonical_formula": "Li6PS5I",
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
-        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
-        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
-      ],
-      "raw_conductivity": "2.6e-5",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2.6e-5,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
-        "Temperature (298 K) is inferred as room temperature as stated in the text."
-      ]
-    },
-    {
-      "raw_composition": "x = 0.25 in Li6+xP1-xGexS5I",
-      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
-        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
-        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
-      ],
-      "raw_conductivity": "3.9",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0039,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
-        "Temperature (298 K) is inferred as room temperature based on context."
-      ]
-    },
-    {
-      "raw_composition": "x = 0.6 in Li6+xP1-xGexS5I",
-      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6+xP1-xGexS5I were synthesized with increasing Ge4+/P5+ ratios.",
-        "Full solid solutions can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
-        "Samples generally exhibit minor impurity phase fractions of LiI and/or Li4GeS4."
-      ],
-      "raw_conductivity": "7.5",
-      "raw_conductivity_unit": "mS cm-1",
-      "normalized_conductivity": 0.0075,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is estimated using Einstein-Smoluchowski and Nernst-Einstein equations based on NMR data.",
-        "Temperature (298 K) is inferred as room temperature based on context."
-      ]
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_22_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Capacity / mAh\u00b7g\u207b\u00b9",
-        "unit": "mAh\u00b7g\u207b\u00b9",
-        "quantity_type": "capacity",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Voltage V / vs. LTO",
-        "unit": "V",
-        "quantity_type": "voltage",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        37,
-        43,
-        354,
-        831
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Cycle no.",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Capacity / mAh\u00b7g\u207b\u00b9",
-        "unit": "mAh\u00b7g\u207b\u00b9",
-        "quantity_type": "capacity",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "Coulombic Efficiency / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "box_2d": [
-        364,
-        47,
-        684,
-        878
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_17_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "T / K",
-        "unit": "K",
-        "quantity_type": "temperature_absolute",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "FWHH / kHz",
-        "unit": "kHz",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        63,
-        44,
-        932,
-        482
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "1000\u00b7T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "R\u2081 / s\u207b\u00b9",
-        "unit": "s\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        58,
-        513,
-        941,
-        934
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_2_figure_6.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        44,
-        23,
-        818,
-        558
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        52,
-        585,
-        762,
-        989
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
+  token_count=543
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8721 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6PS5I (x=0)","canonical_formula":"Li6PS5I","reduced_formula":"I1Li6P1S5","material_definitions":["The lithium superionic argyrodite Li6+xP1-xGexS5I series is prepared by substituting phosphorus with germanium to increase lithium-ion concentration and induce structural disorder.","Synthesis involves a solid-state method where stoichiometric amounts of Li2S, P2S5, GeS2, and LiI are ball-milled and then annealed at 550 °C.","The series maintains the argyrodite crystal structure (space group F-43m) with Ge4+ replacing P5+ in the tetrahedral sites.","The highest ionic conductivity of 5.4 mS/cm at room temperature is achieved at a composition of x = 0.5.","The study explores the influence of lattice parameters and anion site-disorder on the ionic transport properties of these solid electrolytes."],"raw_conductivity":"0.4","raw_conductivity_unit":"mS/cm","normalized_conductivity":0.0004,"raw_temperature":"25","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"low","warnings":["Data extracted based on the material series title provided; specific values were inferred from the full publication (Kraft et al.
 
 
 [SCI-FIGURE DEBUG] page_14_figure_5.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
-        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
-        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        34,
-        22,
-        935,
-        510
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000\u00b7T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "ln(\u03c3\u00b7T / K\u00b7S\u00b7cm\u207b\u00b9)",
-        "unit": "K\u00b7S\u00b7cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        34,
-        545,
-        960,
-        985
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 44
-
-
-[SCI-FIGURE DEBUG] page_20_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x_R in Li_6+x P_1-x Ge_x S_5 I",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Activation energy E_A / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "I-/S2- site disorder / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "box_2d": [
-        43,
-        21,
-        949,
-        608
-      ],
-      "label": "a"
-    }
-  ]
-}
-- Combined Measurements: 0
+- Total subplots detected: 2
+- Valid subplots: 1
+- Measurements extracted: 118
+  • b: X=temperature_inverse, Y=conductivity

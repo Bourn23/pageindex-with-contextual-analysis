@@ -1,0 +1,31 @@
+{
+  "patterns_missed": [
+    {
+      "pattern": "Failure to resolve and normalize parameterized stoichiometry from figures.",
+      "examples": [
+        "Extracted: Li3+xGexP1-xO4 (x=0.2) | Ground Truth: Li12.8Ge0.8P3.2O16.0",
+        "Extracted: Li3PxV1-xO4 (x=0.4) | Ground Truth: Li12.0P1.6V2.4O16.0",
+        "Extracted: Li3+xGexV1-xO4 (x=0.8) | Ground Truth: Li15.2Ge3.2V0.8O16.0"
+      ],
+      "source": "Figure 4b, a plot of 'Conductivity at 30 \u00b0C' versus composition. The parameterized formulas are extracted literally from the x-axis labels (e.g., 'x in Li3+xGexP1-xO4').",
+      "root_cause": "The extraction pipeline performs literal extraction of text associated with data points but lacks a post-processing module for chemical formula manipulation. It cannot perform the two required steps: 1. **Resolution**: Substitute the variable 'x' into the parameterized formula string and calculate the resulting coefficients. 2. **Normalization**: Apply a conventional rule to the resolved formula (e.g., multiply all coefficients by a factor of 4 to normalize to 16 oxygen atoms) to produce the final, explicit formula required by the ground truth.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Value extraction inaccuracies from logarithmic plot scales.",
+      "examples": [
+        "Ground Truth: 4.5e-06 S/cm | Extracted: 4e-05 S/cm",
+        "Ground Truth: 9.2e-14 S/cm | Extracted: 1.6e-13 S/cm"
+      ],
+      "source": "Figure 4b, which uses a logarithmic y-axis for conductivity spanning many orders of magnitude.",
+      "root_cause": "Automated plot digitization tools can have precision limitations, especially on logarithmic scales. Errors can be introduced during axis scale detection, data point localization, or due to low image resolution or overlapping markers. The order-of-magnitude error in one example suggests a failure in correctly reading the axis ticks.",
+      "prevalence": "occasional"
+    }
+  ],
+  "generic_suggestions": [
+    "Implement a chemical formula post-processing module capable of parsing parameterized expressions (e.g., 'Li3+xGexP1-xO4'), substituting variables with their values, and calculating the final stoichiometric coefficients.",
+    "Add a configurable formula normalization step to the pipeline. This would allow users to define domain-specific rules, such as normalizing a formula to a specific atom count for a target element (e.g., normalize to 16 Oxygen atoms).",
+    "Enhance the plot digitization module by improving log-scale detection and implementing confidence scoring for extracted values. Flag low-confidence points or those extracted from dense plot regions for human review.",
+    "Develop a cross-verification system that prioritizes data from tables or text over figures when the same information is present in multiple formats, as tables typically offer higher precision."
+  ]
+}

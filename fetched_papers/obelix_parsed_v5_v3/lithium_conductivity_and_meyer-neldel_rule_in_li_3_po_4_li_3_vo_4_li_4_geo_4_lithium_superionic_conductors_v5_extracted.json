@@ -1,0 +1,369 @@
+{
+  "doc_name": "lithium_conductivity_and_meyer-neldel_rule_in_li_3_po_4_li_3_vo_4_li_4_geo_4_lithium_superionic_conductors",
+  "timestamp": "2026-02-10 16:33:32",
+  "execution_time_seconds": 168.35,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 15859,
+    "total_output_tokens": 50698,
+    "total_cost_usd": 0.1315,
+    "call_counts": {
+      "gemini-flash-latest": 15
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 18,
+    "skipped_images": 13,
+    "failed_items": 0,
+    "total_sections_processed": 16,
+    "total_images_processed": 1
+  },
+  "material_count": 18,
+  "measurements": [
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=0.0)",
+      "canonical_formula": "Li3VO4",
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000003684,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=0.2)",
+      "canonical_formula": "Li3P0.2V0.8O4",
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000003684,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=0.4)",
+      "canonical_formula": "Li3P0.4V0.6O4",
+      "material_definitions": [],
+      "raw_conductivity": "6.3e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000014506,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=0.6)",
+      "canonical_formula": "Li3P0.6V0.4O4",
+      "material_definitions": [],
+      "raw_conductivity": "3.2e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000007367,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=0.8)",
+      "canonical_formula": "Li3P0.8V0.2O4",
+      "material_definitions": [],
+      "raw_conductivity": "2.8e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000006448,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3PxV1-xO4 (x=1.0)",
+      "canonical_formula": "Li3PO4",
+      "material_definitions": [],
+      "raw_conductivity": "3.2e-13",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000007367,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3PxV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexP1-xO4 (x=0.2)",
+      "canonical_formula": "Li3.2Ge0.2P0.8O4",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-06",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.000002993365101,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexP1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexP1-xO4 (x=0.4)",
+      "canonical_formula": "Li3.4Ge0.4P0.6O4",
+      "material_definitions": [],
+      "raw_conductivity": "4e-05",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000921076453684,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexP1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0001e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexP1-xO4 (x=0.6)",
+      "canonical_formula": "Li3.6Ge0.6P0.4O4",
+      "material_definitions": [],
+      "raw_conductivity": "5e-06",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000115129917388,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexP1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexP1-xO4 (x=0.8)",
+      "canonical_formula": "Li3.8Ge0.8P0.2O4",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-06",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.000002993365101,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexP1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexV1-xO4 (x=0.2)",
+      "canonical_formula": "Li3.2Ge0.2V0.8O4",
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-05",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.000036842040139,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexV1-xO4 (x=0.4)",
+      "canonical_formula": "Li3.4Ge0.4V0.6O4",
+      "material_definitions": [],
+      "raw_conductivity": "6.3e-07",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000014506296608,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexV1-xO4 (x=0.6)",
+      "canonical_formula": "Li3.6Ge0.6V0.4O4",
+      "material_definitions": [],
+      "raw_conductivity": "6.3e-05",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0001450733829842,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0001e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li3+xGexV1-xO4 (x=0.8)",
+      "canonical_formula": "Li3.8Ge0.8V0.2O4",
+      "material_definitions": [],
+      "raw_conductivity": "2.5e-06",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.000005756479301,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li3+xGexV1-xO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li4GeO4 (x=1.0)",
+      "canonical_formula": "Li4GeO4",
+      "material_definitions": [],
+      "raw_conductivity": "1.6e-12",
+      "raw_conductivity_unit": "Conductivity at 30 \u00b0C (S/cm)",
+      "normalized_conductivity": 1.0000000000036842,
+      "raw_temperature": "30",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 30.0,
+      "source_figure_id": "Fig 4-b",
+      "source_caption": "**Figure 4.** a). Arrhenius plot of  $\\text{Li}_3P_{1-x}V_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$  and  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). For compounds with partial Li occupancy, the conductivity reported here are bulk conductivity. b) Conductivity at 30 \u00b0C and c) Activation energy of  $\\text{Li}_{3+x}P_{1-x}Ge_xO_4$ ,  $\\text{Li}_{3+x}V_{1-x}Ge_xO_4$ , and  $\\text{Li}_3P_{1-x}V_xO_4$  (x=0,0.2,0.4,0.6,0.8 and 1). The conductivity of all compound without partial Li occupancy were extrapolated from high-temperature measurements. [Series: Li4GeO4] [X: x in Li3PxV1-xO4] [Y: Conductivity at 30 \u00b0C (S/cm)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 30.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "cubic Li7La3Zr2O12 (LLZO)",
+      "canonical_formula": "Li7La3Zr2O12",
+      "material_definitions": [
+        "Garnet-type Li7La3Zr2O12 (LLZO) is a solid electrolyte known for high ionic conductivity and excellent chemical stability against lithium metal.",
+        "The cubic phase of LLZO is generally synthesized through solid-state reaction and requires high-temperature sintering, such as 1230 \u00b0C.",
+        "Stabilization of the cubic phase at room temperature is typically achieved by doping with elements like Aluminum or Gallium.",
+        "The text discusses the impact of Aluminum doping (e.g., Li6.4Al0.2La3Zr2O12) on the stabilization and electrochemical properties of the garnet structure.",
+        "Reported values for bulk and total ionic conductivity serve as benchmarks for evaluating the performance of these ceramic solid electrolytes."
+      ],
+      "raw_conductivity": "3e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0003,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Arrhenius plots of the bulk and total ionic conductivities of Li7La3Zr2O12 and related compounds.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "bulk ionic conductivity"
+      ]
+    },
+    {
+      "raw_composition": "cubic Li7La3Zr2O12 (LLZO)",
+      "canonical_formula": "Li7La3Zr2O12",
+      "material_definitions": [
+        "Garnet-type Li7La3Zr2O12 (LLZO) is a solid electrolyte known for high ionic conductivity and excellent chemical stability against lithium metal.",
+        "The cubic phase of LLZO is generally synthesized through solid-state reaction and requires high-temperature sintering, such as 1230 \u00b0C.",
+        "Stabilization of the cubic phase at room temperature is typically achieved by doping with elements like Aluminum or Gallium.",
+        "The text discusses the impact of Aluminum doping (e.g., Li6.4Al0.2La3Zr2O12) on the stabilization and electrochemical properties of the garnet structure.",
+        "Reported values for bulk and total ionic conductivity serve as benchmarks for evaluating the performance of these ceramic solid electrolytes."
+      ],
+      "raw_conductivity": "2e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0002,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Arrhenius plots of the bulk and total ionic conductivities of Li7La3Zr2O12 and related compounds.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "total ionic conductivity"
+      ]
+    },
+    {
+      "raw_composition": "Li4GeO4",
+      "canonical_formula": "Li4GeO4",
+      "material_definitions": [
+        "This study investigates the structural and ionic conductivity properties of material series including Li3P1-xVxO4, Li3+xV1-xGexO4, and Li3+xP1-xGexO4 where x ranges from 0 to 1.",
+        "X-ray powder diffraction confirmed that the samples were phase pure and consistent with previously reported LISICON crystal structures and space groups.",
+        "The unit cell volumes of the Li3P1-xVxO4 and Li3+xP1-xGexO4 series increase with higher Ge and V content due to the larger ionic sizes of Ge4+ and V5+ compared to P5+.",
+        "Ionic conductivities were measured via electrochemical impedance spectroscopy from -30 \u00b0C to 150 \u00b0C, showing significant improvements upon aliovalent substitution that creates partial lithium occupancy.",
+        "The activation energy for conduction in these LISICON-type solid solutions ranges from approximately 0.5 eV for non-stoichiometric compositions to 1.1 eV for stoichiometric parent compounds."
+      ],
+      "raw_conductivity": "2e-9",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 2e-09,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ],
+  "material_definitions": []
+}

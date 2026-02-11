@@ -1,0 +1,40 @@
+{
+  "patterns_missed": [
+    {
+      "pattern": "Failure to resolve variable-based stoichiometry from plots and text.",
+      "examples": [
+        "quenched (x=0.09) | -3.08 log(\u03c3/ S cm\u207b\u00b9) should be La0.58Li0.27Ti1.0O3.0 | 0.000832 S/cm",
+        "annealed (x=0.12) | -3.1 log(\u03c3/ S cm\u207b\u00b9) should be La1.1Li0.72Ti2.0O6.0 | 0.000688 S/cm"
+      ],
+      "source": "Figure 3, which plots conductivity against a variable 'x'. The definition for 'x' is located in the paper's title and abstract ('La0.67-xLi3xTiO3').",
+      "root_cause": "The extraction pipeline identifies data points within a plot but fails to perform semantic linking to the surrounding text. It does not search for and apply the definition of variables (like 'x') found in the plot's axes or legend to construct the full chemical formula.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Extraction of data in logarithmic scale without conversion to linear scale.",
+      "examples": [
+        "Extracted value is '-2.87 log(\u03c3/ S cm\u207b\u00b9)' instead of the linear value '0.00135 S/cm' (10^-2.87).",
+        "Extracted value is '-3.18 log(\u03c3/ S cm\u207b\u00b9)' instead of the linear value '0.00066 S/cm' (10^-3.18)."
+      ],
+      "source": "Figure 3, where the y-axis is explicitly labeled 'log(\u03c3/S cm\u207b\u00b9)'.",
+      "root_cause": "The pipeline correctly reads the axis label but lacks a mathematical transformation module. It does not recognize the 'log()' function and apply the inverse operation (10^x) to convert the extracted values into a standard, linear format.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Failure to extract and associate contextual metadata from figure captions.",
+      "examples": [
+        "The extracted temperature is 'N/A K' for all data points from Figure 3.",
+        "The ground truth specifies '@ Room Temp', which corresponds to 'at 25\u00b0C' mentioned in the figure caption."
+      ],
+      "source": "The caption for Figure 3, which states: 'Bulk conductivities at 25\u00b0C for the quenched and annealed samples.'",
+      "root_cause": "The pipeline's figure processing is siloed; it extracts data from the plot area but does not parse the associated caption to find and link crucial experimental conditions like temperature, pressure, or atmosphere.",
+      "prevalence": "frequent"
+    }
+  ],
+  "generic_suggestions": [
+    "Implement a 'context-aware variable resolver' that, upon finding a variable in a plot or table (e.g., 'x'), searches the document (caption, abstract, title) for its definition (e.g., a formula like 'La1-xSrxTiO3') and performs substitution to generate complete material compositions.",
+    "Develop a 'unit and scale transformation engine' to parse axis/column labels for mathematical functions (log, ln, 1/T) and prefixes (mS, GPa). The engine should automatically apply inverse operations to normalize extracted values to a consistent linear scale and base units.",
+    "Enhance the figure/table extraction module to systematically parse captions for experimental parameters. Use NER and regex patterns trained on scientific text to identify and link metadata (e.g., '25\u00b0C', 'room temperature', '300 K') to all data points from that source.",
+    "Integrate a chemical formula normalization library (e.g., pymatgen) in a post-processing step. After compositions are resolved, this tool should canonicalize them to a standard format (e.g., smallest integer stoichiometry) to ensure data consistency."
+  ]
+}

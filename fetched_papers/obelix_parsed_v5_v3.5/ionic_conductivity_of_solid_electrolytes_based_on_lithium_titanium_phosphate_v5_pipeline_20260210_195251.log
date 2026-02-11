@@ -1,0 +1,11 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate_v5_pipeline_20260210_195251.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+[0;31m[ERROR][0m Failed during extraction step

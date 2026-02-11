@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-417",
+      "extracted_match": "Li6PS5I | 1.3e-06 S/cm",
+      "is_match": true,
+      "reason": "Li24.0P4.0S20.0I4.0 normalizes to Li6PS5I, and 1.3e-06 S/cm is approximately 1.26e-06 S/cm at room temperature (25.0 C)."
+    },
+    {
+      "ground_truth_id": "GT-418",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.1P0.9Ge0.1S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-419",
+      "extracted_match": "Li6.15P0.85Ge0.15S5I | 4.1e-05 S/cm",
+      "is_match": true,
+      "reason": "Li24.6P3.4Ge0.6S20.0I4.0 normalizes to Li6.15P0.85Ge0.15S5I, and 4.1e-05 S/cm is approximately 3.93e-05 S/cm at room temperature (from sigma_RT series)."
+    },
+    {
+      "ground_truth_id": "GT-420",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.2P0.8Ge0.2S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-421",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data for Li6.25P0.75Ge0.25S5I at room temperature has a conductivity of 0.00039 S/cm, which is not an approximate match to 0.00015 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-422",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.3P0.7Ge0.3S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-423",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.4P0.6Ge0.4S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-424",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.5P0.5Ge0.5S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-425",
+      "extracted_match": "Li6.6P0.4Ge0.6S5I | 0.0054 S/cm",
+      "is_match": true,
+      "reason": "Li26.4P1.6Ge2.4S20.0I4.0 normalizes to Li6.6P0.4Ge0.6S5I, and 0.0054 S/cm is approximately 0.00521 S/cm at room temperature (25.0 C)."
+    },
+    {
+      "ground_truth_id": "GT-426",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.7P0.3Ge0.7S5I at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-427",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted data does not contain a conductivity value for Li6.8P0.2Ge0.8S5I at room temperature."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 3
+}

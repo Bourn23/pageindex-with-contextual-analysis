@@ -36,7 +36,7 @@ Compare the "Ground Truth" data (from a reliable database) against the "Extracte
 Your Goal: Determine if the Extracted Data correctly captures the Ground Truth.
 
 RULES FOR MATCHING:
-1. Chemical Formulas: Normalize stoichiometries. 
+1. Chemical Formulas: Normalize stoichiometries. Specifically try to use reduced_formula or canonical_formula to check for matches.
    - Example: "Li24P4S20Br4" is chemically identical to "Li6PS5Br" (divide by 4).
    - Example: "Li7La3Zr2O12" is the same as "LLZO".
    
@@ -123,16 +123,19 @@ def main():
             print(f"{'GT ID':<10} | {'Match Status':<15} | {'Reason'}")
             print("-" * 60)
             
-            with open(extracted_parent / "validation_report.txt", 'w') as f:
+            # extracted file title
+            extracted_title = Path(args.extracted).stem
+
+            with open(extracted_parent / f"{extracted_title}_validation_report.txt", 'w') as f:
                 for match in report.matches:
                     status = "✅ MATCH" if match.is_match else "❌ MISSING/BAD"
                     print(f"{match.ground_truth_id[:10]:<10} | {status:<15} | {match.reason}")
                     f.write(f"{match.ground_truth_id[:10]:<10} | {status:<15} | {match.reason}\n")
 
             # Save full report
-            with open(extracted_parent / "validation_report.json", 'w') as f:
+            with open(extracted_parent / f"{extracted_title}_validation_report.json", 'w') as f:
                 f.write(response.text)
-            print(f"\nFull report saved to {extracted_parent}/validation_report.json")
+            print(f"\nFull report saved to {extracted_parent}/{extracted_title}_validation_report.json")
 
     except Exception as e:
         print(f"Validation Failed: {e}")

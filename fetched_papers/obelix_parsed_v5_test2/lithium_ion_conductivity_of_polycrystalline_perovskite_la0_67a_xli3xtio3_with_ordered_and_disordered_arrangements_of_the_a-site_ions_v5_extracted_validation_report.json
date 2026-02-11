@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-159",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La1.22Li0.36Ti2.0O6.0 | 0.000412 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-160",
+      "extracted_match": "La0.55Li0.36TiO3 | 0.000688 S/cm",
+      "is_match": true,
+      "reason": "The extracted conductivity 0.000688 S/cm matches, and the formula derived from x=0.12 (La0.55Li0.36TiO3) is chemically identical to the normalized ground truth formula La0.55Li0.36TiO3.0."
+    },
+    {
+      "ground_truth_id": "GT-161",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La1.08Li0.78Ti2.0O6.0 | 0.000651 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-162",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La1.04Li0.9Ti2.0O6.0 | 0.000501 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-163",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La1.16Li0.54Ti2.0O6.0 | 0.000599 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-164",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La1.12Li0.66Ti2.0O6.0 | 0.000668 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-449",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The extracted formula La0.59Li0.27TiO3.02 and conductivity 0.00058 S/cm do not match La0.58Li0.27Ti1.0O3.0 and 0.000832 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-450",
+      "extracted_match": "La0.56Li0.33TiO3 | 0.001 S/cm",
+      "is_match": false,
+      "reason": "The extracted formula La0.56Li0.33TiO3 matches, but the extracted conductivity 0.001 S/cm is not an approximate match for 0.0013 S/cm (23% difference)."
+    },
+    {
+      "ground_truth_id": "GT-451",
+      "extracted_match": "La0.55Li0.36TiO3 | 0.00153 S/cm",
+      "is_match": true,
+      "reason": "The extracted formula La0.55Li0.36TiO3 and conductivity 0.00153 S/cm are an approximate match for La0.55Li0.36Ti1.0O3.0 and 0.00154 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-452",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La0.54Li0.39Ti1.0O3.0 | 0.00125 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-453",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No corresponding extracted data found for La0.52Li0.45Ti1.0O3.0 | 0.000785 S/cm."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 2
+}

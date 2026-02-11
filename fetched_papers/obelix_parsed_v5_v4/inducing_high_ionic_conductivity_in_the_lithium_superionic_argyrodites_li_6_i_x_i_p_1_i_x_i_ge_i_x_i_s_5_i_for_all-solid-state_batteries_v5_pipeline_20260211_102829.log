@@ -1,0 +1,325 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m MD File: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.md
+[0;34m[INFO][0m Asset Directory: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260211_102829.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP 1-xGe<sup>x</sup> S I for all-solid-state batteries**
+   --- Found: 15 Sections
+   --- Found: 14 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '**Just Accepted**' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '**1. Introduction**' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '**3. Results**' contains:
+       - 9 Images: ['Fig 9', 'Fig 7', 'Fig 6', 'Fig 4', 'Fig 8', 'Fig 2', 'Fig 3', 'Fig 5', 'Fig 2']
+
+   >>> Section '**For table of contents only**' contains:
+       - 1 Images: ['Unknown']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: **Acknowledgements**
+   [91m[Warning][0m Skipping section: **References**
+   ... Processing 24 items (Text + Images) simultaneously ...
+   [Retry 1/3] JSON Error for Abstract / Introduction: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 1 column ...
+   [Retry 1/3] JSON Error for **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 1 column ...
+   [Retry 1/3] JSON Error for **1. Introduction**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 22 column...
+   [93m[Timeout][0m Abstract / Introduction (Attempt 1)
+   [93m[Timeout][0m **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries** (Attempt 1)
+   [93m[Timeout][0m **1. Introduction** (Attempt 1)
+   🔍 page_11_figure_3.jpeg (Fig 3): Detecting subplot...
+   🔍 page_13_figure_3.jpeg (Fig 4): Detecting subplot...
+   🔍 page_14_figure_5.jpeg (Fig 5): Detecting subplot...
+   [93m[Skip][0m page_11_figure_3.jpeg (Fig 3): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_11_figure_3.jpeg (Fig 3): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_11_figure_3.jpeg (Fig 3): Subplot 'c' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_11_figure_3.jpeg (Fig 3): Subplot 'd' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_11_figure_3.jpeg (Fig 3): No valid subplots found.
+   🔍 page_15_figure_5.jpeg (Fig 6): Detecting subplot...
+   🔍 page_17_figure_4.jpeg (Fig 7): Detecting subplot...
+   [Retry 1/3] JSON Error for **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a list at line 1 column 11...
+   [93m[Skip][0m page_13_figure_3.jpeg (Fig 4): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_13_figure_3.jpeg (Fig 4): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_13_figure_3.jpeg (Fig 4): Subplot 'c' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_13_figure_3.jpeg (Fig 4): No valid subplots found.
+   🔍 page_20_figure_4.jpeg (Fig 8): Detecting subplot...
+   ✓ page_15_figure_5.jpeg (Fig 6) - main: Valid plot (X=stoichiometry)
+      → Processing main...
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/scifig_debug/page_15_figure_5_cropped_main.jpeg
+   [93m[Timeout][0m **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries** (Attempt 2)
+   [93m[Skip][0m page_14_figure_5.jpeg (Fig 5): Subplot 'a' does not contain ionic conductivity measurements.
+   ✓ page_14_figure_5.jpeg (Fig 5) - b: Valid plot (X=temperature_inverse)
+      → Processing b...
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/scifig_debug/page_14_figure_5_cropped_b.jpeg
+   ✓ page_15_figure_5.jpeg (Fig 6): Found 20 points total via SciFigureParser
+   🔍 page_22_figure_3.jpeg (Fig 9): Detecting subplot...
+   [93m[Skip][0m page_17_figure_4.jpeg (Fig 7): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_17_figure_4.jpeg (Fig 7): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_17_figure_4.jpeg (Fig 7): No valid subplots found.
+   🔍 page_2_figure_6.jpeg (Fig 1): Detecting subplot...
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 1): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 1): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_2_figure_6.jpeg (Fig 1): No valid subplots found.
+   🔍 page_30_figure_4.jpeg (Unknown): Detecting subplot...
+   [93m[Skip][0m page_20_figure_4.jpeg (Fig 8): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_20_figure_4.jpeg (Fig 8): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_20_figure_4.jpeg (Fig 8): Subplot 'c' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_20_figure_4.jpeg (Fig 8): No valid subplots found.
+   🔍 page_8_figure_5.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_30_figure_4.jpeg (Unknown): Subplot 'main' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_30_figure_4.jpeg (Unknown): No valid subplots found.
+   🔍 page_8_figure_6.jpeg (Fig 2): Detecting subplot...
+   [93m[Skip][0m page_8_figure_5.jpeg (Fig 2): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_8_figure_5.jpeg (Fig 2): No valid subplots found.
+   [Retry 1/3] JSON Error for **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries**: 1 validation error for ExtractionResult
+  Invalid JSON: EOF while parsing a string at line 1 column ...
+   [93m[Skip][0m page_22_figure_3.jpeg (Fig 9): Subplot 'a' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_22_figure_3.jpeg (Fig 9): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_22_figure_3.jpeg (Fig 9): No valid subplots found.
+   [93m[Skip][0m page_8_figure_6.jpeg (Fig 2): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_8_figure_6.jpeg (Fig 2): No valid subplots found.
+   [93m[Timeout][0m **Inducing high ionic conductivity in the lithium superionic argyrodites Li6+xP1-xGexS5I for all-solid-state batteries** (Attempt 3)
+   ✓ page_14_figure_5.jpeg (Fig 5): Found 118 points total via SciFigureParser
+   ... Extracting abbreviation map from paper text...
+   📖 No abbreviation mappings found in paper text
+   ... Canonicalizing Materials...
+   ... Resolving 140 remaining ambiguous material names via LLM...
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.00 → Li6PS5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.10 → Li6.1P0.9Ge0.1S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.15 → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.20 → Li6.2P0.8Ge0.2S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.25 → Li6.25P0.75Ge0.25S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.30 → Li6.3P0.7Ge0.3S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.40 → Li6.4P0.6Ge0.4S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.50 → Li6.5P0.5Ge0.5S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.60 → Li6.6P0.4Ge0.6S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.70 → Li6.7P0.3Ge0.7S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: 0.80 → Li6.8P0.2Ge0.8S5I
+   [Canon] Resolved: Activation energy E_A (x=0.0) → Li6PS5I
+   [Canon] Resolved: Activation energy E_A (x=0.08) → Li6.08P0.92Ge0.08S5I
+   [Canon] Resolved: Activation energy E_A (x=0.15) → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: Activation energy E_A (x=0.24) → Li6.24P0.76Ge0.24S5I
+   [Canon] Resolved: Activation energy E_A (x=0.26) → Li6.26P0.74Ge0.26S5I
+   [Canon] Resolved: Activation energy E_A (x=0.37) → Li6.37P0.63Ge0.37S5I
+   [Canon] Resolved: Activation energy E_A (x=0.47) → Li6.47P0.53Ge0.47S5I
+   [Canon] Resolved: Activation energy E_A (x=0.52) → Li6.52P0.48Ge0.52S5I
+   [Canon] Resolved: Activation energy E_A (x=0.69) → Li6.69P0.31Ge0.69S5I
+   [Canon] Resolved: Activation energy E_A (x=0.79) → Li6.79P0.21Ge0.79S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.0) → Li6PS5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.08) → Li6.08P0.92Ge0.08S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.15) → Li6.15P0.85Ge0.15S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.24) → Li6.24P0.76Ge0.24S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.26) → Li6.26P0.74Ge0.26S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.37) → Li6.37P0.63Ge0.37S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.47) → Li6.47P0.53Ge0.47S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.52) → Li6.52P0.48Ge0.52S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.69) → Li6.69P0.31Ge0.69S5I
+   [Canon] Resolved: Li+ - conductivity σ_{RT} (x=0.79) → Li6.79P0.21Ge0.79S5I
+   ... De-duplicating Text Measurements...
+   [Dedup] Removed duplicate: Li3PS4 (σ=1.00e-07, T=25.0°C)
+   [Dedup] Removed duplicate: Li6.6P0.4Ge0.6S5I (σ=5.40e-03, T=25.0°C)
+   [Dedup] Removed duplicate: Li6+xP1-xGexS5I (σ=5.40e-03, T=25.0°C)
+   [Dedup] Removed duplicate: sintered pellets of Li6.6P0.4Ge0.6S5I (σ=1.84e-02, T=25.0°C)
+   [Dedup] Removed duplicate: Li6+xP1-xGexS5I (σ=1.84e-02, T=25.0°C)
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 152 measurements
+      - Skipped (no data): 14 images
+      - Failed: 1 items
+
+Done! Extracted 152 points.
+Saved to: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         13
+Total Input:         15,944 tokens
+Total Output:        42,856 tokens
+--------------------------------------------------
+TOTAL COST:          $0.1119
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 12 calls
+  - gemini-2.5-flash              : 1 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1021/jacs.8b10282
+GT-417: Li24.0P4.0S20.0I4.0 | 1.26e-06 S/cm
+GT-418: Li24.4P3.6Ge0.4S20.0I4.0 | 8.86e-06 S/cm
+GT-419: Li24.6P3.4Ge0.6S20.0I4.0 | 3.93e-05 S/cm
+GT-420: Li24.8P3.2Ge0.8S20.0I4.0 | 3.19e-05 S/cm
+GT-421: Li25.0P3.0Ge1.0S20.0I4.0 | 0.00015 S/cm
+GT-422: Li25.2P2.8Ge1.2S20.0I4.0 | 0.00065 S/cm
+GT-423: Li25.6P2.4Ge1.6S20.0I4.0 | 0.0015 S/cm
+GT-424: Li26.0P2.0Ge2.0S20.0I4.0 | 0.00186 S/cm
+GT-425: Li26.4P1.6Ge2.4S20.0I4.0 | 0.00521 S/cm
+GT-426: Li26.8P1.2Ge2.8S20.0I4.0 | 0.00554 S/cm
+GT-427: Li27.2P0.8Ge3.2S20.0I4.0 | 0.00258 S/cm
+--- Starting Validation ---
+Comparing 11 GT items vs 2782 Extracted items...
+
+============================================================
+VALIDATION SCORE: 72.7%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-417     | ✅ MATCH         | Li24.0P4.0S20.0I4.0 simplifies to Li6PS5I, and 1.26e-06 S/cm is approximately 1.2e-06 S/cm at 25C.
+GT-418     | ✅ MATCH         | Li24.4P3.6Ge0.4S20.0I4.0 simplifies to Li6.1P0.9Ge0.1S5I, which is very close to Li6.08P0.92Ge0.08S5I (x=0.1 vs x=0.08), and 8.86e-06 S/cm is approximately 8e-06 S/cm at 25C.
+GT-419     | ✅ MATCH         | Li24.6P3.4Ge0.6S20.0I4.0 simplifies to Li6.15P0.85Ge0.15S5I, and 3.93e-05 S/cm is approximately 4e-05 S/cm at 25C.
+GT-420     | ✅ MATCH         | Li24.8P3.2Ge0.8S20.0I4.0 simplifies to Li6.2P0.8Ge0.2S5I, which is very close to Li6.24P0.76Ge0.24S5I (x=0.2 vs x=0.24), and 3.19e-05 S/cm is approximately 3.2e-05 S/cm at 25C.
+GT-421     | ✅ MATCH         | Li25.0P3.0Ge1.0S20.0I4.0 simplifies to Li6.25P0.75Ge0.25S5I, which is very close to Li6.26P0.74Ge0.26S5I (x=0.25 vs x=0.26), and 0.00015 S/cm is approximately 0.00016 S/cm at 25C.
+GT-422     | ❌ MISSING/BAD   | No extracted data found for Li6.3P0.7Ge0.3S5I with conductivity approximately 0.00065 S/cm at room temperature. The closest extracted composition Li6.37P0.63Ge0.37S5I (x=0.37) has a significantly different x value (0.07 difference) and conductivity (0.00055 S/cm).
+GT-423     | ❌ MISSING/BAD   | No extracted data found for Li6.4P0.6Ge0.4S5I with conductivity approximately 0.0015 S/cm at room temperature. The closest extracted composition Li6.47P0.53Ge0.47S5I (x=0.47) has a significantly different x value (0.07 difference) and conductivity (0.0017 S/cm).
+GT-424     | ✅ MATCH         | Li26.0P2.0Ge2.0S20.0I4.0 simplifies to Li6.5P0.5Ge0.5S5I, which is very close to Li6.52P0.48Ge0.52S5I (x=0.5 vs x=0.52), and 0.00186 S/cm is approximately 0.0021 S/cm at 25C.
+GT-425     | ✅ MATCH         | Li26.4P1.6Ge2.4S20.0I4.0 simplifies to Li6.6P0.4Ge0.6S5I, and 0.00521 S/cm is approximately 0.0054 S/cm at 24.85C.
+GT-426     | ✅ MATCH         | Li26.8P1.2Ge2.8S20.0I4.0 simplifies to Li6.7P0.3Ge0.7S5I, which is very close to Li6.69P0.31Ge0.69S5I (x=0.7 vs x=0.69), and 0.00554 S/cm is approximately 0.0052 S/cm at 25C.
+GT-427     | ❌ MISSING/BAD   | No extracted data found for Li6.8P0.2Ge0.8S5I with conductivity approximately 0.00258 S/cm at room temperature. The closest extracted composition Li6.79P0.21Ge0.79S5I (x=0.79) has a significantly different conductivity (0.0054 S/cm).
+
+Full report saved to fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_extracted_validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries
+[0;34m[INFO][0m DOI: 10.1021/jacs.8b10282
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries_v5_pipeline_20260211_102829.log
+

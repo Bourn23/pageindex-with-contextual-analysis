@@ -1,0 +1,41 @@
+{
+  "patterns_missed": [
+    {
+      "pattern": "Systematic failure to extract data from tables with hierarchical headers and material acronyms.",
+      "examples": [
+        "Li7.8Al1.8Ti10.2P18.0O72.0 | 0.0062 S/cm @ Room Temp",
+        "Li7.2Cr1.2Ti10.8P18.0O72.0 | 0.00043 S/cm @ Room Temp",
+        "Li7.8Fe1.8Ti10.2P18.0O72.0 | 0.0023 S/cm @ Room Temp"
+      ],
+      "source": "Table 2 on page 7. All 13 missing ground truth data points originate from the 'BULK' section of this table.",
+      "root_cause": "The data extractor is likely unable to parse tables with complex, multi-level headers (e.g., 'BULK' and 'G.B.' spanning multiple sub-columns). Furthermore, it fails to link the material acronyms in the 'Sample' column (e.g., 'LATP03') to their corresponding data rows.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Failure to resolve variable-based chemical formulas using definitions from the document text.",
+      "examples": [
+        "LATP03 should resolve to Li1.3Al0.3Ti1.7(PO4)3",
+        "LFTP03 should resolve to Li1.3Fe0.3Ti1.7(PO4)3"
+      ],
+      "source": "The resolution logic is described in Section 2.1, page 2: '...termed LATP for Al, LCTP for Cr and LFTP for Fe samples followed by the x value in the general formula' for the base formula Li1+xMxTi2-x(PO4)3.",
+      "root_cause": "The pipeline lacks a document-level context and entity resolution mechanism. It cannot find the textual definition of the acronym system and the base formula and then apply this logic to the abbreviated names found in Table 2.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Inconsistent parsing of scientific notation and units with special characters.",
+      "examples": [
+        "6.0 x 10\u207b\u2075 S cm\u207b\u00b9 (from Table 2)",
+        "6.2 x 10\u207b\u00b3 S cm\u207b\u00b9 (from abstract and Table 2)"
+      ],
+      "source": "Table 2 and the abstract. The table uses Unicode superscripts (\u207b\u00b9) and a multiplication symbol 'x'.",
+      "root_cause": "The value and unit parser may not be robust enough to handle Unicode superscripts for exponents and units (e.g., '\u207b\u00b9', '\u207b\u00b3', '\u207b\u2075') or different representations of scientific notation. The primary failure is not finding the table, but this represents a likely secondary failure point.",
+      "prevalence": "occasional"
+    }
+  ],
+  "generic_suggestions": [
+    "Implement a hierarchical table parsing module capable of processing multi-level headers and merged cells, ensuring data cells are correctly associated with their complete column context (e.g., 'BULK' -> '\u03c3RT').",
+    "Develop a document-level entity resolution engine to find and apply definitions for acronyms and variable-based chemical formulas, enabling the conversion of abbreviated material names into full stoichiometric formulas.",
+    "Integrate a chemical formula canonicalization library to normalize all extracted compositions into a standardized format, resolving discrepancies between different valid representations (e.g., empirical vs. unit cell formulas).",
+    "Enhance the value parser to robustly handle scientific notation expressed with Unicode superscripts (e.g., 10\u207b\u2075) and various multiplication symbols (x, *, \u00b7), in addition to standardizing unit representations (e.g., cm\u207b\u00b9 to S/cm)."
+  ]
+}

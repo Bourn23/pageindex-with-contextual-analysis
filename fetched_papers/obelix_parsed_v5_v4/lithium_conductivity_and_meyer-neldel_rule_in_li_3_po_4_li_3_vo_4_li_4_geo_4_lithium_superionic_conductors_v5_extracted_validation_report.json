@@ -1,0 +1,96 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-69",
+      "extracted_match": "Li3V0.2P0.8O4 | 1.8e-13 S/cm",
+      "is_match": true,
+      "reason": "Li6.0P0.4V1.6O8.0 simplifies to Li3P0.2V0.8O4, and 1.31e-13 S/cm is approximately 1.8e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-70",
+      "extracted_match": "Li3VO4 | 1.8e-13 S/cm",
+      "is_match": true,
+      "reason": "Li6.0V2.0O8.0 simplifies to Li3VO4, and 9.2e-14 S/cm is approximately 1.8e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-124",
+      "extracted_match": "Li3.2P0.8Ge0.2O4 | 1.3e-06 S/cm",
+      "is_match": true,
+      "reason": "Li12.8Ge0.8P3.2O16.0 simplifies to Li3.2Ge0.2P0.8O4, and 1.14e-06 S/cm is approximately 1.3e-06 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-125",
+      "extracted_match": "Li3.2V0.8Ge0.2O4 | 1.8e-05 S/cm",
+      "is_match": true,
+      "reason": "Li12.8Ge0.8V3.2O16.0 simplifies to Li3.2Ge0.2V0.8O4, and 1.9e-05 S/cm is approximately 1.8e-05 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-126",
+      "extracted_match": "Li3.4Ge0.4P0.6O4 | 4.634e-06 S/cm",
+      "is_match": true,
+      "reason": "Li13.6Ge1.6P2.4O16.0 simplifies to Li3.4Ge0.4P0.6O4, and 4.5e-06 S/cm is approximately 4.634e-06 S/cm at ~29C."
+    },
+    {
+      "ground_truth_id": "GT-127",
+      "extracted_match": "Li3.4V0.6Ge0.4O4 | 6.5e-07 S/cm",
+      "is_match": true,
+      "reason": "Li13.6Ge1.6V2.4O16.0 simplifies to Li3.4Ge0.4V0.6O4, and 8.89e-07 S/cm is approximately 6.5e-07 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-128",
+      "extracted_match": "Li3.6P0.4Ge0.6O4 | 1.1e-05 S/cm",
+      "is_match": true,
+      "reason": "Li14.4Ge2.4P1.6O16.0 simplifies to Li3.6Ge0.6P0.4O4, and 1.1e-05 S/cm is exactly 1.1e-05 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-129",
+      "extracted_match": "Li3.6V0.4Ge0.6O4 | 3.2e-05 S/cm",
+      "is_match": true,
+      "reason": "Li14.4Ge2.4V1.6O16.0 simplifies to Li3.6Ge0.6V0.4O4, and 3.19e-05 S/cm is approximately 3.2e-05 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-130",
+      "extracted_match": "Li3.8P0.2Ge0.8O4 | 2.5e-06 S/cm",
+      "is_match": false,
+      "reason": "Li15.2Ge3.2P0.8O16.0 simplifies to Li3.8Ge0.8P0.2O4, but 1.03e-06 S/cm is not approximately 2.5e-06 S/cm at 30C (factor of ~2.4 difference)."
+    },
+    {
+      "ground_truth_id": "GT-131",
+      "extracted_match": "Li3.8V0.2Ge0.8O4 | 1.4e-06 S/cm",
+      "is_match": false,
+      "reason": "Li15.2Ge3.2V0.8O16.0 simplifies to Li3.8Ge0.8V0.2O4, but 2.71e-06 S/cm is not approximately 1.4e-06 S/cm at 30C (factor of ~1.9 difference)."
+    },
+    {
+      "ground_truth_id": "GT-132",
+      "extracted_match": "Li3P0.4V0.6O4 | 6.5e-13 S/cm",
+      "is_match": true,
+      "reason": "Li12.0P1.6V2.4O16.0 simplifies to Li3P0.4V0.6O4, and 3.55e-13 S/cm is approximately 6.5e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-133",
+      "extracted_match": "Li3P0.6V0.4O4 | 3.5e-13 S/cm",
+      "is_match": true,
+      "reason": "Li12.0P2.4V1.6O16.0 simplifies to Li3P0.6V0.4O4, and 3.2e-13 S/cm is approximately 3.5e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-134",
+      "extracted_match": "Li3P0.8V0.2O4 | 2.8e-13 S/cm",
+      "is_match": true,
+      "reason": "Li12.0P3.2V0.8O16.0 simplifies to Li3P0.8V0.2O4, and 2.05e-13 S/cm is approximately 2.8e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-135",
+      "extracted_match": "Li3PO4 | 3.5e-13 S/cm",
+      "is_match": true,
+      "reason": "Li12.0P4.0O16.0 simplifies to Li3PO4, and 1.75e-13 S/cm is approximately 3.5e-13 S/cm at 30C."
+    },
+    {
+      "ground_truth_id": "GT-136",
+      "extracted_match": "Li4GeO4 | 1.5e-12 S/cm",
+      "is_match": true,
+      "reason": "Li16.0Ge4.0O16.0 simplifies to Li4GeO4, and 1.3e-12 S/cm is approximately 1.5e-12 S/cm at 30C."
+    }
+  ],
+  "total_ground_truth": 15,
+  "total_matches": 13
+}

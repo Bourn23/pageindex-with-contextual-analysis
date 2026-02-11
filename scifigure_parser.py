@@ -7,13 +7,18 @@ from PIL import Image, ImageDraw
 import matplotlib.pyplot as plt
 from google import genai
 from google.genai import types
+import re
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional, Literal
 
+class ValueRange(BaseModel):
+    min: float = Field(..., description="Minimum value on this axis")
+    max: float = Field(..., description="Maximum value on this axis")
+
 class AxisDetails(BaseModel):
-    title: str = Field(..., description="The full text label of the axis (e.g., 'Ionic Conductivity')")
-    unit: Optional[str] = Field(None, description="The specific unit extracted from the label (e.g., 'S/cm', 'mS/cm', 'eV', '1000/T')")
+    title: str = Field(..., description="The full text label of the axis (e.g., 'Ionic Conductivity', '1000/T')")
+    unit: Optional[str] = Field(None, description="The specific unit extracted from the label (e.g., 'S/cm', 'K⁻¹', 'eV')")
 
     quantity_type: Literal[
         "conductivity", 
@@ -21,18 +26,40 @@ class AxisDetails(BaseModel):
         "temperature_absolute",   # Normal T (Celsius/Kelvin)
         "temperature_inverse",    # Arrhenius 1000/T
         "stoichiometry",          # x, composition, doping amount
+        "frequency",              # NEW: Add this explicitly
+        "impedance",              # NEW: For Nyquist plots
         "voltage", 
         "capacity",
         "other"
-    ] = Field(..., description="The physical quantity being plotted. Classify '1000/T' as 'temperature_inverse'.")
+    ] = Field(..., description="The physical quantity being plotted. Classify '1000/T' as 'temperature_inverse', 'Hz/frequency' as 'frequency'.")
 
     scale_type: Literal["linear", "log", "reciprocal", "unknown"] = Field(
-        "linear", description="The scale of the axis. 'log' for conductivity often, 'reciprocal' for 1000/T."
+        "linear", description="The scale of the axis. 'log' for log(σ), 'reciprocal' for 1000/T."
+    )
+    
+    # NEW: Add value range for validation
+    value_range: Optional[ValueRange] = Field(
+        None, 
+        description="Min and max values on this axis"
+    )
+class SubplotDetection(BaseModel):
+    contains_conductivity_data: bool = Field(
+        ..., 
+        description="TRUE only if this subplot plots Ionic Conductivity (σ) vs Temperature or Stoichiometry. FALSE for frequency plots, Nyquist plots, XRD, or structure diagrams."
     )
 
-class SubplotDetection(BaseModel):
-    contains_conductivity_data: bool = Field(..., description="TRUE only if this subplot plots Ionic Conductivity (sigma). Ignore XRD, cyclic voltammetry, or capacity plots.")# CRITICAL: Classify the plot structure immediately
-    
+    plot_type: Literal[
+        "arrhenius",           # σ vs 1000/T
+        "temperature_dep",     # σ vs T
+        "composition_dep",     # σ vs x (stoichiometry)
+        "frequency_dep",       # σ vs f (impedance spectroscopy)
+        "nyquist",            # Z'' vs Z'
+        "other"
+    ] = Field(
+        "other", 
+        description="Classify the plot type to aid filtering"
+    )
+
     # CRITICAL: Separate axes to handle Figure 6 (Dual Axis) scenarios
     x_axis: AxisDetails
     left_y_axis: AxisDetails
@@ -40,7 +67,10 @@ class SubplotDetection(BaseModel):
     
     box_2d: List[int] = Field(..., description="Bounding box [ymin, xmin, ymax, xmax] in 0-1000 integer coordinates.")
     label: str = Field(..., description="Panel label if present (e.g., 'a', 'b'). Use 'main' if single plot.")
-    
+    legend_labels: Optional[List[str]] = Field(
+        None,
+        description="List of series labels from the legend (e.g., ['223K', '263K', '303K'] or ['Fe doped', 'Al doped'])"
+    )
 class FigureAnalysis(BaseModel):
     is_multi_panel: bool = Field(..., description="True if image contains multiple subplots")
     subplots: List[SubplotDetection]   
@@ -111,6 +141,30 @@ class SciFigureParser:
             
         return os.path.join(debug_dir, f"{file_name}{suffix}{extension}")
 
+    def _sanitize_schema(self, schema: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Recursively removes 'additionalProperties' from the schema.
+        Also handles other potential Gemini API unsupported schema features if needed.
+        """
+        if not isinstance(schema, dict):
+            return schema
+            
+        # Create a copy to avoid modifying the original in place if that matters, 
+        # though usually we pass a fresh one.
+        new_schema = schema.copy()
+        
+        if "additionalProperties" in new_schema:
+            del new_schema["additionalProperties"]
+            
+        # Recursive cleaning
+        for key, value in new_schema.items():
+            if isinstance(value, dict):
+                new_schema[key] = self._sanitize_schema(value)
+            elif isinstance(value, list):
+                new_schema[key] = [self._sanitize_schema(item) if isinstance(item, dict) else item for item in value]
+                
+        return new_schema
+
     def _get_image_part(self, data: bytes, mime_type: str = "image/jpeg") -> types.Part:
         if self._is_gemini_3():
             return types.Part(
@@ -123,7 +177,7 @@ class SciFigureParser:
         else:
             return types.Part.from_bytes(data=data, mime_type=mime_type)
 
-    def detect_subplot(self, image_path: str, query: str) -> Dict[str, float]:
+    def detect_subplot(self, image_path: str, query: str) -> Dict[str, Any]:
         """
         Locates a subplot in a multi-panel figure based on a query.
         Returns normalized coordinates: ymin, xmin, ymax, xmax (0-1000).
@@ -202,46 +256,44 @@ class SciFigureParser:
 
         return result
 
-    async def detect_subplot_async(self, image_path: str, query: str) -> Dict[str, float]:
+    async def detect_subplot_async(self, image_path: str, query: str) -> Dict[str, Any]:
         """
         Locates a subplot in a multi-panel figure based on a query (Asynchronous).
         """
         with open(image_path, "rb") as f:
             image_data = f.read()
         
-        # prompt = f"""Identify and locate all subplots/panels "{query}" plot/subplots in this image. 
+        prompt = f"""Analyze this scientific figure to locate "{query}" plots/subplots.
         
-        # CRITICAL INSTRUCTIONS: 
-        # 1. Capture the ENTIRE subplot including all axes, axis titles/labels, units, tick marks, and LEGEND.
-        # 2. LEGEND IMPORTANCE: The bounding box MUST include the legend/key (which explains symbols/colors), even if it is floating inside the plot or outside the axes.
-        # 3. Specifically for Axis Titles: Ensure the bounding box extends far enough to include the text describing the units (e.g., 'S/cm', '1000/T').
-        # 4. Identify if this is a multi-panel figure.
-        # 5. For EVERY relevant subplot:
-        #    - Provide a bounding box.
-        #    - Assign a short label (e.g., 'A', 'B').
-        #    - Extract the text of the X and Y axis titles including units.
-        # 6. If there is only ONE plot total, set "is_multi_plot" to false.
-        # 7. Return the result in a structured JSON format."""
-
-        prompt = f"""Analyze this scientific figure. locate "{query}" plot/subplots in this image.
+        CRITICAL FILTERING INSTRUCTIONS:
+        1. IDENTIFY X-AXIS TYPE carefully:
+        - If X-axis shows "f", "Hz", "frequency" → classify as 'other' and set contains_conductivity_data=FALSE
+        - If X-axis shows "1000/T", "T⁻¹", "K⁻¹" → classify as 'temperature_inverse'
+        - If X-axis shows "T", "Temperature", "°C", "K" → classify as 'temperature_absolute'
+        - If X-axis shows "x", "composition", "stoichiometry", "Li content" → classify as 'stoichiometry'
         
-        CRITICAL TASK: Handle Dual Y-Axes carefully.
-        Sometimes battery material plots show 'Conductivity' on one axis (e.g., Right, S/cm) and 'Activation Energy' on the other (e.g., Left, eV).
+        2. LEGEND INTERPRETATION:
+        - In conductivity-vs-frequency plots: Legend labels like "223K", "263K" are TEMPERATURES (experimental conditions), NOT composition
+        - In Arrhenius plots: Legend labels describe material composition (e.g., "Fe doped", "x=0.2")
+        - This distinction is CRITICAL for proper data extraction
         
-        CRITICAL FOR FILTERING:
-        - Set contains_conductivity_data=True ONLY if the plot actually shows conductivity measurements.
-        - Mark False for XRD patterns, structure diagrams, or generic battery cycling data.
-
-        INSTRUCTIONS:
-        1. BOUNDING BOX: Capture the specific subplot area, including ALL axis titles, tick labels, and the LEGEND. 
-        2. LEGEND: If the legend is floating (inside or outside), include it in the box.
-        3. CLASSIFY:
-            - If the axis says '1000/T', classify quantity_type as 'temperature_inverse'.
-            - If the axis says 'x' or 'Li content', classify quantity_type as 'stoichiometry'.
-            - If the axis says 'log(sigma)', classify quantity_type as 'conductivity'.
-        4. AXIS PARSING: 
-           - Extract the text for Left Y-Axis and Right Y-Axis separately.
-           - EXTRACT UNITS explicitly (e.g., if label is "sigma / S cm-1", unit is "S cm-1").
+        3. SET contains_conductivity_data=TRUE only if:
+        - Y-axis shows conductivity (σ, S/cm, log(σ))
+        - AND X-axis is temperature-related OR stoichiometry
+        - REJECT: frequency plots, Nyquist plots, XRD, structure diagrams
+        
+        4. DUAL Y-AXES:
+        - Some plots show conductivity (S/cm) on one axis and activation energy (eV) on the other
+        - Extract BOTH left_y_axis and right_y_axis separately with their units
+        
+        5. BOUNDING BOX:
+        - Include ALL axis labels, tick marks, and LEGEND
+        - Extend box to capture unit labels (e.g., "S cm⁻¹", "1000/T")
+        
+        6. UNITS EXTRACTION:
+        - Parse axis labels to extract explicit units
+        - Example: "σ / S cm⁻¹" → unit = "S cm⁻¹"
+        - Example: "1000/T (K⁻¹)" → unit = "K⁻¹"
         
         Output valid JSON matching the FigureAnalysis schema."""
 
@@ -257,7 +309,7 @@ class SciFigureParser:
             ],
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
-                response_schema=FigureAnalysis.model_json_schema()
+                response_schema=self._sanitize_schema(FigureAnalysis.model_json_schema())
             )
         )
         
@@ -270,7 +322,7 @@ class SciFigureParser:
             return None
         
         if self.debug and self.save_debug:
-            self._visualize_detection(image_path, result.get('detections', []), query)
+            self._visualize_detection(image_path, result.get('subplots', []), query)
 
         return result
 
@@ -295,7 +347,7 @@ class SciFigureParser:
         img.save(debug_path)
         print(f"[DEBUG] Detection visualization saved to {debug_path}")
 
-    def crop_image(self, image_path: str, box: Dict[str, float], output_path: str = None, padding: int = 0, suffix: str = "_cropped") -> str:
+    def crop_image(self, image_path: str, box: Dict[str, Any], output_path: str = None, padding: int = 0, suffix: str = "_cropped") -> str:
         """
         Crops an image based on normalized coordinates (0-1000).
         Automatically adds safety padding if specified.
@@ -508,16 +560,27 @@ class SciFigureParser:
         right_def = "None"
         
         if axis_hints:
-            x_def = f"{axis_hints.get('x_axis', {}).get('title_text', 'X-Axis')} (Type: {axis_hints.get('x_axis', {}).get('quantity_type', 'generic')})"
+            x_axis = axis_hints.get('x_axis', {})
+            x_quantity = x_axis.get('quantity_type', 'other')
+            x_range = x_axis.get('value_range')
+            x_def = f"{x_axis.get('title_text', 'X-Axis')} (Type: {x_quantity}, Unit: {x_axis.get('unit', 'N/A')})"
+            if x_range:
+                x_def += f" [Range: {x_range.get('min', '?')} to {x_range.get('max', '?')}]"
             
             # Left Y-Axis details
             l_axis = axis_hints.get('left_y_axis', {})
-            left_def = f"{l_axis.get('title_text', 'Y-Axis')} (Unit: {l_axis.get('unit', 'N/A')})"
+            l_range = l_axis.get('value_range')
+            left_def = f"{l_axis.get('title_text', 'Y-Axis')} (Type: {l_axis.get('quantity_type', 'other')}, Unit: {l_axis.get('unit', 'N/A')})"
+            if l_range:
+                left_def += f" [Range: {l_range.get('min', '?')} to {l_range.get('max', '?')}]"
             
             # Right Y-Axis details (if it exists)
             r_axis = axis_hints.get('right_y_axis')
             if r_axis:
+                r_range = r_axis.get('value_range')
                 right_def = f"{r_axis.get('title_text', 'Secondary Y')} (Unit: {r_axis.get('unit', 'N/A')})"
+                if r_range:
+                    right_def += f" [Range: {r_range.get('min', '?')} to {r_range.get('max', '?')}]"
 
         prompt = f"""You are a data extraction engine. Extract numerical measurements/points from this plot.
 
@@ -528,29 +591,33 @@ class SciFigureParser:
             - RIGHT Y-AXIS: {right_def}
             
             {"CONTEXT FROM CAPTION: " + context if context else ""}
-            INSTRUCTIONS:
-            1. SCAN: Look for markers (circles, squares, triangles). 
-            2. IDENTIFY SERIES: Use the Legend to name them (e.g. "Sintered").
-            3. ROUTE:
-            - If a series uses the unit from the LEFT definition, set mapped_y_axis="left".
-            - If a series uses the unit from the RIGHT definition, set mapped_y_axis="right".
-            - If there is only one Y-axis, always use "left".
-            4. EXTRACT VECTORS: For each series, create a list of X values and a corresponding list of Y values.
-                - Ensure x_values and y_values have the same length.
-            """
-            # 1. Identify the axes, their units, and the scale type (linear or log).
-            # 2. Identify X-AXIS TYPE: Is it "temperature", "stoichiometry" (variable x), or "other"?
-            # 3. Extract numerical data points from the chart/plot.
-            # 4. LEGEND MAPPING: Distinguish series using the EXACT text from the figure legend (e.g. "Fe doped"), NOT "Series 1".
-            # 5. Verify if this plot represents ionic conductivity measurements. 
-            #    - If X-axis is temperature (e.g. 1000/T), ensure unit string says "1000/T".
-            #    - If X-axis is stoichiometry (e.g. x), extract the numeric value.
-            #    - Check if Y-axis is Log(Sigma). If values are negative but unit says S/cm, output unit as "log(S/cm)".
-            # 5. DUAL Y-AXES:
-            #    - Some plots have two Y-axes (left and right). Identify if this is the case.
-            #    - Map data points to the correct Y-axis (e.g. circles to the left axis, squares to the right axis).
-            # 6. If grid patches are provided, use them to verify tick marks and small text details.
-            # Return the result in structured JSON format."""
+            1. SERIES IDENTIFICATION:
+       - Use EXACT text from the legend/key
+       - DO NOT use generic labels like "Series 1" or "Data 1"
+       - Examples: "Fe substitution", "x=0.2", "Cold-pressed", "223K"
+    
+    2. LEGEND INTERPRETATION (CONTEXT-DEPENDENT):
+       - In FREQUENCY plots (X=Hz): Legend shows temperatures ("223K", "263K")
+         → These are experimental conditions, NOT material composition
+         → DO NOT extract data from frequency plots
+       - In ARRHENIUS plots (X=1000/T): Legend shows materials ("Fe doped", "Al doped")
+         → These are material variants to extract
+    
+    3. DATA EXTRACTION:
+       - Extract EVERY visible data point (do not sample)
+       - Create parallel lists: x_values and y_values (same length)
+       - Preserve ALL intermediate points between tick marks
+    
+    4. Y-AXIS ROUTING:
+       - If a series uses the LEFT Y-axis unit → mapped_y_axis="left"
+       - If a series uses the RIGHT Y-axis unit → mapped_y_axis="right"
+       - If only one Y-axis exists → always use "left"
+    
+    5. COMPLETENESS:
+       - If plot has 50 data points, extract all 50
+       - Do not summarize or skip dense regions
+    
+    Return structured JSON matching the ExtractionResult schema."""
 
         with open(image_path, "rb") as f:
             original_image_data = f.read()
@@ -583,13 +650,16 @@ class SciFigureParser:
             contents=[types.Content(parts=parts)],
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
-                response_schema=ExtractionResult.model_json_schema()
+                response_schema=self._sanitize_schema(ExtractionResult.model_json_schema())
             )
         )
 
         try:
             result_obj = ExtractionResult.model_validate_json(response.text)
             result = result_obj.model_dump()
+
+            # Validate before returning
+            result = self._validate_extraction(result, axis_hints)
 
             if axis_hints:
                 result['axis_metadata'] = {
@@ -606,6 +676,88 @@ class SciFigureParser:
             
         return result
 
+    def _validate_extraction(self, result: Dict[str, Any], axis_hints: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Validate extraction results against axis hints, including value range bounds."""
+        
+        if not axis_hints:
+            return result
+        
+        x_quantity = axis_hints.get('x_axis', {}).get('quantity_type', 'other')
+        
+        # Filter out invalid extractions
+        if x_quantity == 'frequency':
+            result['warnings'] = result.get('warnings', [])
+            result['warnings'].append(
+                "CRITICAL: X-axis is frequency. This data should NOT have been extracted. "
+                "Please report this as a detection error."
+            )
+            result['data_series'] = []  # Clear all data
+        
+        # Validate series labels for temperature plots
+        if x_quantity in ['temperature_inverse', 'temperature_absolute']:
+            for series in result.get('data_series', []):
+                label = series.get('series_label', '')
+                # Check if label looks like temperature (e.g., "223K", "300K")
+                if re.match(r'^\d+K$', label):
+                    if 'warnings' not in result:
+                        result['warnings'] = []
+                    result['warnings'].append(
+                        f"Series '{label}' looks like temperature but X-axis is also temperature. "
+                        f"This might indicate wrong subplot was extracted."
+                    )
+        
+        # --- NEW: Axis-bounds validation ---
+        # Check if extracted values fall within the detected axis range
+        x_range = axis_hints.get('x_axis', {}).get('value_range')
+        y_range = axis_hints.get('left_y_axis', {}).get('value_range')
+        
+        if x_range or y_range:
+            for series in result.get('data_series', []):
+                x_vals = series.get('x_values', [])
+                y_vals = series.get('y_values', [])
+                
+                filtered_x = []
+                filtered_y = []
+                oob_count = 0
+                
+                for x, y in zip(x_vals, y_vals):
+                    x_ok = True
+                    y_ok = True
+                    
+                    if x_range:
+                        x_min = x_range.get('min')
+                        x_max = x_range.get('max')
+                        if x_min is not None and x_max is not None:
+                            # Allow 15% margin for edge points
+                            margin = abs(x_max - x_min) * 0.15
+                            if x < x_min - margin or x > x_max + margin:
+                                x_ok = False
+                    
+                    if y_range:
+                        y_min = y_range.get('min')
+                        y_max = y_range.get('max')
+                        if y_min is not None and y_max is not None:
+                            margin = abs(y_max - y_min) * 0.15
+                            if y < y_min - margin or y > y_max + margin:
+                                y_ok = False
+                    
+                    if x_ok and y_ok:
+                        filtered_x.append(x)
+                        filtered_y.append(y)
+                    else:
+                        oob_count += 1
+                
+                if oob_count > 0:
+                    if 'warnings' not in result:
+                        result['warnings'] = []
+                    result['warnings'].append(
+                        f"Removed {oob_count} out-of-bounds points from series '{series.get('series_label', '?')}'"
+                    )
+                    series['x_values'] = filtered_x
+                    series['y_values'] = filtered_y
+        
+        return result
+        
     def _visualize_extraction(self, image_path: str, result: Dict[str, Any]):
         """
         Plots the extracted data side-by-side with the original input figure.

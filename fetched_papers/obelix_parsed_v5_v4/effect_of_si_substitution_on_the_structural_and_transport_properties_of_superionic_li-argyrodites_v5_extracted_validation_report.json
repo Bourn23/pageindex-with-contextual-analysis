@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-388",
+      "extracted_match": "Li6PS5Br | 0.00072 S/cm",
+      "is_match": true,
+      "reason": "The reduced formula Li6PS5Br matches, and 0.00072 S/cm is approximately 0.000701 S/cm (2.7% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-389",
+      "extracted_match": "Li6.025P0.975Si0.025S5Br | 0.00089 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.025P0.975Si0.025S5Br matches, and 0.00089 S/cm is approximately 0.000878 S/cm (1.4% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-390",
+      "extracted_match": "Li6.05P0.95Si0.05S5Br | 0.00045 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.05P0.95Si0.05S5Br matches, and 0.00045 S/cm is approximately 0.000437 S/cm (3.0% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-391",
+      "extracted_match": "Li6.075P0.925Si0.075S5Br | 0.00088 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.075P0.925Si0.075S5Br matches, and 0.00088 S/cm is approximately 0.000873 S/cm (0.8% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-392",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No extracted data found with a composition matching Li6.1P0.95Si0.1S5Br and conductivity around 0.000799 S/cm at room temperature. The extracted Li6.1P0.9Si0.1S5Br has a different P stoichiometry."
+    },
+    {
+      "ground_truth_id": "GT-393",
+      "extracted_match": "Li6.125P0.875Si0.125S5Br | 0.00091 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.125P0.875Si0.125S5Br matches, and 0.00091 S/cm is approximately 0.000902 S/cm (0.9% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-394",
+      "extracted_match": "Li6.175P0.825Si0.175S5Br | 0.00095 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.175P0.825Si0.175S5Br matches, and 0.00095 S/cm is approximately 0.000931 S/cm (2.0% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-395",
+      "extracted_match": "Li6.2P0.8Si0.2S5Br | 0.00171 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.2P0.8Si0.2S5Br matches, and 0.00171 S/cm is approximately 0.00169 S/cm (1.2% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-396",
+      "extracted_match": "Li6.225P0.775Si0.225S5Br | 0.00111 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.225P0.775Si0.225S5Br matches, and 0.00111 S/cm is approximately 0.00108 S/cm (2.8% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-397",
+      "extracted_match": "Li6.25P0.75Si0.25S5Br | 0.00145 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.25P0.75Si0.25S5Br matches, and 0.00145 S/cm is approximately 0.00141 S/cm (2.8% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-398",
+      "extracted_match": "Li6.3P0.7Si0.3S5Br | 0.00169 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.3P0.7Si0.3S5Br matches, and 0.00169 S/cm is approximately 0.00165 S/cm (2.4% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-399",
+      "extracted_match": "Li6.35P0.65Si0.35S5Br | 0.00236 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.35P0.65Si0.35S5Br matches, and 0.00236 S/cm is approximately 0.00234 S/cm (0.9% difference) at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-400",
+      "extracted_match": "Li6.5P0.5Si0.5S5Br | 0.00223 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.5P0.5Si0.5S5Br matches, and 0.00223 S/cm is approximately 0.00219 S/cm (1.8% difference) at room temperature."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 12
+}

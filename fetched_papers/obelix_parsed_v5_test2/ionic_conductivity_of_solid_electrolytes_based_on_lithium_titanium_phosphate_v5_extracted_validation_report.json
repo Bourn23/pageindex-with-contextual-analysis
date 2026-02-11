@@ -1,0 +1,186 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-235",
+      "extracted_match": "LiTi2(PO4)3 | 2e-06 S/cm",
+      "is_match": true,
+      "reason": "Li6.0Ti12.0P18.0O72.0 simplifies to LiTi2(PO4)3, and 2e-06 S/cm matches the extracted value at 24.85C."
+    },
+    {
+      "ground_truth_id": "GT-242",
+      "extracted_match": "Li1.2Ti2Si0.2P2.8O12 | 8.6e-05 S/cm",
+      "is_match": true,
+      "reason": "Li7.2Ti12.0Si1.2P16.8O72.0 simplifies to Li1.2Ti2Si0.2P2.8O12, and 8.6e-05 S/cm matches the extracted value at 24.85C."
+    },
+    {
+      "ground_truth_id": "GT-243",
+      "extracted_match": "Li1.3Ti2Si0.3P2.7O12 | 0.00032 S/cm",
+      "is_match": true,
+      "reason": "Li7.8Ti12.0Si1.8P16.2O72.0 simplifies to Li1.3Ti2Si0.3P2.7O12, and 0.00032 S/cm matches the extracted value at 24.85C."
+    },
+    {
+      "ground_truth_id": "GT-244",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2Al0.2Ti1.8(PO4)3 with conductivity 0.000595 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-245",
+      "extracted_match": "Li1.3Al0.3Ti1.7(PO4)3 | 0.0007 S/cm",
+      "is_match": true,
+      "reason": "Li7.8Al1.8Ti10.2P18.0O72.0 simplifies to Li1.3Al0.3Ti1.7(PO4)3, and 0.0007 S/cm is approximately 0.000722 S/cm at 25.0C."
+    },
+    {
+      "ground_truth_id": "GT-246",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4Al0.4Ti1.6(PO4)3 with conductivity 0.000388 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-247",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5Al0.5Ti1.5(PO4)3 with conductivity 0.000248 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-248",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2Cr0.2Ti1.8(PO4)3 with conductivity 1.82e-05 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-249",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3Cr0.3Ti1.7(PO4)3 with conductivity 3.51e-05 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-250",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4Cr0.4Ti1.6(PO4)3 with conductivity 0.000149 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-251",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5Cr0.5Ti1.5(PO4)3 with conductivity 0.000386 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-252",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2Ga0.2Ti1.8(PO4)3 with conductivity 0.000162 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-253",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3Ga0.3Ti1.7(PO4)3 with conductivity 0.000261 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-254",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4Ga0.4Ti1.6(PO4)3 with conductivity 0.000128 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-255",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5Ga0.5Ti1.5(PO4)3 with conductivity 0.000122 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-256",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2Fe0.2Ti1.8(PO4)3 with conductivity 0.00018 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-257",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3Fe0.3Ti1.7(PO4)3 with conductivity 0.000246 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-258",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4Fe0.4Ti1.6(PO4)3 with conductivity 0.000392 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-259",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5Fe0.5Ti1.5(PO4)3 with conductivity 0.000174 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-260",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2Sc0.2Ti1.8(PO4)3 with conductivity 0.00069 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-261",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3Sc0.3Ti1.7(PO4)3 with conductivity 0.000703 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-262",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4Sc0.4Ti1.6(PO4)3 with conductivity 0.000515 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-263",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2In0.2Ti1.8(PO4)3 with conductivity 0.00039 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-264",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3In0.3Ti1.7(PO4)3 with conductivity 0.000393 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-265",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4In0.4Ti1.6(PO4)3 with conductivity 0.000302 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-266",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5In0.5Ti1.5(PO4)3 with conductivity 0.000204 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-267",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.2La0.2Ti1.8(PO4)3 with conductivity 8e-05 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-268",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.3La0.3Ti1.7(PO4)3 with conductivity 0.000523 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-269",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.4La0.4Ti1.6(PO4)3 with conductivity 0.000498 S/cm at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-270",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching extracted data found for Li1.5La0.5Ti1.5(PO4)3 with conductivity 0.000281 S/cm at room temperature."
+    }
+  ],
+  "total_ground_truth": 28,
+  "total_matches": 4
+}

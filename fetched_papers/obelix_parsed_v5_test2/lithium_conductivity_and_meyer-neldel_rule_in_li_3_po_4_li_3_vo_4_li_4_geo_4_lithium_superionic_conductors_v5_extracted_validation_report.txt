@@ -1,0 +1,15 @@
+GT-69      | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li6.0P0.4V1.6O8.0' and conductivity 1.31e-13 S/cm.
+GT-70      | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li6.0V2.0O8.0' and conductivity 9.20e-14 S/cm.
+GT-124     | ✅ MATCH         | Ground truth formula 'Li12.8Ge0.8P3.2O16.0' and extracted formula 'Li3.2P0.8Ge0.2O4' normalize to 'Ge1Li16P4O20'. Conductivities 1.14e-06 S/cm and 1.10e-06 S/cm are approximate matches.
+GT-125     | ✅ MATCH         | Ground truth formula 'Li12.8Ge0.8V3.2O16.0' and extracted formula 'Li3.2V0.8Ge0.2O4' normalize to 'Ge1Li16V4O20'. Conductivities 1.90e-05 S/cm and 1.90e-05 S/cm are approximate matches.
+GT-126     | ✅ MATCH         | Ground truth formula 'Li13.6Ge1.6P2.4O16.0' and extracted formula 'Li3.4P0.6Ge0.4O4' normalize to 'Ge2Li17P3O20'. Conductivities 4.50e-06 S/cm and 4.50e-06 S/cm are approximate matches.
+GT-127     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li13.6Ge1.6V2.4O16.0' and conductivity 8.89e-07 S/cm.
+GT-128     | ✅ MATCH         | Ground truth formula 'Li14.4Ge2.4P1.6O16.0' and extracted formula 'Li3.6P0.4Ge0.6O4' normalize to 'Ge3Li18P2O20'. Conductivities 1.10e-05 S/cm and 1.20e-05 S/cm are approximate matches.
+GT-129     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li14.4Ge2.4V1.6O16.0' and conductivity 3.19e-05 S/cm.
+GT-130     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li15.2Ge3.2P0.8O16.0' and conductivity 1.03e-06 S/cm.
+GT-131     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li15.2Ge3.2V0.8O16.0' and conductivity 2.71e-06 S/cm.
+GT-132     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li12.0P1.6V2.4O16.0' and conductivity 3.55e-13 S/cm.
+GT-133     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li12.0P2.4V1.6O16.0' and conductivity 3.20e-13 S/cm.
+GT-134     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li12.0P3.2V0.8O16.0' and conductivity 2.05e-13 S/cm.
+GT-135     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li12.0P4.0O16.0' and conductivity 1.75e-13 S/cm.
+GT-136     | ❌ MISSING/BAD   | No matching extracted data found for ground truth formula 'Li16.0Ge4.0O16.0' and conductivity 1.30e-12 S/cm.

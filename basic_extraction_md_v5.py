@@ -60,6 +60,41 @@ except ImportError:
 # ============================================================================
 # UTILITIES for Robust LLM Execution + Cost Tracking
 # ============================================================================
+
+def sanitize_caption(caption: str, max_length: int = 500) -> str:
+    """
+    Sanitize figure/table captions by collapsing repetitive patterns
+    that arise from corrupted OCR (e.g., '(lacktriangle)La;' repeated 80x).
+    Also truncates to a reasonable length for LLM context windows.
+    """
+    if not caption:
+        return caption
+    
+    # 1. Collapse repeating n-grams (3-50 chars repeated 3+ times)
+    #    This catches patterns like "(lacktriangle)La; (lacktriangle)La; ..."
+    collapsed = re.sub(
+        r'((.{3,50}?)\s*)\2{2,}',  # match a phrase repeated 3+ times
+        r'\1...',  # keep one instance + ellipsis
+        caption
+    )
+    
+    # 2. Collapse runs of semicolons/commas with similar content
+    #    e.g., "(▲)La; (▲)La; (▲)La;" -> "(▲)La; ..."
+    collapsed = re.sub(
+        r'((?:[;,]\s*\([^)]*\)[^;,]{1,20})){3,}',
+        lambda m: m.group(0)[:60] + '...',
+        collapsed
+    )
+    
+    # 3. Truncate to max_length, breaking at last space
+    if len(collapsed) > max_length:
+        truncated = collapsed[:max_length]
+        last_space = truncated.rfind(' ')
+        if last_space > max_length * 0.5:
+            truncated = truncated[:last_space]
+        collapsed = truncated + '...'
+    
+    return collapsed.strip()
 class CostTracker:
     # Pricing Estimates (USD per 1M tokens) - Update as pricing changes
     # Logic: Defaults to standard Pro/Flash tiers if exact model string isn't found
@@ -163,7 +198,7 @@ async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=60, ma
                     break 
         return None, False
 
-async def safe_image_call_with_retry(img_path, context, client, model_name, sem, sf_parser=None, timeout=240, max_retries=3):
+async def safe_image_call_with_retry(img_path, context, client, model_name, sem, sf_parser=None, timeout=360, max_retries=3):
     """
     This function now only retries on ACTUAL failures, not empty results.
     """
@@ -184,7 +219,7 @@ async def safe_image_call_with_retry(img_path, context, client, model_name, sem,
             print(f"   ⏱️  {img_path.name}: Timeout")
             return [], False
             
-async def safe_table_call_with_retry(table_data, client, model_name, sem, timeout=120, max_retries=3):
+async def safe_table_call_with_retry(table_data, client, model_name, sem, timeout=300, max_retries=3):
     async with sem:
         for attempt in range(max_retries):
             try:
@@ -246,6 +281,7 @@ class MeasuredPoint(BaseModel):
     
     # We will fill these in via Post-Processing
     canonical_formula: Optional[str] = Field(None, description="Normalized chemical formula (e.g. Li3.8Mg0.1Ti1.63O4).")
+    reduced_formula: Optional[str] = Field(None, description="GCD-reduced formula for matching (e.g. 'Al3Li13O120P30Ti17').")
     
 
     material_definitions: List[str] = Field(
@@ -411,7 +447,7 @@ class MarkdownContextParser:
                             if cap_match:
                                 # Standardize: "Fig. 4(a)" -> "Fig 4a"
                                 fig_id = self._normalize_id(cap_match.group(1), cap_match.group(2), cap_match.group(3))
-                                caption = lines[idx].strip() # Use full line as caption
+                                caption = sanitize_caption(lines[idx].strip()) # Sanitize caption
                                 break
                     if fig_id != "Unknown": break
 
@@ -748,7 +784,7 @@ def validate_formula_stoichiometry(formula: str) -> bool:
     # 2. Individual element checks
     for element, count in element_counts.items():
         # Li: typically 3-30
-        if element == 'Li' and (count < 0.5 or count > 50):
+        if element == 'Li' and (count < 0.1 or count > 50):
             return False
         # O: typically 10-100
         if element == 'O' and (count < 1 or count > 150):
@@ -758,6 +794,99 @@ def validate_formula_stoichiometry(formula: str) -> bool:
             return False
     
     return True
+
+
+def normalize_formula_to_reduced(formula: str) -> str:
+    """
+    Reduce a chemical formula to its simplest integer-ratio representation.
+    
+    Handles both flat formulas and formulas with parenthesized groups:
+    - Li1.3Al0.3Ti1.7(PO4)3 -> Li13Al3Ti17P30O120 (×10 to clear decimals)
+    - Li7.86Sc1.86Ti10.14P18O72 -> same reduced form
+    
+    This enables matching between per-formula-unit and per-unit-cell representations.
+    Returns a string like "Al3Li13O120P30Ti17" (alphabetically sorted, reduced).
+    """
+    if not formula or formula.lower() == 'null':
+        return formula
+    
+    from math import gcd
+    from functools import reduce
+    
+    # Step 1: Expand parenthesized groups
+    #   e.g., (PO4)3 -> P3O12
+    def expand_parens(f: str) -> str:
+        """Recursively expand (group)N patterns."""
+        while '(' in f:
+            # Match innermost parenthesized group with optional multiplier
+            match = re.search(r'\(([^()]+)\)(\d*\.?\d*)', f)
+            if not match:
+                break
+            inner = match.group(1)
+            mult = float(match.group(2)) if match.group(2) else 1.0
+            
+            # Parse elements inside the group
+            elem_pattern = r'([A-Z][a-z]?)(\d*\.?\d*)'
+            expanded_parts = []
+            for elem, coeff_str in re.findall(elem_pattern, inner):
+                coeff = float(coeff_str) if coeff_str else 1.0
+                new_coeff = coeff * mult
+                # Format: avoid unnecessary decimals
+                if new_coeff == int(new_coeff):
+                    expanded_parts.append(f"{elem}{int(new_coeff)}" if int(new_coeff) != 1 else elem)
+                else:
+                    expanded_parts.append(f"{elem}{new_coeff}")
+            
+            f = f[:match.start()] + ''.join(expanded_parts) + f[match.end():]
+        return f
+    
+    try:
+        flat = expand_parens(formula)
+        
+        # Step 2: Parse all element-coefficient pairs from the flat formula
+        elem_pattern = r'([A-Z][a-z]?)(\d*\.?\d*)'
+        element_counts = {}
+        for elem, coeff_str in re.findall(elem_pattern, flat):
+            coeff = float(coeff_str) if coeff_str else 1.0
+            element_counts[elem] = element_counts.get(elem, 0) + coeff
+        
+        if not element_counts:
+            return formula
+        
+        # Step 3: Find multiplier to make all coefficients integers
+        # Multiply all by 10^N where N clears the most decimal places
+        coeffs = list(element_counts.values())
+        
+        # Find the precision needed (max decimal places)
+        max_decimals = 0
+        for c in coeffs:
+            s = f"{c:.10f}".rstrip('0')
+            if '.' in s:
+                dec_part = s.split('.')[1]
+                max_decimals = max(max_decimals, len(dec_part))
+        
+        multiplier = 10 ** max_decimals
+        int_coeffs = {elem: round(coeff * multiplier) for elem, coeff in element_counts.items()}
+        
+        # Step 4: Reduce by GCD
+        all_values = [v for v in int_coeffs.values() if v > 0]
+        if all_values:
+            common = reduce(gcd, all_values)
+            int_coeffs = {elem: v // common for elem, v in int_coeffs.items()}
+        
+        # Step 5: Build sorted formula string
+        parts = []
+        for elem in sorted(int_coeffs.keys()):
+            count = int_coeffs[elem]
+            if count == 1:
+                parts.append(elem)
+            elif count > 0:
+                parts.append(f"{elem}{count}")
+        
+        return ''.join(parts)
+    
+    except Exception:
+        return formula
 
 
 def deduplicate_text_measurements(measurements: List[MeasuredPoint]) -> List[MeasuredPoint]:
@@ -826,29 +955,394 @@ def deduplicate_text_measurements(measurements: List[MeasuredPoint]) -> List[Mea
     return non_text + deduplicated
 
 
-async def canonicalize_materials(client, measurements: List[MeasuredPoint], definitions: List[str], model_name: str = None):
+def _resolve_nasicon_acronym(raw_comp: str) -> str:
+    """
+    Deterministically resolve NASICON-type acronyms to canonical formulas.
+    LATP03 -> Li1.3Al0.3Ti1.7(PO4)3
+    LCTP02 -> Li1.2Cr0.2Ti1.8(PO4)3
+    LFTP01 -> Li1.1Fe0.1Ti1.9(PO4)3
+    LTP    -> LiTi2(PO4)3
+    Also strips (Bulk)/(GB) suffixes and returns them as measurement_type.
+    """
+    # Extract measurement type (bulk vs grain boundary)
+    measurement_type = None
+    clean = raw_comp.strip()
+    gb_match = re.search(r'\s*\((?:GB|G\.?B\.?|grain\s*boundar(?:y|ies))\)', clean, re.I)
+    bulk_match = re.search(r'\s*\(Bulk\)', clean, re.I)
+    if gb_match:
+        measurement_type = 'grain_boundary'
+        clean = clean[:gb_match.start()].strip()
+    elif bulk_match:
+        measurement_type = 'bulk'
+        clean = clean[:bulk_match.start()].strip()
+    
+    # Map element letter to element name
+    element_map = {'A': 'Al', 'C': 'Cr', 'F': 'Fe', 'G': 'Ga', 'I': 'In', 'S': 'Sc'}
+    
+    # Match LATP03 pattern (L + element_letter + TP + digits)
+    m = re.match(r'^L([A-Z])TP\s*0*(\d+)$', clean, re.I)
+    if m:
+        elem_letter = m.group(1).upper()
+        x_digits = m.group(2)
+        elem = element_map.get(elem_letter)
+        if elem:
+            x = int(x_digits) / 10.0  # "03" -> 0.3, "005" -> handled by 0*
+            # Handle LATP005 -> x=0.05 edge case
+            if len(x_digits) >= 2 and x_digits.startswith('0') and int(x_digits) < 10:
+                x = int(x_digits) / 100.0
+            elif len(x_digits) == 1:
+                x = int(x_digits) / 10.0
+            else:
+                x = int(x_digits) / 10.0
+            # More careful: "005" -> 0.5 or 0.05? In paper, LATP005 = x=0.05
+            # Re-parse: remove leading zeros, then divide
+            raw_num = x_digits.lstrip('0') or '0'
+            if x_digits.startswith('0') and len(x_digits) > 1:
+                # "005" → 0.05, "01" → 0.1, "03" → 0.3
+                x = float(f"0.{x_digits}")
+            else:
+                x = float(raw_num) / 10.0
+            
+            li = round(1 + x, 4)
+            ti = round(2 - x, 4)
+            formula = f"Li{li}{elem}{x}Ti{ti}(PO4)3"
+            return formula, measurement_type
+    
+    # Match LTP (base compound, x=0)
+    if re.match(r'^LTP$', clean, re.I):
+        return 'LiTi2(PO4)3', measurement_type
+    
+    return None, measurement_type
+
+
+async def extract_abbreviation_map(client, doc_title: str, sections: list, model_name: str = "gemini-2.5-flash") -> dict:
+    """
+    Extract abbreviation → canonical formula mappings from paper text.
+    Runs ONCE per paper before any extraction tasks.
+    
+    Uses few-shot prompts covering diverse material systems:
+    NASICON, argyrodite, perovskite, LISICON, garnet.
+    
+    Returns:
+        dict: {"LATP03": "Li1.3Al0.3Ti1.7(PO4)3", "x=0.25": "Li6.25P0.75Ge0.25S5I", ...}
+    """
+    # Gather text from relevant sections (abstract, introduction, experimental)
+    relevant_text = ""
+    for sec in sections:
+        title_lower = sec.title.lower()
+        if any(kw in title_lower for kw in ['abstract', 'introduction', 'experimental', 'method', 'synthesis', 'preparation', 'sample']):
+            relevant_text += f"\n--- {sec.title} ---\n{sec.content[:2000]}\n"
+    
+    if not relevant_text.strip():
+        # Fallback: use first 3000 chars of the document
+        for sec in sections[:3]:
+            relevant_text += f"\n{sec.content[:1000]}\n"
+    
+    prompt = f"""You are a scientific abbreviation extractor for solid-state ionic conductor papers.
+
+Given a paper's title and relevant sections, extract ALL abbreviation → canonical chemical formula mappings.
+Also extract the general series formula if one exists (e.g., "Li1+xAlxTi2-x(PO4)3").
+
+=== FEW-SHOT EXAMPLES ===
+
+EXAMPLE 1 — NASICON-type phosphates:
+Paper title: "A systematic study of NASICON-type Li1+xMxTi2−x(PO4)3 (M = Cr, Al, Fe)"
+Text excerpt: "...samples of composition Li1+xMxTi2−x(PO4)3 for 0 ≤ x ≤ 1 have been synthesized...termed LATP for Al, LCTP for Cr and LFTP for Fe samples followed by the x value in the general formula."
+
+Expected output:
+{{
+  "series_formula": "Li1+xMxTi2-x(PO4)3",
+  "abbreviations": {{
+    "LTP": "LiTi2(PO4)3",
+    "LATP005": "Li1.05Al0.05Ti1.95(PO4)3",
+    "LATP01": "Li1.1Al0.1Ti1.9(PO4)3",
+    "LATP02": "Li1.2Al0.2Ti1.8(PO4)3",
+    "LATP03": "Li1.3Al0.3Ti1.7(PO4)3",
+    "LATP04": "Li1.4Al0.4Ti1.6(PO4)3",
+    "LCTP005": "Li1.05Cr0.05Ti1.95(PO4)3",
+    "LCTP01": "Li1.1Cr0.1Ti1.9(PO4)3",
+    "LCTP02": "Li1.2Cr0.2Ti1.8(PO4)3",
+    "LCTP03": "Li1.3Cr0.3Ti1.7(PO4)3",
+    "LFTP005": "Li1.05Fe0.05Ti1.95(PO4)3",
+    "LFTP01": "Li1.1Fe0.1Ti1.9(PO4)3",
+    "LFTP02": "Li1.2Fe0.2Ti1.8(PO4)3",
+    "LFTP03": "Li1.3Fe0.3Ti1.7(PO4)3"
+  }}
+}}
+
+EXAMPLE 2 — Argyrodite sulfides:
+Paper title: "Inducing High Ionic Conductivity in Li6+xP1−xGexS5I"
+Text excerpt: "...Li6+xP1-xGexS5I were carried out under argon atmosphere...x = 0, 0.15, 0.25, 0.3, 0.6...cold-pressed and sintered pellets."
+
+Expected output:
+{{
+  "series_formula": "Li6+xP1-xGexS5I",
+  "abbreviations": {{
+    "x=0": "Li6PS5I",
+    "x=0.15": "Li6.15P0.85Ge0.15S5I",
+    "x=0.25": "Li6.25P0.75Ge0.25S5I",
+    "x=0.3": "Li6.3P0.7Ge0.3S5I",
+    "x=0.6": "Li6.6P0.4Ge0.6S5I"
+  }}
+}}
+
+EXAMPLE 3 — Perovskite oxides:
+Paper title: "Lithium Ion Conductivity of Polycrystalline Perovskite La0.67−xLi3xTiO3"
+Text excerpt: "...La0.67-xLi3xTiO3 with x = 0.04, 0.06, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13..."
+
+Expected output:
+{{
+  "series_formula": "La0.67-xLi3xTiO3",
+  "abbreviations": {{
+    "x=0.04": "La0.63Li0.12TiO3",
+    "x=0.06": "La0.61Li0.18TiO3",
+    "x=0.08": "La0.59Li0.24TiO3",
+    "x=0.09": "La0.58Li0.27TiO3",
+    "x=0.10": "La0.57Li0.30TiO3",
+    "x=0.11": "La0.56Li0.33TiO3",
+    "x=0.12": "La0.55Li0.36TiO3",
+    "x=0.13": "La0.54Li0.39TiO3"
+  }}
+}}
+
+EXAMPLE 4 — LISICON-type compounds:
+Paper title: "Lithium Conductivity in Li3PO4-Li3VO4-Li4GeO4 Lithium Superionic Conductors"
+Text excerpt: "...Li3+x(P1-xSix)O4 with x = 0, 0.25, 0.5, 0.75, 1.0...Li3+x(P1-xGex)O4..."
+
+Expected output:
+{{
+  "series_formula": "Li3+x(P1-xSix)O4",
+  "abbreviations": {{
+    "Li3+x(P1-xSix)O4 x=0": "Li3PO4",
+    "Li3+x(P1-xSix)O4 x=0.25": "Li3.25P0.75Si0.25O4",
+    "Li3+x(P1-xSix)O4 x=0.5": "Li3.5P0.5Si0.5O4",
+    "Li3+x(P1-xSix)O4 x=0.75": "Li3.75P0.25Si0.75O4",
+    "Li3+x(P1-xSix)O4 x=1.0": "Li4SiO4"
+  }}
+}}
+
+EXAMPLE 5 — Garnet-type:
+Paper title: "Lattice Instabilities and Phase Diagram of Li7La3Zr2O12"
+Text excerpt: "...LLZO denotes Li7La3Zr2O12...Ta-doped samples Li7-xLa3Zr2-xTaxO12 with x=0.25, 0.5, 0.75..."
+
+Expected output:
+{{
+  "series_formula": "Li7-xLa3Zr2-xTaxO12",
+  "abbreviations": {{
+    "LLZO": "Li7La3Zr2O12",
+    "x=0.25": "Li6.75La3Zr1.75Ta0.25O12",
+    "x=0.5": "Li6.5La3Zr1.5Ta0.5O12",
+    "x=0.75": "Li6.25La3Zr1.25Ta0.75O12"
+  }}
+}}
+
+=== END OF EXAMPLES ===
+
+=== YOUR TASK ===
+
+Paper title: "{doc_title}"
+
+Relevant text from paper:
+{relevant_text[:4000]}
+
+**Instructions:**
+1. Identify the base/series formula (e.g., "Li1+xAlxTi2-x(PO4)3")
+2. Find ALL abbreviations, sample labels, and composition identifiers mentioned
+3. For abbreviations with numeric suffixes (e.g., LATP03), compute the specific x value
+4. For series with listed x values, compute the fully resolved formula for each x
+5. Include the base compound (x=0) if applicable
+6. Return ONLY chemically plausible formulas
+7. If the paper has multiple series (e.g., Al, Cr, Fe substitutions), include all
+
+Return JSON with "series_formula" and "abbreviations" dict. If no abbreviations found, return empty dict.
+"""
+    
+    try:
+        response = await client.aio.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.0,
+            )
+        )
+        result = json.loads(response.text)
+        abbrev_map = result.get("abbreviations", {})
+        series_formula = result.get("series_formula", None)
+        
+        if abbrev_map:
+            print(f"   📖 Extracted {len(abbrev_map)} abbreviation mappings (series: {series_formula})")
+            for k, v in list(abbrev_map.items())[:5]:  # Print first 5
+                print(f"      {k} → {v}")
+            if len(abbrev_map) > 5:
+                print(f"      ... and {len(abbrev_map) - 5} more")
+        else:
+            print(f"   📖 No abbreviation mappings found in paper text")
+        
+        # Store series formula in the map for downstream use
+        if series_formula:
+            abbrev_map['__series_formula__'] = series_formula
+        
+        if response:
+            tracker.track(response, model_name)
+        
+        return abbrev_map
+        
+    except Exception as e:
+        print(f"   ⚠️ Abbreviation extraction failed: {e}")
+        return {}
+
+
+def _lookup_abbreviation_map(raw_comp: str, abbreviation_map: dict) -> tuple:
+    """
+    Look up a raw composition in the abbreviation map.
+    Handles exact matches, suffix stripping (Bulk/GB), and fuzzy matching.
+    
+    Returns:
+        (canonical_formula, measurement_type) or (None, measurement_type)
+    """
+    if not abbreviation_map:
+        return None, None
+    
+    # Extract measurement type suffix
+    measurement_type = None
+    clean = raw_comp.strip()
+    gb_match = re.search(r'\s*\((?:GB|G\.?B\.?|grain\s*boundar(?:y|ies))\)', clean, re.I)
+    bulk_match = re.search(r'\s*\(Bulk\)', clean, re.I)
+    if gb_match:
+        measurement_type = 'grain_boundary'
+        clean = clean[:gb_match.start()].strip()
+    elif bulk_match:
+        measurement_type = 'bulk'
+        clean = clean[:bulk_match.start()].strip()
+    
+    # 1. Exact match
+    if clean in abbreviation_map:
+        return abbreviation_map[clean], measurement_type
+    
+    # 2. Case-insensitive match
+    clean_lower = clean.lower()
+    for key, val in abbreviation_map.items():
+        if key.startswith('__'):  # Skip metadata keys
+            continue
+        if key.lower() == clean_lower:
+            return val, measurement_type
+    
+    # 3. Match with whitespace normalization (e.g., "LATP 03" vs "LATP03")
+    clean_nospace = re.sub(r'\s+', '', clean)
+    for key, val in abbreviation_map.items():
+        if key.startswith('__'):
+            continue
+        if re.sub(r'\s+', '', key) == clean_nospace:
+            return val, measurement_type
+    
+    # 4. Check if raw_comp is an x=value pattern (common for figure series labels)
+    x_match = re.match(r'^x\s*=\s*([\d.]+)$', clean, re.I)
+    if x_match:
+        x_val = x_match.group(1)
+        # Try matching "x=0.25" style keys
+        for key, val in abbreviation_map.items():
+            key_x_match = re.match(r'^x\s*=\s*([\d.]+)$', key, re.I)
+            if key_x_match and key_x_match.group(1) == x_val:
+                return val, measurement_type
+    
+    return None, measurement_type
+
+
+async def canonicalize_materials(client, measurements: List[MeasuredPoint], definitions: List[str], model_name: str = None, doc_title: str = None, doc_abstract: str = None, abbreviation_map: dict = None):
     """
     Uses Gemini to resolve "x=0.1" -> "Li3.8Mg0.1..." using the extracted text definitions.
     Enhanced to handle series formulas like "Li6+xP1-xGexS5I" and validate physical plausibility.
+    Now also uses document title and abstract for better context on base formulas.
+    
+    Resolution order:
+    1. Abbreviation map lookup (from extract_abbreviation_map, most reliable)
+    2. Deterministic NASICON acronym resolver (fast fallback)
+    3. LLM-based canonicalization (for remaining cases)
     """
     if not measurements: return measurements
     
-    # Filter points that need resolution
+    # --- PRE-PASS 1: Abbreviation map lookup (LLM-extracted, paper-specific) ---
+    map_resolved = 0
+    if abbreviation_map:
+        for m in measurements:
+            if m.canonical_formula:  # Already resolved
+                continue
+            resolved_formula, meas_type = _lookup_abbreviation_map(m.raw_composition, abbreviation_map)
+            if resolved_formula and resolved_formula != 'null':
+                if validate_formula_stoichiometry(resolved_formula):
+                    m.canonical_formula = resolved_formula
+                    m.reduced_formula = normalize_formula_to_reduced(resolved_formula)
+                    if meas_type:
+                        if not m.warnings:
+                            m.warnings = []
+                        m.warnings.append(f"measurement_type:{meas_type}")
+                    map_resolved += 1
+                    print(f"   [AbbrevMap] {m.raw_composition} → {resolved_formula} ({meas_type or 'unknown'})")
+                else:
+                    print(f"   [AbbrevMap] Rejected (invalid stoichiometry): {resolved_formula} for {m.raw_composition}")
+    
+    if map_resolved > 0:
+        print(f"   ... Resolved {map_resolved} names from abbreviation map")
+    
+    # --- PRE-PASS 2: Deterministic NASICON acronym resolution (fallback) ---
+    nasicon_resolved = 0
+    for m in measurements:
+        if m.canonical_formula:  # Already resolved
+            continue
+        resolved_formula, meas_type = _resolve_nasicon_acronym(m.raw_composition)
+        if resolved_formula:
+            m.canonical_formula = resolved_formula
+            m.reduced_formula = normalize_formula_to_reduced(resolved_formula)
+            if meas_type:
+                if not m.warnings:
+                    m.warnings = []
+                m.warnings.append(f"measurement_type:{meas_type}")
+            nasicon_resolved += 1
+            print(f"   [NASICON] {m.raw_composition} → {resolved_formula} ({meas_type or 'unknown'})")
+    
+    if nasicon_resolved > 0:
+        print(f"   ... Resolved {nasicon_resolved} NASICON acronyms deterministically")
+    
+    # Filter points that still need resolution
     to_resolve = []
     for i, m in enumerate(measurements):
+        if m.canonical_formula:  # Already resolved
+            continue
         is_variable_axis = "x" in m.raw_temperature_unit.lower() or "=" in m.raw_temperature_unit
         is_series_formula = bool(re.search(r'[a-z]\s*[+\-]\s*x|Li\d+\+x|state|pressed|sintered', m.raw_composition, re.I))
+        # Also resolve if it looks like an acronym with (Bulk)/(GB) suffix
+        has_meas_type = bool(re.search(r'\(Bulk\)|\(GB\)|\(G\.?B\.?\)', m.raw_composition, re.I))
         
-        # Resolve if: short name, has "=", variable axis, or is a series formula
-        if len(m.raw_composition) < 10 or "=" in m.raw_composition or is_variable_axis or is_series_formula:
+        # Resolve if: short name, has "=", variable axis, series formula, or has meas type suffix
+        if len(m.raw_composition) < 15 or "=" in m.raw_composition or is_variable_axis or is_series_formula or has_meas_type:
             to_resolve.append(i)
     
     if not to_resolve: return measurements
 
-    print(f"   ... Resolving {len(to_resolve)} ambiguous material names...")
+    print(f"   ... Resolving {len(to_resolve)} remaining ambiguous material names via LLM...")
 
-    # Build Context
-    context_str = "\n".join([f"- {d}" for d in definitions])
+    # Build Context — document-level + text definitions + abbreviation map
+    doc_context = ""
+    if doc_title:
+        doc_context += f"PAPER TITLE: {doc_title}\n"
+    if doc_abstract:
+        doc_context += f"ABSTRACT (excerpt): {doc_abstract[:800]}\n"
+    
+    # Include abbreviation map as context for the LLM canonicalizer
+    abbrev_context = ""
+    if abbreviation_map:
+        series = abbreviation_map.get('__series_formula__', 'unknown')
+        known_mappings = {k: v for k, v in abbreviation_map.items() if not k.startswith('__')}
+        if known_mappings:
+            abbrev_context = f"\nKNOWN ABBREVIATION MAPPINGS (from paper text):\n"
+            abbrev_context += f"Series formula: {series}\n"
+            for k, v in list(known_mappings.items())[:10]:
+                abbrev_context += f"  {k} → {v}\n"
+    
+    # Deduplicate definitions
+    unique_defs = list(dict.fromkeys(definitions))  # preserves order
+    context_str = "\n".join([f"- {d}" for d in unique_defs])
     items_str = "\n".join([
         f"ID {i}: Label='{measurements[i].raw_composition}', "
         f"Conductivity='{measurements[i].raw_conductivity} {measurements[i].raw_conductivity_unit}', "
@@ -860,22 +1354,64 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     prompt = f"""
     You are a Chemical Context Resolver for solid-state ionic conductors.
     I have a list of abbreviated/generic material names extracted from scientific papers.
-    I have Material Definitions found in the paper text.
+    I have the paper title, abstract, and Material Definitions found in the text.
 
     Your Task: Map the abbreviated names to their Full Canonical Chemical Formulas.
 
+    {doc_context}
+    {abbrev_context}
     DEFINITIONS FOUND IN TEXT:
     {context_str}
 
     ITEMS TO RESOLVE:
     {items_str}
 
+    === FEW-SHOT EXAMPLES ===
+    
+    EXAMPLE 1 — Series formula with x value:
+    Input: Label="x=0.25", Series="Li6+xP1-xGexS5I"
+    Output: "Li6.25P0.75Ge0.25S5I"
+    Reasoning: x=0.25 → Li(6+0.25)=Li6.25, P(1-0.25)=P0.75, Ge(0.25)
+    
+    EXAMPLE 2 — Acronym with numeric suffix:
+    Input: Label="LATP03", Context="LATP for Al in Li1+xAlxTi2-x(PO4)3"
+    Output: "Li1.3Al0.3Ti1.7(PO4)3"
+    Reasoning: "03" means x=0.3 → Li(1+0.3), Al(0.3), Ti(2-0.3)
+    
+    EXAMPLE 3 — Processing condition label (NO specific x):
+    Input: Label="Li6+xP1-xGexS5I (cold-pressed)", no x value in context
+    Output: null
+    Reasoning: No specific x value → cannot resolve to a specific formula
+    
+    EXAMPLE 4 — Perovskite variable composition:
+    Input: Label="x=0.11", Series="La0.67-xLi3xTiO3"
+    Output: "La0.56Li0.33TiO3"
+    Reasoning: La(0.67-0.11)=La0.56, Li(3×0.11)=Li0.33
+    
+    EXAMPLE 5 — Legend symbol mapping:
+    Input: Label="Filled circles", Context="Filled circles represent the quenched samples of La0.56Li0.33TiO3"
+    Output: "La0.56Li0.33TiO3"
+    
+    EXAMPLE 6 — Garnet abbreviation:
+    Input: Label="LLZO", Context="LLZO denotes Li7La3Zr2O12"
+    Output: "Li7La3Zr2O12"
+    
+    EXAMPLE 7 — LISICON solid solution:
+    Input: Label="x=0.5", Series="Li3+x(P1-xSix)O4"
+    Output: "Li3.5P0.5Si0.5O4"
+    
+    EXAMPLE 8 — Ambiguous without context:
+    Input: Label="Sample A", no context available
+    Output: null
+    Reasoning: Cannot determine formula without a mapping definition
+    
+    === END EXAMPLES ===
+
     Logic:
     1. **Series Formula Resolution**: 
-       - If you see "Li6+xP1-xGexS5I" with context mentioning "x=0.25", calculate:
-         Li(6+0.25)P(1-0.25)Ge(0.25)S5I → Li6.25P0.75Ge0.25S5I
-       - If you see "Li6+xP1-xGexS5I (cold-pressed)" without specific x, try to find x from conductivity value
-       - Look for phrases like "maximum conductivity", "x=0.6", "optimized composition"
+       - If you see a series formula like "Li6+xP1-xGexS5I" with "x=0.25", substitute and calculate
+       - Compute each stoichiometric coefficient by substituting the x value
+       - Round coefficients to reasonable precision (2-3 decimal places)
     
     2. **Measurement Type Disambiguation**:
        - Distinguish between "bulk" vs "grain boundary" conductivity
@@ -884,7 +1420,6 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     
     3. **Legend/Symbol Mapping**: 
        - If item is "Square", "Triangle", etc., look in Context for mappings
-       - Example: "Squares represent In-doped samples" → resolve to specific In composition
     
     4. **Validation**:
        - Only return formulas that are chemically plausible
@@ -892,11 +1427,6 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
        - Do NOT guess - better to return null than an incorrect formula
 
     Return JSON: {{ "mappings": {{ "ID": "Canonical Formula or null" }} }}
-    
-    Examples:
-    - "Li6+xP1-xGexS5I (x=0.25)" → "Li6.25P0.75Ge0.25S5I"
-    - "Li6+xP1-xGexS5I (cold-pressed)" with no x value → null (too generic)
-    - "x=0.1" with series "Li(4-2x)MgxTi(5-x)/3O4" → "Li3.8Mg0.1Ti1.63O4"
     """
     
     try:
@@ -919,6 +1449,7 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
                     if formula and formula.lower() != "null":
                         if validate_formula_stoichiometry(formula):
                             measurements[idx].canonical_formula = formula
+                            measurements[idx].reduced_formula = normalize_formula_to_reduced(formula)
                             print(f"   [Canon] Resolved: {measurements[idx].raw_composition[:40]} → {formula}")
                         else:
                             print(f"   [Canon] Rejected (invalid stoichiometry): {formula} for {measurements[idx].raw_composition[:40]}")
@@ -929,6 +1460,11 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
             
     except Exception as e:
         print(f"   [Canonicalizer Error]: {e}")
+    
+    # Post-pass: compute reduced_formula for any measurements that already had canonical_formula
+    for m in measurements:
+        if m.canonical_formula and not m.reduced_formula:
+            m.reduced_formula = normalize_formula_to_reduced(m.canonical_formula)
     
     return measurements
 
@@ -1053,198 +1589,399 @@ class MeasurementProcessor:
         self.MAX_REALISTIC_COND_RT = 0.5  # S/cm (Liquid electrolytes ~0.01-0.1, Solids rarely >0.05)
         self.MIN_REALISTIC_COND = 1e-12   # S/cm
     
-    def process_extraction(self, sf_result: Dict[str, Any], fig_id: str, context: str) -> List[MeasuredPoint]:
+    def process_extraction(self, sf_result: Dict[str, Any], fig_id: str, context: str, axis_metadata: Optional[Dict[str, Any]] = None) -> List[MeasuredPoint]:
         """
         Main entry point: Flattens LLM output, normalizes units, and applies guardrails.
+        
+        Args:
+            sf_result: Extraction result from SciFigureParser
+            fig_id: Figure identifier
+            context: Caption or context string
+            axis_metadata: Dict containing x_axis, left_y_axis, right_y_axis metadata
         """
         measurements = []
         
-        # 1. Unpack the Vectorized Data
-        all_raw_series = sf_result.get('data_series', [])
-        axis_meta = sf_result.get('axis_metadata', {})
+        # 1. Unpack axis metadata
+        axis_meta = axis_metadata or {}
+        x_axis_def = axis_meta.get('x_axis', {})
+        left_y_axis_def = axis_meta.get('left_y_axis', {})
+        right_y_axis_def = axis_meta.get('right_y_axis', {})
         
-            # def clean_axis(ax_data):
-            #             if not ax_data: return None
-            #             return {
-            #                 "title_text": ax_data.get('title'), # Remap title -> title_text
-            #                 "unit": ax_data.get('unit'),
-            #                 "quantity_type": ax_data.get('quantity_type')
-            #             }
-                        
-            # axis_hints = {
-            #             "x_axis": clean_axis(detection_data.get('x_axis')),
-            #             "left_y_axis": clean_axis(detection_data.get('left_y_axis')),
-            #             "right_y_axis": clean_axis(detection_data.get('right_y_axis'))
-            #         }
-        for raw_s in all_raw_series:
+        x_quantity = x_axis_def.get('quantity_type', 'other')
+        
+        # 2. Get data series from extraction result
+        data_series = sf_result.get('data_series', [])
+        
+        if not data_series:
+            print(f"   ℹ️ No data series found in extraction result for {fig_id}")
+            return measurements
+        
+        # 3. Process each series
+        for raw_series in data_series:
+            series_label = raw_series.get('series_label', 'Unknown')
+            x_vals = raw_series.get('x_values', [])
+            y_vals = raw_series.get('y_values', [])
             
-            # Get axis metadata for this specific series
-            axis_key = raw_s.get('mapped_y_axis', 'left')
-            y_axis_def = axis_meta.get(axis_key, {})
-            x_axis_def = axis_meta.get('x_axis', {})
-
+            # Validate data
+            if not x_vals or not y_vals:
+                print(f"   ⚠️ Empty data for series '{series_label}', skipping")
+                continue
             
-            x_vals = raw_s.get('x_values', [])
-            y_vals = raw_s.get('y_values', [])
-            label = raw_s.get('series_label', 'Unknown')
-
-            # Add x-axis labels and y-axis labels to the caption
-            # Extract literal labels for the downstream LLM's formula mapping
-            raw_x_label = x_axis_def.get('label') or x_axis_def.get('title_text', 'X-axis')
-            raw_y_label = y_axis_def.get('label') or y_axis_def.get('title_text', 'Y-axis')
+            if len(x_vals) != len(y_vals):
+                print(f"   ⚠️ Mismatched x/y lengths for '{series_label}': {len(x_vals)} vs {len(y_vals)}")
+                continue
             
-            caption = f"{context} {label}"
-            if x_axis_def: caption += f" ({raw_x_label})"
-            if y_axis_def: caption += f" ({raw_y_label})"
+            # 4. Determine which Y-axis this series uses
+            axis_key = raw_series.get('mapped_y_axis', 'left')
+            if axis_key == 'right' and right_y_axis_def:
+                y_axis_def = right_y_axis_def
+            else:
+                y_axis_def = left_y_axis_def
             
-            # 2. Physics Check: Arrhenius Slope
-            # If X is 1000/T, Y (log sigma) should DECREASE as X INCREASES.
-            # (Because higher 1000/T = colder temp = lower conductivity)
+            # 5. CRITICAL FILTER: Skip frequency plots
+            if x_quantity == 'frequency':
+                print(f"   \033[93m[Skip]\033[0m Series '{series_label}' has frequency X-axis (should have been filtered earlier)")
+                continue
+            
+            # 6. Extract axis labels for context
+            raw_x_label = x_axis_def.get('title_text') or x_axis_def.get('label', 'X-axis')
+            raw_y_label = y_axis_def.get('title_text') or y_axis_def.get('label', 'Y-axis')
+            
+            # Build enhanced caption with axis info
+            enhanced_caption = f"{context} [Series: {series_label}] [X: {raw_x_label}] [Y: {raw_y_label}]"
+            
+            # 7. Physics check: Arrhenius slope validation
             slope_warning = self._check_arrhenius_slope(x_vals, y_vals, x_axis_def)
-            if slope_warning: warnings.append(slope_warning)
-
-            for x, y in zip(x_vals, y_vals):
+            
+            # 8. Process each data point
+            for x_val, y_val in zip(x_vals, y_vals):
                 warnings = []
-                if slope_warning: warnings.append(slope_warning)
-
-                # 3. Normalize Temperature
-                temp_c = self._normalize_temperature(x, x_axis_def)
+                if slope_warning:
+                    warnings.append(slope_warning)
+                
+                # --- TEMPERATURE EXTRACTION ---
+                temp_c = None
+                raw_temp_value = None
+                raw_temp_unit = None
+                
+                # Priority 1: Check if series label contains temperature (e.g., "223K", "25°C")
+                temp_from_label = self._extract_temp_from_label(series_label)
+                if temp_from_label:
+                    temp_c = temp_from_label['celsius']
+                    raw_temp_value = temp_from_label['raw_value']
+                    raw_temp_unit = temp_from_label['raw_unit']
+                    # print(f"   [Temp from Label] '{series_label}' -> {temp_c}°C")
+                
+                # Priority 2: Use X-axis if it's temperature-related
+                elif x_quantity in ['temperature_inverse', 'temperature_absolute']:
+                    temp_c = self._normalize_temperature(x_val, x_axis_def)
+                    raw_temp_value = str(x_val)
+                    raw_temp_unit = x_axis_def.get('unit', raw_x_label)
+                
+                # Priority 3: Extract from caption/context
+                elif x_quantity == 'stoichiometry':
+                    temp_from_caption = self._extract_temp_from_caption(context)
+                    if temp_from_caption:
+                        temp_c = temp_from_caption['celsius']
+                        raw_temp_value = temp_from_caption['raw_value']
+                        raw_temp_unit = temp_from_caption['raw_unit']
+                    else:
+                        # Fallback to room temperature
+                        temp_c = 25.0
+                        raw_temp_value = "25"
+                        raw_temp_unit = "Celsius"
+                        warnings.append("Temperature not found in caption, assumed 25°C (room temperature)")
+                
+                # Fallback: Unknown temperature
+                else:
+                    temp_c = 25.0
+                    raw_temp_value = "25"
+                    raw_temp_unit = "Celsius (assumed)"
+                    warnings.append(f"Could not determine temperature (X-axis type: {x_quantity}), assumed room temperature")
+                
+                # Validate temperature
                 if temp_c is None:
                     warnings.append("Temperature normalization failed")
-                    temp_c = 25.0 # Fallback to RT if unknown, but flagged
-
-                # 4. Normalize Conductivity
-                try:
-                    cond_s_cm = self._normalize_conductivity(y, y_axis_def)
-                except Exception as e:
-                    cond_s_cm = y
-                    warnings.append("Conductivity normalization failed")
-                    print(f"⚠️ Conductivity normalization failed for {y} >> error: {e}")
+                    temp_c = 25.0
                 
-                # 5. Physical Bound Checks
-                if cond_s_cm > self.MAX_REALISTIC_COND_RT and temp_c < 100:
-                    warnings.append(f"Suspiciously high conductivity ({cond_s_cm:.4f} S/cm) for solid state")
+                # --- CONDUCTIVITY EXTRACTION ---
+                try:
+                    # Convert temp_c to Kelvin for σT normalization
+                    temp_k = (temp_c + 273.15) if temp_c is not None else None
+                    cond_s_cm = self._normalize_conductivity(y_val, y_axis_def, temperature_k=temp_k)
+                except Exception as e:
+                    cond_s_cm = y_val
+                    warnings.append(f"Conductivity normalization failed: {str(e)}")
+                    print(f"   ⚠️ Conductivity normalization failed for {y_val}: {e}")
+                
+                # --- FILTER: Skip if σ₀ detected (returns None) ---
+                if cond_s_cm is None:
+                    continue
+                
+                # --- COMPOSITION HANDLING ---
+                # For stoichiometry plots, append x-value to composition
+                if x_quantity == 'stoichiometry':
+                    composition = f"{series_label} (x={x_val})"
+                else:
+                    composition = series_label
+                
+                # --- PHYSICAL VALIDATION ---
+                # HARD FILTER: Discard obviously wrong conductivities (>10 S/cm at RT)
+                if cond_s_cm > 10.0 and temp_c is not None and temp_c < 100:
+                    print(f"   \033[93m[Filter]\033[0m Discarding unrealistic conductivity {cond_s_cm:.2e} S/cm for '{series_label}' at {temp_c}°C")
+                    continue
+                
+                if cond_s_cm > self.MAX_REALISTIC_COND_RT and temp_c is not None and temp_c < 100:
+                    warnings.append(f"Suspiciously high conductivity ({cond_s_cm:.4e} S/cm) for solid-state material at {temp_c}°C")
                 
                 if cond_s_cm < self.MIN_REALISTIC_COND:
-                    warnings.append(f"Value below realistic detection limit ({cond_s_cm:.2e})")
-
-                # 6. Create Record
-                # meas = MeasuredPoint(
-                #     raw_composition=label,
-                #     raw_conductivity=str(cond_s_cm),
-                #     raw_conductivity_unit="S/cm",
-                #     raw_temperature=str(temp_c),
-                #     raw_temperature_unit="C",
-                #     source="figure",
-                #     source_figure_id=fig_id,
-                #     source_caption=context,
-                #     confidence="low" if warnings else "high",
-                #     warnings=warnings
-                # )
-
+                    warnings.append(f"Value below realistic detection limit ({cond_s_cm:.2e} S/cm)")
+                
+                # Check for negative conductivity
+                if cond_s_cm < 0:
+                    warnings.append(f"Negative conductivity detected ({cond_s_cm:.2e}), likely extraction error")
+                
+                # --- CREATE MEASUREMENT RECORD ---
                 meas = MeasuredPoint(
-                    raw_composition=label,
-
-                    normalized_conductivity=cond_s_cm,
-                    normalized_temperature=temp_c,
+                    raw_composition=composition,
+                    canonical_formula=None,  # Will be filled by canonicalizer
+                    material_definitions=[],
                     
-                    raw_conductivity=str(y),
+                    # Normalized values
+                    normalized_conductivity=cond_s_cm,
+                    normalized_temperature_c=temp_c,
+                    
+                    # Raw extracted values
+                    raw_conductivity=str(y_val),
                     raw_conductivity_unit=raw_y_label,
-
-                    raw_temperature=str(x),
-                    raw_temperature_unit=raw_x_label,
-
-                    source_figure_id = fig_id,
-                    source_caption=f"{context} [Series: {label}] [X-Axis: {raw_x_label}]",
+                    raw_temperature=str(raw_temp_value),
+                    raw_temperature_unit=raw_temp_unit,
+                    
+                    # Metadata
+                    source_figure_id=fig_id,
+                    source_caption=enhanced_caption,
                     source="figure",
                     confidence="low" if warnings else "high",
                     warnings=warnings
                 )
-                measurements.append(meas)
                 
+                measurements.append(meas)
+        
         return measurements
 
-    def _normalize_temperature(self, x_val: float, x_meta: Dict) -> float:
+    def _normalize_temperature(self, value: float, x_axis_def: Dict[str, Any]) -> Optional[float]:
         """
-        Converts X-value (1000/T, T, etc.) to Celsius.
+        Convert temperature to Celsius based on axis definition
         """
-        q_type = x_meta.get('quantity_type', 'other')
-        unit = str(x_meta.get('unit', '')).lower()
-
+        x_quantity = x_axis_def.get('quantity_type', 'other')
+        unit = x_axis_def.get('unit', '').lower()
+        
         try:
-            # Case A: Arrhenius (1000/T)
-            if q_type == 'temperature_inverse' or '1000' in unit or 'k-1' in unit:
-                # T(K) = 1000 / x
-                temp_k = 1000.0 / x_val
-                return temp_k - 273.15
+            if x_quantity == 'temperature_inverse':
+                # X-axis is 1000/T (K^-1)
+                # Convert to Kelvin first: T = 1000 / x
+                kelvin = 1000.0 / value
+                celsius = kelvin - 273.15
+                return celsius
             
-            # Case B: Absolute T (Kelvin)
-            if 'k' in unit and '1000' not in unit:
-                return x_val - 273.15
+            elif x_quantity == 'temperature_absolute':
+                # Direct temperature
+                if 'k' in unit or 'kelvin' in unit:
+                    return value - 273.15
+                elif 'c' in unit or 'celsius' in unit or '°c' in unit:
+                    return value
+                else:
+                    # Assume Kelvin if unclear
+                    return value - 273.15
+            
+            else:
+                return 25.0
                 
-            # Case C: Celsius
-            if 'c' in unit:
-                return x_val
-                
-            # Case D: Stoichiometry (Not a temperature)
-            if q_type == 'stoichiometry':
-                return 25.0 # Assume Room Temp for compositional plots unless specified
-                
-        except ZeroDivisionError:
+        except (ValueError, ZeroDivisionError):
             return 25.0
+
+    def _normalize_conductivity(self, value: float, y_axis_def: Dict[str, Any],
+                                temperature_k: Optional[float] = None) -> float:
+        """
+        Convert conductivity to S/cm.
+        Handles log scales, σT product units, and different unit systems.
+        
+        IMPORTANT: The SciFigureParser LLM returns LINEAR values even for
+        log-scale axes (e.g., it reads 10⁻⁵ and returns 1e-05, not -5).
+        Only truly log-space values (negative numbers like -4.8) need 10^x.
+        
+        Returns None if the measurement is σ₀ (pre-exponential factor) or
+        another non-conductivity quantity.
+        """
+        unit = y_axis_def.get('unit', '').lower()
+        title = y_axis_def.get('title_text', '').lower()
+        scale = y_axis_def.get('scale_type', 'linear').lower()
+        combined = f"{unit} {title}"
+        
+        # --- FILTER: Detect σ₀ / pre-exponential factor (NOT ionic conductivity) ---
+        is_sigma_0 = bool(re.search(
+            r'σ[_\s]?0|σ₀|sigma[_\s]?0|pre[\-\s]?exponential|prefactor|σ\s*0|sigma\s*naught',
+            combined, re.IGNORECASE
+        ))
+        if is_sigma_0:
+            return None  # Discard: σ₀ is NOT ionic conductivity
+        
+        # Detect σT product units (e.g., "σT (SK/cm)", "σT / S·K·cm⁻¹", "log(Tσ/K Scm⁻¹)")
+        is_sigma_t = bool(re.search(r'σt|tσ|sigma\s*t|t\s*sigma|s\s*k\s*/?\s*cm|sk\s*cm|sk/cm|k\s*s\s*cm', combined, re.IGNORECASE))
+        
+        # HEURISTIC: Determine if value is in log-space or already linear.
+        # SciFigureParser returns LINEAR values even for log-scale axes.
+        # Clue: If value is NEGATIVE on a log-scale → it's log₁₀(σ) (e.g., -4.8)
+        # If value is POSITIVE (even very small) → LLM already extracted the linear value.
+        if scale == 'log' or 'log' in unit:
+            if value < 0:
+                # Truly in log₁₀ space, e.g., -4.8 means σ = 10⁻⁴·⁸
+                sigma = 10 ** value
+            else:
+                # Positive value → LLM already converted from log-scale axis
+                sigma = value
+        elif 'ln' in unit:
+            if value < 0:
+                sigma = np.exp(value)
+            else:
+                sigma = value
+        else:
+            sigma = value
+        
+        # Handle σT product → divide by T(K) to get σ
+        if is_sigma_t:
+            if temperature_k and temperature_k > 0:
+                sigma = sigma / temperature_k
+            else:
+                # No temperature available — cannot convert, add implicit warning
+                # The value will remain as σT, which is wrong but better than 1.0
+                pass
+        
+        # Convert units to S/cm
+        # IMPORTANT: Check more-specific prefixed units FIRST (ms, μs) before generic s/cm
+        if 'μs/cm' in unit or 'us/cm' in unit or 'μscm' in unit:
+            return sigma / 1_000_000.0  # μS/cm to S/cm
+        elif 'ms/cm' in unit or 'ms cm' in unit or 'mscm' in unit:
+            return sigma / 1000.0  # mS/cm to S/cm
+        elif 's/cm' in unit or 's cm' in unit or 'scm' in unit or 'sk/cm' in unit or 'sk cm' in unit:
+            return sigma
+        elif 's/m' in unit or 's m' in unit:
+            return sigma / 100.0  # S/m to S/cm
+        else:
+            # Assume S/cm if unclear
+            return sigma
+    
+    def _check_arrhenius_slope(self, x_vals: List[float], y_vals: List[float], x_axis_def: Dict[str, Any]) -> Optional[str]:
+        """
+        Validate Arrhenius plot slope direction.
+        For 1000/T plots, log(sigma) should DECREASE as 1000/T INCREASES (cooling).
+        """
+        x_quantity = x_axis_def.get('quantity_type', 'other')
+        
+        if x_quantity != 'temperature_inverse':
+            return None  # Not an Arrhenius plot
+        
+        if len(x_vals) < 2:
+            return None  # Not enough points
+        
+        # Calculate approximate slope
+        try:
+            # Simple linear fit
+            n = len(x_vals)
+            sum_x = sum(x_vals)
+            sum_y = sum(y_vals)
+            sum_xy = sum(x * y for x, y in zip(x_vals, y_vals))
+            sum_x2 = sum(x * x for x in x_vals)
             
-        return 25.0
-
-    def _normalize_conductivity(self, y_val: float, y_meta: Dict) -> float:
-        """
-        Converts Y-value (log(S/cm), mS/cm, etc.) to S/cm.
-        """
-        unit = str(y_meta.get('unit', '')).lower()
-        title = str(y_meta.get('title_text', '')).lower()
-        
-        # 1. Handle Logarithmic Scales first
-        # Often plots are ln(sigma) or log(sigma) even if the unit just says "S/cm"
-        is_log = 'log' in title or 'ln' in title
-        
-        val = y_val
-        
-        # If the value is negative (e.g. -4) and unit is S/cm, it's almost certainly log10
-        if is_log or (val < 0 and 's' in unit):
-             # Heuristic: Is it ln (base e) or log (base 10)?
-             # ln: -10 is ~4.5e-5. log10: -10 is 1e-10. 
-             # Usually "log" implies base 10 in plots, "ln" implies base e.
-             if 'ln' in title:
-                 val = np.exp(y_val)
-             else:
-                 val = 10 ** y_val
-
-        # 2. Handle Prefix Units
-        if 'ms' in unit: # mS/cm -> S/cm
-            val = val / 1000.0
-        elif 'us' in unit or 'µs' in unit: # µS/cm -> S/cm
-            val = val / 1e6
+            slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x2 - sum_x * sum_x)
             
-        return val
-
-    def _check_arrhenius_slope(self, x_vals: List[float], y_vals: List[float], x_meta: Dict) -> Optional[str]:
-        """
-        Validates the physics of the slope.
-        For 1000/T plots, slope must be NEGATIVE (Log Cond vs 1/T).
-        """
-        if len(x_vals) < 2: return None
-        
-        q_type = x_meta.get('quantity_type', '')
-        
-        # Simple linear regression slope
-        slope, _ = np.polyfit(x_vals, y_vals, 1)
-        
-        if q_type == 'temperature_inverse':
-            # As 1000/T increases (getting colder), Conductivity should decrease.
-            # So slope should be NEGATIVE.
+            # For Arrhenius: slope should be NEGATIVE
+            # (higher 1000/T = lower T = lower conductivity = lower log(sigma))
             if slope > 0:
-                return "Physical Violation: Conductivity increases as Temp decreases (Positive Arrhenius slope)"
-                
+                return "⚠️ Positive Arrhenius slope detected (log(σ) increases with 1000/T). This is physically unusual and may indicate extraction error."
+        
+        except (ValueError, ZeroDivisionError):
+            pass
+        
         return None
+
+    def _extract_temp_from_label(self, label: str) -> Optional[Dict[str, Any]]:
+        """
+        Extract temperature from series label like "223K", "25°C", "300 K"
+        Returns dict with 'celsius', 'raw_value', 'raw_unit' or None
+        """
+        import re
+        
+        # Match patterns like: 223K, 25C, 25°C, 300 K, 25 deg C
+        pattern = r'(\d+(?:\.\d+)?)\s*°?\s*(K|C|deg\s*C|°C|Celsius|Kelvin)\b'
+        match = re.search(pattern, label, re.IGNORECASE)
+        
+        if not match:
+            return None
+        
+        val_str, unit_str = match.groups()
+        
+        try:
+            val = float(val_str)
+            unit_upper = unit_str.upper()
+            
+            # Convert to Celsius
+            if 'K' in unit_upper or 'KELVIN' in unit_upper:
+                celsius = val - 273.15
+                unit = "K"
+            else:
+                celsius = val
+                unit = "°C"
+            
+            return {
+                'celsius': celsius,
+                'raw_value': val_str,
+                'raw_unit': unit
+            }
+        except ValueError:
+            return None
+
+
+    def _extract_temp_from_caption(self, caption: str) -> Optional[Dict[str, Any]]:
+        """
+        Extract temperature from caption text
+        Returns dict with 'celsius', 'raw_value', 'raw_unit' or None
+        """
+        import re
+        
+        # Common patterns in captions
+        patterns = [
+            r'at\s+(\d+(?:\.\d+)?)\s*°?\s*(K|C|°C|Celsius|Kelvin)',
+            r'(\d+(?:\.\d+)?)\s*°?\s*(K|C|°C)\s+measurement',
+            r'temperature[:\s]+(\d+(?:\.\d+)?)\s*°?\s*(K|C|°C)',
+            r'T\s*=\s*(\d+(?:\.\d+)?)\s*°?\s*(K|C|°C)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, caption, re.IGNORECASE)
+            if match:
+                val_str, unit_str = match.groups()
+                try:
+                    val = float(val_str)
+                    unit_upper = unit_str.upper()
+                    
+                    if 'K' in unit_upper or 'KELVIN' in unit_upper:
+                        celsius = val - 273.15
+                        unit = "K"
+                    else:
+                        celsius = val
+                        unit = "°C"
+                    
+                    return {
+                        'celsius': celsius,
+                        'raw_value': val_str,
+                        'raw_unit': unit
+                    }
+                except ValueError:
+                    continue
+        
+        return None
+
 
 
 processor = MeasurementProcessor()
@@ -1255,7 +1992,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     
     try:
         fig_id = context_dict.get("id", "Unknown Figure")
-        caption = context_dict.get("caption", "No caption found.")
+        caption = sanitize_caption(context_dict.get("caption", "No caption found."))
         section_title = context_dict.get("section_title", "Unknown Section")
         section_content = context_dict.get("section", "No section content found.")
     except Exception as e:
@@ -1273,79 +2010,124 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             # print(f"   🔍 {img_path.name} ({fig_id}): Detection result: {detection_result}")
 
             is_multi = detection_result.get("is_multi_panel", False)
-            detections = detection_result.get("subplots", [])
+            all_subplots = detection_result.get("subplots", [])
             
+            valid_subplots = []
+            for subplot in all_subplots:
+                if not subplot.get('contains_conductivity_data', False):
+                    label = subplot.get('label', 'Unknown')
+                    print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): Subplot '{label}' does not contain ionic conductivity measurements.")
+                    continue
+                
+
+                ## Check x-axis type (critical filter)
+                x_axis = subplot.get('x_axis', {})
+                x_quantity = x_axis.get('quantity_type', '')
+
+                # Reject frequency plot
+                if x_quantity == 'frequency':
+                    label = subplot.get('label', 'Unknown')
+                    print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}) - {label}: X-axis is frequency (not temperature)")
+                    continue
+
+                ## Accept temperature or stoichiometry plots
+                if x_quantity in ['temperature_inverse', 'temperature_absolute', 'stoichiometry']:
+                    valid_subplots.append(subplot)
+                    label = subplot.get('label', 'Unknown')
+                    print(f"   ✓ {img_path.name} ({fig_id}) - {label}: Valid plot (X={x_quantity})")
+                else:
+                    # Uncertain - include with warning
+                    subplot['_warning'] = f"Uncertain X-axis type: {x_quantity}"
+                    valid_subplots.append(subplot)
+            
+            if not valid_subplots:
+                print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): No valid subplots found.")
+                return ExtractionResult(measurements=[]), None, True
+
+            if len(valid_subplots) == 1:
+                is_multi = False
+
             all_measurements = []
 
-            if not is_multi:
-                # Check if SciFigureParser detected ionic conductivity data
-                # print(">> DEBUG : Detection Data in single plot: ", detection_result['subplots'][0])
-                if not detection_result['subplots'][0].get("contains_conductivity_data", True):
-                    print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): No ionic conductivity measurements detected by SciFigureParser.")
-                    return ExtractionResult(measurements=[]), None, True
-                # Case 1: Single plot or no specific detections - process original image directly
-                print(f"   📊 {img_path.name}: Single plot detected (or no specific subplots). Extracting directly...")
-                # [OPTIMIZED] Using async extraction
-                sf_result = await sf_parser.extract_data_async(str(img_path), grid_config={"enabled": True, "rows": 2, "cols": 2}, context=caption)
-                clean_measurements = processor.process_extraction(sf_result, fig_id=fig_id, context=caption)
-                all_measurements.extend(clean_measurements)
-            else:
-                # Case 2: Multi-plot - crop and extract for each detection IN PARALLEL
-                print(f"   ✂️ {img_path.name}: Multi-plot detected ({len(detections)} panels). Processing each in parallel...")
+            async def process_subplot(subplot_data, idx):
+                label = subplot_data.get('label', f'Panel {idx+1}')
+                print(f"      → Processing {label}...")
                 
-                async def process_subplot(detection_data, idx):
-                    label = detection_data.get('label', f'Panel {idx+1}')
-                    if not detection_data.get('contains_conductivity_data', False):
-                        print(f"   \033[93m[Skip]\033[0m {img_path.name} ({fig_id}): {label} - No ionic conductivity measurements detected in this subplot by SciFigureParser.")
-                        return ExtractionResult(measurements=[]), None, True
-                    # print(">> DEBUG : Detection Data in multi plot (after filtering): ", detection_data)
-                    # print(f"      - Processing {label}...") # Can be too noisy in parallel
-                    # The detection schema uses 'title', but we want to pass a clean dict to the next step
-                    def clean_axis(ax_data):
-                        if not ax_data: return None
-                        return {
-                            "title_text": ax_data.get('title'), # Remap title -> title_text
-                            "unit": ax_data.get('unit'),
-                            "quantity_type": ax_data.get('quantity_type')
-                        }
-
-                    axis_hints = {
-                        "x_axis": clean_axis(detection_data.get('x_axis')),
-                        "left_y_axis": clean_axis(detection_data.get('left_y_axis')),
-                        "right_y_axis": clean_axis(detection_data.get('right_y_axis'))
+                # Prepare axis hints
+                def clean_axis(ax_data):
+                    if not ax_data: 
+                        return None
+                    return {
+                        "title_text": ax_data.get('title', ''),
+                        "unit": ax_data.get('unit'),
+                        "quantity_type": ax_data.get('quantity_type'),
+                        "scale_type": ax_data.get('scale_type', 'linear')
                     }
-                    
-                    # Create a safe suffix from the label
-                    safe_label = re.sub(r'[^a-zA-Z0-9]', '_', label)
-                    unique_suffix = f"_cropped_{safe_label}"
-                    
-                    box_list = detection_data.get('box_2d')
-                    print("Passing box coords ", box_list)
-                    box_dict = {
-                        'ymin': box_list[0],
-                        'xmin': box_list[1],
-                        'ymax': box_list[2],
-                        'xmax': box_list[3]
-                    }
-                    cropped_path = sf_parser.crop_image(str(img_path), box_dict, padding=80, suffix=unique_suffix)
-                    sf_result = await sf_parser.extract_data_async(cropped_path, grid_config={"enabled": True, "rows": 2, "cols": 2}, context=caption, axis_hints=axis_hints)
-                    # print(">> DEBUG : SciFigure Result: ", sf_result)
-                    clean_measurements = processor.process_extraction(sf_result, fig_id=fig_id, context=caption)
-                    # print(">> DEBUG : Cleaned Result: ", clean_measurements)
-                    return clean_measurements
 
-                # [OPTIMIZED] Parallel processing of subplots
-                subplot_tasks = [process_subplot(box, i) for i, box in enumerate(detections)]
-                subplot_results = await asyncio.gather(*subplot_tasks)
+                axis_hints = {
+                    "x_axis": clean_axis(subplot_data.get('x_axis')),
+                    "left_y_axis": clean_axis(subplot_data.get('left_y_axis')),
+                    "right_y_axis": clean_axis(subplot_data.get('right_y_axis')),
+                    "subplot_label": label  # Pass this through for context
+                }
                 
-                # print(">> DEBUG : Subplot Results: ", subplot_results)
-                for res in subplot_results:
-                    if isinstance(res, list):
-                        # Only extend if the item is a list of MeasuredPoint
-                        all_measurements.extend(res)
-                    elif hasattr(res, 'measurements'):
-                        # If it returned an ExtractionResult object instead of a list
-                        all_measurements.extend(res.measurements)
+                # Crop the subplot
+                safe_label = re.sub(r'[^a-zA-Z0-9]', '_', label)
+                unique_suffix = f"_cropped_{safe_label}"
+                
+                box_list = subplot_data.get('box_2d')
+                box_dict = {
+                    'ymin': box_list[0],
+                    'xmin': box_list[1],
+                    'ymax': box_list[2],
+                    'xmax': box_list[3]
+                }
+                cropped_path = sf_parser.crop_image(
+                    str(img_path), 
+                    box_dict, 
+                    padding=80, 
+                    suffix=unique_suffix
+                )
+                
+                # Extract with axis hints — use higher resolution grid for log-scale plots
+                y_scale = subplot_data.get('left_y_axis', {}).get('scale_type', 'linear')
+                grid_rows = 3 if y_scale == 'log' else 2
+                grid_cols = 3 if y_scale == 'log' else 2
+                
+                sf_result = await sf_parser.extract_data_async(
+                    cropped_path, 
+                    grid_config={"enabled": True, "rows": grid_rows, "cols": grid_cols}, 
+                    context=f"{caption} [Panel: {label}]",
+                    axis_hints=axis_hints
+                )
+                
+                # Process extraction with validation
+                clean_measurements = processor.process_extraction(
+                    sf_result, 
+                    fig_id=f"{fig_id}-{label}", 
+                    context=caption,
+                    axis_metadata=axis_hints  # NEW: Pass axis info to processor
+                )
+                
+                # Add subplot-specific warnings
+                if subplot_data.get('_warning'):
+                    for m in clean_measurements:
+                        if not m.warnings:
+                            m.warnings = []
+                        m.warnings.append(subplot_data['_warning'])
+                
+                return clean_measurements
+
+            # Process all valid subplots in parallel
+            subplot_tasks = [process_subplot(sp, i) for i, sp in enumerate(valid_subplots)]
+            subplot_results = await asyncio.gather(*subplot_tasks)
+            
+            # Flatten results
+            for res in subplot_results:
+                if isinstance(res, list):
+                    all_measurements.extend(res)
+                elif hasattr(res, 'measurements'):
+                    all_measurements.extend(res.measurements)
             
             result = ExtractionResult(measurements=all_measurements)
             
@@ -1353,9 +2135,12 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             log_dir = FILE_DIR if FILE_DIR else img_path.parent
             with open(f"{log_dir}/results_log_v5.json", "a") as f:
                 f.write(f"\n\n[SCI-FIGURE DEBUG] {img_path.name}:\n")
-                f.write(f"- Detection Result: {json.dumps(detection_result, indent=2)}\n")
-                f.write(f"- Combined Measurements: {len(all_measurements)}\n")
-
+                f.write(f"- Total subplots detected: {len(all_subplots)}\n")
+                f.write(f"- Valid subplots: {len(valid_subplots)}\n")
+                f.write(f"- Measurements extracted: {len(all_measurements)}\n")
+                for i, sp in enumerate(valid_subplots):
+                    f.write(f"  • {sp.get('label')}: X={sp['x_axis'].get('quantity_type')}, "
+                           f"Y={sp['left_y_axis'].get('quantity_type')}\n")
             if len(result.measurements) > 0:
                 print(f"   ✓ {img_path.name} ({fig_id}): Found {len(result.measurements)} points total via SciFigureParser")
             
@@ -1524,6 +2309,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
 async def process_table_node(client, model, table_data: dict, max_retries: int = 3):
     """
     Extract data from a Markdown table found via regex.
+    Enhanced prompt handles multi-level headers and NASICON-type acronyms.
     """
     prompt = f"""
     Extract ionic conductivity data points from this Markdown table.
@@ -1535,19 +2321,28 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
     {table_data['content']}
     ```
 
+    **IMPORTANT INSTRUCTIONS for complex tables:**
+    1. This table may have MULTI-LEVEL HEADERS (e.g., "BULK" and "G.B." spanning sub-columns 
+       like Ea, σ0, σRT). Look for these hierarchical groupings.
+    2. PRIORITIZE extracting **σRT** (room-temperature ionic conductivity) over σ0 (pre-exponential factor) 
+       or Ea (activation energy). σ0 values are typically very large (10³-10⁵) and are NOT conductivity.
+    3. For EACH row, extract BOTH bulk AND grain boundary σRT values as separate measurements.
+    4. DO NOT resolve acronyms or expand formulas — just use the EXACT sample name from the table 
+       (e.g., "LATP03", "LTP"). Formula resolution is done downstream.
+    5. For multi-row tables with Unicode superscripts (e.g., "10⁻⁵"), parse them as scientific notation.
+    6. Tag each measurement with whether it's "bulk" or "grain_boundary" in the material_definitions field.
+
     **Task**:
-    Extract all Ionic Conductivity measurements.
+    Extract all Ionic Conductivity measurements (σRT preferred, σ0 if σRT not available).
     For each:
-    - raw_composition: Material name
-    - raw_conductivity: Numeric value
-    - raw_conductivity_unit: Unit (e.g. "S/cm", "mS cm-1")
-    - raw_temperature: Value (e.g. "25", "room temperature")
-    - raw_temperature_unit: Unit (e.g. "Celsius", "K")
+    - raw_composition: EXACT sample name from the table (e.g., "LATP03", "LTP", "LCTP02")
+    - raw_conductivity: Numeric value (the σRT column value)
+    - raw_conductivity_unit: Unit (e.g., "S cm-1")
+    - raw_temperature: "room temperature" (since σRT is at room temperature)
+    - raw_temperature_unit: "Celsius"
+    - material_definitions: ["bulk"] or ["grain_boundary"] to indicate which region
     - source: "markdown_table"
     - confidence: "high"
-
-    If activation energy is present, you can include it if it's the only value, but prioritize conductivity.
-    If the table ONLY contains activation energy, extract that as a value but note the unit as "eV".
 
     Return JSON with measurements array.
     """
@@ -1564,6 +2359,7 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
                         response_mime_type="application/json",
                         response_json_schema=ExtractionResult.model_json_schema(),
                         temperature=0.0,
+                        max_output_tokens=16384,
                     )
                 )
             
@@ -1759,14 +2555,26 @@ async def run_pipeline(markdown_file, asset_dir, model):
                     skipped_count += 1
                 else:
                     all_measurements.extend(res.measurements)
+                    # Accumulate material definitions from text extractions
+                    for m in res.measurements:
+                        if m.material_definitions:
+                            material_defs.extend(m.material_definitions)
             elif res is None:
                 failed_count += 1
 
+        # 3.5 Extract Abbreviation Map (NEW - runs once per paper)
+        print("   ... Extracting abbreviation map from paper text...")
+        doc_abstract = ""
+        for sec in sections:
+            if 'abstract' in sec.title.lower() or 'introduction' in sec.title.lower():
+                doc_abstract = sec.content[:1000]
+                break
+        abbreviation_map = await extract_abbreviation_map(client, doc_title, sections, model_name="gemini-2.5-flash")
+
         # 4. Canonicalize Names (Solves Problem 3)
-        # We pass the definitions found in text + the measurements from figures
+        # We pass the definitions found in text + document-level context + abbreviation map
         print("   ... Canonicalizing Materials...")
-        # print(">> DEBUG: all_measurements: ", all_measurements)
-        all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL)
+        all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL, doc_title=doc_title, doc_abstract=doc_abstract, abbreviation_map=abbreviation_map)
         
         # 4.5 De-duplicate Text Measurements (Solves Problem 4: Duplicate Extractions)
         print("   ... De-duplicating Text Measurements...")

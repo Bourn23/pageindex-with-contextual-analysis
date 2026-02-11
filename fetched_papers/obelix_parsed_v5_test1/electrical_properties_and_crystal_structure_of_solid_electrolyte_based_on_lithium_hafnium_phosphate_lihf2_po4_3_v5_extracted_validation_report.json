@@ -1,0 +1,96 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-318",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (LiHf2(PO4)3) and conductivity (6.85e-07 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-319",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.1Fe0.1Hf1.9(PO4)3) and conductivity (1.07e-04 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-320",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.1In0.1Hf1.9(PO4)3) and conductivity (5.13e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-321",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.1Lu0.1Hf1.9(PO4)3) and conductivity (5.88e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-322",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.1Sc0.1Hf1.9(PO4)3) and conductivity (2.45e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-323",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.2Lu0.2Hf1.8(PO4)3) and conductivity (9.79e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-324",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3Cr0.3Hf1.7(PO4)3) and conductivity (5.26e-07 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-325",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3Fe0.3Hf1.7(PO4)3) and conductivity (5.4e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-326",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3In0.3Hf1.7(PO4)3) and conductivity (1.42e-04 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-327",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3Lu0.3Hf1.7(PO4)3) and conductivity (3.56e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-328",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3Sc0.3Hf1.7(PO4)3) and conductivity (8.32e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-329",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.3Y0.3Hf1.7(PO4)3) and conductivity (3.19e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-330",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.4In0.4Hf1.6(PO4)3) and conductivity (1.42e-04 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-331",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.4Lu0.4Hf1.6(PO4)3) and conductivity (2.06e-05 S/cm) found in extracted data at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-332",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching composition (Li1.4Y0.4Hf1.6(PO4)3) and conductivity (2.09e-05 S/cm) found in extracted data at room temperature."
+    }
+  ],
+  "total_ground_truth": 15,
+  "total_matches": 0
+}

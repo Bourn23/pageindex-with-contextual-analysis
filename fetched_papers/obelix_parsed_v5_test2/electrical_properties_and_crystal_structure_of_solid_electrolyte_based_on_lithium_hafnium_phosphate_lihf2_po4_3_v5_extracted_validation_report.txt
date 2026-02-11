@@ -1,0 +1,15 @@
+GT-318     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. The closest extracted formula LiHf2P3O12 has conductivity values from a plot that differ by more than 10% from the ground truth, which is outside the acceptable range for approximate matches based on provided examples.
+GT-319     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. The extracted Li1.2Fe0.2Hf1.8(PO4)3 has a different 'x' value (0.2) than the ground truth (0.1).
+GT-320     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. Extracted data for similar In-doped compositions are activation energies, not conductivities.
+GT-321     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-322     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. Extracted data for similar Sc-doped compositions are activation energies, not conductivities.
+GT-323     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-324     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-325     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. Extracted data for Li1.3Fe0.3Hf1.7(PO4)3 is an activation energy, not conductivity.
+GT-326     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. Extracted data for Li1.3In0.3Hf1.7(PO4)3 is an activation energy, not conductivity.
+GT-327     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-328     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data. Extracted data for Li1.3Sc0.3Hf1.7(PO4)3 is an activation energy, not conductivity.
+GT-329     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-330     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-331     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.
+GT-332     | ❌ MISSING/BAD   | No matching composition and conductivity found in the extracted data.

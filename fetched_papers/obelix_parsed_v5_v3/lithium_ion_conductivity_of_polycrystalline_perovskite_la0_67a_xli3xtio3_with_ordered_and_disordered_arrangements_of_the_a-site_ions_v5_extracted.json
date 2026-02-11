@@ -1,0 +1,387 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-02-10 16:39:01",
+  "execution_time_seconds": 103.68,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 7224,
+    "total_output_tokens": 23530,
+    "total_cost_usd": 0.061,
+    "call_counts": {
+      "gemini-flash-latest": 8
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 20,
+    "skipped_images": 5,
+    "failed_items": 0,
+    "total_sections_processed": 8,
+    "total_images_processed": 3
+  },
+  "material_count": 20,
+  "measurements": [
+    {
+      "raw_composition": "quenched (x=0.06)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.71",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00019498445997580456,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched (x=0.09)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.08",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0008317637711026709,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched (x=0.11)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-2.87",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0013489628825916532,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched (x=0.12)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-2.78",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0016595869074375613,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched (x=0.13)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-2.9",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0012589254117941675,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched (x=0.15)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.11",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0007762471166286919,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.06)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.35",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00044668359215096305,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.09)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0006606934480075957,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.11)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.12",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0007585775750291835,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.12)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0007943282347242813,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.13)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.12",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0007585775750291835,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed (x=0.15)",
+      "canonical_formula": null,
+      "material_definitions": [],
+      "raw_conductivity": "-3.27",
+      "raw_conductivity_unit": "log(\u03c3/ S cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0005370317963702527,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 3-main",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X: x] [Y: log(\u03c3/ S cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Cubic, disordered",
+      "canonical_formula": null,
+      "material_definitions": [
+        "Cubic, disordered form with x = 0.12"
+      ],
+      "raw_conductivity": "1.53 \times 10^{-3}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( $S \\approx 0.6$ ) with x = 0.12",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Tetragonal, ordered",
+      "canonical_formula": null,
+      "material_definitions": [
+        "Tetragonal, ordered form (S \u2248 0.6) with x = 0.12"
+      ],
+      "raw_conductivity": "6.88 \times 10^{-4}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( $S \\approx 0.6$ ) with x = 0.12",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li0.5La0.5TiO3 (x=0)",
+      "canonical_formula": "Li0.5La0.5TiO3",
+      "material_definitions": [
+        "Perovskite-type solid solutions with the formula Li0.5-xNaxLa0.5TiO3 where x ranges from 0 to 0.5.",
+        "The samples were synthesized via a solid-state reaction method using Li2CO3, Na2CO3, La2O3, and TiO2 as starting materials.",
+        "The investigation focuses on the effect of substituting lithium with sodium on the ionic conductivity of the A-site deficient perovskite system.",
+        "Electrical properties were analyzed using AC impedance spectroscopy to distinguish between bulk and grain boundary contributions."
+      ],
+      "raw_conductivity": "1.2e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0012,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "disordered sample with x = 0.12",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li3xTiO3 (x = 0.06-0.15) with disordered arrangement of A-site ions.",
+        "Disordered samples were prepared by quenching from 1350\u00b0C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite with ordered alternate La-rich and Li-vacancy-rich layers was formed by annealing quenched pellets at 800\u00b0C for 3 days.",
+        "The study investigates the effect of A-site ordering on ionic conductivity across different x values."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "ordered sample (S ~ 0.6)",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li3xTiO3 (x = 0.06-0.15) with disordered arrangement of A-site ions.",
+        "Disordered samples were prepared by quenching from 1350\u00b0C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite with ordered alternate La-rich and Li-vacancy-rich layers was formed by annealing quenched pellets at 800\u00b0C for 3 days.",
+        "The study investigates the effect of A-site ordering on ionic conductivity across different x values."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature for the ordered sample is inferred from the comparison context with the disordered sample at 25\u00b0C."
+      ]
+    },
+    {
+      "raw_composition": "La0.67-xLi3xTiO3 (x=0.11)",
+      "canonical_formula": "La0.56Li0.33TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li3xTiO3 (x = 0.06-0.15) with disordered arrangement of A-site ions.",
+        "Disordered samples were prepared by quenching from 1350\u00b0C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite with ordered alternate La-rich and Li-vacancy-rich layers was formed by annealing quenched pellets at 800\u00b0C for 3 days.",
+        "The study investigates the effect of A-site ordering on ionic conductivity across different x values."
+      ],
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "This value is cited from literature (references [9,10]) and contains an approximate symbol (~)."
+      ]
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal parallel to c-axis",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [
+        "Doubled perovskite single crystal with alternate arrangement of A-site ions.",
+        "Exhibits anisotropic ionic conductivity at room temperature."
+      ],
+      "raw_conductivity": "5.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00058,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from reference [22]."
+      ]
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal perpendicular to c-axis",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [
+        "Doubled perovskite single crystal with alternate arrangement of A-site ions.",
+        "Exhibits anisotropic ionic conductivity at room temperature."
+      ],
+      "raw_conductivity": "6.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00068,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from reference [22]."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

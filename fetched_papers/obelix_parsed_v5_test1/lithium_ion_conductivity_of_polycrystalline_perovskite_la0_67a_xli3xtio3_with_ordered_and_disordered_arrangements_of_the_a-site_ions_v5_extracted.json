@@ -1,0 +1,1006 @@
+{
+  "doc_name": "lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions",
+  "timestamp": "2026-02-06 08:35:59",
+  "execution_time_seconds": 388.73,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 6807,
+    "total_output_tokens": 8905,
+    "total_cost_usd": 0.0243,
+    "call_counts": {
+      "gemini-flash-latest": 7
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 54,
+    "skipped_images": 4,
+    "failed_items": 1,
+    "total_sections_processed": 8,
+    "total_images_processed": 3
+  },
+  "material_count": 54,
+  "measurements": [
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.72",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.72,
+      "raw_temperature": "0.06",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.06,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.72e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.1,
+      "raw_temperature": "0.09",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.09,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.10e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-2.85",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.85,
+      "raw_temperature": "0.11",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.11,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.85e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-2.75",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.75,
+      "raw_temperature": "0.12",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.12,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.75e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-2.89",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.89,
+      "raw_temperature": "0.13",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.13,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.89e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.13",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.13,
+      "raw_temperature": "0.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.15,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.13e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.42",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.42,
+      "raw_temperature": "0.06",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.06,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.42e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.23",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.23,
+      "raw_temperature": "0.09",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.09,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.23e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.18,
+      "raw_temperature": "0.11",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.11,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.18e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "0.12",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.12,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.18",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.18,
+      "raw_temperature": "0.13",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.13,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.18e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.32",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.32,
+      "raw_temperature": "0.15",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 0.15,
+      "source_figure_id": "Fig 3",
+      "source_caption": "Fig. 3. Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \u25cf: quenched; \u25cb: annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.32e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenching",
+      "canonical_formula": "quenching",
+      "material_definitions": [],
+      "raw_conductivity": "-2.91",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.91,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: quenching] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.91e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenching",
+      "canonical_formula": "quenching",
+      "material_definitions": [],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.88,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: quenching] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.88e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenching",
+      "canonical_formula": "quenching",
+      "material_definitions": [],
+      "raw_conductivity": "-2.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.88,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: quenching] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.88e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealing",
+      "canonical_formula": "annealing",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "1.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 1.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: annealing] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealing",
+      "canonical_formula": "annealing",
+      "material_definitions": [],
+      "raw_conductivity": "-3.14",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.14,
+      "raw_temperature": "2.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 2.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: annealing] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.14e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealing",
+      "canonical_formula": "annealing",
+      "material_definitions": [],
+      "raw_conductivity": "-3.14",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.14,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.0,
+      "source_figure_id": "Fig 4",
+      "source_caption": "Fig. 4. Variations of ionic conductivity for the sample with x = 0.11 during quenching\u2013annealing cycles;  $\\bullet$ : quenching;  $\\bigcirc$ : annealing. [Series: annealing] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.14e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "0.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.1,
+      "raw_temperature": "3.01",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.01,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "0.0",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": 0.0,
+      "raw_temperature": "3.08",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.08,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (0.00e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-0.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.15,
+      "raw_temperature": "3.17",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.17,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.50e-01)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-0.37",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.37,
+      "raw_temperature": "3.33",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.70e-01)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-0.65",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.65,
+      "raw_temperature": "3.52",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.52,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-6.50e-01)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-0.88",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.88,
+      "raw_temperature": "3.66",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.66,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-8.80e-01)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-1.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.1,
+      "raw_temperature": "3.81",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.81,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.10e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-1.37",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.37,
+      "raw_temperature": "3.96",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.96,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.37e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-1.98",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.98,
+      "raw_temperature": "4.32",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.32,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.98e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-2.38",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.38,
+      "raw_temperature": "4.52",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.52,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.38e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-2.73",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.73,
+      "raw_temperature": "4.72",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.72,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.73e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.1",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.1,
+      "raw_temperature": "4.93",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.93,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.10e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.55,
+      "raw_temperature": "5.21",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.21,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.55e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-3.96",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.96,
+      "raw_temperature": "5.49",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.49,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.96e+00)"
+      ]
+    },
+    {
+      "raw_composition": "quenched",
+      "canonical_formula": "quenched",
+      "material_definitions": [],
+      "raw_conductivity": "-4.41",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.41,
+      "raw_temperature": "5.8",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.8,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: quenched] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.41e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-0.18",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.18,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.0,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.80e-01)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-0.34",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.34,
+      "raw_temperature": "3.09",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.09,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.40e-01)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-0.55",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.55,
+      "raw_temperature": "3.21",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.21,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.50e-01)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-0.77",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -0.77,
+      "raw_temperature": "3.33",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.33,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-7.70e-01)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-1.03",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.03,
+      "raw_temperature": "3.49",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.49,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.03e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-1.26",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.26,
+      "raw_temperature": "3.65",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.65,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.26e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-1.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.5,
+      "raw_temperature": "3.8",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.8,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-1.74",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -1.74,
+      "raw_temperature": "3.95",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 3.95,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-1.74e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-2.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.5,
+      "raw_temperature": "4.31",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.31,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-2.8",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -2.8,
+      "raw_temperature": "4.49",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.49,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-2.80e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.15",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.15,
+      "raw_temperature": "4.7",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.7,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.15e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-3.47",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -3.47,
+      "raw_temperature": "4.91",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 4.91,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-3.47e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-4.0",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.0,
+      "raw_temperature": "5.19",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.19,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.00e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-4.5",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -4.5,
+      "raw_temperature": "5.46",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.46,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-4.50e+00)"
+      ]
+    },
+    {
+      "raw_composition": "annealed",
+      "canonical_formula": "annealed",
+      "material_definitions": [],
+      "raw_conductivity": "-5.05",
+      "raw_conductivity_unit": "Y-axis",
+      "normalized_conductivity": -5.05,
+      "raw_temperature": "5.79",
+      "raw_temperature_unit": "X-axis",
+      "normalized_temperature_c": 5.79,
+      "source_figure_id": "Fig 5",
+      "source_caption": "Fig. 5. Arrhenius plots of the bulk conductivities for the disordered and ordered samples with x = 0.12;  $\\bullet$ : quenched;  $\\bigcirc$ : annealed. [Series: annealed] [X-Axis: X-axis]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Value below realistic detection limit (-5.05e+00)"
+      ]
+    },
+    {
+      "raw_composition": "disordered sample with x=0.12",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li(3x)TiO3 (x = 0.06\b0.15) with a disordered arrangement of the A-site ions was prepared by quenching from 1350\b0C into liquid N.",
+        "A tetragonal, doubled perovskite ($a = a_p, c \\approx 2a_p$) with alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis was prepared by annealing the quenched pellet at 800\b0C for 3 days.",
+        "The samples are solid solutions based on the general perovskite formula La(0.67-x)Li(3x)TiO3."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    },
+    {
+      "raw_composition": "ordered sample (S \b0.6)",
+      "canonical_formula": "La0.55Li0.36TiO3",
+      "material_definitions": [
+        "Simple cubic perovskite La(0.67-x)Li(3x)TiO3 (x = 0.06\b0.15) with a disordered arrangement of the A-site ions was prepared by quenching from 1350\b0C into liquid N.",
+        "A tetragonal, doubled perovskite ($a = a_p, c \\approx 2a_p$) with alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis was prepared by annealing the quenched pellet at 800\b0C for 3 days.",
+        "The samples are solid solutions based on the general perovskite formula La(0.67-x)Li(3x)TiO3."
+      ],
+      "raw_conductivity": "6.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00068,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "La(0.67-x)Li(3x)TiO3 (x=0.11)",
+      "canonical_formula": "La0.56Li0.33TiO3",
+      "material_definitions": [],
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value is approximate (~10^-3 S cm-1) and cited from external source [9,10]."
+      ]
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (parallel to c-axis)",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [],
+      "raw_conductivity": "5.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00058,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from external source [22]. Measurement is anisotropic (parallel)."
+      ]
+    },
+    {
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (perpendicular to c-axis)",
+      "canonical_formula": "La0.59Li0.27TiO3.02",
+      "material_definitions": [],
+      "raw_conductivity": "6.8e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00068,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 26.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from external source [22]. Measurement is anisotropic (perpendicular)."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.12 (annealed, S approx 0.6)",
+      "canonical_formula": null,
+      "material_definitions": [
+        "The materials are lithium ion conducting perovskite solid solutions, specifically examining quenched (disordered, cubic) and annealed (ordered, tetragonal) forms varying by composition x.",
+        "The A-sites are occupied by La ions, Li ions, and vacancies.",
+        "The ordering transition (quantified by S) significantly affects ionic conductivity.",
+        "The annealed sample adopted a tetragonal, doubled cell (P4/mmm) representing an ordered phase."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00b0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Bulk conductivities at 25\u00b0C for the quenched and annealed samples; \\u25cf: quenched; \\u25ef: annealed.",
+      "source": "text",
+      "confidence": "low",
+      "warnings": []
+    }
+  ],
+  "material_definitions": []
+}

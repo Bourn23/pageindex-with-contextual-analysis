@@ -1,0 +1,13 @@
+GT-282     | ✅ MATCH         | The extracted formula LiTi2(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-283     | ❌ MISSING/BAD   | The extracted formula Li1.5Al0.5Ti1.5(PO4)3 (x=0.5) does not match the normalized ground truth formula Li1.05Al0.05Ti1.95(PO4)3 (x=0.05), although the conductivity values are identical.
+GT-284     | ✅ MATCH         | The extracted formula Li1.1Al0.1Ti1.9(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-285     | ✅ MATCH         | The extracted formula Li1.3Al0.3Ti1.7(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-286     | ✅ MATCH         | The extracted formula Li1.4Al0.4Ti1.6(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-287     | ❌ MISSING/BAD   | The extracted formula Li1.5Cr0.5Ti1.5(PO4)3 (x=0.5) does not match the normalized ground truth formula Li1.05Cr0.05Ti1.95(PO4)3 (x=0.05), although the conductivity values are identical.
+GT-288     | ✅ MATCH         | The extracted formula Li1.1Cr0.1Ti1.9(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-289     | ✅ MATCH         | The extracted formula Li1.2Cr0.2Ti1.8(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-290     | ✅ MATCH         | The extracted formula Li1.3Cr0.3Ti1.7(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-291     | ❌ MISSING/BAD   | The extracted formula Li1.5Fe0.5Ti1.5(PO4)3 (x=0.5) does not match the normalized ground truth formula Li1.05Fe0.05Ti1.95(PO4)3 (x=0.05), although the conductivity values are identical.
+GT-292     | ✅ MATCH         | The extracted formula Li1.1Fe0.1Ti1.9(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-293     | ✅ MATCH         | The extracted formula Li1.2Fe0.2Ti1.8(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.
+GT-294     | ✅ MATCH         | The extracted formula Li1.3Fe0.3Ti1.7(PO4)3 is identical to the normalized ground truth formula, and the conductivity values are identical.

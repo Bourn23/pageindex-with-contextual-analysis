@@ -1,0 +1,11 @@
+GT-417     | ✅ MATCH         | Li24.0P4.0S20.0I4.0 simplifies to Li6PS5I, and 1.26e-06 S/cm is approximately 1.2e-06 S/cm at 25C.
+GT-418     | ✅ MATCH         | Li24.4P3.6Ge0.4S20.0I4.0 simplifies to Li6.1P0.9Ge0.1S5I, which is very close to Li6.08P0.92Ge0.08S5I (x=0.1 vs x=0.08), and 8.86e-06 S/cm is approximately 8e-06 S/cm at 25C.
+GT-419     | ✅ MATCH         | Li24.6P3.4Ge0.6S20.0I4.0 simplifies to Li6.15P0.85Ge0.15S5I, and 3.93e-05 S/cm is approximately 4e-05 S/cm at 25C.
+GT-420     | ✅ MATCH         | Li24.8P3.2Ge0.8S20.0I4.0 simplifies to Li6.2P0.8Ge0.2S5I, which is very close to Li6.24P0.76Ge0.24S5I (x=0.2 vs x=0.24), and 3.19e-05 S/cm is approximately 3.2e-05 S/cm at 25C.
+GT-421     | ✅ MATCH         | Li25.0P3.0Ge1.0S20.0I4.0 simplifies to Li6.25P0.75Ge0.25S5I, which is very close to Li6.26P0.74Ge0.26S5I (x=0.25 vs x=0.26), and 0.00015 S/cm is approximately 0.00016 S/cm at 25C.
+GT-422     | ❌ MISSING/BAD   | No extracted data found for Li6.3P0.7Ge0.3S5I with conductivity approximately 0.00065 S/cm at room temperature. The closest extracted composition Li6.37P0.63Ge0.37S5I (x=0.37) has a significantly different x value (0.07 difference) and conductivity (0.00055 S/cm).
+GT-423     | ❌ MISSING/BAD   | No extracted data found for Li6.4P0.6Ge0.4S5I with conductivity approximately 0.0015 S/cm at room temperature. The closest extracted composition Li6.47P0.53Ge0.47S5I (x=0.47) has a significantly different x value (0.07 difference) and conductivity (0.0017 S/cm).
+GT-424     | ✅ MATCH         | Li26.0P2.0Ge2.0S20.0I4.0 simplifies to Li6.5P0.5Ge0.5S5I, which is very close to Li6.52P0.48Ge0.52S5I (x=0.5 vs x=0.52), and 0.00186 S/cm is approximately 0.0021 S/cm at 25C.
+GT-425     | ✅ MATCH         | Li26.4P1.6Ge2.4S20.0I4.0 simplifies to Li6.6P0.4Ge0.6S5I, and 0.00521 S/cm is approximately 0.0054 S/cm at 24.85C.
+GT-426     | ✅ MATCH         | Li26.8P1.2Ge2.8S20.0I4.0 simplifies to Li6.7P0.3Ge0.7S5I, which is very close to Li6.69P0.31Ge0.69S5I (x=0.7 vs x=0.69), and 0.00554 S/cm is approximately 0.0052 S/cm at 25C.
+GT-427     | ❌ MISSING/BAD   | No extracted data found for Li6.8P0.2Ge0.8S5I with conductivity approximately 0.00258 S/cm at room temperature. The closest extracted composition Li6.79P0.21Ge0.79S5I (x=0.79) has a significantly different conductivity (0.0054 S/cm).

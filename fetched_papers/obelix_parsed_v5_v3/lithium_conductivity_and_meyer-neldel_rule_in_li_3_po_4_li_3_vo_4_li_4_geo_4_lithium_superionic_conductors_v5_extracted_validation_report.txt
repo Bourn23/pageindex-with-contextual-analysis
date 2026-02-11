@@ -1,0 +1,15 @@
+GT-69      | ✅ MATCH         | Li6.0P0.4V1.6O8.0 normalizes to Li3P0.2V0.8O4, and 1.31e-13 S/cm is approximately 1.6e-13 S/cm (22.1% difference).
+GT-70      | ❌ MISSING/BAD   | Li6.0V2.0O8.0 normalizes to Li3VO4, but 9.2e-14 S/cm is not approximately 1.6e-13 S/cm (73.9% difference).
+GT-124     | ✅ MATCH         | Li12.8Ge0.8P3.2O16.0 normalizes to Li3.2Ge0.2P0.8O4, and 1.14e-06 S/cm is approximately 1.3e-06 S/cm (14.0% difference).
+GT-125     | ✅ MATCH         | Li12.8Ge0.8V3.2O16.0 normalizes to Li3.2Ge0.2V0.8O4, and 1.9e-05 S/cm is approximately 1.6e-05 S/cm (15.8% difference).
+GT-126     | ❌ MISSING/BAD   | Li13.6Ge1.6P2.4O16.0 normalizes to Li3.4Ge0.4P0.6O4, but 4.5e-06 S/cm is not approximately 4e-05 S/cm (788% difference).
+GT-127     | ✅ MATCH         | Li13.6Ge1.6V2.4O16.0 normalizes to Li3.4Ge0.4V0.6O4, and 8.89e-07 S/cm is approximately 6.3e-07 S/cm (29.1% difference).
+GT-128     | ❌ MISSING/BAD   | Li14.4Ge2.4P1.6O16.0 normalizes to Li3.6Ge0.6P0.4O4, but 1.1e-05 S/cm is not approximately 5e-06 S/cm (54.5% difference).
+GT-129     | ❌ MISSING/BAD   | Li14.4Ge2.4V1.6O16.0 normalizes to Li3.6Ge0.6V0.4O4, but 3.19e-05 S/cm is not approximately 6.3e-05 S/cm (97.5% difference).
+GT-130     | ✅ MATCH         | Li15.2Ge3.2P0.8O16.0 normalizes to Li3.8Ge0.8P0.2O4, and 1.03e-06 S/cm is approximately 1.3e-06 S/cm (26.2% difference).
+GT-131     | ✅ MATCH         | Li15.2Ge3.2V0.8O16.0 normalizes to Li3.8Ge0.8V0.2O4, and 2.71e-06 S/cm is approximately 2.5e-06 S/cm (7.7% difference).
+GT-132     | ❌ MISSING/BAD   | Li12.0P1.6V2.4O16.0 normalizes to Li3P0.4V0.6O4, but 3.55e-13 S/cm is not approximately 6.3e-13 S/cm (77.5% difference).
+GT-133     | ✅ MATCH         | Li12.0P2.4V1.6O16.0 normalizes to Li3P0.6V0.4O4, and 3.2e-13 S/cm is approximately 3.2e-13 S/cm (exact match).
+GT-134     | ❌ MISSING/BAD   | Li12.0P3.2V0.8O16.0 normalizes to Li3P0.8V0.2O4, but 2.05e-13 S/cm is not approximately 2.8e-13 S/cm (36.6% difference).
+GT-135     | ❌ MISSING/BAD   | Li12.0P4.0O16.0 normalizes to Li3PO4, but 1.75e-13 S/cm is not approximately 3.2e-13 S/cm (82.8% difference).
+GT-136     | ✅ MATCH         | Li16.0Ge4.0O16.0 normalizes to Li4GeO4, and 1.3e-12 S/cm is approximately 1.6e-12 S/cm (23.1% difference).

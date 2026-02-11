@@ -1,0 +1,49 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m MD File: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy.md
+[0;34m[INFO][0m Asset Directory: ./fetched_papers/obelix_md/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy_v5_pipeline_20260210_195224.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   ✂️ De-duplicating 2 tables from Markdown text...
+       - Replaced 'Table 2' in section '3.3. Impedance spectroscopy'
+       - Replaced 'Table 2' in section '4. Conclusions'
+   --- Document: A systematic study of Nasicon-type $\text{Li}_{1+x}\text{M}_x\text{Ti}_{2-x}(\text{PO}_4)_3$ (M: Cr, Al, Fe) by neutron diffraction and impedance spectroscopy
+   --- Found: 15 Sections
+   --- Found: 13 Figures, 2 Tables
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Solid State Ionics' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 1 Images: ['Unknown']
+
+   >>> Section '3.1. X-ray diffraction at room temperature' contains:
+       - 1 Images: ['Fig 1']
+
+   >>> Section '3.2. Neutron diffraction as a function of temperature' contains:
+       - 7 Images: ['Fig 1', 'Fig 2', 'Fig 5', 'Fig 4', 'Fig 3', 'Fig 1', 'Fig 1']
+
+   >>> Section '3.3. Impedance spectroscopy' contains:
+       - 8 Images: ['Fig 5', 'Fig 2', 'Fig 9', 'Fig 7', 'Fig 8', 'Fig 4', 'Fig 6', 'Fig 3']
+       - 2 Tables: ['Table 2', 'Table 2']
+
+   >>> Section '4. Conclusions' contains:
+       - 1 Images: ['Fig 8']
+       - 1 Tables: ['Table 2']
+
+   >>> Section 'Acknowledgments' contains:
+       - 1 Images: ['Fig 9']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: References
+   ... Processing 29 items (Text + Images) simultaneously ...
+[0;31m[ERROR][0m Failed during extraction step

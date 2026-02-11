@@ -3,23 +3,70 @@
 --- [Document] lithium_ion_conductivity_of_polycrystalline_perovskite_la0_67a_xli3xtio3_with_ordered_and_disordered_arrangements_of_the_a-site_ions.md ---
 
 
+[DEBUG] 3. Results and discussion:
+- Response length: 2497 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=758 candidates_tokens_details=None prompt_token_count=2282 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2282
+)] thoughts_token_count=2120 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5160 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "quenched sample with x = 0.12",
+      "canonical_formula": "La0.547Li0.36TiO3",
+      "reduced_formula": "La547Li360O3000Ti1000",
+      "material_definitions": [
+        "The study focuses on perovskite solid solutions where La ions, Li ions, and vacancies are distributed on A-sites.",
+        "Samples were prepared as quenched (disordered simple cubic, Pm-3m) or annealed (ordered tetragonal, P4/mmm).",
+        "The ordered tetragonal form features alternating La-rich and Li-vacancy-rich layers along the c-axis.",
+        "The order-disorder transition is reversible through quenching-annealing cycles.",
+        "Composition is expressed by the parameter x, with x = 0.12 showing maximum conductivity for both phases."
+      ],
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Bulk conductivities at 25°C for the quenched and annealed samples; ●: quenched; ○: annealed.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "annealed sample (S ≈ 0.6) with x = 0.12",
+      "canonical_formula": "La0.547Li0.36TiO3",
+      "reduced_formula": "La547Li360O3000Ti1000",
+      "material_definitions": [
+        "The study focuses on perovskite solid solutions where La ions, Li ions, and vacancies are distributed on A-sites.",
+        "Samples were prepared as quenched (disordered simple cubic, Pm-3m) or annealed (ordered tetragonal, P4/mmm).",
+        "The ordered tetragonal form features alternating La-rich and Li-vacancy-rich layers along the c-axis.",
+        "The order-disorder transition is reversible through quenching-annealing cycles.",
+        "Composition is expressed by the parameter x, with x = 0.12 showing maximum conductivity for both phases."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig. 3",
+      "source_caption": "Bulk conductivities at 25°C for the quenched and annealed samples; ●: quenched; ○: annealed.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    }
+  ]
+}
+
+
 [DEBUG] Abstract / Introduction:
 - Response length: 24 chars
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=309 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=309
-)] thoughts_token_count=58 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=377 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=283 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=283
-)] thoughts_token_count=90 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=383 traffic_type=None
+)] thoughts_token_count=3051 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3370 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -30,211 +77,80 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1088 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1088
-)] thoughts_token_count=726 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1824 traffic_type=None
+)] thoughts_token_count=3867 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4965 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
-[DEBUG] 4. Conclusions:
-- Response length: 1805 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=575 candidates_tokens_details=None prompt_token_count=528 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=528
-)] thoughts_token_count=1696 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2799 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "simple cubic form with x = 0.12",
-      "canonical_formula": "La0.55Li0.36TiO3",
-      "material_definitions": [
-        "The materials studied are polycrystalline perovskite solid solutions La(0.67-x)Li(3x)TiO3 (x > 0.08).",
-        "The simple cubic form has disordered arrangements of A-site ions, while the tetragonal form (S ≈ 0.5-0.7) features alternate arrangements of La-rich layers and Li-vacancy-rich layers along the c-axis."
-      ],
-      "raw_conductivity": "1.53e-3",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.00153,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "tetragonal form (S ≈ 0.6)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The materials studied are polycrystalline perovskite solid solutions La(0.67-x)Li(3x)TiO3 (x > 0.08).",
-        "The simple cubic form has disordered arrangements of A-site ions, while the tetragonal form (S ≈ 0.5-0.7) features alternate arrangements of La-rich layers and Li-vacancy-rich layers along the c-axis."
-      ],
-      "raw_conductivity": "6.88e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 6.88e-4,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Temperature inferred to be 25 °C based on context comparison with the preceding measurement."
-      ]
-    }
-  ]
-}
-
-
-[DEBUG] 3. Results and discussion:
-- Response length: 2651 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=933 candidates_tokens_details=None prompt_token_count=2282 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2282
-)] thoughts_token_count=1669 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4884 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "quenched sample with x = 0.12",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The materials studied are lithium ion conducting perovskite solid solutions, parametrized by 'x', which exhibit differences based on thermal treatment.",
-        "The quenched samples adopt a disordered cubic structure (S.G: Pm \r\n\r\n\r\n3\r\n\r\n\r\n m) with random distribution of La ions, Li ions and vacancies over the A-sites.",
-        "The annealed samples exhibit an ordered, tetragonal structure (P4/mmm) due to alternate arrangement of La-rich and Li-vacancy-rich layers along the c-axis.",
-        "The maximum conductivity was observed at x = 0.12 for both forms, measured at 25\r\n\r\n\r\n\r\n\r\nC."
-      ],
-      "raw_conductivity": "1.53e-3",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.00153,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\r\n\r\n\r\n\r\n\r\nC",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Fig. 3",
-      "source_caption": "Bulk conductivities at 25\r\n\r\n\r\n\r\n\r\nC for the quenched and annealed samples; \r\n\r\n\r\n\r\n\r\n: quenched; \r\n\r\n\r\n\r\n\r\n: annealed.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "annealed sample with x = 0.12 (S \r\n\r\n\r\n0.6)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The materials studied are lithium ion conducting perovskite solid solutions, parametrized by 'x', which exhibit differences based on thermal treatment.",
-        "The quenched samples adopt a disordered cubic structure (S.G: Pm \r\n\r\n\r\n3\r\n\r\n\r\n m) with random distribution of La ions, Li ions and vacancies over the A-sites.",
-        "The annealed samples exhibit an ordered, tetragonal structure (P4/mmm) due to alternate arrangement of La-rich and Li-vacancy-rich layers along the c-axis.",
-        "The maximum conductivity was observed at x = 0.12 for both forms, measured at 25\r\n\r\n\r\n\r\n\r\nC."
-      ],
-      "raw_conductivity": "6.88e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.000688,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\r\n\r\n\r\n\r\n\r\nC",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Fig. 3",
-      "source_caption": "Bulk conductivities at 25\r\n\r\n\r\n\r\n\r\nC for the quenched and annealed samples; \r\n\r\n\r\n\r\n\r\n: quenched; \r\n\r\n\r\n\r\n\r\n: annealed.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_3_figure_5.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "x",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log(\u03c3/ S cm\u207b\u00b9)",
-        "unit": "S cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        42,
-        41,
-        955,
-        951
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 12
-
-
 [DEBUG] **Abstract**:
-- Response length: 4459 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=652
-)] cached_content_token_count=652 candidates_token_count=1508 candidates_tokens_details=None prompt_token_count=1864 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 5903 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1939 candidates_tokens_details=None prompt_token_count=1864 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1864
-)] thoughts_token_count=3484 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6856 traffic_type=None
+)] thoughts_token_count=3181 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6984 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "disordered sample with x = 0.12 (La(0.67-x)Li(3x)TiO3)",
+      "raw_composition": "disordered sample with x = 0.12 (La0.67-xLi3xTiO3)",
       "canonical_formula": "La0.55Li0.36TiO3",
+      "reduced_formula": "La55Li36Ti100O300",
       "material_definitions": [
-        "Simple cubic perovskite La(0.67-x)Li(3x)TiO3 (x = 0.06–0.15) was synthesized.",
-        "The material exhibits a disordered arrangement of the A-site ions, obtained by quenching from 1350°C into liquid N2.",
-        "This specific sample composition is x=0.12."
+        "Simple cubic perovskite La0.67-xLi3xTiO3 (x = 0.06–0.15) with disordered arrangement of the A-site ions prepared by quenching from 1350°C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite (a = ap, c = 2ap) with alternate arrangement of La-rich and Li-vacancy-rich layers along the c-axis prepared by annealing at 800°C for 3 days.",
+        "The lithium ion conduction in Ln0.67-xLi3xTiO3 occurs by an ion-vacancy mechanism through interconnected A-sites.",
+        "Polymorphic forms include high-temperature cubic (a = ap) and intermediate/low-temperature tetragonal (a = ap, c ≈ 2ap) structures.",
+        "The conductivity is influenced by the degree of order (S) of the A-site ions and the lattice parameters."
       ],
       "raw_conductivity": "1.53e-3",
       "raw_conductivity_unit": "S cm-1",
       "normalized_conductivity": 0.00153,
       "raw_temperature": "25",
-      "raw_temperature_unit": "C",
+      "raw_temperature_unit": "°C",
       "normalized_temperature_c": 25.0,
       "source_figure_id": null,
       "source_caption": null,
       "source": "text",
       "confidence": "high",
-      "warnings": []
+      "warnings": [
+        "Temperature '258C' in source interpreted as 25°C based on context."
+      ]
     },
     {
-      "raw_composition": "ordered sample (S ~ 0.6) of La(0.67-x)Li(3x)TiO3",
+      "raw_composition": "ordered sample (S = 0.6, La0.67-xLi3xTiO3, x=0.12)",
       "canonical_formula": "La0.55Li0.36TiO3",
+      "reduced_formula": "La55Li36Ti100O300",
       "material_definitions": [
-        "Tetragonal, doubled perovskite (a = ap, c ~ 2ap) structure with alternate arrangement of A-site layers along the c-axis.",
-        "The material is an ordered solid solution of La(0.67-x)Li(3x)TiO3, prepared by annealing the quenched pellet at 800°C.",
-        "This specific ordered sample has an order parameter S ~ 0.6."
+        "Simple cubic perovskite La0.67-xLi3xTiO3 (x = 0.06–0.15) with disordered arrangement of the A-site ions prepared by quenching from 1350°C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite (a = ap, c = 2ap) with alternate arrangement of La-rich and Li-vacancy-rich layers along the c-axis prepared by annealing at 800°C for 3 days.",
+        "The lithium ion conduction in Ln0.67-xLi3xTiO3 occurs by an ion-vacancy mechanism through interconnected A-sites.",
+        "Polymorphic forms include high-temperature cubic (a = ap) and intermediate/low-temperature tetragonal (a = ap, c ≈ 2ap) structures.",
+        "The conductivity is influenced by the degree of order (S) of the A-site ions and the lattice parameters."
       ],
       "raw_conductivity": "6.88e-4",
       "raw_conductivity_unit": "S cm-1",
       "normalized_conductivity": 0.000688,
       "raw_temperature": "25",
-      "raw_temperature_unit": "C",
+      "raw_temperature_unit": "°C",
       "normalized_temperature_c": 25.0,
       "source_figure_id": null,
       "source_caption": null,
       "source": "text",
-      "confidence": "medium",
+      "confidence": "high",
       "warnings": [
-        "Temperature 25C is inferred based on comparison with the previous measurement in the abstract.",
-        "Composition x=0.12 is inferred based on context, as only the order parameter S ~ 0.6 is explicitly stated."
+        "Temperature inferred from comparison context in abstract."
       ]
     },
     {
-      "raw_composition": "La(0.67-x)Li(3x)TiO3 (x=0.11)",
+      "raw_composition": "La0.67-xLi3xTiO3 (x=0.11)",
       "canonical_formula": "La0.56Li0.33TiO3",
+      "reduced_formula": "La56Li33Ti100O300",
       "material_definitions": [
-        "The compound is La(0.67-x)Li(3x)TiO3, a titanate-based perovskite material.",
-        "This specific composition is x=0.11.",
-        "The material exhibits weak superstructural peaks, indicating partial arrangement of A-site ions and vacancies along the c-axis."
+        "Simple cubic perovskite La0.67-xLi3xTiO3 (x = 0.06–0.15) with disordered arrangement of the A-site ions prepared by quenching from 1350°C into liquid nitrogen.",
+        "Tetragonal, doubled perovskite (a = ap, c = 2ap) with alternate arrangement of La-rich and Li-vacancy-rich layers along the c-axis prepared by annealing at 800°C for 3 days.",
+        "The lithium ion conduction in Ln0.67-xLi3xTiO3 occurs by an ion-vacancy mechanism through interconnected A-sites.",
+        "Polymorphic forms include high-temperature cubic (a = ap) and intermediate/low-temperature tetragonal (a = ap, c ≈ 2ap) structures.",
+        "The conductivity is influenced by the degree of order (S) of the A-site ions and the lattice parameters."
       ],
       "raw_conductivity": "1e-3",
       "raw_conductivity_unit": "S cm-1",
@@ -247,16 +163,16 @@
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value is an approximation (~10^-3) and cited from references [9,10]."
+        "Value cited from references [9, 10] in the text."
       ]
     },
     {
-      "raw_composition": "La(0.59)Li(0.27)TiO(3.02) single crystal (parallel to c-axis)",
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (parallel to c-axis)",
       "canonical_formula": "La0.59Li0.27TiO3.02",
+      "reduced_formula": "La59Li27Ti100O302",
       "material_definitions": [
-        "Doubled perovskite La(0.59)Li(0.27)TiO(3.02) single crystal.",
-        "The crystal exhibits alternate arrangements of A-site ions.",
-        "The conductivity measurement is parallel to the c-axis."
+        "Single crystal doubled perovskite La0.59Li0.27TiO3.02 with alternate arrangements along the c-axis.",
+        "Ionic conductivity measured parallel and perpendicular to the c-axis."
       ],
       "raw_conductivity": "5.8e-4",
       "raw_conductivity_unit": "S cm-1",
@@ -269,16 +185,16 @@
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value cited from reference [22]."
+        "Value cited from reference [22] in the text."
       ]
     },
     {
-      "raw_composition": "La(0.59)Li(0.27)TiO(3.02) single crystal (perpendicular to c-axis)",
+      "raw_composition": "La0.59Li0.27TiO3.02 single crystal (perpendicular to c-axis)",
       "canonical_formula": "La0.59Li0.27TiO3.02",
+      "reduced_formula": "La59Li27Ti100O302",
       "material_definitions": [
-        "Doubled perovskite La(0.59)Li(0.27)TiO(3.02) single crystal.",
-        "The crystal exhibits alternate arrangements of A-site ions.",
-        "The conductivity measurement is perpendicular to the c-axis."
+        "Single crystal doubled perovskite La0.59Li0.27TiO3.02 with alternate arrangements along the c-axis.",
+        "Ionic conductivity measured parallel and perpendicular to the c-axis."
       ],
       "raw_conductivity": "6.8e-4",
       "raw_conductivity_unit": "S cm-1",
@@ -291,78 +207,176 @@
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value cited from reference [22]."
+        "Value cited from reference [22] in the text."
       ]
     }
   ]
 }
 
 
+[DEBUG] 4. Conclusions:
+- Response length: 1753 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=527 candidates_tokens_details=None prompt_token_count=528 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=528
+)] thoughts_token_count=1067 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2122 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"simple cubic form with x = 0.12 (La0.67-xLi3xTiO3)","canonical_formula":"Li0.36La0.55TiO3","reduced_formula":"Li36La55O300Ti100","material_definitions":["Polycrystalline La0.67-xLi3xTiO3 (x > 0.08) solid solutions.","The simple cubic form features disordered arrangements of the A-site ions.","The tetragonal form (order parameter S ≈ 0.5-0.7) has alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.","The cubic form with x = 0.12 exhibits the maximum bulk conductivity reported for perovskite solid solutions."],"raw_conductivity":"1.53e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.00153,"raw_temperature":"25","raw_temperature_unit":"°C","normalized_temperature_c":25.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"tetragonal form (S ≈ 0.6) (La0.67-xLi3xTiO3)","canonical_formula":null,"reduced_formula":null,"material_definitions":["Polycrystalline La0.67-xLi3xTiO3 (x > 0.08) solid solutions.","The simple cubic form features disordered arrangements of the A-site ions.","The tetragonal form (order parameter S ≈ 0.5-0.7) has alternate arrangement of La-rich layers and Li-vacancy-rich layers along the c-axis.","The cubic form with x = 0.12 exhibits the maximum bulk conductivity reported for perovskite solid solutions."],"raw_conductivity":"6.88e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.000688,"raw_temperature":"25","raw_temperature_unit":"°C","normalized_temperature_c":25.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":["Temperature of 25°C is inferred from the comparative context of the same paragraph."]}]}
+
+
 [TABLE DEBUG] Table 2: Calculated molar fractions of the  $La^{3+}$  ion,  $Li^{+}$  ion and vacancy in the (001) plane of the disordered form and in the La-rich and Li-vacancy-rich layers of the tetragonal, ordered form with S=0.6:
+- Response: {"measurements":[]}
+
+
+[TABLE DEBUG] Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( $S \approx 0.6$ ) with x = 0.12:
 - Response: {
-  "measurements": []
-}
-
-
-[SCI-FIGURE DEBUG] page_3_figure_9.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
+  "measurements": [
     {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "Cycles",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log(\u03c3/ S cm-1)",
-        "unit": "S cm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        20,
-        28,
-        980,
-        975
+      "raw_composition": "Cubic, disordered",
+      "canonical_formula": null,
+      "reduced_formula": null,
+      "material_definitions": [
+        "bulk",
+        "This material represents the cubic, disordered form of the compound with x = 0.12. It is part of a study comparing ordered and disordered phases. The measurement specifically captures the bulk ionic conductivity at room temperature. The structure is characterized by a lack of long-range order compared to the tetragonal phase."
       ],
-      "label": "main"
+      "raw_conductivity": "1.53e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00153,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": "Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( S \u2248 0.6 ) with x = 0.12",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Tetragonal, ordered",
+      "canonical_formula": null,
+      "reduced_formula": null,
+      "material_definitions": [
+        "bulk",
+        "This material represents the tetragonal, ordered form of the compound with x = 0.12. It features an order parameter S of approximately 0.6. The measurement specifically captures the bulk ionic conductivity at room temperature. The ordered structure typically results in different transport properties compared to the cubic phase."
+      ],
+      "raw_conductivity": "6.88e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000688,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": "Table 1: Conductivity data for the cubic, disordered form and the tetragonal, ordered form ( S \u2248 0.6 ) with x = 0.12",
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
     }
   ]
 }
-- Combined Measurements: 6
+
+
+[SCI-FIGURE DEBUG] page_3_figure_5.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 12
+  • main: X=stoichiometry, Y=conductivity
+
+
+[DEBUG] Introduction:
+- Response length: 1148 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=309 candidates_tokens_details=None prompt_token_count=283 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=283
+)] thoughts_token_count=7863 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8455 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li5ZrN3","canonical_formula":"Li5ZrN3","reduced_formula":"Li5N3Zr1","material_definitions":["The ternary nitrides Li5ZrN3 and Li5HfN3 were prepared by the reaction of Li3N and the respective transition metal nitride (ZrN or HfN).","The samples were prepared by heating mixtures of starting materials in a nitrogen atmosphere at 850-900 C.","Cation-ordered fluorite-type structures were observed for both compounds.","The ionic conductivity was measured by an AC impedance method with lithium metal electrodes."],"raw_conductivity":"2.0e-2","raw_conductivity_unit":"S m-1","normalized_conductivity":0.0002,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source":"text","confidence":"high"},{"raw_composition":"Li5HfN3","canonical_formula":"Li5HfN3","reduced_formula":"Hf1Li5N3","material_definitions":["The ternary nitrides Li5ZrN3 and Li5HfN3 were prepared by the reaction of Li3N and the respective transition metal nitride (ZrN or HfN).","The samples were prepared by heating mixtures of starting materials in a nitrogen atmosphere at 850-900 C.","Cation-ordered fluorite-type
 
 
 [SCI-FIGURE DEBUG] page_4_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 30
+  • main: X=temperature_inverse, Y=conductivity
+
+
+[DEBUG] Introduction:
+- Response length: 3584 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1169 candidates_tokens_details=None prompt_token_count=283 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=283
+)] thoughts_token_count=3504 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4956 traffic_type=None
+- chars: {
+  "measurements": [
     {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "10^3 T^-1/K^-1",
-        "unit": "K^-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log(T sigma / K Scm^-1)",
-        "unit": "S cm^-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        23,
-        61,
-        981,
-        985
+      "raw_composition": "x=0.1, Li3.8Mg0.1Ti1.63O4",
+      "canonical_formula": "Li3.8Mg0.1Ti1.63O4",
+      "reduced_formula": "Li114Mg3Ti49O120",
+      "material_definitions": [
+        "The ionic conductivity of the solid solution Li(4-2x)MgxTi(5-x)/3O4 (0 ≤ x ≤ 0.5) with the Li4Ti5O12-type structure was investigated.",
+        "Samples were prepared by a solid-state reaction using Li2CO3, MgO, and TiO2 as starting materials.",
+        "The mixture was calcined at 800 °C for 12 h and then sintered at 1000 °C for 24 h in air.",
+        "The conductivity was measured using an AC impedance method with gold electrodes.",
+        "X-ray diffraction patterns showed that all the products for 0 ≤ x ≤ 0.5 were single-phase with the spinel-type structure."
       ],
-      "label": "main"
+      "raw_conductivity": "2.5e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000025,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "x=0 (Li4Ti5O12)",
+      "canonical_formula": "Li4Ti1.667O4",
+      "reduced_formula": "Li12Ti5O12",
+      "material_definitions": [
+        "The ionic conductivity of the solid solution Li(4-2x)MgxTi(5-x)/3O4 (0 ≤ x ≤ 0.5) with the Li4Ti5O12-type structure was investigated.",
+        "Samples were prepared by a solid-state reaction using Li2CO3, MgO, and TiO2 as starting materials.",
+        "The mixture was calcined at 800 °C for 12 h and then sintered at 1000 °C for 24 h in air.",
+        "The conductivity was measured using an AC impedance method with gold electrodes.",
+        "X-ray diffraction patterns showed that all the products for 0 ≤ x ≤ 0.5 were single-phase with the spinel-type structure."
+      ],
+      "raw_conductivity": "1.6e-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.6e-7,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred from context of room temperature comparison with x=0.1"
+      ]
+    },
+    {
+      "raw_composition": "x=0.5",
+      "canonical_formula": "Li3Mg0.5Ti1.5O4",
+      "reduced_formula": "Li6Mg1Ti3O8",
+      "material_definitions": [
+        "The ionic conductivity of the solid solution Li(4-2x)MgxTi(5-x)/3O4 (0 ≤ x ≤ 0.5) with the Li4Ti5O12-type structure was investigated.",
+        "Samples were prepared by a solid-state reaction using Li2CO3, MgO, and TiO2 as starting materials.",
+        "The mixture was calcined at 800 °C for 12 h and then sintered at 1000 °C for 24 h in air.",
+        "The conductivity was measured using an AC impedance method with gold electrodes.",
+        "X-ray diffraction patterns showed that all the products for 0 ≤ x ≤ 0.5 were single-phase with the spinel-type structure."
+      ],
+      "raw_conductivity": "3.1e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0000031,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature inferred from context of room temperature measurement series"
+      ]
     }
   ]
 }
-- Combined Measurements: 27

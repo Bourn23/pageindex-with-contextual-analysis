@@ -1,0 +1,183 @@
+[0;34m========================================[0m
+[0;34mDATA EXTRACTION PIPELINE v5[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m MD File: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.md
+[0;34m[INFO][0m Asset Directory: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m Log File: ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_pipeline_20260211_101909.log
+
+[0;32m[STEP 1/2][0m Extracting data directly from MD file...
+
+✅ SpaCy loaded with custom tokenization rules.
+   --- Document: Journal of Materials Chemistry A
+   --- Found: 15 Sections
+   --- Found: 10 Figures, 0 Tables
+   [91m[Warning][0m Number of images found does not match number of image files in asset directory
+
+   --- Found Assets in Sections:
+
+   >>> Section 'Abstract / Introduction' contains:
+       - 2 Images: ['Unknown', 'Unknown']
+
+   >>> Section '1. Introduction' contains:
+       - 1 Images: ['Fig 1a']
+
+   >>> Section 'Structural characterization' contains:
+       - 4 Images: ['Fig 4s', 'Fig 3s', 'Fig 2a', 'Fig 2a']
+
+   >>> Section 'Ionic transport' contains:
+       - 3 Images: ['Fig 6a', 'Fig 5a', 'Fig 6a']
+
+   --- Found Assets in Sections ---
+
+
+   [91m[Warning][0m Skipping section: Acknowledgements
+   [91m[Warning][0m Skipping section: References
+   ... Processing 15 items (Text + Images) simultaneously ...
+   🔍 page_4_figure_9.jpeg (Fig 5a): Detecting subplot...
+   🔍 page_5_figure_5.jpeg (Fig 6a): Detecting subplot...
+   ✓ page_4_figure_9.jpeg (Fig 5a) - a: Valid plot (X=temperature_inverse)
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 5a): Subplot 'b' does not contain ionic conductivity measurements.
+   [93m[Skip][0m page_4_figure_9.jpeg (Fig 5a): Subplot 'c' does not contain ionic conductivity measurements.
+      → Processing a...
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/scifig_debug/page_4_figure_9_cropped_a.jpeg
+   ✓ page_5_figure_5.jpeg (Fig 6a) - a: Valid plot (X=stoichiometry)
+   [93m[Skip][0m page_5_figure_5.jpeg (Fig 6a): Subplot 'b' does not contain ionic conductivity measurements.
+      → Processing a...
+[DEBUG] Cropped image saved to /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/scifig_debug/page_5_figure_5_cropped_a.jpeg
+   ✓ page_5_figure_5.jpeg (Fig 6a): Found 14 points total via SciFigureParser
+   ✓ page_4_figure_9.jpeg (Fig 5a): Found 36 points total via SciFigureParser
+   ... Extracting abbreviation map from paper text...
+   📖 No abbreviation mappings found in paper text
+   ... Canonicalizing Materials...
+   ... Resolving 51 remaining ambiguous material names via LLM...
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0 → Li6PS5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.125 → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.25 → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: x = 0.5 → Li6.5P0.5Si0.5S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.0) → Li6PS5Br
+   [Canon] Rejected (invalid stoichiometry): Li6.025P0.975Si0.025S5Br for Li6+xP1-xSixS5Br (x=0.025)
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.05) → Li6.05P0.95Si0.05S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.075) → Li6.075P0.925Si0.075S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.1) → Li6.1P0.9Si0.1S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.115) → Li6.115P0.885Si0.115S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.125) → Li6.125P0.875Si0.125S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.175) → Li6.175P0.825Si0.175S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.2) → Li6.2P0.8Si0.2S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.225) → Li6.225P0.775Si0.225S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.25) → Li6.25P0.75Si0.25S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.3) → Li6.3P0.7Si0.3S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.35) → Li6.35P0.65Si0.35S5Br
+   [Canon] Resolved: Li6+xP1-xSixS5Br (x=0.5) → Li6.5P0.5Si0.5S5Br
+   ... De-duplicating Text Measurements...
+   ... Normalizing Units & Temperatures...
+
+   📊 Extraction Summary:
+      - Extracted: 53 measurements
+      - Skipped (no data): 11 images
+      - Failed: 0 items
+
+Done! Extracted 53 points.
+Saved to: /Users/bourn23/Downloads/general/PageIndex/fetched_papers/obelix_md/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites/robust_results_v5.json
+
+==================================================
+💰 PIPELINE COST SUMMARY
+==================================================
+Total Calls:         14
+Total Input:         12,131 tokens
+Total Output:        35,607 tokens
+--------------------------------------------------
+TOTAL COST:          $0.0927
+--------------------------------------------------
+Breakdown by Model:
+  - gemini-flash-latest           : 13 calls
+  - gemini-2.5-flash              : 1 calls
+==================================================
+
+[0;34m[INFO][0m ✓ Extraction saved to: ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_extracted.json
+
+[0;32m[STEP 2/2][0m Evaluating extraction against ground truth...
+[0;34m[INFO][0m Searching for DOI based on paper title...
+[0;34m[INFO][0m Found DOI: 10.1039/c7ta08581h
+GT-388: Li24.0P4.0S20.0Br4.0 | 0.000701 S/cm
+GT-389: Li24.1P3.9Si0.1S20.0Br4.0 | 0.000878 S/cm
+GT-390: Li24.2P3.8Si0.2S20.0Br4.0 | 0.000437 S/cm
+GT-391: Li24.3P3.7Si0.3S20.0Br4.0 | 0.000873 S/cm
+GT-392: Li24.4P3.8Si0.4S20.0Br4.0 | 0.000799 S/cm
+GT-393: Li24.5P3.5Si0.5S20.0Br4.0 | 0.000902 S/cm
+GT-394: Li24.7P3.3Si0.7S20.0Br4.0 | 0.000931 S/cm
+GT-395: Li24.8P3.2Si0.8S20.0Br4.0 | 0.00169 S/cm
+GT-396: Li24.9P3.1Si0.9S20.0Br4.0 | 0.00108 S/cm
+GT-397: Li25.0P3.0Si1.0S20.0Br4.0 | 0.00141 S/cm
+GT-398: Li25.2P2.8Si1.2S20.0Br4.0 | 0.00165 S/cm
+GT-399: Li25.4P2.6Si1.4S20.0Br4.0 | 0.00234 S/cm
+GT-400: Li26.0P2.0Si2.0S20.0Br4.0 | 0.00219 S/cm
+--- Starting Validation ---
+Comparing 13 GT items vs 984 Extracted items...
+
+============================================================
+VALIDATION SCORE: 92.3%
+============================================================
+GT ID      | Match Status    | Reason
+------------------------------------------------------------
+GT-388     | ✅ MATCH         | The reduced formula Li6PS5Br matches, and 0.00072 S/cm is approximately 0.000701 S/cm (2.7% difference) at room temperature.
+GT-389     | ✅ MATCH         | The normalized formula Li6.025P0.975Si0.025S5Br matches, and 0.00089 S/cm is approximately 0.000878 S/cm (1.4% difference) at room temperature.
+GT-390     | ✅ MATCH         | The normalized formula Li6.05P0.95Si0.05S5Br matches, and 0.00045 S/cm is approximately 0.000437 S/cm (3.0% difference) at room temperature.
+GT-391     | ✅ MATCH         | The normalized formula Li6.075P0.925Si0.075S5Br matches, and 0.00088 S/cm is approximately 0.000873 S/cm (0.8% difference) at room temperature.
+GT-392     | ❌ MISSING/BAD   | No extracted data found with a composition matching Li6.1P0.95Si0.1S5Br and conductivity around 0.000799 S/cm at room temperature. The extracted Li6.1P0.9Si0.1S5Br has a different P stoichiometry.
+GT-393     | ✅ MATCH         | The normalized formula Li6.125P0.875Si0.125S5Br matches, and 0.00091 S/cm is approximately 0.000902 S/cm (0.9% difference) at room temperature.
+GT-394     | ✅ MATCH         | The normalized formula Li6.175P0.825Si0.175S5Br matches, and 0.00095 S/cm is approximately 0.000931 S/cm (2.0% difference) at room temperature.
+GT-395     | ✅ MATCH         | The normalized formula Li6.2P0.8Si0.2S5Br matches, and 0.00171 S/cm is approximately 0.00169 S/cm (1.2% difference) at room temperature.
+GT-396     | ✅ MATCH         | The normalized formula Li6.225P0.775Si0.225S5Br matches, and 0.00111 S/cm is approximately 0.00108 S/cm (2.8% difference) at room temperature.
+GT-397     | ✅ MATCH         | The normalized formula Li6.25P0.75Si0.25S5Br matches, and 0.00145 S/cm is approximately 0.00141 S/cm (2.8% difference) at room temperature.
+GT-398     | ✅ MATCH         | The normalized formula Li6.3P0.7Si0.3S5Br matches, and 0.00169 S/cm is approximately 0.00165 S/cm (2.4% difference) at room temperature.
+GT-399     | ✅ MATCH         | The normalized formula Li6.35P0.65Si0.35S5Br matches, and 0.00236 S/cm is approximately 0.00234 S/cm (0.9% difference) at room temperature.
+GT-400     | ✅ MATCH         | The normalized formula Li6.5P0.5Si0.5S5Br matches, and 0.00223 S/cm is approximately 0.00219 S/cm (1.8% difference) at room temperature.
+
+Full report saved to fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_extracted_validation_report.json
+[0;34m[INFO][0m ✓ Evaluation complete
+
+[0;34m========================================[0m
+[0;34mPIPELINE v5 COMPLETED SUCCESSFULLY[0m
+[0;34m=========================================[0m
+[0;34m[INFO][0m Paper: effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites
+[0;34m[INFO][0m DOI: 10.1039/c7ta08581h
+
+[0;34m[INFO][0m Generated Files:
+[0;34m[INFO][0m   1. Extracted JSON:    ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_extracted.json
+[0;34m[INFO][0m   2. Validation JSON:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.json
+[0;34m[INFO][0m   3. Validation Text:   ./fetched_papers/obelix_parsed_v5/validation_report_effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites.txt
+[0;34m[INFO][0m   4. Pipeline Log:      ./fetched_papers/obelix_parsed_v5/effect_of_si_substitution_on_the_structural_and_transport_properties_of_superionic_li-argyrodites_v5_pipeline_20260211_101909.log
+

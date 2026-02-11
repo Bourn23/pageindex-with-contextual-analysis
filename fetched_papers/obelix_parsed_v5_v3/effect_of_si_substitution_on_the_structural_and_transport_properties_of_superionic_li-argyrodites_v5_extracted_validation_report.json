@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-388",
+      "extracted_match": "Li6PS5Br | 0.7 mS/cm",
+      "is_match": true,
+      "reason": "The normalized composition Li6PS5Br matches Li6.0P1.0S5.0Br1.0, and the conductivity 0.7 mS/cm is approximately 0.701 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-389",
+      "extracted_match": "Li6.025P0.975Si0.025S5Br | 0.88 mS/cm",
+      "is_match": true,
+      "reason": "The inferred composition Li6.025P0.975Si0.025S5Br matches Li6.025P0.975Si0.025S5.0Br1.0, and the conductivity 0.88 mS/cm is approximately 0.878 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-390",
+      "extracted_match": "Li6.05P0.95Si0.05S5Br | 0.45 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.05P0.95Si0.05S5Br matches Li6.05P0.95Si0.05S5.0Br1.0, and the conductivity 0.45 mS/cm is approximately 0.437 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-391",
+      "extracted_match": "Li6.075P0.925Si0.075S5Br | 0.88 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.075P0.925Si0.075S5Br matches Li6.075P0.925Si0.075S5.0Br1.0, and the conductivity 0.88 mS/cm is approximately 0.873 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-392",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The ground truth composition Li6.1P0.95Si0.1S5.0Br1.0 does not match any extracted composition due to a difference in P content (0.95 vs 0.9)."
+    },
+    {
+      "ground_truth_id": "GT-393",
+      "extracted_match": "Li6.125P0.875Si0.125S5Br | 0.92 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.125P0.875Si0.125S5Br matches Li6.125P0.875Si0.125S5.0Br1.0, and the conductivity 0.92 mS/cm is approximately 0.902 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-394",
+      "extracted_match": "Li6.175P0.825Si0.175S5Br | 0.95 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.175P0.825Si0.175S5Br matches Li6.175P0.825Si0.175S5.0Br1.0, and the conductivity 0.95 mS/cm is approximately 0.931 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-395",
+      "extracted_match": "Li6.2P0.8Si0.2S5Br | 1.71 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.2P0.8Si0.2S5Br matches Li6.2P0.8Si0.2S5.0Br1.0, and the conductivity 1.71 mS/cm is approximately 1.69 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-396",
+      "extracted_match": "Li6.225P0.775Si0.225S5Br | 1.1 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.225P0.775Si0.225S5Br matches Li6.225P0.775Si0.225S5.0Br1.0, and the conductivity 1.1 mS/cm is approximately 1.08 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-397",
+      "extracted_match": "Li6.25P0.75Si0.25S5Br | 1.43 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.25P0.75Si0.25S5Br matches Li6.25P0.75Si0.25S5.0Br1.0, and the conductivity 1.43 mS/cm is approximately 1.41 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-398",
+      "extracted_match": "Li6.3P0.7Si0.3S5Br | 1.66 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.3P0.7Si0.3S5Br matches Li6.3P0.7Si0.3S5.0Br1.0, and the conductivity 1.66 mS/cm is approximately 1.65 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-399",
+      "extracted_match": "Li6.35P0.65Si0.35S5Br | 2.37 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.35P0.65Si0.35S5Br matches Li6.35P0.65Si0.35S5.0Br1.0, and the conductivity 2.37 mS/cm is approximately 2.34 mS/cm."
+    },
+    {
+      "ground_truth_id": "GT-400",
+      "extracted_match": "Li6.5P0.5Si0.5S5Br | 2.22 mS/cm",
+      "is_match": true,
+      "reason": "The composition Li6.5P0.5Si0.5S5Br matches Li6.5P0.5Si0.5S5.0Br1.0, and the conductivity 2.22 mS/cm is approximately 2.19 mS/cm."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 12
+}

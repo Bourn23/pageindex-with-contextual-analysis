@@ -1,0 +1,15 @@
+GT-69      | ❌ MISSING/BAD   | Extracted conductivity (2.2e-13 S/cm) is significantly higher than ground truth (1.31e-13 S/cm), exceeding the 10% tolerance.
+GT-70      | ❌ MISSING/BAD   | Extracted conductivity (2e-13 S/cm) is significantly higher than ground truth (9.2e-14 S/cm), exceeding the 10% tolerance.
+GT-124     | ✅ MATCH         | Li12.8Ge0.8P3.2O16.0 simplifies to Li3.2Ge0.2P0.8O4, and 1.1e-06 S/cm is approximately 1.14e-06 S/cm (3.5% difference).
+GT-125     | ✅ MATCH         | Li12.8Ge0.8V3.2O16.0 simplifies to Li3.2Ge0.2V0.8O4, and 1.8e-05 S/cm is approximately 1.9e-05 S/cm (5.2% difference).
+GT-126     | ✅ MATCH         | Li13.6Ge1.6P2.4O16.0 simplifies to Li3.4Ge0.4P0.6O4, and 4.5e-06 S/cm is an exact match to ground truth.
+GT-127     | ❌ MISSING/BAD   | Extracted conductivity (6.5e-07 S/cm) is significantly lower than ground truth (8.89e-07 S/cm), exceeding the 10% tolerance.
+GT-128     | ✅ MATCH         | Li14.4Ge2.4P1.6O16.0 simplifies to Li3.6Ge0.6P0.4O4, and 1.2e-05 S/cm is approximately 1.1e-05 S/cm (9.1% difference).
+GT-129     | ✅ MATCH         | Li14.4Ge2.4V1.6O16.0 simplifies to Li3.6Ge0.6V0.4O4, and 3.5e-05 S/cm is approximately 3.19e-05 S/cm (9.7% difference).
+GT-130     | ❌ MISSING/BAD   | Extracted conductivity (1.3e-06 S/cm) is significantly higher than ground truth (1.03e-06 S/cm), exceeding the 10% tolerance.
+GT-131     | ✅ MATCH         | Li15.2Ge3.2V0.8O16.0 simplifies to Li3.8Ge0.8V0.2O4, and 2.5e-06 S/cm is approximately 2.71e-06 S/cm (7.7% difference).
+GT-132     | ❌ MISSING/BAD   | Extracted conductivity (6e-13 S/cm) is significantly higher than ground truth (3.55e-13 S/cm), exceeding the 10% tolerance.
+GT-133     | ❌ MISSING/BAD   | Extracted conductivity (4e-13 S/cm) is significantly higher than ground truth (3.2e-13 S/cm), exceeding the 10% tolerance.
+GT-134     | ❌ MISSING/BAD   | Extracted conductivity (3e-13 S/cm) is significantly higher than ground truth (2.05e-13 S/cm), exceeding the 10% tolerance.
+GT-135     | ❌ MISSING/BAD   | Extracted conductivity (3e-13 S/cm) is significantly higher than ground truth (1.75e-13 S/cm), exceeding the 10% tolerance.
+GT-136     | ❌ MISSING/BAD   | Li16.0Ge4.0O16.0 simplifies to Li4GeO4, but extracted conductivity (1.5e-12 S/cm) is higher than ground truth (1.3e-12 S/cm), exceeding the 10% tolerance.

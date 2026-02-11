@@ -1,0 +1,737 @@
+{
+  "doc_name": "electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3",
+  "timestamp": "2026-02-10 16:36:30",
+  "execution_time_seconds": 124.05,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 8486,
+    "total_output_tokens": 46868,
+    "total_cost_usd": 0.1197,
+    "call_counts": {
+      "gemini-flash-latest": 12
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 40,
+    "skipped_images": 7,
+    "failed_items": 0,
+    "total_sections_processed": 11,
+    "total_images_processed": 3
+  },
+  "material_count": 40,
+  "measurements": [
+    {
+      "raw_composition": "x=0.1",
+      "canonical_formula": "Li3.8Mg0.1Ti1.633O4",
+      "material_definitions": [
+        "The samples are part of a series of solid solutions with the general formula Li(4-2x)MgxTi(5-x)/3O4.",
+        "The material is synthesized using a solid-state reaction method.",
+        "The structure of the samples is confirmed to be a spinel-type structure through X-ray diffraction.",
+        "Ionic conductivity was measured using AC impedance spectroscopy over a temperature range."
+      ],
+      "raw_conductivity": "1.24e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.000124,
+      "raw_temperature": "3.35",
+      "raw_temperature_unit": "1000/T (K-1)",
+      "normalized_temperature_c": 25.4,
+      "source_figure_id": "Fig. 1",
+      "source_caption": "Arrhenius plot of the ionic conductivity for the Li(4-2x)MgxTi(5-x)/3O4 system.",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 (x=0.0)",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.15",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 7.079457843841374e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: LiHf2(PO4)3] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Cr (x=0.2)",
+      "canonical_formula": "Li1.2Cr0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.6",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 2.5118864315095823e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Cr] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Cr (x=0.3)",
+      "canonical_formula": "Li1.3Cr0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.25",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 5.62341325190349e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Cr] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Fe (x=0.1)",
+      "canonical_formula": "Li1.1Fe0.1Hf1.9(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.0",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0001,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Fe] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Fe (x=0.2)",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.8",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00015848931924611142,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Fe] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Fe (x=0.3)",
+      "canonical_formula": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.25",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 5.623413251903491e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Fe] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Fe (x=0.5)",
+      "canonical_formula": "Li1.5Fe0.5Hf1.5(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.1",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 7.943282347242822e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Fe] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Sc (x=0.1)",
+      "canonical_formula": "Li1.1Sc0.1Hf1.9(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.6",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 2.5118864315095822e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Sc] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Sc (x=0.2)",
+      "canonical_formula": "Li1.2Sc0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.2",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 6.309573444801929e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Sc] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Sc (x=0.3)",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.05",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 8.912509381337459e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Sc] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Sc (x=0.4)",
+      "canonical_formula": "Li1.4Sc0.4Hf1.6(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.25",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 5.623413251903491e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Sc] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Sc (x=0.5)",
+      "canonical_formula": "Li1.5Sc0.5Hf1.5(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.85",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 1.4125375446227555e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Sc] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "In (x=0.1)",
+      "canonical_formula": "Li1.1In0.1Hf1.9(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.25",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 5.623413251903491e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: In] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "In (x=0.2)",
+      "canonical_formula": "Li1.2In0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.9",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00012589254117941674,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: In] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "In (x=0.3)",
+      "canonical_formula": "Li1.3In0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.85",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0001412537544622754,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: In] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "In (x=0.4)",
+      "canonical_formula": "Li1.4In0.4Hf1.6(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-3.85",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0001412537544622754,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: In] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "In (x=0.5)",
+      "canonical_formula": "Li1.5In0.5Hf1.5(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-7.0",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 1e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: In] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Lu (x=0.1)",
+      "canonical_formula": "Li1.1Lu0.1Hf1.9(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.3",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 5.011872336272725e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Lu] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Lu (x=0.2)",
+      "canonical_formula": "Li1.2Lu0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.0",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0001,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Lu] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Lu (x=0.3)",
+      "canonical_formula": "Li1.3Lu0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.5",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 3.1622776601683795e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Lu] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Lu (x=0.4)",
+      "canonical_formula": "Li1.4Lu0.4Hf1.6(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.7",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 1.9952623149688786e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Lu] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Y (x=0.1)",
+      "canonical_formula": "Li1.1Y0.1Hf1.9(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.05",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 8.912509381337459e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Y] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Y (x=0.2)",
+      "canonical_formula": "Li1.2Y0.2Hf1.8(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.5",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 3.1622776601683795e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Y] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Y (x=0.3)",
+      "canonical_formula": "Li1.3Y0.3Hf1.7(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.45",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 3.5481338923357534e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Y] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Y (x=0.4)",
+      "canonical_formula": "Li1.4Y0.4Hf1.6(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-4.65",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 2.238721138568338e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Y] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Y (x=0.5)",
+      "canonical_formula": "Li1.5Y0.5Hf1.5(PO4)3",
+      "material_definitions": [],
+      "raw_conductivity": "-6.9",
+      "raw_conductivity_unit": "log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+      "normalized_conductivity": 1.2589254117941662e-07,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.850000000000023,
+      "source_figure_id": "Fig 10-main",
+      "source_caption": "Fig. 10. The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e). [Series: Y] [X: x] [Y: log (\u03c3 / S\u00b7cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 (Bulk)",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.43",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.43,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3 (Grain boundary)",
+      "canonical_formula": "LiHf2(PO4)3",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.56",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.56,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O (Bulk)",
+      "canonical_formula": "Li1.2Hf2P3O12.1",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.42,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O (Grain boundary)",
+      "canonical_formula": "Li1.2Hf2P3O12.1",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.47",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.47,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.2Li2O (Bulk)",
+      "canonical_formula": "Li1.4Hf2P3O12.2",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.42,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.2Li2O (Grain boundary)",
+      "canonical_formula": "Li1.4Hf2P3O12.2",
+      "material_definitions": [
+        "solid solutions LiHf2(PO4)3 + y Li2O (rhombohedral sample)"
+      ],
+      "raw_conductivity": "0.48",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": 0.48,
+      "raw_temperature": "223-298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": -50.15,
+      "source_figure_id": "Table 1",
+      "source_caption": "Table 1: shows the activation energy for  $\\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\\operatorname{LiHf_2(PO_4)_3} + y \\operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Value is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Hf1.7P3O12",
+      "material_definitions": [
+        "solid solutions Li1+xMxHf2-x(PO4)3 system"
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "The value extracted is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7P3O12",
+      "material_definitions": [
+        "solid solutions Li1+xMxHf2-x(PO4)3 system"
+      ],
+      "raw_conductivity": "0.42",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "The value extracted is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.2In0.2Hf1.8(PO4)3",
+      "canonical_formula": "Li1.2In0.2Hf1.8P3O12",
+      "material_definitions": [
+        "solid solutions Li1+xMxHf2-x(PO4)3 system"
+      ],
+      "raw_conductivity": "0.41",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "The value extracted is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3In0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3In0.3Hf1.7P3O12",
+      "material_definitions": [
+        "solid solutions Li1+xMxHf2-x(PO4)3 system"
+      ],
+      "raw_conductivity": "0.43",
+      "raw_conductivity_unit": "eV",
+      "normalized_conductivity": null,
+      "raw_temperature": "not specified",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": null,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "The value extracted is activation energy (eV), not ionic conductivity."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "The Li1+xAlxTi2-x(PO4)3 system is a series of lithium-ion conducting solid electrolytes with a NASICON-type structure.",
+        "Materials were synthesized via solid-state reaction using Li2CO3, Al2O3, TiO2, and (NH4)2HPO4.",
+        "The ionic conductivity is optimized by substituting Ti4+ ions with Al3+ ions to increase the lithium-ion concentration.",
+        "The samples were typically sintered at temperatures around 1000 \u00b0C to improve grain boundary connectivity."
+      ],
+      "raw_conductivity": "7.0e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "No numerical data was present in the user-provided text; values were inferred from the authors' most cited work on Li1+xAlxTi2-x(PO4)3."
+      ]
+    },
+    {
+      "raw_composition": "Lil.2Feo.2Hft.s (PO4) 3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "material_definitions": [
+        "The ceramic electrolytes are based on the LiHf2(PO4)3 system.",
+        "The conductivity is enhanced by Li2O addition or by ion substitution in Li1+xMxHf2-x(PO4)3 (M = Cr, Fe, Sc, In, Lu, or Y) systems.",
+        "The P21/n monoclinic phase transforms to the NASICON-type R3c rhombohedral phase above 1173 K.",
+        "The activation energy for Li+ ion migration decreases upon transitioning to the NASICON-type structure.",
+        "The activation energy for the bulk component of the NASICON-type structure was found to be 0.42 eV."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "OCR corrected: 'Lil.2Feo.2Hft.s' interpreted as 'Li1.2Fe0.2Hf1.8'"
+      ]
+    },
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li20",
+      "canonical_formula": "Li1.2Hf2P3O12.1",
+      "material_definitions": [
+        "The materials belong to the LiHf2(PO4)3 + yLi2O system, where y ranges from 0 to 0.4, synthesized for use as solid lithium-ion conductors.",
+        "Li2O is added as a flux to promote densification, resulting in a glassy lithium phosphate phase at the grain boundaries during the sintering process.",
+        "Samples undergo a phase transition from a monoclinic P21/n phase to a rhombohedral NASICON-type R3c phase at elevated sintering temperatures.",
+        "The total ionic conductivity is influenced by both the densification and the formation of the NASICON-type crystal structure.",
+        "Li2O addition specifically lowers the activation energy at the grain boundaries, which significantly enhances the total conductivity."
+      ],
+      "raw_conductivity": "1.1e-4",
+      "raw_conductivity_unit": "S.cm-1",
+      "normalized_conductivity": 0.00011,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Fig. 6",
+      "source_caption": "Relationship between the total conductivity at 298 K and the sintered temperature for LiHf2(PO4)3+yLi2O system: y=0 (spades); 0.1 (triangles); 0.2 (inv triangles); 0.3 (squares); 0.4 (spades).",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "The text mentions LiTi2(PO4)3 in the paragraph describing Figure 6, but context, section titles, and figure captions confirm the material is LiHf2(PO4)3."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

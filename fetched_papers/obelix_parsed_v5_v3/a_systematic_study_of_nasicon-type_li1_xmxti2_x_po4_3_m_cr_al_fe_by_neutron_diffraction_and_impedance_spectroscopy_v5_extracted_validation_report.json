@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-282",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-283",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-284",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-285",
+      "extracted_match": "Li1.3Al0.3Ti1.7P3O12 | 0.0062 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li1.3Al0.3Ti1.7(PO4)3 matches Li1.3Al0.3Ti1.7P3O12 and the conductivity 0.0062 S/cm matches exactly at room temperature."
+    },
+    {
+      "ground_truth_id": "GT-286",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-287",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-288",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-289",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-290",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-291",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-292",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-293",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    },
+    {
+      "ground_truth_id": "GT-294",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No matching material composition and conductivity was found in the extracted data."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 1
+}

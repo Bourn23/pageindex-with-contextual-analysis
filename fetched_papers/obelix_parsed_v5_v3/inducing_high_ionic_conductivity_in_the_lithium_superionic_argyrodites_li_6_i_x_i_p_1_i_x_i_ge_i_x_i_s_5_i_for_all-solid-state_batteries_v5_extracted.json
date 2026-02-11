@@ -1,0 +1,670 @@
+{
+  "doc_name": "inducing_high_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_i_x_i_p_1_i_x_i_ge_i_x_i_s_5_i_for_all-solid-state_batteries",
+  "timestamp": "2026-02-10 16:27:33",
+  "execution_time_seconds": 195.91,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 13506,
+    "total_output_tokens": 50307,
+    "total_cost_usd": 0.1298,
+    "call_counts": {
+      "gemini-flash-latest": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 32,
+    "skipped_images": 18,
+    "failed_items": 0,
+    "total_sections_processed": 15,
+    "total_images_processed": 11
+  },
+  "material_count": 32,
+  "measurements": [
+    {
+      "raw_composition": "glass-ceramics (x=0.45) bulk",
+      "canonical_formula": "Li6.45P0.55Ge0.45S5I",
+      "material_definitions": [
+        "Lithium aluminum titanium phosphate glass-ceramics are synthesized with the general formula Li1+xAlxTi2-x(PO4)3.",
+        "The specific composition investigated in this figure is for x=0.45.",
+        "Samples are prepared as glass-ceramics, implying a melt-quenching and subsequent crystallization process.",
+        "The conductivity is separated into bulk and grain-boundary contributions using complex impedance spectroscopy."
+      ],
+      "raw_conductivity": "3.98e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00398,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T^-1 / K-1",
+      "normalized_temperature_c": 60.18,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the bulk and grain-boundary conductivities of the glass-ceramics (x=0.45).",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Values estimated from Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "glass-ceramics (x=0.45) grain-boundary",
+      "canonical_formula": "Li6.45P0.55Ge0.45S5I",
+      "material_definitions": [
+        "Lithium aluminum titanium phosphate glass-ceramics are synthesized with the general formula Li1+xAlxTi2-x(PO4)3.",
+        "The specific composition investigated in this figure is for x=0.45.",
+        "Samples are prepared as glass-ceramics, implying a melt-quenching and subsequent crystallization process.",
+        "The conductivity is separated into bulk and grain-boundary contributions using complex impedance spectroscopy."
+      ],
+      "raw_conductivity": "6.31e-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.000631,
+      "raw_temperature": "3.0",
+      "raw_temperature_unit": "10^3 T^-1 / K-1",
+      "normalized_temperature_c": 60.18,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the bulk and grain-boundary conductivities of the glass-ceramics (x=0.45).",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Values estimated from Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "glass-ceramics (x=0.45) bulk",
+      "canonical_formula": "Li6.45P0.55Ge0.45S5I",
+      "material_definitions": [
+        "Lithium aluminum titanium phosphate glass-ceramics are synthesized with the general formula Li1+xAlxTi2-x(PO4)3.",
+        "The specific composition investigated in this figure is for x=0.45.",
+        "Samples are prepared as glass-ceramics, implying a melt-quenching and subsequent crystallization process.",
+        "The conductivity is separated into bulk and grain-boundary contributions using complex impedance spectroscopy."
+      ],
+      "raw_conductivity": "5.01e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0501,
+      "raw_temperature": "2.4",
+      "raw_temperature_unit": "10^3 T^-1 / K-1",
+      "normalized_temperature_c": 143.52,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the bulk and grain-boundary conductivities of the glass-ceramics (x=0.45).",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Values estimated from Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "glass-ceramics (x=0.45) grain-boundary",
+      "canonical_formula": "Li6.45P0.55Ge0.45S5I",
+      "material_definitions": [
+        "Lithium aluminum titanium phosphate glass-ceramics are synthesized with the general formula Li1+xAlxTi2-x(PO4)3.",
+        "The specific composition investigated in this figure is for x=0.45.",
+        "Samples are prepared as glass-ceramics, implying a melt-quenching and subsequent crystallization process.",
+        "The conductivity is separated into bulk and grain-boundary contributions using complex impedance spectroscopy."
+      ],
+      "raw_conductivity": "1.00e-2",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.01,
+      "raw_temperature": "2.4",
+      "raw_temperature_unit": "10^3 T^-1 / K-1",
+      "normalized_temperature_c": 143.52,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Temperature dependence of the bulk and grain-boundary conductivities of the glass-ceramics (x=0.45).",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Values estimated from Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.0)",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.385",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.385,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.08)",
+      "canonical_formula": "Li6.08P0.92Ge0.08S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.388",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.388,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.15)",
+      "canonical_formula": "Li6.15P0.85Ge0.15S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.364",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.364,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.24)",
+      "canonical_formula": "Li6.24P0.76Ge0.24S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.361",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.361,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.26)",
+      "canonical_formula": "Li6.26P0.74Ge0.26S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.305",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.305,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.36)",
+      "canonical_formula": "Li6.36P0.64Ge0.36S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.239",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.239,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.47)",
+      "canonical_formula": "Li6.47P0.53Ge0.47S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.241",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.241,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.52)",
+      "canonical_formula": "Li6.52P0.48Ge0.52S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.226",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.226,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.69)",
+      "canonical_formula": "Li6.69P0.31Ge0.69S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.235",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.235,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Activation energy E_A (x=0.79)",
+      "canonical_formula": "Li6.79P0.21Ge0.79S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.246",
+      "raw_conductivity_unit": "Activation energy E_A / eV",
+      "normalized_conductivity": 0.246,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Activation energy E_A] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Activation energy E_A / eV]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.0)",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [],
+      "raw_conductivity": "1.2e-06",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.000002763105929,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.08)",
+      "canonical_formula": "Li6.08P0.92Ge0.08S5I",
+      "material_definitions": [],
+      "raw_conductivity": "7.5e-06",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0000172695373142,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0000e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.15)",
+      "canonical_formula": "Li6.15P0.85Ge0.15S5I",
+      "material_definitions": [],
+      "raw_conductivity": "3.5e-05",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0000805937257546,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0001e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.24)",
+      "canonical_formula": "Li6.24P0.76Ge0.24S5I",
+      "material_definitions": [],
+      "raw_conductivity": "2.8e-05",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0000644744609926,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0001e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.26)",
+      "canonical_formula": "Li6.26P0.74Ge0.26S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.00013",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0002993808675988,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0003e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.36)",
+      "canonical_formula": "Li6.36P0.64Ge0.36S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.0006",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0013825058370986,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0014e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.47)",
+      "canonical_formula": "Li6.47P0.53Ge0.47S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.0015",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0034598491478393,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0035e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.52)",
+      "canonical_formula": "Li6.52P0.48Ge0.52S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.0018",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0041532541208793,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0042e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.69)",
+      "canonical_formula": "Li6.69P0.31Ge0.69S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.0052",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.0120454110965418,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0120e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li+ - conductivity sigma_RT (x=0.79)",
+      "canonical_formula": "Li6.79P0.21Ge0.79S5I",
+      "material_definitions": [],
+      "raw_conductivity": "0.0054",
+      "raw_conductivity_unit": "Li+ - conductivity sigma_RT / S.cm^-1",
+      "normalized_conductivity": 1.012511582563655,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Fig 6-main",
+      "source_caption": "Figure 6: Activation barrier and ionic conductivity of  $Li_{6+x}P_{1-x}Ge_xS_5I$  as a function of the refined Ge content, as obtained from impedance spectroscopy. With increasing  $Ge^{4+}$  and  $Li^+$  concentration, the ionic conductivity increases over three orders of magnitude, reaching a conductivity of  $\\sigma = 5.4$  mS cm<sup>-1</sup>. An inflection point starting  $\\sim 20\\%$  Ge can be seen that leads to a strong decrease of the activation barrier. [Series: Li+ - conductivity sigma_RT] [X: x_R in Li_6+x P_1-x Ge_x S_5 I] [Y: Li+ - conductivity sigma_RT / S.cm^-1]",
+      "source": "figure",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not found in caption, assumed 25\u00b0C (room temperature)",
+        "Suspiciously high conductivity (1.0125e+00 S/cm) for solid-state material at 25.0\u00b0C"
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed to investigate changes to the argyrodite structure and Li+ transport.",
+        "Variations in lattice volume, Ge solubility, and I-/S2- site disorder were analyzed using diffraction and NMR techniques.",
+        "Increasing Ge content expands the lattice and opens bottlenecks, leading to a significant drop in the activation barrier.",
+        "Sintering the pellets of Li6.6P0.4Ge0.6S5I significantly enhances the ionic conductivity from 5.4 to 18.4 mS cm-1.",
+        "The resulting high-performance solid electrolytes enable the stable cycling of solid-state batteries with thick electrodes."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "Temperature not explicitly mentioned in the provided text; assumed room temperature (25 Celsius)."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I (sintered)",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "Aliovalent substitution in Li6+xP1-xGexS5I was performed to investigate changes to the argyrodite structure and Li+ transport.",
+        "Variations in lattice volume, Ge solubility, and I-/S2- site disorder were analyzed using diffraction and NMR techniques.",
+        "Increasing Ge content expands the lattice and opens bottlenecks, leading to a significant drop in the activation barrier.",
+        "Sintering the pellets of Li6.6P0.4Ge0.6S5I significantly enhances the ionic conductivity from 5.4 to 18.4 mS cm-1.",
+        "The resulting high-performance solid electrolytes enable the stable cycling of solid-state batteries with thick electrodes."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "medium",
+      "warnings": [
+        "Temperature not explicitly mentioned in the provided text; assumed room temperature (25 Celsius)."
+      ]
+    },
+    {
+      "raw_composition": "iodine containing argyrodites",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "This study investigates the effect of Ge4+ substitution in Li6+xP1-xGexS5I to overcome the low ionic conductivity of the parent Li6PS5I phase.",
+        "The material series is characterized by an increase in lattice volume and the induction of site disorder between S2- and I- ions upon aliovalent Ge4+ doping.",
+        "Structural analysis reveals that Ge substitution expands Li+ diffusion pathways and significantly reduces the activation barrier for ion migration.",
+        "The resulting electrolytes demonstrate exceptionally high lithium-ion conductivities, reaching values up to 18.4 mS/cm.",
+        "These fast-ionic conductors enable stable long-term cycling in all-solid-state batteries, even when using thick electrode configurations."
+      ],
+      "raw_conductivity": "1.3e-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.3e-06,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Temperature not explicitly stated in the text; 25\u00b0C (room temperature) assumed for comparison.",
+        "Value cited from Kraft et al."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I have been synthesized with increasing Ge4+/P5+ ratios to study structural changes and ionic conductivity.",
+        "Full solid solutions of Li6+xP1-xGexS5I can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Minor impurity phase fractions of LiI and/or Li4GeS4 were found in the diffraction data for the series of solid solutions.",
+        "Sintering of the cold pressed pellets at 823 K for ten minutes significantly increases the conductivity due to better grain contact."
+      ],
+      "raw_conductivity": "5.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0054,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Activation barrier and ionic conductivity of Li6+xP1-xGexS5I as a function of the refined Ge content, as obtained from impedance spectroscopy.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Value corresponds to cold-pressed pellets."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I have been synthesized with increasing Ge4+/P5+ ratios to study structural changes and ionic conductivity.",
+        "Full solid solutions of Li6+xP1-xGexS5I can be synthesized up to a composition of at least Li6.7P0.3Ge0.7S5I.",
+        "Minor impurity phase fractions of LiI and/or Li4GeS4 were found in the diffraction data for the series of solid solutions.",
+        "Sintering of the cold pressed pellets at 823 K for ten minutes significantly increases the conductivity due to better grain contact."
+      ],
+      "raw_conductivity": "18.4",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0184,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Sample was sintered at 823 K for ten minutes."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I have been synthesized with increasing Ge4+/P5+ ratios to study structural changes and ionic conductivity."
+      ],
+      "raw_conductivity": "2.6e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.6e-05,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Estimated via NMR using Einstein-Smoluchowski and Nernst-Einstein equations."
+      ]
+    },
+    {
+      "raw_composition": "Li6.25P0.75Ge0.25S5I",
+      "canonical_formula": "Li6.25P0.75Ge0.25S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I have been synthesized with increasing Ge4+/P5+ ratios to study structural changes and ionic conductivity."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Estimated via NMR using Einstein-Smoluchowski and Nernst-Einstein equations."
+      ]
+    },
+    {
+      "raw_composition": "Li6.6P0.4Ge0.6S5I",
+      "canonical_formula": "Li6.6P0.4Ge0.6S5I",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6+xP1-xGexS5I have been synthesized with increasing Ge4+/P5+ ratios to study structural changes and ionic conductivity."
+      ],
+      "raw_conductivity": "7.5",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0075,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Estimated via NMR using Einstein-Smoluchowski and Nernst-Einstein equations."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

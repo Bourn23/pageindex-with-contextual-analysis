@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-282",
+      "extracted_match": "LiTi2(PO4)3 | 6e-05 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li6.0Ti12.0P18.0O72.0 simplifies to LiTi2(PO4)3, and the conductivity 6e-05 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-283",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The ground truth formula Li1.05Al0.05Ti1.95(PO4)3 (x=0.05) is not present in the extracted data; the closest extracted entry LATP005 corresponds to Li1.5Al0.5Ti1.5(PO4)3 (x=0.5)."
+    },
+    {
+      "ground_truth_id": "GT-284",
+      "extracted_match": "Li1.1Al0.1Ti1.9(PO4)3 | 0.00067 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li6.6Al0.6Ti11.4P18.0O72.0 simplifies to Li1.1Al0.1Ti1.9(PO4)3, and the conductivity 0.00067 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-285",
+      "extracted_match": "Li1.3Al0.3Ti1.7(PO4)3 | 0.0062 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li7.8Al1.8Ti10.2P18.0O72.0 simplifies to Li1.3Al0.3Ti1.7(PO4)3, and the conductivity 0.0062 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-286",
+      "extracted_match": "Li1.4Al0.4Ti1.6(PO4)3 | 0.0033 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li8.4Al2.4Ti9.6P18.0O72.0 simplifies to Li1.4Al0.4Ti1.6(PO4)3, and the conductivity 0.0033 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-287",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The ground truth formula Li1.05Cr0.05Ti1.95(PO4)3 (x=0.05) is not present in the extracted data; the closest extracted entry LCTP005 corresponds to Li1.5Cr0.5Ti1.5(PO4)3 (x=0.5)."
+    },
+    {
+      "ground_truth_id": "GT-288",
+      "extracted_match": "Li1.1Cr0.1Ti1.9(PO4)3 | 0.00026 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li6.6Cr0.6Ti11.4P18.0O72.0 simplifies to Li1.1Cr0.1Ti1.9(PO4)3, and the conductivity 0.00026 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-289",
+      "extracted_match": "Li1.2Cr0.2Ti1.8(PO4)3 | 0.00043 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li7.2Cr1.2Ti10.8P18.0O72.0 simplifies to Li1.2Cr0.2Ti1.8(PO4)3, and the conductivity 0.00043 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-290",
+      "extracted_match": "Li1.3Cr0.3Ti1.7(PO4)3 | 0.00029 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li7.8Cr1.8Ti10.2P18.0O72.0 simplifies to Li1.3Cr0.3Ti1.7(PO4)3, and the conductivity 0.00029 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-291",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The ground truth formula Li1.05Fe0.05Ti1.95(PO4)3 (x=0.05) is not present in the extracted data; the closest extracted entry LFTP005 corresponds to Li1.5Fe0.5Ti1.5(PO4)3 (x=0.5)."
+    },
+    {
+      "ground_truth_id": "GT-292",
+      "extracted_match": "Li1.1Fe0.1Ti1.9(PO4)3 | 0.00063 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li6.6Fe0.6Ti11.4P18.0O72.0 simplifies to Li1.1Fe0.1Ti1.9(PO4)3, and the conductivity 0.00063 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-293",
+      "extracted_match": "Li1.2Fe0.2Ti1.8(PO4)3 | 0.0014 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li7.2Fe1.2Ti10.8P18.0O72.0 simplifies to Li1.2Fe0.2Ti1.8(PO4)3, and the conductivity 0.0014 S/cm matches the extracted value."
+    },
+    {
+      "ground_truth_id": "GT-294",
+      "extracted_match": "Li1.3Fe0.3Ti1.7(PO4)3 | 0.0023 S/cm",
+      "is_match": true,
+      "reason": "The chemical formula Li7.8Fe1.8Ti10.2P18.0O72.0 simplifies to Li1.3Fe0.3Ti1.7(PO4)3, and the conductivity 0.0023 S/cm matches the extracted value."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 10
+}

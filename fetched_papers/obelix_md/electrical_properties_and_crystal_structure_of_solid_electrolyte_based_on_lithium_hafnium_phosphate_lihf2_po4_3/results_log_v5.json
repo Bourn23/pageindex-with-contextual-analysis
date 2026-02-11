@@ -3,113 +3,36 @@
 --- [Document] electrical_properties_and_crystal_structure_of_solid_electrolyte_based_on_lithium_hafnium_phosphate_lihf2_po4_3.md ---
 
 
-[DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=246
-)] thoughts_token_count=99 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=355 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
 [DEBUG] Yoshihiko Sadaoka:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=207
-)] cached_content_token_count=207 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=271 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=271 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=271
-)] thoughts_token_count=69 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=350 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Hiromichi Aono, Eisuke Sugimoto:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=282 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=282
-)] thoughts_token_count=161 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=453 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **I. Introduction**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=715 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=715
-)] thoughts_token_count=387 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1112 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] *3.1. Crystal structure of LiHf2(P04)3*:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=355
-)] cached_content_token_count=355 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=565 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=565
-)] thoughts_token_count=187 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=762 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] *2.2. Measurement*:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=355 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=355
-)] thoughts_token_count=248 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=613 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] *2. I. Materials*:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=329
-)] cached_content_token_count=329 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=504 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=504
-)] thoughts_token_count=567 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1081 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=664 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=941 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] Nobuhito Imanaka and Gin-ya Adachi:
-- Response length: 957 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=325
-)] cached_content_token_count=325 candidates_token_count=339 candidates_tokens_details=None prompt_token_count=496 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 1331 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=459 candidates_tokens_details=None prompt_token_count=496 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=496
-)] thoughts_token_count=719 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1554 traffic_type=None
+)] thoughts_token_count=2087 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3042 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "raw_composition": "Lil.2Feo.2Hft.s (PO4) 3",
       "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "reduced_formula": "Fe1Hf9Li6O60P15",
       "material_definitions": [
         "The electrical properties and the crystal structure were investigated for the ceramic electrolytes based on LiHf2(PO4)3.",
-        "The conductivity enhanced by the Li2O addition with LiHf2(PO4)3 system and by the increase of x for Li(1+x)M(x)Hf(2-x)(PO4)3 (M = Cr, Fe, Sc, In, Lu or Y) systems.",
-        "The P21/n monoclinic phase transformed to NASICON-type R3c rhombohedral phase at above 1173 K."
+        "The conductivity enhanced by the Li2O addition with LiHf2(PO4)3 system and by the increase of x for Li1+xMxHf2-x(PO4)3 (M = Cr, Fe, Sc, In, Lu or Y) systems.",
+        "The P21/n monoclinic phase transformed to NASICON-type R3c rhombohedral phase at above 1173 K.",
+        "The activation energy for Li+ ion migration was decreased by the phase transition.",
+        "The activation energy for bulk component was 0.42 eV for the NASICON-type structure."
       ],
       "raw_conductivity": "1.7e-4",
-      "raw_conductivity_unit": "S.cm -1",
+      "raw_conductivity_unit": "S.cm-1",
       "normalized_conductivity": 0.00017,
       "raw_temperature": "298",
       "raw_temperature_unit": "K",
@@ -118,29 +41,160 @@
       "source_caption": null,
       "source": "text",
       "confidence": "high",
-      "warnings": []
+      "warnings": [
+        "OCR errors detected and corrected in composition: 'Lil.2' to 'Li1.2', 'Feo.2' to 'Fe0.2', 'Hft.s' to 'Hf1.8', 'Li20' to 'Li2O'."
+      ]
     }
   ]
 }
 
 
-[DEBUG] *3.2. LiHf2(P04)3 + yLi20 system*:
-- Response length: 1029 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=328 candidates_tokens_details=None prompt_token_count=2390 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] *2. I. Materials*:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=504 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2390
-)] thoughts_token_count=1669 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4387 traffic_type=None
+  token_count=504
+)] thoughts_token_count=1701 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2210 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] **I. Introduction**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=715 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=715
+)] thoughts_token_count=3938 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4663 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] *3.1. Crystal structure of LiHf2(P04)3*:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=565 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=565
+)] thoughts_token_count=1635 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2206 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] *2.2. Measurement*:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=355 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=355
+)] thoughts_token_count=2032 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2393 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Hiromichi Aono, Eisuke Sugimoto:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=282 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=282
+)] thoughts_token_count=4502 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4794 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Introduction:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=246
+)] thoughts_token_count=6851 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7103 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] *3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*:
+- Response length: 2308 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=754 candidates_tokens_details=None prompt_token_count=1770 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1770
+)] thoughts_token_count=2452 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4976 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "LiHf2(PO4)3+0.1Li2O sintered at 1298 K",
-      "canonical_formula": null,
+      "raw_composition": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "canonical_formula": "Li1.2Fe0.2Hf1.8(PO4)3",
+      "reduced_formula": "Fe1Hf9Li6O60P15",
       "material_definitions": [
-        "The material series is LiHf2(PO4)3+yLi2O.",
-        "Li2O addition acts as a flux to achieve high-density samples.",
-        "Sintering above 1293 K induces a phase transition from the monoclinic phase (P21/n) to the highly conductive NASICON-type rhombohedral phase (R3c).",
-        "The conductivity enhancement is attributed to both the phase formation and decreased porosity.",
-        "This specific sample achieved maximum total conductivity when sintered at 1298 K."
+        "Samples of the Li1+xMxHf2-x(PO4)3 (M=Cr, Fe, Sc, In, Lu, or Y) system were sintered at temperatures above 1293 K to achieve maximum conductivity.",
+        "The materials formed a NASICON-type structure, although a small amount of P21/n monoclinic phase sometimes remained as a secondary phase.",
+        "High-density pellets generally required sintering temperatures above 1393 K for most systems, except for the Cr-substituted series.",
+        "The ionic conductivity in these systems increases with x due to improved densification and lower grain boundary activation energy.",
+        "The activation energy for the bulk component in the Li1+xMxHf2-x(PO4)3 system is approximately 0.42 eV."
+      ],
+      "raw_conductivity": "1.7e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.00017,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": "Fig. 10",
+      "source_caption": "The total conductivity at 298 K for Lit +xMxHf2_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e).",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "The text initially contains a typo 'S.cm -4' for the conductivity unit, which is corrected to 'S.cm -1' based on the conclusion section and typical values."
+      ]
+    },
+    {
+      "raw_composition": "LiTi2(PO4)3",
+      "canonical_formula": "LiTi2(PO4)3",
+      "reduced_formula": "Li1O12P3Ti2",
+      "material_definitions": [
+        "LiTi2(PO4)3 is compared as a reference NASICON-type conductor with a smaller tunnel size and lower bulk activation energy (0.30 eV) compared to the Hf-system."
+      ],
+      "raw_conductivity": "7.0e-4",
+      "raw_conductivity_unit": "S.cm -1",
+      "normalized_conductivity": 0.0007,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Value cited from external sources [10, 11] within the text for comparison."
+      ]
+    }
+  ]
+}
+
+
+[SCI-FIGURE DEBUG] page_4_figure_7.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 26
+  • main: X=temperature_absolute, Y=conductivity
+
+
+[SCI-FIGURE DEBUG] page_4_figure_2.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 32
+  • main: X=temperature_inverse, Y=conductivity
+
+
+[DEBUG] *3.2. LiHf2(P04)3 + yLi20 system*:
+- Response length: 1648 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=519 candidates_tokens_details=None prompt_token_count=2390 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2390
+)] thoughts_token_count=6870 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9779 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "LiHf2(PO4)3+0.1Li2O",
+      "canonical_formula": "Li1.2Hf2P3O12.1",
+      "reduced_formula": "Hf20Li12O121P30",
+      "material_definitions": [
+        "The LiHf2(PO4)3 + yLi2O (y=0 to 0.4) system was investigated to improve sinterability and ionic conductivity.",
+        "Addition of Li2O serves as a flux, enabling the production of high-density pellets at lower sintering temperatures.",
+        "The samples exhibit a phase transition from monoclinic (P21/n) to rhombohedral NASICON-type (R3c) structure when sintered above 1293 K.",
+        "The total ionic conductivity is enhanced through both the stabilization of the NASICON phase and the reduction in pellet porosity.",
+        "Conductivity is partitioned into bulk and grain boundary components, with grain boundary resistance decreasing significantly upon Li2O addition."
       ],
       "raw_conductivity": "1.1e-4",
       "raw_conductivity_unit": "S.cm-1",
@@ -149,73 +203,27 @@
       "raw_temperature_unit": "K",
       "normalized_temperature_c": 24.85,
       "source_figure_id": "Fig. 6",
-      "source_caption": null,
+      "source_caption": "Relationship between the total conductivity at 298 K and the sintered temperature for LiHf2(PO4)3+yLi2O system: y=0; 0.1; 0.2; 0.3; 0.4.",
       "source": "text",
       "confidence": "high",
-      "warnings": []
+      "warnings": [
+        "Text mentions LiTi2(PO4)3 in description of Fig 6, but Figure 6 caption and context specify LiHf2(PO4)3; assuming LiHf2(PO4)3.",
+        "The sintering temperature was 1298 K, while the measurement temperature was 298 K."
+      ]
     }
   ]
 }
 
 
-[DEBUG] *3.3. Li~+xMxHf2\_~(P04)3 (M=Cr, Fe, Sc, In, Lu, or ]1) system*:
-- Response length: 2114 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=639
-)] cached_content_token_count=639 candidates_token_count=702 candidates_tokens_details=None prompt_token_count=1770 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1770
-)] thoughts_token_count=2099 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4571 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li 1.2Feo.zHfl.8 (PO4) 3",
-      "canonical_formula": "Li1.2Fe0.2Hf1.8P3O12",
-      "material_definitions": [
-        "The materials are ceramic electrolytes based on LiHf2(PO4)3, forming the NASICON-type R3c structure.",
-        "The series is Li(1+x)M(x)Hf(2-x)(PO4)3 where M=Cr, Fe, Sc, In, Lu, or Y.",
-        "Samples were sintered above 1293 K to obtain high density and maximum conductivity.",
-        "The conductivity enhancement is due to high densification and decreased activation energy at the grain boundary."
-      ],
-      "raw_conductivity": "1.7e-4",
-      "raw_conductivity_unit": "S.cm-1",
-      "normalized_conductivity": 0.00017,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": "Fig. 10",
-      "source_caption": "The total conductivity at 298 K for Lit +xMxHf2\\_x(PO4)3 M=Cr (@);Fe (A);Sc (V);In (ll);Lu (0) orY (e).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Raw conductivity unit was written as 'S.cm-4' in one instance, but 'S.cm-1' in the summarizing conclusion; S.cm-1 was used as it is chemically plausible."
-      ]
-    },
-    {
-      "raw_composition": "LiTi2(PO4)'3 systems",
-      "canonical_formula": "LiTi2P3O12",
-      "material_definitions": [
-        "This conductivity value serves as a reference point for comparison with LiHf2(PO4)3 systems.",
-        "The activation energy for the bulk component of this system is reported as 0.30 eV."
-      ],
-      "raw_conductivity": "7.0e-4",
-      "raw_conductivity_unit": "S.cm-1",
-      "normalized_conductivity": 0.0007,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is cited from external references [10, 11].",
-        "Temperature (298 K) is inferred based on comparison with the preceding measurement in the text."
-      ]
-    }
-  ]
-}
+[SCI-FIGURE DEBUG] page_6_figure_4.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 27
+  • main: X=stoichiometry, Y=conductivity
+
+
+[TABLE DEBUG] Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-:
+- Response: {"measurements":[{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.43","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["grain_boundary"],"raw_conductivity":"0.56","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3+0.1Li2O","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.42","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is
 
 
 [TABLE DEBUG] Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with:
@@ -223,284 +231,124 @@
   "measurements": [
     {
       "raw_composition": "Li1.3Fe0.3Hf1.7(PO4)3",
-      "canonical_formula": null,
-      "material_definitions": [],
+      "canonical_formula": "Li1.3Fe0.3Hf1.7P3O12",
+      "reduced_formula": "Fe3Hf17Li13O120P30",
+      "material_definitions": [
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are studied for their potential as solid electrolytes in lithium batteries."
+      ],
       "raw_conductivity": "0.42",
       "raw_conductivity_unit": "eV",
       "normalized_conductivity": null,
-      "raw_temperature": "N/A",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li1+xMxHf2-x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
       "source": "table",
       "confidence": "high",
       "warnings": [
-        "Value extracted is activation energy, not ionic conductivity."
+        "The extracted value is activation energy (Ea) in eV, not ionic conductivity, as per the source table and caption."
       ]
     },
     {
       "raw_composition": "Li1.3Sc0.3Hf1.7(PO4)3",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "0.42",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "N/A",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Value extracted is activation energy, not ionic conductivity."
-      ]
-    },
-    {
-      "raw_composition": "Li1.2In0.2Hf1.8(PO4)3",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "0.41",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "N/A",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Value extracted is activation energy, not ionic conductivity."
-      ]
-    },
-    {
-      "raw_composition": "Li1.3In0.3Hf1.7(PO4)3",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "0.43",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "N/A",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Value extracted is activation energy, not ionic conductivity."
-      ]
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_4_figure_7.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "Sintering Temp./ K",
-        "unit": "K",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log (sigma / S.cm^-1)",
-        "unit": "S.cm^-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        42,
-        53,
-        954,
-        946
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 26
-
-
-[SCI-FIGURE DEBUG] page_4_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 / T/K",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log (\u03c3T / S\u00b7cm\u207b\u00b9\u00b7K)",
-        "unit": "S\u00b7cm\u207b\u00b9\u00b7K",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        44,
-        46,
-        963,
-        940
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 33
+      "canonical_formula": "Li1.3Sc0.3Hf1.7P3O12",
+      "reduced_formula": "Hf17Li13O120P30Sc3",
+      "material_definitions": [
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are
 
 
 [TABLE DEBUG] Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-:
+- Response: {"measurements":[{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.43","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["grain_boundary"],"raw_conductivity":"0.56","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3+0.1Li2O","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.42","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is
+
+
+[TABLE DEBUG] Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with:
 - Response: {
   "measurements": [
     {
-      "raw_composition": "LiHf2(PO4)3",
-      "canonical_formula": "LiHf2(PO4)3",
+      "raw_composition": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Hf1.7P3O12",
+      "reduced_formula": "Fe3Hf17Li13O120P30",
       "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
-      ],
-      "raw_conductivity": "0.43",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "Arrhenius plot",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Bulk conduction"
-      ]
-    },
-    {
-      "raw_composition": "LiHf2(PO4)3",
-      "canonical_formula": "LiHf2(PO4)3",
-      "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
-      ],
-      "raw_conductivity": "0.56",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "Arrhenius plot",
-      "raw_temperature_unit": "N/A",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Grain boundary conduction"
-      ]
-    },
-    {
-      "raw_composition": "LiHf2(PO4)3+0.1Li2O",
-      "canonical_formula": "Li1.2Hf2(PO4)3",
-      "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are studied for their potential as solid electrolytes in lithium batteries."
       ],
       "raw_conductivity": "0.42",
       "raw_conductivity_unit": "eV",
       "normalized_conductivity": null,
-      "raw_temperature": "223 K to room temperature",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li1+xMxHf2-x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
       "source": "table",
       "confidence": "high",
       "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Bulk conduction"
+        "The extracted value is activation energy (Ea) in eV, not ionic conductivity, as per the source table and caption."
       ]
     },
     {
-      "raw_composition": "LiHf2(PO4)3+0.1Li2O",
-      "canonical_formula": "Li1.2Hf2(PO4)3",
+      "raw_composition": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7P3O12",
+      "reduced_formula": "Hf17Li13O120P30Sc3",
       "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
-      ],
-      "raw_conductivity": "0.47",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "223 K to room temperature",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Grain boundary conduction"
-      ]
-    },
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are
+
+
+[TABLE DEBUG] Table 1: shows the activation energy for  $\operatorname{Li^+}$  conduction of the bulk and the grain boundary for  $\operatorname{LiHf_2(PO_4)_3} + y \operatorname{Li_2O}$  (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the  $\operatorname{Li_2O}$  addition. The enhancement of the conductivity by the  $\operatorname{Li_2O}$  addition is attributed to the decrease in the ac-:
+- Response: {"measurements":[{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.43","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3","canonical_formula":null,"reduced_formula":null,"material_definitions":["grain_boundary"],"raw_conductivity":"0.56","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-","source":"table","confidence":"high","warnings":["Value is activation energy (Ea), not ionic conductivity"]},{"raw_composition":"LiHf2(PO4)3+0.1Li2O","canonical_formula":null,"reduced_formula":null,"material_definitions":["bulk"],"raw_conductivity":"0.42","raw_conductivity_unit":"eV","normalized_conductivity":null,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source_figure_id":"Table 1","source_caption":"Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is
+
+
+[TABLE DEBUG] Table 2: shows the activation energy of the bulk component for Li~ +xMxHf2\_x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with:
+- Response: {
+  "measurements": [
     {
-      "raw_composition": "LiHf2(PO4)3+0.2Li2O",
-      "canonical_formula": "Li1.4Hf2(PO4)3",
+      "raw_composition": "Li1.3Fe0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Fe0.3Hf1.7P3O12",
+      "reduced_formula": "Fe3Hf17Li13O120P30",
       "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are studied for their potential as solid electrolytes in lithium batteries."
       ],
       "raw_conductivity": "0.42",
       "raw_conductivity_unit": "eV",
       "normalized_conductivity": null,
-      "raw_temperature": "223 K to room temperature",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: shows the activation energy of the bulk component for Li1+xMxHf2-x (PO4) 3 system. The activation energy could not be determined for the other samples, since the two minimum points on the Cole-Cole plot could not be clearly obtained. The activation energy for bulk component is also ca. 0.42 eV, which agreed with",
       "source": "table",
       "confidence": "high",
       "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Bulk conduction"
+        "The extracted value is activation energy (Ea) in eV, not ionic conductivity, as per the source table and caption."
       ]
     },
     {
-      "raw_composition": "LiHf2(PO4)3+0.2Li2O",
-      "canonical_formula": "Li1.4Hf2(PO4)3",
+      "raw_composition": "Li1.3Sc0.3Hf1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Hf1.7P3O12",
+      "reduced_formula": "Hf17Li13O120P30Sc3",
       "material_definitions": [
-        "The materials are solid solutions of LiHf2(PO4)3 + y Li2O, where y = 0, 0.1, and 0.2.",
-        "These compounds adopt a rhombohedral crystal structure.",
-        "The data extracted represents the activation energy for Li+ conduction."
-      ],
-      "raw_conductivity": "0.48",
-      "raw_conductivity_unit": "eV",
-      "normalized_conductivity": null,
-      "raw_temperature": "223 K to room temperature",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": null,
-      "source_figure_id": null,
-      "source_caption": "Table 1: shows the activation energy for Li+ conduction of the bulk and the grain boundary for LiHf2(PO4)3 + y Li2O (rhombohedral sample). The activation energy for y = 0.1, 0.2 was determined in the temperature range between 223 K and room temperature. The activation energy at the grain boundary decreased by the Li2O addition. The enhancement of the conductivity by the Li2O addition is attributed to the decrease in the ac-",
-      "source": "table",
-      "confidence": "high",
-      "warnings": [
-        "Extracted activation energy (Ea) instead of conductivity",
-        "Value corresponds to Grain boundary conduction"
-      ]
-    }
-  ]
-}
+        "bulk",
+        "The Li1+xMxHf2-x(PO4)3 system represents a series of lithium-ion conducting solids based on the NASICON structure.",
+        "In this system, hafnium (Hf) is partially substituted by trivalent metal ions (M) such as iron (Fe), scandium (Sc), or indium (In).",
+        "This substitution is accompanied by an increase in lithium content (1+x) to maintain charge neutrality.",
+        "The materials are

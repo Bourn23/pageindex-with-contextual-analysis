@@ -1,0 +1,2207 @@
+{
+  "doc_name": "a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy",
+  "timestamp": "2026-02-11 08:54:01",
+  "execution_time_seconds": 173.61,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 15810,
+    "total_output_tokens": 70563,
+    "total_cost_usd": 0.1812,
+    "call_counts": {
+      "gemini-flash-latest": 16
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 114,
+    "skipped_images": 25,
+    "failed_items": 0,
+    "total_sections_processed": 15,
+    "total_images_processed": 13
+  },
+  "material_count": 114,
+  "measurements": [
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.002",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 8.939999999999999e-06,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.0005",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.5499999999999997e-06,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "8e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.4e-07,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.05e-08,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.4e-09,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (Bulk)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.4299999999999996e-11,
+      "raw_temperature": "8.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -149.69320987654316,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.018",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 8.045999999999999e-05,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.004",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.0399999999999998e-05,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "6e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.6599999999999997e-07,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "3e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.1e-08,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (Bulk)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "4e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.2399999999999997e-10,
+      "raw_temperature": "8.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -149.69320987654316,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (Bulk)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.001",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.4699999999999996e-06,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (Bulk)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.0002",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.02e-06,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (Bulk)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.75e-07,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (Bulk)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.2199999999999998e-08,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (Bulk)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "1e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 7e-10,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.13",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00048360000000000005,
+      "raw_temperature": "3.72",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -4.332795698924713,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 0.0002,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.005",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.2349999999999998e-05,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0013",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.629999999999999e-06,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.00013",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 7.149999999999999e-07,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.1e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.71e-08,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (Bulk)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "5e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.5e-09,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (Bulk)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.55e-07,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (Bulk)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "7e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.85e-08,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (Bulk)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.0499999999999996e-09,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (Bulk)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.4e-10,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (Bulk)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "9e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 7.11e-11,
+      "raw_temperature": "7.9",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -146.56772151898733,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0005",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.2349999999999998e-06,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0001",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 5.1e-07,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "2e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.1e-07,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.099999999999999e-09,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "4e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.8e-10,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (Bulk)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "6e-10",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.859999999999999e-12,
+      "raw_temperature": "8.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -149.69320987654316,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (Bulk)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:bulk"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.015",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.8e-05,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 39.35000000000002,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.007",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.38e-05,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 20.96764705882356,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.001",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.7e-06,
+      "raw_temperature": "3.7",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -2.8797297297297177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.0002",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 8.000000000000001e-07,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "4e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.8e-08,
+      "raw_temperature": "4.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -50.92777777777775,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.5299999999999999e-09,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.75e-10,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP01 (GB)",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.8299999999999998e-11,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00016,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 39.35000000000002,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.015",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 5.1e-05,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 20.96764705882356,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.003",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.11e-05,
+      "raw_temperature": "3.7",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -2.8797297297297177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0005",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2e-06,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "4e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.8e-07,
+      "raw_temperature": "4.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -50.92777777777775,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "4e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.0399999999999997e-08,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "8e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.4e-09,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LATP03 (GB)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "3e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.8299999999999996e-10,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LATP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.006",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.92e-05,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 39.35000000000002,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.002",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.8e-06,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 20.96764705882356,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.0003",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.11e-06,
+      "raw_temperature": "3.7",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -2.8797297297297177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "6e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.4000000000000003e-07,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "1e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.5e-09,
+      "raw_temperature": "4.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -50.92777777777775,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.63e-10,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "1e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 5.5000000000000004e-11,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP01 (GB)",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "5e-10",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.05e-12,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 0.00022400000000000002,
+      "raw_temperature": "3.2",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 39.35000000000002,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.02",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.8e-05,
+      "raw_temperature": "3.4",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 20.96764705882356,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.005",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.8500000000000002e-05,
+      "raw_temperature": "3.7",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -2.8797297297297177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0008",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.2000000000000003e-06,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.00011",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.917e-07,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.3e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.629999999999999e-08,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "2e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.1e-08,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.5e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 9.149999999999999e-10,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LFTP03 (GB)",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "4e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.8e-11,
+      "raw_temperature": "7.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -130.29285714285712,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LFTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.0028",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 8.904000000000001e-06,
+      "raw_temperature": "3.18",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 41.31540880503144,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.00095",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 3.2489999999999997e-06,
+      "raw_temperature": "3.42",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 19.247660818713484,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "0.00013",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 4.836e-07,
+      "raw_temperature": "3.72",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -4.332795698924713,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.2000000000000002e-07,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3.5e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.5644999999999997e-09,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "4.2e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.1419999999999997e-10,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "4e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.2e-11,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP01 (GB)",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2.5e-10",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.525e-12,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP01 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.0018",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 6.156e-06,
+      "raw_temperature": "3.42",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": 19.247660818713484,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "0.00028",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.0416e-06,
+      "raw_temperature": "3.72",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -4.332795698924713,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "6.5e-05",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.6e-07,
+      "raw_temperature": "4.0",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -23.149999999999977,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.2e-06",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 5.363999999999999e-09,
+      "raw_temperature": "4.47",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -49.436353467561474,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.8e-07",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 9.179999999999999e-10,
+      "raw_temperature": "5.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -77.07156862745094,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "3.8e-08",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 2.0900000000000003e-10,
+      "raw_temperature": "5.5",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -91.33181818181816,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LCTP03 (GB)",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.8e-09",
+      "raw_conductivity_unit": "\u03c3T (S K cm\u207b\u00b9)",
+      "normalized_conductivity": 1.0979999999999999e-11,
+      "raw_temperature": "6.1",
+      "raw_temperature_unit": "K\u207b\u00b9",
+      "normalized_temperature_c": -109.21557377049177,
+      "source_figure_id": "Fig 8-main",
+      "source_caption": "Fig. 8. Arrhenius fitting of selected samples in the bulk and grain boundary regions. [Series: LCTP03 (GB)] [X: 1000/T (K\u207b\u00b9)] [Y: \u03c3T (S K cm\u207b\u00b9)]",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "measurement_type:grain_boundary"
+      ]
+    },
+    {
+      "raw_composition": "LTP",
+      "canonical_formula": "LiTi2(PO4)3",
+      "reduced_formula": "LiO12P3Ti2",
+      "material_definitions": [],
+      "raw_conductivity": "6.0 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LTP",
+      "canonical_formula": "LiTi2(PO4)3",
+      "reduced_formula": "LiO12P3Ti2",
+      "material_definitions": [],
+      "raw_conductivity": "3.0 \u00d7 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3e-07,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP005",
+      "canonical_formula": "Li1.5Al0.5Ti1.5(PO4)3",
+      "reduced_formula": "AlLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "1.1 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0011,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP005",
+      "canonical_formula": "Li1.5Al0.5Ti1.5(PO4)3",
+      "reduced_formula": "AlLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "6.5 \u00d7 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 6.5e-07,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP01",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "6.7 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00067,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP01",
+      "canonical_formula": "Li1.1Al0.1Ti1.9(PO4)3",
+      "reduced_formula": "AlLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2.8 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.8e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP02",
+      "canonical_formula": "Li1.2Al0.2Ti1.8(PO4)3",
+      "reduced_formula": "AlLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "4.0 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.004,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP02",
+      "canonical_formula": "Li1.2Al0.2Ti1.8(PO4)3",
+      "reduced_formula": "AlLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "3.6 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP03",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "6.2 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0062,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP03",
+      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "7.3 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 7.3e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP04",
+      "canonical_formula": "Li1.4Al0.4Ti1.6(PO4)3",
+      "reduced_formula": "Al2Li7O60P15Ti8",
+      "material_definitions": [],
+      "raw_conductivity": "3.3 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0033,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LATP04",
+      "canonical_formula": "Li1.4Al0.4Ti1.6(PO4)3",
+      "reduced_formula": "Al2Li7O60P15Ti8",
+      "material_definitions": [],
+      "raw_conductivity": "5.2 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 5.2e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP005",
+      "canonical_formula": "Li1.5Cr0.5Ti1.5(PO4)3",
+      "reduced_formula": "CrLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "1.8 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00018,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP005",
+      "canonical_formula": "Li1.5Cr0.5Ti1.5(PO4)3",
+      "reduced_formula": "CrLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "4.6 \u00d7 10-7",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 4.6e-07,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP01",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "2.6 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00026,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP01",
+      "canonical_formula": "Li1.1Cr0.1Ti1.9(PO4)3",
+      "reduced_formula": "CrLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "3.1 \u00d7 10-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.1e-06,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP02",
+      "canonical_formula": "Li1.2Cr0.2Ti1.8(PO4)3",
+      "reduced_formula": "CrLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "4.3 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00043,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP02",
+      "canonical_formula": "Li1.2Cr0.2Ti1.8(PO4)3",
+      "reduced_formula": "CrLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "2.1 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.1e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP03",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "2.9 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00029,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LCTP03",
+      "canonical_formula": "Li1.3Cr0.3Ti1.7(PO4)3",
+      "reduced_formula": "Cr3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "1.6 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1.6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP005",
+      "canonical_formula": "Li1.5Fe0.5Ti1.5(PO4)3",
+      "reduced_formula": "FeLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "1.3 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00013,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP005",
+      "canonical_formula": "Li1.5Fe0.5Ti1.5(PO4)3",
+      "reduced_formula": "FeLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "1.0 \u00d7 10-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 1e-06,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP01",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "6.3 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00063,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP01",
+      "canonical_formula": "Li1.1Fe0.1Ti1.9(PO4)3",
+      "reduced_formula": "FeLi11O120P30Ti19",
+      "material_definitions": [],
+      "raw_conductivity": "6.0 \u00d7 10-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 6e-06,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP02",
+      "canonical_formula": "Li1.2Fe0.2Ti1.8(PO4)3",
+      "reduced_formula": "FeLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "1.4 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0014,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP02",
+      "canonical_formula": "Li1.2Fe0.2Ti1.8(PO4)3",
+      "reduced_formula": "FeLi6O60P15Ti9",
+      "material_definitions": [],
+      "raw_conductivity": "2.9 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2.9e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP03",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "2.3 \u00d7 10-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0023,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP03",
+      "canonical_formula": "Li1.3Fe0.3Ti1.7(PO4)3",
+      "reduced_formula": "Fe3Li13O120P30Ti17",
+      "material_definitions": [],
+      "raw_conductivity": "6.0 \u00d7 10-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP05",
+      "canonical_formula": "Li1.5Fe0.5Ti1.5(PO4)3",
+      "reduced_formula": "FeLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "2.7 \u00d7 10-4",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00027,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "LFTP05",
+      "canonical_formula": "Li1.5Fe0.5Ti1.5(PO4)3",
+      "reduced_formula": "FeLi3O24P6Ti3",
+      "material_definitions": [],
+      "raw_conductivity": "3.3 \u00d7 10-6",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 3.3e-06,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table 2",
+      "source_caption": "Table 2: Activation energy, pre-exponential factor and ionic conductivity at room temperature in the bulk and grain boundaries obtained from Arrhenius fit.",
+      "source": "table",
+      "confidence": "high",
+      "warnings": [
+        "Room temperature assumed to be 25\u00b0C for normalization purposes."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [
+        "A systematic study of Li1+xMxTi2-x(PO4)3 with M=Al, Cr and Fe and 0 <= x <= 1 has been carried out by X-ray and neutron powder diffraction and by impedance spectroscopy.",
+        "Lithium atoms were found to occupy two different positions, the well-known M1 and a new position called M2'.",
+        "The addition of trivalent metals into the LiTi2(PO4)3 compound gives rise to the liberation of the M1 sites and simultaneous occupation of the M2' sites.",
+        "Both dc bulk and grain boundary ionic conductivity show a thermally activated behavior, and their values increase with substituent content until compositions of x = 0.2\u20130.3.",
+        "The activation energy for bulk dc conductivity hardly changes with the substitution, and the main factor affecting the variation of the ionic conductivity is the pre-exponential factor."
+      ],
+      "raw_conductivity": "6.2e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0062,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature value 'room temperature' interpreted as 25\u00b0C for normalization."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (grain boundary conductivity)",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "reduced_formula": "Al3Li13O120P30Ti17",
+      "material_definitions": [
+        "The study investigates NASICON-type solid solutions with the general formula Li1+xMxTi2-x(PO4)3, where M represents Al, Cr, or Fe.",
+        "Samples were characterized using neutron powder diffraction and complex impedance spectroscopy over wide ranges of frequency and temperature.",
+        "The total electrical conductivity is separated into bulk and grain boundary contributions using impedance and modulus representations.",
+        "Ionic conductivity in these systems generally increases with substitution, following the Arrhenius law due to decreased activation energy.",
+        "Neutron diffraction reveals that substitution causes lithium ions to shift from M1 to M2' sites, increasing structural disorder and configurational entropy."
+      ],
+      "raw_conductivity": "7.3e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 7.3e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature 'room temperature' assumed to be 25 \u00b0C"
+      ]
+    }
+  ],
+  "material_definitions": []
+}

@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-417",
+      "extracted_match": "Li6PS5I | 1.2e-06 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6PS5I matches, and the raw conductivity 1.2e-06 S/cm is a very close approximation of 1.26e-06 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-418",
+      "extracted_match": "Li6.08P0.92Ge0.08S5I | 7.5e-06 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.08P0.92Ge0.08S5I is a close approximation of Li6.1P0.9Ge0.1S5I, and the raw conductivity 7.5e-06 S/cm is a reasonable approximation of 8.86e-06 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-419",
+      "extracted_match": "Li6.15P0.85Ge0.15S5I | 3.5e-05 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.15P0.85Ge0.15S5I matches exactly, and the raw conductivity 3.5e-05 S/cm is a reasonable approximation of 3.93e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-420",
+      "extracted_match": "Li6.24P0.76Ge0.24S5I | 2.8e-05 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.24P0.76Ge0.24S5I is a close approximation of Li6.2P0.8Ge0.2S5I, and the raw conductivity 2.8e-05 S/cm is a reasonable approximation of 3.19e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-421",
+      "extracted_match": "Li6.26P0.74Ge0.26S5I | 0.00013 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.26P0.74Ge0.26S5I is a close approximation of Li6.25P0.75Ge0.25S5I, and the raw conductivity 0.00013 S/cm is a reasonable approximation of 0.00015 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-422",
+      "extracted_match": "Li6.36P0.64Ge0.36S5I | 0.0006 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.36P0.64Ge0.36S5I is a close approximation of Li6.3P0.7Ge0.3S5I, and the raw conductivity 0.0006 S/cm is a reasonable approximation of 0.00065 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-423",
+      "extracted_match": "Li6.47P0.53Ge0.47S5I | 0.0015 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.47P0.53Ge0.47S5I is a close approximation of Li6.4P0.6Ge0.4S5I, and the raw conductivity 0.0015 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-424",
+      "extracted_match": "Li6.52P0.48Ge0.52S5I | 0.0018 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.52P0.48Ge0.52S5I is a close approximation of Li6.5P0.5Ge0.5S5I, and the raw conductivity 0.0018 S/cm is a reasonable approximation of 0.00186 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-425",
+      "extracted_match": "Li6.6P0.4Ge0.6S5I | 0.0054 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.6P0.4Ge0.6S5I matches exactly, and the normalized conductivity 0.0054 S/cm is a reasonable approximation of 0.00521 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-426",
+      "extracted_match": "Li6.79P0.21Ge0.79S5I | 0.0054 S/cm",
+      "is_match": true,
+      "reason": "The normalized formula Li6.79P0.21Ge0.79S5I is a close approximation of Li6.7P0.3Ge0.7S5I, and the raw conductivity 0.0054 S/cm is a very close approximation of 0.00554 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-427",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "No extracted material matches the normalized formula Li6.8P0.2Ge0.8S5I or the conductivity 0.00258 S/cm."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 10
+}

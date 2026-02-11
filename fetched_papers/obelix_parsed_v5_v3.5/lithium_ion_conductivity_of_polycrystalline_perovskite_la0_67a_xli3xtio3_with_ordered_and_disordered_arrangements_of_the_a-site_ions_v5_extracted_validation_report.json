@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-159",
+      "extracted_match": "La0.61Li0.18TiO3 | 0.00045708 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.22Li0.36Ti2.0O6.0 simplifies to La0.61Li0.18TiO3, and the conductivity 0.000412 S/cm is approximately 0.00045708 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-160",
+      "extracted_match": "La0.55Li0.36TiO3 | 0.000688 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.1Li0.72Ti2.0O6.0 simplifies to La0.55Li0.36TiO3, and the conductivity 0.000688 S/cm is an exact match to 0.000688 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-161",
+      "extracted_match": "La0.54Li0.39TiO3 | 0.0006606 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.08Li0.78Ti2.0O6.0 simplifies to La0.54Li0.39TiO3, and the conductivity 0.000651 S/cm is approximately 0.0006606 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-162",
+      "extracted_match": "La0.52Li0.45TiO3 | 0.0004786 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.04Li0.9Ti2.0O6.0 simplifies to La0.52Li0.45TiO3, and the conductivity 0.000501 S/cm is approximately 0.0004786 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-163",
+      "extracted_match": "La0.58Li0.27TiO3 | 0.0006165 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.16Li0.54Ti2.0O6.0 simplifies to La0.58Li0.27TiO3, and the conductivity 0.000599 S/cm is approximately 0.0006165 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-164",
+      "extracted_match": "La0.56Li0.33TiO3 | 0.0006760 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La1.12Li0.66Ti2.0O6.0 simplifies to La0.56Li0.33TiO3, and the conductivity 0.000668 S/cm is approximately 0.0006760 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-449",
+      "extracted_match": "La0.58Li0.27TiO3 | 0.0007585775750291835 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La0.58Li0.27Ti1.0O3.0 matches La0.58Li0.27TiO3, and the conductivity 0.000832 S/cm is approximately 0.0007585775750291835 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-450",
+      "extracted_match": "La0.56Li0.33TiO3 | 0.0013803842646028853 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La0.56Li0.33Ti1.0O3.0 matches La0.56Li0.33TiO3, and the conductivity 0.0013 S/cm is approximately 0.0013803842646028853 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-451",
+      "extracted_match": "La0.55Li0.36TiO3 | 0.00153 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La0.55Li0.36Ti1.0O3.0 matches La0.55Li0.36TiO3, and the conductivity 0.00154 S/cm is approximately 0.00153 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-452",
+      "extracted_match": "La0.54Li0.39TiO3 | 0.0013182567385564075 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La0.54Li0.39Ti1.0O3.0 matches La0.54Li0.39TiO3, and the conductivity 0.00125 S/cm is approximately 0.0013182567385564075 S/cm at 25C."
+    },
+    {
+      "ground_truth_id": "GT-453",
+      "extracted_match": "La0.52Li0.45TiO3 | 0.0006918309709189362 S/cm",
+      "is_match": true,
+      "reason": "The ground truth formula La0.52Li0.45Ti1.0O3.0 matches La0.52Li0.45TiO3, and the conductivity 0.000785 S/cm is approximately 0.0006918309709189362 S/cm at 25C."
+    }
+  ],
+  "total_ground_truth": 11,
+  "total_matches": 11
+}

@@ -1,0 +1,145 @@
+{
+  "doc_name": "a_systematic_study_of_nasicon-type_li1_xmxti2_x_po4_3_m_cr_al_fe_by_neutron_diffraction_and_impedance_spectroscopy",
+  "timestamp": "2026-02-10 16:48:30",
+  "execution_time_seconds": 497.74,
+  "config": {
+    "vision_model": "gemini-3-flash-preview",
+    "text_model": "gemini-flash-latest",
+    "normalization_engine": "v2_hybrid_llm_python"
+  },
+  "cost_summary": {
+    "total_input_tokens": 10960,
+    "total_output_tokens": 49556,
+    "total_cost_usd": 0.1272,
+    "call_counts": {
+      "gemini-flash-latest": 13
+    }
+  },
+  "extraction_stats": {
+    "extracted_count": 5,
+    "skipped_images": 21,
+    "failed_items": 5,
+    "total_sections_processed": 15,
+    "total_images_processed": 13
+  },
+  "material_count": 5,
+  "measurements": [
+    {
+      "raw_composition": "x=0.6",
+      "canonical_formula": "Li3.4Ge0.4P0.6S4",
+      "material_definitions": [
+        "The samples belong to the thio-LISICON solid solution system with the general formula Li4-xGe1-xPxS4.",
+        "They were synthesized using a standard solid-state reaction method involving Li2S, GeS2, and P2S5.",
+        "Ionic conductivity was measured using AC impedance spectroscopy across a broad temperature range.",
+        "The composition x=0.6 exhibited the highest ionic conductivity within this thio-LISICON series."
+      ],
+      "raw_conductivity": "5.0e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0005,
+      "raw_temperature": "3.35",
+      "raw_temperature_unit": "1000/T / K-1",
+      "normalized_temperature_c": 25.4,
+      "source_figure_id": "Fig. 5",
+      "source_caption": "Arrhenius plots of the ionic conductivity for various compositions in the Li4-xGe1-xPxS4 system.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Conductivity value estimated from the log scale on the Y-axis of the Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "x=0.0",
+      "canonical_formula": "Li4GeS4",
+      "material_definitions": [
+        "The samples belong to the thio-LISICON solid solution system with the general formula Li4-xGe1-xPxS4.",
+        "They were synthesized using a standard solid-state reaction method involving Li2S, GeS2, and P2S5.",
+        "Ionic conductivity was measured using AC impedance spectroscopy across a broad temperature range.",
+        "The composition x=0.6 exhibited the highest ionic conductivity within this thio-LISICON series."
+      ],
+      "raw_conductivity": "1.0e-7",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1e-07,
+      "raw_temperature": "3.35",
+      "raw_temperature_unit": "1000/T / K-1",
+      "normalized_temperature_c": 25.4,
+      "source_figure_id": "Fig. 5",
+      "source_caption": "Arrhenius plots of the ionic conductivity for various compositions in the Li4-xGe1-xPxS4 system.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Conductivity value estimated from the log scale on the Y-axis of the Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "x=1.0",
+      "canonical_formula": "Li3PS4",
+      "material_definitions": [
+        "The samples belong to the thio-LISICON solid solution system with the general formula Li4-xGe1-xPxS4.",
+        "They were synthesized using a standard solid-state reaction method involving Li2S, GeS2, and P2S5.",
+        "Ionic conductivity was measured using AC impedance spectroscopy across a broad temperature range.",
+        "The composition x=0.6 exhibited the highest ionic conductivity within this thio-LISICON series."
+      ],
+      "raw_conductivity": "1.6e-6",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1.6e-06,
+      "raw_temperature": "3.35",
+      "raw_temperature_unit": "1000/T / K-1",
+      "normalized_temperature_c": 25.4,
+      "source_figure_id": "Fig. 5",
+      "source_caption": "Arrhenius plots of the ionic conductivity for various compositions in the Li4-xGe1-xPxS4 system.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Conductivity value estimated from the log scale on the Y-axis of the Arrhenius plot."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "A systematic study of Li1+xMxTi2-x(PO4)3 with M=Al, Cr and Fe and 0 <= x <= 1 has been carried out by X-ray and neutron powder diffraction and by impedance spectroscopy.",
+        "The analysis describes the disposition of lithium atoms occupying M1 and a new M2' position.",
+        "The highest conductivity was found in the sample Li1.3Al0.3Ti1.7(PO4)3.",
+        "Activation energy for bulk dc conductivity was measured at 0.30 eV."
+      ],
+      "raw_conductivity": "6.2e-3",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.0062,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature value '25' inferred from 'room temperature'."
+      ]
+    },
+    {
+      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "material_definitions": [
+        "The materials are solid solutions of the general formula Li1+xMxTi2\u2212x(PO4)3 where M is Al, Cr, or Fe.",
+        "Samples were characterized by neutron powder diffraction and complex impedance spectroscopy to study crystal structure and ionic transport.",
+        "Ionic conductivity mechanisms were separated into bulk (dc) and grain boundary contributions across wide frequency and temperature ranges.",
+        "Substitution levels x range from 0 to 0.3, with conductivity generally increasing as substitution content increases."
+      ],
+      "raw_conductivity": "7.3e-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 7.3e-05,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature specified as 'room temperature'; assumed 25 \u00b0C.",
+        "Value represents grain boundary conductivity (sigma_gb)."
+      ]
+    }
+  ],
+  "material_definitions": []
+}

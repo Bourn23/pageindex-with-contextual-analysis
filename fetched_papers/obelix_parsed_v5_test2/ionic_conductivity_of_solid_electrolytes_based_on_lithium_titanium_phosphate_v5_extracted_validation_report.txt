@@ -1,0 +1,30 @@
+GT-235     | ✅ MATCH         | Li6.0Ti12.0P18.0O72.0 simplifies to LiTi2(PO4)3, and 2e-06 S/cm matches the extracted value at 24.85C.
+GT-242     | ✅ MATCH         | Li7.2Ti12.0Si1.2P16.8O72.0 simplifies to Li1.2Ti2Si0.2P2.8O12, and 8.6e-05 S/cm matches the extracted value at 24.85C.
+GT-243     | ✅ MATCH         | Li7.8Ti12.0Si1.8P16.2O72.0 simplifies to Li1.3Ti2Si0.3P2.7O12, and 0.00032 S/cm matches the extracted value at 24.85C.
+GT-244     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2Al0.2Ti1.8(PO4)3 with conductivity 0.000595 S/cm at room temperature.
+GT-245     | ✅ MATCH         | Li7.8Al1.8Ti10.2P18.0O72.0 simplifies to Li1.3Al0.3Ti1.7(PO4)3, and 0.0007 S/cm is approximately 0.000722 S/cm at 25.0C.
+GT-246     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4Al0.4Ti1.6(PO4)3 with conductivity 0.000388 S/cm at room temperature.
+GT-247     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5Al0.5Ti1.5(PO4)3 with conductivity 0.000248 S/cm at room temperature.
+GT-248     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2Cr0.2Ti1.8(PO4)3 with conductivity 1.82e-05 S/cm at room temperature.
+GT-249     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3Cr0.3Ti1.7(PO4)3 with conductivity 3.51e-05 S/cm at room temperature.
+GT-250     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4Cr0.4Ti1.6(PO4)3 with conductivity 0.000149 S/cm at room temperature.
+GT-251     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5Cr0.5Ti1.5(PO4)3 with conductivity 0.000386 S/cm at room temperature.
+GT-252     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2Ga0.2Ti1.8(PO4)3 with conductivity 0.000162 S/cm at room temperature.
+GT-253     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3Ga0.3Ti1.7(PO4)3 with conductivity 0.000261 S/cm at room temperature.
+GT-254     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4Ga0.4Ti1.6(PO4)3 with conductivity 0.000128 S/cm at room temperature.
+GT-255     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5Ga0.5Ti1.5(PO4)3 with conductivity 0.000122 S/cm at room temperature.
+GT-256     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2Fe0.2Ti1.8(PO4)3 with conductivity 0.00018 S/cm at room temperature.
+GT-257     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3Fe0.3Ti1.7(PO4)3 with conductivity 0.000246 S/cm at room temperature.
+GT-258     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4Fe0.4Ti1.6(PO4)3 with conductivity 0.000392 S/cm at room temperature.
+GT-259     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5Fe0.5Ti1.5(PO4)3 with conductivity 0.000174 S/cm at room temperature.
+GT-260     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2Sc0.2Ti1.8(PO4)3 with conductivity 0.00069 S/cm at room temperature.
+GT-261     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3Sc0.3Ti1.7(PO4)3 with conductivity 0.000703 S/cm at room temperature.
+GT-262     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4Sc0.4Ti1.6(PO4)3 with conductivity 0.000515 S/cm at room temperature.
+GT-263     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2In0.2Ti1.8(PO4)3 with conductivity 0.00039 S/cm at room temperature.
+GT-264     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3In0.3Ti1.7(PO4)3 with conductivity 0.000393 S/cm at room temperature.
+GT-265     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4In0.4Ti1.6(PO4)3 with conductivity 0.000302 S/cm at room temperature.
+GT-266     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5In0.5Ti1.5(PO4)3 with conductivity 0.000204 S/cm at room temperature.
+GT-267     | ❌ MISSING/BAD   | No matching extracted data found for Li1.2La0.2Ti1.8(PO4)3 with conductivity 8e-05 S/cm at room temperature.
+GT-268     | ❌ MISSING/BAD   | No matching extracted data found for Li1.3La0.3Ti1.7(PO4)3 with conductivity 0.000523 S/cm at room temperature.
+GT-269     | ❌ MISSING/BAD   | No matching extracted data found for Li1.4La0.4Ti1.6(PO4)3 with conductivity 0.000498 S/cm at room temperature.
+GT-270     | ❌ MISSING/BAD   | No matching extracted data found for Li1.5La0.5Ti1.5(PO4)3 with conductivity 0.000281 S/cm at room temperature.

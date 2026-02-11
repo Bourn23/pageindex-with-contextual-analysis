@@ -1,0 +1,96 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-318",
+      "extracted_match": "LiHf2(PO4)3 | 7.079e-07 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li6.0Hf12.0P18.0O72.0 and LiHf2(PO4)3 are identical, and 6.85e-07 S/cm is approximately 7.08e-07 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-319",
+      "extracted_match": "Li1.1Fe0.1Hf1.9(PO4)3 | 0.0001 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li6.6Fe0.6Hf11.4P18.0O72.0 and Li1.1Fe0.1Hf1.9(PO4)3 are identical, and 0.000107 S/cm is approximately 0.0001 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-320",
+      "extracted_match": "Li1.1In0.1Hf1.9(PO4)3 | 5.623e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li6.6In0.6Hf11.4P18.0O72.0 and Li1.1In0.1Hf1.9(PO4)3 are identical, and 5.13e-05 S/cm is approximately 5.623e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-321",
+      "extracted_match": "Li1.1Lu0.1Hf1.9(PO4)3 | 5.012e-05 S/cm",
+      "is_match": false,
+      "reason": "Normalized compositions Li6.6Lu0.6Hf11.4P18.0O72.0 and Li1.1Lu0.1Hf1.9(PO4)3 are identical, but 5.88e-05 S/cm is not approximately 5.012e-05 S/cm (difference > 10%)."
+    },
+    {
+      "ground_truth_id": "GT-322",
+      "extracted_match": "Li1.1Sc0.1Hf1.9(PO4)3 | 2.512e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li6.6Sc0.6Hf11.4P18.0O72.0 and Li1.1Sc0.1Hf1.9(PO4)3 are identical, and 2.45e-05 S/cm is approximately 2.512e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-323",
+      "extracted_match": "Li1.2Lu0.2Hf1.8(PO4)3 | 0.0001 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li7.2Lu1.2Hf10.8P18.0O72.0 and Li1.2Lu0.2Hf1.8(PO4)3 are identical, and 9.79e-05 S/cm is approximately 0.0001 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-324",
+      "extracted_match": "Li1.3Cr0.3Hf1.7(PO4)3 | 5.623e-07 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li7.8Cr1.8Hf10.2P18.0O72.0 and Li1.3Cr0.3Hf1.7(PO4)3 are identical, and 5.26e-07 S/cm is approximately 5.623e-07 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-325",
+      "extracted_match": "Li1.3Fe0.3Hf1.7(PO4)3 | 5.623e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li7.8Fe1.8Hf10.2P18.0O72.0 and Li1.3Fe0.3Hf1.7(PO4)3 are identical, and 5.4e-05 S/cm is approximately 5.623e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-326",
+      "extracted_match": "Li1.3In0.3Hf1.7(PO4)3 | 0.00014125 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li7.8In1.8Hf10.2P18.0O72.0 and Li1.3In0.3Hf1.7(PO4)3 are identical, and 0.000142 S/cm is approximately 0.00014125 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-327",
+      "extracted_match": "Li1.3Lu0.3Hf1.7(PO4)3 | 3.162e-05 S/cm",
+      "is_match": false,
+      "reason": "Normalized compositions Li7.8Lu1.8Hf10.2P18.0O72.0 and Li1.3Lu0.3Hf1.7(PO4)3 are identical, but 3.56e-05 S/cm is not approximately 3.162e-05 S/cm (difference > 10%)."
+    },
+    {
+      "ground_truth_id": "GT-328",
+      "extracted_match": "Li1.3Sc0.3Hf1.7(PO4)3 | 8.913e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li7.8Sc1.8Hf10.2P18.0O72.0 and Li1.3Sc0.3Hf1.7(PO4)3 are identical, and 8.32e-05 S/cm is approximately 8.913e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-329",
+      "extracted_match": "Li1.3Y0.3Hf1.7(PO4)3 | 3.548e-05 S/cm",
+      "is_match": false,
+      "reason": "Normalized compositions Li7.8Y1.8Hf10.2P18.0O72.0 and Li1.3Y0.3Hf1.7(PO4)3 are identical, but 3.19e-05 S/cm is not approximately 3.548e-05 S/cm (difference > 10%)."
+    },
+    {
+      "ground_truth_id": "GT-330",
+      "extracted_match": "Li1.4In0.4Hf1.6(PO4)3 | 0.00014125 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li8.4In2.4Hf9.6P18.0O72.0 and Li1.4In0.4Hf1.6(PO4)3 are identical, and 0.000142 S/cm is approximately 0.00014125 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-331",
+      "extracted_match": "Li1.4Lu0.4Hf1.6(PO4)3 | 1.995e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li8.4Lu2.4Hf9.6P18.0O72.0 and Li1.4Lu0.4Hf1.6(PO4)3 are identical, and 2.06e-05 S/cm is approximately 1.995e-05 S/cm."
+    },
+    {
+      "ground_truth_id": "GT-332",
+      "extracted_match": "Li1.4Y0.4Hf1.6(PO4)3 | 2.239e-05 S/cm",
+      "is_match": true,
+      "reason": "Normalized compositions Li8.4Y2.4Hf9.6P18.0O72.0 and Li1.4Y0.4Hf1.6(PO4)3 are identical, and 2.09e-05 S/cm is approximately 2.239e-05 S/cm."
+    }
+  ],
+  "total_ground_truth": 15,
+  "total_matches": 12
+}

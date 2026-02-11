@@ -4,14 +4,21 @@
 
 
 [DEBUG] X-ray diffraction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=418 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=418 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=418
-)] thoughts_token_count=211 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=639 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=716 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1140 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] **Neutron powder diffraction**:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=543
+)] thoughts_token_count=583 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1132 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] **Synthesis**:
@@ -19,10 +26,37 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=490 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=490
-)] thoughts_token_count=259 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=759 traffic_type=None
+)] thoughts_token_count=1617 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2117 traffic_type=None
 - chars: {
   "measurements": []
 }
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=344 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=344
+)] thoughts_token_count=1630 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1980 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Scanning electron microscopy:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=299 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=299
+)] thoughts_token_count=828 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1132 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] Rietveld analysis:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=556 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=556
+)] thoughts_token_count=1530 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2092 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] Effect of Si substitution on the structural and transport properties of superionic Li-argyrodites†:
@@ -30,32 +64,7 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=518 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=518
-)] thoughts_token_count=338 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=866 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Abstract / Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=344 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=344
-)] thoughts_token_count=444 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=798 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Neutron powder diffraction**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=257
-)] cached_content_token_count=257 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=543 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=543
-)] thoughts_token_count=293 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=846 traffic_type=None
+)] thoughts_token_count=3022 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3550 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -66,32 +75,7 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=343 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=343
-)] thoughts_token_count=234 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=587 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Rietveld analysis:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=351
-)] cached_content_token_count=351 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=556 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=556
-)] thoughts_token_count=242 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=808 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Scanning electron microscopy:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=299 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=299
-)] thoughts_token_count=173 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=482 traffic_type=None
+)] thoughts_token_count=1539 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1892 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -99,265 +83,115 @@
 
 [DEBUG] Conflicts of interest:
 - Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=190
-)] cached_content_token_count=190 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=243
-)] thoughts_token_count=69 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=322 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Structural characterization:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=658
-)] cached_content_token_count=658 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1918 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1918
-)] thoughts_token_count=485 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2413 traffic_type=None
+)] thoughts_token_count=744 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=997 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] Conclusion 4.:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=449 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=449 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=449
-)] thoughts_token_count=518 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=977 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 1. Introduction:
-- Response length: 1082 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=330 candidates_tokens_details=None prompt_token_count=1733 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1733
-)] thoughts_token_count=1326 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3389 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li_{6+x}P_{1-x}Si_xS_5X",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The study focuses on aliovalent doping in Li+ conducting argyrodites.",
-        "Solid solutions of the type Li(6+x)P(1-x)Si(x)S5X were investigated by substituting P5+ with Si4+.",
-        "The doping increases the Li+ concentration and the unit cell size.",
-        "This substitution leads to a rising occupancy of Li+ on the transition state for hopping."
-      ],
-      "raw_conductivity": "2",
-      "raw_conductivity_unit": "mS cm^{-1}",
-      "normalized_conductivity": 0.002,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Conductivity value is a lower bound (>2 mS/cm) extracted as 2 mS/cm.",
-        "Measurement temperature is inferred as room temperature (25 C) since none was specified."
-      ]
-    }
-  ]
-}
+)] thoughts_token_count=1182 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1637 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] Ionic transport:
-- Response length: 2260 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=679 candidates_tokens_details=None prompt_token_count=1438 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 2654 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=767 candidates_tokens_details=None prompt_token_count=1438 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1438
-)] thoughts_token_count=2177 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4294 traffic_type=None
+)] thoughts_token_count=3426 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5631 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "unsubstituted sample",
+      "raw_composition": "unsubstituted sample (x = 0)",
       "canonical_formula": "Li6PS5Br",
+      "reduced_formula": "Br1Li6P1S5",
       "material_definitions": [
-        "The solid solutions investigated are $\\mathrm{Li}_{6+x}\\mathrm{P}_{1-x}\\mathrm{Si}_x\\mathrm{S}_5\\mathrm{Br}$ argyrodite superionics.",
-        "Ionic conductivity measurements were performed using temperature-dependent impedance spectroscopy.",
-        "The materials involve aliovalent substitution of $\\mathrm{P}^{5+}$ by $\\mathrm{Si}^{4+}$ to optimize the ionic conductivity.",
-        "The highest conductivity was observed at $x=0.35$ due to increased $\\mathrm{Li}^{+}$ content."
+        "The study investigates the argyrodite-type solid electrolyte series Li6+xP1-xSixS5Br.",
+        "Ionic conductivity was evaluated using temperature-dependent impedance spectroscopy from 1 MHz down to low frequencies.",
+        "Substitution of P5+ with Si4+ increases the Li+ content and optimizes ionic transport.",
+        "The impedance spectra were fit with an equivalent circuit consisting of a parallel CPE/resistor in series with a CPE.",
+        "Enhanced Li+-Li+ correlation and coulombic repulsion are suggested as reasons for increased conductivity."
       ],
       "raw_conductivity": "0.7",
       "raw_conductivity_unit": "mS cm-1",
       "normalized_conductivity": 0.0007,
       "raw_temperature": "25",
-      "raw_temperature_unit": "C",
+      "raw_temperature_unit": "Celsius",
       "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "source_figure_id": "Fig. 6",
+      "source_caption": "(a) Room temperature conductivity of Li6+xP1-xSixS5Br as a function of Si4+ content.",
       "source": "text",
-      "confidence": "low",
+      "confidence": "high",
       "warnings": [
-        "Raw temperature value (25) and unit (C) are inferred from the descriptor 'room-temperature'."
+        "Temperature value of 25 Celsius was inferred from the term 'room-temperature'."
       ]
     },
     {
       "raw_composition": "Li6.35P0.65Si0.35S5Br",
       "canonical_formula": "Li6.35P0.65Si0.35S5Br",
+      "reduced_formula": "Br1Li6.35P0.65S5Si0.35",
       "material_definitions": [
-        "The solid solutions investigated are $\\mathrm{Li}_{6+x}\\mathrm{P}_{1-x}\\mathrm{Si}_x\\mathrm{S}_5\\mathrm{Br}$ argyrodite superionics.",
-        "Ionic conductivity measurements were performed using temperature-dependent impedance spectroscopy.",
-        "The materials involve aliovalent substitution of $\\mathrm{P}^{5+}$ by $\\mathrm{Si}^{4+}$ to optimize the ionic conductivity.",
-        "The highest conductivity was observed at $x=0.35$ due to increased $\\mathrm{Li}^{+}$ content."
+        "The study investigates the argyrodite-type solid electrolyte series Li6+xP1-xSixS5Br.",
+        "Ionic conductivity was evaluated using temperature-dependent impedance spectroscopy from 1 MHz down to low frequencies.",
+        "Substitution of P5+ with Si4+ increases the Li+ content and optimizes ionic transport.",
+        "The impedance spectra were fit with an equivalent circuit consisting of a parallel CPE/resistor in series with a CPE.",
+        "Enhanced Li+-Li+ correlation and coulombic repulsion are suggested as reasons for increased conductivity."
       ],
       "raw_conductivity": "2.4",
       "raw_conductivity_unit": "mS cm-1",
       "normalized_conductivity": 0.0024,
       "raw_temperature": "25",
-      "raw_temperature_unit": "C",
+      "raw_temperature_unit": "Celsius",
       "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "source_figure_id": "Fig. 6",
+      "source_caption": "(a) Room temperature conductivity of Li6+xP1-xSixS5Br as a function of Si4+ content.",
       "source": "text",
-      "confidence": "low",
+      "confidence": "high",
       "warnings": [
-        "Raw temperature value (25) and unit (C) are inferred from the descriptor 'room-temperature'."
+        "Temperature value of 25 Celsius was inferred from the term 'room-temperature'."
       ]
     }
   ]
 }
 
 
+[DEBUG] 1. Introduction:
+- Response length: 1209 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=274 candidates_tokens_details=None prompt_token_count=1733 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1733
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9867 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6+xP1-xSixS5X","canonical_formula":null,"reduced_formula":null,"material_definitions":["The study investigates aliovalent doping in Li+ conducting argyrodites through the substitution of P5+ with Si4+.","The solid solutions are represented by the general formula Li6+xP1-xSixS5X where X is a halide like Br or Cl.","This substitution increases the Li+ concentration and its occupancy on the transition state for hopping, enhancing transport.","Structural characterization was performed using X-ray and neutron diffraction, while transport properties were measured via electrochemical impedance spectroscopy.","Increasing the Si4+ content leads to an expansion of the unit cell and an enhancement of the ionic conductivity to values exceeding 2 mS cm-1."],"raw_conductivity":"2","raw_conductivity_unit":"mS cm-1","normalized_conductivity":0.002,"raw_temperature":"not specified","raw_temperature_unit":"not specified","normalized_temperature_c":null,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"low","warnings":["Temperature was not explicitly mentioned in the provided text.","The conductivity value was described as 'greater than 2'."]}]}
+
+
 [SCI-FIGURE DEBUG] page_5_figure_5.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "x in Li6+xP1-xSixS5Br",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "sigma_RT / mScm-1",
-        "unit": "mScm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        29,
-        14,
-        964,
-        495
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li6+xP1-xSixS5Br",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        29,
-        505,
-        964,
-        986
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 14
+- Total subplots detected: 2
+- Valid subplots: 1
+- Measurements extracted: 14
+  • a: X=stoichiometry, Y=conductivity
 
 
 [SCI-FIGURE DEBUG] page_4_figure_9.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 T^{-1} / K^{-1}",
-        "unit": "K^{-1}",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "ln(\u03c3T) / ln(K S cm^{-1})",
-        "unit": "K S cm^{-1}",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        30,
-        41,
-        375,
-        968
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        388,
-        41,
-        693,
-        968
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        706,
-        41,
-        996,
-        968
-      ],
-      "label": "c"
-    }
-  ]
+- Total subplots detected: 3
+- Valid subplots: 1
+- Measurements extracted: 36
+  • a: X=temperature_inverse, Y=conductivity
+
+
+[DEBUG] Structural characterization:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1918 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1918
+)] thoughts_token_count=7760 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9688 traffic_type=None
+- chars: {
+  "measurements": []
 }
-- Combined Measurements: 36

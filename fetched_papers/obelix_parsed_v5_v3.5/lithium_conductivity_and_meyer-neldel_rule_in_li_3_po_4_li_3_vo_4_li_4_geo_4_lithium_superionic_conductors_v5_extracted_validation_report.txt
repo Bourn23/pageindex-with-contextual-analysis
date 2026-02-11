@@ -1,0 +1,15 @@
+GT-69      | ✅ MATCH         | Li6.0P0.4V1.6O8.0 simplifies to Li3P0.2V0.8O4, and 1.31e-13 S/cm is approximately 1.7e-13 S/cm at similar temperatures (25C vs 30C).
+GT-70      | ✅ MATCH         | Li6.0V2.0O8.0 simplifies to Li3VO4, and 9.2e-14 S/cm is approximately 1.6e-13 S/cm at similar temperatures (25C vs 30C).
+GT-124     | ✅ MATCH         | Li12.8Ge0.8P3.2O16.0 simplifies to Li3.2Ge0.2P0.8O4, and 1.14e-06 S/cm is approximately 1.3e-06 S/cm at similar temperatures (25C vs 30C).
+GT-125     | ✅ MATCH         | Li12.8Ge0.8V3.2O16.0 simplifies to Li3.2Ge0.2V0.8O4, and 1.9e-05 S/cm is approximately 1.8e-05 S/cm at similar temperatures (25C vs 30C).
+GT-126     | ✅ MATCH         | Li13.6Ge1.6P2.4O16.0 simplifies to Li3.4Ge0.4P0.6O4, and 4.5e-06 S/cm is approximately 4.4e-06 S/cm at similar temperatures (25C vs 30C).
+GT-127     | ✅ MATCH         | Li13.6Ge1.6V2.4O16.0 simplifies to Li3.4Ge0.4V0.6O4, and 8.89e-07 S/cm is approximately 6.3e-07 S/cm at similar temperatures (25C vs 30C).
+GT-128     | ✅ MATCH         | Li14.4Ge2.4P1.6O16.0 simplifies to Li3.6Ge0.6P0.4O4, and 1.1e-05 S/cm matches the extracted value at a similar temperature (25C vs 30C).
+GT-129     | ✅ MATCH         | Li14.4Ge2.4V1.6O16.0 simplifies to Li3.6Ge0.6V0.4O4, and 3.19e-05 S/cm is approximately 3.8e-05 S/cm at similar temperatures (25C vs 30C).
+GT-130     | ✅ MATCH         | Li15.2Ge3.2P0.8O16.0 simplifies to Li3.8Ge0.8P0.2O4, and 1.03e-06 S/cm is approximately 1.5e-06 S/cm at similar temperatures (25C vs 30C).
+GT-131     | ✅ MATCH         | Li15.2Ge3.2V0.8O16.0 simplifies to Li3.8Ge0.8V0.2O4, and 2.71e-06 S/cm is approximately 1.6e-06 S/cm at similar temperatures (25C vs 30C).
+GT-132     | ✅ MATCH         | Li12.0P1.6V2.4O16.0 simplifies to Li3P0.4V0.6O4, and 3.55e-13 S/cm is approximately 5.8e-13 S/cm at similar temperatures (25C vs 30C).
+GT-133     | ✅ MATCH         | Li12.0P2.4V1.6O16.0 simplifies to Li3P0.6V0.4O4, and 3.2e-13 S/cm matches the extracted value at a similar temperature (25C vs 30C).
+GT-134     | ✅ MATCH         | Li12.0P3.2V0.8O16.0 simplifies to Li3P0.8V0.2O4, and 2.05e-13 S/cm is approximately 2.6e-13 S/cm at similar temperatures (25C vs 30C).
+GT-135     | ✅ MATCH         | Li12.0P4.0O16.0 simplifies to Li3PO4, and 1.75e-13 S/cm is approximately 2.7e-13 S/cm at similar temperatures (25C vs 30C).
+GT-136     | ✅ MATCH         | Li16.0Ge4.0O16.0 simplifies to Li4GeO4, and 1.3e-12 S/cm is approximately 1.5e-12 S/cm at similar temperatures (25C vs 30C).

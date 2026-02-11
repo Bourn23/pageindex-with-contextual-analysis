@@ -3,120 +3,43 @@
 --- [Document] ionic_conductivity_of_solid_electrolytes_based_on_lithium_titanium_phosphate.md ---
 
 
-[DEBUG] Yoshihiko Sadaoka:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=269 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=269
-)] thoughts_token_count=55 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=334 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
 [DEBUG] Hiromichi Aono and Eisuke Sugimoto:
 - Response length: 24 chars
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=277 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=277
-)] thoughts_token_count=169 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=456 traffic_type=None
+)] thoughts_token_count=395 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=682 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] Nobuhito Imanaka and Gin-ya Adachi:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=272 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=272 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=272
-)] thoughts_token_count=305 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=587 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Experimental:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=730 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=730
-)] thoughts_token_count=377 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1117 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Conclusion:
-- Response length: 2236 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=679 candidates_tokens_details=None prompt_token_count=585 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=585
-)] thoughts_token_count=1285 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2549 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
-      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
-      "material_definitions": [
-        "The core material is LiTi2(PO4)3, which initially had poor ionic conductivity and high porosity in sintered pellets.",
-        "The partial substitution of the P5+ site with Si4+ or of the Ti4+ site with M3+ in the LiTi2(PO4)3 system was very effective for the enhancement of the conductivity.",
-        "The conductivity enhancement resulted mainly from the densification of the sintered pellets and the increase of the lithium content at the grain boundaries.",
-        "Mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3 is also successful in obtaining high conductivity."
-      ],
-      "raw_conductivity": "7e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.0007,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
-      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
-      "material_definitions": [
-        "The core material is LiTi2(PO4)3, which initially had poor ionic conductivity and high porosity in sintered pellets.",
-        "The partial substitution of the P5+ site with Si4+ or of the Ti4+ site with M3+ in the LiTi2(PO4)3 system was very effective for the enhancement of the conductivity.",
-        "The conductivity enhancement resulted mainly from the densification of the sintered pellets and the increase of the lithium content at the grain boundaries.",
-        "Mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3 is also successful in obtaining high conductivity."
-      ],
-      "raw_conductivity": "7e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.0007,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
+)] thoughts_token_count=467 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=745 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] ABSTRACT:
-- Response length: 2154 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=721 candidates_tokens_details=None prompt_token_count=1265 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 2306 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=737 candidates_tokens_details=None prompt_token_count=1265 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1265
-)] thoughts_token_count=1718 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3704 traffic_type=None
+)] thoughts_token_count=1436 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3438 traffic_type=None
 - chars: {
   "measurements": [
     {
       "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
       "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "reduced_formula": "Al3Li13O120P30Ti17",
       "material_definitions": [
-        "Solid electrolytes based on lithium titanium phosphate (LiTi2(PO4)3) were prepared.",
-        "The samples studied are Li1+xMxTi2-x(PO4)3 (M3+=Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+) and Li1+xTi2SizP3-xO12 systems.",
-        "The conductivity was increased by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with M3+ and Si4+ ions, respectively.",
-        "The main reason for the conductivity enhancement is attributed to the increase of sintered pellet density and enhanced lithium concentration at the grain boundaries."
+        "Solid electrolytes based on lithium titanium phosphate were prepared by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with various M3+ ions and Si4+ ions.",
+        "The investigated systems include Li1+xTi2SixP3-xO12 and Li1+xMxTi2-x(PO4)3 where M includes Al, Cr, Ga, Fe, Sc, In, Lu, Y, and La.",
+        "The materials were prepared as sintered pellets to examine phase, porosity, and electrical conductivity.",
+        "The main reason for conductivity enhancement is attributed to increased sintered pellet density and lithium concentration at grain boundaries."
       ],
       "raw_conductivity": "7e-4",
       "raw_conductivity_unit": "S cm-1",
@@ -133,11 +56,12 @@
     {
       "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
       "canonical_formula": "Li1.3Sc0.3Ti1.7P3O12",
+      "reduced_formula": "Li13O120P30Sc3Ti17",
       "material_definitions": [
-        "Solid electrolytes based on lithium titanium phosphate (LiTi2(PO4)3) were prepared.",
-        "The samples studied are Li1+xMxTi2-x(PO4)3 (M3+=Al3+, Cr3+, Ga3+, Fe3+, Sc3+, In3+, Lu3+, Y3+, and La3+) and Li1+xTi2SizP3-xO12 systems.",
-        "The conductivity was increased by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with M3+ and Si4+ ions, respectively.",
-        "The main reason for the conductivity enhancement is attributed to the increase of sintered pellet density and enhanced lithium concentration at the grain boundaries."
+        "Solid electrolytes based on lithium titanium phosphate were prepared by partially replacing Ti4+ and P5+ in LiTi2(PO4)3 with various M3+ ions and Si4+ ions.",
+        "The investigated systems include Li1+xTi2SixP3-xO12 and Li1+xMxTi2-x(PO4)3 where M includes Al, Cr, Ga, Fe, Sc, In, Lu, Y, and La.",
+        "The materials were prepared as sintered pellets to examine phase, porosity, and electrical conductivity.",
+        "The main reason for conductivity enhancement is attributed to increased sintered pellet density and lithium concentration at grain boundaries."
       ],
       "raw_conductivity": "7e-4",
       "raw_conductivity_unit": "S cm-1",
@@ -155,262 +79,123 @@
 }
 
 
-[SCI-FIGURE DEBUG] page_1_figure_7.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "c / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        24,
-        112,
-        510,
-        942
-      ],
-      "label": "top"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "a / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        510,
-        112,
-        976,
-        942
-      ],
-      "label": "bottom"
-    }
-  ]
-}
-- Combined Measurements: 0
+[DEBUG] Yoshihiko Sadaoka:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=269 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=269
+)] thoughts_token_count=1971 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2246 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Conclusion:
+- Response length: 2038 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=565 candidates_tokens_details=None prompt_token_count=585 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=585
+)] thoughts_token_count=3792 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4942 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li1.3Al0.3Ti1.7(PO4)3","canonical_formula":"Li1.3Al0.3Ti1.7(PO4)3","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["LiTi2(PO4)3 had poor ionic conductivity and showed high porosity in the sintered pellets.","The partial substitution of the P5+ site with Si4+ or of the Ti4+ site with M3+ in the LiTi2(PO4)3 system was very effective for the enhancement of the conductivity.","Mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3 is also successful in obtaining a high conductivity lithium ionic conductor.","The conductivity enhancement by the substitution or the binder addition resulted mainly from the densification of the sintered pellets.","The increase of the lithium content at the grain boundaries is also effective in the conductivity enhancement."],"raw_conductivity":"7e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0007,"raw_temperature":"298","raw_temperature_unit":"K","normalized_temperature_c":24.85,"source":"text","confidence":"high"},{"raw_composition":"Li1.3Sc0.3Ti1.7(PO4)3","canonical_formula":"Li1.3Sc0.3Ti1.7(PO4)3","reduced_formula":"Li13O120P30Sc3Ti17","material_definitions":["LiTi2(PO4)3 had poor ionic conductivity and showed high porosity in the sintered pellets.","The partial substitution of the P5+ site with Si4+ or of the Ti4+ site with M3+ in the LiTi2(PO4)3 system was very effective for the enhancement of the conductivity.","Mixing binders such as Li2O or Li4P2O7 with LiTi2(PO4)3 is also successful in obtaining a high conductivity lithium ionic conductor.","The conductivity enhancement by the substitution or the binder addition resulted mainly from the densification of the sintered pellets.","The increase of the lithium content at the grain boundaries is also effective in the conductivity enhancement."],"raw_conductivity":"7e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0007,"raw_temperature":"298","raw_temperature_unit":"K","normalized_temperature_c":24.85,"source":"text","confidence":"high"}]}
 
 
 [DEBUG] **Results and Discussion**:
-- Response length: 2765 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=877
-)] cached_content_token_count=877 candidates_token_count=940 candidates_tokens_details=None prompt_token_count=6359 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 4309 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1390 candidates_tokens_details=None prompt_token_count=6359 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=6359
-)] thoughts_token_count=3143 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10442 traffic_type=None
+)] thoughts_token_count=4856 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=12605 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "x=0.3 in Li(1+x)Ti2SixP(3-x)O12",
+      "raw_composition": "Li1+xTi2SixP3-xO12 (x=0.3)",
       "canonical_formula": "Li1.3Ti2Si0.3P2.7O12",
+      "reduced_formula": "Li13O120P27Si3Ti20",
       "material_definitions": [
-        "The solid electrolytes Li(1+x)Ti2SixP(3-x)O12 are based on the LiTi2(PO4)3 structure.",
-        "The sintering of the samples was conducted at 1473 K for 2h.",
-        "The Si4+ substitution for P5+ greatly enhances conductivity and reduces porosity.",
-        "The maximum conductivity was obtained at x = 0.3."
+        "Mixed phosphates of the type A(I)B(IV)2(PO4)3, where A can be Li, Na, or K and B can be Ge, Ti, Hf, or Zr, feature a three-dimensional network of BO6 octahedra and PO4 tetrahedra.",
+        "The LiTi2(PO4)3-based solid electrolytes prepared in this study exhibit a rhombohedral crystal structure with the R-3c space group.",
+        "Samples in the Li1+xTi2SixP3-xO12 system were synthesized and sintered at 1473 K for 2 hours, resulting in significantly enhanced conductivity and decreased porosity at x = 0.3.",
+        "The Li1+xMxTi2-x(PO4)3 systems were explored by substituting Ti4+ with various trivalent cations (Al, Cr, Ga, Fe, Sc, In, Lu, Y, La), where single-phase rhombohedral structures are generally formed for smaller ions.",
+        "Sintering properties and density were improved by adding binders like Li2CO3 or (NH4)2HPO4, which decompose into a glassy second phase at the grain boundaries during heat treatment."
       ],
-      "raw_conductivity": "3.2e-4",
-      "raw_conductivity_unit": "S cm-1",
+      "raw_conductivity": "3.2 x 10^-4",
+      "raw_conductivity_unit": "S cm^-1",
       "normalized_conductivity": 0.00032,
       "raw_temperature": "298",
       "raw_temperature_unit": "K",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_temperature_c": 24.85,
       "source": "text",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3",
-      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Al0.3Ti1.7P3O12",
+      "reduced_formula": "Al3Li13O120P30Ti17",
       "material_definitions": [
-        "The Li(1+x)MxTi(2-x)(PO4)3 systems are solid solutions where Ti4+ is partially substituted by trivalent ions (M3+).",
-        "M=Al is part of the single-phase systems where M3+ replaces Ti4+ sites.",
-        "The sample was likely sintered at 1473 K based on general preparation methods for this series.",
-        "This composition (x=0.3, M=Al) showed the maximum conductivity for M3+ substitution systems."
+        "Mixed phosphates of the type A(I)B(IV)2(PO4)3, where A can be Li, Na, or K and B can be Ge, Ti, Hf, or Zr, feature a three-dimensional network of BO6 octahedra and PO4 tetrahedra.",
+        "The LiTi2(PO4)3-based solid electrolytes prepared in this study exhibit a rhombohedral crystal structure with the R-3c space group.",
+        "Samples in the Li1+xTi2SixP3-xO12 system were synthesized and sintered at 1473 K for 2 hours, resulting in significantly enhanced conductivity and decreased porosity at x = 0.3.",
+        "The Li1+xMxTi2-x(PO4)3 systems were explored by substituting Ti4+ with various trivalent cations (Al, Cr, Ga, Fe, Sc, In, Lu, Y, La), where single-phase rhombohedral structures are generally formed for smaller ions.",
+        "Sintering properties and density were improved by adding binders like Li2CO3 or (NH4)2HPO4, which decompose into a glassy second phase at the grain boundaries during heat treatment."
       ],
-      "raw_conductivity": "7e-4",
-      "raw_conductivity_unit": "S cm-1",
+      "raw_conductivity": "7 x 10^-4",
+      "raw_conductivity_unit": "S cm^-1",
       "normalized_conductivity": 0.0007,
       "raw_temperature": "298",
       "raw_temperature_unit": "K",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_temperature_c": 24.85,
       "source": "text",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.3Sc0.3Ti1.7(PO4)3",
-      "canonical_formula": "Li1.3Sc0.3Ti1.7(PO4)3",
+      "canonical_formula": "Li1.3Sc0.3Ti1.7P3O12",
+      "reduced_formula": "Li13O120P30Sc3Ti17",
       "material_definitions": [
-        "The Li(1+x)MxTi(2-x)(PO4)3 systems are solid solutions where Ti4+ is partially substituted by trivalent ions (M3+).",
-        "M=Sc is part of the single-phase systems where M3+ replaces Ti4+ sites.",
-        "This composition (x=0.3, M=Sc) showed the maximum conductivity for M3+ substitution systems.",
-        "The sintered pellet of this sample had a low porosity (2.0%) and appreciably larger grain size compared to LiTi2(PO4)3."
+        "Mixed phosphates of the type A(I)B(IV)2(PO4)3, where A can be Li, Na, or K and B can be Ge, Ti, Hf, or Zr, feature a three-dimensional network of BO6 octahedra and PO4 tetrahedra.",
+        "The LiTi2(PO4)3-based solid electrolytes prepared in this study exhibit a rhombohedral crystal structure with the R-3c space group.",
+        "Samples in the Li1+xTi2SixP3-xO12 system were synthesized and sintered at 1473 K for 2 hours, resulting in significantly enhanced conductivity and decreased porosity at x = 0.3.",
+        "The Li1+xMxTi2-x(PO4)3 systems were explored by substituting Ti4+ with various trivalent cations (Al, Cr, Ga, Fe, Sc, In, Lu, Y, La), where single-phase rhombohedral structures are generally formed for smaller ions.",
+        "Sintering properties and density were improved by adding binders like Li2CO3 or (NH4)2HPO4, which decompose into a glassy second phase at the grain boundaries during heat treatment."
       ],
-      "raw_conductivity": "7e-4",
-      "raw_conductivity_unit": "S cm-1",
+      "raw_conductivity": "7 x 10^-4",
+      "raw_conductivity_unit": "S cm^-1",
       "normalized_conductivity": 0.0007,
       "raw_temperature": "298",
       "raw_temperature_unit": "K",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_temperature_c": 24.85,
       "source": "text",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     }
   ]
 }
 
 
-[SCI-FIGURE DEBUG] page_2_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Ionic radius / \u0085",
-        "unit": "\u0085",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "c / \u0085",
-        "unit": "\u0085",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        38,
-        79,
-        513,
-        916
-      ],
-      "label": "top"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Ionic radius / \u0085",
-        "unit": "\u0085",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "a / \u0085",
-        "unit": "\u0085",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        513,
-        79,
-        981,
-        916
-      ],
-      "label": "bottom"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[TABLE DEBUG] Unknown: No caption found:
-- Response: {
+[DEBUG] Experimental:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=730 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=730
+)] thoughts_token_count=6332 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7072 traffic_type=None
+- chars: {
   "measurements": []
 }
 
 
-[SCI-FIGURE DEBUG] page_3_figure_7.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "Porosity / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Log ( \u03c3 / S cm\u207b\u00b9 )",
-        "unit": "S cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        25,
-        45,
-        970,
-        960
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 17
-
-
 [SCI-FIGURE DEBUG] page_2_figure_11.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Log (\u0301\u0311 / S\"cm^-1)",
-        "unit": "S\"cm^-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        43,
-        76,
-        965,
-        959
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 35
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 35
+  • main: X=stoichiometry, Y=conductivity
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[]}
+
+
+[SCI-FIGURE DEBUG] page_3_figure_2.jpeg:
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 32
+  • main: X=temperature_inverse, Y=conductivity
 
 
 [TABLE DEBUG] Unknown: No caption found:
@@ -418,324 +203,289 @@
   "measurements": [
     {
       "raw_composition": "LiTi2(PO4)3",
-      "canonical_formula": "LiTi2(PO4)3",
-      "material_definitions": [],
-      "raw_conductivity": "$2.0 \\times 10^{-6}$",
+      "canonical_formula": "LiTi2P3O12",
+      "reduced_formula": "Li1P3O12Ti2",
+      "material_definitions": [
+        "The samples belong to the Li1+xTi2SixP3-xO12 (0 ≤ x ≤ 0.5) solid solution series.",
+        "These materials are NASICON-type lithium ion conductors.",
+        "The substitution of P5+ by Si4+ is compensated by the addition of Li+ ions.",
+        "The lattice constants a and c vary with the silicon content.",
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.0 x 10^-6",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2.0e-6,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_conductivity": 2e-06,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
       "source": "table",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.2Ti2Si0.2P2.8O12",
       "canonical_formula": "Li1.2Ti2Si0.2P2.8O12",
-      "material_definitions": [],
-      "raw_conductivity": "$8.6 \\times 10^{-5}$",
+      "reduced_formula": "Li6O60P14Si1Ti10",
+      "material_definitions": [
+        "The samples belong to the Li1+xTi2SixP3-xO12 (0 ≤ x ≤ 0.5) solid solution series.",
+        "These materials are NASICON-type lithium ion conductors.",
+        "The substitution of P5+ by Si4+ is compensated by the addition of Li+ ions.",
+        "The lattice constants a and c vary with the silicon content.",
+        "total conductivity"
+      ],
+      "raw_conductivity": "8.6 x 10^-5",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 8.6e-5,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_conductivity": 8.6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
       "source": "table",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.3Ti2Si0.3P2.7O12",
       "canonical_formula": "Li1.3Ti2Si0.3P2.7O12",
-      "material_definitions": [],
-      "raw_conductivity": "$3.2 \\times 10^{-4}$",
+      "reduced_formula": "Li13O120P27Si3Ti20",
+      "material_definitions": [
+        "The samples belong to the Li1+xTi2SixP3-xO12 (0 ≤ x ≤ 0.5) solid solution series.",
+        "These materials are NASICON-type lithium ion conductors.",
+        "The substitution of P5+ by Si4+ is compensated by the addition of Li+ ions.",
+        "The lattice constants a and c vary with the silicon content.",
+        "total conductivity"
+      ],
+      "raw_conductivity": "3.2 x 10^-4",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 3.2e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_conductivity": 0.00032,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
       "source": "table",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.4Ti2Si0.4P2.6O12",
       "canonical_formula": "Li1.4Ti2Si0.4P2.6O12",
-      "material_definitions": [],
-      "raw_conductivity": "$1.5 \\times 10^{-4}$",
+      "reduced_formula": "Li7O60P13Si2Ti10",
+      "material_definitions": [
+        "The samples belong to the Li1+xTi2SixP3-xO12 (0 ≤ x ≤ 0.5) solid solution series.",
+        "These materials are NASICON-type lithium ion conductors.",
+        "The substitution of P5+ by Si4+ is compensated by the addition of Li+ ions.",
+        "The lattice constants a and c vary with the silicon content.",
+        "total conductivity"
+      ],
+      "raw_conductivity": "1.5 x 10^-4",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 1.5e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
+      "normalized_conductivity": 0.00015,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
       "source": "table",
-      "confidence": "high",
-      "warnings": []
+      "confidence": "high"
     },
     {
       "raw_composition": "Li1.5Ti2Si0.5P2.5O12",
       "canonical_formula": "Li1.5Ti2Si0.5P2.5O12",
-      "material_definitions": [],
-      "raw_conductivity": "$9.6 \\times 10^{-5}$",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 9.6e-5,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
-[TABLE DEBUG] Unknown: No caption found:
-- Response: {
-  "measurements": [
-    {
-      "raw_composition": "LiTi_2(PO_4)_3",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "2.0 \times 10^{-6}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2.0e-6,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LiTi_2(PO_4)_3 + 0.2 Li_2O",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "2.4 \times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2.4e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LiTi_2(PO_4)_3 + 0.3Li_2O",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "3.6 \times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 3.6e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LiTi_2(PO_4)_3 + 0.4Li_2O",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "1.3 \times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 1.3e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3 + 0.3Li_2O",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "3.5\times10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 3.5e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LiTi_2(PO_4)_3 + 0.1Li_4P_2O_7",
-      "canonical_formula": null,
-      "material_definitions": [],
-      "raw_conductivity": "1.6 \times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 1.6e-4,
-      "raw_temperature": "298",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 24.85,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_3_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 / T/K",
-        "unit": "K",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "Log (sigma / S\u00b7cm\u207b\u00b9)",
-        "unit": "S\u00b7cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        38,
-        45,
-        963,
-        975
+      "reduced_formula": "Li3O24P5Si1Ti4",
+      "material_definitions": [
+        "The samples belong to the Li1+xTi2SixP3-xO12 (0 ≤ x ≤ 0.5) solid solution series.",
+        "These materials are NASICON-type lithium ion conductors.",
+        "The substitution of P5+ by Si4+ is compensated by the addition of Li+ ions.",
+        "The lattice constants a and c vary with the silicon content.",
+        "total conductivity"
       ],
-      "label": "main"
+      "raw_conductivity": "9.6 x 10^-5",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 9.6e-05,
+      "raw_temperature": "room temperature",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25,
+      "source": "table",
+      "confidence": "high"
     }
   ]
 }
-- Combined Measurements: 26
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["bulk"],"raw_conductivity":"1e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0001,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["grain boundary"],"raw_conductivity":"2e-6","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.000002,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["bulk"],"raw_conductivity":"3e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.003,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["grain boundary"],"raw_conductivity":"9e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0009,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3 + 0.3Li_2O}$","canonical_formula":"Li1.6Ti2P3O12.3","reduced_formula":"Li16O123P30Ti20","material_definitions":["bulk"],"raw_conductivity":"1.5e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0015,"raw_temperature":"room temperature","raw_temperature
 
 
 [TABLE DEBUG] Unknown: No caption found:
 - Response: {
   "measurements": [
     {
-      "raw_composition": "LiTi2(PO4)3 (Bulk conductivity)",
-      "canonical_formula": "LiTi2(PO4)3",
-      "raw_conductivity": "1 \\times 10^{-4}",
+      "raw_composition": "$LiTi_2(PO_4)_3$",
+      "canonical_formula": "LiTi2P3O12",
+      "reduced_formula": "Li1P3O12Ti2",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.0 \\times 10^{-6}",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.0001,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
+      "normalized_conductivity": 2e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "table",
-      "confidence": "high"
+      "confidence": "high",
+      "warnings": []
     },
     {
-      "raw_composition": "LiTi2(PO4)3 (Grain boundary conductivity)",
-      "canonical_formula": "LiTi2(PO4)3",
-      "raw_conductivity": "2 \\times 10^{-6}",
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.2 Li_2O$",
+      "canonical_formula": "Li1.4Ti2P3O12.2",
+      "reduced_formula": "Li7O61P15Ti10",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.4 \\times 10^{-4}",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2e-6,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
+      "normalized_conductivity": 0.00024,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "table",
-      "confidence": "high"
+      "confidence": "high",
+      "warnings": []
     },
     {
-      "raw_composition": "LiTi2(PO4)3 (Total conductivity)",
-      "canonical_formula": "LiTi2(PO4)3",
-      "raw_conductivity": "2 \\times 10^{-6}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 2e-6,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (Bulk conductivity)",
-      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
-      "raw_conductivity": "3 \\times 10^{-3}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.003,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (Grain boundary conductivity)",
-      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
-      "raw_conductivity": "9 \\times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 9e-4,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "Li1.3Al0.3Ti1.7(PO4)3 (Total conductivity)",
-      "canonical_formula": "Li1.3Al0.3Ti1.7(PO4)3",
-      "raw_conductivity": "7 \\times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 7e-4,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "LiTi2(PO4)3 + 0.3Li2O (Bulk conductivity)",
-      "canonical_formula": "LiTi2(PO4)3 + 0.3Li2O",
-      "raw_conductivity": "1.5 \\times 10^{-3}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.0015,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "LiTi2(PO4)3 + 0.3Li2O (Grain boundary conductivity)",
-      "canonical_formula": "LiTi2(PO4)3 + 0.3Li2O",
-      "raw_conductivity": "5 \\times 10^{-4}",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 5e-4,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
-      "source": "table",
-      "confidence": "high"
-    },
-    {
-      "raw_composition": "LiTi2(PO4)3 + 0.3Li2O (Total conductivity)",
-      "canonical_formula": "LiTi2(PO4)3 + 0.3Li2O",
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.3Li_2O$",
+      "canonical_formula": "Li1.6Ti2P3O12.3",
+      "reduced_formula": "Li16O123P30Ti20",
+      "material_definitions": [
+        "total conductivity"
+      ],
       "raw_conductivity": "3.6 \\times 10^{-4}",
       "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 3.6e-4,
-      "raw_temperature": "room temperature",
-      "raw_temperature_unit": "unspecified",
+      "normalized_conductivity": 0.00036,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["bulk"],"raw_conductivity":"1e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0001,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["grain boundary"],"raw_conductivity":"2e-6","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.000002,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["bulk"],"raw_conductivity":"3e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.003,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["grain boundary"],"raw_conductivity":"9e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0009,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3 + 0.3Li_2O}$","canonical_formula":"Li1.6Ti2P3O12.3","reduced_formula":"Li16O123P30Ti20","material_definitions":["bulk"],"raw_conductivity":"1.5e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0015,"raw_temperature":"room temperature","raw_temperature
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {
+  "measurements": [
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3$",
+      "canonical_formula": "LiTi2P3O12",
+      "reduced_formula": "Li1P3O12Ti2",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.0 \\times 10^{-6}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "table",
-      "confidence": "high"
-    }
-  ]
-}
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.2 Li_2O$",
+      "canonical_formula": "Li1.4Ti2P3O12.2",
+      "reduced_formula": "Li7O61P15Ti10",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.4 \\times 10^{-4}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00024,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.3Li_2O$",
+      "canonical_formula": "Li1.6Ti2P3O12.3",
+      "reduced_formula": "Li16O123P30Ti20",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "3.6 \\times 10^{-4}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00036,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["bulk"],"raw_conductivity":"1e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0001,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3}$","canonical_formula":"LiTi2P3O12","reduced_formula":"Li1P3O12Ti2","material_definitions":["grain boundary"],"raw_conductivity":"2e-6","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.000002,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["bulk"],"raw_conductivity":"3e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.003,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{Li_{1.3}Al_{0.3}Ti_{1.7}(PO_4)_3}$","canonical_formula":"Li1.3Al0.3Ti1.7P3O12","reduced_formula":"Al3Li13O120P30Ti17","material_definitions":["grain boundary"],"raw_conductivity":"9e-4","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0009,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"markdown_table","confidence":"high"},{"raw_composition":"$\\mathrm{LiTi_2(PO_4)_3 + 0.3Li_2O}$","canonical_formula":"Li1.6Ti2P3O12.3","reduced_formula":"Li16O123P30Ti20","material_definitions":["bulk"],"raw_conductivity":"1.5e-3","raw_conductivity_unit":"S cm-1","normalized_conductivity":0.0015,"raw_temperature":"room temperature","raw_temperature
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {
+  "measurements": [
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3$",
+      "canonical_formula": "LiTi2P3O12",
+      "reduced_formula": "Li1P3O12Ti2",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.0 \\times 10^{-6}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 2e-06,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.2 Li_2O$",
+      "canonical_formula": "Li1.4Ti2P3O12.2",
+      "reduced_formula": "Li7O61P15Ti10",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "2.4 \\times 10^{-4}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00024,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "table",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "$LiTi_2(PO_4)_3 + 0.3Li_2O$",
+      "canonical_formula": "Li1.6Ti2P3O12.3",
+      "reduced_formula": "Li16O123P30Ti20",
+      "material_definitions": [
+        "total conductivity"
+      ],
+      "raw_conductivity": "3.6 \\times 10^{-4}",
+      "raw_conductivity_unit": "S cm-1",
+      "normalized_conductivity": 0.00036,
+      "raw_temperature": "298",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 24.85,
+      "source_figure_id": null,
+      "source_caption": null,

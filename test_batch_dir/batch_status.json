@@ -1,0 +1,24 @@
+{
+  "paper_fail_1": {
+    "status": "failed",
+    "last_run": "2026-02-11T10:07:45.981615",
+    "duration_seconds": 0.008598,
+    "exit_code": 1,
+    "log_file": "See /Users/bourn23/Downloads/general/PageIndex/test_batch_dir/paper_fail_1/...log",
+    "error_preview": "Simulating failure for paper_fail_1"
+  },
+  "paper_pass_1": {
+    "status": "completed",
+    "last_run": "2026-02-11T09:58:14.137965",
+    "duration_seconds": 0.005543,
+    "exit_code": 0,
+    "log_file": "See /Users/bourn23/Downloads/general/PageIndex/test_batch_dir/paper_pass_1/...log"
+  },
+  "paper_pass_2": {
+    "status": "completed",
+    "last_run": "2026-02-11T09:58:14.144329",
+    "duration_seconds": 0.005944,
+    "exit_code": 0,
+    "log_file": "See /Users/bourn23/Downloads/general/PageIndex/test_batch_dir/paper_pass_2/...log"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "patterns_missed": [
+    {
+      "pattern": "Data from graphical plots is systematically missed.",
+      "examples": [
+        "Li7.8Al1.8Ti10.2P18.0O72.0 | 0.000722 S/cm @ Room Temp",
+        "Li9.0Cr3.0Ti9.0P18.0O72.0 | 0.000386 S/cm @ Room Temp",
+        "Li7.8Sc1.8Ti10.2P18.0O72.0 | 0.000703 S/cm @ Room Temp"
+      ],
+      "source": "Figure 6, a plot of log-conductivity vs. composition, which contains the majority of the ground truth data points.",
+      "root_cause": "The extraction pipeline lacks a module for digitizing plots and extracting data points from graphical formats. It appears to be limited to text and table extraction, while the critical data is presented visually in a chart.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Failure to convert logarithmic conductivity values to a linear scale.",
+      "examples": [
+        "Sc (x=0.31) | -3.08 Log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+        "Al (x=0.3) | -3.1 Log (\u03c3 / S\u00b7cm\u207b\u00b9)",
+        "Fe (x=0.41) | -3.38 Log (\u03c3 / S\u00b7cm\u207b\u00b9)"
+      ],
+      "source": "The y-axis label of Figure 6, 'Log (\u03c3 / S\u00b7cm-1)', was not correctly interpreted as a mathematical transformation. The extracted data shows the log value was captured but not processed.",
+      "root_cause": "The value and unit normalization engine does not recognize or process mathematical functions like 'Log()'. It treats the entire axis label as a literal unit string instead of applying an inverse power function (10^x) to the numeric value.",
+      "prevalence": "frequent"
+    },
+    {
+      "pattern": "Failure to resolve and normalize parametric chemical formulas.",
+      "examples": [
+        "Ground Truth: Li7.8Al1.8Ti10.2P18.0O72.0 vs. Extracted: Al (x=0.3)",
+        "Ground Truth: Li7.2Si1.2P16.8O72.0 vs. Extracted: Li1.2Ti2Si0.2P2.8O12"
+      ],
+      "source": "The base formula 'Li1+xMxTi2-x(PO4)3' is defined in the text and figure captions. The pipeline failed to link the extracted variables (M and x) from Figure 6 to this base formula and perform the necessary normalization (multiplying by 6 to get O72).",
+      "root_cause": "Lack of contextual entity linking. The system extracts variables (dopant M, fraction x) and the base formula as disconnected pieces of information, without the capability to substitute the variables into the formula to generate the final, normalized composition.",
+      "prevalence": "frequent"
+    }
+  ],
+  "generic_suggestions": [
+    "Implement a robust plot digitization module to automatically extract data points from scientific figures, including reading axis scales (linear/log), labels, and legends.",
+    "Enhance the value normalization engine to parse and apply inverse mathematical functions found in unit strings, such as converting 'Log(\u03c3)' values by applying 10^x.",
+    "Develop a context-aware entity resolution module that can identify parametric chemical formulas, link them to their corresponding variables in nearby text, tables, or figures, and programmatically generate the fully resolved compositions.",
+    "Add a post-processing step for chemical formula normalization to a consistent stoichiometric basis (e.g., fixed number of anions) to ensure data uniformity and comparability."
+  ]
+}

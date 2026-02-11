@@ -1,0 +1,11 @@
+GT-417     | ✅ MATCH         | Li24.0P4.0S20.0I4.0 simplifies to Li6PS5I, and the extracted conductivity 1.3e-06 S/cm is an approximate match for 1.26e-06 S/cm (3.17% difference) at room temperature.
+GT-418     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.1P0.9Ge0.1S5I at room temperature.
+GT-419     | ❌ MISSING/BAD   | Li24.6P3.4Ge0.6S20.0I4.0 simplifies to Li6.15P0.85Ge0.15S5I, but the extracted conductivity 5.1e-05 S/cm is not an approximate match for 3.93e-05 S/cm (29.7% difference).
+GT-420     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.2P0.8Ge0.2S5I at room temperature.
+GT-421     | ❌ MISSING/BAD   | Li25.0P3.0Ge1.0S20.0I4.0 simplifies to Li6.25P0.75Ge0.25S5I, but the extracted conductivity 0.0039 S/cm is not an approximate match for 0.00015 S/cm (2500% difference).
+GT-422     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.3P0.7Ge0.3S5I at room temperature.
+GT-423     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.4P0.6Ge0.4S5I at room temperature.
+GT-424     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.5P0.5Ge0.5S5I at room temperature.
+GT-425     | ✅ MATCH         | Li26.4P1.6Ge2.4S20.0I4.0 simplifies to Li6.6P0.4Ge0.6S5I, and the extracted conductivity 0.0054 S/cm is an approximate match for 0.00521 S/cm (3.6% difference) at room temperature.
+GT-426     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.7P0.3Ge0.7S5I at room temperature.
+GT-427     | ❌ MISSING/BAD   | The extracted data does not contain an exact match for the composition Li6.8P0.2Ge0.8S5I at room temperature.

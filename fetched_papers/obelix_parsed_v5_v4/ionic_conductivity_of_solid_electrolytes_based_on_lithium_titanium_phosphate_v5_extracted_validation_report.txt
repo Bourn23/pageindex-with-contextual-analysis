@@ -1,0 +1,30 @@
+GT-235     | ✅ MATCH         | Formula Li6.0Ti12.0P18.0O72.0 simplifies to LiTi2(PO4)3, and conductivity 2e-06 S/cm matches exactly with the extracted value from the table.
+GT-242     | ✅ MATCH         | Formula Li7.2Ti12.0Si1.2P16.8O72.0 simplifies to Li1.2Ti2Si0.2P2.8O12, and conductivity 8.6e-05 S/cm matches exactly with the extracted value from the table.
+GT-243     | ✅ MATCH         | Formula Li7.8Ti12.0Si1.8P16.2O72.0 simplifies to Li1.3Ti2Si0.3P2.7O12, and conductivity 0.00032 S/cm matches exactly with extracted values from both table and text.
+GT-244     | ✅ MATCH         | Formula Li7.2Al1.2Ti10.8P18.0O72.0 simplifies to Li1.2Al0.2Ti1.8(PO4)3, and conductivity 0.000595 S/cm is approximately 0.000562 S/cm (5.5% difference).
+GT-245     | ✅ MATCH         | Formula Li7.8Al1.8Ti10.2P18.0O72.0 simplifies to Li1.3Al0.3Ti1.7(PO4)3, and conductivity 0.000722 S/cm is approximately 0.000724 S/cm (0.3% difference).
+GT-246     | ✅ MATCH         | Formula Li8.4Al2.4Ti9.6P18.0O72.0 simplifies to Li1.4Al0.4Ti1.6(PO4)3, and conductivity 0.000388 S/cm is approximately 0.000355 S/cm (8.7% difference).
+GT-247     | ✅ MATCH         | Formula Li9.0Al3.0Ti9.0P18.0O72.0 simplifies to Li1.5Al0.5Ti1.5(PO4)3, and conductivity 0.000248 S/cm is approximately 0.000224 S/cm (9.6% difference).
+GT-248     | ✅ MATCH         | Formula Li7.2Cr1.2Ti10.8P18.0O72.0 simplifies to Li1.2Cr0.2Ti1.8(PO4)3, and conductivity 1.82e-05 S/cm is approximately 1.995e-05 S/cm (9.6% difference).
+GT-249     | ✅ MATCH         | Formula Li7.8Cr1.8Ti10.2P18.0O72.0 simplifies to Li1.3Cr0.3Ti1.7(PO4)3, and conductivity 3.51e-05 S/cm is approximately 3.802e-05 S/cm (8.3% difference).
+GT-250     | ✅ MATCH         | Formula Li8.4Cr2.4Ti9.6P18.0O72.0 simplifies to Li1.4Cr0.4Ti1.6(PO4)3, and conductivity 0.000149 S/cm is approximately 0.0001445 S/cm (3.0% difference).
+GT-251     | ✅ MATCH         | Formula Li9.0Cr3.0Ti9.0P18.0O72.0 simplifies to Li1.5Cr0.5Ti1.5(PO4)3, and conductivity 0.000386 S/cm is approximately 0.000355 S/cm (8.0% difference).
+GT-252     | ✅ MATCH         | Formula Li7.2Ga1.2Ti10.8P18.0O72.0 simplifies to Li1.2Ga0.2Ti1.8(PO4)3, and conductivity 0.000162 S/cm is approximately 0.0001738 S/cm (7.3% difference).
+GT-253     | ✅ MATCH         | Formula Li7.8Ga1.8Ti10.2P18.0O72.0 simplifies to Li1.3Ga0.3Ti1.7(PO4)3, and conductivity 0.000261 S/cm is approximately 0.0002399 S/cm (8.1% difference).
+GT-254     | ✅ MATCH         | Formula Li8.4Ga2.4Ti9.6P18.0O72.0 simplifies to Li1.4Ga0.4Ti1.6(PO4)3, and conductivity 0.000128 S/cm is approximately 0.0001318 S/cm (3.0% difference).
+GT-255     | ✅ MATCH         | Formula Li9.0Ga3.0Ti9.0P18.0O72.0 simplifies to Li1.5Ga0.5Ti1.5(PO4)3, and conductivity 0.000122 S/cm is approximately 0.0001096 S/cm (10.2% difference).
+GT-256     | ✅ MATCH         | Formula Li7.2Fe1.2Ti10.8P18.0O72.0 simplifies to Li1.2Fe0.2Ti1.8(PO4)3, and conductivity 0.00018 S/cm is approximately 0.0001905 S/cm (5.8% difference).
+GT-257     | ✅ MATCH         | Formula Li7.8Fe1.8Ti10.2P18.0O72.0 simplifies to Li1.3Fe0.3Ti1.7(PO4)3, and conductivity 0.000246 S/cm is approximately 0.0002818 S/cm (14.6% difference).
+GT-258     | ✅ MATCH         | Formula Li8.4Fe2.4Ti9.6P18.0O72.0 simplifies to Li1.4Fe0.4Ti1.6(PO4)3, and conductivity 0.000392 S/cm is approximately 0.0003631 S/cm (7.5% difference).
+GT-259     | ✅ MATCH         | Formula Li9.0Fe3.0Ti9.0P18.0O72.0 simplifies to Li1.5Fe0.5Ti1.5(PO4)3, and conductivity 0.000174 S/cm is approximately 0.0001995 S/cm (14.7% difference).
+GT-260     | ✅ MATCH         | Formula Li7.2Sc1.2Ti10.8P18.0O72.0 simplifies to Li1.2Sc0.2Ti1.8(PO4)3, and conductivity 0.00069 S/cm is approximately 0.0007079 S/cm (2.6% difference).
+GT-261     | ✅ MATCH         | Formula Li7.8Sc1.8Ti10.2P18.0O72.0 simplifies to Li1.3Sc0.3Ti1.7(PO4)3, and conductivity 0.000703 S/cm is approximately 0.0007244 S/cm (3.0% difference).
+GT-262     | ✅ MATCH         | Formula Li8.4Sc2.4Ti9.6P18.0O72.0 simplifies to Li1.4Sc0.4Ti1.6(PO4)3, and conductivity 0.000515 S/cm is approximately 0.0004786 S/cm (7.1% difference).
+GT-263     | ✅ MATCH         | Formula Li7.2In1.2Ti10.8P18.0O72.0 simplifies to Li1.2In0.2Ti1.8(PO4)3, and conductivity 0.00039 S/cm is approximately 0.0003548 S/cm (9.0% difference).
+GT-264     | ❌ MISSING/BAD   | Formula Li7.8In1.8Ti10.2P18.0O72.0 simplifies to Li1.3In0.3Ti1.7(PO4)3, but the extracted conductivity 0.0004898 S/cm is significantly different from the ground truth 0.000393 S/cm (24.6% difference).
+GT-265     | ❌ MISSING/BAD   | Formula Li8.4In2.4Ti9.6P18.0O72.0 simplifies to Li1.4In0.4Ti1.6(PO4)3, but the extracted conductivity 0.0005888 S/cm is significantly different from the ground truth 0.000302 S/cm (95.0% difference).
+GT-266     | ❌ MISSING/BAD   | Formula Li9.0In3.0Ti9.0P18.0O72.0 simplifies to Li1.5In0.5Ti1.5(PO4)3, but the extracted conductivity 5.495e-05 S/cm is significantly different from the ground truth 0.000204 S/cm (271% difference).
+GT-267     | ✅ MATCH         | Formula Li7.2La1.2Ti10.8P18.0O72.0 simplifies to Li1.2La0.2Ti1.8(PO4)3, and conductivity 8e-05 S/cm is approximately 8.128e-05 S/cm (1.6% difference).
+GT-268     | ✅ MATCH         | Formula Li7.8La1.8Ti10.2P18.0O72.0 simplifies to Li1.3La0.3Ti1.7(PO4)3, and conductivity 0.000523 S/cm is approximately 0.0005623 S/cm (7.5% difference).
+GT-269     | ✅ MATCH         | Formula Li8.4La2.4Ti9.6P18.0O72.0 simplifies to Li1.4La0.4Ti1.6(PO4)3, and conductivity 0.000498 S/cm is approximately 0.0005012 S/cm (0.6% difference).
+GT-270     | ✅ MATCH         | Formula Li9.0La3.0Ti9.0P18.0O72.0 simplifies to Li1.5La0.5Ti1.5(PO4)3, and conductivity 0.000281 S/cm is approximately 0.0002818 S/cm (0.3% difference).

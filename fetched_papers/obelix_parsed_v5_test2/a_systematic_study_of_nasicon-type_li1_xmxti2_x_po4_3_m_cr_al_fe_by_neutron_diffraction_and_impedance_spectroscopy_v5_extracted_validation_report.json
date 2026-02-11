@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-282",
+      "extracted_match": "LTP (BULK) | 6.0e-05 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LTP (BULK)' corresponds to LiTi2(PO4)3, which is the normalized form of Li6.0Ti12.0P18.0O72.0, and the conductivity 6.0e-05 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-283",
+      "extracted_match": "LATP005 (BULK) | 0.0011 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LATP005 (BULK)' corresponds to Li1.05Al0.05Ti1.95(PO4)3, which is the normalized form of Li6.3Al0.3Ti11.7P18.0O72.0, and the conductivity 0.0011 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-284",
+      "extracted_match": "LATP01 (BULK) | 0.00067 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LATP01 (BULK)' corresponds to Li1.1Al0.1Ti1.9(PO4)3, which is the normalized form of Li6.6Al0.6Ti11.4P18.0O72.0, and the conductivity 0.00067 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-285",
+      "extracted_match": "LATP03 (BULK) | 0.0062 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LATP03 (BULK)' corresponds to Li1.3Al0.3Ti1.7(PO4)3, which is the normalized form of Li7.8Al1.8Ti10.2P18.0O72.0, and the conductivity 0.0062 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-286",
+      "extracted_match": "LATP04 (BULK) | 0.0033 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LATP04 (BULK)' corresponds to Li1.4Al0.4Ti1.6(PO4)3, which is the normalized form of Li8.4Al2.4Ti9.6P18.0O72.0, and the conductivity 0.0033 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-287",
+      "extracted_match": "LCTP005 (BULK) | 0.00018 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LCTP005 (BULK)' corresponds to Li1.05Cr0.05Ti1.95(PO4)3, which is the normalized form of Li6.3Cr0.3Ti11.7P18.0O72.0, and the conductivity 0.00018 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-288",
+      "extracted_match": "LCTP01 (BULK) | 0.00026 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LCTP01 (BULK)' corresponds to Li1.1Cr0.1Ti1.9(PO4)3, which is the normalized form of Li6.6Cr0.6Ti11.4P18.0O72.0, and the conductivity 0.00026 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-289",
+      "extracted_match": "LCTP02 (BULK) | 0.00043 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LCTP02 (BULK)' corresponds to Li1.2Cr0.2Ti1.8(PO4)3, which is the normalized form of Li7.2Cr1.2Ti10.8P18.0O72.0, and the conductivity 0.00043 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-290",
+      "extracted_match": "LCTP03 (BULK) | 0.00029 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LCTP03 (BULK)' corresponds to Li1.3Cr0.3Ti1.7(PO4)3, which is the normalized form of Li7.8Cr1.8Ti10.2P18.0O72.0, and the conductivity 0.00029 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-291",
+      "extracted_match": "LFTP005 (BULK) | 0.00013 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LFTP005 (BULK)' corresponds to Li1.05Fe0.05Ti1.95(PO4)3, which is the normalized form of Li6.3Fe0.3Ti11.7P18.0O72.0, and the conductivity 0.00013 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-292",
+      "extracted_match": "LFTP01 (BULK) | 0.00063 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LFTP01 (BULK)' corresponds to Li1.1Fe0.1Ti1.9(PO4)3, which is the normalized form of Li6.6Fe0.6Ti11.4P18.0O72.0, and the conductivity 0.00063 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-293",
+      "extracted_match": "LFTP02 (BULK) | 0.0014 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LFTP02 (BULK)' corresponds to Li1.2Fe0.2Ti1.8(PO4)3, which is the normalized form of Li7.2Fe1.2Ti10.8P18.0O72.0, and the conductivity 0.0014 S/cm matches exactly."
+    },
+    {
+      "ground_truth_id": "GT-294",
+      "extracted_match": "LFTP03 (BULK) | 0.0023 S/cm",
+      "is_match": true,
+      "reason": "The extracted composition 'LFTP03 (BULK)' corresponds to Li1.3Fe0.3Ti1.7(PO4)3, which is the normalized form of Li7.8Fe1.8Ti10.2P18.0O72.0, and the conductivity 0.0023 S/cm matches exactly."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 13
+}

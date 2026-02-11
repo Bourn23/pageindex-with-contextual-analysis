@@ -4,50 +4,20 @@
 
 
 [DEBUG] Inorganic Chemistry © Cite This: Inorg. Chem. XXXX, XXX, XXX–XXX:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=277 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=277 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=277
-)] thoughts_token_count=200 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=487 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=1846 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2128 traffic_type=None
+- chars: {"measurements":[]}
 
 
 [DEBUG] Abstract / Introduction:
 - Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=270
-)] cached_content_token_count=270 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=583 prompt_tokens_details=[ModalityTokenCount(
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=583 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=583
-)] thoughts_token_count=392 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=985 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 1. INTRODUCTION:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1402 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1402
-)] thoughts_token_count=534 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1946 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] S Supporting Information:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=233
-)] cached_content_token_count=233 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=314 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=314
-)] thoughts_token_count=246 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=570 traffic_type=None
+)] thoughts_token_count=2115 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2708 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -55,58 +25,114 @@
 
 [DEBUG] 2. EXPERIMENTAL METHODS:
 - Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=670
-)] cached_content_token_count=670 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2017 prompt_tokens_details=[ModalityTokenCount(
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2017 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=2017
-)] thoughts_token_count=906 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2933 traffic_type=None
+)] thoughts_token_count=3260 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5287 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] 3. RESULTS:
+- Response length: 3294 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=845 candidates_tokens_details=None prompt_token_count=4278 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=4278
+)] thoughts_token_count=2600 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7723 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li6PS5Br",
+      "canonical_formula": "Li6PS5Br",
+      "reduced_formula": "Br1Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5-xSexBr (0 <= x <= 1) have been synthesized to study the influence of increasing anion polarizability and selenium substitution.",
+        "The replacement of sulfur with larger and more polarizable selenium affects lattice dynamics and expands the unit cell volume linearly following Vegard's law.",
+        "Site disorder between Br- and Ch2- sites was found to decrease with increasing Se content, which influences the intercage jump distances for Li+ ions.",
+        "Structural characterization was performed using Rietveld refinement of powder XRD and neutron pair distribution function analysis to resolve Li+ occupancy and anion disorder.",
+        "Samples exhibit minor impurity phase fractions of LiBr and Li3OBr (<5 wt %), which are unlikely to significantly affect ionic transport."
+      ],
+      "raw_conductivity": "2.7",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0027,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Room-temperature",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Figure 6a",
+      "source_caption": "Room-temperature conductivity and (b) activation energy EA and Arrhenius prefactor sigma0 for Li6PS5-xSexBr as a function of the Se content.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature '25' inferred from 'Room-temperature'."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5-xSexBr",
+      "canonical_formula": "Li6PS5-xSexBr",
+      "reduced_formula": null,
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5-xSexBr (0 <= x <= 1) have been synthesized to study the influence of increasing anion polarizability and selenium substitution.",
+        "The replacement of sulfur with larger and more polarizable selenium affects lattice dynamics and expands the unit cell volume linearly following Vegard's law.",
+        "Site disorder between Br- and Ch2- sites was found to decrease with increasing Se content, which influences the intercage jump distances for Li+ ions.",
+        "Structural characterization was performed using Rietveld refinement of powder XRD and neutron pair distribution function analysis to resolve Li+ occupancy and anion disorder.",
+        "Samples exhibit minor impurity phase fractions of LiBr and Li3OBr (<5 wt %), which are unlikely to significantly affect ionic transport."
+      ],
+      "raw_conductivity": "3.9",
+      "raw_conductivity_unit": "mS cm-1",
+      "normalized_conductivity": 0.0039,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Room-temperature",
+      "normalized_temperature_c": 25,
+      "source_figure_id": "Figure 6a",
+      "source_caption": "Room-temperature conductivity and (b) activation energy EA and Arrhenius prefactor sigma0 for Li6PS5-xSexBr as a function of the Se content.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature '25' inferred from 'Room-temperature'.",
+        "Value represents the maximum conductivity reported for the series."
+      ]
+    }
+  ]
+}
+
+
+[DEBUG] S Supporting Information:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=314 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=314
+)] thoughts_token_count=358 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=678 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Notes:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=241 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=241
+)] thoughts_token_count=393 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=640 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] 1. INTRODUCTION:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1402 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1402
+)] thoughts_token_count=4101 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5513 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] **Corresponding Author**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=225
-)] cached_content_token_count=225 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=301 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=301 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=301
-)] thoughts_token_count=146 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=457 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 4. DISCUSSION:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=679
-)] cached_content_token_count=679 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2097 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2097
-)] thoughts_token_count=866 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2973 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Notes:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=132
-)] cached_content_token_count=132 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=241 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=241
-)] thoughts_token_count=222 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=473 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=1295 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1601 traffic_type=None
+- chars: {"measurements":[]}
 
 
 [DEBUG] ACKNOWLEDGMENTS:
@@ -114,429 +140,83 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=331 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=331
-)] thoughts_token_count=436 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=777 traffic_type=None
+)] thoughts_token_count=449 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=790 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
-[DEBUG] page_0_picture_19.jpeg:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1733 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=623
-), ModalityTokenCount(
-  modality=<MediaModality.IMAGE: 'IMAGE'>,
-  token_count=1110
-)] thoughts_token_count=168 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1907 traffic_type=None
-- chars: {"measurements": []}
-
-
 [DEBUG] 5. CONCLUSION:
-- Response length: 1494 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=414 candidates_tokens_details=None prompt_token_count=631 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 1673 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=449 candidates_tokens_details=None prompt_token_count=631 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=631
-)] thoughts_token_count=1981 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3026 traffic_type=None
+)] thoughts_token_count=5068 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6148 traffic_type=None
 - chars: {
   "measurements": [
     {
       "raw_composition": "Li6PS5-xSexBr (0 <= x <= 1)",
       "canonical_formula": null,
+      "reduced_formula": null,
       "material_definitions": [
-        "Se2- substitution within Li6PS5-xSexBr (0 <= x <= 1) was performed to study the effect of the changing lattice polarizability, as well as the influence of the Br-/Ch2- exchange on the free chalcogen Ch2-site, on the structure and lithium transport properties.",
-        "With increasing Se2- substitution, an increase in the lattice parameters and the occupancy of the 16e Wyckoff position by Se2-, corresponding to the formation of PS3Se3- polyhedra, was observed.",
-        "A drastic decrease in the Br-/Ch2- site disorder was also observed, leading to changes in the local Li+ sublattice and inducing a rearrangement of Li+ from the 24g to the 48h site."
+        "Se2- substitution within Li6PS5-xSexBr (0 <= x <= 1) was performed to study the effect of the changing lattice polarizability and Br-/Ch2- exchange on the structure and lithium transport properties.",
+        "Characterization was performed using a combination of X-ray diffraction, neutron pair distribution function analysis, and electrochemical impedance spectroscopy.",
+        "With increasing Se content, an increase in lattice parameters and occupancy of the 16e Wyckoff position by Se2- (forming PS3Se3- polyhedra) was observed.",
+        "Se substitution induces a rearrangement of Li+ from the 24g to the 48h site and a widening of the diffusion pathways.",
+        "A drastic decrease in Br-/Ch2- site disorder was observed with Se substitution, which may counteract the beneficial effects of the modified Li+ sublattice on ionic transport."
       ],
       "raw_conductivity": "3.9",
       "raw_conductivity_unit": "mS·cm",
-      "normalized_conductivity": null,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Temperature (25 C) is inferred as standard room temperature, as specific temperature was not stated.",
-        "The specific composition (x value) yielding this conductivity is not specified, generic series formula used.",
-        "Unit mS\n·cm is likely a typographical error for mS/cm."
-      ]
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_1_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        62,
-        41,
-        959,
-        566
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        62,
-        572,
-        955,
-        963
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_2_figure_10.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Diffraction angle 2\u03b8 / \u00b0",
-        "unit": "\u00b0",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity / a.u.",
-        "unit": "a.u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        35,
-        38,
-        958,
-        574
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "r / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "G(r) / \u00c5\u207b\u00b2",
-        "unit": "\u00c5\u207b\u00b2",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        35,
-        604,
-        958,
-        996
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[DEBUG] 3. RESULTS:
-- Response length: 5713 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=820
-)] cached_content_token_count=820 candidates_token_count=4990 candidates_tokens_details=None prompt_token_count=4278 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=4278
-)] thoughts_token_count=3187 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=12455 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li6PS(5-x)SexBr (0 <= x <= 1)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The materials are Li+ superionic argyrodites Li6PS(5-x)SexBr (0 <= x <= 1), synthesized to study the influence of anion polarizability and substitution of S2- by Se2-.",
-        "The compounds form cubic F43m argyrodite solid solutions, exhibiting a linear increase in lattice parameters and unit cell volumes with increasing Se content.",
-        "Ionic conductivity measurements were performed using temperature-dependent electrochemical impedance spectroscopy."
-      ],
-      "raw_conductivity": "2.7",
-      "raw_conductivity_unit": "mS*cm-1",
-      "normalized_conductivity": 0.0027,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 6a",
-      "source_caption": "Room-temperature conductivity and activation energy EA and Arrhenius prefactor \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-
-
-[DEBUG] 3. RESULTS:
-- Response length: 2902 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=847 candidates_tokens_details=None prompt_token_count=4278 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=4278
-)] thoughts_token_count=2293 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7418 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li6PS(5-x)SexBr (highest conductivity observed)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6PS(5-x)SexBr (0 \t\t\t\t\t\tx \t\t\t\t\t\t1) were synthesized as solid solutions.",
-        "The synthesis aimed to study the influence of increasing anion polarizability and replacing free S2- sites with Se2-.",
-        "The samples are well described by the cubic F43m argyrodite structure and exhibit minor impurity phase fractions of LiBr and Li3OBr (<5 wt %).",
-        "Ionic transport measurements were performed using temperature-dependent electrochemical impedance spectroscopy."
-      ],
-      "raw_conductivity": "3.9",
-      "raw_conductivity_unit": "mS\t\tcm-1",
       "normalized_conductivity": 0.0039,
-      "raw_temperature": "Room-temperature",
-      "raw_temperature_unit": "contextual",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 6a",
-      "source_caption": "Room-temperature conductivity and activation energy EA and Arrhenius prefactor \t\t0 for Li6PS(5-x)SexBr as a function of the Se content.",
+      "raw_temperature": "25",
+      "raw_temperature_unit": "not specified",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "The specific x value (composition) yielding this maximum conductivity is not stated in the text.",
-        "Room-temperature is assumed to be 25 \t\tC for normalization."
-      ]
-    },
-    {
-      "raw_composition": "Li6PS(5-x)SexBr (lowest conductivity observed)",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The Li+ superionic argyrodites Li6PS(5-x)SexBr (0 \t\t\t\t\t\tx \t\t\t\t\t\t1) were synthesized as solid solutions.",
-        "The synthesis aimed to study the influence of increasing anion polarizability and replacing free S2- sites with Se2-.",
-        "The samples are well described by the cubic F43m argyrodite structure and exhibit minor impurity phase fractions of LiBr and Li3OBr (<5 wt %).",
-        "Ionic transport measurements were performed using temperature-dependent electrochemical impedance spectroscopy."
-      ],
-      "raw_conductivity": "2.7",
-      "raw_conductivity_unit": "mS\t\tcm-1",
-      "normalized_conductivity": 0.0027,
-      "raw_temperature": "Room-temperature",
-      "raw_temperature_unit": "contextual",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 6a",
-      "source_caption": "Room-temperature conductivity and activation energy EA and Arrhenius prefactor \t\t0 for Li6PS(5-x)SexBr as a function of the Se content.",
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "The specific x value (composition) yielding this minimum conductivity is not stated in the text, only that the range spans from 2.7 mS\t\tcm-1 to 3.9 mS\t\tcm-1.",
-        "Room-temperature is assumed to be 25 \t\tC for normalization."
+        "Temperature was not explicitly stated in the text; 25 °C (room temperature) was assumed.",
+        "The unit 'mS·cm' is likely a typographical error for 'mS/cm' or 'mS·cm-1'.",
+        "The specific value of x for the 3.9 mS/cm measurement is not explicitly stated in the conclusion snippet."
       ]
     }
   ]
 }
 
 
-[SCI-FIGURE DEBUG] page_5_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
+[DEBUG] 4. DISCUSSION:
+- Response length: 477 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=147 candidates_tokens_details=None prompt_token_count=2097 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2097
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10104 traffic_type=None
+- chars: {
+  "measurements": [
     {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "x in Li6PS5-xSexBr",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "sigma_RT / mScm-1",
-        "unit": "mScm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        58,
-        28,
-        945,
-        455
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "x in Li6PS5-xSexBr",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "E_A / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "sigma_0 / KScm-1",
-        "unit": "KScm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "box_2d": [
-        58,
-        477,
-        945,
-        985
-      ],
-      "label": "b"
+      "raw_composition": "Li6PS5-xSexBr (0 \u2264 x \u2264 1)",
+      "raw_conductivity": "not reported",
+      "raw_conductivity_unit": "not reported",
+      "raw_temperature": "not reported",
+      "raw_temperature_unit": "not reported",
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Numeric ionic conductivity values are not explicitly stated in the provided text; only trends are discussed."
+      ]
     }
   ]
 }
-- Combined Measurements: 33
 
 
 [SCI-FIGURE DEBUG] page_4_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "ln(\u03c3T) / ln(KS cm\u207b\u00b9)",
-        "unit": "S cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        15,
-        20,
-        965,
-        500
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z) / \u03a9",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        15,
-        510,
-        965,
-        990
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 29
+- Total subplots detected: 2
+- Valid subplots: 1
+- Measurements extracted: 33
+  • a: X=temperature_inverse, Y=conductivity
 
 
-[SCI-FIGURE DEBUG] page_5_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "nu_D / 10^12 s^-1",
-        "unit": "s^-1",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "E_A / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "sigma_0 / K Scm^-1",
-        "unit": "K Scm^-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "box_2d": [
-        38,
-        28,
-        953,
-        528
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "E_A / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log(sigma_0 / K Scm^-1)",
-        "unit": "K Scm^-1",
-        "quantity_type": "conductivity",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        38,
-        542,
-        953,
-        975
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 32
+[SCI-FIGURE DEBUG] page_5_figure_1.jpeg:
+- Total subplots detected: 2
+- Valid subplots: 2
+- Measurements extracted: 22
+  • a: X=stoichiometry, Y=conductivity
+  • b: X=stoichiometry, Y=activation_energy

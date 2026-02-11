@@ -1,0 +1,84 @@
+{
+  "matches": [
+    {
+      "ground_truth_id": "GT-388",
+      "extracted_match": "Li6PS5Br | 0.72 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24P4S20Br4 and Li6PS5Br are chemically identical, and conductivities 0.000701 S/cm and 0.72 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-389",
+      "extracted_match": "Li6.025P0.975Si0.025S5Br | 0.88 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.1P3.9Si0.1S20Br4 and Li6.025P0.975Si0.025S5Br are chemically identical, and conductivities 0.000878 S/cm and 0.88 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-390",
+      "extracted_match": "Li6.05P0.95Si0.05S5Br | 0.45 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.2P3.8Si0.2S20Br4 and Li6.05P0.95Si0.05S5Br are chemically identical, and conductivities 0.000437 S/cm and 0.45 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-391",
+      "extracted_match": "Li6.075P0.925Si0.075S5Br | 0.88 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.3P3.7Si0.3S20Br4 and Li6.075P0.925Si0.075S5Br are chemically identical, and conductivities 0.000873 S/cm and 0.88 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-392",
+      "extracted_match": "MISSING",
+      "is_match": false,
+      "reason": "The normalized ground truth formula Li6.1P0.95Si0.1S5Br does not match any extracted formula, specifically the P coefficient (0.95 vs 0.9 in the closest extracted entry)."
+    },
+    {
+      "ground_truth_id": "GT-393",
+      "extracted_match": "Li6.125P0.875Si0.125S5Br | 0.91 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.5P3.5Si0.5S20Br4 and Li6.125P0.875Si0.125S5Br are chemically identical, and conductivities 0.000902 S/cm and 0.91 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-394",
+      "extracted_match": "Li6.175P0.825Si0.175S5Br | 0.95 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.7P3.3Si0.7S20Br4 and Li6.175P0.825Si0.175S5Br are chemically identical, and conductivities 0.000931 S/cm and 0.95 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-395",
+      "extracted_match": "Li6.2P0.8Si0.2S5Br | 1.7 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.8P3.2Si0.8S20Br4 and Li6.2P0.8Si0.2S5Br are chemically identical, and conductivities 0.00169 S/cm and 1.7 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-396",
+      "extracted_match": "Li6.225P0.775Si0.225S5Br | 1.1 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li24.9P3.1Si0.9S20Br4 and Li6.225P0.775Si0.225S5Br are chemically identical, and conductivities 0.00108 S/cm and 1.1 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-397",
+      "extracted_match": "Li6.25P0.75Si0.25S5Br | 1.45 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li25.0P3.0Si1.0S20Br4 and Li6.25P0.75Si0.25S5Br are chemically identical, and conductivities 0.00141 S/cm and 1.45 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-398",
+      "extracted_match": "Li6.3P0.7Si0.3S5Br | 1.68 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li25.2P2.8Si1.2S20Br4 and Li6.3P0.7Si0.3S5Br are chemically identical, and conductivities 0.00165 S/cm and 1.68 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-399",
+      "extracted_match": "Li6.35P0.65Si0.35S5Br | 2.38 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li25.4P2.6Si1.4S20Br4 and Li6.35P0.65Si0.35S5Br are chemically identical, and conductivities 0.00234 S/cm and 2.38 mS/cm are approximately equal."
+    },
+    {
+      "ground_truth_id": "GT-400",
+      "extracted_match": "Li6.5P0.5Si0.5S5Br | 2.22 mS/cm",
+      "is_match": true,
+      "reason": "Formulas Li26.0P2.0Si2.0S20Br4 and Li6.5P0.5Si0.5S5Br are chemically identical, and conductivities 0.00219 S/cm and 2.22 mS/cm are approximately equal."
+    }
+  ],
+  "total_ground_truth": 13,
+  "total_matches": 12
+}
