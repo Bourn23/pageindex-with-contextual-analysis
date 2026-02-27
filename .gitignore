@@ -16,6 +16,33 @@ json_results/*
 *.md
 test_*.py
 OBELiX/
-
+output/
+downselectedpapers_jiyoung/
+jiyoung_composite_papers/
+.agent
+.claude
+.kiro
 !DEVELOPER_GUIDE.md
 !README.md
+
+*.csv
+*.pkl
+*.png
+*.json
+*.jsonl
+*.txt
+actionable_analysis/
+
+# all md files inside the actionable_analysis folder and subfolders
+!actionable_analysis/scripts/
+*.html
+actionable_analysis copy/
+
+design_rules_*/
+latent_analysis/
+fetched_papers/
+jiyoung_downloaded_papers/
+OBELiX/
+obelix_md/
+output_parsed/
+*.zip

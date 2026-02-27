@@ -8,111 +8,37 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=419 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=419
-)] thoughts_token_count=460 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=889 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **EXPERIMENTAL**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=369
-)] cached_content_token_count=369 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=916 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=916
-)] thoughts_token_count=706 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1632 traffic_type=None
+)] thoughts_token_count=1885 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2314 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] Abstract / Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=375
-)] cached_content_token_count=375 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=617 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=617 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=617
-)] thoughts_token_count=681 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1308 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **RESULTS AND DISCUSSION**:
-- Response length: 2182 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=582
-)] cached_content_token_count=582 candidates_token_count=740 candidates_tokens_details=None prompt_token_count=2139 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2139
-)] thoughts_token_count=818 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3697 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li(0.5-y)Na(y)La(0.5)Nb2O6 at y=0",
-      "canonical_formula": "Li0.5La0.5Nb2O6",
-      "material_definitions": [
-        "The materials are Li(0.5-y)Na(y)La(0.5) vacancy Nb2O6 multicomponent oxides, studied across a range of isovalent substitutions (y).",
-        "The sintered materials showed a single-phase orthorhombic defect perovskite structure (sp. gr. Pmmm), regardless of the sodium content.",
-        "Ionic conductivity is primarily determined by Li+ transport, as Na+ is incapable of participating in ionic transport in these systems."
-      ],
-      "raw_conductivity": "6.85e-6",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 6.85e-6,
-      "raw_temperature": "290",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 16.85,
-      "source_figure_id": "Fig. 4",
-      "source_caption": "Conductivity as a function of lithium content for Li(0.5-y) Na(y) La(0.5) vacancy Nb2O6 at (1) 290 and (2) 370 K.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "Li(0.5-y)Na(y)La(0.5)Nb2O6 at y=0.43",
-      "canonical_formula": "Li0.07Na0.43La0.5Nb2O6",
-      "material_definitions": [
-        "The materials are Li(0.5-y)Na(y)La(0.5) vacancy Nb2O6 multicomponent oxides, studied across a range of isovalent substitutions (y).",
-        "The sintered materials showed a single-phase orthorhombic defect perovskite structure (sp. gr. Pmmm), regardless of the sodium content.",
-        "Ionic conductivity is primarily determined by Li+ transport, as Na+ is incapable of participating in ionic transport in these systems."
-      ],
-      "raw_conductivity": "1.28e-5",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 1.28e-5,
-      "raw_temperature": "290",
-      "raw_temperature_unit": "K",
-      "normalized_temperature_c": 16.85,
-      "source_figure_id": "Fig. 4",
-      "source_caption": "Conductivity as a function of lithium content for Li(0.5-y) Na(y) La(0.5) vacancy Nb2O6 at (1) 290 and (2) 370 K.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
+)] thoughts_token_count=2837 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3460 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] **INTRODUCTION**:
-- Response length: 1594 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=585
-)] cached_content_token_count=585 candidates_token_count=526 candidates_tokens_details=None prompt_token_count=1419 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 3192 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=990 candidates_tokens_details=None prompt_token_count=1419 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1419
-)] thoughts_token_count=1891 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3836 traffic_type=None
+)] thoughts_token_count=3566 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5975 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "Li3xLa2/3-x□1/3-2xTiO3 defect perovskites",
-      "canonical_formula": null,
+      "raw_composition": "Li3xLa2/3-x vacancy 1/3-2xTiO3",
+      "canonical_formula": "Li3xLa(0.666-x)TiO3",
       "material_definitions": [
-        "Among the best Li+ ion conducting solid electrolytes so far are Li3xLa(2/3-x)□(1/3-2x)TiO3 defect perovskites."
+        "Li3xLa2/3-x vacancy 1/3-2xTiO3 defect perovskites are among the best Li+ ion conducting solid electrolytes reported so far.",
+        "The considerable vacancy concentration and high density of lithium migration channels in Li3xLa2/3-x vacancy 4/3-2xNb2O6 enable good lithium ion conductivity.",
+        "The size of structural channels is determined by the unit-cell volume, which depends on the ionic radius on the A site of the perovskite structure.",
+        "Isovalent substitution of Na+ for Li+ in Li0.5-yNayLa0.5 vacancy Nb2O6 is expected to increase the unit cell volume and hence the conductivity."
       ],
       "raw_conductivity": "1e-3",
       "raw_conductivity_unit": "S/cm",
@@ -120,19 +46,35 @@
       "raw_temperature": "290",
       "raw_temperature_unit": "K",
       "normalized_temperature_c": 16.85,
-      "source_figure_id": null,
-      "source_caption": null,
       "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is an approximate, general value cited from external references [2–5]."
-      ]
+      "confidence": "high"
     },
     {
-      "raw_composition": "Li3xLa2/3-x□4/3-2xNb2O6 defect perovskite solid solutions",
-      "canonical_formula": null,
+      "raw_composition": "Li3xLa2/3-x vacancy 4/3-2xNb2O6",
+      "canonical_formula": "Li3xLa(0.666-x)Nb2O6",
       "material_definitions": [
-        "Li3xLa(2/3-x)□(4/3-2x)Nb2O6 defect perovskite solid solutions possess considerable vacancy concentration and high density of lithium migration channels."
+        "Li3xLa2/3-x vacancy 1/3-2xTiO3 defect perovskites are among the best Li+ ion conducting solid electrolytes reported so far.",
+        "The considerable vacancy concentration and high density of lithium migration channels in Li3xLa2/3-x vacancy 4/3-2xNb2O6 enable good lithium ion conductivity.",
+        "The size of structural channels is determined by the unit-cell volume, which depends on the ionic radius on the A site of the perovskite structure.",
+        "Isovalent substitution of Na+ for Li+ in Li0.5-yNayLa0.5 vacancy Nb2O6 is expected to increase the unit cell volume and hence the conductivity."
+      ],
+      "raw_conductivity": "1e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00001,
+      "raw_temperature": "290",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 16.85,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li3xLa2/3-x vacancy 4/3-2xNb2O6",
+      "canonical_formula": "Li3xLa(0.666-x)Nb2O6",
+      "material_definitions": [
+        "Li3xLa2/3-x vacancy 1/3-2xTiO3 defect perovskites are among the best Li+ ion conducting solid electrolytes reported so far.",
+        "The considerable vacancy concentration and high density of lithium migration channels in Li3xLa2/3-x vacancy 4/3-2xNb2O6 enable good lithium ion conductivity.",
+        "The size of structural channels is determined by the unit-cell volume, which depends on the ionic radius on the A site of the perovskite structure.",
+        "Isovalent substitution of Na+ for Li+ in Li0.5-yNayLa0.5 vacancy Nb2O6 is expected to increase the unit cell volume and hence the conductivity."
       ],
       "raw_conductivity": "1e-4",
       "raw_conductivity_unit": "S/cm",
@@ -140,84 +82,88 @@
       "raw_temperature": "290",
       "raw_temperature_unit": "K",
       "normalized_temperature_c": 16.85,
-      "source_figure_id": null,
-      "source_caption": null,
       "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is the upper bound of the cited approximate range (10^-5 to 10^-4).",
-        "Value is cited from external references [6–9]."
-      ]
+      "confidence": "high"
     }
   ]
 }
 
 
-[TABLE DEBUG] Unknown: No caption found:
-- Response: {
+[DEBUG] **EXPERIMENTAL**:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=916 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=916
+)] thoughts_token_count=5201 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6127 traffic_type=None
+- chars: {
   "measurements": []
 }
 
 
-[SCI-FIGURE DEBUG] page_3_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
+[DEBUG] **RESULTS AND DISCUSSION**:
+- Response length: 2654 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=843 candidates_tokens_details=None prompt_token_count=2139 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2139
+)] thoughts_token_count=4959 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7941 traffic_type=None
+- chars: {
+  "measurements": [
     {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "ppm",
-        "unit": "ppm",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        12,
-        12,
-        933,
-        968
+      "raw_composition": "y=0",
+      "canonical_formula": "Li0.5La0.5Nb2O6",
+      "reduced_formula": "LiLaNb4O12",
+      "material_definitions": [
+        "The materials studied are multicomponent oxides with the formula Li0.5-yNayLa0.5\u2531Nb2O6.",
+        "All sintered materials were found to be single-phase and had an orthorhombic defect perovskite structure (sp. gr. Pmmm).",
+        "Sodium ions are found to substitute for lithium ions in both the z=0 and z=1/2 planes, leading to structural disordering.",
+        "Ionic conductivity in this system is determined by Li+ transport because Na+ ions are too large to participate in such systems.",
+        "The unit-cell volume increases with sodium content, following Vegard's law, because the ionic radius of sodium is greater than that of lithium."
       ],
-      "label": "a"
+      "raw_conductivity": "6.85e-6",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 6.85e-06,
+      "raw_temperature": "290",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 16.85,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Conductivity as a function of lithium content for Li0.5-y Nay La0.5 \u2531 Nb2 O6 at (1) 290 and (2) 370 K.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "y=0.43",
+      "canonical_formula": "Li0.07Na0.43La0.5Nb2O6",
+      "reduced_formula": "Li7Na43La50Nb200O600",
+      "material_definitions": [
+        "The materials studied are multicomponent oxides with the formula Li0.5-yNayLa0.5\u2531Nb2O6.",
+        "All sintered materials were found to be single-phase and had an orthorhombic defect perovskite structure (sp. gr. Pmmm).",
+        "Sodium ions are found to substitute for lithium ions in both the z=0 and z=1/2 planes, leading to structural disordering.",
+        "Ionic conductivity in this system is determined by Li+ transport because Na+ ions are too large to participate in such systems.",
+        "The unit-cell volume increases with sodium content, following Vegard's law, because the ionic radius of sodium is greater than that of lithium."
+      ],
+      "raw_conductivity": "1.28e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 1.28e-05,
+      "raw_temperature": "290",
+      "raw_temperature_unit": "K",
+      "normalized_temperature_c": 16.85,
+      "source_figure_id": "Fig. 4",
+      "source_caption": "Conductivity as a function of lithium content for Li0.5-y Nay La0.5 \u2531 Nb2 O6 at (1) 290 and (2) 370 K.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
     }
   ]
 }
-- Combined Measurements: 0
 
 
 [SCI-FIGURE DEBUG] page_2_figure_7.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "0.5 \u2013 y",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log \u0301 [S/cm]",
-        "unit": "S/cm",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        36,
-        47,
-        959,
-        866
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 16
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 16
+  • main: X=stoichiometry, Y=conductivity
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[]}

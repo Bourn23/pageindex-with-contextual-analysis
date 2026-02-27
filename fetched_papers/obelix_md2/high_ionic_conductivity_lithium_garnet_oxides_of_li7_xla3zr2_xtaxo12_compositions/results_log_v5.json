@@ -3,251 +3,184 @@
 --- [Document] high_ionic_conductivity_lithium_garnet_oxides_of_li7_xla3zr2_xtaxo12_compositions.md ---
 
 
-[DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+[DEBUG] Conclusions:
+- Response length: 2377 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=719 candidates_tokens_details=None prompt_token_count=551 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=134
-)] cached_content_token_count=134 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=246
-)] thoughts_token_count=93 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=349 traffic_type=None
+  token_count=551
+)] thoughts_token_count=2470 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3740 traffic_type=None
 - chars: {
-  "measurements": []
+  "measurements": [
+    {
+      "raw_composition": "x = 0.3",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30O120Ta3Zr17",
+      "material_definitions": [
+        "Lithium garnet oxides with formulas Li7-xLa3Zr2-xTaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
+        "Single cubic phases were observed in the composition x range between 0.2 and 2, while Li7La3Zr2O12 (x=0) displayed a tetragonal structure.",
+        "The lattice parameters decreased with the addition of Ta due to the smaller ionic radius of Ta5+ compared with Zr4+, following the Vegard's law.",
+        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
+      ],
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Bulk conductivity value extracted.",
+        "Temperature 'room temperature' mapped to 25C."
+      ]
+    },
+    {
+      "raw_composition": "x = 0.3",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30O120Ta3Zr17",
+      "material_definitions": [
+        "Lithium garnet oxides with formulas Li7-xLa3Zr2-xTaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
+        "Single cubic phases were observed in the composition x range between 0.2 and 2, while Li7La3Zr2O12 (x=0) displayed a tetragonal structure.",
+        "The lattice parameters decreased with the addition of Ta due to the smaller ionic radius of Ta5+ compared with Zr4+, following the Vegard's law.",
+        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
+      ],
+      "raw_conductivity": "6.9e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00069,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Total conductivity value extracted.",
+        "Temperature 'room temperature' mapped to 25C."
+      ]
+    }
+  ]
 }
 
 
 [DEBUG] **Experimental**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=548
-)] cached_content_token_count=548 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1225 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1225 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1225
-)] thoughts_token_count=1152 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2387 traffic_type=None
+)] thoughts_token_count=3949 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5180 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=246
+)] thoughts_token_count=6095 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6351 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
-[DEBUG] Conclusions:
-- Response length: 2157 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=349
-)] cached_content_token_count=349 candidates_token_count=637 candidates_tokens_details=None prompt_token_count=551 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=551
-)] thoughts_token_count=2211 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3399 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "x = 0.3",
-      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
-      "material_definitions": [
-        "Lithium garnet oxides with formulas Li(7-x)La3Zr(2-x)TaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
-        "Single cubic phases were observed in the composition x range between 0.2 and 2.",
-        "The lattice parameters decreased with the addition of Ta.",
-        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
-      ],
-      "raw_conductivity": "9.6e-4",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 0.00096,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature inferred as 25 Celsius (standard room temperature). This conductivity value refers to bulk conductivity."
-      ]
-    },
-    {
-      "raw_composition": "x = 0.3",
-      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
-      "material_definitions": [
-        "Lithium garnet oxides with formulas Li(7-x)La3Zr(2-x)TaxO12 (x = 0-2) were successfully synthesized by the solid state reaction method.",
-        "Single cubic phases were observed in the composition x range between 0.2 and 2.",
-        "The lattice parameters decreased with the addition of Ta.",
-        "Pellets with relative density above 91% were obtained from high temperature processing with sintering aids."
-      ],
-      "raw_conductivity": "6.9e-4",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 0.00069,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature inferred as 25 Celsius (standard room temperature). This conductivity value refers to total conductivity."
-      ]
-    }
-  ]
-}
-
-
-[DEBUG] **Results and Discussion**:
-- Response length: 1015 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=362 candidates_tokens_details=None prompt_token_count=3249 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=3249
-)] thoughts_token_count=3218 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6829 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
-      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
-      "material_definitions": [
-        "The LLZTx series is composed of Li(7-x)La3Zr(2-x)Ta(x)O12 solid solutions.",
-        "The powders were calcined at 900°C.",
-        "The composition Li6.7La3Zr1.7Ta0.3O12 (x=0.3) exhibits a cubic phase (space group Ia-3d).",
-        "The pellets were sintered to achieve relative densities above 91% with optimized sintering temperatures."
-      ],
-      "raw_conductivity": "9.6e-4",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 0.00096,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Fig. 3",
-      "source_caption": "Composition dependence of room-temperature grain interior (bulk) and total conductivity of Li(7-x)La3Zr(2-x)Ta(x)O12 series.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
 [DEBUG] Abstract / Introduction:
-- Response length: 4280 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=476
-)] cached_content_token_count=476 candidates_token_count=1416 candidates_tokens_details=None prompt_token_count=1412 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 4145 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1452 candidates_tokens_details=None prompt_token_count=1412 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1412
-)] thoughts_token_count=2692 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5520 traffic_type=None
+)] thoughts_token_count=5477 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8341 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "x=0.3 (Bulk conductivity)",
+      "raw_composition": "Li7-xLa3Zr2-xTaxO12 (x=0.3, bulk conductivity)",
       "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30O120Ta3Zr17",
       "material_definitions": [
-        "Lithium garnet oxides of the composition series Li(7-x)La3Zr(2-x)TaxO12 (x=0-2) were synthesized by the solid state reaction and characterized by the powder X-ray diffraction and the impedance spectroscopy.",
-        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase."
+        "Lithium garnet oxides of the composition series Li7-xLa3Zr2-xTaxO12 (x=0-2) were synthesized by the solid state reaction.",
+        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase.",
+        "The maximum bulk (9.6 x 10^-4 S/cm) and total (6.9 x 10^-4 S/cm) conductivities were achieved at x=0.3 and x=0.2, respectively at room temperature.",
+        "Al-free Li7La3Zr2O12 generally crystallizes in a tetragonal phase (space group I41/acd) with a bulk conductivity of 1.6 x 10^-6 S/cm at 25°C.",
+        "The cubic phase of Li7La3Zr2O12 may be stabilized by Al contamination from crucibles during high-temperature processing (>900°C)."
       ],
       "raw_conductivity": "9.6e-4",
       "raw_conductivity_unit": "S/cm",
       "normalized_conductivity": 0.00096,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "high",
       "warnings": [
-        "This value represents bulk conductivity."
+        "Temperature value of 25 inferred from 'room temperature'."
       ]
     },
     {
-      "raw_composition": "x=0.2 (Total conductivity)",
+      "raw_composition": "Li7-xLa3Zr2-xTaxO12 (x=0.2, total conductivity)",
       "canonical_formula": "Li6.8La3Zr1.8Ta0.2O12",
+      "reduced_formula": "Li34La15O60Ta1Zr9",
       "material_definitions": [
-        "Lithium garnet oxides of the composition series Li(7-x)La3Zr(2-x)TaxO12 (x=0-2) were synthesized by the solid state reaction and characterized by the powder X-ray diffraction and the impedance spectroscopy.",
-        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase."
+        "Lithium garnet oxides of the composition series Li7-xLa3Zr2-xTaxO12 (x=0-2) were synthesized by the solid state reaction.",
+        "Single cubic phases were obtained between x=0.2 and 2, while the end-member Li7La3Zr2O12 exhibited a tetragonal phase.",
+        "The maximum bulk (9.6 x 10^-4 S/cm) and total (6.9 x 10^-4 S/cm) conductivities were achieved at x=0.3 and x=0.2, respectively at room temperature.",
+        "Al-free Li7La3Zr2O12 generally crystallizes in a tetragonal phase (space group I41/acd) with a bulk conductivity of 1.6 x 10^-6 S/cm at 25°C.",
+        "The cubic phase of Li7La3Zr2O12 may be stabilized by Al contamination from crucibles during high-temperature processing (>900°C)."
       ],
       "raw_conductivity": "6.9e-4",
       "raw_conductivity_unit": "S/cm",
       "normalized_conductivity": 0.00069,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "high",
       "warnings": [
-        "This value represents total conductivity."
-      ]
-    },
-    {
-      "raw_composition": "Li5La3Nb2O12",
-      "canonical_formula": "Li5La3Nb2O12",
-      "material_definitions": [],
-      "raw_conductivity": "1e-6",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 1.0e-6,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value is generalized ('around 10^-6 S/cm') and cited from Ref 9."
+        "Temperature value of 25 inferred from 'room temperature'."
       ]
     },
     {
       "raw_composition": "Li5La3Ta2O12",
       "canonical_formula": "Li5La3Ta2O12",
-      "material_definitions": [],
+      "reduced_formula": "Li5La3O12Ta2",
       "raw_conductivity": "1e-6",
       "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 1.0e-6,
+      "normalized_conductivity": 1e-06,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value is generalized ('around 10^-6 S/cm') and cited from Ref 9."
+        "Cited from Weppner et al."
       ]
     },
     {
-      "raw_composition": "Li7La3Zr2O12 (cubic, Al-stabilized)",
+      "raw_composition": "Li7La3Zr2O12 (cubic)",
       "canonical_formula": "Li7La3Zr2O12",
-      "material_definitions": [],
+      "reduced_formula": "Li7La3O12Zr2",
       "raw_conductivity": "5e-4",
       "raw_conductivity_unit": "S/cm",
       "normalized_conductivity": 0.0005,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value is approximate (estimated from 'around 5e-4 S/cm') and cited from Ref 10. Phase is cubic due to possible Al contamination."
+        "Cited from source 10; value reported as ~5e-4."
       ]
     },
     {
-      "raw_composition": "Li7La3Zr2O12 (tetragonal, Al-free)",
+      "raw_composition": "Al-free Li7La3Zr2O12 (tetragonal)",
       "canonical_formula": "Li7La3Zr2O12",
-      "material_definitions": [],
+      "reduced_formula": "Li7La3O12Zr2",
       "raw_conductivity": "1.6e-6",
       "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 1.6e-6,
+      "normalized_conductivity": 1.6e-06,
       "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
+      "raw_temperature_unit": "°C",
+      "normalized_temperature_c": 25,
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value cited from Ref 12. Phase is tetragonal (Al-free)."
+        "Cited from source 12."
       ]
     }
   ]
@@ -255,288 +188,260 @@
 
 
 [SCI-FIGURE DEBUG] page_2_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "x",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "log10 sigma (S/cm)",
-        "unit": "S/cm",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        38,
-        54,
-        955,
-        966
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 19
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 20
+  • main: X=stoichiometry, Y=conductivity
 
 
-[SCI-FIGURE DEBUG] page_3_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
+[DEBUG] **Results and Discussion**:
+- Response length: 5563 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1550 candidates_tokens_details=None prompt_token_count=3249 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=3249
+)] thoughts_token_count=6623 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11422 traffic_type=None
+- chars: {
+  "measurements": [
     {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Specific capacity (mAh/g)",
-        "unit": "mAh/g",
-        "quantity_type": "capacity",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Voltage versus Li/Li+ (V)",
-        "unit": "V",
-        "quantity_type": "voltage",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        48,
-        55,
-        559,
-        958
+      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30Zr17Ta3O120",
+      "material_definitions": [
+        "The Li7-xLa3Zr2-xTaxO12 (LLZTx) series was synthesized to study the effect of Tantalum substitution on the stability of the cubic garnet phase and its ionic conductivity.",
+        "Materials were prepared by calcining precursor powders at 900°C, followed by sintering pellets at optimized temperatures to achieve high relative density exceeding 91%.",
+        "Li5La3Ta2O12 was utilized as a buffer pellet during sintering to minimize reactions with alumina crucibles and maintain stoichiometry.",
+        "Ionic conductivity was evaluated using electrochemical impedance spectroscopy from room temperature up to 280°C to distinguish bulk and grain boundary contributions.",
+        "The highest grain interior conductivity of 9.6e-4 S/cm was observed for the composition with x = 0.3 at room temperature."
       ],
-      "label": "a"
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature '25' inferred from 'room temperature'."
+      ]
     },
     {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "ReZ (\u03a9)",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "ImZ (\u03a9)",
-        "unit": "\u03a9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        593,
-        55,
-        998,
-        958
+      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30Zr17Ta3O120",
+      "material_definitions": [
+        "The Li7-xLa3Zr2-xTaxO12 (LLZTx) series was synthesized to study the effect of Tantalum substitution on the stability of the cubic garnet phase and its ionic conductivity.",
+        "Materials were prepared by calcining precursor powders at 900°C, followed by sintering pellets at optimized temperatures to achieve high relative density exceeding 91%.",
+        "Li5La3Ta2O12 was utilized as a buffer pellet during sintering to minimize reactions with alumina crucibles and maintain stoichiometry.",
+        "Ionic conductivity was evaluated using electrochemical impedance spectroscopy from room temperature up to 280°C to distinguish bulk and grain boundary contributions.",
+        "The highest grain interior conductivity of 9.6e-4 S/cm was observed for the composition with x = 0.3 at room temperature."
       ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
+      "raw_conductivity": "6.5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00065,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Lower bound of reported batch variation range for the x=0.3 composition.",
+        "Temperature '25' inferred from 'room temperature'."
+      ]
+    },
+    {
+      "raw_composition": "Li6.75La3Zr1.75Nb0.25O12",
+      "canonical_formula": "Li6.75La3Zr1.75Nb0.25O12",
+      "reduced_formula": "Li27La12Zr7Nb1O48",
+      "material_definitions": [
+        "The Li7-xLa3Zr2-xTaxO12 (LLZTx) series was synthesized to study the effect of Tantalum substitution on the stability of the cubic garnet phase and its ionic conductivity.",
+        "Materials were prepared by calcining precursor powders at 900°C, followed by sintering pellets at optimized temperatures to achieve high relative density exceeding 91%.",
+        "Li5La3Ta2O12 was utilized as a buffer pellet during sintering to minimize reactions with alumina crucibles and maintain stoichiometry.",
+        "Ionic conductivity was evaluated using electrochemical impedance spectroscopy from room temperature up to 280°C to distinguish bulk and grain boundary contributions.",
+        "The highest grain interior conductivity of 9.6e-4 S/cm was observed for the composition with x = 0.3 at room temperature."
+      ],
+      "raw_conductivity": "9.5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00095,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Data cited from external reference 26.",
+        "Temperature '25' inferred from 'room temperature'."
+      ]
+    },
+    {
+      "raw_composition": "cubic Li7La3Zr2O12",
+      "canonical_formula": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "material_definitions": [
+        "The Li7-xLa3Zr2-xTaxO12 (LLZTx) series was synthesized to study the effect of Tantalum substitution on the stability of the cubic garnet phase and its ionic conductivity.",
+        "Materials were prepared by calcining precursor powders at 900°C, followed by sintering pellets at optimized temperatures to achieve high relative density exceeding 91%.",
+        "Li5La3Ta2O12 was utilized as a buffer pellet during sintering to minimize reactions with alumina crucibles and maintain stoichiometry.",
+        "Ionic conductivity was evaluated using electrochemical impedance spectroscopy from room temperature up to 280°C to distinguish bulk and grain boundary contributions.",
+        "The highest grain interior conductivity of 9.6e-4 S/cm was observed for the composition with x = 0.3 at room temperature."
+      ],
+      "raw_conductivity
 
 
 [SCI-FIGURE DEBUG] page_2_figure_9.jpeg:
-- Detection Result: {
-  "is_multi_panel": false,
-  "subplots": [
+- Total subplots detected: 1
+- Valid subplots: 1
+- Measurements extracted: 12
+  • main: X=temperature_inverse, Y=conductivity
+
+
+[DEBUG] **Results and Discussion**:
+- Response length: 6309 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1930 candidates_tokens_details=None prompt_token_count=3249 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=3249
+)] thoughts_token_count=4635 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9814 traffic_type=None
+- chars: {
+  "measurements": [
     {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000/T(K\u207b\u00b9)",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "Log\u2081\u2080 \u03c3 (S/cm)",
-        "unit": "S/cm",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        48,
-        48,
-        968,
-        953
+      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30Zr17Ta3O120",
+      "material_definitions": [
+        "The LLZTx series is defined by the chemical formula Li7-xLa3Zr2-xTaxO12.",
+        "Samples were synthesized by calcining at 900\u00B0C followed by sintering at various temperatures to achieve relative densities above 91%.",
+        "The end-member Li7La3Zr2O12 possesses a tetragonal structure, which converts to cubic symmetry upon Ta substitution (x > 0).",
+        "Lithium ionic conductivity in these garnets is governed by the lithium ion concentration and mobility on octahedral sites.",
+        "Cubic phase lattice parameters decrease linearly with increasing tantalum content, consistent with Vegard's law."
       ],
-      "label": "main"
+      "raw_conductivity": "9.6e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00096,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00B0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Table I",
+      "source_caption": "Lattice parameter, sintering temperature, relative density, and room-temperature grain interior and total conductivity of Li7-xLa3Zr2-xTaxO12 series.",
+      "source": "text",
+      "confidence": "high",
+      "warnings": []
+    },
+    {
+      "raw_composition": "Li6.7La3Zr1.7Ta0.3O12",
+      "canonical_formula": "Li6.7La3Zr1.7Ta0.3O12",
+      "reduced_formula": "Li67La30Zr17Ta3O120",
+      "material_definitions": [
+        "The LLZTx series is defined by the chemical formula Li7-xLa3Zr2-xTaxO12.",
+        "Samples were synthesized by calcining at 900\u00B0C followed by sintering at various temperatures to achieve relative densities above 91%.",
+        "The end-member Li7La3Zr2O12 possesses a tetragonal structure, which converts to cubic symmetry upon Ta substitution (x > 0).",
+        "Lithium ionic conductivity in these garnets is governed by the lithium ion concentration and mobility on octahedral sites.",
+        "Cubic phase lattice parameters decrease linearly with increasing tantalum content, consistent with Vegard's law."
+      ],
+      "raw_conductivity": "6.5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00065,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00B0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Extracted from a range of batch-to-batch variation."
+      ]
+    },
+    {
+      "raw_composition": "Li6.75La3Zr1.75Nb0.25O12",
+      "canonical_formula": "Li6.75La3Zr1.75Nb0.25O12",
+      "reduced_formula": "Li27La12Zr7Nb1O48",
+      "material_definitions": [
+        "The LLZTx series is defined by the chemical formula Li7-xLa3Zr2-xTaxO12.",
+        "Samples were synthesized by calcining at 900\u00B0C followed by sintering at various temperatures to achieve relative densities above 91%.",
+        "The end-member Li7La3Zr2O12 possesses a tetragonal structure, which converts to cubic symmetry upon Ta substitution (x > 0).",
+        "Lithium ionic conductivity in these garnets is governed by the lithium ion concentration and mobility on octahedral sites.",
+        "Cubic phase lattice parameters decrease linearly with increasing tantalum content, consistent with Vegard's law."
+      ],
+      "raw_conductivity": "9.5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.00095,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00B0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Cited from reference 26."
+      ]
+    },
+    {
+      "raw_composition": "cubic Li7La3Zr2O12",
+      "canonical_formula": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "material_definitions": [
+        "The LLZTx series is defined by the chemical formula Li7-xLa3Zr2-xTaxO12.",
+        "Samples were synthesized by calcining at 900\u00B0C followed by sintering at various temperatures to achieve relative densities above 91%.",
+        "The end-member Li7La3Zr2O12 possesses a tetragonal structure, which converts to cubic symmetry upon Ta substitution (x > 0).",
+        "Lithium ionic conductivity in these garnets is governed by the lithium ion concentration and mobility on octahedral sites.",
+        "Cubic phase lattice parameters decrease linearly with increasing tantalum content, consistent with Vegard's law."
+      ],
+      "raw_conductivity": "5e-4",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.0005,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00B0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Cited from reference 10."
+      ]
+    },
+    {
+      "raw_composition": "Li6La2BaTa2O12",
+      "canonical_formula": "Li6La2BaTa2O12",
+      "reduced_formula": "Li6La2Ba1Ta2O12",
+      "material_definitions": [
+        "The LLZTx series is defined by the chemical formula Li7-xLa3Zr2-xTaxO12.",
+        "Samples were synthesized by calcining at 900\u00B0C followed by sintering at various temperatures to achieve relative densities above 91%.",
+        "The end-member Li7La3Zr2O12 possesses a tetragonal structure, which converts to cubic symmetry upon Ta substitution (x > 0).",
+        "Lithium ionic conductivity in these garnets is governed by the lithium ion concentration and mobility on octahedral sites.",
+        "Cubic phase lattice parameters decrease linearly with increasing tantalum content, consistent with Vegard's law."
+      ],
+      "raw_conductivity": "4.3e-5",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 4.3e-05,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "\u00B0C",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "low",
+      "warnings": [
+        "Cited from reference 27."
+      ]
     }
   ]
 }
-- Combined Measurements: 16
 
 
 [TABLE DEBUG] Unknown: No caption found:
-- Response: {
-  "measurements": [
-    {
-      "raw_composition": "x=0.2",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "7.3",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00073,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.25",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "6.3",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00063,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.3",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "6.9",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00069,
-      "raw_temperature": "1100",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1100,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.35",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "4.6",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00046,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.4",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "4.7",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00047,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.45",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "4.0",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.0004,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=0.5",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "2.8",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00028,
-      "raw_temperature": "1130",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1130,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=1",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "3.5",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.00035,
-      "raw_temperature": "1100",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1100,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "x=2",
-      "canonical_formula": null,
-      "material_definitions": [
-        "A series of materials where the composition is varied by the parameter x, as listed in the table header."
-      ],
-      "raw_conductivity": "0.34",
-      "raw_conductivity_unit": "10^-4 S/cm",
-      "normalized_conductivity": 0.000034,
-      "raw_temperature": "1230",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 1230,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "table",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
+- Response: {"measurements":[{"raw_composition":"x = 0.2","raw_conductivity":"7.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00078,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.2","raw_conductivity":"7.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00073,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"8.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00088,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"6.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00063,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"9.6","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00096,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"6.9","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00069,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.35","raw_conductivity":"7.7","raw_conductivity_unit":"
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[{"raw_composition":"x = 0.2","raw_conductivity":"7.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00078,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.2","raw_conductivity":"7.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00073,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"8.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00088,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"6.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00063,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"9.6","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00096,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"6.9","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00069,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.35","raw_conductivity":"7.7","raw_conductivity_unit":"
+
+
+[TABLE DEBUG] Unknown: No caption found:
+- Response: {"measurements":[{"raw_composition":"x = 0.2","raw_conductivity":"7.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00078,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.2","raw_conductivity":"7.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00073,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"8.8","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00088,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.25","raw_conductivity":"6.3","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00063,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"9.6","raw_conductivity_unit":"10-4 S/cm","normalized_conductivity":0.00096,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.3","raw_conductivity":"6.9","raw_conductivity_unit":"10^-4 S/cm","normalized_conductivity":0.00069,"raw_temperature":"room temperature","raw_temperature_unit":"Celsius","normalized_temperature_c":25,"source":"table","confidence":"high","warnings":["Temperature row in table likely refers to sintering temperature; room temperature assumed for conductivity measurements as per instructions."]},{"raw_composition":"x = 0.35","raw_conductivity":"7.7","raw_conductivity_unit":"

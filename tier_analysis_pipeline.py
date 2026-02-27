@@ -43,6 +43,9 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
+# Model constants
+REPORT_MODEL = "gemini-3.1-pro-preview"
+
 # ============================================================================
 # Reference Conductivity Lookup Table
 # ============================================================================
@@ -50,7 +53,7 @@ logger = logging.getLogger(__name__)
 # These are fallbacks; data-driven values from the dataset override when available.
 
 REFERENCE_CONDUCTIVITIES = {
-    # Polymers (neat, no salt — baseline for EMT)
+    # Polymers (polymer+salt baseline for EMT — values represent typical polymer+salt conductivity)
     "PEO":  {"rt": 1e-6, "60c": 5e-4,
              "keywords": ["peo", "polyethylene oxide"],
              "exclude":  ["llzo", "latp", "lagp", "al2o3", "sio2", "filler", "composite", "wt%", "vol%"]},
@@ -108,7 +111,11 @@ class TierAnalysisReport(BaseModel):
 
 def load_and_consolidate(input_dir: Path) -> pd.DataFrame:
     """Recursively load all *_extracted.json files and consolidate into a DataFrame."""
-    json_files = list(input_dir.glob("**/*_extracted.json"))
+    try:
+        json_files = list(input_dir.glob("**/*_mapped.json"))
+    except:
+        json_files = list(input_dir.glob("**/*_extracted.json"))
+
     if not json_files:
         logger.error(f"No JSON files found in {input_dir}")
         return pd.DataFrame()
@@ -122,6 +129,8 @@ def load_and_consolidate(input_dir: Path) -> pd.DataFrame:
                 data = json.load(f)
             
             doc_name = data.get("doc_name", jf.stem)
+            mapping_meta = data.get("mapping_metadata", {})
+            mapping_model = mapping_meta.get("mapping_model", "none")
             
             for m in data.get("measurements", []):
                 # Basic validation
@@ -139,6 +148,8 @@ def load_and_consolidate(input_dir: Path) -> pd.DataFrame:
                     "conductivity": float(cond),
                     "temperature": float(temp),
                     "processing_method": m.get("processing_method", "not reported"),
+                    "processing_method_detail": m.get("processing_method_detail", ""),
+                    "mapping_model": mapping_model,
                     "source": m.get("source", "unknown"),
                     "confidence": m.get("confidence", "low"),
                     "material_definitions": "; ".join(m.get("material_definitions", [])),
@@ -162,8 +173,8 @@ def load_and_consolidate(input_dir: Path) -> pd.DataFrame:
     df["is_cited"] = df["source"].astype(str).str.lower().str.startswith("cited")
     
     # 3. Clean numeric data
-    df = df[df["conductivity"] > 0]
-    df = df[df["conductivity"] < 100] # logical upper bound
+    # df = df[df["conductivity"] > 0]
+    df = df[df["conductivity"] <= 1.0] # Remove suspiciously high (>1 S/cm)
     
     # 4. Filter for Room Temperature (15-30C)
     df = df[df["temperature"].between(15, 30)]
@@ -190,9 +201,12 @@ def parse_composition_info(row: pd.Series) -> Dict[str, Any]:
     info = {
         "is_composite": False,
         "polymer": None,
+        "all_polymers": [],
+        "is_blend": False,
         "filler": None,
         "filler_fraction": 0.0,
         "fraction_unit": None, # 'wt%' or 'vol%'
+        "fraction_assumed": False,
         "material_family": "Other"
     }
     
@@ -218,7 +232,9 @@ def parse_composition_info(row: pd.Series) -> Dict[str, Any]:
     found_polymers = [name for k, name in polymers.items() if k in combined]
     
     if found_polymers:
-        info["polymer"] = found_polymers[0] # Take first match
+        info["all_polymers"] = found_polymers
+        info["polymer"] = found_polymers[0]  # Primary match for EMT
+        info["is_blend"] = len(found_polymers) > 1
         if info["material_family"] == "Other":
             info["material_family"] = "Polymer"
             
@@ -237,10 +253,10 @@ def parse_composition_info(row: pd.Series) -> Dict[str, Any]:
         info["fraction_unit"] = "vol%"
     elif info["polymer"] and info["filler"] and info["material_family"] != "Polymer":
         # It has both polymer and filler but no explicit % found in title
-        # It's likely a composite, but we don't know the fraction. 
-        # Mark as composite but fraction 0 (will skip EMT calculation but keep classification)
+        # Mark as composite but fraction unknown — tier will be flagged as uncertain
         info["is_composite"] = True
-        
+        info["fraction_assumed"] = True
+
     return info
 
 def get_reference_conductivity(df: pd.DataFrame, material_type: str, temperature: float, tol: float = 5.0) -> Optional[float]:
@@ -355,37 +371,49 @@ Only return the JSON, nothing else."""
 # Part 3: EMT Calculation & Tier Classification
 # ============================================================================
 
-def calculate_emt_and_tier(row: pd.Series, df_ref: pd.DataFrame, 
+def calculate_emt_and_tier(row: pd.Series, df_ref: pd.DataFrame,
                            extra_refs: Dict[str, float] = None) -> pd.Series:
     """
     Determine Tier 1/2/3 for a single measurement.
     Supports all polymer-ceramic composites (PEO, PVDF, PAN, PPC, PMMA, ...).
-    
-    Tier 1: σ > σ_EMT  (synergistic — outperforms simple mixing)
-    Tier 2: σ_polymer < σ <= σ_EMT  (rule-of-mixtures behavior)
-    Tier 3: σ < σ_polymer  (detrimental mixing)
+
+    For conducting fillers (σ_filler >= 1e-8):
+        synergy_score = log10(σ_exp / σ_EMT)
+        Tier 1: synergy_score > +0.18  (>1.5× EMT)
+        Tier 3: synergy_score < -0.30  (<0.5× EMT)
+        Tier 2: everything between
+
+    For insulating fillers (σ_filler < 1e-8, e.g. SiO₂, Al₂O₃):
+        Enhancement is relative to neat polymer — filler reduces crystallinity
+        Tier 1: σ_exp > σ_polymer × 3  (meaningful enhancement)
+        Tier 3: σ_exp < σ_polymer × 0.5  (detrimental)
+        Tier 2: everything between
+
+    When filler fraction is unknown, tier is flagged "Tier_uncertain".
     """
     res = pd.Series({
-        "tier": "Unclassified", 
-        "sigma_emt": None, 
+        "tier": "Unclassified",
+        "sigma_emt": None,
         "sigma_polymer": None,
         "sigma_filler_used": None,
-        "improvement_ratio": None
+        "improvement_ratio": None,
+        "synergy_score": None,
+        "insulating_filler": False,
     })
-    
+
     if not row["is_composite"] or not row.get("polymer"):
         return res
-        
+
     polymer_type = row["polymer"]
     filler_type = row.get("filler")
-    
+
     # --- Get polymer baseline conductivity ---
     sigma_poly = get_reference_conductivity(df_ref, polymer_type, row["temperature"])
     if sigma_poly is None and extra_refs:
         sigma_poly = extra_refs.get(polymer_type)
     if sigma_poly is None:
         return res  # Cannot establish baseline
-    
+
     # --- Get filler conductivity ---
     sigma_filler = None
     if filler_type:
@@ -393,31 +421,57 @@ def calculate_emt_and_tier(row: pd.Series, df_ref: pd.DataFrame,
     if sigma_filler is None and filler_type and extra_refs:
         sigma_filler = extra_refs.get(filler_type)
     if sigma_filler is None:
-        # Conservative fallback: use 1e-4 (typical ceramic filler in composite form)
+        # Conservative fallback: typical conducting ceramic filler
         sigma_filler = 1e-4
-    
-    # --- Calculate EMT (linear rule of mixtures) ---
-    # σ_eff = (1 - φ)σ_poly + φσ_filler
-    phi = row["filler_fraction"]
-    if phi == 0: 
-        phi = 0.1  # Assume typical 10% if fraction unknown
-        
-    sigma_emt = (1 - phi) * sigma_poly + phi * sigma_filler
+
     sigma_exp = row["conductivity"]
-    
+    phi = row["filler_fraction"]
+
+    # --- If fraction is unknown, flag as uncertain and return early ---
+    if phi == 0 or row.get("fraction_assumed", False):
+        res["sigma_polymer"] = sigma_poly
+        res["sigma_filler_used"] = sigma_filler
+        res["tier"] = "Tier_uncertain"
+        return res
+
+    # --- Insulating filler path (σ_filler < 1e-8, e.g. SiO₂, Al₂O₃) ---
+    INSULATING_THRESHOLD = 1e-8
+    if sigma_filler < INSULATING_THRESHOLD:
+        res["insulating_filler"] = True
+        res["sigma_polymer"] = sigma_poly
+        res["sigma_filler_used"] = sigma_filler
+        # EMT for insulating filler is ≈ σ_poly (the φ×σ_filler term vanishes)
+        # So we classify relative to neat polymer instead
+        if sigma_exp > sigma_poly * 3.0:
+            res["tier"] = "Tier 1"   # Meaningful crystallinity disruption / interfacial enhancement
+        elif sigma_exp < sigma_poly * 0.5:
+            res["tier"] = "Tier 3"   # Detrimental — agglomeration or blocking
+        else:
+            res["tier"] = "Tier 2"   # Marginal effect within expected scatter
+        res["improvement_ratio"] = sigma_exp / sigma_poly if sigma_poly > 0 else None
+        return res
+
+    # --- Conducting filler: EMT (linear rule of mixtures) ---
+    # σ_eff = (1 - φ)σ_poly + φσ_filler
+    sigma_emt = (1 - phi) * sigma_poly + phi * sigma_filler
+
     res["sigma_emt"] = sigma_emt
     res["sigma_polymer"] = sigma_poly
     res["sigma_filler_used"] = sigma_filler
     res["improvement_ratio"] = sigma_exp / sigma_emt if sigma_emt > 0 else None
-    
-    # --- Classification ---
-    if sigma_exp > sigma_emt * 1.5:
-        res["tier"] = "Tier 1"  # Outperforms simple mixing
-    elif sigma_exp < sigma_poly * 0.5:
-        res["tier"] = "Tier 3"  # Worse than pure polymer
-    else:
-        res["tier"] = "Tier 2"  # Intermediate / mixing behavior
-        
+
+    # --- Synergy score on a consistent log scale ---
+    if sigma_emt > 0 and sigma_exp > 0:
+        synergy_score = np.log10(sigma_exp / sigma_emt)
+        res["synergy_score"] = synergy_score
+
+        if synergy_score > 0.18:       # >1.5× EMT
+            res["tier"] = "Tier 1"
+        elif synergy_score < -0.30:    # <0.5× EMT
+            res["tier"] = "Tier 3"
+        else:
+            res["tier"] = "Tier 2"
+
     return res
 
 # ============================================================================
@@ -429,8 +483,9 @@ def generate_plots(df: pd.DataFrame, output_dir: Path):
     
     # 1. Tier Distribution
     tier_counts = df["tier"].value_counts()
-    if "Unclassified" in tier_counts:
-        tier_counts = tier_counts.drop("Unclassified")
+    for label in ["Unclassified", "Tier_uncertain"]:
+        if label in tier_counts:
+            tier_counts = tier_counts.drop(label)
         
     plt.figure(figsize=(8, 6))
     colors = {"Tier 1": "#2ecc71", "Tier 2": "#f1c40f", "Tier 3": "#e74c3c"}
@@ -445,20 +500,24 @@ def generate_plots(df: pd.DataFrame, output_dir: Path):
     
     # 2. Conductivity vs EMT
     plt.figure(figsize=(10, 8))
-    subset = df[df["tier"].isin(["Tier 1", "Tier 2", "Tier 3"])]
-    
+    subset = df[df["tier"].isin(["Tier 1", "Tier 2", "Tier 3"]) & df["sigma_emt"].notna()]
+
     for tier in ["Tier 1", "Tier 2", "Tier 3"]:
         d = subset[subset["tier"] == tier]
-        plt.scatter(d["sigma_emt"], d["conductivity"], 
+        plt.scatter(d["sigma_emt"], d["conductivity"],
                     label=f"{tier} (n={len(d)})", color=colors[tier], alpha=0.7)
-                    
-    # Diagonal line
+
+    # Diagonal line + ±0.5-decade shaded Tier 2 band
     lims = [
         min(subset["sigma_emt"].min(), subset["conductivity"].min()) * 0.5,
         max(subset["sigma_emt"].max(), subset["conductivity"].max()) * 2
     ]
-    plt.plot(lims, lims, 'k--', alpha=0.5, label="Effective Medium Theory (Ideal Mixing)")
-    
+    x_line = np.array(lims)
+    plt.plot(x_line, x_line, 'k--', alpha=0.7, label="EMT (Ideal Mixing, 1:1)")
+    # Tier 2 zone: synergy score in [-0.30, +0.18] → factor 0.5× to 1.5× of EMT
+    plt.fill_between(x_line, x_line * 0.5, x_line * 10**0.18,
+                     alpha=0.10, color="#f1c40f", label="Tier 2 zone (0.5×–1.5× EMT)")
+
     plt.xscale("log")
     plt.yscale("log")
     plt.xlabel("Predicted Conductivity (EMT) [S/cm]")
@@ -567,18 +626,22 @@ def analyze_feature_importance(df: pd.DataFrame, output_dir: Path):
     if len(X) < 50:
         logger.warning("Not enough data for RF analysis")
         return
-        
-    # Model
+
+    # Train/test split to get honest out-of-sample R²
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
     rf = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
-    rf.fit(X, y)
-    
+    rf.fit(X_train, y_train)
+    oos_r2 = rf.score(X_test, y_test)
+    logger.info(f"  RF out-of-sample R² = {oos_r2:.3f} (n_test={len(X_test)})")
+
     # Plot
     importances = rf.feature_importances_
     indices = np.argsort(importances)[::-1]
     top_n = min(10, len(X.columns))
-    
+
     plt.figure(figsize=(10, 6))
-    plt.title("Feature Importance for Log(Conductivity)")
+    plt.title(f"Feature Importance for Log(Conductivity)\n(out-of-sample R² = {oos_r2:.3f})")
     plt.barh(range(top_n), importances[indices][:top_n], align="center", color="#3498db")
     plt.yticks(range(top_n), [X.columns[i] for i in indices][:top_n])
     plt.xlabel("Relative Importance")
@@ -605,42 +668,58 @@ def generate_llm_report(df: pd.DataFrame, output_dir: Path):
     client = genai.Client(api_key=api_key)
     
     # Prepare data summary
-    # Sample Top Tier 1 examples
     tier1 = df[df["tier"] == "Tier 1"].nlargest(20, "conductivity")
+    tier2 = df[df["tier"] == "Tier 2"].sample(min(10, (df["tier"] == "Tier 2").sum()), random_state=42)
     tier3 = df[df["tier"] == "Tier 3"].nsmallest(10, "conductivity")
-    
-    # Format for prompt
-    def format_rows(d):
-        return d[["raw_composition", "conductivity", "temperature", "processing_method", "sigma_emt"]].to_string()
-        
+
+    cols = ["raw_composition", "conductivity", "sigma_emt", "synergy_score",
+            "processing_method", "material_family"]
+
+    def format_md_table(d: pd.DataFrame) -> str:
+        d = d[[c for c in cols if c in d.columns]].copy()
+        for num_col in ["conductivity", "sigma_emt", "synergy_score"]:
+            if num_col in d.columns:
+                d[num_col] = d[num_col].apply(
+                    lambda v: f"{v:.2e}" if pd.notna(v) else "N/A"
+                )
+        try:
+            return d.to_markdown(index=False)
+        except ImportError:
+            return d.to_string(index=False)
+
     prompt = f"""
-    You are an expert battery scientist analyzing solid-state electrolyte data.
-    We have classified data into 3 Tiers based on deviation from Effective Medium Theory (EMT).
-    
-    Tier 1: Conductivity HIGHER than EMT prediction (Synergistic effects? Interfacial conduction?)
-    Tier 2: Conductivity adheres to rule-of-mixtures
-    Tier 3: Conductivity LOWER than pure polymer (Blocking effects? Agglomeration?)
-    
-    ## TOP Tier 1 Materials (Success Cases)
-    {format_rows(tier1)}
-    
-    ## Tier 3 Materials (Failure Cases)
-    {format_rows(tier3)}
-    
-    ## Task
-    Analyze these patterns. Why do Tier 1 materials outperform? 
-    Is it specific processing (e.g. nanowires vs particles)? Specific fillers?
-    Generate actionable design rules for achieving Tier 1 performance.
-    """
-    
+You are an expert battery scientist analyzing solid-state electrolyte data.
+We have classified polymer-ceramic composite electrolytes into 3 Tiers based on
+deviation from Effective Medium Theory (EMT). synergy_score = log10(σ_exp / σ_EMT).
+
+Tier 1: synergy_score > +0.18  → Conductivity >1.5× EMT (synergistic)
+Tier 2: −0.30 ≤ synergy_score ≤ +0.18  → Rule-of-mixtures behavior
+Tier 3: synergy_score < −0.30  → Conductivity <0.5× EMT (detrimental)
+
+## TOP Tier 1 Materials (Success Cases, n={len(tier1)})
+{format_md_table(tier1)}
+
+## Sample Tier 2 Materials (Baseline, n={len(tier2)})
+{format_md_table(tier2)}
+
+## Tier 3 Materials (Failure Cases, n={len(tier3)})
+{format_md_table(tier3)}
+
+## Task
+Analyze the contrast between Tier 1 and Tier 2 (not just Tier 1 vs Tier 3).
+What distinguishes a marginal-improvement composite (Tier 2) from a truly synergistic one (Tier 1)?
+Is it specific processing (e.g. nanowires vs particles)? Specific filler families?
+Generate actionable design rules for achieving Tier 1 performance.
+"""
+
     try:
         response = client.models.generate_content(
-            model="gemini-3-pro-preview",
+            model=REPORT_MODEL,
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=TierAnalysisReport,
-                temperature=1.0
+                temperature=0.35 if "2.5" in REPORT_MODEL else 1.0
             )
         )
         

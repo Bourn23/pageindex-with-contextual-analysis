@@ -3,29 +3,59 @@
 --- [Document] two-dimensional_substitution_toward_a_better_understanding_of_the_structure_transport_correlations_in_the_li-superionic_thio-lisicons.md ---
 
 
+[DEBUG] 1. INTRODUCTION:
+- Response length: 1555 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=428 candidates_tokens_details=None prompt_token_count=1921 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1921
+)] thoughts_token_count=3880 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6229 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li4-xGe1-xPxS4",
+      "canonical_formula": "Li4-xGe1-xPxS4",
+      "reduced_formula": null,
+      "material_definitions": [
+        "The thio-LISICON family of solid electrolytes is derived from oxide-based LISICON materials, substituting the oxide with a softer, more polarizable sulfide anionic sublattice.",
+        "These materials follow the general unit formula LixMS4, where the arrangement of isolated polyanionic MCh4 groups depends on temperature and composition.",
+        "At room temperature, the MCh4 moieties typically form a hexagonal close packed (hcp) anionic sublattice with various lithium-occupied voids.",
+        "Aliovalent substitutions of the central M4+ element (Ge, Sn, Si) with trivalent (Ga, Al) or pentavalent (P, As, Sb) elements are used to enhance ionic conductivity.",
+        "The Li4-xGe1-xPxS4 solid solution exhibits a high ionic conductivity of approximately 2e-3 S/cm, which led to the discovery of the highly conductive Li10GeP2S12 phase."
+      ],
+      "raw_conductivity": "2e-3",
+      "raw_conductivity_unit": "S/cm",
+      "normalized_conductivity": 0.002,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "room temperature",
+      "normalized_temperature_c": 25,
+      "source_figure_id": null,
+      "source_caption": null,
+      "source": "text",
+      "confidence": "high",
+      "warnings": [
+        "Temperature value '25' inferred from the mention of 'room temperature' in the context of high ionic conductivity."
+      ]
+    }
+  ]
+}
+
+
 [DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=255 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=255 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=255
-)] thoughts_token_count=69 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=334 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=4710 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4970 traffic_type=None
+- chars: {"measurements":[]}
 
 
-[DEBUG] Abstract / Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+[DEBUG] 5. CONCLUSIONS:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=669 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=406
-)] cached_content_token_count=406 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=700 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=700
-)] thoughts_token_count=654 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1364 traffic_type=None
-- chars: {
-  "measurements": []
-}
+  token_count=669
+)] thoughts_token_count=1662 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2336 traffic_type=None
+- chars: {"measurements":[]}
 
 
 [DEBUG] 2. EXPERIMENTAL SECTION:
@@ -33,10 +63,79 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2185 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=2185
-)] thoughts_token_count=884 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3079 traffic_type=None
+)] thoughts_token_count=7863 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10058 traffic_type=None
 - chars: {
   "measurements": []
 }
+
+
+[DEBUG] Abstract / Introduction:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=700 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=700
+)] thoughts_token_count=7863 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8573 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **5** Supporting Information:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=412 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=412
+)] thoughts_token_count=1189 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1611 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] Notes:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=241 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=241
+)] thoughts_token_count=375 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=622 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] **Corresponding Author**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=301 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=301
+)] thoughts_token_count=1004 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1310 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] ■ ACKNOWLEDGMENTS:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=325 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=325
+)] thoughts_token_count=199 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=534 traffic_type=None
+- chars: {
+  "measurements": []
+}
+
+
+[DEBUG] **Authors**:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=540 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=540
+)] thoughts_token_count=1482 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2028 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] 3. RESULTS:
+- Response length: 1280 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=312 candidates_tokens_details=None prompt_token_count=7602 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=7602
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=15774 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li4SnS4","canonical_formula":"Li4SnS4","reduced_formula":"Li4S4Sn","material_definitions":["Solid solutions within the Li4Ge(1-x)SnxS(4-y)Sey series were synthesized to study the correlation between composition, structural changes, and ionic mobility in the thio-LISICON family.","All compounds in the series crystallize in the orthorhombic Pnma space group (no. 62) and obey Vegard's law.","Lithium ions are distributed throughout the solid solution series with 75% in tetrahedral sites and 25% in octahedral interstices.","The structural transition between the end-members involves a repositioning of Li(1) sites and the activation of three-dimensional conduction pathways.","Cationic and anionic substitutions significantly influence the lithium polyhedral volumes and transport properties independently of carrier concentration."],"raw_conductivity":"7e-5","raw_conductivity_unit":"S/cm","normalized_conductivity":0.00007,"raw_temperature":"25","raw_temperature_unit":"room-temperature","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"low","warnings":["Value cited from Kaib et al. for comparison with measured samples."]},{"raw_composition":"Li4SnSe4","canonical_formula":"Li4SnSe
 
 
 [DEBUG] 4. DISCUSSION:
@@ -44,1044 +143,84 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2111 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=2111
-)] thoughts_token_count=817 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2938 traffic_type=None
+)] thoughts_token_count=7794 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9915 traffic_type=None
 - chars: {
   "measurements": []
 }
-
-
-[DEBUG] **Corresponding Author**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=225
-)] cached_content_token_count=225 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=301 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=301
-)] thoughts_token_count=145 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=456 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 5. CONCLUSIONS:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=395
-)] cached_content_token_count=395 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=669 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=669
-)] thoughts_token_count=556 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1235 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **5** Supporting Information:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=286
-)] cached_content_token_count=286 candidates_token_count=6 candidates_tokens_details=None prompt_token_count=412 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=412
-)] thoughts_token_count=534 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=952 traffic_type=None
-- chars: {"measurements": []}
-
-
-[DEBUG] **Authors**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=344
-)] cached_content_token_count=344 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=540 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=540
-)] thoughts_token_count=280 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=830 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Notes:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=189
-)] cached_content_token_count=189 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=241 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=241
-)] thoughts_token_count=244 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=495 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] ■ ACKNOWLEDGMENTS:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=239
-)] cached_content_token_count=239 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=325 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=325
-)] thoughts_token_count=245 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=580 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 1. INTRODUCTION:
-- Response length: 1156 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=658
-)] cached_content_token_count=658 candidates_token_count=310 candidates_tokens_details=None prompt_token_count=1921 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1921
-)] thoughts_token_count=1760 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3991 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li4-xGe1-xPxS4 solid solution",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The Li4-xGe1-xPxS4 solid solution is formed through aliovalent substitution of a pentavalent element (P) for the tetravalent M cation (Ge) in the Li4MS4 thio-LISICON structure.",
-        "The resulting compounds have mixed compositions (either lithium excess or deficient) which impact transport properties.",
-        "This specific solid solution is referenced as resulting in the highest ionic conductivity among these specific solid electrolytes."
-      ],
-      "raw_conductivity": "2e-3",
-      "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 0.002,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "Celsius",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "Temperature (25 Celsius) is inferred as standard room temperature, typical for reporting 'highest ionic conductivity' values from cited literature."
-      ]
-    }
-  ]
-}
-
-
-[DEBUG] page_0_picture_1.jpeg:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1695 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=641
-), ModalityTokenCount(
-  modality=<MediaModality.IMAGE: 'IMAGE'>,
-  token_count=1054
-)] thoughts_token_count=134 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1835 traffic_type=None
-- chars: {"measurements": []}
 
 
 [DEBUG] 3. RESULTS:
-- Response length: 2192 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=898
-)] cached_content_token_count=898 candidates_token_count=631 candidates_tokens_details=None prompt_token_count=7602 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 3747 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=953 candidates_tokens_details=None prompt_token_count=7602 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=7602
-)] thoughts_token_count=3141 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11374 traffic_type=None
+)] thoughts_token_count=5842 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=14397 traffic_type=None
 - chars: {
   "measurements": [
     {
       "raw_composition": "Li4SnS4",
       "canonical_formula": "Li4SnS4",
+      "reduced_formula": "Li4S4Sn",
       "material_definitions": [
-        "Solid solutions within Li4Ge(1-x)Sn(x)S(4-nu)Se(nu) were synthesized to study ionic mobility in the thio-LISICON family.",
-        "All compounds crystallize in the orthorhombic Pnma space group (no. 62).",
-        "The series involves isovalent substitutions of Ge by Sn and S by Se, resulting in a linear increase of lattice volume.",
-        "Ionic transport was characterized using temperature-dependent impedance spectroscopy between 283 K and 333 K."
+        "Solid solutions within the quaternary series Li4Ge(1-x)SnxS(4-y)Sey were synthesized to explore the relationship between composition, anionic framework structure, and lithium ionic mobility.",
+        "The materials crystallize in an orthorhombic Pnma space group, where isovalent substitutions of Ge by Sn and S by Se result in unit cell expansion following Vegard's law.",
+        "Structural characterization was performed using high-resolution neutron powder diffraction and Rietveld refinement to determine lithium site occupancies and polyhedral connectivity.",
+        "Ionic transport properties were investigated via temperature-dependent impedance spectroscopy and 7Li NMR spin-lattice relaxation experiments across the solid solution series.",
+        "The lithium substructure consists of a fixed ratio of 75% tetrahedral and 25% octahedral site occupancy, with transport pathways sensitive to local polyhedral volumes and disorder."
       ],
       "raw_conductivity": "7e-5",
       "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 7e-5,
-      "raw_temperature": "null",
-      "raw_temperature_unit": "Room Temperature",
-      "normalized_temperature_c": null,
+      "normalized_conductivity": 0.00007,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
       "source_figure_id": null,
-      "source_caption": null,
+      "source_caption": "The herein observed ionic conductivities for Li4SnS4 and Li4SnSe4 are significantly lower compared with the values reported by Kaib et al. (7 * 10^-5 and 2 * 10^-5 S/cm relative to Li4SnS4 and Li4SnSe4, respectively).",
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value cited from Kaib et al. for comparison.",
-        "Temperature is specified as Room Temperature."
+        "The value is cited from Kaib et al. for comparison and refers to a literature measurement rather than the primary sample measurement in this text."
       ]
     },
     {
       "raw_composition": "Li4SnSe4",
       "canonical_formula": "Li4SnSe4",
+      "reduced_formula": "Li4Se4Sn",
       "material_definitions": [
-        "Solid solutions within Li4Ge(1-x)Sn(x)S(4-nu)Se(nu) were synthesized to study ionic mobility in the thio-LISICON family.",
-        "All compounds crystallize in the orthorhombic Pnma space group (no. 62).",
-        "The series involves isovalent substitutions of Ge by Sn and S by Se, resulting in a linear increase of lattice volume.",
-        "Ionic transport was characterized using temperature-dependent impedance spectroscopy between 283 K and 333 K."
+        "Solid solutions within the quaternary series Li4Ge(1-x)SnxS(4-y)Sey were synthesized to explore the relationship between composition, anionic framework structure, and lithium ionic mobility.",
+        "The materials crystallize in an orthorhombic Pnma space group, where isovalent substitutions of Ge by Sn and S by Se result in unit cell expansion following Vegard's law.",
+        "Structural characterization was performed using high-resolution neutron powder diffraction and Rietveld refinement to determine lithium site occupancies and polyhedral connectivity.",
+        "Ionic transport properties were investigated via temperature-dependent impedance spectroscopy and 7Li NMR spin-lattice relaxation experiments across the solid solution series.",
+        "The lithium substructure consists of a fixed ratio of 75% tetrahedral and 25% octahedral site occupancy, with transport pathways sensitive to local polyhedral volumes and disorder."
       ],
       "raw_conductivity": "2e-5",
       "raw_conductivity_unit": "S/cm",
-      "normalized_conductivity": 2e-5,
-      "raw_temperature": "null",
-      "raw_temperature_unit": "Room Temperature",
-      "normalized_temperature_c": null,
+      "normalized_conductivity": 0.00002,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
       "source_figure_id": null,
-      "source_caption": null,
+      "source_caption": "The herein observed ionic conductivities for Li4SnS4 and Li4SnSe4 are significantly lower compared with the values reported by Kaib et al. (7 * 10^-5 and 2 * 10^-5 S/cm relative to Li4SnS4 and Li4SnSe4, respectively).",
       "source": "text",
       "confidence": "low",
       "warnings": [
-        "Value cited from Kaib et al. for comparison.",
-        "Temperature is specified as Room Temperature."
+        "The value is cited from Kaib et al. for comparison and refers to a literature measurement rather than the primary sample measurement in this text."
       ]
     }
   ]
 }
 
 
-[DEBUG] page_0_figure_7.jpeg:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1750 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=652
-), ModalityTokenCount(
-  modality=<MediaModality.IMAGE: 'IMAGE'>,
-  token_count=1098
-)] thoughts_token_count=164 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1920 traffic_type=None
-- chars: {"measurements": []}
-
-
-[SCI-FIGURE DEBUG] page_2_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "y in Li4MS4-ySey",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Unit cell volume / \u00853",
-        "unit": "\u00853",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        45,
-        55,
-        935,
-        475
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li4Ge1-xSnxCh4",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Unit cell volume / \u00853",
-        "unit": "\u00853",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        45,
-        545,
-        935,
-        965
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_1_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Composition",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Composition",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        75,
-        30,
-        966,
-        454
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "a",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "c",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        80,
-        461,
-        843,
-        956
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_4_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "y in Li4MS4-ySey",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "LiChx volume / \u00c5\u00b3",
-        "unit": "\u00c5\u00b3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        62,
-        933,
-        485
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li4Ge1-xSnxCh4",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "LiChx volume / \u00c5\u00b3",
-        "unit": "\u00c5\u00b3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        550,
-        933,
-        985
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_3_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "y in Li4MS4-ySey",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "MCh4 volume / \u00c53",
-        "unit": "\u00c53",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        43,
-        50,
-        383,
-        499
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "x in Li4Ge1-xSnxCh4",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "MCh4 volume / \u00c53",
-        "unit": "\u00c53",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        43,
-        529,
-        383,
-        975
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Calculated dCM-Ch / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Experimental dEM-Ch / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        542,
-        49,
-        970,
-        499
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Average ionic radius Rmean / \u00c5",
-        "unit": "\u00c5",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "MCh4 volume / \u00c53",
-        "unit": "\u00c53",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        542,
-        542,
-        970,
-        975
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
 [SCI-FIGURE DEBUG] page_10_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "LiChx volume / \u00c5\u00b3",
-        "unit": "\u00c5\u00b3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "\u03c3RT / S cm\u207b\u00b9",
-        "unit": "S cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        23,
-        55,
-        348,
-        844
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "LiChx volume / \u00c5\u00b3",
-        "unit": "\u00c5\u00b3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        347,
-        56,
-        668,
-        844
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "LiChx volume / \u00c5\u00b3",
-        "unit": "\u00c5\u00b3",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EANMR / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "Attempt frequency / s\u207b\u00b9",
-        "unit": "s\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "box_2d": [
-        668,
-        54,
-        996,
-        988
-      ],
-      "label": "c"
-    }
-  ]
-}
-- Combined Measurements: 16
-
-
-[SCI-FIGURE DEBUG] page_5_figure_7.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        25,
-        240,
-        345,
-        550
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        25,
-        645,
-        345,
-        975
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        440,
-        25,
-        835,
-        550
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "left_y_axis": {
-        "title": "N/A",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "unknown"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        440,
-        645,
-        835,
-        975
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_4_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Li4SnS4-ySey, Li4Ge1-xSnxS4, Li4GeS4-ySey, Li4Ge1-xSnxSe4",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Lithium distribution / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        35,
-        45,
-        315,
-        960
-      ],
-      "label": "a"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_10_picture_6.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Steric hindrance",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "none",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        112,
-        45,
-        437,
-        310
-      ],
-      "label": "top_left"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Optimal size",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "none",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        105,
-        345,
-        437,
-        610
-      ],
-      "label": "top_middle"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Under-coordination",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "none",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        63,
-        660,
-        437,
-        935
-      ],
-      "label": "top_right"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Jump distance",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA",
-        "unit": null,
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        529,
-        42,
-        949,
-        315
-      ],
-      "label": "bottom_left"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Jump distance",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA",
-        "unit": null,
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        529,
-        342,
-        949,
-        620
-      ],
-      "label": "bottom_middle"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Jump distance",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA",
-        "unit": null,
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        529,
-        663,
-        949,
-        966
-      ],
-      "label": "bottom_right"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_7_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "1000/T / K-1",
-        "unit": "K-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log10(1/T1(p)) / s-1",
-        "unit": "s-1",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        18,
-        14,
-        485,
-        495
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "1000/T / K-1",
-        "unit": "K-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log10(1/T1(p)) / s-1",
-        "unit": "s-1",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        18,
-        505,
-        485,
-        985
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "1000/T / K-1",
-        "unit": "K-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log10(1/T1(p)) / s-1",
-        "unit": "s-1",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        508,
-        14,
-        978,
-        495
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "1000/T / K-1",
-        "unit": "K-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "log10(1/T1(p)) / s-1",
-        "unit": "s-1",
-        "quantity_type": "other",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        508,
-        505,
-        978,
-        985
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
+- Total subplots detected: 3
+- Valid subplots: 1
+- Measurements extracted: 16
+  • a: X=stoichiometry, Y=conductivity
 
 
 [SCI-FIGURE DEBUG] page_6_figure_1.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
-        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z)\u00b7d\u207b\u00b9 / k\u03a9\u00b7cm\u207b\u00b9",
-        "unit": "k\u03a9\u00b7cm\u207b\u00b9",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        15,
-        15,
-        360,
-        485
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000\u00b7T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "ln(\u03c3\u00b7T) / ln(K\u00b7S\u00b7cm\u207b\u00b9)",
-        "unit": "K\u00b7S\u00b7cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        15,
-        515,
-        360,
-        985
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "Li\u2084SnS\u2084\u208bySey, Li\u2084Ge\u2081\u208bxSn\u2093S\u2084, Li\u2084GeS\u2084\u208bySey, Li\u2084Ge\u2081\u208bxSn\u2093Se\u2084",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "\u03c3RT / S cm\u207b\u00b9",
-        "unit": "S cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        375,
-        15,
-        685,
-        985
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Li\u2084SnS\u2084\u208bySey, Li\u2084Ge\u2081\u208bxSn\u2093S\u2084, Li\u2084GeS\u2084\u208bySey, Li\u2084Ge\u2081\u208bxSn\u2093Se\u2084",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        700,
-        15,
-        988,
-        985
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 42
+- Total subplots detected: 4
+- Valid subplots: 2
+- Measurements extracted: 42
+  • b: X=temperature_inverse, Y=conductivity
+  • c: X=stoichiometry, Y=conductivity

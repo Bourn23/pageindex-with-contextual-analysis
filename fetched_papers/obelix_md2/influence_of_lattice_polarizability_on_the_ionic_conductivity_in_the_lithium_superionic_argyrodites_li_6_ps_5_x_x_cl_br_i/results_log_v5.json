@@ -3,70 +3,250 @@
 --- [Document] influence_of_lattice_polarizability_on_the_ionic_conductivity_in_the_lithium_superionic_argyrodites_li_6_ps_5_x_x_cl_br_i.md ---
 
 
-[DEBUG] Introduction:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] **Abstract**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=473 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=246
-)] thoughts_token_count=71 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=327 traffic_type=None
-- chars: {
-  "measurements": []
-}
+  token_count=473
+)] thoughts_token_count=861 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1339 traffic_type=None
+- chars: {"measurements":[]}
 
 
 [DEBUG] **Just Accepted**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=493 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=493 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=493
-)] thoughts_token_count=150 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=653 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=1484 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1982 traffic_type=None
+- chars: {"measurements":[]}
 
 
-[DEBUG] **Abstract**:
+[DEBUG] 1. Introduction:
 - Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=473 prompt_tokens_details=[ModalityTokenCount(
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1668 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=473
-)] thoughts_token_count=247 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=730 traffic_type=None
+  token_count=1668
+)] thoughts_token_count=3171 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4849 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
 [DEBUG] **On the influence of lattice polarizability on the ionic conductivity in the lithium superionic argyrodites Li<sup>6</sup> PS<sup>5</sup> X (X = Cl, Br, I)**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=392 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 2877 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=745 candidates_tokens_details=None prompt_token_count=392 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=392
-)] thoughts_token_count=292 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=694 traffic_type=None
-- chars: {
-  "measurements": []
-}
+)] thoughts_token_count=4998 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6135 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6PS5Cl","canonical_formula":"Li6PS5Cl","reduced_formula":"Cl1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by solid-state reaction of Li2S, P2S5, and lithium halides.","Synthesis involved ball milling followed by heat treatment in sealed quartz ampoules at 550 °C.","Ionic conductivities were measured by impedance spectroscopy on pellets with a density of at least 95%.","Site disorder between S2- and halide ions was determined using synchrotron X-ray and neutron diffraction.","The lattice polarizability of the halide anions was found to significantly affect the lithium-ion activation energy."],"raw_conductivity":"3.1","raw_conductivity_unit":"mS/cm","normalized_conductivity":0.0031,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li6PS5Br","canonical_formula":"Li6PS5Br","reduced_formula":"Br1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by solid-state reaction of Li2S, P2S5, and lithium halides.","Synthesis involved ball milling followed by heat treatment in sealed quartz ampoules at 550 °C.","Ionic conductivities were measured by impedance spectroscopy on pellets with a density of at least 95%.","Site disorder between S2- and halide ions was determined using synchrotron X-ray and neutron diffraction.","The lattice polarizability of the halide anions was found to significantly affect the lithium-ion activation energy."],"raw_conductivity":"1.1","raw_conductivity_unit":"mS/cm","normalized_conductivity":0.0011,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li6PS5I","canonical_formula":"Li6PS5I","reduced_formula":"I1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by solid-state reaction of Li2S, P2S5, and lithium halides.","Synthesis involved ball milling followed by heat treatment in sealed quartz ampoules at 550 °C.","Ionic conductivities were measured by impedance spectroscopy on pellets with a density of at least 95%.","Site disorder between S2- and halide ions was determined using synchrotron X-ray and neutron diffraction.","The lattice polarizability of the halide anions was found to significantly affect the lithium-ion activation energy."],"raw_conductivity":"4.6e-4","raw_conductivity_unit":"mS/cm","normalized_conductivity":4.6e-7,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]}]}
+
+
+[DEBUG] **2. Experimental Methods**:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=2607 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=2607
+)] thoughts_token_count=4213 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6826 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] On the influence of lattice polarizability on the ionic conductivity in the lithium superionic argyrodites $\text{Li}_6\text{PS}_5\text{X}$ (X = Cl, Br, I):
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=494 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 3133 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=797 candidates_tokens_details=None prompt_token_count=494 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=494
-)] thoughts_token_count=420 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=924 traffic_type=None
+)] thoughts_token_count=6486 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=7777 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li6PS5Cl","canonical_formula":"Li6PS5Cl","reduced_formula":"Cl1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by a combination of ball-milling and subsequent annealing at 550 \u0000C.","All compounds crystallize in the cubic space group F-43m, where the halide and sulfide ions exhibit specific site disorder.","The ionic conductivity in these argyrodites is strongly dependent on the lattice dynamics and the polarizability of the halide anion.","AC impedance spectroscopy was used to determine the total lithium-ion conductivity on cold-pressed pellets.","The structural properties and site occupancies were confirmed using Rietveld refinement of X-ray and neutron diffraction data."],"raw_conductivity":"1.1e-3","raw_conductivity_unit":"S/cm","normalized_conductivity":0.0011,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li6PS5Br","canonical_formula":"Li6PS5Br","reduced_formula":"Br1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by a combination of ball-milling and subsequent annealing at 550 \u0000C.","All compounds crystallize in the cubic space group F-43m, where the halide and sulfide ions exhibit specific site disorder.","The ionic conductivity in these argyrodites is strongly dependent on the lattice dynamics and the polarizability of the halide anion.","AC impedance spectroscopy was used to determine the total lithium-ion conductivity on cold-pressed pellets.","The structural properties and site occupancies were confirmed using Rietveld refinement of X-ray and neutron diffraction data."],"raw_conductivity":"7.0e-4","raw_conductivity_unit":"S/cm","normalized_conductivity":0.0007,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]},{"raw_composition":"Li6PS5I","canonical_formula":"Li6PS5I","reduced_formula":"I1Li6P1S5","material_definitions":["The lithium superionic argyrodites Li6PS5X (X = Cl, Br, I) were synthesized by a combination of ball-milling and subsequent annealing at 550 \u0000C.","All compounds crystallize in the cubic space group F-43m, where the halide and sulfide ions exhibit specific site disorder.","The ionic conductivity in these argyrodites is strongly dependent on the lattice dynamics and the polarizability of the halide anion.","AC impedance spectroscopy was used to determine the total lithium-ion conductivity on cold-pressed pellets.","The structural properties and site occupancies were confirmed using Rietveld refinement of X-ray and neutron diffraction data."],"raw_conductivity":"4.1e-7","raw_conductivity_unit":"S/cm","normalized_conductivity":4.1e-07,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"high","warnings":[]}]}
+
+
+[DEBUG] 5. Conclusion:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=533 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=533
+)] thoughts_token_count=1215 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1754 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] Introduction:
+- Response length: 782 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=258 candidates_tokens_details=None prompt_token_count=246 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=246
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8364 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"Li3.8Mg0.1Ti1.63O4","canonical_formula":"Li3.8Mg0.1Ti1.63O4","reduced_formula":"Li380Mg10O400Ti163","material_definitions":["Spinel-type solid solutions with the general formula Li(4-2x)MgxTi(5-x)/3O4 were prepared using a conventional solid-state reaction.","Precursors used in the synthesis included high-purity Li2CO3, MgO, and TiO2.","The composition Li3.8Mg0.1Ti1.63O4 represents the x = 0.1 substitution level in the series.","The samples were pressed into pellets and sintered at 1100 °C for 12 hours in air."],"raw_conductivity":"1.24e-4","raw_conductivity_unit":"S/cm","normalized_conductivity":0.000124,"raw_temperature":"25","raw_temperature_unit":"C","normalized_temperature_c":25,"source":"text","confidence":"high","warnings":[]}]}
+
+
+[DEBUG] **Supporting Information**:
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=277 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=277
+)] thoughts_token_count=1192 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1475 traffic_type=None
+- chars: {"measurements": []}
+
+
+[DEBUG] 3. Results:
+- Response length: 7660 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=2000 candidates_tokens_details=None prompt_token_count=4131 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=4131
+)] thoughts_token_count=2479 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8610 traffic_type=None
 - chars: {
-  "measurements": []
+  "measurements": [
+    {
+      "raw_composition": "Li6PS5Cl",
+      "canonical_formula": "Li6PS5Cl",
+      "reduced_formula": "Cl1Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5X were synthesized as solid solutions with varying halide ratios (X = Cl, Br, I) to investigate the impact of anion polarizability on lattice stiffness.",
+        "Structural analysis using Rietveld refinement of neutron powder diffraction and X-ray PDF confirmed the face-centered cubic lattice of the anion sublattice.",
+        "All samples contained minor impurities (less than 5 wt%) of Li3PO4 and LiX.",
+        "Ionic conductivity was determined through temperature-dependent impedance spectroscopy using an equivalent circuit to fit the combined bulk and grain boundary response.",
+        "The study identified that increasing halide anion radius leads to lattice softening, which significantly influences the activation energy and pre-exponential factor for Li-ion transport."
+      ],
+      "raw_conductivity": "1.1",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0011,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Figure 6: ... (c) room-temperature ionic conductivities for all compositions of Li6PS5X.",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "Value estimated from Figure 6c plot."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5Cl0.5Br0.5",
+      "canonical_formula": "Li6PS5Cl0.5Br0.5",
+      "reduced_formula": "Br0.5Cl0.5Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5X were synthesized as solid solutions with varying halide ratios (X = Cl, Br, I) to investigate the impact of anion polarizability on lattice stiffness.",
+        "Structural analysis using Rietveld refinement of neutron powder diffraction and X-ray PDF confirmed the face-centered cubic lattice of the anion sublattice.",
+        "All samples contained minor impurities (less than 5 wt%) of Li3PO4 and LiX.",
+        "Ionic conductivity was determined through temperature-dependent impedance spectroscopy using an equivalent circuit to fit the combined bulk and grain boundary response.",
+        "The study identified that increasing halide anion radius leads to lattice softening, which significantly influences the activation energy and pre-exponential factor for Li-ion transport."
+      ],
+      "raw_conductivity": "1.3",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0013,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Figure 6: ... (c) room-temperature ionic conductivities for all compositions of Li6PS5X.",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "Value estimated from Figure 6c plot."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5Br",
+      "canonical_formula": "Li6PS5Br",
+      "reduced_formula": "Br1Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5X were synthesized as solid solutions with varying halide ratios (X = Cl, Br, I) to investigate the impact of anion polarizability on lattice stiffness.",
+        "Structural analysis using Rietveld refinement of neutron powder diffraction and X-ray PDF confirmed the face-centered cubic lattice of the anion sublattice.",
+        "All samples contained minor impurities (less than 5 wt%) of Li3PO4 and LiX.",
+        "Ionic conductivity was determined through temperature-dependent impedance spectroscopy using an equivalent circuit to fit the combined bulk and grain boundary response.",
+        "The study identified that increasing halide anion radius leads to lattice softening, which significantly influences the activation energy and pre-exponential factor for Li-ion transport."
+      ],
+      "raw_conductivity": "1.1",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0011,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Figure 6: ... (c) room-temperature ionic conductivities for all compositions of Li6PS5X.",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "Value estimated from Figure 6c plot."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5Br0.5I0.5",
+      "canonical_formula": "Li6PS5Br0.5I0.5",
+      "reduced_formula": "Br0.5I0.5Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5X were synthesized as solid solutions with varying halide ratios (X = Cl, Br, I) to investigate the impact of anion polarizability on lattice stiffness.",
+        "Structural analysis using Rietveld refinement of neutron powder diffraction and X-ray PDF confirmed the face-centered cubic lattice of the anion sublattice.",
+        "All samples contained minor impurities (less than 5 wt%) of Li3PO4 and LiX.",
+        "Ionic conductivity was determined through temperature-dependent impedance spectroscopy using an equivalent circuit to fit the combined bulk and grain boundary response.",
+        "The study identified that increasing halide anion radius leads to lattice softening, which significantly influences the activation energy and pre-exponential factor for Li-ion transport."
+      ],
+      "raw_conductivity": "0.5",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 0.0005,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Figure 6: ... (c) room-temperature ionic conductivities for all compositions of Li6PS5X.",
+      "source": "figure",
+      "confidence": "high",
+      "warnings": [
+        "Value estimated from Figure 6c plot."
+      ]
+    },
+    {
+      "raw_composition": "Li6PS5I",
+      "canonical_formula": "Li6PS5I",
+      "reduced_formula": "I1Li6P1S5",
+      "material_definitions": [
+        "The Li+ superionic argyrodites Li6PS5X were synthesized as solid solutions with varying halide ratios (X = Cl, Br, I) to investigate the impact of anion polarizability on lattice stiffness.",
+        "Structural analysis using Rietveld refinement of neutron powder diffraction and X-ray PDF confirmed the face-centered cubic lattice of the anion sublattice.",
+        "All samples contained minor impurities (less than 5 wt%) of Li3PO4 and LiX.",
+        "Ionic conductivity was determined through temperature-dependent impedance spectroscopy using an equivalent circuit to fit the combined bulk and grain boundary response.",
+        "The study identified that increasing halide anion radius leads to lattice softening, which significantly influences the activation energy and pre-exponential factor for Li-ion transport."
+      ],
+      "raw_conductivity": "0.001",
+      "raw_conductivity_unit": "mS/cm",
+      "normalized_conductivity": 1e-6,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 6",
+      "source_caption": "Figure 6: ... (c) room-temperature ionic conductivities for all compositions of Li6PS5X.",
+      "source": "figure",
+      "confidence": "medium",
+      "warnings": [
+        "Value is very low on linear scale in Figure 6c, estimated at 0.001 mS/cm."
+      ]
+    }
+  ]
 }
 
 
-[DEBUG] 1. Introduction:
+[DEBUG] **Corresponding Authors**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=257 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=257
+)] thoughts_token_count=1751 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2013 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] **Notes**:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=243
+)] thoughts_token_count=1844 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2092 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] **Table of contents entry**:
 - Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=252 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=519
-)] cached_content_token_count=519 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1668 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1668
-)] thoughts_token_count=784 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2462 traffic_type=None
+  token_count=252
+)] thoughts_token_count=1857 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2119 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -77,493 +257,22 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1889 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1889
-)] thoughts_token_count=691 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2590 traffic_type=None
+)] thoughts_token_count=7861 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9760 traffic_type=None
 - chars: {
   "measurements": []
 }
-
-
-[DEBUG] 5. Conclusion:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=341
-)] cached_content_token_count=341 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=533 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=533
-)] thoughts_token_count=413 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=956 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **2. Experimental Methods**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=2607 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=2607
-)] thoughts_token_count=1016 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3633 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Supporting Information**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=277 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=277
-)] thoughts_token_count=161 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=448 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Corresponding Authors**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=199
-)] cached_content_token_count=199 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=257 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=257
-)] thoughts_token_count=220 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=487 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Table of contents entry**:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=252 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=252
-)] thoughts_token_count=204 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=466 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 3. Results:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=814
-)] cached_content_token_count=814 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=4131 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=4131
-)] thoughts_token_count=1485 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5626 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] **Notes**:
-- Response length: 1486 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=475 candidates_tokens_details=None prompt_token_count=243 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=243
-)] thoughts_token_count=1419 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2137 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "LLZTO",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The study compares pure garnet-type Li-stuffed lanthanum zirconate (LLZTO) with a PEO/LiTFSI-LLZTO composite electrolyte.",
-        "The composite electrolyte PEO/LiTFSI-LLZTO was formed via a simple solvent-casting method."
-      ],
-      "raw_conductivity": "5.0e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.0005,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "PEO/LiTFSI-LLZTO composite electrolyte",
-      "canonical_formula": null,
-      "material_definitions": [
-        "The study compares pure garnet-type Li-stuffed lanthanum zirconate (LLZTO) with a PEO/LiTFSI-LLZTO composite electrolyte.",
-        "The composite electrolyte PEO/LiTFSI-LLZTO was formed via a simple solvent-casting method."
-      ],
-      "raw_conductivity": "2.5e-4",
-      "raw_conductivity_unit": "S cm-1",
-      "normalized_conductivity": 0.00025,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
-[DEBUG] page_0_picture_7.jpeg:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1673 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=623
-), ModalityTokenCount(
-  modality=<MediaModality.IMAGE: 'IMAGE'>,
-  token_count=1050
-)] thoughts_token_count=143 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1822 traffic_type=None
-- chars: {"measurements": []}
-
-
-[SCI-FIGURE DEBUG] page_11_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Lattice parameter a / \u0085",
-        "unit": "\u0085",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        14,
-        23,
-        478,
-        495
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Li occupancy / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        14,
-        510,
-        478,
-        983
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "X-/S2- site disorder / %",
-        "unit": "%",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        503,
-        23,
-        968,
-        495
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Doublet jump triangle surface / \u00852",
-        "unit": "\u00852",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        503,
-        510,
-        968,
-        983
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_18_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Debye frequency vD / Hz",
-        "unit": "Hz",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        20,
-        958,
-        500
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Debye frequency vD / Hz",
-        "unit": "Hz",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Jump frequency v0 / Hz",
-        "unit": "Hz",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        515,
-        958,
-        986
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_9_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "n/a",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "n/a",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        75,
-        45,
-        932,
-        510
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "n/a",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "n/a",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        74,
-        538,
-        935,
-        963
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
 
 
 [SCI-FIGURE DEBUG] page_13_figure_4.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 T-1 / K-1",
-        "unit": "K-1",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "ln(sigmaT) / ln(KScm-1)",
-        "unit": "S cm-1 K",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        26,
-        42,
-        968,
-        494
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Re(Z) / \u0393",
-        "unit": "\u0393",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Im(Z) / \u0393",
-        "unit": "\u0393",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        26,
-        495,
-        968,
-        992
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 40
+- Total subplots detected: 2
+- Valid subplots: 1
+- Measurements extracted: 40
+  • a: X=temperature_inverse, Y=conductivity
 
 
 [SCI-FIGURE DEBUG] page_15_figure_3.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Speed of sound v / ms-1",
-        "unit": "ms-1",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        20,
-        60,
-        345,
-        870
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "EA / eV",
-        "unit": "eV",
-        "quantity_type": "activation_energy",
-        "scale_type": "linear"
-      },
-      "right_y_axis": {
-        "title": "sigma0 / K Scm-1",
-        "unit": "K Scm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "box_2d": [
-        350,
-        60,
-        655,
-        960
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "X in Li6PS5X",
-        "unit": null,
-        "quantity_type": "stoichiometry",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "sigma_RT / Scm-1",
-        "unit": "Scm-1",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        665,
-        60,
-        995,
-        870
-      ],
-      "label": "c"
-    }
-  ]
-}
-- Combined Measurements: 28
+- Total subplots detected: 3
+- Valid subplots: 2
+- Measurements extracted: 20
+  • b: X=stoichiometry, Y=activation_energy
+  • c: X=stoichiometry, Y=conductivity

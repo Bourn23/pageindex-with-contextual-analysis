@@ -251,6 +251,14 @@ class SciFigureParser:
             else:
                  det['xAxisType'] = 'unknown'
 
+        # Inject Usage Metadata
+        if response.usage_metadata:
+            result['_usage_metadata'] = {
+                'prompt_token_count': response.usage_metadata.prompt_token_count,
+                'candidates_token_count': response.usage_metadata.candidates_token_count,
+                'total_token_count': response.usage_metadata.total_token_count
+            }
+
         if self.debug and self.save_debug:
             self._visualize_detection(image_path, result.get('detections', []), query)
 
@@ -316,6 +324,14 @@ class SciFigureParser:
         try:
             result = FigureAnalysis.model_validate_json(response.text)
             result = result.model_dump()
+            
+            # Inject Usage Metadata
+            if response.usage_metadata:
+                result['_usage_metadata'] = {
+                    'prompt_token_count': response.usage_metadata.prompt_token_count,
+                    'candidates_token_count': response.usage_metadata.candidates_token_count,
+                    'total_token_count': response.usage_metadata.total_token_count
+                }
             
         except Exception as e:
             print(f"Error parsing JSON: {e}")
@@ -541,6 +557,14 @@ class SciFigureParser:
 
         result = json.loads(response.text)
         
+        # Inject Usage Metadata
+        if response.usage_metadata:
+            result['_usage_metadata'] = {
+                'prompt_token_count': response.usage_metadata.prompt_token_count,
+                'candidates_token_count': response.usage_metadata.candidates_token_count,
+                'total_token_count': response.usage_metadata.total_token_count
+            }
+        
         if self.debug and self.save_debug:
             self._visualize_extraction(image_path, result)
             
@@ -671,6 +695,14 @@ class SciFigureParser:
             print(f"Error parsing JSON response: {e}")
             result = {}
         
+        # Inject Usage Metadata (even if parsing failed, we paid for tokens)
+        if response.usage_metadata:
+            result['_usage_metadata'] = {
+                'prompt_token_count': response.usage_metadata.prompt_token_count,
+                'candidates_token_count': response.usage_metadata.candidates_token_count,
+                'total_token_count': response.usage_metadata.total_token_count
+            }
+
         if self.debug and self.save_debug:
             self._visualize_extraction(image_path, result)
             

@@ -51,7 +51,7 @@ def save_status(status_path: Path, status_data: Dict[str, Any]):
     with open(status_path, 'w') as f:
         json.dump(status_data, f, indent=2)
 
-def run_batch(parent_dir: str, retry_failed: bool = False, pipeline_script: str = "./run_pipeline_v5.sh"):
+def run_batch(parent_dir: str, retry_failed: bool = False, pipeline_script: str = "./run_pipeline_v5.sh", skip_eval: bool = False):
     parent_path = Path(parent_dir).resolve()
     if not parent_path.exists():
         print(f"Error: Directory not found: {parent_path}")
@@ -122,6 +122,8 @@ def run_batch(parent_dir: str, retry_failed: bool = False, pipeline_script: str 
         # Execute Pipeline
         # We call the shell script with the absolute path of the paper directory
         cmd = [str(pipeline_script_path), str(paper_dir)]
+        if skip_eval:
+            cmd.append("--skip-eval")
         
         try:
             # Run existing shell script
@@ -198,7 +200,8 @@ if __name__ == "__main__":
     parser.add_argument("parent_dir", help="Path to the parent directory containing paper subfolders.")
     parser.add_argument("--retry-failed", action="store_true", help="Retry papers that are marked as failed.")
     parser.add_argument("--pipeline-script", default="./run_pipeline_v5.sh", help="Path to the pipeline script to run.")
+    parser.add_argument("--skip-eval", action="store_true", help="Skip the evaluation step.")
     
     args = parser.parse_args()
     
-    run_batch(args.parent_dir, args.retry_failed, args.pipeline_script)
+    run_batch(args.parent_dir, args.retry_failed, args.pipeline_script, args.skip_eval)

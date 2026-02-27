@@ -203,8 +203,9 @@ def main():
         # "Vision Only (Pro)": "obelix_parsed_v5_vision_only_gemini_3_pro",
         # "Combined (Flash)": "obelix_parsed_v5_combined",
         # "Combined (Flash) + V2": "obelix_parsed_v5_combined_md_v2",
-        "Vision Only (Scaffolding)": "obelix_parsed_v5_vision_only_scaffolding",
-        "Combined (Table, Text, Vision)": "obelix_parsed_v5_combined_table_text_vision"
+        # "Vision Only (Scaffolding)": "obelix_parsed_v5_vision_only_scaffolding",
+        "Combined (Table, Text, Vision)": "obelix_parsed_v5_combined_table_text_vision",
+        "Combined v4": "obelix_parsed_v5_v4"
     }
 
     # Load mappings

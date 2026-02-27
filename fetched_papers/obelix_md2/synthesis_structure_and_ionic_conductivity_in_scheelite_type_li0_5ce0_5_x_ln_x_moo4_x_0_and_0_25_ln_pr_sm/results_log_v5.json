@@ -3,23 +3,21 @@
 --- [Document] synthesis_structure_and_ionic_conductivity_in_scheelite_type_li0_5ce0_5_x_ln_x_moo4_x_0_and_0_25_ln_pr_sm.md ---
 
 
-[DEBUG] 2.3 Phase characterization of LCM, LCPM and LCSM:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1126 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1126
-)] thoughts_token_count=156 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1292 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
 [DEBUG] 2.1 Materials:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=320 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=320 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=320
-)] thoughts_token_count=334 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=664 traffic_type=None
+)] thoughts_token_count=812 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1137 traffic_type=None
+- chars: {"measurements":[]}
+
+
+[DEBUG] 2.2 Synthesis:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=346 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=346
+)] thoughts_token_count=1173 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1529 traffic_type=None
 - chars: {
   "measurements": []
 }
@@ -30,19 +28,90 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=538 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=538
-)] thoughts_token_count=241 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=789 traffic_type=None
+)] thoughts_token_count=476 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1024 traffic_type=None
 - chars: {
   "measurements": []
 }
 
 
-[DEBUG] 2.2 Synthesis:
-- Response length: 20 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=346 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] Abstract / Introduction:
+- Response length: 3120 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1075 candidates_tokens_details=None prompt_token_count=712 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=346
-)] thoughts_token_count=593 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=945 traffic_type=None
-- chars: {"measurements": []}
+  token_count=712
+)] thoughts_token_count=2313 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4100 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "Li0.5Ce0.5MoO4",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "CeLiMo2O8",
+      "material_definitions": [
+        "Scheelite type solid electrolytes, Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) have been synthesized using a solid state method.",
+        "Structure and ionic conductivity (sigma) were obtained by single crystal X-ray diffraction and ac-impedance spectroscopy, respectively.",
+        "X-ray diffraction studies reveal a space group of I41/a for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) scheelite compounds.",
+        "The unsubstituted Li0.5Ce0.5MoO4 showed lithium ion conductivity ~ 10^-5 - 10^-3 Ohm^-1 cm^-1 in the temperature range of 300-700 C."
+      ],
+      "raw_conductivity": "10^-5",
+      "raw_conductivity_unit": "Ohm^-1 cm^-1",
+      "normalized_conductivity": 1e-05,
+      "raw_temperature": "300",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 300,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li0.5Ce0.5MoO4",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "CeLiMo2O8",
+      "material_definitions": [
+        "Scheelite type solid electrolytes, Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) have been synthesized using a solid state method.",
+        "Structure and ionic conductivity (sigma) were obtained by single crystal X-ray diffraction and ac-impedance spectroscopy, respectively.",
+        "X-ray diffraction studies reveal a space group of I41/a for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) scheelite compounds.",
+        "The unsubstituted Li0.5Ce0.5MoO4 showed lithium ion conductivity ~ 10^-5 - 10^-3 Ohm^-1 cm^-1 in the temperature range of 300-700 C."
+      ],
+      "raw_conductivity": "10^-3",
+      "raw_conductivity_unit": "Ohm^-1 cm^-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 700,
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "Li0.5Ce0.5MoO4",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "CeLiMo2O8",
+      "material_definitions": [
+        "Scheelite type solid electrolytes, Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) have been synthesized using a solid state method.",
+        "Structure and ionic conductivity (sigma) were obtained by single crystal X-ray diffraction and ac-impedance spectroscopy, respectively.",
+        "X-ray diffraction studies reveal a space group of I41/a for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm) scheelite compounds.",
+        "The unsubstituted Li0.5Ce0.5MoO4 showed lithium ion conductivity ~ 10^-5 - 10^-3 Ohm^-1 cm^-1 in the temperature range of 300-700 C."
+      ],
+      "raw_conductivity": "2.5 x 10^-3",
+      "raw_conductivity_unit": "Ohm^-1 cm^-1",
+      "normalized_conductivity": 0.0025,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "C",
+      "normalized_temperature_c": 700,
+      "source": "text",
+      "confidence": "high"
+    }
+  ]
+}
+
+
+[DEBUG] 2.3 Phase characterization of LCM, LCPM and LCSM:
+- Response length: 24 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1126 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1126
+)] thoughts_token_count=3548 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=4684 traffic_type=None
+- chars: {
+  "measurements": []
+}
 
 
 [DEBUG] 2.4 Ionic conductivity from ac-impedance spectroscopy:
@@ -50,954 +119,341 @@
 - Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=10 candidates_tokens_details=None prompt_token_count=774 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=774
-)] thoughts_token_count=394 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1178 traffic_type=None
+)] thoughts_token_count=3201 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3985 traffic_type=None
 - chars: {
   "measurements": []
+}
+
+
+[DEBUG] 3.3 Ionic conductivity from ac-impedance spectroscopy:
+- Response length: 5835 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=2154 candidates_tokens_details=None prompt_token_count=1856 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1856
+)] thoughts_token_count=2691 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=6701 traffic_type=None
+- chars: {
+  "measurements": [
+    {
+      "raw_composition": "unheated LCM",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "Li1Ce1Mo2O8",
+      "material_definitions": [
+        "Lithium-substituted cerium molybdates Li0.5Ce0.5-xLnxMoO4 (x=0, 0.25, Ln=Pr, Sm) were synthesized.",
+        "Samples were analyzed as as-synthesized (unheated) and vacuum-preheated (120°C for 12 hours).",
+        "The materials crystallize in a scheelite-type structure where Li and Ce/Ln ions are distributed on the A-site.",
+        "Ionic conductivity was measured using ac-impedance spectroscopy in the range of 30°C to 700°C.",
+        "Adsorbed moisture in unheated samples causes an initial decrease in conductivity upon heating up to 100°C."
+      ],
+      "raw_conductivity": "9.6e-7",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 9.6e-07,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 7(a)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "unheated LCM",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "Li1Ce1Mo2O8",
+      "raw_conductivity": "9.3e-8",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 9.3e-08,
+      "raw_temperature": "100",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 100.0,
+      "source_figure_id": "Figure 7(a)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "unheated LCM",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "Li1Ce1Mo2O8",
+      "raw_conductivity": "8e-4",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.0008,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(a)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "unheated LCPM",
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "reduced_formula": "Li2Ce1Pr1Mo4O16",
+      "raw_conductivity": "8e-4",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.0008,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(a)",
+      "source": "text",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "unheated LCSM",
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "reduced_formula": "Li2Ce1Sm1Mo4O16",
+      "raw_conductivity": "8e-4",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.0008,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(a)",
+      "source": "text",
+      "confidence": "medium"
+    },
+    {
+      "raw_composition": "preheated LCM",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "Li1Ce1Mo2O8",
+      "raw_conductivity": "1.3e-8",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 1.3e-08,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "preheated LCM",
+      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "reduced_formula": "Li1Ce1Mo2O8",
+      "raw_conductivity": "2.5e-3",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.0025,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "preheated LCPM",
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "reduced_formula": "Li2Ce1Pr1Mo4O16",
+      "raw_conductivity": "1e-9",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 1e-09,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "preheated LCPM",
+      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "reduced_formula": "Li2Ce1Pr1Mo4O16",
+      "raw_conductivity": "1.3e-3",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.0013,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "preheated LCSM",
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "reduced_formula": "Li2Ce1Sm1Mo4O16",
+      "raw_conductivity": "1.8e-10",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 1.8e-10,
+      "raw_temperature": "25",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 25.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    },
+    {
+      "raw_composition": "preheated LCSM",
+      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "reduced_formula": "Li2Ce1Sm1Mo4O16",
+      "raw_conductivity": "8.9e-4",
+      "raw_conductivity_unit": "Ohm-1 cm-1",
+      "normalized_conductivity": 0.00089,
+      "raw_temperature": "700",
+      "raw_temperature_unit": "Celsius",
+      "normalized_temperature_c": 700.0,
+      "source_figure_id": "Figure 7(b)",
+      "source": "text",
+      "confidence": "high"
+    }
+  ]
 }
 
 
 [DEBUG] 3.2 Crystal structure determination:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=555
-)] cached_content_token_count=555 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=1264 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 20 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=6 candidates_tokens_details=None prompt_token_count=1264 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1264
-)] thoughts_token_count=332 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1606 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] 4. Conclusions:
-- Response length: 24 chars
-- Usage metadata: cache_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=352
-)] cached_content_token_count=352 candidates_token_count=10 candidates_tokens_details=None prompt_token_count=558 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=558
-)] thoughts_token_count=763 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=1331 traffic_type=None
-- chars: {
-  "measurements": []
-}
-
-
-[DEBUG] Abstract / Introduction:
-- Response length: 1131 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=349 candidates_tokens_details=None prompt_token_count=712 prompt_tokens_details=[ModalityTokenCount(
-  modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=712
-)] thoughts_token_count=2058 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=3119 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "Li0.5Ce0.5MoO4",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "Scheelite type solid electrolytes, Li(0.5)Ce(0.5-x)Ln(x)MoO4 (x=0 and 0.25, Ln=Pr, Sm), have been synthesized using a solid state method.",
-        "Their structure was confirmed by single crystal X-ray diffraction, revealing a scheelite structure with a space group of I4_1/a.",
-        "The unsubstituted Li(0.5)Ce(0.5)MoO4 showed lithium ion conductivity in the temperature range of 300-700 degrees C.",
-        "The substituted compounds show lower conductivity compared to the unsubstituted compound, suggesting potential use in high temperature lithium battery operations."
-      ],
-      "raw_conductivity": "2.5e-3",
-      "raw_conductivity_unit": "Omega-1cm-1",
-      "normalized_conductivity": 0.0025,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "degrees C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
-
-
-[SCI-FIGURE DEBUG] page_1_figure_12.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Temperature/ \u00b0C",
-        "unit": "\u00b0C",
-        "quantity_type": "temperature_absolute",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Heat Flow (Endo down)",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        69,
-        38,
-        554,
-        951
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Temperature/ \u00b0C",
-        "unit": "\u00b0C",
-        "quantity_type": "temperature_absolute",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Heat Flow (Endo down)",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        632,
-        38,
-        1000,
-        951
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 0
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9130 traffic_type=None
+- chars: {"measurements": []}
 
 
 [DEBUG] 1. Introduction:
-- Response length: 1118 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=369 candidates_tokens_details=None prompt_token_count=1221 prompt_tokens_details=[ModalityTokenCount(
+- Response length: 985 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=315 candidates_tokens_details=None prompt_token_count=1221 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
   token_count=1221
-)] thoughts_token_count=3876 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=5466 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "substituted scheelite A(1-r)Li(2x)BO4",
-      "canonical_formula": "A(1-r)Li(2x)BO4",
-      "material_definitions": [
-        "Scheelite type lithium ion conductors have also attracted interest particularly for lithium battery operation at high temperature (300– 600)°C.",
-        "It has been reported that substituted scheelite $A_{1-r}Li_{2x}BO_4$ (A = Ca, Sr, Ba and B = W, Mo) shows liquid-like ionic conductivity in the temperature range of 700–900°C."
-      ],
-      "raw_conductivity": "0.1",
-      "raw_conductivity_unit": "Ohm-1 cm-1",
-      "normalized_conductivity": 0.1,
-      "raw_temperature": "800",
-      "raw_temperature_unit": "C",
-      "normalized_temperature_c": 800.0,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value (0.1 S/cm) is the upper bound of the stated literature conductivity range (10^-2 to 10^-1 S/cm).",
-        "Temperature (800 C) is the midpoint of the associated literature temperature range (700-900 C)."
-      ]
-    }
-  ]
-}
+)] thoughts_token_count=7862 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9398 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"perovskite type lithium lanthanum titanate Li3xLa(2/3)-x\u25FB(1/3)-2xTiO3 (0 < x > 0.16)","canonical_formula":"Li3xLa(0.67-x)TiO3","material_definitions":["Solid inorganic electrolytes are explored for safety and high voltage/current stability in lithium batteries compared to organic liquids.","Important classes of lithium conductors include perovskite type lithium lanthanum titanate, doped NASICON compounds, thio-LISICONs, and garnet-type oxides.","Substituted scheelite oxides A1-rLi2xBO4 (where A is Ca, Sr, or Ba and B is W or Mo) can achieve liquid-like conductivities of 10^-2 to 10^-1 S/cm at high temperatures.","The research focuses on the synthesis and ionic conductivity of scheelite type Li0.5Ce0.5-xLnxMoO4 where x=0 or 0.25 and Ln is Pr or Sm.","The specific synthesized compounds are Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM)."],"raw_conductivity":"1e-4","raw_conductivity_unit":"\u038
 
 
-[SCI-FIGURE DEBUG] page_2_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Position [\u00b02\u03b8] (Copper)",
-        "unit": "\u00b02\u03b8",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity / a. u.",
-        "unit": "a. u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        46,
-        32,
-        953,
-        948
-      ],
-      "label": "main"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[SCI-FIGURE DEBUG] page_5_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Binding energy/ eV",
-        "unit": "eV",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity/ a.u.",
-        "unit": "a.u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        48,
-        937,
-        496
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Binding energy/ eV",
-        "unit": "eV",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity/ a.u.",
-        "unit": "a.u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        51,
-        501,
-        937,
-        992
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 0
-
-
-[DEBUG] 3.3 Ionic conductivity from ac-impedance spectroscopy:
-- Response length: 9125 chars
-- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=2987 candidates_tokens_details=None prompt_token_count=1856 prompt_tokens_details=[ModalityTokenCount(
+[DEBUG] 4. Conclusions:
+- Response length: 19 chars
+- Usage metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=5 candidates_tokens_details=None prompt_token_count=558 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1856
-)] thoughts_token_count=5190 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10033 traffic_type=None
-- chars: {
-  "measurements": [
-    {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "9.3e-8",
-      "raw_conductivity_unit": "\t-1cm-1",
-      "normalized_conductivity": 9.3e-8,
-      "raw_temperature": "100",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 100,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "9.6e-7",
-      "raw_conductivity_unit": "\t-1 cm-1",
-      "normalized_conductivity": 9.6e-7,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "\t-1cm-1",
-      "normalized_conductivity": 8e-4,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 700,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value stated as 'approximately 8e-4'."
-      ]
-    },
-    {
-      "raw_composition": "LCPM (unheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "\t-1cm-1",
-      "normalized_conductivity": 8e-4,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 700,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value stated as 'approximately 8e-4' for all samples."
-      ]
-    },
-    {
-      "raw_composition": "LCSM (unheated)",
-      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "\t-1cm-1",
-      "normalized_conductivity": 8e-4,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 700,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value stated as 'approximately 8e-4' for all samples."
-      ]
-    },
-    {
-      "raw_composition": "LCM (preheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "1.3e-8",
-      "raw_conductivity_unit": "\t-1 cm-1",
-      "normalized_conductivity": 1.3e-8,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCPM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "1e-9",
-      "raw_conductivity_unit": "\t-1 cm-1",
-      "normalized_conductivity": 1e-9,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "medium",
-      "warnings": [
-        "Exponent of conductivity value appears to have a typographical error in source text ($10^{-9^{\\circ}}$ interpreted as $10^{-9}$)."
-      ]
-    },
-    {
-      "raw_composition": "LCSM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "1.8e-10",
-      "raw_conductivity_unit": "\t-1 cm-1",
-      "normalized_conductivity": 1.8e-10,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 25,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (preheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The measured compounds are solid solutions defined by the formula Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM) or x=0.25 (LCPM: Ln=Pr; LCSM: Ln=Sm).",
-        "Ionic conductivity was measured via ac-impedance spectroscopy in the temperature range 30–700°C.",
-        "Data is reported for 'unheated' (as synthesized) samples and 'preheated' samples (heated at 120\t0C under vacuum for 12 h) to distinguish the effect of adsorbed moisture."
-      ],
-      "raw_conductivity": "2.5e-3",
-      "raw_conductivity_unit": "\t-1 cm-1",
-      "normalized_conductivity": 2.5e-3,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "\tC",
-      "normalized_temperature_c": 700,
-      "source_figure_id": null,
-      "source_caption": null,
-      "source": "text",
-      "confidence": "low",
-      "warnings": [
-        "Value stated as 'approximately 2.5e-3'."
-      ]
-    },
-    {
-      "raw_composition": "LCPM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
-      "material_definitions": [
-        "The measured compounds are
-
-
-[TABLE DEBUG] Table 1: Crystallographic refined parameters obtained from single crystal data.:
-- Response: {
-  "measurements": []
-}
+  token_count=558
+)] thoughts_token_count=7860 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8423 traffic_type=None
+- chars: {"measurements":[]}
 
 
 [TABLE DEBUG] Table 2: ** Atomic coordinates and occupancies.:
-- Response: {
-  "measurements": []
-}
+- Response: {"measurements":[]}
 
 
 [TABLE DEBUG] Table 3: ** Anisotropic dispalcement parameters ( $\mathring{A}^2$ ).:
-- Response: {
-  "measurements": []
-}
+- Response: {"measurements":[]}
 
 
 [TABLE DEBUG] Table 4: Bond distances and bond angle for Li0·5Ce0·5–<sup>x</sup> LnxMoO4 (x = 0 and 0·25, Ln = Pr, Sm).:
-- Response: {
-  "measurements": []
-}
+- Response: {"measurements":[]}
 
 
 [SCI-FIGURE DEBUG] page_7_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "\u03c3 / \u03a9\u207b\u00b9 cm\u207b\u00b9",
-        "unit": "\u03a9\u207b\u00b9 cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        23,
-        28,
-        485,
-        960
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": true,
-      "x_axis": {
-        "title": "1000 T\u207b\u00b9 / K\u207b\u00b9",
-        "unit": "K\u207b\u00b9",
-        "quantity_type": "temperature_inverse",
-        "scale_type": "reciprocal"
-      },
-      "left_y_axis": {
-        "title": "\u03c3 / \u03a9\u207b\u00b9 cm\u207b\u00b9",
-        "unit": "\u03a9\u207b\u00b9 cm\u207b\u00b9",
-        "quantity_type": "conductivity",
-        "scale_type": "log"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        495,
-        28,
-        987,
-        960
-      ],
-      "label": "b"
-    }
-  ]
-}
-- Combined Measurements: 88
+- Total subplots detected: 2
+- Valid subplots: 2
+- Measurements extracted: 87
+  • a: X=temperature_inverse, Y=conductivity
+  • b: X=temperature_inverse, Y=conductivity
 
 
-[DEBUG] 3.3 Ionic conductivity from ac-impedance spectroscopy:
-- Response length: 13061 chars
+[DEBUG] 1. Introduction:
+- Response length: 5438 chars
 - Usage metadata: cache_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1639
-)] cached_content_token_count=1639 candidates_token_count=4442 candidates_tokens_details=None prompt_token_count=1856 prompt_tokens_details=[ModalityTokenCount(
+  token_count=1055
+)] cached_content_token_count=1055 candidates_token_count=1597 candidates_tokens_details=None prompt_token_count=1221 prompt_tokens_details=[ModalityTokenCount(
   modality=<MediaModality.TEXT: 'TEXT'>,
-  token_count=1856
-)] thoughts_token_count=3500 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9798 traffic_type=None
+  token_count=1221
+)] thoughts_token_count=6576 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9394 traffic_type=None
 - chars: {
   "measurements": [
     {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "raw_composition": "perovskite type lithium lanthanum titanate Li3xLa(2/3)-xVac(1/3)-2xTiO3 (0 < x < 0.16)",
+      "canonical_formula": "Li3xLa(2/3)-xTiO3",
+      "reduced_formula": null,
       "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
+        "The study investigates the synthesis, structure, and ionic conductivity of scheelite-type solid electrolytes with the formula Li0.5Ce0.5-xLnxMoO4.",
+        "Specific compositions prepared and evaluated include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).",
+        "These materials are developed as potential candidates for inorganic pigments and laser waveguide materials due to their scheelite-type crystal structure.",
+        "The work compares these scheelite-type materials to other high-conductivity lithium-ion conductors like perovskites, NASICON-type compounds, and garnets.",
+        "Substituted scheelites like A1-rLi2xBO4 (A=Ca, Sr, Ba; B=W, Mo) are noted in literature for exhibiting liquid-like ionic conductivity at high temperatures."
       ],
-      "raw_conductivity": "9.6e-7",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 9.6e-7,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 7(a)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (a) as synthesized sample.",
+      "raw_conductivity": "1e-4",
+      "raw_conductivity_unit": "Omega^-1 cm^-1",
+      "normalized_conductivity": 0.0001,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "textual context",
+      "normalized_temperature_c": null,
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "9.3e-8",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 9.3e-8,
-      "raw_temperature": "100",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 100.0,
-      "source_figure_id": "Figure 7(a)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (a) as synthesized sample.",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (unheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 8e-4,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(a)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (a) as synthesized sample.",
-      "source": "text",
-      "confidence": "high",
+      "confidence": "low",
       "warnings": [
-        "The value is stated as 'approximately 8e-4 Ω-1 cm-1' for all unheated samples."
+        "Temperature not explicitly specified for this range in the introduction."
       ]
     },
     {
-      "raw_composition": "LCPM (unheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
+      "raw_composition": "perovskite type lithium lanthanum titanate Li3xLa(2/3)-xVac(1/3)-2xTiO3 (0 < x < 0.16)",
+      "canonical_formula": "Li3xLa(2/3)-xTiO3",
+      "reduced_formula": null,
       "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
+        "The study investigates the synthesis, structure, and ionic conductivity of scheelite-type solid electrolytes with the formula Li0.5Ce0.5-xLnxMoO4.",
+        "Specific compositions prepared and evaluated include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).",
+        "These materials are developed as potential candidates for inorganic pigments and laser waveguide materials due to their scheelite-type crystal structure.",
+        "The work compares these scheelite-type materials to other high-conductivity lithium-ion conductors like perovskites, NASICON-type compounds, and garnets.",
+        "Substituted scheelites like A1-rLi2xBO4 (A=Ca, Sr, Ba; B=W, Mo) are noted in literature for exhibiting liquid-like ionic conductivity at high temperatures."
       ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 8e-4,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(a)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (a) as synthesized sample.",
+      "raw_conductivity": "1e-3",
+      "raw_conductivity_unit": "Omega^-1 cm^-1",
+      "normalized_conductivity": 0.001,
+      "raw_temperature": "RT",
+      "raw_temperature_unit": "textual context",
+      "normalized_temperature_c": null,
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "text",
-      "confidence": "high",
+      "confidence": "low",
       "warnings": [
-        "The value is stated as 'approximately 8e-4 Ω-1 cm-1' for all unheated samples."
+        "Temperature not explicitly specified for this range in the introduction."
       ]
     },
     {
-      "raw_composition": "LCSM (unheated)",
-      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
+      "raw_composition": "substituted scheelite A1-rLi2xBO4 (A = Ca, Sr, Ba and B = W, Mo)",
+      "canonical_formula": null,
+      "reduced_formula": null,
       "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
+        "The study investigates the synthesis, structure, and ionic conductivity of scheelite-type solid electrolytes with the formula Li0.5Ce0.5-xLnxMoO4.",
+        "Specific compositions prepared and evaluated include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).",
+        "These materials are developed as potential candidates for inorganic pigments and laser waveguide materials due to their scheelite-type crystal structure.",
+        "The work compares these scheelite-type materials to other high-conductivity lithium-ion conductors like perovskites, NASICON-type compounds, and garnets.",
+        "Substituted scheelites like A1-rLi2xBO4 (A=Ca, Sr, Ba; B=W, Mo) are noted in literature for exhibiting liquid-like ionic conductivity at high temperatures."
       ],
-      "raw_conductivity": "8e-4",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 8e-4,
+      "raw_conductivity": "1e-2",
+      "raw_conductivity_unit": "Omega^-1 cm^-1",
+      "normalized_conductivity": 0.01,
       "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
+      "raw_temperature_unit": "C",
       "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(a)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (a) as synthesized sample.",
+      "source_figure_id": null,
+      "source_caption": null,
       "source": "text",
-      "confidence": "high",
+      "confidence": "low",
       "warnings": [
-        "The value is stated as 'approximately 8e-4 Ω-1 cm-1' for all unheated samples."
+        "Data extracted from a cited range (10^-2 to 10^-1) corresponding to a temperature range (700 to 900 C)."
       ]
     },
     {
-      "raw_composition": "LCM (preheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
+      "raw_composition": "substituted scheelite A1-rLi2xBO4 (A = Ca, Sr, Ba and B = W, Mo)",
+      "canonical_formula": null,
+      "reduced_formula": null,
       "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "1.3e-8",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 1.3e-8,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCM (preheated)",
-      "canonical_formula": "Li0.5Ce0.5MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "2.5e-3",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 0.0025,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "The value is stated as 'approximately 2.5e-3 Ω-1 cm-1'."
-      ]
-    },
-    {
-      "raw_composition": "LCPM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "1e-9",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 1.0e-9,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "The raw text contained a likely typographical error: '1 x 10^-9° Ω-1 cm-1'. The '°' has been ignored."
-      ]
-    },
-    {
-      "raw_composition": "LCPM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Pr0.25MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "1.3e-3",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 0.0013,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    },
-    {
-      "raw_composition": "LCSM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "1.8e-10",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 1.8e-10,
-      "raw_temperature": "25",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 25.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": [
-        "The raw text provided two possible RT values for LCSM, '1e-9' and '1.8e-10'. The latter was chosen as it appeared last in the sequence."
-      ]
-    },
-    {
-      "raw_composition": "LCSM (preheated)",
-      "canonical_formula": "Li0.5Ce0.25Sm0.25MoO4",
-      "material_definitions": [
-        "The studied compounds are part of the solid solution series Li0.5Ce0.5-xLnxMoO4, where x=0 (LCM), x=0.25 with Ln=Pr (LCPM), or x=0.25 with Ln=Sm (LCSM).",
-        "Ionic conductivity measurements were performed using ac-impedance spectroscopy in the temperature range from 30°C to 700°C.",
-        "Samples were tested in two states: as-synthesized ('unheated') and samples heat-treated at 120°C under vacuum for 12 hours ('preheated') to remove adsorbed moisture."
-      ],
-      "raw_conductivity": "8.9e-4",
-      "raw_conductivity_unit": "Ω-1 cm-1",
-      "normalized_conductivity": 0.00089,
-      "raw_temperature": "700",
-      "raw_temperature_unit": "°C",
-      "normalized_temperature_c": 700.0,
-      "source_figure_id": "Figure 7(b)",
-      "source_caption": "Ionic conductivity from ac-impedance spectroscopy for Li0.5Ce0.5-xLnxMoO4 (x=0 and 0.25, Ln=Pr, Sm). (b) preheated samples (120°C/ 12h; vacuum).",
-      "source": "text",
-      "confidence": "high",
-      "warnings": []
-    }
-  ]
-}
+        "The study investigates the synthesis, structure, and ionic conductivity of scheelite-type solid electrolytes with the formula Li0.5Ce0.5-xLnxMoO4.",
+        "Specific compositions prepared and evaluated include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).",
+        "These materials are developed as potential candidates for inorganic pigments and laser waveguide materials due to their scheelite-type crystal structure.",
+        "The work compares these scheelite-type materials to other high-conductivity lithium-ion conductors like perovskites, NASICON-type compounds, and garnets.",
+        "Substituted scheelites like A1-rLi2
 
 
-[SCI-FIGURE DEBUG] page_5_figure_9.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Position [\u00b02\u03b8] (Copper)",
-        "unit": "\u00b02\u03b8",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity / a. u.",
-        "unit": "a. u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        34,
-        35,
-        281,
-        957
-      ],
-      "label": "Standard- 00-050-0350"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Position [\u00b02\u03b8] (Copper)",
-        "unit": "\u00b02\u03b8",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity / a. u.",
-        "unit": "a. u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        283,
-        35,
-        545,
-        957
-      ],
-      "label": "As synthesized LCM"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Position [\u00b02\u03b8] (Copper)",
-        "unit": "\u00b02\u03b8",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "Intensity / a. u.",
-        "unit": "a. u.",
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        549,
-        35,
-        966,
-        957
-      ],
-      "label": "Without Li2CO3"
-    }
-  ]
-}
-- Combined Measurements: 0
+[TABLE DEBUG] Table 1: Crystallographic refined parameters obtained from single crystal data.:
+- Response: {"measurements":[]}
 
 
-[SCI-FIGURE DEBUG] page_6_figure_2.jpeg:
-- Detection Result: {
-  "is_multi_panel": true,
-  "subplots": [
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Z'",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Z\"",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        28,
-        62,
-        466,
-        493
-      ],
-      "label": "a"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Z'",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Z\"",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        467,
-        4,
-        988,
-        493
-      ],
-      "label": "b"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Z'",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Z\"",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        28,
-        571,
-        466,
-        960
-      ],
-      "label": "c"
-    },
-    {
-      "contains_conductivity_data": false,
-      "x_axis": {
-        "title": "Z'",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "left_y_axis": {
-        "title": "-Z\"",
-        "unit": null,
-        "quantity_type": "other",
-        "scale_type": "linear"
-      },
-      "right_y_axis": null,
-      "box_2d": [
-        467,
-        471,
-        988,
-        960
-      ],
-      "label": "d"
-    }
-  ]
-}
-- Combined Measurements: 0
+[DEBUG] 1. Introduction:
+- Response length: 2457 chars
+- Usage metadata: cache_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1055
+)] cached_content_token_count=1055 candidates_token_count=693 candidates_tokens_details=None prompt_token_count=1221 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=1221
+)] thoughts_token_count=6844 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8758 traffic_type=None
+- chars: {"measurements":[{"raw_composition":"substituted scheelite A1-rLi2xBO4 (A = Ca, Sr, Ba and B = W, Mo)","canonical_formula":null,"reduced_formula":null,"material_definitions":["The study explores scheelite-type compounds with the general formula Li0.5Ce0.5-xLnxMoO4, where Ln represents Pr or Sm and x is 0 or 0.25.","Specific samples synthesized include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).","The materials are investigated for their structure and lithium-ion conductivity to evaluate their potential for all-solid-state lithium batteries.","Scheelite-type lithium-ion conductors are noted for their potential performance in high-temperature applications.","Previous reports indicate that substituted scheelite oxides A1-rLi2xBO4 can achieve liquid-like ionic conductivities at temperatures between 700 and 900 Celsius."],"raw_conductivity":"1e-2","raw_conductivity_unit":"Ohm-1 cm-1","normalized_conductivity":0.01,"raw_temperature":"700","raw_temperature_unit":"°C","normalized_temperature_c":700.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"low","warnings":["Conductivity value extracted as the lower bound of a reported range for a material class."]},{"raw_composition":"substituted scheelite A1-rLi2xBO4 (A = Ca, Sr, Ba and B = W, Mo)","canonical_formula":null,"reduced_formula":null,"material_definitions":["The study explores scheelite-type compounds with the general formula Li0.5Ce0.5-xLnxMoO4, where Ln represents Pr or Sm and x is 0 or 0.25.","Specific samples synthesized include Li0.5Ce0.5MoO4 (LCM), Li0.5Ce0.25Pr0.25MoO4 (LCPM), and Li0.5Ce0.25Sm0.25MoO4 (LCSM).","The materials are investigated for their structure and lithium-ion conductivity to evaluate their potential for all-solid-state lithium batteries.","Scheelite-type lithium-ion conductors are noted for their potential performance in high-temperature applications.","Previous reports indicate that substituted scheelite oxides A1-rLi2xBO4 can achieve liquid-like ionic conductivities at temperatures between 700 and 900 Celsius."],"raw_conductivity":"1e-1","raw_conductivity_unit":"Ohm-1 cm-1","normalized_conductivity":0.1,"raw_temperature":"900","raw_temperature_unit":"°C","normalized_temperature_c":900.0,"source_figure_id":null,"source_caption":null,"source":"text","confidence":"low","warnings":["Conductivity value extracted as the upper bound of a reported range for a material class."]}]}

@@ -114,13 +114,18 @@ find_doi_from_title() {
 main() {
     MD_FOLDER=""
     PROVIDED_DOI=""
+    SKIP_EVAL=false
 
     # Parse arguments
     while [[ $# -gt 0 ]]; do
         case $1 in
             --help|-h)
-                echo "Usage: $0 <path_to_md_folder> [doi]"
+                echo "Usage: $0 <path_to_md_folder> [doi] [--skip-eval]"
                 exit 0
+                ;;
+            --skip-eval)
+                SKIP_EVAL=true
+                shift
                 ;;
             -*)
                 print_error "Unknown option: $1"
@@ -212,6 +217,17 @@ main() {
     # =============================================================================
     # STEP 2: Evaluate Extraction
     # =============================================================================
+    if [ "$SKIP_EVAL" = true ]; then
+        {
+            print_warning "Skipping evaluation step as requested."
+            echo ""
+            print_header "PIPELINE COMPLETED (WITHOUT EVALUATION)"
+            print_info "Extracted JSON: $FINAL_EXTRACTED_JSON"
+            print_info "Log File: $LOG_FILE"
+        } | log_output
+        exit 0
+    fi
+
     {
         print_step "2/2" "Evaluating extraction against ground truth..."
     } | log_output

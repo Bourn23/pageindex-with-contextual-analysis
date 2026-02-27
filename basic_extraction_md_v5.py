@@ -118,16 +118,34 @@ class CostTracker:
 
     def track(self, response, model_name: str):
         """Parses response metadata and accumulates cost."""
-        if not response or not hasattr(response, 'usage_metadata') or not response.usage_metadata:
+        if not response:
             return
 
-        usage = response.usage_metadata
-        in_tok = usage.prompt_token_count or 0
-        try :out_tok = usage.total_token_count-in_tok or 0
-        except: 
-            print("Failed to calculate output tokens")
-            print(usage)
-            out_tok = usage.candidates_token_count if hasattr(usage, 'candidates_token_count') else 0
+        # Handle diverse input types (Gemini response object vs Dict from SciFigureParser)
+        usage = None
+        if hasattr(response, 'usage_metadata'):
+            usage = response.usage_metadata
+        elif isinstance(response, dict) and '_usage_metadata' in response:
+            usage = response['_usage_metadata']
+        
+        if not usage:
+            return
+
+        # Extract counts based on type
+        if isinstance(usage, dict):
+            in_tok = usage.get('prompt_token_count', 0)
+            out_tok = usage.get('candidates_token_count', 0)
+            # Some APIs might not return candidates_token_count if it failed?
+            if out_tok == 0 and 'total_token_count' in usage:
+                out_tok = usage['total_token_count'] - in_tok
+        else:
+            in_tok = usage.prompt_token_count or 0
+            try:
+                out_tok = usage.total_token_count - in_tok or 0
+            except: 
+                print("Failed to calculate output tokens")
+                print(usage)
+                out_tok = usage.candidates_token_count if hasattr(usage, 'candidates_token_count') else 0
         
         
         # 2. Determine Pricing Tier
@@ -169,7 +187,7 @@ class CostTracker:
 # Global singleton instance
 tracker = CostTracker()
 
-async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=60, max_retries=3):
+async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=120, max_retries=3):
     async with sem:
         for attempt in range(max_retries):
             try:
@@ -198,7 +216,7 @@ async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=60, ma
                     break 
         return None, False
 
-async def safe_image_call_with_retry(img_path, context, client, model_name, sem, sf_parser=None, timeout=360, max_retries=3):
+async def safe_image_call_with_retry(img_path, context, client, model_name, sem, sf_parser=None, timeout=180, max_retries=3):
     """
     This function now only retries on ACTUAL failures, not empty results.
     """
@@ -219,7 +237,7 @@ async def safe_image_call_with_retry(img_path, context, client, model_name, sem,
             print(f"   ⏱️  {img_path.name}: Timeout")
             return [], False
             
-async def safe_table_call_with_retry(table_data, client, model_name, sem, timeout=300, max_retries=3):
+async def safe_table_call_with_retry(table_data, client, model_name, sem, timeout=180, max_retries=3):
     async with sem:
         for attempt in range(max_retries):
             try:
@@ -306,7 +324,8 @@ class MeasuredPoint(BaseModel):
     
     source_figure_id: Optional[str] = Field(None, description="The real Figure ID (e.g. 'Fig. 5') if known.")
     source_caption: Optional[str] = Field(None, description="The context from the figure caption.")
-    source: str = Field(..., description="The source of the data choose from: 'figure', 'table', 'text'.")
+    source: str = Field(..., description="The source of the data. Use 'text', 'table', 'figure' for original data, or 'cited_text', 'cited_table', 'cited_figure' for data cited from other works.")
+    processing_method: Optional[str] = Field(None, description="The processing method used to obtain the sample (e.g. 'solid state reaction', 'sol-gel', 'sintered at 1000C').")
     confidence: str = Field(..., description="high/medium/low")
     warnings: List[str] = Field(default_factory=list, description="Warnings about the data.")
 
@@ -1193,6 +1212,70 @@ Return JSON with "series_formula" and "abbreviations" dict. If no abbreviations 
         return {}
 
 
+async def extract_processing_info(client, doc_title: str, sections: list, model_name: str = "gemini-2.5-flash") -> dict:
+    """
+    Extract sample label -> processing method mappings.
+    Runs ONCE per paper using text sections.
+    
+    Returns:
+        dict: {"LATP03": "Solid state reaction, sintered at 900C", ...}
+    """
+    # Gather text from experimental/methods sections
+    relevant_text = ""
+    for sec in sections:
+        title_lower = sec.title.lower()
+        if any(kw in title_lower for kw in ['experimental', 'method', 'synthesis', 'preparation', 'sample', 'procedure']):
+            relevant_text += f"\n--- {sec.title} ---\n{sec.content[:3000]}\n"
+    
+    if len(relevant_text) < 50:
+        # Fallback to intro + abstract if no method section found
+        relevant_text = ""
+        for sec in sections[:3]:
+            relevant_text += f"\n{sec.content[:1500]}\n"
+
+    prompt = f"""You are a materials science information extractor.
+    
+    Goal: Identify the PROCESSING METHOD used for each sample/material described in the text.
+    
+    Paper Title: "{doc_title}"
+    
+    Text Sections:
+    {relevant_text[:8000]}
+    
+    Instructions:
+    1. Identify all sample labels or material compositions mentioned (e.g., "LATP", "x=0.1", "Sample A").
+    2. Extract the synthesis/processing method for each (e.g., "solid state reaction", "sol-gel", "hot pressing", "sintered at 1000°C").
+    3. If a general method applies to ALL samples, assign it to "ALL_SAMPLES".
+    4. Be specific about temperatures and atmosphere if mentioned (e.g. "sintered at 900C in air").
+    
+    Return JSON: {{ "processing_map": {{ "Sample Label": "Method Description" }} }}
+    """
+    
+    try:
+        response = await client.aio.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.0,
+            )
+        )
+        result = json.loads(response.text)
+        proc_map = result.get("processing_map", {})
+        
+        if proc_map:
+            print(f"   ⚗️ Extracted {len(proc_map)} processing method descriptions")
+        
+        if response:
+            tracker.track(response, model_name)
+            
+        return proc_map
+
+    except Exception as e:
+        print(f"   ⚠️ Processing info extraction failed: {e}")
+        return {}
+
+
 def _lookup_abbreviation_map(raw_comp: str, abbreviation_map: dict) -> tuple:
     """
     Look up a raw composition in the abbreviation map.
@@ -1249,11 +1332,13 @@ def _lookup_abbreviation_map(raw_comp: str, abbreviation_map: dict) -> tuple:
     return None, measurement_type
 
 
-async def canonicalize_materials(client, measurements: List[MeasuredPoint], definitions: List[str], model_name: str = None, doc_title: str = None, doc_abstract: str = None, abbreviation_map: dict = None):
+async def canonicalize_materials(client, measurements: List[MeasuredPoint], definitions: List[str], model_name: str = None, doc_title: str = None, doc_abstract: str = None, abbreviation_map: dict = None, processing_map: dict = None):
     """
     Uses Gemini to resolve "x=0.1" -> "Li3.8Mg0.1..." using the extracted text definitions.
     Enhanced to handle series formulas like "Li6+xP1-xGexS5I" and validate physical plausibility.
     Now also uses document title and abstract for better context on base formulas.
+    
+    Also applies PROCESSING METHOD from the extracted processing_map.
     
     Resolution order:
     1. Abbreviation map lookup (from extract_abbreviation_map, most reliable)
@@ -1262,6 +1347,27 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
     """
     if not measurements: return measurements
     
+    # --- PROCESSING METHOD APPLICATION ---
+    if processing_map:
+        general_method = processing_map.get("ALL_SAMPLES")
+        
+        for m in measurements:
+            # 1. Try exact match of raw_composition
+            if m.raw_composition in processing_map:
+                m.processing_method = processing_map[m.raw_composition]
+            # 2. Try match in processing map keys (e.g. key="LATP series" matches "LATP03")
+            else:
+                found = False
+                for k, v in processing_map.items():
+                    if k in m.raw_composition or m.raw_composition in k:
+                        m.processing_method = v
+                        found = True
+                        break
+                
+                # 3. Fallback to general method
+                if not found and general_method:
+                    m.processing_method = general_method
+
     # --- PRE-PASS 1: Abbreviation map lookup (LLM-extracted, paper-specific) ---
     map_resolved = 0
     if abbreviation_map:
@@ -1486,7 +1592,7 @@ async def process_text(client, model, text_content, text_title, max_retries: int
         - raw_conductivity_unit: Unit (e.g. "S/cm")
         - raw_temperature: Only the temperature value (e.g. "25", "298", "2.0", "2.4")
         - raw_temperature_unit: Unit (e.g. "Celsius", "Kelvin", "1000/T (K-1)", "10^3/T / K-1")
-        - source: "text"
+        - source: "text" OR "cited_text" (use "cited_text" if the sentences explicitly say "Ref [X] reports..." or "Compared to [Y]...")
         - confidence: "high" if it is explicitly stated / "low" if it is inferred or calculated or was cited from another source
 
         Optional: Extract up to 4-5 material definition sentences that summarizes chemical formula, processing method, and any other information about the samples mentioned in the text."""
@@ -2006,6 +2112,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
             print(f"   🔍 {img_path.name} ({fig_id}): Detecting subplot...")
             # [OPTIMIZED] Using async detection
             detection_result = await sf_parser.detect_subplot_async(str(img_path), "ionic conductivity measurement")
+            tracker.track(detection_result, VISION_MODEL)
             
             # print(f"   🔍 {img_path.name} ({fig_id}): Detection result: {detection_result}")
 
@@ -2100,6 +2207,7 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
                     context=f"{caption} [Panel: {label}]",
                     axis_hints=axis_hints
                 )
+                tracker.track(sf_result, VISION_MODEL)
                 
                 # Process extraction with validation
                 clean_measurements = processor.process_extraction(
@@ -2212,6 +2320,8 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     - CRITICAL: Detect if the X-axis is stoichiometry (e.g., 'x', 'z', 'composition').
     - If it is stoichiometry, extract the x-value and append it to 'raw_composition' (e.g. "Al (x=0.2)").
     - If the caption specifies a fixed temperature for the whole plot, use it for 'raw_temperature'.
+    - If the figure explicitly CITES another paper (e.g. "Data from Ref. [12]", "Comparison with [15]"), use source="cited_figure". Otherwise source="figure".
+    
     Otherwise return empty.
 
     **Step 3: Extract Material Definitions**
@@ -2341,7 +2451,7 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
     - raw_temperature: "room temperature" (since σRT is at room temperature)
     - raw_temperature_unit: "Celsius"
     - material_definitions: ["bulk"] or ["grain_boundary"] to indicate which region
-    - source: "markdown_table"
+    - source: "markdown_table" or "cited_table" (if the table caption or content indicates it's comparing with other references, e.g. "Comparison with literature data [12]")
     - confidence: "high"
 
     Return JSON with measurements array.
@@ -2571,10 +2681,14 @@ async def run_pipeline(markdown_file, asset_dir, model):
                 break
         abbreviation_map = await extract_abbreviation_map(client, doc_title, sections, model_name="gemini-2.5-flash")
 
+        # 3.6 Extract Processing Info (NEW)
+        print("   ... Extracting processing info from paper text...")
+        processing_map = await extract_processing_info(client, doc_title, sections, model_name="gemini-2.5-flash")
+
         # 4. Canonicalize Names (Solves Problem 3)
-        # We pass the definitions found in text + document-level context + abbreviation map
+        # We pass the definitions found in text + document-level context + abbreviation map + processing map
         print("   ... Canonicalizing Materials...")
-        all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL, doc_title=doc_title, doc_abstract=doc_abstract, abbreviation_map=abbreviation_map)
+        all_measurements = await canonicalize_materials(client, all_measurements, material_defs, model_name=TEXT_MODEL, doc_title=doc_title, doc_abstract=doc_abstract, abbreviation_map=abbreviation_map, processing_map=processing_map)
         
         # 4.5 De-duplicate Text Measurements (Solves Problem 4: Duplicate Extractions)
         print("   ... De-duplicating Text Measurements...")
