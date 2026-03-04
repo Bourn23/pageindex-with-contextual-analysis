@@ -124,6 +124,37 @@ python run_pageindex.py paper.pdf -g keywords -o my_output.json
 python run_pageindex.py --help
 ```
 
+
+Updated workflow:
+```bash
+New Automation Scripts
+1. Batch Extraction
+Script: 
+batch_process_v8.sh
+
+Purpose: Runs 
+basic_extraction_md_v8.py
+ on every paper in a parent folder.
+Usage: ./batch_process_v8.sh "./path/to/parent_folder"
+Result: Generates robust_results_v8.json inside each paper's subdirectory.
+2. Batch Provenance Tracing
+Script: 
+batch_process_provenance.sh
+
+Purpose: Runs 
+t0_provenance_tracer.py
+ on every paper that has an extraction JSON.
+Usage: ./batch_process_provenance.sh "./path/to/parent_folder"
+Result: Generates *_provenance.json inside each paper's subdirectory.
+3. Batch Visualization
+Script: 
+batch_visualize_provenance.sh
+
+Purpose: Generates interactive HTML dashboards for every paper that has a provenance JSON.
+Usage: ./batch_visualize_provenance.sh "./path/to/parent_folder"
+Result: Generates provenance_dashboard.html inside each paper's subdirectory.
+```
+
 For debugging please see [DEV GUIDE](DEVELOPER_GUIDE.md)
 
 -----
