@@ -5,7 +5,7 @@
 
 ## V4->v5: add limits on the token output (it was 104k token output lool)
 ## V7->V8: Adapted prompts & schema for polymer-ceramic composite electrolyte systems
-##   - Added material_class field (Polymer/Ceramic/Composite/Cited)
+##   - Added material_class field (Polymer/Ceramic/Composite); provenance in source field
 ##   - Rewrote few-shot examples for polymer-ceramic composites
 ##   - Improved cited vs measured data distinction
 ##   - Better handling of wt% loading-based naming
@@ -230,13 +230,13 @@ class CostTracker:
 # Global singleton instance
 tracker = CostTracker()
 
-async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=150, max_retries=3):
+async def safe_text_call_with_retry(sec, client, model_name, sem, timeout=150, max_retries=3, paper_context=None):
     async with sem:
         for attempt in range(max_retries):
             try:
                 # Add a timeout to the specific model call
                 result, raw_response, success = await asyncio.wait_for(
-                    process_text(client, model_name, sec.content, sec.title), 
+                    process_text(client, model_name, sec.content, sec.title, paper_context=paper_context),
                     timeout=timeout
                 )
                 
@@ -350,8 +350,9 @@ class MeasuredPoint(BaseModel):
         description="Classification of the material system: "
                     "'Polymer' (neat polymer electrolyte, e.g. PEO-LiTFSI), "
                     "'Ceramic' (neat ceramic electrolyte, e.g. LLZO, LAGP), "
-                    "'Composite' (polymer+ceramic composite, e.g. PEO-LiTFSI/LLZO), "
-                    "'Cited' (data cited from another reference, not measured in this paper)."
+                    "'Composite' (polymer+ceramic composite, e.g. PEO-LiTFSI/LLZO). "
+                    "Use the material's actual type even if the data was cited from another reference — "
+                    "provenance is tracked separately in the 'source' field (cited_text / cited_table)."
     )
 
     material_definitions: List[str] = Field(
@@ -386,6 +387,10 @@ class MeasuredPoint(BaseModel):
     source_section_type: Optional[str] = Field(None, description="Classification of source section: intro, methods, results, discussion, conclusion, meta, other.")
     source_paragraph_indices: List[int] = Field(default_factory=list, description="Paragraph indices [P1, P2, ...] within the section that sourced this measurement.")
     
+    # V8.1: Temporal/condition fields
+    aging_time: Optional[str] = Field(None, description="Storage/aging duration if applicable (e.g., '5 days', '2 weeks', 'freshly made').")
+    measurement_condition: Optional[str] = Field(None, description="Special measurement condition (e.g., 'freshly made', 'after 100 cycles', 'in air', 'after aging').")
+
     confidence: str = Field(..., description="high/medium/low")
     warnings: List[str] = Field(default_factory=list, description="Warnings about the data.")
 
@@ -1813,11 +1818,23 @@ async def canonicalize_materials(client, measurements: List[MeasuredPoint], defi
 # ==============================================================================
 # 5. Gemini Pipelines (Text & Vision)
 # ==============================================================================
-async def process_text(client, model, text_content, text_title, max_retries: int = 3):
+async def process_text(client, model, text_content, text_title, max_retries: int = 3, paper_context: dict = None):
     # V6: Number paragraphs for provenance tracking
     numbered_content, paragraph_list = number_paragraphs(text_content)
 
-    prompt = """Extract ionic conductivity data points from this text. Return Format: JSON only.
+    # V8.1: Build methods context preamble if available (mirrors process_table_node)
+    methods_preamble = ""
+    if paper_context:
+        proc_summary = paper_context.get('experimental_procedure_summary', '')
+        nomenclature = paper_context.get('nomenclature_key', '')
+        if proc_summary or nomenclature:
+            methods_preamble = f"""
+        **PAPER CONTEXT (for processing method and sample identification):**
+        Experimental Procedures: {proc_summary[:1500]}
+        Sample Nomenclature: {nomenclature[:500]}
+"""
+
+    prompt = f"""{methods_preamble}Extract ionic conductivity data points from this text. Return Format: JSON only.
         
         **CRITICAL: Distinguish MEASURED vs CITED data.**
         - Use source="text" ONLY for conductivity values measured/reported by THIS paper's authors.
@@ -1833,11 +1850,27 @@ async def process_text(client, model, text_content, text_title, max_retries: int
         - raw_conductivity_unit: Unit (e.g. "S/cm", "mS/cm")
         - raw_temperature: Only the temperature value (e.g. "25", "298", "2.0", "2.4")
         - raw_temperature_unit: Unit (e.g. "Celsius", "Kelvin", "1000/T (K-1)", "10^3/T / K-1")
-        - material_class: "Polymer" (neat polymer, e.g. PEO-LiTFSI), "Ceramic" (neat ceramic, e.g. LLZO), 
-          "Composite" (polymer+ceramic, e.g. PEO-LiTFSI/LLZO), or "Cited" (from another reference)
+        - material_class: "Polymer" (neat polymer, e.g. PEO-LiTFSI), "Ceramic" (neat ceramic, e.g. LLZO),
+          or "Composite" (polymer+ceramic, e.g. PEO-LiTFSI/LLZO). Classify by what the material IS,
+          not where the data came from — cited data is tracked via source="cited_text"
         - source: "text" OR "cited_text" (see rules above)
         - source_paragraph_indices: List of paragraph numbers [1, 2, ...] that contain this measurement data. Each paragraph is labeled [P1], [P2], etc. in the text below.
         - confidence: "high" if it is explicitly stated / "low" if it is inferred or calculated or was cited from another source
+        - aging_time: If the measurement is after storage/aging, record the duration (e.g., "5 days", "2 weeks", "freshly made"). Leave null if not applicable.
+        - measurement_condition: Special condition under which this measurement was taken (e.g., "freshly made", "after 100 cycles", "in air", "after aging 10 days"). Leave null if not applicable.
+
+        **TEMPORAL / AGING DATA:**
+        - If the same sample is measured at DIFFERENT TIME POINTS (e.g., freshly prepared, after 2 days, after 5 days, after 10 days), extract EACH time point as a SEPARATE measurement.
+        - Include the aging condition in both `aging_time` (e.g., "5 days") and `measurement_condition` (e.g., "after aging 5 days").
+        - Also reflect the time point in `raw_composition` by appending a suffix (e.g., "PEO-LLZO (50 wt%) [day 5]").
+
+        **RANGES:**
+        - If a conductivity RANGE is reported (e.g., "10⁻² to 10⁻⁴ S cm⁻¹"), extract BOTH the upper and lower bounds as separate measurements.
+        - Add a warning "range_upper_bound" or "range_lower_bound" to each respectively.
+
+        **MULTI-CONDITION SAMPLES:**
+        - If the same sample is measured under different conditions (humidity levels, atmospheres, pressures, cycling states), extract EACH condition as a separate measurement.
+        - Record the condition in `measurement_condition`.
 
         Optional: Extract up to 1-2 material definition sentences that summarizes chemical formula, processing method, and any other information about the samples mentioned in the text. Keep this EXTREMELY BRIEF to save tokens!"""
 
@@ -2562,16 +2595,24 @@ async def process_image(client, model, img_path, context_dict: dict, max_retries
     **Step 1: Classify the image**
     Is this a:
     - [ ] Data plot with conductivity values (Arrhenius plot, stoichiometry plot, bar chart, etc.)
+    - [ ] Stability/aging plot (conductivity vs. time/days/cycles/hours)
     - [ ] Table with conductivity measurements
     - [ ] Structural diagram / schematic / photo (NO DATA)
-    
-    **Step 2: Extract (ONLY if you checked the first two options)**
-    If this contains conductivity data, extract measurements. 
+
+    **Step 2: Extract (ONLY if you checked one of the first three options)**
+    If this contains conductivity data, extract measurements.
     - CRITICAL: Detect if the X-axis is stoichiometry (e.g., 'x', 'z', 'composition').
     - If it is stoichiometry, extract the x-value and append it to 'raw_composition' (e.g. "Al (x=0.2)").
     - If the caption specifies a fixed temperature for the whole plot, use it for 'raw_temperature'.
     - If the figure explicitly CITES another paper (e.g. "Data from Ref. [12]", "Comparison with [15]"), use source="cited_figure". Otherwise source="figure".
-    
+
+    **For Stability/Aging Plots:**
+    - Extract EACH data point (each time step) as a SEPARATE measurement.
+    - The X-axis is TIME (days, hours, cycles) — do NOT use it as temperature.
+    - Use the time value as `aging_time` (e.g., "5 days") and append it to `raw_composition` as a suffix (e.g., "PEO-LLZO [day 5]").
+    - Set `measurement_condition` to describe the aging state (e.g., "after aging 5 days").
+    - Get temperature from the caption or surrounding text context, NOT from the x-axis.
+
     Otherwise return empty.
 
     **Step 3: Extract Material Definitions**
@@ -2705,8 +2746,13 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
     7. If paper context is provided above, use it to fill in the processing_method field.
     8. For polymer-ceramic composite tables, capture the polymer matrix, filler type, and loading amount.
        Example: if a table lists various wt% of LLZO in PEO-LiTFSI, extract the full composition.
-    9. Set material_class to "Polymer", "Ceramic", "Composite", or "Cited" based on the material.
+    9. Set material_class to "Polymer", "Ceramic", or "Composite" based on what the material IS.
+       Do NOT use "Cited" — provenance is tracked via source="cited_table" instead.
     10. If the table compares with literature data or cites references, use source="cited_table".
+    11. If a conductivity RANGE is given (e.g., "10⁻² – 10⁻⁴ S cm⁻¹"), extract BOTH bounds as separate
+        measurements with warnings "range_upper_bound" / "range_lower_bound".
+    12. If the table contains time-series data (e.g., conductivity at different aging times or cycle counts),
+        extract EACH time point as a separate measurement. Set `aging_time` and `measurement_condition` accordingly.
 
     **Task**:
     Extract all Ionic Conductivity measurements (σRT preferred, σ0 if σRT not available).
@@ -2716,9 +2762,11 @@ async def process_table_node(client, model, table_data: dict, max_retries: int =
     - raw_conductivity_unit: Unit (e.g., "S cm-1")
     - raw_temperature: "room temperature" (since σRT is at room temperature) or explicit temperature
     - raw_temperature_unit: "Celsius"
-    - material_class: "Polymer" / "Ceramic" / "Composite" / "Cited"
+    - material_class: "Polymer" / "Ceramic" / "Composite" (not "Cited" — use source field for provenance)
     - material_definitions: ["bulk"] or ["grain_boundary"] to indicate which region
     - source: "markdown_table" or "cited_table"
+    - aging_time: If applicable (e.g., "5 days", "freshly made"). Null otherwise.
+    - measurement_condition: If applicable (e.g., "after 100 cycles"). Null otherwise.
     - confidence: "high"
 
     Return JSON with measurements array.
@@ -2785,11 +2833,13 @@ async def classify_material_classes_llm(client, measurements, paper_context, mod
 
     context = paper_context.get('material_systems_overview', '') if paper_context else ''
 
-    prompt = f"""Classify each material measurement into exactly one of these categories:
+    prompt = f"""Classify each material measurement into exactly one of these categories based on what the material IS:
 - "Polymer": Neat polymer electrolyte with NO ceramic filler (e.g., PEO-LiTFSI, PAN-LiClO4, "0 wt% filler" samples)
 - "Ceramic": Neat ceramic electrolyte (e.g., LLZO, LAGP, LATP, Li7La3Zr2O12)
 - "Composite": Polymer+ceramic composite electrolyte (e.g., PEO-LiTFSI with LLZO filler, any sample with nonzero wt%/vol% ceramic loading)
-- "Cited": Data cited from another reference (source field contains "cited")
+
+Classify by the material type, NOT by provenance. Cited data is already tracked in the source field.
+A cited LLZO measurement is still "Ceramic". A cited PEO-LLZO composite is still "Composite".
 
 Paper context: {context}
 
@@ -2797,7 +2847,7 @@ Items to classify:
 {items}
 
 Return JSON: {{"classifications": {{"<ID>": "<class>"}} }}
-Only use the four classes above. Use "Cited" if the source indicates cited data."""
+Only use the three classes above."""
 
     try:
         response = await client.aio.models.generate_content(
@@ -2812,7 +2862,7 @@ Only use the four classes above. Use "Cited" if the source indicates cited data.
         classifications = result.get("classifications", {})
 
         applied = 0
-        valid_classes = {'Polymer', 'Ceramic', 'Composite', 'Cited'}
+        valid_classes = {'Polymer', 'Ceramic', 'Composite'}
         for id_str, cls in classifications.items():
             digits = re.search(r'\d+', str(id_str))
             if digits:
@@ -2828,10 +2878,6 @@ Only use the four classes above. Use "Cited" if the source indicates cited data.
 
     except Exception as e:
         print(f"   ⚠️ LLM material_class classification failed: {e}")
-        # Fallback: mark cited sources at minimum
-        for i, m in unclassified:
-            if m.source and 'cited' in m.source.lower():
-                m.material_class = 'Cited'
 
     return measurements
 
@@ -2923,9 +2969,15 @@ async def run_pipeline(markdown_file, asset_dir, model):
                 if img.filename.lower() in image_context_registry:
                     image_context_registry[img.filename.lower()]["section_title"] = sec.title
                     # We can pass the first 500 chars of the section as "background context" for the image
-                    image_context_registry[img.filename.lower()]["section"] = parser._extract_nearby_text(
-                            img, sec.content, window_lines=5, max_chars=1000
-                        )
+                    nearby_text = parser._extract_nearby_text(img, sec.content, window_lines=5, max_chars=1000)
+                    image_context_registry[img.filename.lower()]["section"] = nearby_text
+                    # If markdown parser couldn't find fig ID, scan nearby section text for it
+                    if image_context_registry[img.filename.lower()]["id"] == "Unknown":
+                        fig_match = parser.REF_PATTERN.search(nearby_text)
+                        if fig_match:
+                            recovered_id = parser._normalize_id(fig_match.group(1), fig_match.group(2), fig_match.group(3))
+                            image_context_registry[img.filename.lower()]["id"] = recovered_id
+                            print(f"   [Context] Recovered figure ID '{recovered_id}' from nearby text for {img.filename}")
 
         # V7: Extract paper-level context for cross-section injection
         print("   🔄 Extracting paper-level context for cross-section injection...")
@@ -2966,7 +3018,7 @@ async def run_pipeline(markdown_file, asset_dir, model):
                 print(f"   \033[91m[Warning]\033[0m Skipping section: {sec.title}")
                 continue
             if PROCESS_TEXT:
-                tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem))
+                tasks.append(safe_text_call_with_retry(sec, client, TEXT_MODEL, sem, paper_context=paper_context))
                 task_sources.append(('text', sec))
 
         # # 3. Extract from Images (Parallel)
@@ -3178,6 +3230,48 @@ def main():
 
     start_time = time.time()
     measurements, material_definitions, stats, is_review_article, paper_context = asyncio.run(run_pipeline(args.markdown_file, args.asset_dir or args.markdown_file.parent, args.model))
+
+    def _is_missing_temp(value) -> bool:
+        if value is None:
+            return True
+        text = str(value).strip().lower()
+        return text in {"", "null", "none", "n/a", "unknown", "not specified"}
+
+    def _has_conductivity_signal(m: MeasuredPoint) -> bool:
+        if m.normalized_conductivity is not None:
+            return True
+        raw_c = str(m.raw_conductivity).strip().lower() if m.raw_conductivity is not None else ""
+        return raw_c not in {"", "null", "none", "n/a", "unknown", "not specified"}
+
+    def apply_missing_temperature_assumptions(measurements_list: List[MeasuredPoint], assumed_rt_c: float = 25.0) -> int:
+        """Fill missing temperatures with assumed room temperature and annotate warnings."""
+        assumed_count = 0
+        assumption_warning = f"Assumed room temperature ({assumed_rt_c:.0f} °C) because temperature was missing."
+
+        for measurement in measurements_list:
+            if measurement.normalized_temperature_c is not None:
+                continue
+            if not _has_conductivity_signal(measurement):
+                continue
+
+            measurement.normalized_temperature_c = assumed_rt_c
+            if _is_missing_temp(measurement.raw_temperature):
+                measurement.raw_temperature = str(int(assumed_rt_c))
+            if _is_missing_temp(measurement.raw_temperature_unit):
+                measurement.raw_temperature_unit = "room temperature"
+
+            if measurement.warnings is None:
+                measurement.warnings = []
+            if assumption_warning not in measurement.warnings:
+                measurement.warnings.append(assumption_warning)
+
+            assumed_count += 1
+
+        return assumed_count
+
+    assumed_temp_count = apply_missing_temperature_assumptions(measurements)
+    if assumed_temp_count:
+        print(f"   ℹ️  Applied room-temperature assumption to {assumed_temp_count} measurement(s) with missing temperature.")
     
     elapsed_time = time.time() - start_time
 
